@@ -139,6 +139,17 @@ Detaches event handlers and removes data entries in order to avoid memory leaks.
     // Remove all widgets from DOM
     $(".k-upload").remove();
 
+### destroy
+
+Prepares the Upload for safe removal from the DOM.
+
+Detaches event handlers and removes data entries in order to avoid memory leaks.
+
+#### Example
+
+    kendo.destroy($("#upload"));
+    $("#upload").remove();
+
 ### enable
 
 Enables the upload.

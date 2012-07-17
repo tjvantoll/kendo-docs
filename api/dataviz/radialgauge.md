@@ -359,21 +359,10 @@ Prepares the Gauge for safe removal from the DOM.
 
 Detaches event handlers and removes data entries in order to avoid memory leaks.
 
-#### Example 1
+#### Example
 
-    // Destroy widget and detach events
-    $("#radial-gauge").data("kendoRadialGauge").destroy();
-
-    // Remove widget element from DOM
+    kendo.destroy($("#radial-gauge"));
     $("#radial-gauge").remove();
-
-#### Example 2
-
-    // Destroy all gauge widgets
-    kendo.destroy($(".k-gauge"));
-
-    // Remove all widgets from DOM
-    $(".k-gauge").remove();
 
 ### redraw
 
