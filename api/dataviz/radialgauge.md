@@ -115,6 +115,10 @@ The value of the gauge.
 
 The width of the range indicators.
 
+### rangeDistance `Number`
+
+The distance from the range indicators to the ticks.
+
 ### scale `Object`
 
 Configures the scale.
