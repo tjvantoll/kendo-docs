@@ -183,12 +183,12 @@ Refreshes the content of a Window from a remote URL.
 
     var windowObject = $("#window").data("kendoWindow");
     windowObject.refresh("/feedbackForm");
-    
+
     windowObject.refresh({
         url: "/feedbackForm",
         data: { userId: 42 }
     });
-    
+
     windowObject.refresh({
         url: "/userInfo",
         data: { userId: 42 },
@@ -219,6 +219,10 @@ The HTTP request method ("GET", "POST").
 ##### options.template `String`
 
 A template to be used for displaying the requested data.
+
+##### options.iframe `Boolean`
+
+Indicates whether the content should be fetched within an iframe, or with AJAX and rendered in the same page.
 
 #### Returns
 
