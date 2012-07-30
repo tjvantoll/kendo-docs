@@ -1,10 +1,10 @@
 ---
-title: HierarchicalDataSource Overview
+title: Overview
 slug: hierarchicaldatasource-overview
 publish: true
 ---
 
-# Kendo HierarchicalDataSource Overview
+# Overview
 
 The HierarchicalDataSource component extends the [DataSource component](/api/framework/datasource), allowing
 representation of hierarchical data. This help topic assumes that you are familiar with the
@@ -31,6 +31,7 @@ hierarchical data.
           ]
       }
     ];
+
     var localDataSource = new kendo.data.HierarchicalDataSource({ data: categorizedMovies });
 
 ### Creating a HierarchicalDataSource bound to a homogeneous remote data service
@@ -79,6 +80,22 @@ Now, the children can be accessed:
     var middleManagement = ceo.children.view();
 
 
+### The `hasChildren` property
+
+The `hasChildren` boolean property indicates whether a data item contains children that can be fetched from the server.
+You can either hard-code it, map it to another property, or compute it with a function:
+
+    // hard-code that the item will always have children
+    hasChildren: true
+
+    // map the hasChildren property to the HasEmployees field, serialized from the server
+    hasChildren: "HasChildren"
+
+    // compute whether the given item will have children
+    hasChildren: function(item) {
+        return item.HasEmployees && item.RelatedDepartment;
+    }
+
 ### Binding a HierarchicalDataSource to remote data with multiple service end-points
 
     // configuration of the products service end-point
@@ -92,6 +109,7 @@ Now, the children can be accessed:
             schema: {
                 data: "products",
                 model: {
+                    // products will never have children
                     hasChildren: false
                 }
             }
@@ -169,6 +187,4 @@ the hierarchy with any DataSource-enabled component.
             { field: "Description" }
         ]
     });
-
-
 
