@@ -1,7 +1,7 @@
 ﻿---
 title: Application overview
 slug: gs-mobile-application
-tags: getting-started,mobile
+tags: getting-started, mobile
 publish: true
 ---
 
