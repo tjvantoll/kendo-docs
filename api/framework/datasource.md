@@ -580,7 +580,7 @@ Options for remote create data operation, or the URL of the remote service.
 
                 $.ajax( {
                     url: "/orders/create",
-                    data: options,
+                    data: options.data, // the "data" field contains paging, sorting, filtering and grouping data
                     success: function(result) {
                         // notify the DataSource that the operation is complete
 
@@ -705,7 +705,7 @@ Options for remote destroy data operation, or the URL of the remote service.
 
                 $.ajax( {
                     url: "/orders/destroy",
-                    data: options,
+                    data: options.data, // the "data" field contains paging, sorting, filtering and grouping data
                     success: function(result) {
                         // notify the DataSource that the operation is complete
 
@@ -850,7 +850,7 @@ Options for remote read data operation, or the URL of the remote service.
 
                 $.ajax( {
                     url: "/orders/read",
-                    data: options,
+                    data: options.data, // the "data" field contains paging, sorting, filtering and grouping data
                     success: function(result) {
                         // notify the DataSource that the operation is complete
 
@@ -975,7 +975,7 @@ Options for remote update data operation, or the URL of the remote service.
 
                 $.ajax( {
                     url: "/orders/update",
-                    data: options,
+                    data: options.data, // the "data" field contains paging, sorting, filtering and grouping data
                     success: function(result) {
                         // notify the DataSource that the operation is complete
 
