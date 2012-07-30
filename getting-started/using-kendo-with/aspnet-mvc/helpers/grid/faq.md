@@ -171,6 +171,7 @@ paging, sorting, filtering and grouping the data. More info can be found in the 
 > - Linq to SQL
 > - Telerik OpenAccess
 > - NHibernate
+
 ### How do I send values to my action method when binding the grid?
 
 If the grid is server bound the overload method which accepts route values should be used.
@@ -235,7 +236,6 @@ properties which create the circular references.
 
         // This property creates a circular reference because the Customer class
         // refers to the Order class via the Orders property
-
         public Customer Customer { get; set; }
     }
 
@@ -291,6 +291,7 @@ To prevent that call the `ServerOperation` method and pass `false` as the argume
      .DataSource(dataSource => dataSource.Ajax()
         .ServerOperation(false)
      // -- removed for brevity
+
 ## Editing
 
 ### How do I display model state errors?
@@ -364,6 +365,7 @@ By default all properties are readonly. Decorate the read-only properties with t
             model.Field(o => o.OrderID).Editable(false);
         })
      // -- removed for brevity
+
 > **Important:** The `ReadOnly` and `Editable` settings work only in in-line and in-cell editing modes. Use a custom popup editor if you want to exclude certain properties from
 the editor form.
 
