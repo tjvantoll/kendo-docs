@@ -1,4 +1,4 @@
-﻿---
+---
 title: Application overview
 slug: gs-mobile-application
 tags: getting-started, mobile
