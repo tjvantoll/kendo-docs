@@ -1,29 +1,21 @@
 ---
-title: TreeView Overview
+title: Overview
 slug: gs-web-treeview-overview
 tags: getting-started,web
 publish: true
 ---
 
-# TreeView Overview
+# Overview
 
-The **TreeView** displays hierarchical data in a traditional tree structure. It supports user
+The TreeView displays hierarchical data in a traditional tree structure. It supports user
 interaction through the mouse or touch to perform re-ordering operations via drag-and-drop.
-
-
-
-A **TreeView** can be created by leveraging HTML lists. However, it does not support binding to a
-remote data source at this point in time.
-
 
 ## Getting Started
 
-A **TreeView** can be created in two ways:
+A TreeView can be created in two ways:
 
 1.  Define a hierarchical list with static HTML
-2.  Use dynamic data binding
-
-
+2.  Use dynamic data binding either to a local or remote data source.
 
 Static HTML definition is appropriate for small hierarchies and for data that does not change frequently.
 Databinding should be used for larger data sets and for data that changes frequently.
@@ -43,8 +35,8 @@ Databinding should be used for larger data sets and for data that changes freque
         <li>Item 2</li>
     </ul>
 
-Initialization of a **TreeView** should occur after the DOM is fully loaded. It is recommended
-that initialization the **TreeView** occur within a handler is provided to $(document).ready().
+Initialization of a TreeView should occur after the DOM is fully loaded,
+preferably in the $(document).ready() event handler.
 
 ### Initialize a TreeView using a selector within $(document).ready()
 
@@ -54,7 +46,7 @@ that initialization the **TreeView** occur within a handler is provided to $(doc
 
 ## Creating a TreeView with Data Binding to a Local Data Source
 
-### Create a hierarchical HTML list
+### Create the TreeView container
 
     <div id="treeView"></div>
 
@@ -75,7 +67,7 @@ that initialization the **TreeView** occur within a handler is provided to $(doc
         })
     });
 
-### Binding to remote HierarchicalDataSource
+### Binding to a remote HierarchicalDataSource
 
     $("#treeView").kendoTreeView({
         dataSource: {
@@ -97,10 +89,15 @@ that initialization the **TreeView** occur within a handler is provided to $(doc
 A complete reference on how to bind the TreeView to different service end-points can be found
 on the [HierarchicalDataSource API help](/api/framework/hierarchicaldatasource).
 
-### Default item JSON structure
+## Item definition
+
+When binding through the dataSource configuration option, each item can have the following properties:
 
     var item = {
         text: "Item text",
+
+        // if specified, renders the item as a link. (<a href=""></a>)
+        url: "http://docs.kendoui.com/",
 
         // renders a <img class="k-image" src="/images/icon.png" />
         imageUrl: "/images/icon.png",
@@ -110,10 +107,50 @@ on the [HierarchicalDataSource API help](/api/framework/hierarchicaldatasource).
 
         // specifies whether the node text should be encoded or not
         // useful when rendering node-specific HTML
-        encoded: false
+        encoded: false,
+
+        // specifies whether the item is initially expanded
+        // (applicable when the item has child nodes
+        expanded: true,
+
+        // specifies whether the item is initially selected
+        selected: true,
+
+        // indicates the sub-items of the item
+        items: [
+            { text: "Subitem text" }
+        ]
     };
 
-A number of **TreeView** behaviors can be easily controlled by simple configuration properties,
+The **text**, **imageUrl**, **spriteCssClass** and **url** fields can be changed through the
+[datatextfield](/api/web/treeview#dataTextField), [dataimageurlfield](/api/web/treeview#dataImageUrlField),
+[dataspritecssclassfield](/api/web/treeview#dataSpriteCssClassField), and [dataurlfield](/api/web/treeview#dataUrlField),
+respectively.
+
+You can add arbitrary fields when binding through a dataSource. These are stored in the HierarchicalDataSource,
+and can be easily accessed through the treeview [dataItem method](/api/web/treeview#dataitem):
+
+### Getting the node data in the select event handler
+
+    function onSelect(e) {
+        // `this` refers to the TreeView object
+        var dataItem = this.dataItem(e.node);
+
+        console.log("Selected node with id=" + dataItem.id);
+    }
+
+    $("#treeview").kendoTreeView({
+        dataSource: [
+            { id: 1, text: "Item 1", items: [
+                { id: 3, text: "Item 3" }
+            ] },
+            { id: 2, text: "Item 2" }
+        ],
+        select: onSelect
+    });
+
+
+A number of TreeView behaviors can be easily controlled by simple configuration properties,
 such as animation behaviors and drag-and-drop behaviors.
 
 ### Enabling drag-and-drop for TreeView nodes
@@ -122,7 +159,7 @@ such as animation behaviors and drag-and-drop behaviors.
         dragAndDrop: true
     });
 
-When drag-and-drop is enabled, the nodes of a **TreeView** can be dragged and dropped between all
+When drag-and-drop is enabled, the nodes of a TreeView can be dragged and dropped between all
 levels, with useful tooltips helping indicate where the node will be dropped.
 
 
