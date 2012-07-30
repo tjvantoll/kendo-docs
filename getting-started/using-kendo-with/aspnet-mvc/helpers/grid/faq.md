@@ -1,5 +1,5 @@
 ---
-title: Frequently Asked Questions
+title: FAQ
 slug: mvc-grid-faq
 publish: true
 ---
@@ -10,7 +10,8 @@ publish: true
 
 ### How do I display HTML in a grid column?
 
-By default the Kendo UI Grid for ASP.NET MVC will encode the HTML entities present in the data. To disable that use the [Encoded](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridBoundColumnBuilderi#encodedsystem.boolean) method.
+By default the Kendo UI Grid for ASP.NET MVC will encode the HTML entities present in the data. To prevent that call the [Encoded](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridBoundColumnBuilderi#encodedsystem.boolean)
+method and pass `false` as the argument.
 
 #### Example: Display HTML Entities In Grid Columns
 
@@ -75,7 +76,7 @@ A Kendo Template may contain arbitrary JavaScript code. The `#` symbol is used t
         "# } #"
     );
 
-### How do I display a checkbox in an ajax-bound grid?
+### How do I display a checkbox in an ajax bound grid?
 
 The `checked` attribute specifies whether a checkbox is displayed as checked or not. Use a condition to set that attribute.
 
@@ -108,9 +109,9 @@ For server-bound grids the `Template` method should be used.
           @Html.ActionLink("Show Product Details", "ProductDetails", new { id = @item.ProductID } )>
     </text>);
 
-For ajax-bound grids the `ClientTemplate` method should be used.
+For ajax bound grids the `ClientTemplate` method should be used.
 
-#### Example: Action Link In Ajax-Bound Grid Column
+#### Example: Action Link In Ajax Bound Grid Column
 
     columns.Bound(p => p.ProductID).ClientTemplate(
         "<a href='" +
@@ -140,6 +141,7 @@ The Kendo Template has an implicit parameter called `data`. Use that as the argu
         return html;
     }
     </script>
+
 ### How do I change the format of a bound column?
 
 Use the [Format](api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridBoundColumnBuilder#formatsystem.string) method.
@@ -149,3 +151,225 @@ The value should be a valid [number](/api/framework/kendo#standard-number-format
 
     columns.Bound(o => o.OrderDate).Format("{0:d}"); // Will use the short date pattern
 
+## Data Binding
+
+### How do I implement paging, sorting, filtering and grouping?
+
+If your model supports the `IQueryable` interface or is `DataTable` the grid will do paging, sorting, filtering, grouping and aggregates automatically.
+For server binding scenarios no additional steps are required - just pass the IQueryable to the `Grid` constructor. Check the
+[server binding](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/server-binding) help topic for additional info.
+
+For ajax binding scenarios the `ToDataSourceResult` extension method must be used to perform the data transformation.
+Check the [ajax binding](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/ajax-binding) help topic for additional information.
+
+If your model does not implement `IQueryable` custom binding should be implemented. This means that the developer is responsible for
+paging, sorting, filtering and grouping the data. More info can be found in the [custom binding](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/custom-binding) help topic.
+
+> **Important**: All data operations will be performed at database server level if the underlying IQueryable provider supports translation of expression trees to SQL. Kendo Grid
+> for ASP.NET MVC has been tested with the following frameworks:
+> - Entity Framework
+> - Linq to SQL
+> - Telerik OpenAccess
+> - NHibernate
+### How do I send values to my action method when binding the grid?
+
+If the grid is server bound the overload method which accepts route values should be used.
+
+#### Example: Send Additional Data In Server Bound Grid
+    // -- removed for brevity
+    .DataSource(dataSource => dataSource.Server()
+        .Read(read => read.Action("Read", "Home", new { userID = (int)ViewData["UserID"] }))
+    )
+    // -- removed for brevity
+
+If the grid is ajax bound the `Data` method should be used to specify the name of the JavaScript function which will return the additional data.
+
+#### Example: Send Additional Data In Ajax Bound Grid
+    // -- removed for brevity
+    .DataSource(dataSource => dataSource.Ajax()
+        .Read(read => read
+            .Action("Read", "Home")
+            .Data("additionalData")
+        )
+    )
+    // -- removed for brevity
+    <script>
+        function additionalData() {
+            return {
+                userID: 42,
+                search: $("#search").val()
+            };
+        }
+    </script>
+
+### How do I convert my models to View Model objects?
+
+The `ToDataSourceResult` extension method supports an optional selector which can be used to convert the processed data to some other type.
+
+#### Example: Convert The Processed Data
+
+    public ActionResult Read([DataSourceRequest] DataSourceRequest request)
+    {
+        var northwind = new NorthwindDataContext();
+        var orders = northwind.Orders;
+
+        var result = orders.ToDataSourceResult(request, o => new {
+            OrderID = o.OrderID,
+            CustomerName = o.Customer.ContactName
+        });
+    }
+
+> Use View Model objects in order to flatten your data, reduce the number of serialized properties or avoid circular reference serializaton exceptions.
+
+### How do I avoid circular reference exceptions?
+
+The JavaScriptSerializer class will throw an exception if the serialized object contains circular references. To avoid that use a View Model and exclude the
+properties which create the circular references.
+
+#### Example: Avoid Circular References
+
+    // Models
+    public class Order
+    {
+        public int OrderID { get; set; }
+
+        // This property creates a circular reference because the Customer class
+        // refers to the Order class via the Orders property
+
+        public Customer Customer { get; set; }
+    }
+
+    public class Customer
+    {
+        public string ContactName { get; set; }
+        public IEnumerable<Order> Orders { get; set; }
+    }
+
+    // Action
+    public ActionResult Read([DataSourceRequest] DataSourceRequest request)
+    {
+        var northwind = new NorthwindDataContext();
+        var orders = northwind.Orders;
+
+        // Avoid the circular reference by creating a View Model object and skiping the Customer property
+        var result = orders.ToDataSourceResult(request, o => new {
+            OrderID = o.OrderID,
+            CustomerName = o.Customer.ContactName
+        });
+    }
+
+### How do I handle errors in ajax binding mode?
+
+The [error](/api/framework/datasource#error) event of the DataSource should be used.
+Use the `Error` method from the fluent API to specify the name of the JavaScript function which will handle the event.
+
+#### Example: Handle Errors In Ajax Binding
+
+     // -- removed for brevity
+     .DataSource(dataSource => dataSource.Ajax()
+        .Events(events => events.Error("onError"))
+     // -- removed for brevity
+     <script>
+        function onError(e, status) {
+            alert("A server error has occurred!");
+        }
+     </script>
+
+### How can I see what the server response is?
+
+The Kendo Grid makes HTTP requests. Use your browser's developer tools to inspect the communication between the browser and the web server. In case of server-side exception the
+HTTP status code will be 500 and the server response will contain the detailed exception stacktrace.
+
+### How can I configure the grid to perform paging, sorting, filtering and grouping in memory?
+
+By default ajax requests will be made for paging, sorting, filtering and grouping. The `ToDataSourceResult` extension method processes the data source server-side.
+To prevent that call the `ServerOperation` method and pass `false` as the argument.
+
+#### Example: Perform Paging, Sorting, Filtering and Grouping In Memory
+
+     // -- removed for brevity
+     .DataSource(dataSource => dataSource.Ajax()
+        .ServerOperation(false)
+     // -- removed for brevity
+## Editing
+
+### How do I display model state errors?
+
+The `ToDataSourceResult` extension method has an overload which accepts the `ModelState` as parameter. That overload will serialize any model state errors in the JSON response and
+the `error` event of the DataSource will be raised.
+
+#### Example: Display Model State Errors
+
+     // -- removed for brevity
+     .DataSource(dataSource => dataSource.Ajax()
+        .Events(events => events.Error("onError"))
+     // -- removed for brevity
+     <script>
+        function onError(e, status) {
+            if (e.errors) {
+                var message = "The following errors have occurred:\n";
+
+                $.each(e.errors, function(key, value) {
+                    if (value.errors) {
+                        message += value.errors.join("\n");
+                    }
+                });
+
+                alert(message);
+            }
+        }
+     </script>
+
+### How do I create a custom popup editor?
+
+The Kendo Grid for ASP.NET MVC uses `Html.EditorForModel` to create the editing form. That method relies on ASP.NET MVC editor templates. To create a custom editor template
+you should create a partial view under the **~/Views/Shared/EditorTemplates** folder and specify it via the `UIHint` attribute. The [Custom Object Templates](http://bradwilson.typepad.com/blog/2009/10/aspnet-mvc-2-templates-part-4-custom-object-templates.html)
+blog post contains a lot of information about creating a custom editor template. The [Custom Popup Editor](http://www.kendoui.com/code-library/mvc/grid/custom-popup-editor.aspx) code library project contains a ready-to-run project.
+
+> **Important**: `Html.EditorForModel` is used only in popup edit mode. In-cell and in-line edit modes use `Html.EditorFor` and pass the expression used to declare the bound column e.g. `Html.EditorFor(o => o.OrderDate)`
+
+### How do I specify default property values when a new item is created?
+
+The Kendo Grid will use the default .NET property values when creating a new object - `""` for strings, `0` for numeric types, `null` for reference types. To change that behavior
+use the `Model` method of the DataSource.
+
+#### Example: Specify Default Property Values
+
+     // -- removed for brevity
+     .DataSource(dataSource => dataSource.Ajax()
+        .Model(model =>
+        {
+            model.Field(p => p.Name).DefaultValue("N/A");
+            model.Field(p => p.Price).DefaultValue(9.99);
+        })
+     // -- removed for brevity
+
+### How do I mark certain properties as readon-only?
+
+By default all properties are readonly. Decorate the read-only properties with the [ReadOnly](http://msdn.microsoft.com/en-us/library/system.componentmodel.readonlyattribute.aspx) data annotation attribute or use the `Editable` configuration method.
+
+#### Example: Read-only Property Via ReadOnly Attribute
+
+    public class Order
+    {
+        [ReadOnly(true)]
+        public int OrderID { get; set; }
+    }
+
+#### Example: Read-only Property Via Editable Method
+     // -- removed for brevity
+     .DataSource(dataSource => dataSource.Ajax()
+        .Model(model =>
+        {
+            model.Field(o => o.OrderID).Editable(false);
+        })
+     // -- removed for brevity
+> **Important:** The `ReadOnly` and `Editable` settings work only in in-line and in-cell editing modes. Use a custom popup editor if you want to exclude certain properties from
+the editor form.
+
+### How do I use Kendo widgets as editors for dates and numbers?
+
+Custom editor templates should be used. ASP.NET MVC will look for a partial view named after the type e.g. `DateTime.cshtml`. Kendo UI Complete for ASP.NET MVC ships with a few
+ready-to-use editor templates. They are located in the **\wrappers\aspnetmvc\EditorTemplates** folder. The editor templates are available in two flavors - the **ascx** folder
+contains the WebForms view engine version whereas the **razor** folder contains the Razor view egine version. To use those editor templates in your application copy all files from
+the corresponding folder ("ascx" or "razor") to `~/Views/Shared/EditorTemplates` (you may need to create that folder if it does not exist).
