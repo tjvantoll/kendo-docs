@@ -345,7 +345,7 @@ use the `Model` method of the DataSource.
         })
      // -- removed for brevity
 
-### How do I mark certain properties as readon-only?
+### How do I mark certain properties as read-only?
 
 By default all properties are readonly. Decorate the read-only properties with the [ReadOnly](http://msdn.microsoft.com/en-us/library/system.componentmodel.readonlyattribute.aspx) data annotation attribute or use the `Editable` configuration method.
 
