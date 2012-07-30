@@ -42,9 +42,16 @@ Whether to hide the browser address bar.
       <div data-role="header">Header</div>
     </div>
 
-### loading `String`*(default: Loading...)*
+### loading `String`*(default: &lt;h1&gt;Loading...&lt;/h1&gt;)*
 
  The text displayed in the loading popup. Setting this value to false will disable the loading popup.
+
+#### Example
+    <script>
+         new kendo.mobile.Application($(document.body), {
+             loading: "<h1>Please wait...</h1>"
+         });
+    </script>
 
 ### platform `String`
 
