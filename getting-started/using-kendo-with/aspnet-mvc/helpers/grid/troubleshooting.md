@@ -44,6 +44,31 @@ the [Json](http://msdn.microsoft.com/en-us/library/system.web.mvc.controller.jso
 The best solution is to use View Model objects and avoid the serializing the properties which create the circular reference.
 Check the ["How do I avoid circular reference exceptions"](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/faq#how-do-i-avoid-circular-reference-exceptions?) FAQ section for further information.
 
+### Error during serialization or deserialization using the JSON JavaScriptSerializer
+
+This exception is raised when the length of the data serialized as JSON exceeds the default [MaxJsonLength](http://msdn.microsoft.com/en-us/library/system.web.script.serialization.javascriptserializer.maxjsonlength.aspx).
+There are a few possible solutions:
+
+1. Enable paging by calling the `Pageable` method
+2. [Use a View Model](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/faq#how-do-i-convert-my-models-to-view-model-objects?) to serialize only the required properties of your model.
+3. Return a custom action result
+    public ActionResult Read([DataSourceRequest] DataSourceRequest request)
+    {
+        var data = GetData();
+
+        var serializer = new JavaScriptSerializer();
+
+        serializer.MaxJsonLength = Int32.MaxValue; // Whatever max length you want here
+
+        var result = new ContentResult();
+
+        result.Content = serializer.Serialize(data.ToDataSourceResult(request));
+
+        result.ContentType = "application/json";
+
+        return result;
+    }
+
 ### This request has been blocked because sensitive information could be disclosed to third party web sites when this is used in a GET request
 
 This exception would occur if **kendo.aspnetmvc.min.js** is not included or is included **before** kendo.web.min.js. The other reason is that the developer has explicitly
