@@ -52,22 +52,23 @@ There are a few possible solutions:
 1. Enable paging by calling the `Pageable` method
 2. [Use a View Model](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/faq#how-do-i-convert-my-models-to-view-model-objects?) to serialize only the required properties of your model.
 3. Return a custom action result
-    public ActionResult Read([DataSourceRequest] DataSourceRequest request)
-    {
-        var data = GetData();
 
-        var serializer = new JavaScriptSerializer();
+        public ActionResult Read([DataSourceRequest] DataSourceRequest request)
+        {
+            var data = GetData();
 
-        serializer.MaxJsonLength = Int32.MaxValue; // Whatever max length you want here
+            var serializer = new JavaScriptSerializer();
 
-        var result = new ContentResult();
+            serializer.MaxJsonLength = Int32.MaxValue; // Whatever max length you want here
 
-        result.Content = serializer.Serialize(data.ToDataSourceResult(request));
+            var result = new ContentResult();
 
-        result.ContentType = "application/json";
+            result.Content = serializer.Serialize(data.ToDataSourceResult(request));
 
-        return result;
-    }
+            result.ContentType = "application/json";
+
+            return result;
+        }
 
 ### This request has been blocked because sensitive information could be disclosed to third party web sites when this is used in a GET request
 
