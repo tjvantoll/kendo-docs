@@ -65,14 +65,46 @@ specified that the DataSource should make HTTP GET requests via the `Type` setti
         return Json(result.ToDataSourceResult(request), JsonRequestBehavior.AllowGet);
     }
 
-### A column template is not displayed
+## The grid does not display numbers and dates in the right format for my culture
+
+By default Kendo UI Grid formats dates and numbers using the **en-US** culture. To change the culture include the JavaScript for your culture and then call `kendo.culture`.
+
+### Include Culture Specific Kendo JavaScript
+    <script src="/Scripts/cultures/kendo.culture.de-DE.js"></script>
+    <script>
+        kendo.culture("de-DE");
+    </script>
+
+### Include JavaScript For The Current Culture (WebForms)
+    <%
+        var culture = System.Threading.Thread.CurrentThread.CurrentCulture.ToString();
+    %>
+    <script src="<%= Url.Content("~/Scripts/cultures/kendo.culture." + culture + ".min.js") %>"></script>
+    <script>
+        kendo.culture("<%= culture %>");
+    </script>
+
+### Include JavaScript For The Current Culture (Razor)
+    @{
+        var culture = System.Threading.Thread.CurrentThread.CurrentCulture.ToString();
+    }
+    <script src="@Url.Content("~/Scripts/cultures/kendo.culture." + culture + ".min.js")"></script>
+    <script>
+        kendo.culture("@culture");
+    </script>
+
+## The grid fails to update dates and numbers when the current culture is not en-US
+
+Make sure the JavaScript file for that culture is included. Check the previous item.
+
+## A column template is not displayed
 
 This will happen if the server template is set but the grid is configured for ajax binding. Set the [ClientTemplate](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/configuration#clienttemplate) as well.
 
-### The grid cannot bind to WebAPI controller
+## The grid cannot bind to WebAPI controller
 
 Kendo Grid for ASP.NET MVC does not currently support WebAPI controllers. Cast your vote for in our [user voice](http://kendo.uservoice.com/forums/127393-kendo-ui-feedback/suggestions/2667632-make-kendo-datasource-compatible-with-asp-net-mvc-) forum!
 
-### The "X" DataSource configuration option is not available
+## The "X" DataSource configuration option is not available
 
 Not all settings of the DataSource are exposed via the `DataSource` fluent API. For full control over the DataSource consider using the client-side version of Kendo UI Grid.
