@@ -59,7 +59,7 @@ After executing `homogeneous.read()`, the service end-point is hit without a Emp
 
     => [ { "EmployeeId": 2, "Name": "Andrew", "HasEmployees": true } ]
 
-Reading the children of the returned item is achieved by calling the `load` method of the data item:
+Reading the children of the returned item is achieved by calling the [`load` method](/api/framework/node#load) of the data item:
 
     var ceo = homogeneous.view()[0];
 
