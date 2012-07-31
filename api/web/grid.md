@@ -744,7 +744,7 @@ Target master row to expand.
 
 ### refresh
 
-Repaints the grid.
+Redraws the grid using the current data of the DataSource.
 
 #### Example
 
@@ -752,11 +752,6 @@ Repaints the grid.
     var grid = $("#grid").data("kendoGrid");
     // refreshes the grid
     grid.refresh();
-
-#### Parameters
-
-##### e ``
-
 
 
 ### removeRow

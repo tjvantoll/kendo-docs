@@ -1209,7 +1209,7 @@ An [ObservableArray](/api/framework/observablearray) which contains all items of
 ### fetch
 
 Fetches data using the current filter/sort/group/paging information.
-If data is not available or remote operations are enabled data is requested through the transport,
+If data is not available and remote operations are enabled data is requested through the transport,
 otherwise operations are executed over the available data.
 
 #### Example
