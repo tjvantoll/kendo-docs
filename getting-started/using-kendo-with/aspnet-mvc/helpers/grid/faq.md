@@ -159,7 +159,7 @@ If your model supports the `IQueryable` interface or is `DataTable` the grid wil
 For server binding scenarios no additional steps are required - just pass the IQueryable to the `Grid` constructor. Check the
 [server binding](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/server-binding) help topic for additional info.
 
-For ajax binding scenarios the `ToDataSourceResult` extension method must be used to perform the data transformation.
+For ajax binding scenarios the `ToDataSourceResult` extension method must be used to perform the data processing.
 Check the [ajax binding](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/ajax-binding) help topic for additional information.
 
 If your model does not implement `IQueryable` custom binding should be implemented. This means that the developer is responsible for
@@ -202,6 +202,16 @@ If the grid is ajax bound the `Data` method should be used to specify the name o
             };
         }
     </script>
+
+### How do I reload the data in an ajax bound grid?
+
+The [read](/api/framework/datasource#read) method of the DataSource should be used.
+
+#### Example: Reload Ajax Bound Grid
+
+    var grid = $("#Grid").data("kendoGrid");
+
+    grid.dataSource.read();
 
 ### How do I convert my models to View Model objects?
 
