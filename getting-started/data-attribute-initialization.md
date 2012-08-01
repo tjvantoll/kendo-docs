@@ -22,7 +22,7 @@ on the target element and calling `kendo.init` on its element or any of its cont
 
 The role attribute value is the name of the widget in lower case.
 
-By default, `kendo.init` initializes all *web/dataviz* widgets. Kendo mobile applicaiton initializes all mobile, web, and dataviz widgets, in that priority.
+By default, `kendo.init` initializes all **web**/**dataviz** widgets. Kendo mobile applicaiton initializes all **mobile**, **web**, and **dataviz** widgets, in that priority.
 This means that if an element with `data-role="listview" is found, a the mobile listview will be initialized, not the web one (which has the same role).
 This behaviour can be overriden by specifying the full widget class name (with its namespace) in the role attribute.
 
