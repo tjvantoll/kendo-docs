@@ -23,3 +23,10 @@ Enable any DOM element to be a target for draggable elements.
 
     var dropTarget = $("#dropTarget").kendoDropTarget();
 
+## DropTargetArea
+
+Use a jQuery selector to enable DOM elements within an area to be targets for draggable elements.
+
+## **DropTargetArea** initialization
+
+    var dropTargetArea = $("#dropTargetArea").kendoDropTargetArea({ filter: ".dropTargets" });
