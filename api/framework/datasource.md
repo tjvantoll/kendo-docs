@@ -170,7 +170,7 @@ return the data items for the current response.
 
 #### Returns
 
-An `Array` which contains the data items from the response.
+`Array` The data items from the response.
 
 #### Example: Data As a String
 
@@ -354,7 +354,7 @@ return the total number of data items for the current response.
 
 #### Returns
 
-A `Number` which denotes the total number of data items.
+`Number` The total number of data items.
 
 #### Example: Total As a String
 
@@ -1113,7 +1113,7 @@ Either a [kendo.data.Model](/api/framework/model) instance or JavaScript object 
 
 #### Returns
 
-The `kendo.data.Model` instance which has been added.
+`kendo.data.Model` The instance which has been added.
 
 ### aggregate
 
@@ -1162,7 +1162,7 @@ The zero-based index of the data item.
 
 #### Returns
 
-`kendo.data.ObservableObject` or `kendo.data.Model` based on the presence of `schema.model`.
+`kendo.data.ObservableObject | kendo.data.Model` The type depends on the schema.
 
 ### cancelChanges
 
@@ -1198,7 +1198,7 @@ An `Array` of items to set as the current data of the `DataSource`. If omitted t
 
 #### Returns
 
-An [ObservableArray](/api/framework/observablearray) which contains all items of the `DataSource`
+`ObservableArray` the items of the `DataSource`
 
 #### Example: Getting the Data of a DataSource
 
@@ -1298,7 +1298,7 @@ Filter(s) to be applied to the data.
 
 #### Returns
 
-`Array` containing the current filter descriptors.
+`Array` The current filter descriptors.
 
 ### get
 
@@ -1352,7 +1352,7 @@ Group(s) to be applied to the data.
 
 #### Returns
 
-`Array` containing the current group descriptors.
+`Array` The current group descriptors.
 
 ### insert
 
@@ -1374,7 +1374,7 @@ Either a [kendo.data.Model](/api/framework/model) instance or JavaScript object 
 
 #### Returns
 
-The `kendo.data.Model` instance which has been inserted.
+`kendo.data.Model` The instance which has been inserted.
 
 ### page
 
@@ -1492,7 +1492,7 @@ Sort options to be applied to the data
 
 #### Returns
 
-`Array` containing the current sort descriptors.
+`Array` the current sort descriptors.
 
 ### sync
 

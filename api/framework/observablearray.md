@@ -164,12 +164,14 @@ event argument is set to `"add"`. The `items` field of the event argument is the
 contains the appended items.
 
 ### slice
+
 Returns a one-level deep copy of a portion of an array. Equivalent of
 [Array.prototype.slice](http://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/slice).
 The result of the `slice` method is **not** an instance of `ObvservableArray`. It is a regular JavaScript Array object.
 > **Important:** The `slice` method does not modify the original `ObservableArray`.
 
 #### Syntax
+
     array.slice(begin[, end])
 
 #### Example
@@ -181,11 +183,11 @@ The result of the `slice` method is **not** an instance of `ObvservableArray`. I
 
 #### Parameters
 
-##### begin
+##### begin `Number`
 
 Zero-based index at which to begin extraction.
 
-##### end
+##### end `Number`
 
 Zero-based index at which to end extraction. If `end` is omitted, `slice` extracts to the
 end of the sequence.

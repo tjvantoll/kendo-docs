@@ -11,12 +11,12 @@ publish: true
 
 See the [DataSource configuration](/api/framework/datasource#configuration) for all inherited configuration.
 
-### schema.model.hasChildren `Boolean | String | Function`*(default: false)*
+### schema.model.hasChildren `Boolean | String | Function` *(default: false)*
 
 Specifies whether the model might have children and might be loaded. Applicable when the rendering of a
 widget needs to have different states for items that have no children (e.g. the toggle button of the TreeView).
 
-### schema.model.children `String | Object`*(default: "items")*
+### schema.model.children `String | Object` *(default: "items")*
 
 DataSource object or configuration for fetching child nodes. Through examples of that can be found
 in the **Getting started** section above.
