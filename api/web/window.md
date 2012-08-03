@@ -292,129 +292,17 @@ Toggles a Window between a maximized and restored state. Triggers the resize eve
 
 Triggered when a Window has finished its opening animation.
 
-#### Attach activate event handler during initialization; detach via unbind()
-
-    // event handler for activate
-    var onActivate = function(e) {
-        // ...
-    };
-    
-    // attach activate event handler during initialization
-    var kendoWindow = $("#window").kendoWindow({
-        activate: onActivate
-    });
-    
-    // detach activate event handler via unbind()
-    kendoWindow.data("kendoWindow").unbind("activate", onActivate);
-
-#### Attach activate event handler via bind(); detach via unbind()
-
-    // event handler for activate
-    var onActivate = function(e) {
-        // ...
-    };
-    
-    // attach activate event handler via bind()
-    $("#window").data("kendoWindow").bind("activate", onActivate);
-    
-    // detach activate event handler via unbind()
-    $("#window").data("kendoWindow").unbind("activate", onActivate);
-
 ### close
 
 Triggered when a Window is closed (by a user or through the close() method).
-
-#### Attach close event handler during initialization; detach via unbind()
-
-    // event handler for close
-    var onClose = function(e) {
-        // ...
-    };
-    
-    // attach close event handler during initialization
-    var kendoWindow = $("#window").kendoWindow({
-        close: onClose
-    });
-    
-    // detach close event handler via unbind()
-    kendoWindow.data("kendoWindow").unbind("close", onClose);
-
-#### Attach close event handler via bind(); detach via unbind()
-
-    // event handler for close
-    var onClose = function(e) {
-        // ...
-    };
-    
-    // attach close event handler via bind()
-    $("#window").data("kendoWindow").bind("close", onClose);
-    
-    // detach close event handler via unbind()
-    $("#window").data("kendoWindow").unbind("close", onClose);
 
 ### deactivate
 
 Triggered when a Window has finished its closing animation.
 
-#### Attach deactivate event handler during initialization; detach via unbind()
-
-    // event handler for deactivate
-    var onDeactivate = function(e) {
-        // ...
-    };
-    
-    // attach deactivate event handler during initialization
-    var kendoWindow = $("#window").kendoWindow({
-        deactivate: onDeactivate
-    });
-    
-    // detach deactivate event handler via unbind()
-    kendoWindow.data("kendoWindow").unbind("deactivate", onDeactivate);
-
-#### Attach deactivate event handler via bind(); detach via unbind()
-
-    // event handler for deactivate
-    var onDeactivate = function(e) {
-        // ...
-    };
-    
-    // attach deactivate event handler via bind()
-    $("#window").data("kendoWindow").bind("deactivate", onDeactivate);
-    
-    // detach deactivate event handler via unbind()
-    $("#window").data("kendoWindow").unbind("deactivate", onDeactivate);
-
 ### dragend
 
 Triggered when a Window has been moved by a user.
-
-#### Attach dragEnd event handler during initialization; detach via unbind()
-
-    // event handler for dragEnd
-    var onDragEnd = function(e) {
-        // ...
-    };
-    
-    // attach dragEnd event handler during initialization
-    var kendoWindow = $("#window").kendoWindow({
-        dragend: onDragEnd
-    });
-    
-    // detach dragEnd event handler via unbind()
-    kendoWindow.data("kendoWindow").unbind("dragend", onDragEnd);
-
-#### Attach dragEnd event handler via bind(); detach via unbind()
-
-    // event handler for dragEnd
-    var onDragEnd = function(e) {
-        // ...
-    };
-    
-    // attach dragEnd event handler via bind()
-    $("#window").data("kendoWindow").bind("dragend", onDragEnd);
-    
-    // detach dragEnd event handler via unbind()
-    $("#window").data("kendoWindow").unbind("dragend", onDragEnd);
 
 ### dragstart
 
@@ -424,126 +312,15 @@ Triggered when the user starts to move the window.
 
 Triggered when an AJAX request for content fails.
 
-#### Attach error event handler during initialization; detach via unbind()
-
-    // event handler for error
-    var onError = function(e) {
-        // ...
-    };
-    
-    // attach dragEnd event handler during initialization
-    var kendoWindow = $("#window").kendoWindow({
-        error: onError
-    });
-    
-    // detach error event handler via unbind()
-    kendoWindow.data("kendoWindow").unbind("error", onError);
-
-#### Attach error event handler via bind(); detach via unbind()
-
-    // event handler for error
-    var onError = function(e) {
-        // ...
-    };
-    
-    // attach error event handler via bind()
-    $("#window").data("kendoWindow").bind("error", onError);
-    
-    // detach error event handler via unbind()
-    $("#window").data("kendoWindow").unbind("error", onError);
-
 ### open
 
 Triggered when a Window is opened (i.e. the open() method is called).
-
-#### Attach open event handler during initialization; detach via unbind()
-
-    // event handler for expand
-    var onOpen = function(e) {
-        // ...
-    };
-    
-    // attach open event handler during initialization
-    var kendoWindow = $("#window").kendoWindow({
-        open: onOpen
-    });
-    
-    // detach expand event handler via unbind()
-    kendoWindow.data("kendoWindow").unbind("open", onOpen);
-
-#### Attach open event handler via bind(); detach via unbind()
-
-    // event handler for open
-    var onOpen = function(e) {
-        // ...
-    };
-    
-    // attach open event handler via bind()
-    $("#window").data("kendoWindow").bind("open", onOpen);
-    
-    // detach open event handler via unbind()
-    $("#window").data("kendoWindow").unbind("open", onOpen);
 
 ### refresh
 
 Triggered when the content of a Window have been refreshed via AJAX.
 
-#### Attach refresh event handler during initialization; detach via unbind()
-
-    // event handler for refresh
-    var onRefresh = function(e) {
-        // ...
-    };
-    
-    // attach refresh event handler during initialization
-    var kendoWindow = $("#window").kendoWindow({
-        refresh: onRefresh
-    });
-    
-    // detach refresh event handler via unbind()
-    kendoWindow.data("kendoWindow").unbind("refresh", onRefresh);
-
-#### Attach refresh event handler via bind(); detach via unbind()
-
-    // event handler for refresh
-    var onRefresh = function(e) {
-        // ...
-    };
-    
-    // attach refresh event handler via bind()
-    $("#window").data("kendoWindow").bind("refresh", onRefresh);
-    
-    // detach refresh event handler via unbind()
-    $("#window").data("kendoWindow").unbind("refresh", onRefresh);
-
 ### resize
 
 Triggered when a Window has been resized by a user.
 
-#### Attach resize event handler during initialization; detach via unbind()
-
-    // event handler for resize
-    var onResize = function(e) {
-        // ...
-    };
-    
-    // attach resize event handler during initialization
-    var kendoWindow = $("#window").kendoWindow({
-        resize: onResize
-    });
-    
-    // detach resize event handler via unbind()
-    kendoWindow.data("kendoWindow").unbind("resize", onResize);
-
-#### Attach resize event handler via bind(); detach via unbind()
-
-    // event handler for resize
-    var onResize = function(e) {
-        // ...
-    };
-    
-    // attach resize event handler via bind()
-    $("#window").data("kendoWindow").bind("resize", onResize);
-    
-    // detach resize event handler via unbind()
-    $("#window").data("kendoWindow").unbind("resize", onResize);
