@@ -322,7 +322,9 @@ Triggered when a Window is opened (i.e. the open() method is called).
 
 ### refresh
 
-Triggered when the content of a Window have been refreshed via AJAX.
+Triggered when the content of a Window has finished loading via AJAX,
+when the window iframe has finished loading, or when the refresh button
+has been clicked on a window with static content.
 
 ### resize
 
