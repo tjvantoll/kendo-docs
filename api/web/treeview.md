@@ -507,6 +507,16 @@ Triggered before a subgroup gets collapsed.
 
 The collapsed node
 
+### dataBound
+
+Triggered after the dataSource change event has been processed (adding/removing items);
+
+#### Event Data
+
+##### e.node `jQueryObject`
+
+The node whose children have been changed. If the changes have occured on the root level, this parameter is undefined.
+
 ### drag
 
 Triggered while a node is being dragged.
