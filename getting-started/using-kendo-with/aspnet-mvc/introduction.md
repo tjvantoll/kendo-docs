@@ -74,9 +74,7 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
              <script src="@Url.Content("~/Scripts/kendo.web.min.js")"></script>
              <script src="@Url.Content("~/Scripts/kendo.aspnetmvc.min.js")"></script>
 
-6.  Configure your ASP.NET MVC layout page to include the Kendo UI DataViz JavaScript and CSS files.
-> **Important** If you want to use Kendo UI Web and DataViz at the same time you should include **kendo.all.min.js** instead of **kendo.web.min.js** and **kendo.dataviz.min.js**. You
-can also create a custom JavaScript file using the [Custom Download Builder](http://www.kendoui.com/custom-download).
+6.  Configure your ASP.NET MVC layout page to include the Kendo UI DataViz JavaScript and CSS files. **Important** If you want to use Kendo UI Web and DataViz at the same time you should include **kendo.all.min.js** instead of **kendo.web.min.js** and **kendo.dataviz.min.js**. You can also create a custom JavaScript file using the [Custom Download Builder](http://www.kendoui.com/custom-download).
     * WebForms:
 
              <link href="<%= Url.Content("~/Content/kendo.dataviz.min.css") %>" rel="stylesheet" type="text/css" />
@@ -84,7 +82,6 @@ can also create a custom JavaScript file using the [Custom Download Builder](htt
              <script src="<%= Url.Content("~/Scripts/kendo.dataviz.min.js") %>"></script>
              <script src="<%= Url.Content("~/Scripts/kendo.aspnetmvc.min.js") %>"></script>
     * Razor:
-
              <link href="@Url.Content("~/Content/kendo.dataviz.min.css")" rel="stylesheet" type="text/css" />
              <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
              <script src="@Url.Content("~/Scripts/kendo.dataviz.min.js")"></script>
