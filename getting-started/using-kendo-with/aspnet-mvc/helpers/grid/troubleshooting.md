@@ -22,7 +22,8 @@ There are various reasons which may cause this. Follow the troubleshooting instr
 
 ### Ajax Binding Troubleshooting
 
-1. Use your browser's developer console to check for any JavaScript errors. In most browsers pressing **F12** will pop up the developer console. Address all JavaScript errors.
+1. Use your browser's developer console to check for any JavaScript errors. In most browsers pressing **F12** will pop up the developer console. Address all JavaScript errors. A
+list of the common JavaScript errors can be found in the [widget troubleshooting help topic](/getting-started/web/troubleshooting#known-javascript-errors).
 2. Check the "Network" (or "Net" in Firebug) tab of the browser developer console. Look for a failed HTTP request for the action method configured via the `DataSource` grid setting.
     - HTTP status code [401](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#401) indicates that authentication is required and has failed or not yet been provided.
     - HTTP status code [403](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#403) indicates that request is not authorized. Perhaps the current user does not have
@@ -134,3 +135,8 @@ Kendo Grid for ASP.NET MVC does not currently support WebAPI controllers. Cast y
 ## The "X" DataSource configuration option is not available
 
 Not all settings of the DataSource are exposed via the `DataSource` fluent API. For full control over the DataSource consider using the client-side version of Kendo UI Grid.
+
+## Client-side events are not raised in server bound mode
+
+Kendo Grid for ASP.NET MVC will not raise all client-side events when configured for server bound mode.
+Check the [server binding](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/server-binding#client-side-events-and-server-binding) help topic for further details.

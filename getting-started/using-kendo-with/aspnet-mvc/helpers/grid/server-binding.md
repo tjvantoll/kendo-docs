@@ -179,3 +179,17 @@ Sometimes the action method which renders the view containing the grid may need 
               .Read(read => read.Action("Index", "Home", new { firstName = "John", lastName = "Doe } ))
           )
     )
+
+## Client-Side Events And Server Binding
+
+The following events are supported in server binding mode:
+
+- Change
+- ColumnHide
+- ColumnReorder
+- ColumnResize
+- ColumnShow
+- DetailCollapse
+- DetailExpand
+
+The other client-side events will **not** be raised when the grid is configured for server binding.
