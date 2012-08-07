@@ -113,7 +113,7 @@ become and editable textbox.  However, if you click on the First Name, nothing
 happens because you can’t edit it.  Go ahead and try to blank out the Last
 Name and press enter.  You get a validation message.
 
-![Validation Message](images/php-1-Part-_7E9D-9_2.png)
+![Validation Message](https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/php-1-Part-_7E9D-9_2.png)
 
 For more information on all the things you can do with
 validation rules, make sure you check out the Kendo UI Validation Demos.
@@ -321,7 +321,7 @@ can listen to the **error** event on the DataSource **update** method.
 
 #### Sample Failure…
 
-![Sample Failure](images/php-1-Part-_7E9D-10_2.png)
+![Sample Failure](https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/php-1-Part-_7E9D-10_2.png)
 
 ### Requirement 2: Add Sales Territories
 
@@ -489,7 +489,7 @@ and value fields are.
 Now if you view the page, we have a nifty drop down you can either type in, or
 select from.  Oh, and we also switched the theme to **default** just for fun!
 
-![Nifty Drop Down](images/php-1-Part-_7E9D-11_4.png)
+![Nifty Drop Down](https://raw.github.com/telerik/kendo-docs/production/tutorials/PHP/images/php-1-Part-_7E9D-11_4.png)
 
 Now we have a ComboBox that returns only the territories that
 are not currently assigned to this person.  Now let’s add the event for
