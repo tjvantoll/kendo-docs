@@ -316,6 +316,16 @@ Triggered when the user starts to move the window.
 
 Triggered when an AJAX request for content fails.
 
+#### Arguments
+
+##### xhr `XmlHttpRequest`
+
+The XHR request object, as returned from [jQuery.ajax](http://api.jquery.com/jQuery.ajax/)
+
+##### status `String`
+
+The status of the request, as returned from [jQuery.ajax](http://api.jquery.com/jQuery.ajax/)
+
 ### open
 
 Triggered when a Window is opened (i.e. the open() method is called).
