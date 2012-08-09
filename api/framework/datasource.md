@@ -18,6 +18,10 @@ publish: true
     // calculates total sum of unitPrice field's values.
     [{ field: "unitPrice", aggregate: "sum" }]
 
+### autoSync `Boolean` *(default: false)*
+
+Enables (*true*) or disables (*false*) the automatic invocation of the sync() method for each change made.
+
 ### batch `Boolean` *(default: false)*
 
 Enables (*true*) or disables (*false*) batch mode.
