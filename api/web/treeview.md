@@ -463,7 +463,7 @@ If provided, the node of a TreeView that should be selected.
 
 ### text
 
-Gets the text of a node in a TreeView.
+Gets or sets the text of a node in a TreeView.
 
 #### Get the text of the node with ID, firstItem
 
@@ -475,6 +475,14 @@ Gets the text of a node in a TreeView.
 ##### node `Selector`
 
 The node of which the text is being retrieved.
+
+##### newText `String`
+
+Optional. When passed, sets the node text to the specified string
+
+    var treeView = $("#treeView").data("kendoTreeView");
+
+    treeView.text(".k-item:first", "Salmon");
 
 #### Returns
 
