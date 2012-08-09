@@ -18,6 +18,10 @@ publish: true
     // calculates total sum of unitPrice field's values.
     [{ field: "unitPrice", aggregate: "sum" }]
 
+### batch `Boolean` *(default: false)*
+
+Enables (*true*) or disables (*false*) batch mode.
+
 ### data `Array`
 
 Specifies the local JavaScript object to use for the data source.
