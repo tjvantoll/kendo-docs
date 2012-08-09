@@ -66,7 +66,7 @@ We have now moved all markup removed from our JavaScript (very clean). We add a 
 
 ## A Note About Templates
 
-If you check out the "html" tab on the previous fiddle, you can see the templating syntax for [Kendo UI Templates](http://www.kenodui.com/templates). Templates are html inside of special script blocks. If you notice, I have also mixed in JavaScript right along with the html. The syntax will feel very familiar if you have ever done any PHP, Razor or other server side templating engine.
+If you check out the "html" tab on the previous fiddle, you can see the templating syntax for [Kendo UI Templates](http://docs.kendoui.com/getting-started/framework/templates/overview). Templates are HTML inside of special script blocks. If you notice, I have also mixed in JavaScript right along with the html. The syntax will feel very familiar if you have ever done any PHP, Razor or other server side templating engine.
 
 ## Wrap Up
 
