@@ -11,6 +11,7 @@ publish: true
 Kendo Grid for ASP.NET MVC relies on ASP.NET MVC editor templates to create the editing UI. If the grid is configured for
 in-line or in-cell editing the [Html.EditorFor](http://msdn.microsoft.com/en-us/library/system.web.mvc.html.editorextensions.editorfor.aspx) method
 is used to get the editor HTML for every property which is editable. So for this configuration:
+
     Html.Kendo().Grid<Order>()
         .Name("Grid")
         .Columns(columns =>
@@ -21,13 +22,14 @@ is used to get the editor HTML for every property which is editable. So for this
         .Editable(editable => editable.Mode(GridEditMode.InLine))
 
 the following code will be used to get the editor HTML for the `OrderDate` and `ShipCountry` properties:
+
     Html.EditorFor(o => o.OrderDate);
     Html.EditorFor(o => o.ShipCountry);
 
 If the grid is configured for pop-up editing the [Html.EditorForModel](http://msdn.microsoft.com/en-us/library/system.web.mvc.html.editorextensions.editorformodel.aspx) is
 used to get the editor HTML for the whole model.
 
-> A lot of additional info about ASP.NET MVC editor templates can be found in the [ASP.NET MVC 2 Templates](http://bradwilson.typepad.com/blog/2009/10/aspnet-mvc-2-templates-part-1-introduction.html) blog post series.
+A lot of additional info about ASP.NET MVC editor templates can be found in the [ASP.NET MVC 2 Templates](http://bradwilson.typepad.com/blog/2009/10/aspnet-mvc-2-templates-part-1-introduction.html) blog post series.
 
 ## Create Custom Editor For a Bound Property
 
