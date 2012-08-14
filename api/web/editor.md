@@ -98,7 +98,7 @@ The document that the range is associated with. If ommited, the document of the 
 
 #### Returns
 
-`Range` The created <strong>Range</strong> object.
+`Range` The created **Range** object.
 
 ### encodedValue
 
@@ -144,7 +144,7 @@ Gets a **Range** object form the editable area.
 
 #### Returns
 
-`Range` A W3C-compatible <strong>Range</strong> object that represents the currently selected text in the editor area.
+`Range` A W3C-compatible **Range** object that represents the currently selected text in the editor area.
 
 ### getSelection
 
@@ -195,7 +195,7 @@ The **Range** object that describes the new selection.
 
 ### update
 
-Serializes the current state of the editable area to the <textarea> element.
+Serializes the current state of the editable area to the `<textarea>` element.
 This method should be called after modifying the editor content through the DOM.
 
 ### value
