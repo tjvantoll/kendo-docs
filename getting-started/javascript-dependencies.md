@@ -76,7 +76,8 @@ can be included on a per-widget basis.
 7.  kendo.dataviz.core.js
 8.  kendo.dataviz.vml.js
 9.  kendo.dataviz.svg.js
-10.  kendo.dataviz.chart.js
+10. kendo.dataviz.themes.js
+11. kendo.dataviz.chart.js
 
 
 ### ComboBox
