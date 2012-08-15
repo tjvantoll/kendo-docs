@@ -1371,7 +1371,7 @@ Template variables:
          series: [{
                  type: "bar",
                  name: "Sales",
-                 fiels: "sales",
+                 field: "sales",
                  groupNameTemplate: "#= series.name # for #= group.field # #= group.value #"
                  // Sales for product Bar,
                  // Sales for product Foo,
