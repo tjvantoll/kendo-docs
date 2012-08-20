@@ -43,12 +43,9 @@ Here is a list of the actions which the child combobox makes during the initiali
 - If the parent has a value, then the child will be enabled and will filter its data depending on it. Here how the filter options will look like:
 
 
-    {
-
         field: "parentID",  //the dataValueField of the parent
         operator: "eq",
         value: "" //parent's value
-    }
 
 > Please note that the filter operator will always be "eq". The child combobox will use the `dataValueField` option of the parent combobox in order to filter the data.
 
