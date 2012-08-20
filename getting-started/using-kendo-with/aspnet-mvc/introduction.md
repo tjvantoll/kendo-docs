@@ -74,18 +74,21 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
              <script src="@Url.Content("~/Scripts/kendo.web.min.js")"></script>
              <script src="@Url.Content("~/Scripts/kendo.aspnetmvc.min.js")"></script>
 
-6.  Configure your ASP.NET MVC layout page to include the Kendo UI DataViz JavaScript and CSS files. **Important** If you want to use Kendo UI Web and DataViz at the same time you should include **kendo.all.min.js** instead of **kendo.web.min.js** and **kendo.dataviz.min.js**. You can also create a custom JavaScript file using the [Custom Download Builder](http://www.kendoui.com/custom-download).
-    * WebForms:
+6.  Configure your ASP.NET MVC layout page to include the Kendo UI DataViz JavaScript and CSS files. **Important**: If you want to use Kendo UI Web and DataViz at the same time you should include **kendo.all.min.js** instead of **kendo.web.min.js** and **kendo.dataviz.min.js**. You
+    can also create a custom JavaScript file using the [Custom Download Builder](http://www.kendoui.com/custom-download).
 
-             <link href="<%= Url.Content("~/Content/kendo.dataviz.min.css") %>" rel="stylesheet" type="text/css" />
-             <script src="<%= Url.Content("~/Scripts/jquery.min.js") %>"></script>
-             <script src="<%= Url.Content("~/Scripts/kendo.dataviz.min.js") %>"></script>
-             <script src="<%= Url.Content("~/Scripts/kendo.aspnetmvc.min.js") %>"></script>
-    * Razor:
-             <link href="@Url.Content("~/Content/kendo.dataviz.min.css")" rel="stylesheet" type="text/css" />
-             <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
-             <script src="@Url.Content("~/Scripts/kendo.dataviz.min.js")"></script>
-             <script src="@Url.Content("~/Scripts/kendo.aspnetmvc.min.js")"></script>
+        * WebForms:
+
+                 <link href="<%= Url.Content("~/Content/kendo.dataviz.min.css") %>" rel="stylesheet" type="text/css" />
+                 <script src="<%= Url.Content("~/Scripts/jquery.min.js") %>"></script>
+                 <script src="<%= Url.Content("~/Scripts/kendo.dataviz.min.js") %>"></script>
+                 <script src="<%= Url.Content("~/Scripts/kendo.aspnetmvc.min.js") %>"></script>
+        * Razor:
+
+                 <link href="@Url.Content("~/Content/kendo.dataviz.min.css")" rel="stylesheet" type="text/css" />
+                 <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
+                 <script src="@Url.Content("~/Scripts/kendo.dataviz.min.js")"></script>
+                 <script src="@Url.Content("~/Scripts/kendo.aspnetmvc.min.js")"></script>
 
 7. Add a reference to the **Kendo.Mvc.UI** namespace to your **web.config**. Then the `Kendo` HtmlHelper extension would
 be availble in your views. Rebuild your project after adding the namespace to the web.config (required for Visual Studio to show intellisense for Kendo.Mvc.UI).
@@ -181,6 +184,14 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
             bundles.Add(new StyleBundle("~/Content/kendo").Include(
                     "~/Content/kendo.common.*",
                     "~/Content/kendo.default.*"));
+
+            // Clear all items from the default ignore list to allow minified CSS and JavaScript files to be included in debug mode
+            bundles.IgnoreList.Clear();
+
+            // Add back the default ignore list rules sans the ones which affect minified files and debug mode
+            bundles.IgnoreList.Ignore("*.intellisense.js");
+            bundles.IgnoreList.Ignore("*-vsdoc.js");
+            bundles.IgnoreList.Ignore("*.debug.js", OptimizationMode.WhenEnabled);
         }
 
 7.  Register the bundles in your layout page at the end of the `head` element. **Remove any existing jQuery bundle registration at end of the `body` element of the page.** **Note:** If you don't want to use ASP.NET bundles perform steps 5 and 6 from the [Using Kendo UI in ASP.NET MVC 3 application](#using-kendo-ui-in-asp.net-mvc-3-application) section.
