@@ -47,6 +47,13 @@ Here is a list of the actions which the child combobox makes during the initiali
         operator: "eq",
         value: "" //parent's value
 
+And here are the paramenters of this request:
+
+        filter[logic]: and
+        filter[filters][0][field]: parentID
+        filter[filters][0][operator]: eq
+        filter[filters][0][value]:
+
 > Please note that the filter operator will always be "eq". The child combobox will use the `dataValueField` option of the parent combobox in order to filter the data.
 
 ####FAQ
@@ -76,8 +83,8 @@ A: You need to set the value and the text of the combobox. You can use the [valu
             $("#parent").kendoComboBox({
                value: "1",
                text: "Parent1",
-               dataTextField: "ParentName",
-               dataValueField: "ParentID",
+               dataTextField: "parentName",
+               dataValueField: "parentID",
                dataSource: {
                   //dataSource settings
                },
@@ -88,8 +95,8 @@ A: You need to set the value and the text of the combobox. You can use the [valu
                cascadeFrom: "parent",
                value: "36",
                text: "Child36",
-               dataTextField: "ChildName",
-               dataValueField: "ChildID",
+               dataTextField: "childName",
+               dataValueField: "childID",
                dataSource: {
                   //dataSource settings
                },
@@ -101,3 +108,25 @@ A: You need to set the value and the text of the combobox. You can use the [valu
 Q: The serverFiltering is disabled and the child combobox does not work?
 
 A: When the [serverFiltering](http://docs.kendoui.com/api/framework/datasource#configuration) is disabled, then the combobox will not make any additional requests to the server. Hence it will filter the initial data using the parent's dataValueField property. If no items are found, then the child combobox will be empty. If you need to use child combobox with disabled server filtering, then you will need to provide all neccessary data on the client.
+
+Q: Cannot get the request parameters on the server?
+
+A: Check the format of the request parameters in the end of the "How it works?" section. Modify your server code in order to get them correctly.
+Other option is to pass the ID of the parent combobox manually, using the data callback of the DataSource's Transport.Read object:
+
+    $("#child").kendoComboBox({
+       cascadeFrom: "parent",
+       dataTextField: "childName",
+       dataValueField: "childID",
+       dataSource: {
+           transport: {
+               read: {
+                   url: "",
+                   data: {
+                       parentID: $("#parent").val()
+                   }
+               }
+           }
+       }
+    });
+
