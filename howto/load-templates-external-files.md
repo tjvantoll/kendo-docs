@@ -151,13 +151,13 @@ Using the template loader previously defined, application code can intitalize te
 
 			//Subscribe to event triggered when templates loaded
 			//(Don't load use templates before they are available)
-			$(document).bind("TEMPLATE_LOADED", function(e, data) {
+			$(document).bind("TEMPLATE_LOADED", function(e, path) {
 				console.log('Templates loaded');			
 				
 				//Compile and cache templates
 				_itemTemplate = kendo.template($("#feedItemTemplate").html(),{useWithBlock:false});
 
-				//Using the template
+				//Using the template (assuming "data" is collection loaded elsewhere)
 				_itemTemplate(data);
 			}
 		</script>
