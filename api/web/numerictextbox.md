@@ -147,7 +147,7 @@ publish: true
 
     // specify in the HTML
     <input id="numeric" value="10" type="number" min="-100" max="100" step="10"/>
-    
+
     // specify on widget initialization
     $("#numeric").kendoNumericTextBox({
         min: 0,
@@ -165,10 +165,10 @@ Enable/Disable the numerictextbox widget.
 
     // get a reference to the numeric textbox
     var textbox = $("#textbox").data("kendoNumericTextBox");
-    
+
     // disables the numerictextbox
     numerictextbox.enable(false);
-    
+
     // enables the numerictextbox
     numerictextbox.enable(true);
 
@@ -178,6 +178,18 @@ Enable/Disable the numerictextbox widget.
 
 The argument, which defines whether to enable/disable tha numerictextbox.
 
+### focus
+
+Focuses the numerictextbox widget.
+
+#### Example
+
+    // get a reference to the numeric textbox
+    var textbox = $("#textbox").data("kendoNumericTextBox");
+
+    // focus the numerictextbox
+    numerictextbox.focus();
+
 ### max
 
 Gets/Sets the max value of the NumericTextBox.
@@ -186,10 +198,10 @@ Gets/Sets the max value of the NumericTextBox.
 
     // get a reference to the NumericTextBox widget
     var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
-    
+
     // get the max value of the numerictextbox.
     var max = numerictextbox.max();
-    
+
     // set the max value of the numerictextbox.
     numerictextbox.max(10);
 
@@ -211,10 +223,10 @@ Gets/Sets the min value of the NumericTextBox.
 
     // get a reference to the NumericTextBox widget
     var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
-    
+
     // get the min value of the numerictextbox.
     var min = numerictextbox.min();
-    
+
     // set the min value of the numerictextbox.
     numerictextbox.min(-10);
 
@@ -236,10 +248,10 @@ Gets/Sets the step value of the NumericTextBox.
 
     // get a reference to the NumericTextBox widget
     var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
-    
+
     // get the step value of the numerictextbox.
     var step = numerictextbox.step();
-    
+
     // set the step value of the numerictextbox.
     numerictextbox.step(0.1);
 
@@ -261,10 +273,10 @@ Gets/Sets the value of the numerictextbox.
 
     // get a referene to the numeric textbox
     var numerictextbox = $("#textbox").data("kendoNumericTextBox");
-    
+
     // get the value of the numerictextbox.
     var value = numerictextbox.value();
-    
+
     // set the value of the numerictextbox.
     numerictextbox.value("10.20");
 
