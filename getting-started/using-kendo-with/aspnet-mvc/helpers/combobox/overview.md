@@ -77,7 +77,7 @@ Here is how to configure the Kendo ComboBox for ajax binding to the Northwind Pr
 
             return Json(northwind.Products);
         }
-4.  Add a ajax bound combobox:
+4.  Add an ajax bound combobox:
     - WebForms
 
             <%: Html.Kendo().ComboBox()
@@ -86,11 +86,11 @@ Here is how to configure the Kendo ComboBox for ajax binding to the Northwind Pr
                 .DataValueField("ProductID") //Specifies which property of the Product to be used by the combobox as a value.
                 .DataSource(source =>
                 {
-                        source.Read(read =>
-                       {
-                                read.Action("GetProducts", "Home"); //Set the Action and Controller name
-                                    
-                       }).ServerFiltering(true); //If true the DataSource will not filter the data on the client.
+                    source.Read(read =>
+                    {
+                        read.Action("GetProducts", "Home"); //Set the Action and Controller name
+                    })
+                    .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
                 })
                 .SelectedIndex(0) //Select first item.
             %>
@@ -102,11 +102,11 @@ Here is how to configure the Kendo ComboBox for ajax binding to the Northwind Pr
                 .DataValueField("ProductID") //Specifies which property of the Product to be used by the combobox as a value.
                 .DataSource(source =>
                 {
-                        source.Read(read =>
-                       {
-                                read.Action("GetProducts", "Home") //Set the Action and Controller name
-                                    .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
-                       });
+                   source.Read(read =>
+                   {
+                        read.Action("GetProducts", "Home"); //Set the Action and Controller name
+                   })
+                   .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
                 })
                 .SelectedIndex(0) //Select first item.
             )
@@ -116,7 +116,7 @@ Here is how to configure the Kendo ComboBox for ajax binding to the Northwind Pr
 Here is how to configure the Kendo ComboBox to send parameters to the server:
 
 - WebForms
-    
+
         <%: Html.Kendo().ComboBox()
                 .Name("productComboBox") //The name of the combobox is mandatory. It specifies the "id" attribute of the widget.
                 .DataTextField("ProductName") //Specifies which property of the Product to be used by the combobox as a text.
@@ -126,50 +126,50 @@ Here is how to configure the Kendo ComboBox to send parameters to the server:
                         source.Read(read =>
                        {
                                 read.Action("GetProducts", "Home")
-									.Data("onAdditionalData");
+                                    .Data("onAdditionalData");
                        });
                 })
                 .SelectedIndex(0) //Select first item.
          %>
          <script>
-    		function onAdditionalData() {
-		        return {
-		            text: $("#productComboBox").val() 
-		        };
-		    }
-		</script>
+            function onAdditionalData() {
+                return {
+                    text: $("#productComboBox").val()
+                };
+            }
+        </script>
 
 - Razor
 
-		@(Html.Kendo().ComboBox()
+        @(Html.Kendo().ComboBox()
               .Name("productComboBox") //The name of the combobox is mandatory. It specifies the "id" attribute of the widget.
               .DataTextField("ProductName") //Specifies which property of the Product to be used by the combobox as a text.
               .DataValueField("ProductID") //Specifies which property of the Product to be used by the combobox as a value.
               .DataSource(source =>
               {
-                     source.Read(read =>
-                     {
-                              read.Action("GetProducts", "Home") //Set the Action and Controller name
-                                  .Data("onAdditionalData");
-                     });
+                 source.Read(read =>
+                 {
+                      read.Action("GetProducts", "Home") //Set the Action and Controller name
+                          .Data("onAdditionalData");
+                 });
               })
               .SelectedIndex(0) //Select first item.
-       	)
-		
-		<script>
-    		function onAdditionalData() {
-		        return {
-		            text: $("#productComboBox").val() 
-		        };
-		    }
-		</script>
+        )
+
+        <script>
+            function onAdditionalData() {
+                return {
+                    text: $("#productComboBox").val()
+                };
+            }
+        </script>
 
 > The Kendo ComboBox has default event handler for the DataSource's Data callback. If you do not
 define event handler, it will be used.
-	
+
 *Default event handler for the DataSource's Data callback*
 
-	function requestData(selector) {
+    function requestData(selector) {
         var combobox = $(selector).data("kendoComboBox"),
             filters = combobox.dataSource.filter(),
             value = combobox.input.val();
