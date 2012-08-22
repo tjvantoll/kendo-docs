@@ -10,13 +10,13 @@ This page provides solutions for commonly problems you may encounter when workin
 
 ## Known JavaScript Errors
 
-### $ is undefined
+### $ is undefined or jQuery is undefined
 
 Means that jQuery is not included in the page or is included **after** the Kendo UI JavaScript files. The solution is to include jQuery **before** the Kendo UI JavaScript files.
 
-### kendo<WidgetName> is undefined
+### kendo is undefined
 
-Will occur if the JavaScript file(s) which define(s) that particular Kendo Widget is not included. Will also happen if jQuery is include twice. Make sure that the [required JavaScript files](/getting-started/javascript-dependencies)
+Will occur if the JavaScript file(s) which define(s) that particular Kendo Widget is(are) not included. Will also happen if jQuery is included twice. Make sure that the [required JavaScript files](/getting-started/javascript-dependencies)
 are included and that jQuery is included **only once**.
 
 ## Certain Kendo UI versions are not available on CDN
