@@ -6,7 +6,7 @@ publish: true
 
 # Troubleshooting
 
-This page provides solutions for commonly problems you may encounter when working with Kendo UI widgets.
+This page provides solutions for common problems you may encounter while working with Kendo UI widgets.
 
 ## Known JavaScript Errors
 

@@ -6,8 +6,7 @@ publish: true
 
 # Troubleshooting
 
-This help topic lists some common problems that may occur while working with Kendo UI Complete for ASP.NET MVC and their solutions. In addition you can check
-the general [Kendo UI troubleshooting help topic](/getting-started/troubleshooting).
+This page provides solutions for common problems you may encounter while working with Kendo UI Complete for ASP.NET MVC. In addition you could check the general [Kendo UI troubleshooting help topic](/getting-started/troubleshooting).
 
 ## JavaScript error telling that the kendo widgets are unavailable or undefined
 
