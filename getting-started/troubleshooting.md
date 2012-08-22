@@ -10,14 +10,33 @@ This page provides solutions for common problems you may encounter while working
 
 ## Known JavaScript Errors
 
-### $ is undefined or jQuery is undefined
+### JavaScript error that jQuery is unavailable or undefined
 
-Means that jQuery is not included in the page or is included **after** the Kendo UI JavaScript files. The solution is to include jQuery **before** the Kendo UI JavaScript files.
+If jQuery is not included (or is included after the Kendo JavaScript files) the Kendo UI widgets will not function as expected.
+The following JavaScript errors will be thrown (depending on the browser):
 
-### kendo is undefined
+* ReferenceError: jQuery is not defined (in Google Chrome and FireFox)
+* 'jQuery' is undefined (in Internet Explorer)
 
-Will occur if the JavaScript file(s) which define(s) that particular Kendo Widget is(are) not included. Will also happen if jQuery is included twice. Make sure that the [required JavaScript files](/getting-started/javascript-dependencies)
-are included and that jQuery is included **only once**.
+#### Solution
+Make sure that jQuery is included **before** the Kendo JavaScript files.
+
+### JavaScript error that Kendo widgets are unavailable or undefined
+
+If jQuery is included more than once in the page all existing jQuery plugins (including Kendo UI) will be wiped out. Will also occur
+if the [required Kendo JavaScript files](/getting-started/javascript-dependencies) are not included.
+
+The following JavaScript errors will be thrown (depending on the browser):
+
+* TypeError: Object #<Object> has no method 'kendoGrid' (in Google Chrome)
+* TypeError: $("#Grid").kendoGrid is not a function (in FireFox)
+* Object doesn't support property or method 'kendoGrid' (in Internet Explorer 9+)
+* Object doesn't support this property or method (in older versions of Internet Explorer)
+
+> **Note**: All Kendo widgets will be affected by this problem, not just the Kendo Grid. Just the error message will be different e.g. "kendoChart is not a function" or "Object has no method kendoEditor".
+
+#### Solution
+Make sure jQuery is not included more than once in your page. Remove any duplicate `script` references to jQuery. Include all [required Kendo JavaScript files](/getting-started/javascript-dependencies).
 
 ## Certain Kendo UI versions are not available on CDN
 
