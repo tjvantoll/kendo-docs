@@ -29,7 +29,7 @@ The distribution files contain the following:
 *   **\js** - Kendo UI minified JavaScript files.
 *   **\styles** - Kendo UI minified CSS files and background images used by the themes.
 *   **\src** - Complete JavaScript, CSS and C# source code.
-> **Note**: Available only in the commercial distribution of Kendo UI Complete for ASP.NET MVC.
+> **Note**: The source code is available only in the commercial distribution of Kendo UI Complete for ASP.NET MVC.
 *   **\wrappers\aspnetmvc\Binaries** - Kendo UI Complete for ASP.NET MVC assemblies.
 *   **\wrappers\aspnetmvc\Examples** - a sample ASP.NET MVC application.
 *   **\wrappers\aspnetmvc\EditorTemplates** - ready-to-use editor templates based on various Kendo UI widgets.
@@ -49,6 +49,7 @@ It contains the following:
 
 You can download the [Kendo UI for ASP.NET MVC Visual Studio Extensions package](http://visualstudiogallery.msdn.microsoft.com/65b78c2c-951e-43a8-bae7-f9039f59fb9b). It adds a
 few project templates and wizards that allow the following:
+
 * Create a new Kendo ASP.NET MVC 3/4 application
 * Add Kendo UI Complete for ASP.NET MVC to an existing application
 * Configure a Kendo UI ASP.NET MVC application
