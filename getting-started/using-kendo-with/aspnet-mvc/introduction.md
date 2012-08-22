@@ -28,7 +28,8 @@ The distribution files contain the following:
 
 *   **\js** - Kendo UI minified JavaScript files.
 *   **\styles** - Kendo UI minified CSS files and background images used by the themes.
-*   **\src** - Complete JavaScript, CSS and C# source code. **Available only in the commercial distribution of Kendo UI Complete for ASP.NET MVC.**
+*   **\src** - Complete JavaScript, CSS and C# source code.
+> **Note**: Available only in the commercial distribution of Kendo UI Complete for ASP.NET MVC.
 *   **\wrappers\aspnetmvc\Binaries** - Kendo UI Complete for ASP.NET MVC assemblies.
 *   **\wrappers\aspnetmvc\Examples** - a sample ASP.NET MVC application.
 *   **\wrappers\aspnetmvc\EditorTemplates** - ready-to-use editor templates based on various Kendo UI widgets.
@@ -44,7 +45,16 @@ It contains the following:
 *   **Controllers** - controller classes
 *   **Models** - model classes
 
-## Getting Started with Kendo UI Complete for ASP.NET MVC
+## Kendo UI for ASP.NET MVC Visual Studio Extensions
+
+You can download the [Kendo UI for ASP.NET MVC Visual Studio Extensions package](http://visualstudiogallery.msdn.microsoft.com/65b78c2c-951e-43a8-bae7-f9039f59fb9b). It adds a
+few project templates and wizards that allow the following:
+* Create a new Kendo ASP.NET MVC 3/4 application
+* Add Kendo UI Complete for ASP.NET MVC to an existing application
+* Configure a Kendo UI ASP.NET MVC application
+* Automatically check and update Kendo UI Complete for ASP.NET MVC
+
+## Manually add Kendo UI to ASP.NET MVC applications
 
 ### Using Kendo UI in ASP.NET MVC 3 application
 
@@ -129,32 +139,28 @@ be availble in your views. Rebuild your project after adding the namespace to th
 
 ### Using Kendo UI in ASP.NET MVC 4 application
 
-1.  Create a new ASP.NET MVC 4 application from Visual Studio or open an existing one.
+1. Create a new ASP.NET MVC 4 application from Visual Studio or open an existing one.
 
-2.  Add a reference to **\wrappers\aspnetmvc\Binaries\Mvc3\Kendo.Mvc.dll**.
+2. Add a reference to **\wrappers\aspnetmvc\Binaries\Mvc3\Kendo.Mvc.dll**.
 > **Important:** Kendo UI Complete for ASP.NET MVC currently ships a single assembly which works in both ASP.NET MVC 3 and 4 applications.
 
-3. Add a **binding redirect** to the **web.config** of the application:
+3. Make sure the following section is present in your **web.config**. Add if not present:
 
         <configuration>
           <!--... elements deleted for clarity ...-->
-
           <runtime>
             <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
               <dependentAssembly>
-                <assemblyIdentity name="System.Web.Helpers"
-                     publicKeyToken="31bf3856ad364e35" />
-                <bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0"/>
+                <assemblyIdentity name="System.Web.Helpers" publicKeyToken="31bf3856ad364e35" />
+                <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="2.0.0.0" />
               </dependentAssembly>
               <dependentAssembly>
-                <assemblyIdentity name="System.Web.Mvc"
-                     publicKeyToken="31bf3856ad364e35" />
-                <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="4.0.0.0"/>
+                <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" />
+                <bindingRedirect oldVersion="1.0.0.0-4.0.0.0" newVersion="4.0.0.0" />
               </dependentAssembly>
               <dependentAssembly>
-                <assemblyIdentity name="System.Web.WebPages"
-                     publicKeyToken="31bf3856ad364e35" />
-                <bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0"/>
+                <assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35" />
+                <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="2.0.0.0" />
               </dependentAssembly>
             </assemblyBinding>
           </runtime>
