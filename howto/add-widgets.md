@@ -9,7 +9,7 @@ publish: true
 
 In this how-to, we'll examine how to add widgets to an application or site with [Kendo UI Web](http://www.kendoui.com/web.aspx).
 
-Let's begin by examining how to add a widget to an existing page. For this example, let's assume the following HTML:
+Let's begin by examining how to add a widget to an existing page. For this example, let's assume the following Markup:
 
 	<!DOCTYPE html>
 	<html lang="en">
