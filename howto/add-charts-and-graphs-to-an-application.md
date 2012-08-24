@@ -9,7 +9,7 @@ publish: true
 
 In this how-to, we'll examine how to add charts and gauges to an application or site with [Kendo UI DataViz](http://www.kendoui.com/dataviz.aspx).
 
-Let's begin by examining how to add a chart to an existing page. For this example, let's assume the following HTML:
+Let's begin by examining how to add a chart to an existing page. For this example, let's assume the following Markup:
 
 	<!DOCTYPE html>
 	<html lang="en">
