@@ -7,7 +7,7 @@ publish: true
 
 # Tutorial: Intro To Inheritance With Kendo UI
 
-In this tutorial, we will examine the basics of doing JavaScript Inheritance With Kendo UI. You will learn...
+In this tutorial, we will examine the basics of doing JavaScript Inheritance With Kendo UI. You will learn the following:
 
 - How to use Kendo UI Classes
 - Some simple inheritance strategies for JavaScript
