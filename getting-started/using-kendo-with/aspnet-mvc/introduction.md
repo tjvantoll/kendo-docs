@@ -79,8 +79,8 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
              <script src="<%= Url.Content("~/Scripts/kendo.aspnetmvc.min.js") %>"></script>
     * Razor:
 
-             <link rel="stylesheet" href="@Url.Content("~/Content/kendo.common.min.css")">
-             <link rel="stylesheet" href="@Url.Content("~/Content/kendo.default.min.css")">
+             <link rel="stylesheet" href="@Url.Content("~/Content/kendo.common.min.css")" />
+             <link rel="stylesheet" href="@Url.Content("~/Content/kendo.default.min.css")" />
              <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
              <script src="@Url.Content("~/Scripts/kendo.web.min.js")"></script>
              <script src="@Url.Content("~/Scripts/kendo.aspnetmvc.min.js")"></script>
