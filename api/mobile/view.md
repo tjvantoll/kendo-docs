@@ -39,6 +39,24 @@ Useful if the view contains an image or a map.
 
 Fires before the mobile View becomes visible. The event can be prevented by calling the `preventDefault` method of the event parameter, in case a redirection should happen.
 
+#### Example
+
+    <div data-role="view" id="foo">
+        <a href="#protected" data-role="button">Go to protected</a>
+    </div>
+
+    <div data-role="view" id="protected" data-before-show="redirectBack">
+        I am a protected view
+    </div>
+
+    <script>
+        var app = new kendo.mobile.Application();
+        function redirectBack(e) {
+            e.preventDefault();
+            app.navigate("#foo");
+        }
+    </script>
+
 #### Event Data
 
 ##### e.view `jQuery`
