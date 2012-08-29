@@ -144,7 +144,7 @@ Instance of DataSource or the data that the DropDownList will be bound to.
 #### Example
 
     $("#dropdownlist").kendoDropDownList({
-        enabled: false // dropdown list will not be enabled
+        enable: false // dropdown list will not be enabled
     });
 
 #### Example
