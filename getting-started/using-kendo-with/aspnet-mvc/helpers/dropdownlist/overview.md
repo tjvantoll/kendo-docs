@@ -88,9 +88,9 @@ Here is how to configure the Kendo DropDownList for ajax binding to the Northwin
                 {
                        source.Read(read =>
                        {
-                            read.Action("GetProducts", "Home") //Set the Action and Controller name
-                                .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
-                       });
+                            read.Action("GetProducts", "Home"); //Set the Action and Controller name
+                       })
+                       .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
                 })
                 .SelectedIndex(0) //Select first item.
             %>
@@ -104,9 +104,9 @@ Here is how to configure the Kendo DropDownList for ajax binding to the Northwin
                 {
                        source.Read(read =>
                        {
-                            read.Action("GetProducts", "Home") //Set the Action and Controller name
-                                .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
-                       });
+                            read.Action("GetProducts", "Home"); //Set the Action and Controller name
+                       })
+                       .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
                 })
                 .SelectedIndex(0) //Select first item.
             )

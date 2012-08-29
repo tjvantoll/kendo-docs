@@ -81,9 +81,9 @@ Here is how to configure the Kendo AutoComplete for ajax binding to the Northwin
                  {
                          source.Read(read =>
                         {
-                                 read.Action("GetProducts", "Home") //Set the Action and Controller name
-                                     .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
-                        });
+                                 read.Action("GetProducts", "Home"); //Set the Action and Controller name
+                        })
+                        .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
                  })
              %>
      - Razor
@@ -95,9 +95,9 @@ Here is how to configure the Kendo AutoComplete for ajax binding to the Northwin
                  {
                          source.Read(read =>
                         {
-                                 read.Action("GetProducts", "Home") //Set the Action and Controller name
-                                     .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
-                        });
+                                 read.Action("GetProducts", "Home"); //Set the Action and Controller name
+                        })
+                        .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
                  })
              )
 
@@ -106,7 +106,7 @@ Here is how to configure the Kendo AutoComplete for ajax binding to the Northwin
 Here is how to configure the Kendo ComboBox to send parameters to the server:
 
 - WebForms
-    
+
         <%: Html.Kendo().ComboBox()
                 .Name("productAutoComplete")
                 .DataTextField("ProductName") //Specifies which property of the Product to be used by the autocomplete.
@@ -122,7 +122,7 @@ Here is how to configure the Kendo ComboBox to send parameters to the server:
          <script>
     		function onAdditionalData() {
 		        return {
-		            text: $("#productAutoComplete").val() 
+		            text: $("#productAutoComplete").val()
 		        };
 		    }
 		</script>
@@ -141,11 +141,11 @@ Here is how to configure the Kendo ComboBox to send parameters to the server:
                      });
               })
        	)
-		
+
 		<script>
     		function onAdditionalData() {
 		        return {
-		            text: $("#productAutoComplete").val() 
+		            text: $("#productAutoComplete").val()
 		        };
 		    }
 		</script>
