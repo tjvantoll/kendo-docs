@@ -115,7 +115,7 @@ Disables the upload.
     var upload = $("#upload").data("kendoUpload");
 
     // disables the upload
-    upload.enable();
+    upload.disable();
 
 ### destroy
 
