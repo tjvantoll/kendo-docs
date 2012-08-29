@@ -250,17 +250,17 @@ When this code is used, you effectively disable Kendo UI Mobile's adaptive rende
 ### Use Browser Tools
 Kendo UI Mobile relies on the [UserAgent string](http://en.wikipedia.org/wiki/User_agent) to trigger different platform renderings. If a browser reports that it is a specific mobile device, Kendo UI Mobile will respond and provide the correct, device-specific rendering.
 
-Some desktop browsers, like Google's Chrome, allow you to easily modify your UserAgent string, therby allowign you to "trick" Kendo UI Mobile that your browser is different mobile devices. This helps you quickly preview your app styling for different mobile platforms without changing any code.
+Some desktop browsers, like Google's Chrome, allow you to easily modify your UserAgent string, thereby allowing you to "trick" Kendo UI Mobile that your browser is different mobile devices. This helps you quickly preview your app styling for different mobile platforms without changing any code.
 
 To do this in Chrome, simply:
 
 1. Open the Chrome Developer Tools (F12)
 2. Click on the gear icon in the lower right corner
 3. In the Settings window that opens, check the "Override User Agent" box
-4. This will reveal a dropdown of pre-defind browsers and devices. Select the device you want to immitate or define your own.
+4. This will reveal a dropdown of pre-defined browsers and devices. Select the device you want to imitate or define your own.
 5. To undo this effect, simply un-check the Override box
 
-Of course, nothing replaces actual testing on mobile devices. In many cases, the Kendo UI Mobile styles look *better* on devices than in desktop browsers. Be sure to test on an iPhone, Android, BlackBerry, or whatever devices you intend support before deploying your app or when previewing app styles.
+Of course, nothing replaces actual testing on mobile devices. In many cases, the Kendo UI Mobile styles look *better* on devices than in desktop browsers. Be sure to test on an iPhone, Android, BlackBerry, or whatever devices you intend to support before deploying your app or when previewing app styles.
 
 ## Tweaking Apps for Specific Platforms
 Kendo UI Mobile's automatic platform adapting is a huge time saver, but sometimes developers want to customize the presentation of an app for specific platforms. When you want to take more control over the experience different devices see, you should use the `data-platform` attribute. For example:
