@@ -77,6 +77,13 @@ Disables (**false**) or enables (**true**) the tooltip of the **RangeSlider**.
 Format string for the text of the tooltip. Note: The applied format will also influence the appearance of
 the **RangeSlider** tick labels.
 
+### tooltip.template `String`
+
+Template of the tooltip.
+
+*   **selectionStart** - the current selectionStart.
+*   **selectionEnd** - the current selectionEnd.
+
 ## Methods
 
 ### destroy

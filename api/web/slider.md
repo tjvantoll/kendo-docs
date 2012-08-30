@@ -83,6 +83,12 @@ Format string for the text of the tooltip. Note: The applied
 format will also influence the appearance of the **Slider**
 tick labels.
 
+### tooltip.template `String`
+
+Template of the tooltip.
+
+*   **value** - the current value.
+
 ### value `Number`
 
 The underlying value of the **Slider**.
