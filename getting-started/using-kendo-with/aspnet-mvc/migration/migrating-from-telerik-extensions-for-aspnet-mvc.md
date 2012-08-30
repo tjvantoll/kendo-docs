@@ -231,4 +231,8 @@ Changes include changing the classnames' prefix from "t-" to "k-", and some twea
 Note that **using Kendo UI stylesheets and legacy themes on the same page is not supported**.
 
 Generally, it is encouraged to use the Kendo UI themes, not the legacy ones.
-The latter are located in the **LegacyThemes** folder of the Kendo UI Complete for ASP.NET MVC distribution package.
+The latter are located in the **wrappers/aspnetmvc/LegacyThemes** folder of the Kendo UI Complete for ASP.NET MVC distribution package.
+Legacy themes can also be referenced from the Kendo UI CDN. Don't forget to specify the version (e.g. 2012.2.710)
+
+    <link href="http://cdn.kendostatic.com/<VERSION>/styles/telerik/telerik.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://cdn.kendostatic.com/<VERSION>/styles/telerik/telerik.black.min.css" rel="stylesheet" type="text/css" />
