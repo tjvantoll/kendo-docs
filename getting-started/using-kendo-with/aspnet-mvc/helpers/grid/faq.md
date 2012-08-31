@@ -165,8 +165,8 @@ Check the [ajax binding](/getting-started/using-kendo-with/aspnet-mvc/helpers/gr
 If your model does not implement `IQueryable` custom binding should be implemented. This means that the developer is responsible for
 paging, sorting, filtering and grouping the data. More info can be found in the [custom binding](/getting-started/using-kendo-with/aspnet-mvc/helpers/grid/custom-binding) help topic.
 
-> **Important**: All data operations will be performed at database server level if the underlying IQueryable provider supports translation of expression trees to SQL. Kendo Grid
-> for ASP.NET MVC has been tested with the following frameworks:
+> **Important**: All data operations will be performed at database server level if the underlying IQueryable provider supports translation of expression trees to SQL. Kendo Grid for ASP.NET MVC has been tested with the following frameworks:
+
 > - Entity Framework
 > - Linq to SQL
 > - Telerik OpenAccess
