@@ -742,6 +742,27 @@ Expands specified master row.
 
 Target master row to expand.
 
+### hideColumn
+
+Hides the specified column.
+
+#### Example
+
+    // get a reference to the grid widget
+    var grid = $("#grid").data("kendoGrid");
+
+    // hide the "id" column
+    grid.hideColumn("id");
+
+    // hide the 3rd column
+    grid.hideColumn(2);
+
+#### Parameters
+
+##### column `Number | String`
+
+The index or the bound field of the column to hide.
+
 ### refresh
 
 Redraws the grid using the current data of the DataSource.
@@ -809,6 +830,27 @@ Selects the specified Grid rows/cells. If called without arguments - returns the
 ##### items `Selector | Array`
 
 Items to select.
+
+### showColumn
+
+Shows the specified column.
+
+#### Example
+
+    // get a reference to the grid widget
+    var grid = $("#grid").data("kendoGrid");
+
+    // show the "id" column
+    grid.showColumn("id");
+
+    // show the 3rd column
+    grid.showColumn(2);
+
+#### Parameters
+
+##### column `Number | String`
+
+The index or the bound field of the column to show.
 
 ## Events
 
