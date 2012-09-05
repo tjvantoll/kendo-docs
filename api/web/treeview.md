@@ -627,6 +627,13 @@ The element that the node is placed over.
 
 Shows where the source will be dropped. One of the values **over**, **before**, or **after**.
 
+#### The difference between e.setValid(false) and e.preventDefault()
+
+Both operations cancel the default drag operation, but the indication to the user is different.
+`e.setValid(false)` indicates that the operation was unsuccessful by animating the drag clue to its original position.
+`e.preventDefault()` simply removes the clue, as if it has been dropped.
+As a general rule, use `preventDefault` to manually handle the drag&drop operation, and `setValid(false)` to indicate unsuccessful drag&drops.
+
 ### expand
 
 Triggered before a subgroup gets expanded.
