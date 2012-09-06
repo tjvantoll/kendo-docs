@@ -108,6 +108,16 @@ publish: true
         placeholder: "Select A Value"
     });
 
+### spinners `Boolean`*(default: true)*
+
+ Specifies whether the up/down spin buttons should be rendered
+
+#### Don't show the up/down spin buttons
+
+    $("#numeric").kendoNumericTextBox({
+        spinners: false
+    });
+
 ### step `Number`*(default: 1)*
 
  Specifies the increment/decrement step.
