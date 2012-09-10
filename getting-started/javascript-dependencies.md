@@ -14,7 +14,9 @@ The following combined scripts are made available in order to simplify developme
 
 *   **kendo.all.min.js** contains a minified version of all scripts (Web, DataViz and Mobile).
 
-> kendo.all.min.js is only available in the Kendo UI Complete package.
+> **Important**: kendo.all.min.js is only available in the Kendo UI Complete package. The contents of
+**kendo.aspnetmvc.min.js** are **not** included in kendo.all.min.js - you need to include kendo.aspnetmvc.min.js in addition to kendo.all.min.js or use the
+[custom download builder tool](http://www.kendoui.com/custom-download).
 
 *   **kendo.web.min.js** contains a minified version of all scripts from Kendo UI Web.
 *   **kendo.dataviz.min.js** contains a minified version of all scripts from Kendo UI DataViz.
