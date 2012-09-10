@@ -99,6 +99,11 @@ Navigate to local or to remote view.
     app.navigate("#foo");
     </script>
 
+#### Navigate backwards to the previously visited mobile View
+
+    var app = new kendo.mobile.Application();
+    app.navigate("#:back");
+
 #### Parameters
 
 ##### url `String`
