@@ -2,7 +2,7 @@
 title: fx
 slug: fw-kendo.fx
 tags: api,framework
-publish: false
+publish: true
 ---
 
 # FX
