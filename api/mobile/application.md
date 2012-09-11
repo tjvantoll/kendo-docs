@@ -18,6 +18,15 @@ Whether to hide the browser address bar.
          new kendo.mobile.Application($(document.body), { hideAddressBar: false });
     </script>
 
+### updateDocumentTitle `Boolean`*(default: true)*
+
+Whether to update the document title.
+
+#### Example
+    <script>
+         new kendo.mobile.Application($(document.body), { updateDocumentTitle: false });
+    </script>
+
 ### initial `String`
 
  The id of the initial mobilie View to display.
