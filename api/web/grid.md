@@ -873,7 +873,7 @@ Fires when the grid selection has changed.
      // bind to the change event
      grid.bind("change", function(e) {
          // handle event
-     }
+     });
 
 ### dataBound
 
@@ -894,7 +894,7 @@ Fires when the grid has received data from the data source.
      // bind to the dataBound event
      grid.bind("dataBound", function(e) {
          // handle event
-     }
+     });
 
 ### detailCollapse
 
@@ -915,7 +915,7 @@ Fires when the grid detail row is collapsed.
      // bind to the detailCollapse event
      grid.bind("detailCollapse", function(e) {
          // handle event
-     }
+     });
 
 #### Event Data
 
@@ -946,7 +946,7 @@ Fires when the grid detail row is expanded.
      // bind to the detailExpand event
      grid.bind("detailExpand", function(e) {
          // handle event
-     }
+     });
 
 #### Event Data
 
@@ -976,7 +976,7 @@ Fires when the grid detail is initialized.
      // bind to the detailInit event
      grid.bind("detailInit", function(e) {
          // handle event
-     }
+     });
 
 #### Event Data
 
@@ -1014,7 +1014,7 @@ Fires when the grid enters edit mode.
      // bind to the edit event
      grid.bind("edit", function(e) {
          // handle event
-     }
+     });
 
 #### Event Data
 
@@ -1044,7 +1044,7 @@ Fires before the grid item is removed.
      // bind to the remove event
      grid.bind("remove", function(e) {
          // handle event
-     }
+     });
 
 #### Event Data
 
@@ -1074,7 +1074,7 @@ Fires before the grid item is changed.
      // bind to the save event
      grid.bind("save", function(e) {
          // handle event
-     }
+     });
 
 #### Event Data
 
@@ -1108,4 +1108,4 @@ Fires before the grid calls DataSource sync.
      // bind to the saveChanges event
      grid.bind("saveChanges", function(e) {
          // handle event
-     }
+     });
