@@ -103,7 +103,7 @@ The layout is your app's template. All content from views (that we'll create lat
 				<div data-role="tabstrip">
 					<a href="#">Home</a>		
 				</div> 
-			<footer>
+			</footer>
 		</section>
 
 		<script src="js/jquery.min.js"></script>
@@ -145,7 +145,7 @@ Now that the app's layout is defined, we need at least one view that can be disp
 				<div data-role="tabstrip">
 					<a href="#">Home</a>		
 				</div> 
-			<footer>
+			</footer>
 		</section>
 
 		<script src="js/jquery.min.js"></script>
@@ -201,7 +201,7 @@ To enable our app to navigate to this page, let's update the **TabStrip** added 
 			<a href="#">Home</a>
 			<a href="about.html">About</a>		
 		</div> 
-	<footer>
+	</footer>
 
 When Kendo UI Mobile encounters a link to an external view, it will automatically load and cache the view with Ajax and provide a seamless navigation experience.
 
@@ -216,7 +216,7 @@ If we did want to maintain multiple views in a single page, we would simply navi
 			<a href="about.html">About</a>
 			<a href="#view2">More</a>		
 		</div> 
-	<footer>
+	</footer>
 
 Finally, as you've probably noticed if you're testing as we go, your navigation is now working, but the views all appear instantly with no animation transition. To really give your app that native mobile feeling, we can add a default transition for all views by modifying the Application initalization script:
 
