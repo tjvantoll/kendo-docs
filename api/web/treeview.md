@@ -463,7 +463,7 @@ If provided, the node of a TreeView that should be selected.
 
 ### text
 
-Gets the text of a node in a TreeView.
+Gets or sets the text of a node in a TreeView.
 
 #### Get the text of the node with ID, firstItem
 
@@ -475,6 +475,14 @@ Gets the text of a node in a TreeView.
 ##### node `Selector`
 
 The node of which the text is being retrieved.
+
+##### newText `String`
+
+Optional. When passed, sets the node text to the specified string
+
+    var treeView = $("#treeView").data("kendoTreeView");
+
+    treeView.text(".k-item:first", "Salmon");
 
 #### Returns
 
@@ -506,6 +514,16 @@ Triggered before a subgroup gets collapsed.
 ##### e.node `Node`
 
 The collapsed node
+
+### dataBound
+
+Triggered after the dataSource change event has been processed (adding/removing items);
+
+#### Event Data
+
+##### e.node `jQueryObject`
+
+The node whose children have been changed. If the changes have occured on the root level, this parameter is undefined.
 
 ### drag
 

@@ -18,6 +18,15 @@ Whether to hide the browser address bar.
          new kendo.mobile.Application($(document.body), { hideAddressBar: false });
     </script>
 
+### updateDocumentTitle `Boolean`*(default: true)*
+
+Whether to update the document title.
+
+#### Example
+    <script>
+         new kendo.mobile.Application($(document.body), { updateDocumentTitle: false });
+    </script>
+
 ### initial `String`
 
  The id of the initial mobilie View to display.
@@ -42,9 +51,16 @@ Whether to hide the browser address bar.
       <div data-role="header">Header</div>
     </div>
 
-### loading `String`*(default: Loading...)*
+### loading `String`*(default: &lt;h1&gt;Loading...&lt;/h1&gt;)*
 
  The text displayed in the loading popup. Setting this value to false will disable the loading popup.
+
+#### Example
+    <script>
+         new kendo.mobile.Application($(document.body), {
+             loading: "<h1>Please wait...</h1>"
+         });
+    </script>
 
 ### platform `String`
 

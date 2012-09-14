@@ -183,12 +183,12 @@ Refreshes the content of a Window from a remote URL.
 
     var windowObject = $("#window").data("kendoWindow");
     windowObject.refresh("/feedbackForm");
-    
+
     windowObject.refresh({
         url: "/feedbackForm",
         data: { userId: 42 }
     });
-    
+
     windowObject.refresh({
         url: "/userInfo",
         data: { userId: 42 },
@@ -219,6 +219,10 @@ The HTTP request method ("GET", "POST").
 ##### options.template `String`
 
 A template to be used for displaying the requested data.
+
+##### options.iframe `Boolean`
+
+Indicates whether the content should be fetched within an iframe, or with AJAX and rendered in the same page.
 
 #### Returns
 
@@ -312,13 +316,25 @@ Triggered when the user starts to move the window.
 
 Triggered when an AJAX request for content fails.
 
+#### Arguments
+
+##### xhr `XmlHttpRequest`
+
+The XHR request object, as returned from [jQuery.ajax](http://api.jquery.com/jQuery.ajax/)
+
+##### status `String`
+
+The status of the request, as returned from [jQuery.ajax](http://api.jquery.com/jQuery.ajax/)
+
 ### open
 
 Triggered when a Window is opened (i.e. the open() method is called).
 
 ### refresh
 
-Triggered when the content of a Window have been refreshed via AJAX.
+Triggered when the content of a Window has finished loading via AJAX,
+when the window iframe has finished loading, or when the refresh button
+has been clicked on a window with static content.
 
 ### resize
 

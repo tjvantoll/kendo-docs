@@ -33,12 +33,29 @@ The simplest mobile **Application** consists of a single mobile **View**.
 
 The mobile **Application** consists of a single HTML page with one or more mobile Views,
 linked with navigational widgets (Buttons, TabStrip, etc.).
-Each child of the application element (`<body>` by default) with `data-role="view"`
+Each **immediate** child of the application element (`<body>` by default) with `data-role="view"`
 is considered a mobile view.
+
+When a mobile View is initialized (the first time the user visits it), it initializes all Mobile, Web, and DataViz Kendo widgets it contains. Please refer to the [Data Attribute Initialization section](/getting-started/data-attribute-initialization) for more details regarding declarative widget initialization.
+
+### Mobile View with Mobile Button widget
+
+    <body>
+       <div data-role="view">
+           <div data-role="header">Header</div>
+            <a data-role="button">Click Me!</a>
+           <div data-role="footer">Footer</div>
+       </div>
+
+       <script>
+            // the content of the document.body is used by default
+           var app = new kendo.mobile.Application();
+       </script>
+    </body>
 
 ## Navigation
 
-When initialized, the mobile **Application** modifies the behavior of the kendo mobile widgets
+When initialized, the mobile **Application** modifies the behavior of the Kendo mobile widgets
 (listview link items, buttons, tabs, etc.) so that they navigate between the mobile views
 when the user taps them.
 
@@ -53,7 +70,7 @@ When targeting local views, the `href` attribute of navigation widgets specifies
 
 By default, all navigational widgets try to navigate to local views when tapped. This behavior can be overridden by setting `data-rel="external"` attribute to the link element.
 
-### External links
+### Example: External links
 
     <a href="http://kendoui.com/" data-rel="external">Visit KendoUI</a>
 
