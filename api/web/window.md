@@ -27,9 +27,16 @@ The animation that will be used when a Window closes.
 
 The animation that will be used when a Window opens.
 
-### appendTo `Object`*(default: document.body)*
+### appendTo `Object|String`*(default: document.body)*
 
 The element that the Window will be appended to.
+Note that this *does not* constrain the window dragging within the given element.
+
+#### Set the window container to be the form with id="mainForm"
+
+    $("#dialog").kendoWindow({
+        appendTo: "#mainForm"
+    });
 
 ### content `Object|String`
 
