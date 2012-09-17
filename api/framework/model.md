@@ -43,6 +43,10 @@ To define a new model use the `Model.define` method.
 The unique identifier of the `Model`. Inherited from `ObservableObject`. More info can be found in the [uid](/api/framework/observableobject#uid) section of the
 ObservableObject API reference.
 
+### dirty `Boolean`
+
+Indicates whether the model is modified.
+
 ## Methods
 
 ### bind
