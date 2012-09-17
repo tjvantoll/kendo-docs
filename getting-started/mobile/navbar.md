@@ -75,7 +75,9 @@ Different platforms can be styled separately with their respective root classes.
 
     <div data-role="navbar" class="checkout">My View Title</div>
 
-By default the NavBar View Title is visible only in iOS and hidden in the rest of the platforms. In order to be visible on a specific, a single CSS rule is needed:
+## Showing Hidden View Title
+
+By default the NavBar View Title is visible only in iOS and hidden in the rest of the platforms. In order to be visible on a specific platform, a single CSS rule is needed:
 
 ### Show NavBar View Title on Android platform
 
