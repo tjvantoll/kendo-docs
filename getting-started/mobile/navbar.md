@@ -81,8 +81,12 @@ By default the NavBar View Title is visible only in iOS and hidden in the rest o
 
 ### Show NavBar View Title on Android platform
 
-    .km-android .km-navbar div.km-view-title
+    .km-android .km-navbar .km-view-title /* Before Q2 2012 SP1 */
     {
         display: inline-block;
-        visibility: visible; /* Needed after Q2 2012 SP1 */
+    }
+
+    .km-android .km-navbar .km-view-title /* After Q2 2012 SP1 */
+    {
+        visibility: visible;
     }
