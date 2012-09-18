@@ -247,7 +247,7 @@ Template which will be use during popup editing
 
 Indicates whether item should be switched to edit mode on click.
 
-### groupable `Boolean`*(default: false)*
+### groupable `Boolean | Object`*(default: false)*
 
  Indicates whether grouping is enabled/disabled.
 
@@ -269,7 +269,21 @@ Indicates whether item should be switched to edit mode on click.
             }
          ],
          groupable: true
-     });
+    });
+
+### groupable.messages.empty `String`
+
+ Sets the text of the empty grouping area message
+
+#### Example
+
+    $("#grid").kendoGrid({
+        groupable: {
+            messages: {
+                empty: "Custom message text"
+            }
+        }
+    });
 
 ### navigatable `Boolean`*(default: false)*
 
