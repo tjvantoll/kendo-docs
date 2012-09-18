@@ -1,11 +1,11 @@
 ---
-title: ActionSheet Overview
+title: ActionSheet
 slug: gs-mobile-actionsheet
 tags: getting-started,mobile
 publish: true
 ---
 
-# Mobile ActionSheet Overview
+# ActionSheet
 
 The mobile ActionSheet widget displays a set of choices related to a task the user initiates.
 

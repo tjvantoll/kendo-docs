@@ -1,11 +1,11 @@
 ---
-title: Mobile TabStrip overview
+title: TabStrip
 slug: gs-mobile-tabstrip
 tags: getting-started,mobile
 publish: true
 ---
 
-# Mobile TabStrip Overview
+# TabStrip
 
 The mobile TabStrip widget is used inside a mobile view or layout footer element to display an application-wide group of navigation buttons.
 The look of the mobile TabStrip changes depending on the user mobile device and operating system.

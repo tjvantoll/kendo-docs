@@ -1,11 +1,11 @@
 ---
-title: Mobile ButtonGroup overview
+title: ButtonGroup
 slug: gs-mobile-buttongroup
 tags: getting-started,mobile
 publish: true
 ---
 
-# Mobile ButtonGroup Overview
+# ButtonGroup
 
 The Kendo mobile ButtonGroup widget presents a linear set of grouped buttons.
 

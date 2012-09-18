@@ -1,11 +1,11 @@
 ---
-title: Mobile Scroller Overview
+title: Scroller
 slug: gs-mobile-scroller
 tags: getting-started,mobile
 publish: true
 ---
 
-# Mobile Scroller Overview
+# Scroller
 
 The Kendo Mobile Scroller widget enables touch friendly kinetic scrolling for the contents of a given DOM element.
 

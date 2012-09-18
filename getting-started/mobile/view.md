@@ -1,11 +1,11 @@
 ---
-title: Mobile View Overview
+title: View
 slug: gs-mobile-view
 tags: getting-started,mobile
 publish: true
 ---
 
-# Mobile View Overview
+# View
 
 The Kendo mobile View widget represents a screen in the kendo mobile Application. The
 Application automatically instantiates a mobile View for each element with a `role` data attribute set

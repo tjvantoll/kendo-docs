@@ -1,11 +1,11 @@
 ---
-title: Mobile Layout Overview
+title: Layout
 slug: gs-mobile-layout
 tags: getting-started,mobile
 publish: true
 ---
 
-# Mobile Layout Overview
+# Layout
 
 A mobile **Layout** is used to share headers and footers between multiple **Views**.
 The header and/or footer element of the **Layout** are applied to any **View** that uses it.

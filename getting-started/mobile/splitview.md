@@ -1,11 +1,11 @@
 ---
-title: Mobile SplitView overview
+title: SplitView
 slug: gs-mobile-splitview
 tags: getting-started,mobile
 publish: true
 ---
 
-# Mobile SplitView Overview
+# SplitView
 
 The mobile SplitView is a tablet-specific view that consists of two or more **mobile Pane widgets**. The
 Mobile Application automatically instantiates a mobile SplitView for each element with a `role` data attribute set

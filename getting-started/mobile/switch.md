@@ -1,11 +1,11 @@
 ---
-title: Mobile Switch overview
+title: Switch
 slug: gs-mobile-switch
 tags: getting-started,mobile
 publish: true
 ---
 
-# Mobile Switch Overview
+# Switch
 
 The mobile Switch widget is used to display two exclusive choices.
 

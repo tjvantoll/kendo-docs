@@ -1,11 +1,11 @@
 ---
-title: Mobile PopOver Overview
+title: PopOver
 slug: gs-mobile-popover
 tags: getting-started,mobile
 publish: true
 ---
 
-# Mobile PopOver Overview
+# PopOver
 
 The mobile PopOver widget represents a transient view which is displayed when the user taps on a navigational widget
 or area on the screen. It can contain one or more mobile views which can be navigated to, if needed.

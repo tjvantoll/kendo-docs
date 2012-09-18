@@ -1,11 +1,11 @@
 ---
-title: Mobile Pane Overview
+title: Pane
 slug: gs-mobile-pane
 tags: getting-started,mobile
 publish: true
 ---
 
-# Mobile Pane
+# Pane
 
 The mobile Pane widget groups one or more **mobile views** within the main view application. The mobile
 SplitView widget allows a side by-side display of several panes. The mobile PopOver automatically instantiates a mobile Pane widget for its

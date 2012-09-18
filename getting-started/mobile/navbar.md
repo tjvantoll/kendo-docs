@@ -1,11 +1,11 @@
 ---
-title: Mobile NavBar Overview
+title: NavBar
 slug: gs-mobile-navbar
 tags: getting-started,mobile
 publish: true
 ---
 
-# Mobile NavBar Overview
+# NavBar
 
 The Kendo mobile NavBar widget is used inside a mobile View or Layout Header element to display an application navigation bar.
 The mobile NavBar may display the current view title in the center, and optionally some additional left and right aligned widgets (a back button, settings button, etc.).
