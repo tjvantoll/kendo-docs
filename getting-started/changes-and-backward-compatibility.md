@@ -8,7 +8,7 @@ publish: true
 
 ## KendoUI 2012 Q2
 
-### Changes from 2011 Q1 SP1 (2011.1.515)
+### Changes from 2012 Q1 (2012.1.322)
 
 #### Breaking changes
 
