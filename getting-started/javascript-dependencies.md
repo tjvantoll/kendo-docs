@@ -49,370 +49,435 @@ can be included on a per-widget basis.
 ### AutoComplete
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.data.odata.js (if binding to OData)
-4.  kendo.model.js (if binding to XML)
-5.  kendo.data.xml.js (if binding to XML)
-6.  kendo.data.js
-7.  kendo.fx.js (optional for animation)
-8.  kendo.popup.js
-9.  kendo.list.js
-10.  kendo.autocomplete.js
+1.  kendo.core.js
+1.  kendo.data.odata.js (if binding to OData)
+1.  kendo.model.js (if binding to XML)
+1.  kendo.data.xml.js (if binding to XML)
+1.  kendo.data.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.popup.js
+1.  kendo.list.js
+1.  kendo.autocomplete.js
 
 
 ### Calendar
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.fx.js (optional for animation)
-4.  kendo.calendar.js
+1.  kendo.core.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.calendar.js
 
 ### Chart
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.data.odata.js (if binding to OData)
-4.  kendo.data.xml.js (if binding to XML)
-5.  kendo.data.js
-6.  <span>kendo.binder.js (if using MVVM)</span>
-7.  kendo.dataviz.core.js
-8.  kendo.dataviz.vml.js
-9.  kendo.dataviz.svg.js
-10. kendo.dataviz.themes.js
-11. kendo.dataviz.chart.js
+1.  kendo.core.js
+1.  kendo.data.odata.js (if binding to OData)
+1.  kendo.data.xml.js (if binding to XML)
+1.  kendo.data.js
+1.  <span>kendo.binder.js (if using MVVM)</span>
+1.  kendo.dataviz.core.js
+1.  kendo.dataviz.vml.js
+1.  kendo.dataviz.svg.js
+1. kendo.dataviz.themes.js
+1. kendo.dataviz.chart.js
 
 
 ### ComboBox
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.data.odata.js (if binding to OData)
-4.  kendo.model.js (if binding to XML)
-5.  kendo.data.xml.js (if binding to XML)
-6.  kendo.data.js
-7.  kendo.fx.js (optional for animation)
-8.  kendo.popup.js
-9.  kendo.list.js
-10.  kendo.combobox.js
+1.  kendo.core.js
+1.  kendo.data.odata.js (if binding to OData)
+1.  kendo.model.js (if binding to XML)
+1.  kendo.data.xml.js (if binding to XML)
+1.  kendo.data.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.popup.js
+1.  kendo.list.js
+1.  kendo.combobox.js
 
 
 ### DataSource
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.data.odata.js (if binding to OData)
-4.  kendo.model.js (if binding to XML or editing)
-5.  kendo.data.xml.js (if binding to XML)
-6.  kendo.data.js
+1.  kendo.core.js
+1.  kendo.data.odata.js (if binding to OData)
+1.  kendo.model.js (if binding to XML or editing)
+1.  kendo.data.xml.js (if binding to XML)
+1.  kendo.data.js
 
 
 ### DatePicker
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.fx.js (optional for animation)
-4.  kendo.popup.js
-5.  kendo.calendar.js
-6.  kendo.datepicker.js
+1.  kendo.core.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.popup.js
+1.  kendo.calendar.js
+1.  kendo.datepicker.js
 
 
 ### Drag and Drop
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.draganddrop.js
+1.  kendo.core.js
+1.  kendo.draganddrop.js
 
 
 ### DropDownList
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.data.odata.js (if binding to OData)
-4.  kendo.model.js (if binding to XML)
-5.  kendo.data.xml.js (if binding to XML)
-6.  kendo.data.js
-7.  kendo.fx.js (optional for animation)
-8.  kendo.popup.js
-9.  kendo.list.js
-10.  kendo.dropdownlist.js
+1.  kendo.core.js
+1.  kendo.data.odata.js (if binding to OData)
+1.  kendo.model.js (if binding to XML)
+1.  kendo.data.xml.js (if binding to XML)
+1.  kendo.data.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.popup.js
+1.  kendo.list.js
+1.  kendo.dropdownlist.js
 
 
 ### Editor
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.popup.js
-4.  kendo.list.js
-5.  kendo.dropdownlist.js
-6.  kendo.combobox.js
-7.  kendo.fx.js (optional for animation)
-8.  kendo.draganddrop.js (if popups are draggable and/or resizable)
-9.  kendo.window.js
-10.  kendo.editor.js
+1.  kendo.core.js
+1.  kendo.popup.js
+1.  kendo.list.js
+1.  kendo.dropdownlist.js
+1.  kendo.combobox.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.draganddrop.js (if popups are draggable and/or resizable)
+1.  kendo.window.js
+1.  kendo.editor.js
 
 
 ### Gauge
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.data.js (if using MVVM)
-4.  kendo.binder.js (if using MVVM)
-5.  kendo.dataviz.core.js
-6.  kendo.dataviz.vml.js
-7.  kendo.dataviz.svg.js
-8.  kendo.dataviz.gauge.js
+1.  kendo.core.js
+1.  kendo.data.js (if using MVVM)
+1.  kendo.binder.js (if using MVVM)
+1.  kendo.dataviz.core.js
+1.  kendo.dataviz.vml.js
+1.  kendo.dataviz.svg.js
+1.  kendo.dataviz.gauge.js
 
 
 ### Grid
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.data.odata.js (if binding to OData)
-4.  kendo.data.xml.js (if binding to XML)
-5.  kendo.data.js
-6.  kendo.fx.js (optional for animation)
-6.  kendo.popup.js (if editing or filtering is enabled)
-7.  kendo.list.js&nbsp;(if editing or filtering is enabled)
-8.  kendo.calendar.js (if editing or filtering is enabled)
-9.  kendo.datepicker.js (if editing or filtering is enabled)
-10.  kendo.numerictextbox.js (if editing or filtering is enabled)
-11.  kendo.validator.js (if editing is enabled)
-12.  kendo.binder.js (if editing is enabled)
-13.  kendo.dropdownlist.js (if filtering is enabled)
-14.  kendo.filtermenu.js (if filtering is enabled)
-15.  kendo.pager.js (if paging is enabled)
-16.  kendo.sortable.js (if sorting is enabled)
-17.  kendo.draganddrop.js (if grouping, resizing or reordering is enabled)
-18.  kendo.groupable.js (if grouping is enabled)
-19.  kendo.editable.js (if editing is enabled)
-20.  kendo.selectable.js (if selection is enabled)
-21.  kendo.resizable.js (if resizing is enabled)
-22.  kendo.reorderable.js (if reordering is enabled)
-23.  kendo.grid.js
+1.  kendo.core.js
+1.  kendo.data.odata.js (if binding to OData)
+1.  kendo.data.xml.js (if binding to XML)
+1.  kendo.data.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.popup.js (if editing or filtering is enabled)
+1.  kendo.list.js&nbsp;(if editing or filtering is enabled)
+1.  kendo.calendar.js (if editing or filtering is enabled)
+1.  kendo.datepicker.js (if editing or filtering is enabled)
+1.  kendo.numerictextbox.js (if editing or filtering is enabled)
+1.  kendo.validator.js (if editing is enabled)
+1.  kendo.binder.js (if editing is enabled)
+1.  kendo.dropdownlist.js (if filtering is enabled)
+1.  kendo.filtermenu.js (if filtering is enabled)
+1.  kendo.pager.js (if paging is enabled)
+1.  kendo.sortable.js (if sorting is enabled)
+1.  kendo.draganddrop.js (if grouping, resizing or reordering is enabled)
+1.  kendo.groupable.js (if grouping is enabled)
+1.  kendo.editable.js (if editing is enabled)
+1.  kendo.selectable.js (if selection is enabled)
+1.  kendo.resizable.js (if resizing is enabled)
+1.  kendo.reorderable.js (if reordering is enabled)
+1.  kendo.grid.js
 
 
 ### ListView
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.data.odata.js (if binding to OData)
-4.  kendo.data.xml.js (if binding to XML)
-5.  kendo.data.js
-6.  kendo.validator.js (if editing is enabled)
-7.  kendo.binder.js (if editing is enabled)
-8.  kendo.pager.js (if pager is used)
-9.  kendo.editable.js (if editing is enabled)
-10.  kendo.selectable.js (if selection is enabled)
-11.  kendo.listview.js
+1.  kendo.core.js
+1.  kendo.data.odata.js (if binding to OData)
+1.  kendo.data.xml.js (if binding to XML)
+1.  kendo.data.js
+1.  kendo.validator.js (if editing is enabled)
+1.  kendo.binder.js (if editing is enabled)
+1.  kendo.pager.js (if pager is used)
+1.  kendo.editable.js (if editing is enabled)
+1.  kendo.selectable.js (if selection is enabled)
+1.  kendo.listview.js
 
 
 ### Menu
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.fx.js (optional for animation)
-4.  kendo.popup.js
-5.  kendo.menu.js
+1.  kendo.core.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.popup.js
+1.  kendo.menu.js
 
 
 ### NumericTextBox
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.numerictextbox.js
+1.  kendo.core.js
+1.  kendo.numerictextbox.js
 
 
 ### PanelBar
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.fx.js (optional for animation)
-4.  kendo.panelbar.js
+1.  kendo.core.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.panelbar.js
 
 
 ### Slider and RangeSlider
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.binder.js (if using MVVM)
-4.  kendo.draganddrop.js
-5.  kendo.slider.js
+1.  kendo.core.js
+1.  kendo.binder.js (if using MVVM)
+1.  kendo.draganddrop.js
+1.  kendo.slider.js
 
 
 ### Splitter
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.draganddrop.js
-4.  kendo.resizable.js
-5.  kendo.splitter.js
+1.  kendo.core.js
+1.  kendo.draganddrop.js
+1.  kendo.resizable.js
+1.  kendo.splitter.js
 
 
 ### TabStrip
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.data.js
-3.  kendo.fx.js (optional for animation)
-5.  kendo.tabstrip.js
+1.  kendo.core.js
+1.  kendo.data.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.tabstrip.js
 
 
 ### TimePicker
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.fx.js (optional for animation)
-4.  kendo.popup.js
-5.  kendo.timepicker.js
+1.  kendo.core.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.popup.js
+1.  kendo.timepicker.js
 
 
 ### TreeView
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.data.js
-4.  kendo.fx.js (optional for animation)
-5.  kendo.draganddrop.js (if drag &amp; drop enabled)
-6.  kendo.treeview.js
+1.  kendo.core.js
+1.  kendo.data.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.draganddrop.js (if drag &amp; drop enabled)
+1.  kendo.treeview.js
 
 
 ### Upload
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.upload.js
+1.  kendo.core.js
+1.  kendo.upload.js
 
 
 ### Validator
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.validator.js
+1.  kendo.core.js
+1.  kendo.validator.js
 
 
 ### Window
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.fx.js (optional for animation)
-4.  kendo.draganddrop.js
-5.  kendo.resizable.js
-6.  kendo.window.js
+1.  kendo.core.js
+1.  kendo.fx.js (optional for animation)
+1.  kendo.draganddrop.js
+1.  kendo.resizable.js
+1.  kendo.window.js
 
 
 ### Mobile Application
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.history.js
-4.  kendo.fx.js
-5.  kendo.draganddrop.js
-6.  kendo.mobile.view.js
-7.  kendo.mobile.scroller.js
-8.  kendo.mobile.application.js
+1.  kendo.core.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+
+### Mobile ActionSheet
+
+1.  jquery-1.7.1.js
+1.  kendo.core.js
+1.  kendo.history.js
+1.  kendo.popup.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.shim.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+1.  kendo.mobile.actionsheet.js
 
 
 ### Mobile Button
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.history.js
-4.  kendo.fx.js
-5.  kendo.draganddrop.js
-6.  kendo.mobile.view.js
-7.  kendo.mobile.application.js
-8.  kendo.mobile.scroller.js
-9.  kendo.mobile.button.js
+1.  kendo.core.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.button.js
 
 
 ### Mobile ButtonGroup
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.history.js
-4.  kendo.fx.js
-5.  kendo.draganddrop.js
-6.  kendo.mobile.view.js
-7.  kendo.mobile.application.js
-8.  kendo.mobile.scroller.js
-9.  kendo.mobile.buttongroup.js
+1.  kendo.core.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+1.  kendo.mobile.buttongroup.js
 
 
 ### Mobile ListView
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.data.js
-4.  kendo.data.odata.js
-5.  kendo.data.xml.js
-6.  kendo.model.js
-7.  kendo.history.js
-8.  kendo.fx.js
-9.  kendo.draganddrop.js
-10.  kendo.mobile.view.js
-11.  kendo.mobile.application.js
-12.  kendo.mobile.scroller.js
-13.  kendo.mobile.listview.js
+1.  kendo.core.js
+1.  kendo.data.js
+1.  kendo.data.odata.js
+1.  kendo.data.xml.js
+1.  kendo.model.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+1.  kendo.mobile.listview.js
 
+### Mobile ModalView
+
+1.  jquery-1.7.1.js
+1.  kendo.core.js
+1.  kendo.popup.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.shim.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+1.  kendo.mobile.modalview.js
 
 ### Mobile NavBar
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.history.js
-4.  kendo.fx.js
-5.  kendo.draganddrop.js
-6.  kendo.mobile.view.js
-7.  kendo.mobile.application.js
-8.  kendo.mobile.scroller.js
-9.  kendo.mobile.navbar.js
+1.  kendo.core.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+1.  kendo.mobile.navbar.js
 
+### Mobile PopOver
+
+1.  jquery-1.7.1.js
+1.  kendo.core.js
+1.  kendo.popup.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.shim.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+1.  kendo.mobile.popover.js
 
 ### Mobile Scroller
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.history.js
-4.  kendo.fx.js
-5.  kendo.draganddrop.js
-6.  kendo.mobile.scroller.js
+1.  kendo.core.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.scroller.js
 
 
 ### Mobile ScrollView
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.history.js
-4.  kendo.fx.js
-5.  kendo.draganddrop.js
-6.  kendo.mobile.view.js
-7.  kendo.mobile.application.js
-8.  kendo.mobile.scroller.js
-9.  kendo.mobile.scrollview.js
+1.  kendo.core.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+1.  kendo.mobile.scrollview.js
+
+### Mobile SplitView
+
+1.  jquery-1.7.1.js
+1.  kendo.core.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+1.  kendo.mobile.splitview.js
 
 
 ### Mobile Switch
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.history.js
-4.  kendo.fx.js
-5.  kendo.draganddrop.js
-6.  kendo.mobile.view.js
-7.  kendo.mobile.application.js
-8.  kendo.mobile.scroller.js
-9.  kendo.mobile.switch.js
+1.  kendo.core.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+1.  kendo.mobile.switch.js
 
 
 ### Mobile TabStrip
 
 1.  jquery-1.7.1.js
-2.  kendo.core.js
-3.  kendo.history.js
-4.  kendo.fx.js
-5.  kendo.draganddrop.js
-6.  kendo.mobile.view.js
-7.  kendo.mobile.application.js
-8.  kendo.mobile.scroller.js
-9.  kendo.mobile.tabstrip.js
+1.  kendo.core.js
+1.  kendo.history.js
+1.  kendo.fx.js
+1.  kendo.draganddrop.js
+1.  kendo.mobile.scroller.js
+1.  kendo.mobile.view.js
+1.  kendo.mobile.pane.js
+1.  kendo.mobile.application.js
+1.  kendo.mobile.tabstrip.js
 
