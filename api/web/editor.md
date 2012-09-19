@@ -19,6 +19,41 @@ publish: true
          encoded: false
      });
 
+### messages `Object`
+
+Defines the text of the labels that are shown within the editor. Used primarily for localization.
+
+#### Example
+
+    $("#editor").kendoEditor({
+        messages: {
+            bold: "Bold",
+            italic: "Italic",
+            underline: "Underline",
+            strikethrough: "Strikethrough",
+            superscript: "Superscript",
+            subscript: "Subscript",
+            justifyCenter: "Center text",
+            justifyLeft: "Align text left",
+            justifyRight: "Align text right",
+            justifyFull: "Justify",
+            insertUnorderedList: "Insert unordered list",
+            insertOrderedList: "Insert ordered list",
+            indent: "Indent",
+            outdent: "Outdent",
+            createLink: "Insert hyperlink",
+            unlink: "Remove hyperlink",
+            insertImage: "Insert image",
+            insertHtml: "Insert HTML",
+            fontName: "Select font family",
+            fontNameInherit: "(inherited font)",
+            fontSize: "Select font size",
+            fontSizeInherit: "(inherited size)",
+            formatBlock: "Format",
+            style: "Styles"
+        }
+    });
+
 ### stylesheets `Array`
 
 Allows custom stylesheets to be included within the editing area.
