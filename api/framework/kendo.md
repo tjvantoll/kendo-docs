@@ -80,6 +80,13 @@ If no culture is found the default one is used.
 #### Get the current culture
     var culture = kendo.culture();
 
+### destroy
+Finds all widgets that are children of the specified element and calls their destroy method.
+
+#### Parameters
+
+##### element `String|jQuery|Node`
+
 ### format
 Replaces each format item in a specified string with the text equivalent of a corresponding object's value.
 
