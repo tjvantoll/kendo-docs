@@ -288,6 +288,18 @@ Closes the calendar or the time drop-down list.
 The view of the DateTimePicker, expressed as a string.
 Available views are "time" and "date".
 
+### destroy
+Prepares the **DateTimePicker** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the DateTimePicker element from DOM.
+
+#### Example
+
+    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
+    
+    // detach events
+    dateTimePicker.destroy();
+
 ### enable
 
 Enables or disables a DateTimePicker.

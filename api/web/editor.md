@@ -135,6 +135,18 @@ The document that the range is associated with. If ommited, the document of the 
 
 `Range` The created **Range** object.
 
+### destroy
+Prepares the **Editor** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the Editor element from DOM.
+
+#### Example
+
+    var editor = $("#editor").data("kendoEditor");
+    
+    // detach events
+    editor.destroy();
+
 ### encodedValue
 
 Gets the HTML encoded value of the editor.

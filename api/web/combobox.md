@@ -337,6 +337,18 @@ The zero-based index of the data record
 
 `Object` The raw data record. Returns <i>undefined</i> if no data.
 
+### destroy
+Prepares the **ComboBox** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the ComboBox element from DOM.
+
+#### Example
+
+    var combobox = $("#combobox").data("kendoComboBox");
+    
+    // detach events
+    combobox.destroy();
+
 ### enable
 
 Enables/disables the combobox widget

@@ -289,6 +289,18 @@ The zero-based index of the data record
 
 `Object` The raw data record. Returns <i>undefined</i> if no data.
 
+### destroy
+Prepares the **DropDownList** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the DropDownList element from DOM.
+
+#### Example
+
+    var dropDownList = $("#dropDownList").data("kendoDropDownList");
+    
+    // detach events
+    dropDownList.destroy();
+
 ### enable
 
 Enables/disables the dropdownlist widget

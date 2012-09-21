@@ -109,6 +109,18 @@ Closes the drop-down list of a TimePicker.
 
     $("timepicker").data("kendoTimePicker").close();
 
+### destroy
+Prepares the **TimePicker** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the TimePicker element from DOM.
+
+#### Example
+
+    var timePicker = $("#timePicker").data("kendoTimePicker");
+    
+    // detach events
+    timePicker.destroy();
+
 ### enable
 
 Enables or disables a TimePicker.

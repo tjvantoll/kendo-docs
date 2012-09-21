@@ -176,6 +176,18 @@ Specifies the navigation depth.
 
 ## Methods
 
+### destroy
+Prepares the **Calendar** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the Calendar element from DOM.
+
+#### Example
+
+    var calendar = $("#calendar").data("kendoCalendar");
+    
+    // detach events
+    calendar.destroy();
+
 ### max
 
 Gets/Sets the max value of the calendar.

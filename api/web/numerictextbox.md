@@ -167,6 +167,18 @@ publish: true
 
 ## Methods
 
+### destroy
+Prepares the **NumericTextBox** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the NumericTextBox element from DOM.
+
+#### Example
+
+    var textbox = $("#textbox").data("kendoNumericTextBox");
+    
+    // detach events
+    textbox.destroy();
+
 ### enable
 
 Enable/Disable the numerictextbox widget.

@@ -182,6 +182,18 @@ Target item selector.
 
 `Menu` Returns the Menu object to support chaining.
 
+### destroy
+Prepares the **Menu** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the Menu element from DOM.
+
+#### Example
+
+    var menu = $("#menu").data("kendoMenu");
+    
+    // detach events
+    menu.destroy();
+
 ### enable
 
 Enables or disables an item of a **Menu**. This can optionally be accomplished on

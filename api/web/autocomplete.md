@@ -270,6 +270,18 @@ The zero-based index of the data record
 
 `Object` The raw data record. Returns <i>undefined</i> if no data.
 
+### destroy
+Prepares the **AutoComplete** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the AutoComplete element from DOM.
+
+#### Example
+
+    var autocomplete = $("#autocomplete").data("kendoAutoComplete");
+    
+    // detach events
+    autocomplete.destroy();
+
 ### enable
 
 Enable/Disable the autocomplete widget.

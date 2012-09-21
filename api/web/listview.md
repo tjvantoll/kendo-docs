@@ -167,6 +167,18 @@ Cancels changes in currently edited item.
 
 Clears ListView selected items and triggers change event.
 
+### destroy
+Prepares the **ListView** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the ListView element from DOM.
+
+#### Example
+
+    var listView = $("#listView").data("kendoListView");
+    
+    // detach events
+    listView.destroy();
+
 ### edit
 
 Edit specified ListView item. Triggers edit event.

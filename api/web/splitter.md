@@ -116,6 +116,18 @@ will trigger layoutChange and resize events. Note: Invoking the method will not 
 
 The pane to be collapsed.
 
+### destroy
+Prepares the **Splitter** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the Splitter element from DOM.
+
+#### Example
+
+    var splitter = $("#splitter").data("kendoSplitter");
+    
+    // detach events
+    splitter.destroy();
+
 ### expand
 
 Expands a specified pane. Invoking this method will force the **Splitter** to redraw and it

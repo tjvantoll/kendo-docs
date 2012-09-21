@@ -297,6 +297,18 @@ Deactivates a tab specified as a selector. Note: Invoking this method will not t
 
 The target tab, specified as a selector, to be deactivated.
 
+### destroy
+Prepares the **TabStrip** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the TabStrip element from DOM.
+
+#### Example
+
+    var tabStrip = $("#tabStrip").data("kendoTabStrip");
+    
+    // detach events
+    tabStrip.destroy();
+
 ### disable
 
 Disables a tab(s) of a **TabStrip**.

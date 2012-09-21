@@ -688,6 +688,18 @@ Returns the data item to which a given table row (tr DOM element) is bound.
 
 Target row.
 
+### destroy
+Prepares the **Grid** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> **Important:** This method does not remove the Grid element from DOM.
+
+#### Example
+
+    var grid = $("#grid").data("kendoGrid");
+    
+    // detach events
+    grid.destroy();
+
 ### editCell
 
 Puts the specified table cell in edit mode. It requires a jQuery object representing the cell. The editCell method triggers edit event.
