@@ -81,7 +81,7 @@ If no culture is found the default one is used.
     var culture = kendo.culture();
 
 ### destroy
-Finds all widgets that are children of the specified element and calls their destroy method.
+Finds all Kendo widgets that are children of the specified element and calls their destroy method.
 
 #### Parameters
 
