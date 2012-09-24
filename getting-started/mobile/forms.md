@@ -53,3 +53,18 @@ if you encounter such issues and want to work around them, you can disable the i
         -webkit-transform: none;
         -moz-transform: none;
     }
+
+As of Q3 2012, the rules needed should have more specificity and different selectors:
+
+    .km-root .km-on-android input
+    {
+        -webkit-user-modify: read-write;
+    }
+
+    .km-root .km-on-android .km-list > li
+    {
+        bottom: auto;
+        -webkit-transform: none;
+        -moz-transform: none;
+    }
+
