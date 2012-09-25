@@ -674,7 +674,7 @@ Refer to the [jQuery.ajax](http://api.jquery.com/jQuery.ajax) documentation for 
         }
     }
 
-### transport.create.url `String`
+### transport.create.url `String|Function`
 
 The remote url to call when creating a new record.
 
@@ -682,6 +682,16 @@ The remote url to call when creating a new record.
     transport: {
         create: {
             url: "/create"
+        }
+    }
+
+#### Example: Specify Create URL As Function
+    transport: {
+        create: {
+            url: function(params) {
+                //build url
+                return "url";
+            }
         }
     }
 
@@ -799,7 +809,7 @@ Refer to the [jQuery.ajax](http://api.jquery.com/jQuery.ajax) documentation for 
         }
     }
 
-### transport.destroy.url `String`
+### transport.destroy.url `String|Function`
 
 The remote url to call when creating a new record.
 
@@ -807,6 +817,16 @@ The remote url to call when creating a new record.
     transport: {
         destroy: {
             url: "/destroy"
+        }
+    }
+
+#### Example: Specify Destroy URL As Function
+    transport: {
+        destroy: {
+            url: function(params) {
+                //build url
+                return "url";
+            }
         }
     }
 
@@ -944,7 +964,7 @@ Refer to the [jQuery.ajax](http://api.jquery.com/jQuery.ajax) documentation for 
         }
     }
 
-### transport.read.url `String`
+### transport.read.url `String|Function`
 
 The remote url to call when creating a new record.
 
@@ -952,6 +972,16 @@ The remote url to call when creating a new record.
     transport: {
         read: {
             url: "/read"
+        }
+    }
+
+#### Example: Specify Read URL As Function
+    transport: {
+        read: {
+            url: function(params) {
+                //build url
+                return "url";
+            }
         }
     }
 
@@ -1070,7 +1100,7 @@ Refer to the [jQuery.ajax](http://api.jquery.com/jQuery.ajax) documentation for 
         }
     }
 
-### transport.update.url `String`
+### transport.update.url `String|Function`
 
 The remote url to call when creating a new record.
 
@@ -1078,6 +1108,16 @@ The remote url to call when creating a new record.
     transport: {
         update: {
             url: "/update"
+        }
+    }
+
+#### Example: Specify Update URL As Function
+    transport: {
+        update: {
+            url: function(params) {
+                //build url
+                return "url";
+            }
         }
     }
 
