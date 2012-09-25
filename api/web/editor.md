@@ -312,6 +312,14 @@ The name of the command
 
 The command instance
 
+### keydown
+
+Fires when the user depresses a keyboard key. Triggered multiple times if the user holds the key down.
+
+### keyup
+
+Fires when the user releases a keyboard key.
+
 ### paste
 
 Fires before when content is pasted in the Editor.
