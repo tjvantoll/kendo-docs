@@ -901,27 +901,6 @@ Fires when the grid selection has changed.
          // handle event
      });
 
-### dataBound
-
-Fires when the grid has received data from the data source.
-
-#### Example
-
-     $("#grid").kendoGrid({
-         dataBound: function(e) {
-             // handle event
-         }
-     });
-
-#### To set after initialization
-
-     // get a reference to the grid
-     var grid = $("#grid").data("kendoGrid");
-     // bind to the dataBound event
-     grid.bind("dataBound", function(e) {
-         // handle event
-     });
-
 ### columnResize
 
 Fires when the user resizes a column.
@@ -956,6 +935,27 @@ The previous column width.
 ##### e.newWidth `Number`
 
 The new column width.
+
+### dataBound
+
+Fires when the grid has received data from the data source.
+
+#### Example
+
+     $("#grid").kendoGrid({
+         dataBound: function(e) {
+             // handle event
+         }
+     });
+
+#### To set after initialization
+
+     // get a reference to the grid
+     var grid = $("#grid").data("kendoGrid");
+     // bind to the dataBound event
+     grid.bind("dataBound", function(e) {
+         // handle event
+     });
 
 ### detailCollapse
 
