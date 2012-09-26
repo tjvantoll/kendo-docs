@@ -922,6 +922,41 @@ Fires when the grid has received data from the data source.
          // handle event
      });
 
+### columnResize
+
+Fires when the user resizes a column.
+
+#### Example
+
+     $("#grid").kendoGrid({
+         columnResize: function(e) {
+             // handle event
+         }
+     });
+
+#### To set after initialization
+
+     // get a reference to the grid
+     var grid = $("#grid").data("kendoGrid");
+     // bind to the columnResize event
+     grid.bind("columnResize", function(e) {
+         // handle event
+     });
+
+#### Event Data
+
+##### e.column `Object`
+
+The column object with its properties, e.g. `encoded`, `field` and `title`.
+
+##### e.oldWidth `Number`
+
+The previous column width.
+	 
+##### e.newWidth `Number`
+
+The new column width.
+
 ### detailCollapse
 
 Fires when the grid detail row is collapsed.
