@@ -432,9 +432,9 @@ Removes the specified PanelBar item(s).
 
 #### Parameters
 
-##### element `Selector`
+##### element `String Selector | DOM element | jQuery object`
 
-Target item selector.
+The **PanelBar** item(s) to be removed, expressed as a selector string, DOM element or a jQuery object.
 
 ### select
 
@@ -450,7 +450,7 @@ returns the currently selected item.
 
 #### Parameters
 
-##### element `String | Selector`
+##### element `String Selector | DOM element | jQuery object`
 
 The **PanelBar** item to be selected, expressed as a string containing a selector expression or
 represented by a [jQuery selector](http://api.jquery.com/category/selectors/).
