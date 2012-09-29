@@ -43,23 +43,6 @@ Specifies the navigation depth.
 
 ### footer `String`
 
- Specifies the content of the footer. If false, the footer will not be rendered.
-
-#### Example
-
-    // change the footer text from the default current date
-    $("#calendar").kendoCalendar({
-        footer = "My Custom Footer"
-    });
-
-#### Example
-
-    $("#calendar").kendoCalendar({
-        footer = false;
-    });
-
-### footer `String`
-
  Template to be used for rendering the footer. If false, the footer will not be rendered.
 
 #### Example
