@@ -128,7 +128,7 @@ The id or url of the view.
 
 ##### transition `String`
 
-The transition to apply when navigating. See [View Transitions section](/getting-started/mobile/application/overview#view-transitions) for more information.
+The transition to apply when navigating. See [View Transitions section](/getting-started/mobile/application#view-transitions) for more information.
 
 ### scroller
 
