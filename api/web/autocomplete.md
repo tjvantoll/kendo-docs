@@ -140,7 +140,7 @@ The set of data that the AutoComplete will be bound to.
         highlightFirst: false //no of the suggested items will be highlighted
     });
 
-### ignoreCase `String`*(default: true)*
+### ignoreCase `Boolean`*(default: true)*
 
  Defines whether the filtration should be case sensitive.
 
@@ -166,7 +166,7 @@ the dataSource.
 ### placeholder `String`*(default: "")*
 
  A string that appears in the textbox when it has no value.
- 
+
 
 #### Example
 
@@ -181,7 +181,7 @@ the dataSource.
 #### Example
 
     <input id="autocomplete" placeholder="Enter value..." />
-    
+
      //combobox initialization
      <script>
          $("#autocomplete").kendoAutoComplete({
@@ -218,7 +218,7 @@ Template to be used for rendering the items in the list.
 #### Example
 
     //template
-    
+
     <script id="template" type="text/x-kendo-tmpl">
           # if (data.BoxArt.SmallUrl) { #
               <img src="${ data.BoxArt.SmallUrl }" alt="${ data.Name }" />Title:${ data.Name }, Year: ${ data.Name }
@@ -226,7 +226,7 @@ Template to be used for rendering the items in the list.
               <img alt="${ data.Name }" />Title:${ data.Name }, Year: ${ data.Name }
           # } #
      </script>
-    
+
      //autocomplete initialization
      <script>
          $("#autocomplete").kendoAutoComplete({
@@ -246,7 +246,7 @@ Closes the drop-down list.
 
     // get a reference to the autocomplete widget
     var autocomplete = $("autocomplete").data("kendoAutoComplete");
-    
+
     autocomplete.close();
 
 ### dataItem
@@ -256,7 +256,7 @@ Returns the raw data record at the specified index
 #### Example
 
     var autocomplete = $("#autocomplete").data("kendoAutoComplete");
-    
+
     // get the dataItem corresponding to the passed index.
     var dataItem = autocomplete.dataItem(1);
 
@@ -290,10 +290,10 @@ Enable/Disable the autocomplete widget.
 
     // get a reference to the autocomplete widget
     var autocomplete = $("autocomplete").data("kendoAutoComplete");
-    
+
     // disables the autocomplete
     autocomplete.enable(false);
-    
+
     // enables the autocomplete
     autocomplete.enable(true);
 
@@ -322,7 +322,7 @@ Filters dataSource using the provided parameter and rebinds drop-down list.
 
     // get a reference to the autocomplete widget
     var autocomplete = $("autocomplete").data("kendoAutoComplete");
-    
+
     // Searches for item which has "Inception" in the name.
     autocomplete.search("Inception");
 
@@ -340,7 +340,7 @@ Selects drop-down list item and sets the text of the autocomplete.
 
     // get a reference to the autocomplete widget
     var autocomplete = $("autocomplete").data("kendoAutoComplete");
-    
+
     // selects by jQuery object
     autocomplete.select(autocomplete.ul.children().eq(0));
 
@@ -361,7 +361,7 @@ Forces a suggestion onto the text of the AutoComplete.
     //
     // get a referenence to the Kendo UI AutoComplete
     var autoComplete = $("#autoComplete").data("kendoAutoComplete");
-    
+
     // force a suggestion to the item with the name "Inception"
     autoComplete.suggest("Inception");
 
@@ -379,7 +379,7 @@ Gets/Sets the value of the autocomplete.
 
     // get a reference to the autocomplete widget
     var autocomplete = $("autocomplete").data("kendoAutoComplete");
-    
+
     // get the text of the autocomplete.
     var value = autocomplete.value();
 
@@ -454,12 +454,12 @@ Triggered when a Li element is selected.
     var onSelect = function(e) {
         // access the selected item via e.item (jQuery object)
     };
-    
+
     // attach select event handler during initialization
     var autocomplete = $("#autocomplete").kendoAutoComplete({
         select: onSelect
     });
-    
+
     // detach select event handler via unbind()
     autocomplete.data("kendoAutoComplete").unbind("select", onSelect);
 
@@ -469,10 +469,10 @@ Triggered when a Li element is selected.
     var onSelect = function(e) {
         // access the selected item via e.item (jQuery object)
     };
-    
+
     // attach select event handler via bind()
     $("#autocomplete").data("kendoAutoComplete").bind("select", onSelect);
-    
+
     // detach select event handler via unbind()
     $("#autocomplete").data("kendoAutoComplete").unbind("select", onSelect);
 
