@@ -105,8 +105,7 @@ You can see from the comments in-line that we have moved some things out of the 
 
 We additionally need to make some changes in our markup. Lets take it element by element and examine the bindings:
 
-	<select data-role="dropdownlist" data-bind="source: type, value: expenseType">
-		<span data-text-field="name" data-value-field="value" >
+	<select data-role="dropdownlist" data-bind="source: type, value: expenseType" data-text-field="name" data-value-field="value">
 	</select>
 
 The **select** element now has no options. Instead, it has some new **data** attributes.
