@@ -126,7 +126,7 @@ Indicates whether checkboxes of child items should get checked when the checkbox
 
 ### checkboxes.template `String|Function`
 
-Template for the checkbox rendering. Allows setting of checkbox name or adding additional hidden inputs that will be posted alongside the checkboxes.
+Template for the checkbox rendering. Used to set the  checkbox name attribute, or to add hidden inputs that will be posted along the checkboxes.
 
 #### Example
 
