@@ -102,20 +102,38 @@ is expanded. Options include **"expandVertical"** and **"fadeIn"**.
 
 ### animation.expand.show `Boolean`*(default: true)*
 
+### checkboxes `Boolean|Object`
 
-
-### checkboxTemplate `String|Function`
-
-Template for rendering of the treeview checkboxes.
+If `true` or an object, renders checkboxes within each treeview item.
 
 #### Example
 
     $("#treeview").kendoTreeView({
-        template: kendo.template(
-            "<input type='checkbox' name='checkedFiles[" +
-                item.id +
-            "]' value='true' />"
-        )
+        checkboxes: true
+    });
+
+### checkboxes.checkChildren `Boolean`*(default: false)*
+
+Indicates whether checkboxes of child items should get checked when the checkbox of a parent item is checked.
+
+#### Example
+
+    $("#treeview").kendoTreeView({
+        checkboxes: {
+            checkChildren: true
+        }
+    });
+
+### checkboxes.template `String|Function`
+
+Template for the checkbox rendering. Allows setting of checkbox name or adding additional hidden inputs that will be posted alongside the checkboxes.
+
+#### Example
+
+    $("#treeview").kendoTreeView({
+        checkboxes: {
+            template: "<input type='checkbox' name='checkedFiles[#= item.id #]' value='true' />"
+        }
     });
 
 ### dataImageUrlField `String`*(default: null)*
