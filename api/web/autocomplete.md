@@ -425,6 +425,25 @@ Fires when the drop-down list is closed
         // handle event
     });
 
+### dataBound
+
+Fires when the AutoComplete has received data from the data source.
+
+#### Example
+
+    $("#autoComplete").kendoAutoComplete({
+        dataBound: function(e) {
+            // handle event
+        }
+    });
+
+#### To set after initialization
+
+    var autoComplete = $("#autoComplete").data("kendoAutoComplete");
+    autoComplete.bind("dataBound", function(e) {
+        // handle event
+    });
+
 ### open
 
 Fires when the drop-down list is opened
