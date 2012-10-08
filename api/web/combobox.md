@@ -559,6 +559,27 @@ Fires when the drop-down list is closed
         // handle event
     });
 
+### dataBound
+
+Fires when the ComboBox has received data from the data source.
+
+#### Example
+
+    $("#comboBox").kendoComboBox({
+        dataBound: function(e) {
+            // handle event
+        }
+    });
+
+#### To set after initialization
+
+    // get a reference to instance of the Kendo UI ComboBox
+    var combobox = $("#comboBox").data("kendoComboBox");
+    // bind to the close event
+    combobox.bind("dataBound", function(e) {
+        // handle event
+    });
+
 ### open
 
 Fires when the drop-down list is opened
