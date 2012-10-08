@@ -491,6 +491,20 @@ If provided, the node of a TreeView that should be selected.
 
 `Node` The selected node of a TreeView.
 
+### setDataSource
+
+Sets the dataSource of an existing TreeView and rebinds it.
+
+#### Binding to a new HierarchicalDataSource
+
+    var dataSource = new kendo.data.HierarchicalDataSource({
+        data: [
+            { text: "foo" }
+        ]
+    });
+
+    $("#treeview").data("kendoTreeView").setDataSource(dataSource);
+
 ### text
 
 Gets or sets the text of a node in a TreeView.
