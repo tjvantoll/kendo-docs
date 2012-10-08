@@ -890,14 +890,14 @@ Date format strings
 The Chart will choose the appropriate format for the current `baseUnit`.
 Setting the labels **format** option will override these defaults.
 
-### categoryAxis.type: "Date".max `Number`
+### categoryAxis.type: "Date".max `Date`
 
 The last date displayed on the axis.
 By default, the minimum date is the same as the last category.
 This is often used in combination with the **min** configuration option to
 set up a fixed date range.
 
-### categoryAxis.type: "Date".min `Number`
+### categoryAxis.type: "Date".min `Date`
 
 The first date displayed on the axis.
 By default, the minimum date is the same as the first category.
