@@ -168,7 +168,7 @@ be availble in your views. Rebuild your project after adding the namespace to th
         </configuration>
 
 4.  Copy the Kendo UI JavaScript files from the **\js** folder of the installation to the **Scripts** folder of your application.
-If you want to use CDN skip steps 3, 4 and 5 and check the [Using CDN](#using-cdn) section.
+If you want to use CDN skip steps 4 and 5 and check the [Using CDN](#using-cdn) section.
 
 5.  Copy the Kendo UI CSS files and folders from the **\styles** folder of the installation to the **Content** folder of your application. If you want to use only one theme
 copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), the theme folder (e.g. **Default**) and the **textures** folder.
