@@ -44,7 +44,7 @@ if you encounter such issues and want to work around them, you can disable the i
 
     .km-android input
     {
-        -webkit-user-modify: read-write;
+        -webkit-user-modify: inherit;
     }
 
     .km-android .km-list > li
@@ -58,7 +58,7 @@ As of Q3 2012, the rules needed should have more specificity and different selec
 
     .km-root .km-on-android input
     {
-        -webkit-user-modify: read-write;
+        -webkit-user-modify: inherit;
     }
 
     .km-root .km-on-android .km-list > li
