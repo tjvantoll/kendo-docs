@@ -1,7 +1,7 @@
 ---
 title: VB Syntax
 slug: mvc-vb
-publish: false
+publish: true
 ---
 
 # VB Syntax
