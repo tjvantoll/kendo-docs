@@ -24,7 +24,6 @@ The following example shows the correct Visual Basic (VB) syntax when using [lam
 							   t.CustomButton(Sub(cb)
 													  cb.Name("custom")
 													  cb.ToolTip("horizontal rule")
-													  'cb.Exec("function(e) { alert('exec'); }")
 													  cb.Exec(Function()
 																	  Return "function(e) { alert('exec'); }"
 															  End Function)
