@@ -1,12 +1,12 @@
 ---
-title: Part 4 - Hello Kendo UI
+title: Hello Kendo UI Part 1 (Getting Data To Kendo UI)
 slug: tutorial-html5-development-with-asp-net-part-4-hello-kendo-ui
 tags: Tutorial
 publish: true
 ---
 
-# Tutorial: HTML5 Development For ASP.NET Developers Part 4
-## Hello Kendo UI
+# Tutorial: HTML5 Development For ASP.NET Developers
+## Hello Kendo UI Part 1
 
 In this tutorial, you will work with the most complex widget, the **[Kendo UI
 Grid][4]** as well as one of the core components, the **[Kendo UI

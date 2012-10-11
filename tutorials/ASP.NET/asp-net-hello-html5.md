@@ -1,11 +1,11 @@
 ---
-title: Part 3 - Hello HTML5
+title: Hello HTML5
 slug: tutorial-html5-development-with-asp-net-part-3-hello-html5
 tags: Tutorial
 publish: true
 ---
 
-# Tutorial: HTML5 Development With ASP.NET Part 3, Hello HTML5
+# Tutorial: HTML5 Development With ASP.NET, Hello HTML5
 
 This module will cover HTML5 as a broad topic. Up until now, this course has
 not really touched on any actual HTML5 development, but has laid the

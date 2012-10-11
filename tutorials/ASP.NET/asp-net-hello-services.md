@@ -1,11 +1,11 @@
 ---
-title: Part 2 - Hello Services
+title: Hello Services (WebAPI And REST)
 slug: tutorial-html5-development-with-asp-net-part-2-hello-services
 tags: Tutorial
 publish: true
 ---
 
-# Tutorial: HTML5 Development For ASP.NET Developers Part 2, Hello Services
+# Tutorial: HTML5 Development For ASP.NET Developers, Hello Services
 
 This tutorial will cover how to create RESTful services with ASP.NET WebAPI.  You will learn...
 

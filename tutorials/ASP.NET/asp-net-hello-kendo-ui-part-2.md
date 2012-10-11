@@ -1,9 +1,12 @@
 ---
-title: Part 5 - Hello Kendo UI  - Grid CRUD
+title: Hello Kendo UI Part 2 (CRUD Operations In The Grid)
 slug: tutorial-html5-development-with-asp-net-part-5-hello-kendo-ui
 tags: Tutorial
 publish: true
 ---
+
+# Tutorial: HTML5 Development For ASP.NET Developers
+## Hello Kendo UI Part 2
 
 In this tutorial, you will learn how to fully enable CRUD operations in the
 grid and how to additionally handle errors on your server and bubble them up
@@ -11,6 +14,7 @@ to the browser.
 
 ## Screencast
 
+<iframe height="360" src="http://www.youtube.com/embed/BRv7Gvf1w6A?rel=0" frameborder="0" width="640"></iframe>
 
 ## Written Content
 
