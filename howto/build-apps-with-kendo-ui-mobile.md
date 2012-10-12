@@ -219,7 +219,7 @@ Finally, as you've probably noticed if you're testing as we go, your navigation 
 
 Now your application is looking native! At this point your application should look like this if you've been following along:
 
-//TODO: IMAGE//
+![Basic Kendo UI Mobile app](https://github.com/telerik/kendo-docs/raw/master/tutorials/images/km-basic-app-1.png)
 
 ## Testing for Multiple Platforms
 By default, Kendo UI Mobile will render with an iOS look-and-feel if it does not detect another mobile platform. When you want to test the look-and-feel of your app on other platforms- and see how Kendo UI Mobile automatically adapts- you can take one of two paths:
