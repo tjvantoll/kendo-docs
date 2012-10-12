@@ -41,6 +41,12 @@ The minified versions of all JavaScript files (except jQuery) are also available
 
     https://da7xgjtj801h2.cloudfront.net/<version>/js/<filename>.min.js
 
+## jQuery version
+
+Kendo UI requires **jQuery 1.7.1** or later. There are occasions in which a new jQuery version is released, which introduces breaking changes and is not compatible with existing Kendo UI versions.
+In such cases we recommend using the previous jQuery version until the next official Kendo UI release that resolves the problems. We normally do not change the jQuery version that is shipped with Kendo UI
+for service packs. We can do this for major releases.
+
 ## Individual scripts
 
 If more granular control is required, the following script files, either minified or not,
