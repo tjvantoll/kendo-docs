@@ -161,7 +161,7 @@ So far, we've defined some HTML, but we have not written any JavaScript. To make
 
 Add this script block *after* your jQuery and Kendo UI Mobile script links, but before the closing `body` tag.
 
-This single line of JavaScript will automatically intialize your Kendo UI Mobile app and all widgets with the `data-role` attributes. Go ahead! Give it a try. Load your page in a browser and see the beginnings of your HTML mobile app.
+This single line of JavaScript will automatically initialize your Kendo UI Mobile app and all widgets with the `data-role` attributes. Go ahead! Give it a try. Load your page in a browser and see the beginnings of your HTML mobile app.
 
 > If you have trouble seeing the app, make sure all of your script and CSS resources are loading without error (using the browser developer tools). Some browsers (like Chrome) will block the loading of external resources if you load your page using the `file://` protocol. Instead, test your pages using local web server (localhost) or a browser that does not restrict local resources, like Safari.
 
