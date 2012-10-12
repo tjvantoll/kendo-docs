@@ -122,3 +122,79 @@ use the API to control its behavior.
 
     var splitter = $("#splitter").data("kendoSplitter");
 
+## Make the Splitter expand to 100% height
+
+When making the Splitter 100% high, one should keep in mind that web standards require elements with percentage height to have a parent element with an explicit height.
+In this case the parent of the Splitter is the `body`, so it receives a `height:100%` style, which in turn results in the `html` element obtaining the style as well. If the requirement is not met,
+the Splitter's computed height will fallback to `auto` and the widget may collapse completely, depending ot its content.
+
+### HTML Markup
+
+    <body>
+      <div id="vertical">
+        <div>
+            <p>
+                Outer splitter : top pane (resizable and collapsible)
+            </p>
+        </div>
+        <div>
+            <div id="horizontal">
+                <div>
+                    <p>
+                        Inner splitter :: left pane
+                    </p>
+                </div>
+                <div>
+                        Inner splitter :: center pane
+                </div>
+                <div>
+                    <p>
+                        Inner splitter :: right pane
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p>
+                Outer splitter : bottom pane (non-resizable, non-collapsible)
+            </p>
+        </div>
+    </div>
+      
+    </body>
+
+### Javascript code
+
+    $("#vertical").kendoSplitter({
+        orientation: "vertical",
+        panes: [
+            { collapsible: true, size: "60px" },
+            { collapsible: false },
+            { collapsible: false, resizable: false, size: "10%" }
+        ]
+    });
+
+    $("#horizontal").kendoSplitter({
+        panes: [
+            { collapsible: true, size: "100px" },
+            { collapsible: false },
+            { collapsible: true, size: "20%" }
+        ]
+    });
+
+### CSS code
+
+    html,
+    body
+    {
+        height:100%;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+    }
+
+    #vertical,
+    #horizontal
+    {
+        height:100%;
+    }
