@@ -247,6 +247,19 @@ Restores a maximized or minimized Window to its previous state. Triggers the res
 
 `Window` Returns the (Kendo UI) Window object to support chaining.
 
+### setOptions
+
+Allows the window to be configured with new options.
+
+#### Set new dimensions to the window
+
+    var kendoWindow = $("#window").data("kendoWindow");
+
+    kendoWindow.setOptions({
+        width: 180,
+        height: 225
+    });
+
 ### title
 
 Gets or set the title of a **Window**.
