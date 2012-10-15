@@ -247,9 +247,19 @@ Template which will be use during popup editing
 
 Indicates whether item should be switched to edit mode on click.
 
+### filterable `Boolean`*(default: false)*
+
+ Indicates whether filtering is enabled/disabled.
+
 ### groupable `Boolean | Object`*(default: false)*
 
  Indicates whether grouping is enabled/disabled.
+
+#### Example
+
+    $("#grid").kendoGrid({
+         filterable: true
+    });
 
 #### Example
 
