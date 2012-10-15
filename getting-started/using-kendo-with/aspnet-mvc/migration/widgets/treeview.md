@@ -10,77 +10,77 @@ publish: true
 
 #### Old
 
-	<%= Html.Telerik().TreeView() 
-	     .Name("TreeView") 
-	     .DataBinding(dataBinding => dataBinding 
-	         .Ajax().Select("_AjaxLoading", "TreeView") 
-	     ) 
+	<%= Html.Telerik().TreeView()
+	     .Name("TreeView")
+	     .DataBinding(dataBinding => dataBinding
+	         .Ajax().Select("_AjaxLoading", "TreeView")
+	     )
 	 %>
 
 #### New
 
-	<%= Html.Telerik().TreeView() 
-	     .Name("TreeView") 
-	     .DataSource(source => { 
-	           source.Read(read => 
-	           { 
-	               read.Action("_AjaxLoading ", "TreeView"); 
-	           });  
-	     }) 
+	<%= Html.Telerik().TreeView()
+	     .Name("TreeView")
+	     .DataSource(source => {
+	           source.Read(read =>
+	           {
+	               read.Action("_AjaxLoading ", "TreeView");
+	           });
+	     })
 	 %>
 
 ### Serializing Data
 
 Data from the server should be serialized in the following JSON format:
 
-	{ 
-    	id: String, 
-    	text: String, 
-    	url: String, 
-    	imageUrl: String, 
-    	spriteCssClass: String, 
-    	hasChildren: Boolean 
+	{
+    	id: String,
+    	text: String,
+    	url: String,
+    	imageUrl: String,
+    	spriteCssClass: String,
+    	hasChildren: Boolean
 	}
 
 All fields are optional (skipping the text field will show the item with the text “undefined”). The text/url/imageUrl/spriteCssClass field names can be changed through the DataTextField/DataUrlField/DataImageUrlField/DataSpriteCssClassField fluent methods:
 
-	<%= Html.Kendo().TreeView() 
-	     .Name("TreeView") 
+	<%= Html.Kendo().TreeView()
+	     .Name("TreeView")
 	     .DataTextField("Name")
-	     .DataSource(source => { 
-	           source.Read(read => 
-	           { 
-	               read.Action("_AjaxLoading ", "TreeView"); 
-	           });  
-	     }) 
+	     .DataSource(source => {
+	           source.Read(read =>
+	           {
+	               read.Action("_AjaxLoading ", "TreeView");
+	           });
+	     })
 	 %>
 
 The above code allows the items to be serialized in the following form:
 
-	{ 
-	    id: 2, 
-	    Name: "Andrew", 
-	    hasChildren: true 
+	{
+	    id: 2,
+	    Name: "Andrew",
+	    hasChildren: true
 	}
 
 ### Changing The Field That Posts The Item ID
 
-By default, the **id** field will be posted to the server. To change the parameter name, you can use the Data handler: 
+By default, the **id** field will be posted to the server. To change the parameter name, you can use the Data handler:
 
-	<%= Html.Kendo().TreeView() 
-	    .Name("treeview") 
-	    .DataSource(dataSource => dataSource 
-	        .Read(read => read 
-	            .Action("Employees", "TreeView") 
-	            .Data("addData") 
-	        ) 
-	    ) 
-	%> 
+	<%= Html.Kendo().TreeView()
+	    .Name("treeview")
+	    .DataSource(dataSource => dataSource
+	        .Read(read => read
+	            .Action("Employees", "TreeView")
+	            .Data("addData")
+	        )
+	    )
+	%>
 
-	<script> 
-	    function addData(data) { 
-	        return { employeeId: data.id }; 
-	    } 
+	<script>
+	    function addData(data) {
+	        return { employeeId: data.id };
+	    }
 	</script>
 
 ### Value Field
@@ -93,55 +93,71 @@ The value field is removed.  Depending on your use case, you can either:
 
 ### CheckBox Support
 
-The current checkbox support is limited to the functionality shown in the [templates demo](http://http://demos.kendoui.com/web/treeview/templates.html) (i.e. rendering only). Any data that needs to be passed to the server needs to be added in hidden fields with JavaScript, using the proper naming. The snippet below shows a possible approach for this:
+#### 2012.2.913 release
 
-	@(Html.Kendo().TreeView() 
-	    .Name("treeview") 
-	    .DataTextField("Name") 
-	    .DataSource(dataSource => dataSource 
-	        .Read(read => read 
-	            .Action("Employees", "TreeView") 
-	        ) 
-	    ) 
-	    .CheckboxTemplate("<input type='checkbox' />") 
-	) 
-	 
-	<script id="itemInfoTemplate" type="text/kendo-ui-template"> 
-	    # var name = "checkedEmployees"; /* modify this to change the argument name */ # 
-	    # var arrayItem = name + "[" + index + "]"; # 
-	    <input type="hidden" name="#= name #.Index" value="#= index #" /> 
-	    <input type="hidden" name="#= arrayItem #.Id" value="#= item.id #" /> 
-	    <input type="hidden" name="#= arrayItem #.Name" value="#= item.Name #" /> 
-	</script> 
-	     
-	<script> 
-	    function getNodeIndex(node) { 
-	        return node.parentsUntil(".k-treeview", ".k-item").map(function() { 
-	            return $(this).index(); 
-	        }).toArray().reverse().join(":"); 
-	    } 
-	 
-	    var itemInfoTemplate = kendo.template($("#itemInfoTemplate").html()); 
-	 
-	    var treeview = $("#treeview"); 
-	 
-	    treeview.on("change", ":checkbox", function(e) { 
-	        var checkbox = $(this), 
-	            dataItem = treeview.data("kendoTreeView").dataItem(checkbox.closest(".k-item")), 
-	            index = getNodeIndex(checkbox); 
-	 
-	        checkbox.nextAll().remove(); 
-	 
-	        if (checkbox.is(":checked")) { 
-	            checkbox.after(itemInfoTemplate({ 
-	                item: dataItem, 
-	                index: index 
-	            })); 
-	        } 
-	    }); 
-	</script>
+This service pack introduces a simplified checkboxes configuration, along with tri-state checkboxes:
 
-Upcoming version of the MVC wrappers will introduce a more convenient way of handling checkboxes.
+    @(Html.Kendo().TreeView()
+        .Name("treeview")
+        .Checkboxes(true)  // simple check boxes, posting an array of IDs
+    )
+
+    @(Html.Kendo().TreeView()
+        .Name("treeview")
+        .Checkboxes(settings => settings
+            .CheckChildren(true) // enables tri-state checkboxes, which check sub-nodes
+        )
+    )
+
+#### 2012.2.710 release
+
+The checkbox support is limited to the functionality shown in the [templates demo](http://http://demos.kendoui.com/web/treeview/templates.html) (i.e. rendering only). Any data that needs to be passed to the server needs to be added in hidden fields with JavaScript, using the proper naming. The snippet below shows a possible approach for this:
+
+    @(Html.Kendo().TreeView()
+        .Name("treeview")
+        .DataTextField("Name")
+        .DataSource(dataSource => dataSource
+            .Read(read => read
+                .Action("Employees", "TreeView")
+            )
+        )
+        .CheckboxTemplate("<input type='checkbox' />")
+    )
+
+    <script id="itemInfoTemplate" type="text/kendo-ui-template">
+        # var name = "checkedEmployees"; /* modify this to change the argument name */ #
+        # var arrayItem = name + "[" + index + "]"; #
+        <input type="hidden" name="#= name #.Index" value="#= index #" />
+        <input type="hidden" name="#= arrayItem #.Id" value="#= item.id #" />
+        <input type="hidden" name="#= arrayItem #.Name" value="#= item.Name #" />
+    </script>
+
+    <script>
+        function getNodeIndex(node) {
+            return node.parentsUntil(".k-treeview", ".k-item").map(function() {
+                return $(this).index();
+            }).toArray().reverse().join(":");
+        }
+
+        var itemInfoTemplate = kendo.template($("#itemInfoTemplate").html());
+
+        var treeview = $("#treeview");
+
+        treeview.on("change", ":checkbox", function(e) {
+            var checkbox = $(this),
+                dataItem = treeview.data("kendoTreeView").dataItem(checkbox.closest(".k-item")),
+                index = getNodeIndex(checkbox);
+
+            checkbox.nextAll().remove();
+
+            if (checkbox.is(":checked")) {
+                checkbox.after(itemInfoTemplate({
+                    item: dataItem,
+                    index: index
+                }));
+            }
+        });
+    </script>
 
 ### Per-Item CheckBoxes
 
@@ -207,7 +223,7 @@ Renamed. Use the **DragStart** event
 
 ##### OnNodeDragging
 
-Renamed. Use the **Drag** event 
+Renamed. Use the **Drag** event
 
 ##### OnNodeDrop
 
