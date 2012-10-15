@@ -279,6 +279,14 @@ The nodes that are to be collapsed.
 
 Returns the model dataItem that corresponds to a TreeView node
 
+#### Example
+
+    var treeview = $("#treeview").data("kendoTreeView");
+    
+    var dataItem = treeview.dataItem(".k-item:first");
+
+See also: [getting the node data in the select event handler](/getting-started/web/treeview/overview#getting-the-node-data-in-the-select-event-handler)
+
 #### Parameters
 
 ##### node `jQueryObject | DomElement | Selector`
