@@ -1,5 +1,7 @@
 ---
 title: Server Binding
+meta_title: Server binding in Kendo UI for ASP.NET MVC | Kendo UI Documentation
+meta_description: Set the data source and render the view to bind Kendo UI Grid for ASP.NET MVC with data by using server binding.
 slug: mvc-grid-server-binding
 publish: true
 ---

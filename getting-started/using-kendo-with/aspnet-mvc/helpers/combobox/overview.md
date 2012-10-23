@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: How to use ComboBox HtmlHelper extension | Kendo UI documentation
+meta_description: User Guide for server-side wrapper for Kendo UI ComboBox for ASP.NET MVC widget.
 slug: mvc-combobox-overview
 publish: true
 ---

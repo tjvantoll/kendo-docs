@@ -1,5 +1,7 @@
 ---
 title: Hello Services (WebAPI And REST)
+meta_title: Tutorial for HTML5 development with ASP.NET WebAPI and RESTful services
+meta_description: In this HTML5 development tutorial you will learn how to install ASP.NET WebAPI, create service, supporting CRUD operations, and debug WebAPI Services.
 slug: tutorial-html5-development-with-asp-net-part-2-hello-services
 tags: Tutorial
 publish: true

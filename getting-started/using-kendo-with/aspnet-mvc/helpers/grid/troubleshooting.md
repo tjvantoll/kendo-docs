@@ -1,5 +1,7 @@
 ---
 title: Troubleshooting
+meta_title: Kendo UI Grid for ASP.NET MVC Troubleshooting Guide
+meta_description: Learn how to use Kendo UI jQuery Grid component with ASP.NET MVC Helpers and easily handle most common issues.
 slug: mvc-grid-troubleshooting
 publish: true
 ---

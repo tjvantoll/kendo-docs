@@ -1,5 +1,7 @@
 ---
 title: Binding
+meta_title: Ajax Binding of Kendo jQuery ListView widget
+meta_description: Learn the steps to configure Kendo UI ListView component for AJAX binding and easily enable client data processing during AJAX binding.
 slug: mvc-listview-binding
 publish: true
 ---

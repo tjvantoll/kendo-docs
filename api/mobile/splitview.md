@@ -1,5 +1,7 @@
 ---
 title: kendo.mobile.ui.SplitView
+meta_title: SplitView configuration in Kendo UI Mobile
+meta_description: See how to define horizontal or vertical style of the Kendo UI Mobile SplitView widget and learn which events are fired.
 slug: mobile-kendo.mobile.ui.splitview
 tags: api,mobile
 publish: true

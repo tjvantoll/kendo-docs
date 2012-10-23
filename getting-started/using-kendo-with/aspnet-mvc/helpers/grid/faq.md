@@ -1,5 +1,7 @@
 ---
 title: FAQ
+meta_title: Frequently asked questions for Kendo UI Grid for ASP.NET MVC
+meta_description: Learn how to use Kendo UI Grid for ASP.NET MVC by reading Grid FAQ and learning with examples. How Data binding works with Kendo ASP.NET MVC helpers.
 slug: mvc-grid-faq
 publish: true
 ---

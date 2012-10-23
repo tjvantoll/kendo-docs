@@ -1,5 +1,7 @@
 ---
 title: VS Intellisense
+meta_title: Kendo UI Visual Studio Intellisense Documentation
+meta_description: Learn how to reference Kendo UI Visual Studio Intellisense by using an additional vsdoc Javascript file.
 slug: howto-using-vs-intellisense
 tags: How-To, Visual Studio, Intellisense
 publish: true

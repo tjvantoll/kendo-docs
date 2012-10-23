@@ -1,5 +1,7 @@
 ---
 title: kendo.data.Node
+meta_title: API Reference for Kendo Data Node
+meta_description: Documentation how to get started with the Node, the extended type of DataModel. Find examples and guidelines for methods, fields and events of kendo.data.Node.
 slug: fw-kendo.data.node
 tags: api,framework
 publish: true

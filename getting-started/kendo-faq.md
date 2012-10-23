@@ -1,5 +1,7 @@
 ---
 title: Kendo UI Product FAQ
+meta_title: Kendo UI Product FAQ
+meta_description: Find the answers to your Kendo UI questions on licensing, mobile UI controls, JS libraries and more.
 slug: gs-kendo-faq
 tags: 101, Getting Started
 publish: true

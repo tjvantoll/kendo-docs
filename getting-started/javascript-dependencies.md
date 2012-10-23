@@ -1,5 +1,7 @@
 ---
 title: Javascript Dependencies
+meta_title: Javascript Dependencies
+meta_description: A list of scripts that Kendo UI widgets require to work, detailed explanation about all JavaScript files
 slug: gs-javascript-dependencies
 publish: true
 ---

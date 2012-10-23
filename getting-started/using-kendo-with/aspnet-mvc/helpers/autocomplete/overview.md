@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: Help Guide for AutoComplete HtmlHelper extension | Kendo UI documentation
+meta_description: Instructions how to configure the Kendo UI AutoComplete for ASP.NET MVC widget for server binding and add AutoComplete HtmlHelper extension.
 slug: mvc-autocomplete-overview
 publish: true
 ---

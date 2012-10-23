@@ -1,5 +1,7 @@
 ---
 title: Disabled
+meta_title: Use disabled binding to disable the target DOM widget or element in Kendo UI MVVM
+meta_description: If the View-Model value is changed to true or false in Kendo UI MVVM, the disabled binding disables the target DOM widget or it is enabled.
 slug: mvv-disabled-binding
 publish: true
 ---

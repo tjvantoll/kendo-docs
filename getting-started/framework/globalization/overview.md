@@ -1,5 +1,7 @@
 ---
 title: Globalization overview
+meta_title: Overview of Globalization in Kendo UI framework
+meta_description: Documentation how to define current culture settings, format number or date objects in the process of globalization.
 slug: globalization-overview
 publish: true
 ---

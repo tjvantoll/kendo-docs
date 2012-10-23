@@ -1,5 +1,7 @@
 ---
 title: AutoComplete Overview
+meta_title: Documentation for Autocomplete UI widget in Kendo UI framework
+meta_description: How to provide AutoComplete Suggestions, guide to Autocomplete UI widget.
 slug: gs-web-autocomplete-overview
 tags: getting-started,web
 publish: true

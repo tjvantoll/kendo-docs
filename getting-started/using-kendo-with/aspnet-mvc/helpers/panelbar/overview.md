@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: PanelBar HtmlHelper extension, server-side wrapper for Kendo UI PanelBar widget | Kendo UI Documentation
+meta_description: How to define items of the Kendo UI PanelBar for ASP.NET MVC in PanelBar HtmlHelper extension, handle Kendo UI PanelBar events.
 slug: mvc-panelbar-overview
 publish: true
 ---

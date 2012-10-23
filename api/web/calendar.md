@@ -1,5 +1,7 @@
 ---
 title: kendo.ui.Calendar
+meta_title: Kendo UI Calendar widget configuration, methods and events
+meta_description: Find out how to successfully configure calendar UI component, how to use methods to get the max value of the calendar and navigate easily.
 slug: web-kendo.ui.calendar
 tags: api,web
 publish: true

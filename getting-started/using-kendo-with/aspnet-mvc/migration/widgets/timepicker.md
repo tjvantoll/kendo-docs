@@ -1,5 +1,7 @@
 ---
 title: TimePicker
+meta_title: API documentation for Kendo UI TimePicker widget for ASP.NET MVC
+meta_description: How to define min and max dates in the server-side API of Kendo UI TimePicker control for ASP.NET MVC.
 slug: timepicker
 publish: true
 ---

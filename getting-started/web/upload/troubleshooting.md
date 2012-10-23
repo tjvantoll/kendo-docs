@@ -1,5 +1,7 @@
 ---
 title: Troubleshooting
+meta_title: Troubleshooting guide for Upload UI widget | Kendo UI Documentation
+meta_description: Most common issues, associated with Upload UI Widget and suggested solutions in quick steps.
 slug: upload-troubleshooting
 publish: true
 ---

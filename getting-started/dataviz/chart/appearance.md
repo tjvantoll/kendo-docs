@@ -1,5 +1,7 @@
 ---
 title: Appearance
+meta_title: Instructions for Kendo UI DataViz Chart Widget appearance
+meta_description: How to control the appearance of the chart, change the theme of the widget and manage the animated transitions.
 slug: chart-appearance
 publish: true
 ---

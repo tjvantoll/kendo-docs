@@ -1,5 +1,7 @@
 ---
 title: Use the ListView of Kendo UI Web
+meta_title: Using Kendo UI ListView widget in your app | Kendo UI Documentation
+meta_description: Learn how to display a custom layout of data-bound items through templates and easily implement Kendo UI Listview widget in your application.
 slug: howto-use-the-listview-of-kendo-ui-web
 tags: How-To
 publish: true

@@ -1,5 +1,7 @@
 ---
 title: Add Widgets with Kendo UI Web
+meta_title: Add Kendo UI jQuery widgets to an app | Kendo UI Web Documentation
+meta_description: Learn how to add Kendo UI Web widgets to your mobile website or web app.
 slug: howto-add-widgets
 tags: How-To
 publish: true

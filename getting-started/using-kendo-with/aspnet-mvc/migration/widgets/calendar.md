@@ -1,5 +1,7 @@
 ---
 title: Calendar
+meta_title: Server-side API for Kendo UI Calendar widget with ASP.NET MVC
+meta_description: This documentation provides information about events and options such as min/max date in the server-side API of Kendo UI Calendar widget.
 slug: calendar
 publish: true
 ---

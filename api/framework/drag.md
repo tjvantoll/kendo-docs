@@ -1,5 +1,7 @@
 ---
 title: kendo.Drag
+meta_title: API Reference for kendo.Drag in Kendo UI framework
+meta_description: How to set the value of kendo.Drag, find configuration examples, methods and types of events which are triggered upon specific state of the drag.
 slug: fw-kendo.drag
 tags: api,framework
 publish: true

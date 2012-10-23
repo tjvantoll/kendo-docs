@@ -1,5 +1,7 @@
 ---
 title: ScrollView
+meta_title: Technical documentation for Kendo UI Mobile ScrollView widget
+meta_description: Learn how to initialize Mobile ScrollView widget and define content pages in order to display one item per page.
 slug: gs-mobile-scrollview
 tags: getting-started,mobile
 publish: true

@@ -1,5 +1,7 @@
 ---
 title: kendo.mobile.ui.Button
+meta_title: Supported events in Kendo UI Mobile Button widget
+meta_description: Find which events to use in Mobile Button Widget.
 slug: mobile-kendo.mobile.ui.button
 tags: api,mobile
 publish: true

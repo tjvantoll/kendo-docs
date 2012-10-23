@@ -1,5 +1,7 @@
 ---
 title: Cascading ComboBoxes
+meta_title: jQuery-powered Cascading ComboBox in Kendo UI Web
+meta_description: This document provides information how Kendo UI cascading ComboBox works and helps you handle most common scenarios with illustrative examples and FAQ.
 slug: gs-web-cascading-comboboxes
 tags: getting-started,web
 publish: true

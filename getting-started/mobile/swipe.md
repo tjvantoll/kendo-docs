@@ -1,5 +1,7 @@
 ---
 title: Swipe
+meta_title: Documentation for Kendo UI Mobile swipe component
+meta_description: How to handle user horizontal swiping events in your HTML5 mobile app by using mobile swipe component. Learn how to register a swipe event for a given jQuery selector.
 slug: gs-mobile-swipe
 tags: getting-started,mobile
 publish: true

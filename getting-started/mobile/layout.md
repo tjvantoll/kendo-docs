@@ -1,5 +1,7 @@
 ---
 title: Layout
+meta_title: How to use Kendo UI Mobile Layout widget | Kendo UI Documentation
+meta_description: Instructions how to use Mobile Layout widget to easily share headers and footers between multiple views.
 slug: gs-mobile-layout
 tags: getting-started,mobile
 publish: true

@@ -1,5 +1,7 @@
 ---
 title: Date parsing
+meta_title: Date Parsing | Kendo UI Framework Globalization documentation
+meta_description: Guide to supported methods for converting a specified string to a Date object using culture's specific settings.
 slug: date-parsing
 publish: true
 ---

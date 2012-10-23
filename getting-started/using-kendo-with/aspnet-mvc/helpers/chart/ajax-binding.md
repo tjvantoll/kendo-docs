@@ -1,5 +1,7 @@
 ---
 title: Ajax Binding
+meta_title: Configuration of Kendo UI Chart for ASP.NET MVC for Ajax binding
+meta_description: How to configure Kendo UI Chart for ASP.NET MVC for Ajax binding in quick steps.
 slug: mav-chart-ajax-binding
 publish: true
 ---

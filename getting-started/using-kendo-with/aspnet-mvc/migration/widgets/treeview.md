@@ -1,5 +1,7 @@
 ---
 title: TreeView
+meta_title: API documentation for Kendo UI jQuery TreeView widget for ASP.NET MVC
+meta_description: This documentation guides you how to load data on demand in the server-side API of Kendo UI TreeView for ASP.NET MVC and serialize JSON format data from the server.
 slug: treeview
 publish: true
 ---

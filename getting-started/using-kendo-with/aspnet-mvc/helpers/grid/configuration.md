@@ -1,5 +1,7 @@
 ---
 title: Configuration
+meta_title: DataSource Configuration of Kendo UI Grid for ASP.NET MVC | Kendo UI Documentation
+meta_description: Kendo UI DataSource documentation guides you how to configure DataSource to use Ajax binding, add grid columns.
 slug: mvc-grid-configuration
 publish: true
 ---

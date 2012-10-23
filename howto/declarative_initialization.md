@@ -1,5 +1,7 @@
 ---
 title: Use Kendo UI Declarative Initialization
+meta_title: Kendo UI Declarative Initialization | Kendo UI Docs
+meta_description: Learn how to use Kendo UI Declarative Initialization both with and without the MVVM framework.
 slug: howto-use-kendo-ui-declarative-initialization
 tags: How-To
 publish: true

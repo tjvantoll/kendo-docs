@@ -1,15 +1,17 @@
 ---
 title: Performance
+meta_title: Mobile performance tips and tricks | Kendo UI Mobile framework Docs
+meta_description: Tricks and tips which help you use efficiently Kendo UI Mobile app development framework. Handle performance issues and speed up View transitions.
 slug: mobile-performance
 publish: true
 ---
 
-# Kendo UI Mobile Perfomance Tips and Tricks
+# Kendo UI Mobile Performance Tips and Tricks
 
 ## Disable HW acceleration in Android 4
 
 In Android 4.x Google introduced OpenGL hardware acceleration in the native browser rendering routines. While this improves the native scrolling fluidity and page rendering times,
-it detaches the rendering from the browser. This results in a number of perfomance issues which mainly manifest themselves as hardware accelerated
+it detaches the rendering from the browser. This results in a number of performance issues which mainly manifest themselves as hardware accelerated
 CSS3 transitions happening much later than invoked and even finishing later than when the corresponding transition end event is fired. Unfortunately this is unavoidable in the native
 browser, but in an application (e.g. in PhoneGap) the OpenGL hardware acceleration can be switched off, resulting in much faster reacting transitions, while a little choppy. To do
 this, open your AndroidManifest.xml and update your application activity to disable the hardware acceleration:

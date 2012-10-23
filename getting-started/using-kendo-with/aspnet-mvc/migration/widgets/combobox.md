@@ -1,5 +1,7 @@
 ---
 title: ComboBox
+meta_title: Server-side API documentation for Kendo UI jQuery ComboBox with ASP.NET MVC
+meta_description: Documentation and explanations about binding to List Collection and Ajax binding in the server-side API of Kendo UI ComboBox with ASP.NET MVC.
 slug: combobox
 publish: true
 ---

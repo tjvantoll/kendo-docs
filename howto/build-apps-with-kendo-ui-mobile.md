@@ -1,5 +1,7 @@
 ---
 title: Build Apps with Kendo UI Mobile
+meta_title: Build mobile apps with Kendo UI Mobile framework | Kendo UI Documentation
+meta_description: This tutorial you help you develop mobile apps with Kendo UI Mobile widgets and test apps on different mobile platforms.
 slug: howto-build-apps-with-kendo-ui-mobile
 tags: How-To
 publish: true

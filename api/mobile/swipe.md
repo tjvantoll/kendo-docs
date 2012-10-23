@@ -1,5 +1,7 @@
 ---
 title: kendo.mobile.ui.Swipe
+meta_title: Kendo UI Mobile Swipe configuration
+meta_description: Configure swipe event criteria by passing an additional parameter for minimum horizontal distance, maximum vertical deviation, timing, and swipe surface.
 slug: mobile-kendo.mobile.ui.swipe
 tags: api,mobile
 publish: true

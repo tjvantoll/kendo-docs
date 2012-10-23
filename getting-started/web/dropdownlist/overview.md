@@ -1,5 +1,7 @@
 ---
 title: DropDownList Overview
+meta_title: Overview of DropDownList widget - primary uses
+meta_description: Quickly explore all features of Kendo UI DropDown control and how to use them.
 slug: gs-web-dropdownlist-overview
 tags: getting-started,web
 publish: true

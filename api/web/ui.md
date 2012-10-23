@@ -1,5 +1,7 @@
 ---
 title: kendo.ui
+meta_title: Kendo.ui methods | Kendo UI Web API reference
+meta_description: Documentation on helper methods for writing new widgets and show progress with a loading message.
 slug: web-kendo.ui
 tags: api,web
 publish: true

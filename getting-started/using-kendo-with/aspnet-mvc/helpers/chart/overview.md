@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: Chart HtmlHelper extension | Kendo UI documentation
+meta_description: Configuration of Kendo UI Chart widget for server binding in quick steps, add Chart HtmlHelper extension, manipulate Kendo UI chart events.
 slug: mvc-chart-overview
 publish: true
 ---

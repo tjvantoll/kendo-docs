@@ -1,5 +1,7 @@
 ---
 title: Chart
+meta_title: Server-side and client-side API of Kendo UI Chart widget with ASP.NET MVC
+meta_description: This documentation provides information about DataBinding configuration of Kendo UI Chart component, as well as events which are supported in the client-side API.
 slug: chart
 publish: true
 ---

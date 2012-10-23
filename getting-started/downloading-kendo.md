@@ -1,5 +1,7 @@
 ---
 title: Downloading Kendo UI
+meta_title: Downloading Kendo UI
+meta_description: How to download, install and get started with Kendo UI Web, DataViz and Mobile.
 slug: gs-downloading-kendo
 tags: 101, Getting Started
 publish: true

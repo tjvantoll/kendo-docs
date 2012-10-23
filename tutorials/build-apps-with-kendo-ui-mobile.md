@@ -1,5 +1,7 @@
 ---
 title: Intro to Building Apps with Kendo UI Mobile
+meta_title: Tutorial for building mobile apps with Kendo UI HTML5 Mobile framework
+meta_description: This tutorial helps you get familiar with the principles of building apps with Kendo UI Mobile framework.
 slug: tutorial-intro-building-apps-with-kendo-ui-mobile
 tags: Tutorial
 publish: true

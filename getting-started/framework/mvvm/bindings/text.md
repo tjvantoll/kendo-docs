@@ -1,5 +1,7 @@
 ---
 title: Text
+meta_title: Text binding in Kendo UI MVVM | Kendo UI Documentation
+meta_description: Update the text of the DOM element to a View-Model value with text binding in Kendo UI MVVM.
 slug: mvvm-text-binding
 publish: true
 ---

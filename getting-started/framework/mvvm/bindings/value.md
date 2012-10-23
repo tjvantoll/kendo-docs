@@ -1,5 +1,7 @@
 ---
 title: Value
+meta_title: Value binding in Kendo UI MVVM | Kendo UI Documentation
+meta_description: Keep the value of a DOM widget and the value of a View-Model field in sync by using value binding in Kendo UI MVVM.
 slug: mvvm-value-binding
 publish: true
 ---

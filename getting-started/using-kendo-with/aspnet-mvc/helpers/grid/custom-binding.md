@@ -1,5 +1,7 @@
 ---
 title: Custom Binding
+meta_title: Custom binding in Kendo UI Grid for ASP.NET MVC | Kendo UI Documentation
+meta_description: How to use and configure Kendo UI Grid for ASP.NET MVC for server custom binding.
 slug: mvc-custom-binding
 publish: true
 ---

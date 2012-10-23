@@ -1,5 +1,7 @@
 ---
 title: Style
+meta_title: Style binding in Kendo UI MVVM | Kendo UI Documentation
+meta_description: How to set the style attributes of the target DOM element by using the style binding in Kendo UI MVVM.
 slug: mvvm-style-binding
 publish: true
 ---

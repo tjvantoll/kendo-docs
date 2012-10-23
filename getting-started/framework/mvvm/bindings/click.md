@@ -1,5 +1,7 @@
 ---
 title: Click
+meta_title: Click binding in Kendo UI MVVM | Kendo UI Documentation
+meta_description: Once the user clicks the target DOM element, methods, attached by using the click binding in Kendo UI MVVM, are automatically triggered.
 slug: mvvm-click-binding
 publish: true
 ---

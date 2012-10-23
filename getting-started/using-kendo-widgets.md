@@ -1,5 +1,7 @@
 ---
 title:  Using Kendo Widgets
+meta_title: Using Kendo UI widgets
+meta_description: See how to easily initialize jQuery-powered Kendo UI widgets, set configuration, get the client object, use event binding.
 slug: gs-using-kendo-widgets
 tags:   101, Getting Started, widgets
 Publish:    true

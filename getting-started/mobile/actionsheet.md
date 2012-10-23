@@ -1,5 +1,7 @@
 ---
 title: ActionSheet
+meta_title: Intuitive choices with mobile ActionSheet widget | Kendo UI Documentation
+meta_description: The user of HTML5 mobile app initiates a task and the mobile ActionSheet widget displays a set of choices.
 slug: gs-mobile-actionsheet
 tags: getting-started,mobile
 publish: true

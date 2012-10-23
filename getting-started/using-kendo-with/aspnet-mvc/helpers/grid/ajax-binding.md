@@ -1,5 +1,7 @@
 ---
 title: Ajax Binding
+meta_title: Configure Kendo UI Grid for ASP.NET MVC for Ajax binding
+meta_description: Kendo UI Grid for ASP.NET MVC makes Ajax requests upon paging, sorting, filtering or grouping once the Grid HtmlHelper extension is configured for Ajax binding.
 slug: mvc-grid-ajax-binding
 publish: true
 ---

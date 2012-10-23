@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: User Guide for TreeView HtmlHelper extension for Kendo UI TreeView widget
+meta_description: Instructions and examples for TreeView HtmlHelper extension for Kendo UI TreeView for ASP.NET MVC.
 slug: mvc-treeview-overview
 publish: true
 ---

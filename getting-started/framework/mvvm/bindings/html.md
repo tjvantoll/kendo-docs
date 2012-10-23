@@ -1,5 +1,7 @@
 ---
 title: Html
+meta_title: HTML binding in Kendo UI MVVM | Kendo UI Documentation
+meta_description: HTML binding in Kendo UI MVVM, update and set the HTML of the target DOM element by changing the View-Model value.
 slug: mvvm-html-binding
 publish: true
 ---

@@ -1,5 +1,7 @@
 ---
 title: kendo.DragAxis
+meta_title: API reference for Kendo DragAxis in Kendo.Drag component
+meta_description: Explanation notes about the DragAxis, used internally by the kendo.Drag component for event data calculations. Learn how to access DragAxis information in a drag start event.
 slug: fw-kendo.dragaxis
 tags: api,framework
 publish: true

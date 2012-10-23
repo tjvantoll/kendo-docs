@@ -1,5 +1,7 @@
 ---
 title: View
+meta_title: Kendo UI Mobile View Widget Documentation
+meta_description: Discover how to use Kendo UI Mobile View widget, mark header and footer elements, view parameters of navigational widgets and view DOM elements.
 slug: gs-mobile-view
 tags: getting-started,mobile
 publish: true

@@ -1,5 +1,7 @@
 ---
 title: MVVM Features in Kendo UI
+meta_title: Tutorial for building HTML5 apps with Kendo UI MVVM
+meta_description: This in-depth tutorial will guide you in the process of creating apps and mobile websites with Kendo UI framework MVVM features.
 slug: gs-mvvm-features-in-kendo-ui
 tags: tutorial, mvvm
 related: mvvm-overview

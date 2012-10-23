@@ -1,5 +1,7 @@
 ---
 title: Interact With an Existing DB
+meta_title: Interact with an existing database |Kendo UI DataSource Documentation
+meta_description: Learn how to interact with an existing database via the DataSource, included in Kendo UI framework.
 slug: howto-interact-with-an-existing-db
 tags: How-To
 publish: true

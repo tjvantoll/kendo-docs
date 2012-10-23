@@ -1,5 +1,7 @@
 ---
 title: kendo.mobile.ui.TabStrip
+meta_title: Kendo UI Mobile Tabstrip widget configuration documentation
+meta_description: How to configure Mobile Tabstrip widget with a few clicks, change its behavior and use supported events.
 slug: mobile-kendo.mobile.ui.tabstrip
 tags: api,mobile
 publish: true

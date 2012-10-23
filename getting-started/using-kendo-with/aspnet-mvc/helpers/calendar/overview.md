@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: Calendar HtmlHelper extension for Kendo UI Calendar widget | Kendo UI documentation
+meta_description: Getting started with Calendar HtmlHelper extension in quick steps - configure Kendo UI Calendar widget and operate Kendo UI Calendar events.
 slug: mvc-calendar-overview
 publish: true
 ---

@@ -1,5 +1,7 @@
 ---
 title: kendo.ui.NumericTextBox
+meta_title: Configuration guide for NumericTextBox UI widget
+meta_description: Code examples and tips how to configure NumericTextBox widget, use available methods and events.
 slug: web-kendo.ui.numerictextbox
 tags: api,web
 publish: true

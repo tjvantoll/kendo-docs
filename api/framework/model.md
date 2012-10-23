@@ -1,5 +1,7 @@
 ---
 title: kendo.data.Model
+meta_title: API Reference for Kendo DataModel
+meta_description: The documentation for kendo.data.Model will help you define a new model, then introduce different methods and guide you to change, get or set an event.
 slug: fw-kendo.data.model
 tags: api,framework
 publish: true

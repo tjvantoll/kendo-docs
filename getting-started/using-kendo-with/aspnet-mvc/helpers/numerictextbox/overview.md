@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: User guide for Kendo UI NumericTextBox widget | Kendo UI documentation
+meta_description: How to configure a simple Kendo UI NumericTextBox widget, add NumericTextBox, handle events to control widget's behavior.
 slug: mvc-numeric-textbox-overview
 publish: true
 ---

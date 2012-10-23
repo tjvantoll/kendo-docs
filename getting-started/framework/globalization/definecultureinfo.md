@@ -1,5 +1,7 @@
 ---
 title: Define culture information
+meta_title: Define Culture Information | Kendo UI Framework Globalization documentation
+meta_description: How to define culture information in culture files and extend it, default culture information settings.
 slug: define-culture-info
 publish: true
 ---
@@ -107,4 +109,4 @@ The default culture info is listed here:
 
 ## Extending culture information
 
-If you examine the source code of the script for each culture, you will notice that each script just adds the culture info object to the the kendo.cultures mappings. You can easily define your own culture file and extend current kendo.cultures mappting. The only requirement is to follow the structure of the default culture information listed above.
+If you examine the source code of the script for each culture, you will notice that each script just adds the culture info object to the the kendo.cultures mappings. You can easily define your own culture file and extend current kendo.cultures mapping. The only requirement is to follow the structure of the default culture information listed above.

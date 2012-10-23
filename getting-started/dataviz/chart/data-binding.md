@@ -1,5 +1,7 @@
 ---
 title: Data Binding
+meta_title: Overview of data binding in Kendo UI Javascript Chart widget
+meta_description: How to handle binding to inline data, binding to a data source in Chart UI widget.
 slug: chart-data-binding
 publish: true
 ---

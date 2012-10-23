@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: Guide for Window HtmlHelper extension for Kendo UI Window widget
+meta_description: How to populate the content of Kendo UI Window for ASP.NET MVC, control all events exposed by Kendo UI Window.
 slug: mvc-window-overview
 publish: true
 ---

@@ -1,5 +1,7 @@
 ---
 title: Attr
+meta_title: Attr binding in Kendo UI MVVM to populate DOM element attributes
+meta_description: Populate and update DOM element attributes from View-model fields or methods through attr binding in Kendo UI MVVM.
 slug: mvvm-attribute-binding
 publish: true
 ---

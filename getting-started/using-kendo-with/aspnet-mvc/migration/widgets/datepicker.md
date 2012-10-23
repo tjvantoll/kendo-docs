@@ -1,5 +1,7 @@
 ---
 title: DatePicker
+meta_title: Server-side API documentation for Kendo UI jQuery DatePicker widget with ASP.NET MVC
+meta_description: How to define min and max dates in the server-side API of Kendo UI DatePicker component. Documentation for the events which are enabled in the client-side API.
 slug: datepicker
 publish: true
 ---

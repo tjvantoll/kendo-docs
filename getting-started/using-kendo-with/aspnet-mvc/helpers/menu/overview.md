@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: Menu HtmlHelper extension for Kendo UI Menu for ASP.NET MVC widget documentation
+meta_description: How to add and bind Menu HtmlHelper extension for Kendo UI Menu for ASP.NET MVC widget.
 slug: mvc-menu-overview
 publish: true
 ---

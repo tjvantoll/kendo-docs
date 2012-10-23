@@ -1,5 +1,7 @@
 ---
 title: Visible
+meta_title: Visible binding in Kendo UI MVVM | Kendo UI Documentation
+meta_description: Visible binding hides or makes visible the target DOM element or widget in correspondence with the View-model value.
 slug: mvvm-visible-binding
 publish: true
 ---

@@ -1,5 +1,7 @@
 ---
 title: Hello Kendo UI Part 2 (CRUD Operations In The Grid)
+meta_title: Second tutorial for HTML5 development with ASP.NET - Crud Operations
+meta_description: Learn how to enable CRUD operations in Kendo UI Grid widget, handle editing the grid and failed requests.
 slug: tutorial-html5-development-with-asp-net-part-5-hello-kendo-ui
 tags: Tutorial
 publish: true

@@ -1,5 +1,7 @@
 ---
 title: kendo.ui.Splitter
+meta_title: Configuration of Splitter UI widget | Kendo UI Web
+meta_description: Step by step guide and code examples for successful configuration of Splitter UI widget, supported methods and events types.
 slug: web-kendo.ui.splitter
 tags: api,web
 publish: true

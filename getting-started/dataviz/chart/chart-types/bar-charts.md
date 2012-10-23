@@ -1,5 +1,7 @@
 ---
 title: Bar Chart
+meta_title: Bar charts in Kendo UI DataViz
+meta_description: How to set the properties of Kendo UI Bar Chart.
 slug: chart-bar-type
 publish: true
 ---

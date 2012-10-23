@@ -1,5 +1,7 @@
 ---
 title: Grid
+meta_title: Server-side API documentation for Kendo UI jQuery Grid widget for ASP.NET MVC
+meta_description: Documentation and code examples about server-side and client-side API for Kendo UI Grid component.
 slug: grid
 publish: true
 ---

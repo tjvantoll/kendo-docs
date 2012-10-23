@@ -1,5 +1,7 @@
 ---
 title: Load Templates from External Files
+meta_title: Load local and remote templates |Kendo UI Template
+meta_description: How to load templates in large projects, built with Kendo UI. Learn how to remove templates from HTML pages and manage them in external files.
 slug: howto-load-templates-external-files
 publish: true
 ---

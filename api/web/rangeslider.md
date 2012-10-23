@@ -1,5 +1,7 @@
 ---
 title: kendo.ui.RangeSlider
+meta_title: API reference for kendo.ui.RangeSlider
+meta_description: Easy configuration guide for the Range Slider widget and methods to enable/disable, set start and end value, or safely remove the widget from the DOM.
 slug: web-kendo.ui.rangeslider
 tags: api,web
 publish: true

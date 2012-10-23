@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: DateTimePicker HtmlHelper extension | Kendo UI documentation
+meta_description: Configure Kendo UI DateTimePicker for ASP.NET MVC widget, add DataTimePicker HtmlHelper extension and handle events.
 slug: mvc-datetimepicker-overview
 publish: true
 ---

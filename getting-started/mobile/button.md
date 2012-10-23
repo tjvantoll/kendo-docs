@@ -1,5 +1,7 @@
 ---
 title: Button
+meta_title: Documentation Guide for Mobile Button Widget
+meta_description: How to initialize Kendo UI Mobile Button widget, customize its appearance and set a button icon.
 slug: gs-mobile-button
 tags: getting-started,mobile
 publish: true

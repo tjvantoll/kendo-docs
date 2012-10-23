@@ -1,5 +1,7 @@
 ---
 title: Number Formatting
+meta_title: Number Formatting | Kendo UI Framework Globalization documentation
+meta_description: Use number formatting methods to convert a Number object to a human readable string using culture's specific settings.
 slug: number-formatting
 publish: true
 ---

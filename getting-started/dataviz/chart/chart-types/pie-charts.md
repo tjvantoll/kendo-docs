@@ -1,5 +1,7 @@
 ---
 title: Pie Chart
+meta_title: Pie charts in Kendo UI DataViz
+meta_description: How to create a pie chart and specify the point value, category label and other properties of the chart.
 slug: chart-pie-type
 publish: true
 ---

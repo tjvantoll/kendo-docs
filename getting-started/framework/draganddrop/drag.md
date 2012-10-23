@@ -1,5 +1,7 @@
 ---
 title: Drag Component
+meta_title: Drag & Drop functionality in Kendo UI framework
+meta_description: How to enable jQuery draggable UI on any DOM element and handle mouse and touch drag events in a touch-friendly way.
 slug: drag-component
 publish: true
 ---

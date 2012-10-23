@@ -1,5 +1,7 @@
 ---
 title: Series Chart
+meta_title: Series in Kendo UI Chart  widget
+meta_description: How to use different series of data of a specified type, combine series to be shown in a single chart.
 slug: chart-series-type
 publish: true
 ---

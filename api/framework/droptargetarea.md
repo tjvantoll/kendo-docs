@@ -1,5 +1,7 @@
 ---
 title: kendo.ui.DropTargetArea
+meta_title: API Reference for Kendo UI DropTargetArea
+meta_description: Kendo UI DropTargetArea documentation shows how to configure drop targets in the area and learn which events are fired when draggable interacts with one of the drop targets.
 slug: framework-kendo.ui.droptargetarea
 tags: api,framework
 publish: true

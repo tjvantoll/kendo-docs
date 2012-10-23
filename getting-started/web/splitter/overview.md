@@ -1,5 +1,7 @@
 ---
 title: Splitter Overview
+meta_title: Summary of Splitter UI widget primary functions
+meta_description: Find out how to use the Splitter UI widget and achieve complex layouts.
 slug: gs-web-splitter-overview
 tags: getting-started,web
 publish: true

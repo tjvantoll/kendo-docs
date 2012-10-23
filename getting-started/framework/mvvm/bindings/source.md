@@ -1,5 +1,7 @@
 ---
 title: Source
+meta_title: Source Binding in Model View ViewModel | Kendo UI Documentation
+meta_description: How to use source binding in Kendo UI MVVM to set the HTML5 content of the target element by rendering a Kendo template with a View-Model value.
 slug: mvvm-source-binding
 publish: true
 ---

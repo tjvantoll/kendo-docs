@@ -1,5 +1,7 @@
 ---
 title: Line Chart
+meta_title: Line chart widget in Kendo UI DataViz
+meta_description: Step-by-step instructions how to create a line chart in Kendo UI DataViz, configuration of a line chart.
 slug: chart-line-type
 publish: true
 ---

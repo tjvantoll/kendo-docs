@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: RadialGauge HtmlHelper extension for Kendo UI DataViz RadialGauge for ASP.NET MVC
+meta_description: Guidance for RadialGauge HtmlHelper extension, how to configure Kendo UI DataViz RadialGauge widget and control the behavior of the extension.
 slug: mvc-radial-gauge-overview
 publish: true
 ---

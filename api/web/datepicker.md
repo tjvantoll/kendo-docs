@@ -1,5 +1,7 @@
 ---
 title: kendo.ui.DatePicker
+meta_title: Configuration process, methods and events for DatePicker UI widget
+meta_description: Easy to follow steps guide how to quickly configure DatePicker UI widget, easily enable/disable it using methods and how to change events.
 slug: web-kendo.ui.datepicker
 tags: api,web
 publish: true

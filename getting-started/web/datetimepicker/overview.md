@@ -1,5 +1,7 @@
 ---
 title: DateTimePicker Overview
+meta_title: How-to for jQuery UI DateTimePicker widget in Kendo UI Web framework
+meta_description: Overview of Kendo UI DateTimePicker widget. Get familiar with the configuration options of the control and define the interval between values in the time drop-down list.
 slug: gs-web-datetimepicker-overview
 tags: getting-started,web
 publish: true

@@ -1,5 +1,7 @@
 ---
 title: TimePicker Overview
+meta_title: Overview of TimePicker UI widget
+meta_description: How to create, initialize and use TimePicker UI widget.
 slug: gs-web-timepicker-overview
 tags: getting-started,web
 publish: true

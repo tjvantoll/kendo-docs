@@ -1,5 +1,7 @@
 ---
 title: kendo.mobile.ui.DetailButton
+meta_title: DetailButton | Kendo UI Mobile API Reference
+meta_description: Documentation on how to initialize Kendo UI mobile DetailButton.
 slug: mobile-kendo.mobile.ui.detailbutton
 tags: api,mobile
 publish: true

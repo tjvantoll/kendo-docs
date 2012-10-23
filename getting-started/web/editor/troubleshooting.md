@@ -1,5 +1,7 @@
 ---
 title: Troubleshooting
+meta_title: Troubleshooting of Kendo UI Editor widget
+meta_description: How to deal with the troubleshooting of Editor UI widget.
 slug: editor-troubleshooting
 publish: true
 ---

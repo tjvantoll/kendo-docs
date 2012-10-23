@@ -1,5 +1,7 @@
 ---
 title: Enabled
+meta_title: Enabled binding in Kendo UI MVVM | Kendo UI Documentation
+meta_description: If the View-Model value returns true value, the target DOM widget is enabled by using the enabled binding.
 slug: mvv-enabled-binding
 publish: true
 ---

@@ -1,5 +1,7 @@
 ---
 title: Configuration
+meta_title: Configuration of Kendo jQuery ListView widget for ASP.NET MVC
+meta_description: How to configure the TagName of Kendo ListView for ASP.NET MVC and set Client Template ID of the script element.
 slug: mvc-listview-configuration
 publish: true
 ---

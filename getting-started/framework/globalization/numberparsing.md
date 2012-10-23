@@ -1,5 +1,7 @@
 ---
 title: Number parsing
+meta_title: Number Parsing | Kendo UI Framework Globalization documentation
+meta_description: Learn how to parse a string as a whole number or floating point number using the specified culture.
 slug: number-parsing
 publish: true
 ---

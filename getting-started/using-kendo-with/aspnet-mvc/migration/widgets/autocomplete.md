@@ -1,5 +1,7 @@
 ---
 title: AutoComplete
+meta_title: ASP.NET MVC server-side API for Kendo UI AutoComplete widget
+meta_description: How to handle options in server-side API for Kendo UI AutoComplete with ASP.NET MVC.
 slug: autocomplete
 publish: true
 ---

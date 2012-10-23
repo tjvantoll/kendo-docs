@@ -1,5 +1,7 @@
 ---
 title: Area
+meta_title: Area Charts in Kendo UI DataViz
+meta_description: Learn how to define area charts in Kendo UI DataViz HTML5 charting widget.
 slug: chart-area-type
 publish: true
 ---

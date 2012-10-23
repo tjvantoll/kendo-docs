@@ -1,5 +1,7 @@
 ---
 title: kendo.ui.PanelBar
+meta_title: Configuration for PanelBar UI widget, examples of methods and events
+meta_description: Configure the PanelBar UI widget, use methods and explore the events which are triggered upon certain behaviors.
 slug: web-kendo.ui.panelbar
 tags: api,web
 publish: true

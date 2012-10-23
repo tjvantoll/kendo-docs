@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: Overview of Kendo UI jQuery TreeView widget
+meta_description: Documentation for Kendo UI TreeView widget.
 slug: gs-web-treeview-overview
 tags: getting-started,web
 publish: true

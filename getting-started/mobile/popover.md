@@ -1,5 +1,7 @@
 ---
 title: PopOver
+meta_title: Kendo UI Mobile PopOver Widget for mobile websites and apps
+meta_description: How to open the mobile PopOver widget by tapping jQuery-based mobile navigational widget, and then configure popover dimensions and direction.
 slug: gs-mobile-popover
 tags: getting-started,mobile
 publish: true

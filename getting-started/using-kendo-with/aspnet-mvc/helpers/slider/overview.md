@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: Help Guide for Slider HtmlHelper extension | Kendo UI documentation
+meta_description: Step-by-step instructions how to configure Kendo UI Slider for ASP.NET MVC widget and add Slider HtmlHelper extension.
 slug: mvc-slider-overview
 publish: true
 ---

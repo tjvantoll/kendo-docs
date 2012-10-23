@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: Documentation for Kendo UI ListView HtmlHelper server-side wrapper
+meta_description: Learn how to configure Kendo UI ListView for server binding and handle events.
 slug: mvc-listview-overview
 publish: true
 ---

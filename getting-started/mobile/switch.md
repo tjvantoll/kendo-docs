@@ -1,5 +1,7 @@
 ---
 title: Switch
+meta_title: User Manual for Kendo UI Mobile Switch widget
+meta_description: How to display two exclusive choices with Mobile Switch widget, check/uncheck the mobile switch and tailor on/off labels of the mobile switch.
 slug: gs-mobile-switch
 tags: getting-started,mobile
 publish: true

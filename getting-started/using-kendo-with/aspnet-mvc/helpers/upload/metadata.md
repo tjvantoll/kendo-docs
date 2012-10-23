@@ -1,10 +1,12 @@
 ---
 title: Metadata
+meta_title: Asynchronous uploading of metadata | Kendo UI Helpers for ASP.NET MVC
+meta_description: Explanatory notes about asynchronous uploading of metadata in Kendo UI ASP.NET MVC Helpers.
 slug: mvc-upload-metadata
 publish: true
 ---
 
-Asynchronous uploading usually means that you lose the association betwen the files and the context that they originate from.
+Asynchronous uploading usually means that you lose the association between the files and the context that they originate from.
 
 Take an e-mail application for example. The save handler must associate the uploaded files to a particular message.
 

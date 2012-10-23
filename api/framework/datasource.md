@@ -1,5 +1,7 @@
 ---
 title: kendo.data.DataSource
+meta_title: Configuration of DataSource component in Kendo UI framework
+meta_description: Easy to follow steps for DataSource component configuration, examples of supported methods and executed events.
 slug: fw-kendo.data.datasource
 tags: api,framework
 publish: true

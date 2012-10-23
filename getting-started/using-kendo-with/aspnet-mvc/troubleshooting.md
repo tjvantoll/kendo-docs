@@ -1,5 +1,7 @@
 ---
 title: Troubleshooting
+meta_title: Troubleshooting guide for Kendo UI Complete for ASP.NET MVC
+meta_description: Find solutions for common problems which you may face while using Kendo UI Complete for ASP.NET MVC.
 slug: mvc-troubleshooting
 publish: true
 ---

@@ -1,5 +1,7 @@
 ---
 title: Date Formatting
+meta_title: Date Formatting | Kendo UI Framework Globalization documentation
+meta_description: Learn how with date formatting you can convert Date object to human readable string, supporting standard and custom date formats.
 slug: date-formatting
 publish: true
 ---

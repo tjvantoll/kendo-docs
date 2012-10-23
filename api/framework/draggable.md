@@ -1,5 +1,7 @@
 ---
 title: kendo.ui.Draggable
+meta_title: Draggable UI Widget | Kendo UI API Documentation
+meta_description: Configuration steps and types of events which are triggered in Kendo UI Draggable.
 slug: web-kendo.ui.draggable
 tags: api,web
 publish: true

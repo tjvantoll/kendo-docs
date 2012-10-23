@@ -1,5 +1,7 @@
 ---
 title: Hello Kendo UI Part 1 (Getting Data To Kendo UI)
+meta_title: First tutorial for HTML5 development with ASP.NET - Kendo UI Grid
+meta_description: This tutorial will help you get used to working with Kendo UI Grid widget and Kendo UI DataSource component. Learn how to use them together in your web app.
 slug: tutorial-html5-development-with-asp-net-part-4-hello-kendo-ui
 tags: Tutorial
 publish: true

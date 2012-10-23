@@ -1,5 +1,7 @@
 ---
 title: Walkthrough
+meta_title: Detailed documentation for Kendo UI Grid Widget
+meta_description: This walkthrough section will guide you how to create a grid, add HTML table and control grid widget's features.
 slug: grid-walkthrough
 publish: true
 ---

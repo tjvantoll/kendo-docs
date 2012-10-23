@@ -1,5 +1,7 @@
 ---
 title: Overview
+meta_title: User Guide for TimePicker HtmlHelper | Kendo UI documentation
+meta_description: How to add TimePicker HtmlHelper extension and handle Kendo UI TimePicker events.
 slug: mvc-timepicker-overview
 publish: true
 ---
