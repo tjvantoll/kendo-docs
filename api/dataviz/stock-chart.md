@@ -2007,7 +2007,7 @@ Use the *kendo.days* constants to specify the day by name.
 
 ### categoryAxis.maxDateGroups `Number`*(default: 10)*
 
-Specifies the maximum number of groups (categories) to produce when
+Specifies the maximum number of groups (categories) that the chart will attempt to produce when
 either **baseUnit** is set to "fit" or **baseUnitStep** is set to "auto".
 
 This option is ignored in all other cases.
