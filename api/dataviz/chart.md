@@ -13346,7 +13346,7 @@ The chart title configuration options or text.
     $("#chart").kendoChart({
       title: {
         text: "Title",
-        align: "left
+        align: "left"
       },
       series: [
         { data: [1, 2] }
@@ -13368,7 +13368,7 @@ The alignment of the title.
     $("#chart").kendoChart({
       title: {
         text: "Title",
-        align: "left
+        align: "left"
       },
       series: [
         { data: [1, 2] }
