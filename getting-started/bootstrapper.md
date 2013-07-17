@@ -13,14 +13,14 @@ The Kendo UI Bootstrapper is a free and open source tool designed to enhance you
 
 ### Video Overview
 
-<iframe height="360" src="http://www.youtube.com/embed/6BS-dZMHyKg?rel=0" frameborder="0" width="640"></iframe>
+<iframe height="360" src="//www.youtube.com/embed/MumyCDUYfQk" frameborder="0" width="640"></iframe>
 
 ## Installation
 
 ### Bootstrapper Prerequisites
 
-* NodeJS
-* Google Chrome
+* [NodeJS (v0.10)](http://www.nodejs.org)
+* [Google Chrome](http://www.google.com/chrome)
 
 ### Download
 
@@ -59,7 +59,7 @@ Create a new project by clicking on the `+` icon in the "Projects" sidebar menu,
 
 ![Create A New Project](images/bootstrapper2.jpeg)
 
-By default, the Bootstrapper puts all of your projects into a `PROJECTS` folder in the root of the Bootstrapper install location.  You also have the option to specify a RequireJS project configuration if you want.  For now, leave that box unchecked.
+By default, the Bootstrapper puts all of your projects into a `PROJECTS` folder in the root of the Bootstrapper install location.  You also have the option to specify a [RequireJS](http://www.kendoui.com/blogs/teamblog/posts/13-05-08/requirejs-fundamentals.aspx) project configuration if you want.  For now, leave that box unchecked.
 
 The Bootstrapper will now scaffold you a simple project.  You can see the different project files in the main area of the Bootstrapper.  The files in your project are devided up into two types, **Project Files** and **Library Files**.  The **Project Files** are those which comprise the code that you are writing.  The **Library Files** are those third party libraries that you are using with your project.  Even if you don't have the files included in your project, the Bootstrapper will detect them and show them here.
 
@@ -142,7 +142,7 @@ If you go back to your preview window now, you will see that it's empty.  The pr
 
 ### Bootstrapper Code Tools
 
-The Bootstrapper will lint your JavaScript for you using JSHint.  If you lint the code that you just copied, you will get one error.
+The Bootstrapper will lint your JavaScript for you using [JSHint](http://www.kendoui.com/blogs/teamblog/posts/13-07-09/protecting-your-mellow-with-javascript-linters.aspx).  If you lint the code that you just copied, you will get one error.
 
 ![JSHint Button](images/bootstrapper6.jpeg)
 
@@ -156,7 +156,7 @@ The Bootstrapper tells you the file and row where the error is.  If you dismiss 
 
 ![Bootstrapper Console Output](images/bootstrapper8.jpeg)
 
-The preview window is still empty.  There is still a problem with the code, but now it's not a JavaScript error, it's a Kendo UI configuration error.  The Bootstrapper also ships with the Kendo Linter.  This tool is much like JSHint, but it is specific to Kendo UI.  It's job is to inspect and warn you about invalid widget configuration.  From the Bootstrapper, click the Kendo Lint button.
+The preview window is still empty.  There is still a problem with the code, but now it's not a JavaScript error, it's a Kendo UI configuration error.  The Bootstrapper also ships with the [Kendo Linter](https://github.com/kendo-labs/kendo-lint).  This tool is much like JSHint, but it is specific to Kendo UI.  It's job is to inspect and warn you about invalid widget configuration.  From the Bootstrapper, click the Kendo Lint button.
 
 ![Kendo Linter Button](images/bootstrapper10.jpeg)
 
