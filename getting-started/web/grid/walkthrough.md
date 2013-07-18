@@ -343,7 +343,7 @@ Now the email address is an interactive hyperlink  that will open a new email me
 
 ## Printing the Grid
 
-The following example shows how to inject the Grid HTML output in a new browser window and trigger priting.
+The following example shows how to inject the Grid HTML output in a new browser window and trigger printing.
 
 **HTML**
 
