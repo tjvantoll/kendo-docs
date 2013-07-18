@@ -340,3 +340,73 @@ This is then specified as the template for each row by passing it in to the `row
 Now the email address is an interactive hyperlink  that will open a new email message.
 
 ![Grid With Row Template](grid8_1.png)
+
+## Printing the Grid
+
+The following example shows how to inject the Grid HTML output in a new browser window and trigger priting.
+
+**HTML**
+
+	<div id="grid"></div>
+
+	<script type="text/x-kendo-template" id="toolbar-template">
+		<button type="button" class="k-button" id="printGrid">Print Grid</button>
+	</script>
+	
+**Javascript**
+	
+	function printGrid() {
+		var gridElement = $("#grid"),
+			win = window.open('', '', 'width=800, height=500'),
+			doc = win.document.open(),
+			htmlStart = 
+				'<!DOCTYPE html>' +
+				'<html>' +
+				'<head>' +
+				'<meta charset="utf-8" />' +
+				'<title>Kendo UI Grid</title>' +
+				'<link href="http://cdn.kendostatic.com/' + kendo.version + '/styles/kendo.common.min.css" rel="stylesheet" /> '+
+				'<style>' +
+				'html { font: 11pt sans-serif; }' +
+				'.k-grid, .k-grid-content { height: auto !important; }' +
+				'.k-grid-toolbar, .k-grid-pager > .k-link { display: none; }' +
+				'</style>' +
+				'</head>' +
+				'<body>',
+			htmlEnd = 
+				'</body>' +
+				'</html>';
+
+		doc.write(htmlStart + gridElement.clone()[0].outerHTML + htmlEnd);
+		doc.close();
+		win.print();
+	}
+
+	$(document).ready(function() {
+		var grid = $("#grid").kendoGrid({
+			dataSource: {
+				type: "odata",
+				transport: {
+					read: "http://demos.kendoui.com/service/Northwind.svc/Products"
+				},
+				pageSize: 20,
+				serverPaging: true,
+				serverSorting: true,
+				serverFiltering: true
+			},
+			toolbar: kendo.template($("#toolbar-template").html()),
+			height: 400,
+			pageable: true,
+			columns: [
+				{ field: "ProductID", title: "Product ID", width: 100 },
+				{ field: "ProductName", title: "Product Name" },
+				{ field: "UnitPrice", title: "Unit Price", width: 100 },
+				{ field: "QuantityPerUnit", title: "Quantity Per Unit" }
+			]
+		});
+
+		$("#printGrid").click(function(){
+			printGrid();
+		});
+
+	});
