@@ -118,7 +118,7 @@ When using hierarchy, the detail template content cannot be wider than the total
 
 In order to configure the Grid to be 100% high and resize together with its parent element on browser window resize, the following Javascript code must be used:
 
-    $(window).bind("resize", function() {
+    $(window).resize(function() {
         var gridElement = $("#grid"),
             newHeight = gridElement.innerHeight(),
             otherElements = gridElement.children().not(".k-grid-content"),
@@ -132,7 +132,8 @@ In order to configure the Grid to be 100% high and resize together with its pare
     });
 
 The above script will be executed as window resize event handler. The Grid `div` should have a 100% height style applied and its default borders should be removed.
-Note that elements with percentage height require a parent element with an explicit height.
+Note that elements with percentage height require a parent element with an explicit height. This requirement applies recursively until an element with a pixel height is reached,
+or until the `html` element is reached. 100% high elements cannot have margins, paddings, borders or sibling elements.
 
 ### Column widths
 
