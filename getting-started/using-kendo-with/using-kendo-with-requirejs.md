@@ -57,3 +57,18 @@ In practice, if you use RequireJS you will probably have some files of your own 
     </script>
 
 For more information about RequireJS please [visit the website](http://requirejs.org/).
+
+## Not for the bundles!
+
+If you want to use the bundles such as `kendo.web.min.js` or `kendo.all.min.js`, just use a plain `<script>` tag and do the same for any culture files that you might need.
+
+### Rationale
+
+Support for RequireJS in Kendo UI is designed for loading individual components, like `kendo.listview.min.js` -- because, after all, that's what RequireJS is all about.  You can `require([ "kendo.listview.min.js" ])` and it will load automatically any needed dependencies.
+
+If you plan on using the bundles you should not use RequireJS because the bundles already include all the components and RequireJS will be confused about what code is already loaded.  Typical fail scenario:
+
+    require([ "kendo.web.min.js",
+              "cultures/kendo.culture.fr.min.js" ], initApp);
+
+The culture files depend on `kendo.core.min.js`.  The contents of this one is already bundled in `kendo.web.min.js` but RequireJS has no way of knowing about that, and will make a request to load `kendo.core`. If it can find it, the only downside is that it'll be loaded twice (which is definitely a bad idea) but if the file is not there it will complain with an error and won't execute your `initApp` function.
