@@ -308,6 +308,17 @@ A JSON-formatted string or selector that specifies the node to be appended.
 The node that will contain the newly appended node. If not specified, the new node will be appended to the
 root group of the TreeView.
 
+##### success `function` *(optional)*
+
+A success callback that will be called once the new node has been appended.
+Useful in the case of remote binding where an item is appended to an unfetched node. The callback is called
+once the siblings have been fetched.
+
+#### Returns
+
+`jQuery` The inserted `<li>` element, wrapped in a jQuery object,
+or `null` if the new model has not been inserted immediately.
+
 
 ### collapse
 
