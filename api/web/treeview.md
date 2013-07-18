@@ -308,7 +308,7 @@ A JSON-formatted string or selector that specifies the node to be appended.
 The node that will contain the newly appended node. If not specified, the new node will be appended to the
 root group of the TreeView.
 
-##### success `function` *(optional)*
+##### success `Function` *(optional)*
 
 A success callback that will be called once the new node has been appended.
 Useful in the case of remote binding where an item is appended to an unfetched node. The callback is called
