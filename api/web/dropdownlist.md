@@ -440,9 +440,10 @@ Selects a dropdown item and sets the value and the text of the dropdownlist, or 
     // selects by index
     dropdownlist.select(1);
 
-    // selects item if its text is equal to "test" using predicate function
+    // selects item if its text property is equal to "test" using predicate function
+    // considering the following sample model { text: "Black", value: "1" }
     dropdownlist.select(function(dataItem) {
-        return dataItem.Text === "test";
+        return dataItem.text === "test";
     });
 
 	// get selected index
