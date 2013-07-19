@@ -153,6 +153,8 @@ For example, if 5 items are visible on the page, at least 15 physical DOM elemen
 
 Once the listview reaches the amount of items specified by the [schema.total](http://docs.kendoui.com/api/framework/datasource#configuration-schema.total) setting of the datasource, the loadmore button/endless scrolling indicator is hidden.
 
+> Currently, endless scrolling or press to load more configuration options are not supported in grouped mode.
+
 ## Link Items
 
 The mobile ListView will automatically style items with a single link element inside, adding a details indicator.
