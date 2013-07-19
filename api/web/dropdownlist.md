@@ -442,7 +442,7 @@ Selects a dropdown item and sets the value and the text of the dropdownlist, or 
 
     // selects item if its text is equal to "test" using predicate function
     dropdownlist.select(function(dataItem) {
-        return dataItem.text === "test";
+        return dataItem.Text === "test";
     });
 
 	// get selected index
