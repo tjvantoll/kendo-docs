@@ -9,7 +9,7 @@ publish: true
 # Styling Kendo UI Mobile
 
 <br/>
-## Kendo UI Mobile CSS Files
+## Kendo UI Mobile CSS Dependencies
 
 <br/>
 By default Kendo UI Mobile is shipped with several separate CSS files:
