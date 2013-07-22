@@ -105,6 +105,8 @@ Any data that is necessary to be sent to the server.
 
 ### append
 
+**The `append` method has been introduced after the Q2 2013 Kendo UI release (2013.2.716). It is available in internal builds.**
+
 Appends a new pane. The method returns the pane element, so it can be populated with arbitrary content, if `contentUrl` is not set.
 Invoking this method will force the **Splitter** to redraw and it will trigger `layoutChange` and `resize` events.
 
@@ -175,6 +177,8 @@ The pane to be expanded.
 
 ### insertAfter
 
+**The `insertAfter` method has been introduced after the Q2 2013 Kendo UI release (2013.2.716). It is available in internal builds.**
+
 Inserts a new pane after the specified one. The method returns the pane element, so it can be populated with arbitrary content, if `contentUrl` is not set.
 Invoking this method will force the **Splitter** to redraw and it will trigger `layoutChange` and `resize` events.
 
@@ -197,6 +201,8 @@ The new pane configuration.
 The existing pane after which the new one will be inserted.
 
 ### insertBefore
+
+**The `insertBefore` method has been introduced after the Q2 2013 Kendo UI release (2013.2.716). It is available in internal builds.**
 
 Inserts a new pane before the specified one. The method returns the pane element, so it can be populated with arbitrary content, if `contentUrl` is not set.
 Invoking this method will force the **Splitter** to redraw and it will trigger `layoutChange` and `resize` events.
