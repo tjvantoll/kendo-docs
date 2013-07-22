@@ -103,10 +103,32 @@ A local or remote URL from which the content of the pane is to be loaded.
 
 Any data that is necessary to be sent to the server.
 
+### append
+
+Appends a new pane. The method returns the pane element, so it can be populated with arbitrary content, if `contentUrl` is not set.
+Invoking this method will force the **Splitter** to redraw and it will trigger `layoutChange` and `resize` events.
+
+#### Example
+
+    // get a reference to the splitter
+    var splitter = $("#splitter").data("kendoSplitter");
+    // append a 100px collapsible pane and set its content to "foo"
+    var newPane = splitter.append({
+		size: "100px",
+		collapsible: true
+	});
+	newPane.html("foo");
+
+#### Parameters
+
+##### config `Object`
+
+(optional) The new pane configuration
+
 ### collapse
 
 Collapses a specified pane. Invoking this method will force the **Splitter** to redraw and it
-will trigger layoutChange and resize events. Note: Invoking the method will not trigger a collapse event.
+will trigger `layoutChange` and `resize` events. Note: Invoking the method will not trigger a collapse event.
 
 #### Example
 
@@ -136,7 +158,7 @@ Prepares the **Splitter** for safe removal from DOM. Detaches all event handlers
 ### expand
 
 Expands a specified pane. Invoking this method will force the **Splitter** to redraw and it
-will trigger layoutChange and resize events. Note: Invoking the method will not trigger an expand event.
+will trigger `layoutChange` and `resize` events. Note: Invoking the method will not trigger an expand event.
 
 #### Example
 
@@ -150,6 +172,52 @@ will trigger layoutChange and resize events. Note: Invoking the method will not 
 ##### pane `Selector | DOM Element`
 
 The pane to be expanded.
+
+### insertAfter
+
+Inserts a new pane after the specified one. The method returns the pane element, so it can be populated with arbitrary content, if `contentUrl` is not set.
+Invoking this method will force the **Splitter** to redraw and it will trigger `layoutChange` and `resize` events.
+
+#### Example
+
+    // get a reference to the splitter
+    var splitter = $("#splitter").data("kendoSplitter");
+    // insert a 100px pane after the first pane and set its content to "foo"
+    var newPane = splitter.insertAfter({size: "100px"}, splitter.element.children(".k-pane").first());
+	newPane.html("foo");
+
+#### Parameters
+
+##### config `Object`
+
+The new pane configuration.
+
+##### referencePane `Selector | DOM Element`
+
+The existing pane after which the new one will be inserted.
+
+### insertBefore
+
+Inserts a new pane before the specified one. The method returns the pane element, so it can be populated with arbitrary content, if `contentUrl` is not set.
+Invoking this method will force the **Splitter** to redraw and it will trigger `layoutChange` and `resize` events.
+
+#### Example
+
+    // get a reference to the splitter
+    var splitter = $("#splitter").data("kendoSplitter");
+    // insert a 100px pane before the last pane and set its content to "foo"
+    var newPane = splitter.insertBefore({size: "100px"}, splitter.element.children(".k-pane").last());
+	newPane.html("foo");
+
+#### Parameters
+
+##### config `Object`
+
+The new pane configuration.
+
+##### referencePane `Selector | DOM Element`
+
+The existing pane before which the new one will be inserted.
 
 ### max
 
@@ -194,6 +262,24 @@ The pane being targetted for a new minimum size configuration value.
 ##### value `String`
 
 The minimum size value of the pane defined as pixels (i.e. "200px") or as a percentage (i.e. "50%").
+
+### remove
+
+Removes one or more panes. The method returns the Splitter instance.
+Invoking this method will force the **Splitter** to redraw and it will trigger `layoutChange` and `resize` events.
+
+#### Example
+
+    // get a reference to the splitter
+    var splitter = $("#splitter").data("kendoSplitter");
+    // remove the last pane
+    splitter.remove(splitter.element.children(".k-pane").last());
+
+#### Parameters
+
+##### pane `Selector | DOM Element`
+
+The pane(s) to be removed.
 
 ### size
 
