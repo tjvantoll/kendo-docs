@@ -135,6 +135,12 @@ The above script will be executed as window resize event handler. The Grid `div`
 Note that elements with percentage height require a parent element with an explicit height. This requirement applies recursively until an element with a pixel height is reached,
 or until the `html` element is reached. 100% high elements cannot have margins, paddings, borders or sibling elements.
 
+### Initializing the Grid inside a hidden container
+
+If a scrollable Grid with a set height is initialized while inside a hidden container, the Grid will not be able to adjust its vertical layout correctly,
+because Javascript size calculations do not work for elements with a `display:none` style. In such cases the Grid should be initialized when it becomes visible, or its layout must be adjusted
+manually, as in the above example.
+
 ### Column widths
 
 When Grid scrolling is enabled (by default), the Grid table layout style is "fixed". This means that all width-less columns will be equally wide no matter what their content is.
