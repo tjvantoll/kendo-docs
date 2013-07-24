@@ -187,8 +187,8 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
 
                 // The Kendo JavaScript bundle
                 bundles.Add(new ScriptBundle("~/bundles/kendo").Include(
-                        "~/Scripts/kendo.web.*", // or kendo.all.* if you want to use Kendo UI Web and Kendo UI DataViz
-                        "~/Scripts/kendo.aspnetmvc.*"));
+                        "~/Scripts/kendo.web.min.js", // or kendo.all.min.js if you want to use Kendo UI Web and Kendo UI DataViz
+                        "~/Scripts/kendo.aspnetmvc.min.js"));
 
                 // The Kendo CSS bundle
                 bundles.Add(new StyleBundle("~/Content/kendo").Include(
@@ -214,8 +214,8 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
                 // The Kendo JavaScript bundle - replace "2012.3.1315" with the Kendo UI version that you are using
 
                 bundles.Add(new ScriptBundle("~/bundles/kendo")
-                     .Include("~/Scripts/kendo/2012.3.1315/kendo.web.*") // or kendo.all.*
-                     .Include("~/Scripts/kendo/2012.3.1315/kendo.aspnetmvc.*")
+                     .Include("~/Scripts/kendo/2012.3.1315/kendo.web.min.js") // or kendo.all.min.js
+                     .Include("~/Scripts/kendo/2012.3.1315/kendo.aspnetmvc.min.js")
                 );
 
                 // The Kendo CSS bundle - replace "2012.3.1315" with the Kendo UI version that you are using
@@ -232,8 +232,8 @@ copy **kendo.common.min.css**, the theme file (e.g. **kendo.default.min.css**), 
                 bundles.IgnoreList.Ignore("*-vsdoc.js");
                 bundles.IgnoreList.Ignore("*.debug.js", OptimizationMode.WhenEnabled);
             }
-	
-	* The Kendo UI CSS files use relative paths to the theme images. This requires the theme images to be located in accordance with the relative paths in the CSS code.
+
+    * The Kendo UI CSS files use relative paths to the theme images. This requires the theme images to be located in accordance with the relative paths in the CSS code.
 The easiest way to achieve this is to match the virtual bundle URL with the physical location of the CSS files, as demonstrated above.
 Otherwise, the theme images must be placed in a folder with a name that corresponds to the used theme name and this subfolder should be a child folder of the bundle path.
 
@@ -318,7 +318,7 @@ be availble in your views. Rebuild your project after adding the namespace to th
     * Razor
 
             @(Html.Kendo().DatePicker().Name("Birthday"))
-			
+
 ### Using CDN
 
 You can include the JavaScript and CSS files from CDN. Don't forget to specify the version (e.g. 2012.2.710)
@@ -336,19 +336,19 @@ When using server-side wrappers, the Kendo UI widget initialization scripts are 
 This may not be always desired, e.g. if the script files are registered at the bottom of the page, or when nesting Kendo UI widgets.
 In order to move initialization statements, one can use the following approach:
 
-	@(Html.Kendo().TabStrip()
-		.Name("tabstrip")
-		.Deferred()
-	)
-	
-	...some other page content here...
+    @(Html.Kendo().TabStrip()
+        .Name("tabstrip")
+        .Deferred()
+    )
 
-	@Html.Kendo().DeferredScripts()
+    ...some other page content here...
+
+    @Html.Kendo().DeferredScripts()
 
 The `Deferred()` fluent method will suppress immediate script statement rendering, while the `DeferredScripts()` method will output all previously deferred initialization statements.
 
 `DeferredScripts()` accepts a boolean parameter, which determines whether `&lt;script&gt;` tags should be rendered automatically, for example
 
-	@Html.Kendo().DeferredScripts(false)
+    @Html.Kendo().DeferredScripts(false)
 
 The default value is `true`. Setting false will allow you to include the initialization scripts in an existing `script` element.
