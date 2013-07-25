@@ -139,7 +139,7 @@ or until the `html` element is reached. 100% high elements cannot have margins, 
 
 If a scrollable Grid with a set height is initialized while inside a hidden container, the Grid will not be able to adjust its vertical layout correctly,
 because Javascript size calculations do not work for elements with a `display:none` style. In such cases the Grid should be initialized when it becomes visible, or its layout must be adjusted
-manually, as in the above example.
+manually, using code from the above example.
 
 ### Column widths
 
