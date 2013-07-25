@@ -28,6 +28,8 @@ publish: true
             ]
         });
 
+* **Editor**: Initializing the editor from a `div` element triggers the [inline editing mode](http://demos.kendoui.com/web/editor/inline-editing.html). If you need to revert to the old behavior, initialize it from a `<textarea>` element.
+
 * **Mobile ListView**:
 
 Enabling endless scrolling or press to load more configuration options now puts the listview in a virtual mode, which has different behavior than Q1 2013 and previous releases.
