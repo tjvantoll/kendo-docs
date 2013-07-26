@@ -34,15 +34,28 @@ Each column object has the following properties:
 
 ### Grid Creation From An HTML Table
 
-Add an HTML table.  Specify the table header.  Each of `th` elements you specify will become a column and the text will become the column header.
+Add an HTML table. Specify the table header. Each of `th` elements you specify will become a column and the text will become the column header. Column widths can be set via `col` elements.
+
     <table id="grid">
-         <thead>
-            <tr>
-                <th data-field="firstName">First Name</th>
-                <th data-field="lastName">Last Name</th>
-                <th data-field="email">Email</th>
-            </tr>
-         </thead>
+		<colgroup>
+			<col style="width:100px" />
+			<col style="width:200px" />
+			<col />
+		</colgroup>
+		<thead>
+			<tr>
+				<th data-field="firstName">First Name</th>
+				<th data-field="lastName">Last Name</th>
+				<th data-field="email">Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Nancy</td>
+				<td>Davolio</td>
+				<td>email@domain.com</td>
+			</tr>
+		</tbody>
     </table>
 
 The table can now describe the entire structure of the grid. The field that the column is bound to in the data set is specified in the `data-field` attribute of each `th` element. Using `data-field` attributes is highly
@@ -143,8 +156,10 @@ manually, using code from the above example.
 
 ### Column widths
 
-When Grid scrolling is enabled (by default), the Grid table layout style is "fixed". This means that all width-less columns will be equally wide no matter what their content is.
+When Grid scrolling is enabled (by default, except for the widget MVC wrapper), the Grid table layout style is "fixed". This means that all width-less columns will be equally wide no matter what their content is.
 When Grid scrolling is disabled, the Grid table layout style is "auto", i.e. the column widths are determined by the browser and cell content, if not set explicitly.
+
+When creating the Grid from an HTML `table`, column widths can be set via `col` elements.
 
 ### Using a wide non-scrollable Grid
 
