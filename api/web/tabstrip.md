@@ -308,7 +308,7 @@ Deactivates a tab specified as a selector. Note: Invoking this method will not t
 
 #### Parameters
 
-##### item `Selector`
+##### item `jQuery`
 
 The target tab, specified as a selector, to be deactivated.
 
