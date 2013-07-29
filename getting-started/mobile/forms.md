@@ -76,7 +76,8 @@ As of Q3 2012, the rules needed should have more specificity and different selec
     .km-on-android.km-3 .km-list > li
     {
         bottom: 10000px;
-        .transform(translatey(10000px));
+        -webkit-transform: translatey(10000px);
+        transform: translatey(10000px);
     }
 
 Older releases than Q2 2013, will require the following rule to disable the Android 2 workaround:
