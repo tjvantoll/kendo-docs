@@ -86,7 +86,7 @@ Triggered when the frament part of the url changes.
 
 The fragment part of the URL
 
-> Calling the `pretentDefault` method of the event object will stop the change and restore the previous URL.
+> Calling the `preventDefault` method of the event object will stop the change and restore the previous URL.
 
 ### routeMissing
 
@@ -109,3 +109,5 @@ Triggered when the url does not match any of the provided routes.
 ##### e.url `String`
 
 The fragment part of the URL
+
+> Calling the `preventDefault` method of the event object will stop the change and restore the previous URL.
