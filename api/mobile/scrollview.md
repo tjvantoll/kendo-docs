@@ -26,7 +26,17 @@ Represents the Kendo UI Mobile ScrollView widget. Inherits from [kendo.mobile.ui
 
 ### contentHeight `Number|String`*(default: "auto")*
 
- The height of the ScrollView content.
+The height of the ScrollView content. Supports `100%` if the scrollview is embedded in a stretched view and the scrollview element **is an immediate child** of the view element.
+
+#### Stretched scrollview
+
+    <div data-role="view" data-stretch="true">
+        <div data-role="scrollview" data-content-height="100%">
+            <div data-role="page">This page will stretch to fit the entire view height</div>
+            <div data-role="page">This page will stretch to fit the entire view height</div>
+            <div data-role="page">This page will stretch to fit the entire view height</div>
+        </div>
+    </div>
 
 ### dataSource `kendo.data.DataSource | Object`
 
