@@ -73,6 +73,17 @@ data source is fired. By default the widget will bind to the data source specifi
     dataSource.read(); // "read()" will fire the "change" event of the dataSource and the widget will be bound
     </script>
 
+### columnResizeHandleWidth `Number` *(default: 3)*
+
+Defines the width of the column resize handle in pixels. Apply a larger value for easier grasping.
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+		columnResizeHandleWidth: 6
+    });
+    </script>
+	
 ### columns `Array`
 
 The configuration of the grid columns. An array of JavaScript objects or strings. A JavaScript objects are interpreted as column configurations. Strings are interpreted as the
