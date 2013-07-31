@@ -31,7 +31,7 @@ Sets the HTML content of the TreeViewItem.
 
 
 ### enabled
-Specifies whether the item is initially enabled
+Specifies whether the item is initially enabled. True by default.
 
 #### Returns
 `\Kendo\UI\TreeViewItem`
@@ -167,5 +167,23 @@ Specifies the text displayed by the item
     <?php
     $item = new \Kendo\UI\TreeViewItem();
     $item->text('value');
+    ?>
+
+### url
+Specifies the URL that the item will link to. Used for navigational trees.
+
+#### Returns
+`\Kendo\UI\TreeViewItem`
+
+#### Parameters
+
+##### $value `string`
+
+
+
+#### Example 
+    <?php
+    $item = new \Kendo\UI\TreeViewItem();
+    $item->url('value');
     ?>
 
