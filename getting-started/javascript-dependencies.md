@@ -51,7 +51,7 @@ The current official version of Kendo UI requires **jQuery 1.9.1**. There are oc
 In such cases we recommend using the previous jQuery version until the next official Kendo UI release that resolves the problems. We normally do not change the jQuery version that is shipped
 with Kendo UI for service packs. We can do this for major releases. The following list provides compatibility information about previous major Kendo UI releases:
 
-* Kendo UI 2013.1.319 (Q2 2013) - jQuery 1.9.1
+* Kendo UI 2013.2.716 (Q2 2013) - jQuery 1.9.1
 * Kendo UI 2013.1.319 (Q1 2013) - jQuery 1.9.1
 * Kendo UI 2012.3.1114 (Q3 2012) - jQuery 1.8.2
 * Kendo UI 2012.2.710 (Q2 2012) - jQuery 1.7.1
