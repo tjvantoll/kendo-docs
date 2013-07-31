@@ -18,7 +18,7 @@ Contains the items of the treeview widget
 
 ### enabled `boolean`
 
-Specifies whether the item is initially enabled
+Specifies whether the item is initially enabled. True by default.
 
 #### Example
     <kendo:treeView-item enabled="enabled">
@@ -62,5 +62,13 @@ Specifies the text displayed by the item
 
 #### Example
     <kendo:treeView-item text="text">
+    </kendo:treeView-item>
+
+### url `String`
+
+Specifies the URL that the item will link to. Used for navigational trees.
+
+#### Example
+    <kendo:treeView-item url="url">
     </kendo:treeView-item>
 
