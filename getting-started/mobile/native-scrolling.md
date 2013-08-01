@@ -10,7 +10,7 @@ publish: true
 
 Since Q3 2013, the mobile application introduces a new configuration option – `useNativeScrolling` (false by default). The change is mostly due to the browser behavior changes introduced in iOS7; enabling the option works on other platforms, too.
 
-# Native VS Emulated Scrolling Explained
+## Native VS Emulated Scrolling Explained
 
 By default, the mobile application uses [flexbox](http://www.w3.org/TR/css3-flexbox/) for the mobile views layout.
 Each mobile view is stretched to fit the application container (by default, the `body` DOM element) using `width: 100%; height: 100%;` CSS declarations.
@@ -33,14 +33,14 @@ When the `useNativeScrolling` configuration option is set to `true`, the view he
         new kendo.mobile.Application(document.body, { useNativeScrolling: true });
     </script>
 
-## Native Scrolling Advantages
+### Native Scrolling Advantages
 
 - Most mobile operating systems (and certain mobile browsers) automatically hide address bars or tabbar components when the user scrolls through the document.
 Using the native scroller enables this behavior.
 - The native document scroller performs smoother and faster compared to JavaScript-based or `overflow: auto` based solutions.
 - On Android 2.2.*, form elements exhibit erratic behavior when JavaScript scrolling is used, while `overflow: auto` does not display scroll hints. Using the Native Scrolling resolves this problem.
 
-## Native Scrolling Compatibility and Limitations
+### Native Scrolling Compatibility and Limitations
 
 - The native scrolling hint is visible over of the view header/footer contents.
 - Features which depend on the JavaScript-based scrolling are not supported (ListView Pull To Refresh, Press To Load More, Fixed Headers, etc.)
