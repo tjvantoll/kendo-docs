@@ -8,6 +8,8 @@ tags: getting-started, mobile
 publish: true
 ---
 
+Since Q3 2013, the mobile application introduces a new configuration option – `useNativeScrolling` (false by default). The change is mostly due to the browser behavior changes introduced in iOS7; enabling the option works on other platforms, too.
+
 # Native VS Emulated Scrolling Explained
 
 By default, the mobile application uses [flexbox](http://www.w3.org/TR/css3-flexbox/) for the mobile views layout.
