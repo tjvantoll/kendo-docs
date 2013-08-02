@@ -2377,6 +2377,77 @@ The view type to select.
 
 ## Events
 
+### add
+
+Fired when the a new event is about to be added.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.start `Date`
+
+The start date of the event.
+
+##### e.end `Date`
+
+The end date of the event.
+
+##### e.isAllDay `Boolean`
+
+Determines if event is all day.
+
+##### e.preventDefault `Function`
+
+If invoked prevents the add action.
+
+##### e.sender `kendo.ui.Scheduler`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "add" event during initialization
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ],
+      add: function(e) {
+        console.log("Add", e.start);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "add" event after initialization
+
+    <div id="scheduler"></div>
+    <script>
+    function scheduler_add(e) {
+      console.log("Add", e.start);
+    }
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    var scheduler = $("#scheduler").data("kendoScheduler");
+    scheduler.bind("add", scheduler_add);
+    </script>
+
 ### cancel
 
 Fired when the user cancels editing by clicking the "cancel" button.

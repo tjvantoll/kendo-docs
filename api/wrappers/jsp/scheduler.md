@@ -196,6 +196,22 @@ More documentation is available at [kendo:scheduler-views](scheduler/views).
 
 ## Event Attributes
 
+### add `String`
+
+Fired when the a new event is about to be added.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [add](/api/web/scheduler#events-add) event documentation.
+
+#### Example
+    <kendo:scheduler add="handle_add">
+    </kendo:scheduler>
+    <script>
+        function handle_add(e) {
+            // Code to handle the add event.
+        }
+    </script>
+
 ### cancel `String`
 
 Fired when the user cancels editing by clicking the "cancel" button.The event handler function context (available via the this keyword) will be set to the widget instance.
@@ -405,6 +421,24 @@ For additional information check the [save](/api/web/scheduler#events-save) even
     </script>
 
 ## Event Tags
+
+### kendo:scheduler-add
+
+Fired when the a new event is about to be added.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [add](/api/web/scheduler#events-add) event documentation.
+
+#### Example
+    <kendo:scheduler>
+        <kendo:scheduler-add>
+            <script>
+                function(e) {
+                    // Code to handle the add event.
+                }
+            </script>
+        </kendo:scheduler-add>
+    </kendo:scheduler>
 
 ### kendo:scheduler-cancel
 
