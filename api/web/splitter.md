@@ -479,10 +479,10 @@ Fires when the splitter layout has changed
     };
 
     // attach layoutChange event handler via bind()
-    $("#splitter").bind("layoutChange", onLayoutChange);
+    $("#splitter").data("kendoSplitter").bind("layoutChange", onLayoutChange);
 
     // detach layoutChange event handler via unbind()
-    $("#splitter").unbind("layoutChange", onLayoutChange);
+    $("#splitter").data("kendoSplitter").unbind("layoutChange", onLayoutChange);
 
 ### resize
 
