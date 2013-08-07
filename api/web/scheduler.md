@@ -2986,6 +2986,227 @@ The widget instance which fired the event.
     scheduler.bind("remove", scheduler_remove);
     </script>
 
+### resizeStart
+
+Fired when the user starts to resize an event.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.event `kendo.data.SchedulerEvent`
+
+The event which is being resized.
+
+##### e.preventDefault `Function`
+
+If invoked prevents the resize action.
+
+##### e.sender `kendo.ui.Scheduler`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "resizeStart" event during initialization
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ],
+      resizeStart: function(e) {
+        console.log("Resize Start", e.event.title);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "resizeStart" event after initialization
+
+    <div id="scheduler"></div>
+    <script>
+    function scheduler_resizeStart(e) {
+      console.log("Resize Start", e.event.title);
+    }
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    var scheduler = $("#scheduler").data("kendoScheduler");
+    scheduler.bind("resizeStart", scheduler_resizeStart);
+    </script>
+
+### resize
+
+Fired when the user is resizing an event.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.event `kendo.data.SchedulerEvent`
+
+The event which is being resized.
+
+##### e.slot `Object`
+
+The slot over which the event is resized to.
+
+###### e.slot.element `jQuery`
+
+The slot's element.
+
+###### e.slot.start `Date`
+
+The slot's start date.
+
+###### e.slot.end `Date`
+
+The slot's end date.
+
+##### e.preventDefault `Function`
+
+If invoked prevents the resize action.
+
+##### e.sender `kendo.ui.Scheduler`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "resize" event during initialization
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ],
+      resize: function(e) {
+        console.log("Resize", e.slot.start);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "resize" event after initialization
+
+    <div id="scheduler"></div>
+    <script>
+    function scheduler_resize(e) {
+      console.log("Resize", e.slot.start);
+    }
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    var scheduler = $("#scheduler").data("kendoScheduler");
+    scheduler.bind("resize", scheduler_resize);
+    </script>
+
+### resizeEnd
+
+Fired when the user releases the mouse after resizing an event.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.event `kendo.data.SchedulerEvent`
+
+The event which is being resized.
+
+##### e.slot `Object`
+
+The slot over which the event is resized to.
+
+###### e.slot.element `jQuery`
+
+The slot's element.
+
+###### e.slot.start `Date`
+
+The slot's start date.
+
+###### e.slot.end `Date`
+
+The slot's end date.
+
+##### e.preventDefault `Function`
+
+If invoked prevents the resize action.
+
+##### e.sender `kendo.ui.Scheduler`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "resizeEnd" event during initialization
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ],
+      resizeEnd: function(e) {
+        console.log("Resize End", e.slot.start);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "resizeEnd" event after initialization
+
+    <div id="scheduler"></div>
+    <script>
+    function scheduler_resizeEnd(e) {
+      console.log("Resize End", e.slot.start);
+    }
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    var scheduler = $("#scheduler").data("kendoScheduler");
+    scheduler.bind("resizeEnd", scheduler_resizeEnd);
+    </script>
+
 ### save
 
 Fired when the user saves a scheduler event by clicking the "save" button.
