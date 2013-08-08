@@ -26380,6 +26380,30 @@ The data source to which the widget should be bound.
     chart.setDataSource(dataSource);
     </script>
 
+### setOptions
+
+Sets the widget options. Changes are cumulative.
+
+#### Parameters
+
+##### options `Object`
+
+The chart settings to update.
+
+#### Example - change the chart theme
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      theme: "black",
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+
+    var chart = $("#chart").data("kendoChart");
+    chart.setOptions({ theme: "uniform" });
+    </script>
+
 ### svg
 
 Returns the [SVG](http://www.w3.org/Graphics/SVG/) representation of the chart.

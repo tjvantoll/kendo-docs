@@ -5740,6 +5740,28 @@ Sets the dataSource of an existing Chart and rebinds it.
 
 ##### dataSource `kendo.data.DataSource`
 
+### setOptions
+
+Sets the widget options. Changes are cumulative.
+
+#### Parameters
+
+##### options `Object`
+
+The chart settings to update.
+
+#### Example - change the chart theme
+    <span id="sparkline"></span>
+    <script>
+    $("#sparkline").kendoSparkline({
+      theme: "black",
+      data: [1, 2, 3]
+    });
+
+    var sparkline = $("#sparkline").data("kendoSparkline");
+    sparkline.setOptions({ theme: "uniform" });
+    </script>
+
 ### svg
 
 Returns the [SVG](http://www.w3.org/Graphics/SVG/) representation of the chart.
