@@ -20,7 +20,7 @@ exposing the data objects from the Model in such a way that those objects are ea
 > **Important:** Kendo UI Mobile is not included in the default list of initialized namespaces. You can initialize it explicitly by
   running `kendo.bind(element, viewModel, kendo.mobile.ui);`
 
-#### Example
+#### Example - bind a DOM element to a view model
 
      <!-- View -->
      <div id="view">
@@ -53,44 +53,20 @@ exposing the data objects from the Model in such a way that those objects are ea
 
 #### Parameters
 
-##### element `String|jQuery|Node`
+##### element `String|jQuery|Element`
 
 The root element(s) from which the binding starts. Can be a valid jQuery string selector, a DOM element or a jQuery object.
 All child elements are traversed.
 
 ##### viewModel `Object|kendo.data.ObservableObject`
 
-The View-Model which the elements are bound to. Wraped as an instance of `kendo.data.ObservableObject` if not already.
+The View-Model which the elements are bound to. Wrapped as an instance of `kendo.data.ObservableObject` if not already.
 
 ##### namespace `Object`
 
 Optional namespace too look in when instantiating Kendo UI widgets. The valid namespaces are `kendo.ui`, `kendo.dataviz.ui` and `kendo.mobile.ui`. If omitted
 `kendo.ui` will be used. Multiple namespaces can be passed.
 
-###### Example
-
-     <div id="view">
-       <label>First Name:<input data-bind="value: firstName" /></label>
-       <label>Last Name:<input data-bind="value: lastName" /></label>
-       <button data-role="button" data-bind="events: { click: displayGreeting }">Display Greeting</button>
-     </div>
-
-     <script>
-       // View-Model
-       var viewModel = kendo.observable({
-          firstName: "John",
-          lastName: "Doe",
-          displayGreeting: function() {
-              // Get the current values of "firstName" and "lastName"
-              var firstName = this.get("firstName");
-              var lastName = this.get("lastName");
-              alert("Hello, " + firstName + " " + lastName + "!!!");
-          }
-       });
-
-       // Bind the View to the View-Model, initializing mobile and web widgets, in that priority.
-       kendo.bind($("#view"), viewModel, kendo.mobile.ui, kendo.ui);
-     </script>
 
 ### init
 
@@ -110,7 +86,7 @@ Instantiates Kendo UI widgets in a given DOM element based on role data attribut
 
 #### Parameters
 
-##### element `String|jQuery|Node`
+##### element `String|jQuery|Element`
 
 The root element(s) from which the instantiation starts. Can be a valid jQuery string selector, a DOM element or a jQuery object. All child elements are traversed.
 
@@ -119,7 +95,7 @@ The root element(s) from which the instantiation starts. Can be a valid jQuery s
 Optional namespace too look in when instantiating Kendo UI widgets. The valid namespaces are `kendo.ui`, `kendo.dataviz.ui` and `kendo.mobile.ui`. If omitted
 `kendo.ui` will be used. Multiple namespaces can be passed.
 
-###### Example
+#### Example
 
      <div id="view">
         <div>
@@ -139,18 +115,25 @@ Optional namespace too look in when instantiating Kendo UI widgets. The valid na
 
 ### observableHierarchy
 
-Creates an ObservableArray instance that is bound to a HierarchicalDataSource. Required to bind a HierarchicalDataSource-enabled widget (such as the Kendo TreeView) to an observable array.
+Creates an ObservableArray instance that is bound to a HierarchicalDataSource. Required to bind a HierarchicalDataSource-enabled widget (such as the Kendo UI TreeView) to a view-model.
 
 #### Example
 
+    <div data-role="treeview" data-bind="source: products"></div>
+    <script>
     var viewModel = kendo.observable({
-        products: kendo.observableHierarchy([
-            { text: "foo", items: [
-                { text: "bar" }
-            ] },
-            { text: "baz" }
-        ])
+      products: kendo.observableHierarchy([
+        {
+          text: "foo",
+          items: [
+            { text: "bar" }
+          ]
+        },
+        { text: "baz" }
+       ])
     });
+    kendo.bind(document.body, viewModel);
+    </script>
 
 #### Parameters
 
@@ -163,30 +146,53 @@ Sets or gets the current culture. Uses the passed culture name to select a cultu
 If there is no corresponding culture then the method will try to find culture which is equal to the country part of the culture name.
 If no culture is found the default one is used.
 
-#### Include culture JavaScript files and select a culture
-    <script src="jquery.js" ></script>
-    <script src="kendo.all.min.js"></script>
-    <script src="kendo.culture.en-GB.js"></script>
+#### Example -  include a culture-specific JavaScript file and set the culture
+    <script src="http://cdn.kendostatic.com/2013.2.716/js/cultures/kendo.culture.en-GB.min.js"></script>
     <script>
-    //set current culture to "en-GB".
-    kendo.culture("en-GB");
+      console.log(kendo.format("{0:c}", 99)); // outputs "$99.00" using the default en-US culture
+      kendo.culture("en-GB"); // change the culture
+      console.log(kendo.format("{0:c}", 99)); // outputs "£99.00"
     </script>
+
 #### Get the current culture
+    <script>
     var culture = kendo.culture();
+    console.log(culture.name); // outputs "en-US"
+    </script>
+
+#### Parameters
+
+##### culture `String`
+
+The culture to set.
 
 ### destroy
+
 Finds all Kendo widgets that are children of the specified element and calls their destroy method.
+
+#### Example
+
+    <input id="autocomplete">
+    <script>
+    $("#autocomplete").kendoAutoComplete();
+      console.log($("#autocomplete").data("kendoAutoComplete") != null); // outputs "true"
+      kendo.destroy(document.body);
+      console.log($("#autocomplete").data("kendoAutoComplete") != null); // outputs "false"
+    </script>
 
 #### Parameters
 
 ##### element `String|jQuery|Node`
 
 ### format
-Replaces each format item in a specified string with the text equivalent of a corresponding object's value.
+
+Replaces each format item in a specified string with the text equivalent of a corresponding object's value. Uses [toString](#methods-toString) for every format item.
 
 #### Example
-    kendo.format("{0} - {1}", 12, 24); //12 - 24
-    kendo.format("{0:c} - {1:c}", 12, 24); //$12.00 - $24.00
+    <script>
+    console.log(kendo.format("{0} - {1}", 12, 24));  // outputs "12 - 24"
+    console.log(kendo.format("{0:c} - {1:c}", 12, 24)); // outputs "$12.00 - $24.00"
+    </script>
 
 #### Returns
 
@@ -197,8 +203,10 @@ Replaces each format item in a specified string with the text equivalent of a co
 Encodes HTML characters to entities.
 
 #### Example
+    <script>
     var html = kendo.htmlEncode("<span>Hello</span>");
     console.log(html); // outputs "&lt;span&gt;Hello&lt;/span&gt;"
+    </script>
 
 #### Parameters
 
@@ -211,75 +219,99 @@ The string that needs to be HTML encoded.
 `String` The encoded string.
 
 ### parseDate
+
 Parses as a formatted string as a `Date`.
+
 #### Example
-    kendo.parseDate("12/22/2000"); //Fri Dec 22 2000
-    kendo.parseDate("2000/12/22", "yyyy/MM/dd"); //Fri Dec 22 2000
-#### Returns
-`Date` the parsed date.
+    <script>
+      console.log(kendo.parseDate("2013/3/4 10:00 AM")); // outputs "Mon Mar 04 2013 10:00:00"
+      console.log(kendo.parseDate("3/4/2013", "MM/dd/yyyy")); // outputs "Mon Mar 04 2013 00:00:00"
+      console.log(kendo.parseDate("invalid")); // outputs "null"
+    </script>
 
 #### Parameters
 
 ##### value `String`
-The formatted string which should be parsed as date.
+
+The string which should be parsed as `Date`.
 
 ##### formats `String|Array` *(optional)*
-The format(s) that will be used to parse the date. By default all standard date formats are used.
+
+The format(s) that will be used to parse the date. By default all standard date formats of the current culture are used.
 
 ##### culture `String` *(optional)*
+
 The culture used to parse the number. The current culture is used by default.
 
+#### Returns
+
+`Date` the parsed date. Returns `null` if the value cannot be parsed as a valid `Date`.
+
 ### parseFloat
-Parses as a formatted string as a floating point number.
+
+Parses a string as a floating point number.
 
 #### Example
-    kendo.parseFloat("12.22"); //12.22
 
-    kendo.culture("de-DE");
-    kendo.parseFloat("1.212,22 €"); //1212.22
+    <script src="http://cdn.kendostatic.com/2013.2.716/js/cultures/kendo.culture.de-DE.min.js"></script>
+    <script>
+      console.log(kendo.parseFloat("12.22")); // outputs "12.22"
+      kendo.culture("de-DE");
+      console.log(kendo.parseFloat("1.212,22 €")); // outputs "1212.22"
+      console.log(kendo.parseFloat("invalid")); // outputs "null"
+    </script>
+
 #### Returns
-`Number` the parsed number.
+
+`Number` the parsed number. Returns `null` if the value cannot be parsed as a valid `Number`.
 
 #### Parameters
 
 ##### value `String`
-The formatted string which should be parsed as number.
+
+The string which should be parsed as a `Number`.
 
 ##### culture `String` *(optional)*
+
 The culture used to parse the number. The current culture is used by default.
 
 ### parseInt
-Parses as a formatted string as an integer.
-#### Example
-    kendo.parseInt("12.22"); //12
 
-    kendo.culture("de-DE");
-    kendo.parseInt("1.212,22 €"); //1212
+Parses as a string as an integer.
+
+#### Example
+
+    <script src="http://cdn.kendostatic.com/2013.2.716/js/cultures/kendo.culture.de-DE.min.js"></script>
+    <script>
+      console.log(kendo.parseInt("12.22")); // outputs "12"
+      kendo.culture("de-DE");
+      console.log(kendo.parseInt("1.212,22 €")); // outputs 1212
+      console.log(kendo.parseInt("invalid")); // outputs "null"
+    </script>
+
 #### Returns
-`Number` the parsed number.
+
+`Number` the parsed number. Returns `null` if the value cannot be parsed as a valid `Number`.
 
 #### Parameters
 
 ##### value `String`
-The formatted string which should be parsed as number.
+
+The string which should be parsed as `Number`.
 
 ##### culture `String` *(optional)*
+
 The culture used to parse the number. The current culture is used by default.
 
-<a name="parseColor"></a>
 ### parseColor
 
-Parse a color string into a <a href="#Color">Color</a> object.  If the input is not valid, it throws an Error, unless the `noerror` argument is given.
+Parse a color string to a Color object.  If the input is not valid throws an Error, unless the `noerror` argument is given.
 
 #### Example
 
-    red = kendo.parseColor("#ff0000");
-    green = kendo.parseColor("#0f0");
-    // the sharp is optional:
-    blue = kendo.parseColor("0000ff"); // or 00f
-
-    red = kendo.parseColor("rgb(255, 0, 0)");
-    halfBlue = kendo.parseColor("rgba(0, 0, 255, 0.5)");
+    <script>
+    var red = kendo.parseColor("#ff0000");
+    </script>
 
 #### Parameters
 
@@ -300,30 +332,34 @@ If you pass `true` then this function will return `undefined` rather than throwi
 
 #### Returns
 
-`Color` A <a href="#Color">Color</a> object.
+`Color` A Color object.
 
 ### render
 
-Renders the specified template using the provided data.
+Renders the specified template using the provided array.
 
 #### Example
+    <ul></ul>
+    <script>
     var template = kendo.template("<li>#: name #</li>");
     var data = [ { name: "John Doe" }, { name: "Jane Doe" }];
-    $("ul").html(kendo.render(template, data)); // sets the html to <li>John Doe</li><li>Jane Doe</li>
+    var html = kendo.render(template, data);
+    $("ul").html(html);
+    </script>
 
 #### Parameters
 
 ##### template `Function`
 
-The Kendo template which should be rendered.
+The Kendo UI template which should be rendered. Create one via the [template](#methods-template) method.
 
 ##### data `Array`
 
-Array of JavaScript objects which contains the data that the template will render.
+The array of objects which contains the data that the template will render.
 
 ### stringify
 
-Converts a value to JSON. Uses [JSON.stringify](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify) in browsers that support it.
+Converts a JavaScript object to [JSON](http://en.wikipedia.org/wiki/JSON). Uses [JSON.stringify](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify) in browsers that support it.
 
 #### Parameters
 
@@ -337,72 +373,87 @@ The value to convert to a JSON string.
 
 #### Example
 
+    <script>
     var json = kendo.stringify({ foo: "bar" });
     console.log(json); // displays {"foo":"bar"}
+    </script>
 
 
 ### template
+
 Compiles a template to a function that builds HTML. Useful when a template will be used several times.
 Templates offer way of creating HTML chunks. Options such as HTML encoding and compilation for optimal
 performance are available.
 
+#### Example - Basic template
+
+    <span id="output"></span>
+    <script>
+    var template = kendo.template("Hello, #= firstName # #= lastName #");
+    var data = { firstName: "John", lastName: "Doe" };
+    $("#output").html(template(data));
+    </script>
+
+#### Example - encode HTML
+
+    <span id="output"></span>
+    <script>
+    var template = kendo.template("HTML tags are encoded: #: html #");
+    var data = { html: "<strong>lorem ipsum</strong>" };
+    $("#output").html(template(data));
+    </script>
+
+#### Example - use JavaScript in the template
+
+    <span id="output"></span>
+    <script>
+    var template = kendo.template("#if (foo) {# foo is true #}#");
+    var data = { foo: true };
+    $("#output").html(template(data));
+    </script>
+
+#### Example - escape sharp ("#") symbols in an inline template
+
+    <span id="output"></span>
+    <script>
+    var template = kendo.template("<a href='\\#'>link</a>");
+    $("#output").html(template({}));
+    </script>
+
+#### Example - escape sharp ("#") symbols in a template defined in a script element
+
+    <span id="output"></span>
+    <script type="text/x-kendo-template" id="template">
+    <a href="\#">link</a>
+    </script>
+    <script>
+    var template = kendo.template($("#template").html());
+    $("#output").html(template({}));
+    </script>
+
 #### Returns
 `Function` the compiled template as a JavaScript function. When called this function will return the generated HTML string.
 
-#### Basic template
-
-    var inlineTemplate = kendo.template("Hello, #= firstName # #= lastName #");
-    var inlineData = { firstName: "John", lastName: "Doe" };
-    $("#inline").html(inlineTemplate(inlineData));
-
-#### Output:
-
-    Hello, John Doe!
-
-#### Encode HTML
-
-    var encodingTemplate = kendo.template("HTML tags are encoded as follows: #:html#");
-    var encodingData = { html: "<strong>lorem ipsum</strong>" };
-    $("#encoding").html(encodingTemplate(encodingData));
-
-#### Output:
-
-    HTML tags are encoded as follows: <strong>lorem ipsum</strong>
-
-#### Use JavaScript in templates
-
-    var encodingTemplate = kendo.template("#if (foo) {# bar #}#");
-    var data = { foo: true};
-    $("#encoding").html(encodingTemplate(data)); // outputs bar
-
-#### Escape sharp symbols in JavaScript strings
-
-    var encodingTemplate = kendo.template("<a href='\\#'>Link</a>");
-
-#### Escape sharp symbols in script templates
-
-    <script type="text/x-kendo-template" id="template">
-     <a href="\#">Link</a>
-    </script>
-
-    <script>
-    var encodingTemplate = kendo.template($("#template").html());
-    </script>
-
 #### Parameters
+
 ##### template `String`
 
 The template that will be compiled.
-##### options `Object` (optional)
+
+##### options `Object` *(optional)*
+
 Template compilation options.
 
 ##### options.paramName `String` *(default: "data")*
+
 The name of the parameter used by the generated function. Useful when `useWithBlock` is set to `false`.
 
 ###### Example
+
     var template = kendo.template("<strong>#: d.name #</strong>", { paramName: "d", useWithBlock: false });
 
 ##### options.useWithBlock `Boolean` *(default: true)*
+
 Wraps the generated code in a `with` block. This allows the usage of unqualified fields in the template. Disabling the `with` block will improve
 the performance of the template.
 
@@ -415,33 +466,52 @@ the performance of the template.
 
 Enables kinetic scrolling on touch devices
 
+#### Example
+    <div id="scrollable" style="height: 200px">
+      Scrollable
+      <div style="height: 1000px">content</div>
+    </div>
+    <script>
+      kendo.touchScroller($("#scrollable"));
+    </script>
+
 #### Parameters
 
-##### element `Selector`
+##### element `String|jQuery|Element`
 
 The container element to enable scrolling for.
+
 ### toString
-Formats a `Number` or `Date` using the specified format and the current culture. It allows to pass a specific culture setting.
+
+Formats a `Number` or `Date` using the specified format and the current culture.
+
+#### Example
+    <script src="http://cdn.kendostatic.com/2013.2.716/js/cultures/kendo.culture.de-DE.min.js"></script>
+    <script>
+      //format a number using standard number formats and default culture (en-US)
+      console.log(kendo.toString(10.12, "n")); // outputs "10.12"
+      console.log(kendo.toString(10.12, "n0")); // outputs "10"
+      console.log(kendo.toString(10.12, "n5")); // outputs "10.12000"
+      console.log(kendo.toString(10.12, "c")); // outputs "$10.12"
+      console.log(kendo.toString(0.12, "p")); // outputs "12.00 %"
+      //format a number using custom number formats
+      console.log(kendo.toString(19.12, "00##")); //outputs "0019"
+      //format a number using standard number format and a specific culture de-DE (default culture is en-US)
+      console.log(kendo.toString(10.12, "c", "de-DE")); //outputs "10,12" €
+      //format a date
+      console.log(kendo.toString(new Date(2010, 9, 5), "yyyy/MM/dd" )); // outputs "2010/10/05"
+      console.log(kendo.toString(new Date(2010, 9, 5), "dddd MMMM d, yyyy" )); // outputs "Tuesday October 5, 2010"
+      console.log(kendo.toString(new Date(2010, 10, 10, 22, 12), "hh:mm tt" )); // outputs "10:12 PM"
+    </script>
+
 #### Returns
+
 `String` the string representation of the formatted value.
-#### Formatting numbers and dates
-    //format a number using standard number formats and default culture en-US
-    kendo.toString(10.12, "n"); //10.12
-    kendo.toString(10.12, "n0"); //10
-    kendo.toString(10.12, "n5"); //10.12000
-    kendo.toString(10.12, "c"); //$10.12
-    kendo.toString(0.12, "p"); //12.00 %
-    //format a number using custom number formats
-    kendo.toString(19.12, "00##"); //0019
-    //format a number using standard number format and a specific culture de-DE (default culture is en-US)
-    kendo.toString(10.12, "c", "de-DE"); //10,12 €
-    //format a date
-    kendo.toString(new Date(2010, 9, 5), "yyyy/MM/dd" ); // "2010/10/05"
-    kendo.toString(new Date(2010, 9, 5), "dddd MMMM d, yyyy" ); // "Tuesday October 5, 2010"
-    kendo.toString(new Date(2010, 10, 10, 22, 12), "hh:mm tt" ); // "10:12 PM"
+
 #### Parameters
 
 ##### value `Date|Number`
+
 The `Date` or `Number` which should be formatted.
 
 ##### format `String`
@@ -450,9 +520,10 @@ The format string which should be used to format the value.
 ##### culture `String`
 The name of the culture which should be used to format the value. [The culture should be registered on the page](http://docs.kendoui.com/getting-started/framework/globalization/overview#add culture scripts to the page).
 
-## Field
+## Fields
 
 ### support
+
 A range of useful supported by the current browser capabilities and features.
 
 #### support
@@ -544,30 +615,51 @@ Returns true if running in application mode - pinned to desktop in iOS or runnin
 
 ## Standard number formats
 
-*n* - number
-    kendo.culture("en-US");
-    kendo.toString(1234.567, "n"); //1,234.57
+### n
 
+Formats the value as a number with decimal and thousand separators.
+
+#### Example
+
+    <script src="http://cdn.kendostatic.com/2013.2.716/js/cultures/kendo.culture.de-DE.min.js"></script>
+    <script>
+    console.log(kendo.toString(1234.567, "n")); // outputs "1,234.57"
     kendo.culture("de-DE");
-    kendo.toString(1234.567, "n3"); //1.234,567
+    console.log(kendo.toString(1234.567, "n3")); //outputs "1.234,567"
+    </script>
 
-*c* - currency
-    kendo.culture("en-US");
-    kendo.toString(1234.567, "c"); //$1,234.57
+### c
 
+Formats the value by adding the currency symbol.
+
+#### Example
+
+    <script src="http://cdn.kendostatic.com/2013.2.716/js/cultures/kendo.culture.de-DE.min.js"></script>
+    <script>
+    console.log(kendo.toString(1234.567, "c")); // outputs "$1,234.57"
     kendo.culture("de-DE");
-    kendo.toString(1234.567, "c3"); //1.234,567 €
+    console.log(kendo.toString(1234.567, "c3")); // outputs "1.234,567 €"
+    <script>
 
-*p* - percentage (the value is multiplied by 100)
-    kendo.culture("en-US");
-    kendo.toString(0.222, "p"); //22.20 %
+### p
 
-    kendo.culture("de-DE");
-    kendo.toString(0.22, "p3"); //22.000 %
+Formats the value as percentage (the value is multiplied by 100).
 
-*e* - exponential
-    kendo.toString(0.122, "e"); //1.22e-1
-    kendo.toString(0.122, "e4"); //1.2200e-1
+#### Example
+
+    <script>
+    console.log(kendo.toString(0.222, "p")); // outputs "22.20 %"
+    console.log(kendo.toString(0.22, "p3")); // outputs "22.000 %"
+    </script>
+
+### e
+
+Returns the value in exponential format.
+
+#### Example
+    <script>
+    console.log(kendo.toString(0.122, "e")); // outputs "1.22e-1"
+    </script>
 
 ## Custom number formats
 
@@ -575,20 +667,34 @@ Custom number formats can be created by using one or more custom numeric specifi
 
 ### Format Specifiers
 
-#### *0* - zero placeholder
+#### *0*
 
-Replaces the zero with the corresponding digit if one is present; otherwise, zero appears in the result string.
-    kendo.toString(1234.5678, "00000"); // 01235
+Zero placeholder. Replaces the zero with the corresponding digit if one is present; otherwise, zero appears in the result string.
 
-#### *#* - digit placeholder
+##### Example
+    <script>
+    console.log(kendo.toString(1234.5678, "00000")); // outputs "01235"
+    </script>
 
-Replaces the pound sign with the corresponding digit if one is present; otherwise, no digit appears in the result string.
-    kendo.toString(1234.5678, "#####"); // 1235
+#### *#*
 
-#### *.* - decimal placeholder
+Digit placeholder. Replaces the pound sign with the corresponding digit if one is present; otherwise, no digit appears in the result string.
 
-Determines the location of the decimal separator in the result string.
-    kendo.tostring(0.45678, "0.00"); // 0.46
+##### Example
+
+    <script>
+    console.log(kendo.toString(1234.5678, "#####")); // outputs "1235"
+    </script>
+
+#### *.*
+
+Decimal placeholder. Determines the position of the decimal separator in the result string.
+
+##### Example
+
+    <script>
+    console.log(kendo.toString(0.45678, "0.00")); // outputs "0.46"
+    </script>
 
 #### *,* - group separator placeholder
 Inserts a group separator between each group of digits.
