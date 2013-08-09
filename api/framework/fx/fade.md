@@ -9,19 +9,32 @@ publish: true
 Fades the element in or out.
 Supported directions are `in` and `out`.
 
+## Fading an element out
     <div id="foo">
-        I will be animated
+        I will fade out
     </div>
 
     <script>
         kendo.fx($("#foo")).fade("out").play();
-        // or
-        kendo.fx($("#foo")).fadeOut.play();
+        // an alternative syntax would be
+        // kendo.fx($("#foo")).fadeOut.play();
+    </script>
+
+## Fading an element in
+
+    <div id="foo">
+        I will fade in
+    </div>
+
+    <script>
+        kendo.fx($("#foo")).fade("in").play();
+        // an alternative syntax would be
+        // kendo.fx($("#foo")).fadeIn.play();
     </script>
 
 ## Constructor Parameters
 
-### Direction
+### direction
 
 The direction of the effect.
 
