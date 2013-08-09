@@ -352,3 +352,27 @@ The `Deferred()` fluent method will suppress immediate script statement renderin
     @Html.Kendo().DeferredScripts(false)
 
 The default value is `true`. Setting false will allow you to include the initialization scripts in an existing `script` element.
+
+### Using Kendo UI MVC wrappers inside client templates with ToClientTemplate()
+
+By default, a Kendo UI wrapper will render some HTML tags and a `script` tag with an initialization statement.
+If the wrapper declaration is placed inside a Kendo UI client template `script` tag, this will produce nested `script` tags.
+The `ToClientTemplate()` fluent method instructs the widget wrapper to escape its own script tag, so that it can be nested.
+
+	<script id="numericTemplate" type="text/x-kendo-template">
+	 
+		@(Html.Kendo().NumericTextBox().Name("num1").ToClientTemplate())
+	 
+	</script>
+	 
+	<div id="container"></div>
+	 
+	<script>
+		$(document).ready(function () {
+	 
+			var tpl = kendo.template($("#numericTemplate").html());
+	 
+			$("#container").append( tpl({}) );
+	 
+		});
+	</script>
