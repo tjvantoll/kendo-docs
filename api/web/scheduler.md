@@ -2385,17 +2385,9 @@ The event handler function context (available via the `this` keyword) will be se
 
 #### Event Data
 
-##### e.start `Date`
+##### e.event `Object`
 
-The start date of the event.
-
-##### e.end `Date`
-
-The end date of the event.
-
-##### e.isAllDay `Boolean`
-
-Determines if event is all day.
+The event data from which the SchedulerEvent instance will be created and added to the DataSource.
 
 ##### e.preventDefault `Function`
 
