@@ -77,8 +77,8 @@ The number of milliseconds used for the animation when a node is expanded.
 
 ### animation.collapse.effects `String`
 
-A whitespace-delimited string of animation effects that are utilized when a **TreeView** node
-is collapsed. The supported effects are **fadeOut** and **collapseVertical**.
+A whitespace-delimited string of animation effects that are used when collapsing nodes.
+The supported effects are **fadeOut** and **collapseVertical**.
 
 #### Example - make sub-levels fade out and collapse vertically
 
@@ -143,8 +143,8 @@ node is expanded.
 
 ### animation.expand.effects `String` *(default: "expandVertical")*
 
-A whitespace-delimited string of animation effects that are used when a **TreeView** node
-is expanded. The supported effects are **"expandVertical"** and **"fadeIn"**.
+A whitespace-delimited string of animation effects that are used when expanding nodes.
+The supported effects are **"expandVertical"** and **"fadeIn"**.
 
 #### Example - make sub-levels fade in and expand vertically
 
@@ -494,24 +494,43 @@ Template for rendering of the nodes of the treeview.
 
 ### append
 
-Appends a node to a group of a TreeView. This method may also be used to reorder the nodes of a
-TreeView.
+Appends a node to any level of the treeview. This method may also be used to reorder the nodes of a TreeView.
 
-#### Append a new node with the text, "HTML5" to the node with ID, firstItem
+#### Example
 
-    var treeView = $("#treeView").data("kendoTreeView");
-    treeView.append({ text: "HTML5" }, $("#firstItem"));
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo" }
+      ]
+    });
 
-#### Moves the node with ID, secondNode as a last child of the node with ID, firstItem
+    var treeview = $("#treeview").data("kendoTreeView");
+    // appends a new node to the root level
+    treeview.append({ text: "bar" });
 
-    var treeView = $("#treeView").data("kendoTreeView");
-    treeView.append($("#secondNode"), $("#firstItem"));
+    // appends a new node to the first treeview item
+    treeview.append({ text: "baz" }, $("#treeview .k-item:first"));
+
+    // move the item with text "bar" within the item with text "foo"
+    treeview.append(treeview.findByText("bar"), treeview.findByText("foo"));
+
+    // append two items to the root level
+    treeview.append([
+      { text: "qux" },
+      { text: "cat" }
+    ]);
+    </script>
 
 #### Parameters
 
-##### nodeData `Object`
+##### nodeData `Object|jQuery`
 
 A JSON-formatted string or selector that specifies the node to be appended.
+If the argument is a plain JavaScript object, a new item will be created.
+If the argument is a jQuery element that holds a node, the treeview node will be moved.
+If the argument is an array of objects, each item of the array will be appended.
 
 ##### parentNode `jQuery` *(optional)*
 
@@ -529,76 +548,99 @@ once the siblings have been fetched.
 `jQuery` The inserted `<li>` element, wrapped in a jQuery object,
 or `null` if the new model has not been inserted immediately.
 
-
 ### collapse
 
 Collapses nodes.
 
 #### Example
 
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", expanded: true, items: [
+          { text: "bar" }
+        ] },
+        { text: "baz", expanded: true, items: [
+          { text: "qux" }
+        ] }
+      ]
+    });
+
     var treeview = $("#treeview").data("kendoTreeView");
+    // collapse the item with text "foo"
+    treeview.collapse(treeview.findByText("foo"));
 
-    // collapse the node with id="firstItem"
-    treeview.collapse(document.getElementById("firstItem"));
-
-    // collapse all nodes
+    // collapse all items
     treeview.collapse(".k-item");
+    </script>
 
 #### Parameters
 
-##### nodes `jQuery | Element | String`
+##### nodes `jQuery|Element|String`
 
-The nodes that are to be collapsed.
+The nodes that will be collapsed.
 
 ### dataItem
 
-Returns the model dataItem that corresponds to a TreeView node
-
-#### Example
-
-    var treeview = $("#treeview").data("kendoTreeView");
-
-    var dataItem = treeview.dataItem(".k-item:first");
-
-See also: [getting the node data in the select event handler](/getting-started/web/treeview/overview#getting-the-node-data-in-the-select-event-handler)
+Returns the data item to which the specified node is bound.
 
 #### Parameters
 
-##### node `jQuery | Element | Selector`
+##### node `jQuery|Element|String`
 
-The element or selector that specifies a node.
+A string, DOM element or jQuery object which represents the node. A string is treated as a jQuery selector.
 
 #### Returns
 
 `kendo.data.Node` The model of the item that was passed as a parameter.
 
-### destroy
-Prepares the **TreeView** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+#### Example - get the data item of the first node
 
-> **Important:** This method does not remove the TreeView element from DOM.
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { id: 1, text: "foo" },
+        { id: 2, text: "bar" }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+    var dataItem = treeview.dataItem(".k-item:first");
+    console.log(dataItem.text); // displays "foo"
+    </script>
+
+See also: [getting the node data in the select event handler](/getting-started/web/treeview/overview#getting-the-node-data-in-the-select-event-handler)
+
+### destroy
+
+Prepares the widget for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+
+> This method does not remove the widget element from DOM.
 
 #### Example
 
-    var treeView = $("#treeView").data("kendoTreeView");
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { id: 1, text: "foo" },
+        { id: 2, text: "bar" }
+      ]
+    });
 
-    // detach events
-    treeView.destroy();
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.destroy();
+    </script>
 
 ### detach
 
 Removes a node from a TreeView, but keeps its jQuery.data() objects.
 
-#### Remove the node with ID, firstItem
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    var firstItem = $("#firstItem");
-    firstItem.data("id", 1);
-    treeview.detach(firstItem);
-    firstItem.data("id") == 1;
-
 #### Parameters
 
-##### node `jQuery | Element | String`
+##### node `jQuery|Element|String`
 
 The node that is to be detached.
 
@@ -606,29 +648,56 @@ The node that is to be detached.
 
 `jQuery` The node that has been detached.
 
+#### Example - remove the node with ID, firstItem
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { id: 1, text: "foo" },
+        { id: 2, text: "bar" }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+    var item = treeview.findByText("foo");
+    item.data("id", "abc");
+    treeview.detach(item);
+    console.log(item.data("id")); // logs "abc"
+    </script>
+
 ### enable
 
 Enables or disables nodes.
 
-#### Example
-
-    var treeview = $("#treeview").data("kendoTreeView");
-
-    // disable the node with id="firstItem"
-    treeview.enable(document.getElementById("firstItem"), false);
-
-    // enable all nodes
-    treeview.enable(".k-item");
-
 #### Parameters
 
-##### nodes `jQuery | Element | String`
+##### nodes `jQuery|Element|String`
 
 The nodes that are to be enabled/disabled.
 
 ##### enable `Boolean` *(optional, default: true)*
 
 Whether the nodes should be enabled or disabled.
+
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", enabled: false },
+        { text: "bar", enabled: false }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+    // enable the item with text "foo"
+    treeview.enable(treeview.findByText("foo"));
+
+    // enable all items
+    treeview.enable(".k-item");
+    </script>
 
 ### expand
 
