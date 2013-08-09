@@ -10,16 +10,17 @@ publish: true
 
 The base class of most Kendo objects. Provides simple inheritance support.
 
-## Class Fields
+## Fields
 
 ### fn `Object`
 
 An alias to the [prototype](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/prototype) of the class. Often used to call methods of the base class.
 
-#### Example
+#### Example - use the prototype to call base methods
 
+    <script>
     // Create a base class
-    var Animal = kendo.Class.Extend({
+    var Animal = kendo.Class.extend({
         // The `init` method will be called when a new instance is created
         init: function(legs) {
            this.legs = legs;
@@ -38,6 +39,7 @@ An alias to the [prototype](https://developer.mozilla.org/en-US/docs/JavaScript/
     var birdie = new Bird();
 
     console.log(birdie.legs); // outputs 2
+    </script>
 
 ## Class methods
 
@@ -55,8 +57,9 @@ Extends an existing class with new methods.
 
 A key/value pair of all methods that the new class will have.
 
-#### Example
+#### Example - inheritance
 
+    <script>
     var Animal = kendo.Class.extend({
         move: function() {
             console.log("Animal.move()");
@@ -65,7 +68,7 @@ A key/value pair of all methods that the new class will have.
 
     var Bird = Animal.extend({
        move: function() {
-            Animal.fn.call(this);
+            Animal.fn.move.call(this);
 
             console.log("Fly");
        }
@@ -73,7 +76,7 @@ A key/value pair of all methods that the new class will have.
 
     var Cat = Animal.extend({
        move: function() {
-            Animal.fn.call(this);
+            Animal.fn.move.call(this);
 
             console.log("Sneak");
        }
@@ -92,3 +95,4 @@ A key/value pair of all methods that the new class will have.
     console.log(tweety instanceof Animal); // outputs "true" because Animal is the base class of Bird
 
     console.log(tweety instanceof Cat); // outputs "false" because tweety is not an instance of Cat
+    </script>
