@@ -193,3 +193,7 @@ Always use unique widget names. For example you can append an index to make the 
 
 This happens because there is more than one Kendo UI widget with the same `Name()`. Check the solution of the previous problem.
 
+## Kendo UI wrappers do not work inside client templates
+
+This can happen if the wrapper is declared without ToClientTemplate(). For more information please refer to
+[Using Kendo UI MVC wrappers inside client templates](/getting-started/using-kendo-with/aspnet-mvc/introduction#using-kendo-ui-mvc-wrappers-inside-client-templates-with-toclienttemplate())

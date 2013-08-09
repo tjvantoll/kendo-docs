@@ -330,7 +330,7 @@ You can include the JavaScript and CSS files from CDN. Don't forget to specify t
     <script src="http://cdn.kendostatic.com/<version>/js/kendo.web.min.js"></script>
     <script src="http://cdn.kendostatic.com/<version>/js/kendo.aspnetmvc.min.js"></script>
 
-### Deferring Kendo UI Initialization Scripts
+## Deferring Kendo UI Initialization Scripts
 
 When using server-side wrappers, the Kendo UI widget initialization scripts are rendered right after the widget's HTML markup.
 This may not be always desired, e.g. if the script files are registered at the bottom of the page, or when nesting Kendo UI widgets.
@@ -353,7 +353,7 @@ The `Deferred()` fluent method will suppress immediate script statement renderin
 
 The default value is `true`. Setting false will allow you to include the initialization scripts in an existing `script` element.
 
-### Using Kendo UI MVC wrappers inside client templates with ToClientTemplate()
+## Using Kendo UI MVC wrappers inside client templates with ToClientTemplate()
 
 By default, a Kendo UI wrapper will render some HTML tags and a `script` tag with an initialization statement.
 If the wrapper declaration is placed inside a Kendo UI client template `script` tag, this will produce nested `script` tags.
