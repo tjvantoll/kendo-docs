@@ -14,105 +14,162 @@ Represents the Kendo UI TreeView. Inherits from [Widget](/api/framework/widget).
 
 ## Configuration
 
-### animation `Object`
+### animation `Boolean|Object`
 
 A collection of visual animations used when items are expanded or collapsed through user interaction.
 Setting this option to **false** will disable all animations.
 
-#### Example
+#### Example - disable animation of subnodes
 
-    $("#treeView").kendoTreeView({
-        animation: {
-            expand: {
-                duration: 200,
-                hide: true,
-                show: false
-            },
-            collapse: {
-                duration: 200,
-                effects: "expandVertical",
-                show: true
-            }
-        }
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      animation: false,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
     });
+    </script>
 
-### animation.collapse `Object`
+### animation.collapse `Boolean|Object`
 
 The animation that will be used when collapsing items.
 
-### animation.collapse.duration `Number`*(default: 200)*
+#### Example - disable the collapse animation
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      animation: {
+        collapse: false
+      },
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    </script>
+
+### animation.collapse.duration `Number` *(default: 200)*
 
 The number of milliseconds used for the animation when a node is expanded.
 
-#### Example
+#### Example - specify a collapse animation duration
 
-    $("#treeView").kendoTreeView({
-        animation: {
-            collapse: {
-                duration: 1000
-            }
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      animation: {
+        collapse: {
+          duration: 400
         }
+      },
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
     });
+    </script>
 
 ### animation.collapse.effects `String`
 
 A whitespace-delimited string of animation effects that are utilized when a **TreeView** node
-is collapsed. Options include **"fadeOut"**.
+is collapsed. The supported effects are **fadeOut** and **collapseVertical**.
 
-#### Example
+#### Example - make sub-levels fade out and collapse vertically
 
-    $("#treeView").kendoTreeView({
-        animation: {
-            collapse: {
-                duration: 5000,
-                effects: "fadeOut"
-            }
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      animation: {
+        collapse: {
+          effects: "fadeOut collapseVertical"
         }
+      },
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
     });
+    </script>
 
-### animation.expand `Object`
+### animation.expand `Boolean|Object`
 
 The animation that will be used when expanding items.
 
-### animation.expand.duration `Number`*(default: 200)*
+#### Example - disable expand animation
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      animation: {
+        expand: false
+      },
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    </script>
+
+### animation.expand.duration `Number` *(default: 200)*
 
  The number of milliseconds used for the animation when a
 node is expanded.
 
-#### Example
+#### Example - specify a slow expand animation
 
-    $("#treeView").kendoTreeView({
-        animation: {
-            expand: {
-                duration: 1000
-            }
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      animation: {
+        expand: {
+          duration: 600
         }
+      },
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
     });
+    </script>
 
-### animation.expand.effects `String`*(default: "expandVertical")*
+### animation.expand.effects `String` *(default: "expandVertical")*
 
-A whitespace-delimited string of animation effects that are utilized when a **TreeView** node
-is expanded. Options include **"expandVertical"** and **"fadeIn"**.
+A whitespace-delimited string of animation effects that are used when a **TreeView** node
+is expanded. The supported effects are **"expandVertical"** and **"fadeIn"**.
 
-#### Example
+#### Example - make sub-levels fade in and expand vertically
 
-    $("#treeView").kendoTreeView({
-        animation: {
-            expand: {
-                duration: 5000,
-                effects: "expandVertical fadeIn"
-            }
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      animation: {
+        expand: {
+          effects: "fadeIn expandVertical"
         }
+      },
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
     });
-
-### animation.expand.show `Boolean`*(default: true)*
+    </script>
 
 ### autoBind `Boolean` *(default: true)*
 
 If set to `false` the widget will not bind to the data source during initialization. In this case data binding will occur when the [change](/api/framework/datasource#events-change) event of the
 data source is fired. By default the widget will bind to the data source specified in the configuration.
 
-> Setting `autoBind` to `false` is useful when multiple widgets are bound to the same data source. Disabling automatic binding ensures that the shared data source doesn't make more than one request to the remote service.
+> Setting `autoBind` to `false` is useful when multiple widgets are bound to the same data source. Disabling automatic binding ensures that the shared data source does not make more than one request to the remote service.
 
 #### Example - disable automatic binding
 
@@ -130,86 +187,195 @@ data source is fired. By default the widget will bind to the data source specifi
 
 ### checkboxes `Boolean|Object`
 
-If `true` or an object, renders checkboxes within each treeview item.
+If `true` or an object, renders checkboxes beside each treeview item.
 
-#### Example
+#### Example - show node checkboxes
 
+    <div id="treeview"></div>
+    <script>
     $("#treeview").kendoTreeView({
-        checkboxes: true
+      checkboxes: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
     });
+    </script>
 
 ### checkboxes.name `String`
 
-Indicates the name of the checkbox inputs that will be posted to the server.
+Sets the name attribute of the checkbox inputs. That name will be posted to the server.
 
+#### Example
+
+    <div id="treeview"></div>
+    <script>
     $("#treeview").kendoTreeView({
-        checkboxes: {
-            // renders <input type='checkbox' name='checkedItems[]' />
-            name: "checkedItems[]"
-        }
+      checkboxes: {
+        name: "checkedItems[]"
+      },
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
     });
+    </script>
 
 ### checkboxes.checkChildren `Boolean`*(default: false)*
 
-Indicates whether checkboxes of child items should get checked when the checkbox of a parent item is checked.
+Indicates whether checkboxes of child items should get checked when the checkbox of a parent item is checked. This
+also enables tri-state checkboxes with an indeterminate state.
 
-#### Example
+#### Example - enable tri-state checkboxes and propagate checked state to children
 
+    <div id="treeview"></div>
+    <script>
     $("#treeview").kendoTreeView({
-        checkboxes: {
-            checkChildren: true
-        }
+      checkboxes: {
+        checkChildren: true
+      },
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
     });
+    </script>
 
 ### checkboxes.template `String|Function`
 
-Template for the checkbox rendering. Used to set the  checkbox name attribute, or to add hidden inputs that will be posted along the checkboxes.
+The [template](/api/framework/kendo#methods-template) which renders the checkboxes. Can be used to allow posting of
+additional information along the treeview checkboxes.
 
-#### Example
+The fields which can be used in the template are:
 
+* item - the data item of the given node
+* treeview - the treeview options
+
+#### Example - specify a different name for each checkbox, bound to the item id
+
+    <div id="treeview"></div>
+    <script>
     $("#treeview").kendoTreeView({
-        checkboxes: {
-            template: "<input type='checkbox' name='checkedFiles[#= item.id #]' value='true' />"
+      checkboxes: {
+        template: "<input type='checkbox' name='checkedFiles[#= item.id #]' value='true' />"
+      },
+      dataSource: [
+        { id: 1, text: "foo", items: [
+          { id: 2, text: "bar" }
+        ] }
+      ]
+    });
+    </script>
+
+### dataImageUrlField `String` *(default: null)*
+
+Sets the field of the data item that provides the image URL of the treeview nodes.
+
+#### Example - specify custom image URL field
+
+    <div id="treeview"></div>
+    <script>
+    var items = [
+      { text: "Mail", image: "http://demos.kendoui.com/content/web/treeview/mail.png" },
+      { text: "Search", image: "http://demos.kendoui.com/content/web/treeview/search.png" }
+    ];
+    $("#treeview").kendoTreeView({
+      dataImageUrlField: "image",
+      dataSource: items
+    });
+    </script>
+
+### dataSource `Object|Array|kendo.data.HierarchicalDataSource`
+
+The data source of the widget which is used render nodes. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.HierarchicalDataSource](/api/framework/hierarchicaldatasource) instance.
+
+If the `dataSource` option is set to a JavaScript object or array the widget will initialize a new [kendo.data.HierarchicalDataSource](/api/framework/hierarchicaldatasource) instance using that value as data source configuration.
+
+If the `dataSource` option is an existing [kendo.data.HierarchicalDataSource](/api/framework/hierarchicaldatasource) instance the widget will use that instance and will **not** initialize a new one.
+
+#### Example - set dataSource as a JavaScript object
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: {
+        data: [
+          { text: "foo", items: [
+            { text: "bar" }
+          ] }
+        ]
+      }
+    });
+    </script>
+
+#### Example - set dataSource as a JavaScript array
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    </script>
+
+#### Example - set dataSource as an existing kendo.data.HierarchicalDataSource instance
+
+    <div id="treeview"></div>
+    <script>
+    var dataSource = new kendo.data.HierarchicalDataSource({
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/Employees",
+          dataType: "jsonp"
         }
+      },
+      schema: {
+        model: {
+          id: "EmployeeId",
+          hasChildren: "HasEmployees"
+        }
+      }
     });
 
-### dataImageUrlField `String`*(default: null)*
+    $("#treeview").kendoTreeView({
+      dataSource: dataSource,
+      dataTextField: "FullName"
+    });
+    </script>
 
- Sets the field of the data item that provides
-the image URL of the treeview nodes.
+### dataSpriteCssClassField `String` *(default: null)*
+
+Sets the field of the data item that provides the sprite CSS class of the treeview nodes.
+If an array, each level uses the field that is at the same index in the array, or the last item in the array.
 
 #### Example
 
+    <style>
+      #treeview .k-sprite {
+        background-image: url("http://demos.kendoui.com/content/web/treeview/coloricons-sprite.png");
+      }
+
+      .folder { background-position: 0 -16px; }
+      .html { background-position: 0 -48px; }
+    </style>
+
+    <div id="treeview"></div>
+    <script>
     var items = [
-        { id: 1, text: "Tea", image: "tea.png" },
-        { id: 2, text: "Coffee", image: "coffee.png" }
+      { text: "assets", sprite: "folder" },
+      { text: "index.html", sprite: "html" }
     ];
-
     $("#treeview").kendoTreeView({
-        dataSource: items,
-        dataImageUrlField: "image"
+      dataSpriteCssClassField: "sprite",
+      dataSource: items
     });
-
-### dataSource `Array`
-
-The data that the **TreeView** will be bound to.
-
-### dataSpriteCssClassField `String`*(default: null)*
-
- Sets the field of the data item that provides
-the sprite CSS class of the treeview nodes.
-
-#### Example
-
-    var items = [
-        { id: 1, text: "Tea", sprite: "icon-tea" },
-        { id: 2, text: "Coffee", sprite: "icon-coffee" }
-    ];
-
-    $("#treeview").kendoTreeView({
-        dataSource: items,
-        dataSpriteCssClassField: "sprite"
-    });
+    </script>
 
 ### dataTextField `String|Array` *(default: null)*
 
@@ -218,57 +384,92 @@ If an array, each level uses the field that is at the same index in the array, o
 
 #### Example
 
-    var items = [ { id: 1, ProductName: "Tea" }, { id: 2, ProductName: "Coffee"} ];
-    $("#treeview").kendoTreeView({
-        dataSource: items,
-        dataTextField: "ProductName"
-    });
-
-#### Using different fields on different levels
-
+    <div id="treeview"></div>
+    <script>
     var items = [
-        { CategoryName: "Hot drinks", items: [
-            { ProductName: "Tea", items: [
-                { ProductName: "Green Tea" },
-                { ProductName: "White Tea" }
-            ] },
-            { ProductName: "Coffee"}
-        ] }
+      { ProductName: "Tea", items: [
+        { ProductName: "Green Tea" },
+        { ProductName: "Black Tea" }
+      ] },
+      { ProductName: "Coffee" }
     ];
-
     $("#treeview").kendoTreeView({
-        dataSource: items,
-        dataTextField: [ "CategoryName", "ProductName" ]
+      dataTextField: "ProductName",
+      dataSource: items
     });
+    </script>
 
-### dataUrlField `String`*(default: null)*
+#### Example - using different fields on different levels
 
- Sets the field of the data item that provides
-the link URL of the treeview nodes.
+    <div id="treeview"></div>
+    <script>
+    var items = [
+      { CategoryName: "Tea", items: [
+        { ProductName: "Green Tea" },
+        { ProductName: "Black Tea" }
+      ] },
+      { CategoryName: "Coffee" }
+    ];
+    $("#treeview").kendoTreeView({
+      dataTextField: [ "CategoryName", "ProductName" ],
+      dataSource: items
+    });
+    </script>
+
+### dataUrlField `String` *(default: null)*
+
+Sets the field of the data item that provides the link URL of the treeview nodes.
 
 #### Example
 
+    <div id="treeview"></div>
+    <script>
     var items = [
-        { id: 1, text: "Tea", LinksTo: "http://tea.example.com" },
-        { id: 2, text: "Coffee", LinksTo: "http://coffee.example.com" }
+      { text: "Tea", LinksTo: "http://tea.example.com" },
+      { text: "Coffee", LinksTo: "http://coffee.example.com" }
     ];
-
     $("#treeview").kendoTreeView({
-        dataSource: items,
-        dataUrlField: "LinksTo"
+      dataUrlField: "LinksTo",
+      dataSource: items
     });
+    </script>
 
-### dragAndDrop `Boolean`*(default: false)*
+### dragAndDrop `Boolean` *(default: false)*
 
-Disables (**false**) or enables (**true**) drag-and-drop on the nodes of a
-**TreeView**.
+Disables (**false**) or enables (**true**) drag-and-drop of the nodes.
 
-### loadOnDemand `Boolean`*(default: true)*
+#### Example
 
- Indicates whether the child datasources should be fetched
-lazily, when parent groups get expanded. Setting this to false causes all child dataSources to
-be loaded at initialization time. Note: when initializing a TreeView from array (rather than from a
-HierarchicalDataSource instance), the default value of this option is false.
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dragAndDrop: true,
+      dataSource: [
+        { text: "foo" },
+        { text: "bar" }
+      ]
+    });
+    </script>
+
+### loadOnDemand `Boolean` *(default: true)*
+
+Indicates whether the child datasources should be fetched lazily when parent groups get expanded.
+Setting this to false causes all child dataSources to be loaded at initialization time.
+Note: when initializing a TreeView from array (rather than from a HierarchicalDataSource instance), this option defaults to false, rather than true.
+
+#### Example - force lazy loading of sublevels
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      loadOnDemand: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    </script>
 
 ### template `String|Function`
 
@@ -276,9 +477,18 @@ Template for rendering of the nodes of the treeview.
 
 #### Example
 
+    <div id="treeview"></div>
+    <script>
     $("#treeview").kendoTreeView({
-        template: "#= item.text # <a href='\\#'>Delete</a>"
+      template: "#= item.text # (#= item.inStock #)",
+      dataSource: [
+        { text: "foo", inStock: 7, items: [
+          { text: "bar", inStock: 2 },
+          { text: "baz", inStock: 5 }
+        ] }
+      ]
     });
+    </script>
 
 ## Methods
 
