@@ -18,7 +18,7 @@ The MVVM model to bind the element to.
     <div id="app"></div>
     <script>
      var foo = { foo: "foo" }
-     var view = new kendo.View('<span data-bind='text:foo"></span>', { model: foo });
+     var view = new kendo.View('<span data-bind="text:foo"></span>', { model: foo });
      view.render($("#app"));
     </script>
 
