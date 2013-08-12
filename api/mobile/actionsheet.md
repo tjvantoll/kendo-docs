@@ -18,27 +18,114 @@ Represents the Kendo UI Mobile ActionSheet widget. Inherits from [kendo.mobile.u
 
  The text of the cancel button.
 
+#### Example
+
+    <div data-role="view">
+      <a data-role="button" data-rel="actionsheet" href="#actionsheet">Open</a>
+      <ul id="actionsheet" data-role="actionsheet" data-cancel="Close">
+        <li><a>Foo</a></li>
+        <li><a>Bar</a></li>
+      </ul>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
+
 ### popup `Object`
 
 The popup configuration options (tablet only).
+
+#### Example
+
+    <div data-role="view">
+      <a data-role="button" data-rel="actionsheet" href="#actionsheet">Open</a>
+      <ul id="actionsheet" data-role="actionsheet" data-popup='{ "height": "auto", "width": 200, "direction": "left" }'>
+        <li><a>Foo</a></li>
+        <li><a>Bar</a></li>
+      </ul>
+    </div>
+  
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
 
 ### popup.direction `Number | String`*(default: "down")*
 
  The direction to which the popup will expand, relative to the target that opened it.
 
+#### Example
+
+    <div data-role="view">
+      <a data-role="button" data-rel="actionsheet" href="#actionsheet">Open</a>
+      <ul id="actionsheet" data-role="actionsheet" data-popup='{ "direction": "left" }'>
+        <li><a>Foo</a></li>
+        <li><a>Bar</a></li>
+      </ul>
+    </div>
+    
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
+
 ### popup.height `Number | String`*(default: "auto")*
 
  The height of the popup in pixels.
 
+#### Example
+
+    <div data-role="view">
+      <a data-role="button" data-rel="actionsheet" href="#actionsheet">Open</a>
+      <ul id="actionsheet" data-role="actionsheet" data-popup='{ "height": 400 }'>
+        <li><a>Foo</a></li>
+        <li><a>Bar</a></li>
+      </ul>
+    </div>
+  
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
+
 ### popup.width `Number | String`*(default: 240)*
 
  The width of the popup in pixels.
+
+#### Example
+
+    <div data-role="view">
+      <a data-role="button" data-rel="actionsheet" href="#actionsheet">Open</a>
+      <ul id="actionsheet" data-role="actionsheet" data-popup='{ "width": 400 }'>
+        <li><a>Foo</a></li>
+        <li><a>Bar</a></li>
+      </ul>
+    </div>
+  
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
 
 ## Methods
 
 ### close
 
 Close the ActionSheet.
+
+#### Example
+
+    <div data-role="view">
+      <a data-role="button" data-rel="actionsheet" href="#actionsheet">Open</a>
+      <ul id="actionsheet" data-role="actionsheet">
+          <li><a data-action="close">Close</a></li>
+      </ul>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function close() {
+        $("#actionsheet").data("kendoMobileActionSheet").close();
+      }
+    </script>
 
 ### destroy
 Prepares the **ActionSheet** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
@@ -47,28 +134,57 @@ Prepares the **ActionSheet** for safe removal from DOM. Detaches all event handl
 
 #### Example
 
-    var actionSheet = $("#actionSheet").data("kendoMobileActionSheet");
+    <div data-role="view">
+      <a data-role="button" data-click="destroy">Destroy</a>
+      <ul id="actionsheet" data-role="actionsheet">
+        <li><a>Foo</a></li>
+        <li><a>Bar</a></li>
+      </ul>
+    </div>
 
-    // detach events
-    actionSheet.destroy();
+    <script>
+      var app = new kendo.mobile.Application();
+        
+      function destroy() {
+        // detach events
+        $("#actionsheet").data("kendoMobileActionSheet").destroy();
+      }
+    </script>
 
 ### open
 
 Open the ActionSheet.
 
+#### Example - opens the widget each time the View becomes visible
+
+    <div data-role="view" data-show="onShow">
+      <ul id="actionsheet" data-role="actionsheet">
+        <li><a>Foo</a></li>
+        <li><a>Bar</a></li>
+      </ul>
+    </div>
+  
+    <script>
+      var app = new kendo.mobile.Application();
+    
+      function onShow() {
+        $("#actionsheet").data("kendoMobileActionSheet").open();
+      }
+    </script>
+
 #### Example
 
     <ul data-role="listview">
-        <li> Foo <a data-role="button" id="button">Delete</a></li>
+      <li> Foo <a data-role="button" id="button">Delete</a></li>
     </ul>
 
     <ul data-role="actionsheet" id="actionsheet">
-        <li><a data-action="foo">Foo</a></li>
-        <li><a data-action="bar">Bar</a></li>
+      <li><a>Foo</a></li>
+      <li><a>Bar</a></li>
     </ul>
 
     <script>
-        $("#actionsheet").data("kendoMobileActionSheet").open($("#button"));
+      $("#actionsheet").data("kendoMobileActionSheet").open($("#button"));
     </script>
 
 #### Parameters
@@ -89,6 +205,24 @@ Open the ActionSheet.
 ### open
 
 Fires when the ActionSheet is opened.
+
+#### Example
+
+    <div data-role="view">
+      <a data-role="button" data-rel="actionsheet" href="#actionsheet">Open</a>
+      <ul id="actionsheet" data-role="actionsheet" data-open="onOpen">
+        <li><a>Foo</a></li>
+        <li><a>Bar</a></li>
+      </ul>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function onOpen() {
+        console.log("opened");
+      }
+    </script>
 
 #### Event Data
 
