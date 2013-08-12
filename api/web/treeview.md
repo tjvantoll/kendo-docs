@@ -701,32 +701,38 @@ Whether the nodes should be enabled or disabled.
 
 ### expand
 
-Expands nodes.
-
-#### Example
-
-    var treeview = $("#treeview").data("kendoTreeView");
-
-    // expands the node with id="firstItem"
-    treeview.expand(document.getElementById("firstItem"));
-
-    // expands all nodes
-    treeview.expand(".k-item");
+Expands collapsed nodes.
 
 #### Parameters
 
-##### nodes `jQuery | Element | String`
+##### nodes `jQuery|Element|String`
 
 The nodes that are to be expanded.
+
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] },
+        { text: "baz" }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+    // expand the item with text "foo"
+    treeview.expand(treeview.findByText("foo"));
+
+    // expand all loaded items
+    treeview.expand(".k-item");
+    </script>
 
 ### findByText
 
 Searches a TreeView for a node that has specific text.
-
-#### Search a TreeView for the item that has the text, "CSS3 is da bomb!"
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    var foundNode = treeView.findByText("CSS3 is da bomb!");
 
 #### Parameters
 
@@ -738,16 +744,27 @@ The text that is being searched for.
 
 `jQuery` All nodes that have the text.
 
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo" },
+        { text: "bar" }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+    // find the node with text "foo"
+    var foo = treeview.findByText("foo");
+    console.log(foo);
+    </script>
+
 ### findByUid
 
 Searches a TreeView for a node with the given unique identifier.
 Applicable when the widget is bound to a [HierarchicalDataSource](/api/framework/hierarchicaldatasource).
-
-#### Search a TreeView for the item that has the unique id "95c1925d-a779-47fc-8420-b4274f01c037"
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    var node = treeView.findByUid("95c1925d-a779-47fc-8420-b4274f01c037");
-
 If you want to find a node by its `id`, use the [dataSource.get()](/api/framework/datasource#get) method and supply its uid to the `findByUid` method.
 
 #### Parameters
@@ -760,20 +777,27 @@ The text that is being searched for.
 
 `jQuery` All nodes that have the text.
 
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { id: 1, text: "foo" },
+        { id: 2, text: "bar" }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+    var barDataItem = treeview.dataSource.get(2);
+    var barElement = treeview.findByUid(barDataItem.uid);
+    console.log(barElement);
+    </script>
+
 ### insertAfter
 
-Inserts a node after a specified node in a TreeView. This method may also be used to reorder the nodes of a
-TreeView.
-
-#### Insert a node with the text, "JavaScript" after the node with ID, firstItem
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    treeView.insertAfter({ text: "JavaScript" }, $("#firstItem"));
-
-#### Moves a node with ID, secondNode after a node with ID, firstItem
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    treeView.insertAfter($("#secondNode"), $("#firstItem"));
+Inserts a node after a specified node in a TreeView.
+This method may also be used to reorder the nodes of a TreeView.
 
 #### Parameters
 
@@ -785,20 +809,30 @@ A JSON-formatted string or selector that specifies the node to be inserted.
 
 The node that will be preceed the newly-appended node.
 
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo" }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+    var foo = treeview.findByText("foo");
+
+    // insert "bar" after "foo"
+    treeview.insertAfter({ text: "bar" }, foo);
+
+    // move the node "foo" after the node "bar"
+    treeview.insertAfter(foo, treeview.findByText("bar"));
+    </script>
+
 ### insertBefore
 
 Inserts a node before another node. This method may also be used to reorder the nodes of a
 TreeView.
-
-#### Inserts a new node with the text, "CSS3" before the node with ID, firstItem
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    treeView.insertBefore({ text: "CSS3" }, $("#firstItem"));
-
-#### Moves the node with ID, secondNode before the node with ID, firstItem
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    treeView.insertBefore($("#secondNode"), $("#firstItem"));
 
 #### Parameters
 
@@ -810,18 +844,33 @@ A JSON-formatted string or selector that specifies the node to be inserted.
 
 The node that follows the inserted node.
 
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo" }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+    var foo = treeview.findByText("foo");
+
+    // insert "bar" before "foo"
+    treeview.insertBefore({ text: "bar" }, foo);
+
+    // move the node "foo" before the node "bar"
+    treeview.insertBefore(foo, treeview.findByText("bar"));
+    </script>
+
 ### parent
 
 Gets the parent node of the item
 
-#### Example
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    var parentNode = treeView.parent($("#firstItem"));
-
 #### Parameters
 
-##### node `jQuery | Element | String`
+##### node `jQuery|Element|String`
 
 The child node whose parent will be returned.
 
@@ -829,54 +878,93 @@ The child node whose parent will be returned.
 
 `jQuery` The parent node of the given parameter node.
 
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+
+    var parent = treeview.parent(treeview.findByText("bar"));
+    console.log(treeview.text(parent)); // logs "foo"
+
+    parent = treeview.parent(parent);
+    console.log(parent.length); // logs 0
+    </script>
+
 ### remove
 
-Removes a node from a TreeView.
-
-#### Remove the node with ID, firstItem
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    treeView.remove($("#firstItem"));
+Removes a node from the widget.
 
 #### Parameters
 
-##### node `jQuery | Element | String`
+##### node `jQuery|Element|String`
 
 The node that is to be removed.
+
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+
+    var bar = treeview.findByText("bar");
+
+    treeview.remove(bar);
+
+    console.log($("#treeview").find(".k-item").length); // logs 1
+    </script>
 
 ### select
 
 Gets or sets the selected node of a TreeView.
 
-#### Select the node with HTML id="firstItem"
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    treeView.select($("#firstItem"));
-
-#### Select the first node in the treeview
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    treeView.select(".k-item:first");
-
-#### Get the currently selected node
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    var selectedNode = treeView.select();
-
-#### Unselect all nodes
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    treeView.select($());
-
 #### Parameters
 
-##### node `jQuery | Element | String` *(optional)*
+##### node `jQuery|Element|String` *(optional)*
 
-If provided, the node of a TreeView that should be selected.
+If provided, the node that should be selected.
 
 #### Returns
 
 `jQuery` The selected node of a TreeView.
+
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+
+    var bar = treeview.findByText("bar");
+    treeview.select(bar);
+
+    console.log(treeview.text(treeview.select())); // logs "bar"
+
+    treeview.select($()); // clears selection
+    </script>
 
 ### setDataSource
 
@@ -886,73 +974,137 @@ Sets the dataSource of an existing TreeView and rebinds it.
 
 ##### dataSource `kendo.data.HierarchicalDataSource`
 
+The new dataSource that the widget will bind to
+
 #### Example
 
-    var dataSource = new kendo.data.HierarchicalDataSource({
-        data: [
-            { text: "foo" }
-        ]
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
     });
 
-    $("#treeview").data("kendoTreeView").setDataSource(dataSource);
+    var treeview = $("#treeview").data("kendoTreeView");
+
+    treeview.setDataSource(new kendo.data.HierarchicalDataSource({
+      data: [
+        { text: "bar", items: [
+          { text: "baz" }
+        ] }
+      ]
+    }));
+    </script>
 
 ### text
 
 Gets or sets the text of a node in a TreeView.
 
-#### Get the text of the node with ID, firstItem
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    var nodeText = treeView.text($("#firstItem"));
-
 #### Parameters
 
-##### node `String`
+##### node `jQuery|Element|String`
 
-The node of which the text is being retrieved.
+The node of which the text is being retrieved or set.
 
 ##### newText `String`
 
 Optional. When passed, sets the node text to the specified string
 
-    var treeView = $("#treeView").data("kendoTreeView");
-
-    treeView.text(".k-item:first", "Salmon");
-
 #### Returns
 
 `String` The text of a node.
+
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+
+    var firstItem = treeview.element.find(".k-item:first");
+    console.log(treeview.text(firstItem)); // logs "foo"
+
+    treeview.text(".k-item:last", "qux"); // sets text to "qux"
+    </script>
 
 ### toggle
 
 Toggles the node of a TreeView between its expanded and collapsed states.
 
-#### Toggle the state of a node with ID, firstItem
-
-    var treeView = $("#treeView").data("kendoTreeView");
-    treeView.toggle($("#firstItem"));
-
 #### Parameters
 
-##### node `String`
+##### node `jQuery|Element|String`
 
 The node that should be toggled.
+
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] },
+        { text: "baz", items: [
+          { text: "qux" }
+        ] }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+
+    treeview.toggle(".k-item:first");
+
+    var baz = treeview.findByText("baz");
+    treeview.toggle(baz);
+    </script>
 
 ### updateIndeterminate
 
 Updates the indeterminate state of the treeview checkboxes. Should be used for better performance when checking multiple checkboxes through code.
-
-    // check many checkboxes through JS
-    $(":checkbox").filter(function() {}).prop("checked", true);
-
-    // update indeterminate state of all nodes
-    treeview.updateIndeterminate();
 
 #### Parameters
 
 ##### node `jQuery`
 
 Optional. The root of the hierarchy that will be looped through. Allows only a subtree to be processed. The default value is the treeview root.
+
+#### Example
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      checkboxes: {
+        checkChildren: true
+      },
+      dataSource: [
+        { text: "foo", expanded: true, items: [
+          { text: "bar" },
+          { text: "baz" },
+          { text: "qux" }
+        ] }
+      ]
+    });
+
+    $(":checkbox").filter(function() {
+      var text = $(this).parent().next().text();
+      return text != "bar" && text != "foo";
+    }).prop("checked", true);
+
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.updateIndeterminate();
+    </script>
 
 ## Events
 
@@ -966,6 +1118,40 @@ Triggered before a subgroup gets collapsed.
 
 The collapsed node
 
+#### Example - subscribe to the "collapse" event during initialization
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      collapse: function(e) {
+        console.log("Collapsing", e.node);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "collapse" event after initialization
+
+    <div id="treeview"></div>
+    <script>
+    function tree_collapse(e) {
+      console.log("Collapsing", e.node);
+    }
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.bind("collapse", tree_collapse);
+    </script>
+
 ### dataBound
 
 Triggered after the dataSource change event has been processed (adding/removing items);
@@ -976,17 +1162,43 @@ Triggered after the dataSource change event has been processed (adding/removing 
 
 The node whose children have been changed. If the changes have occured on the root level, this parameter is undefined.
 
+#### Example - subscribe to the "dataBound" event during initialization
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      dataBound: function(e) {
+        console.log("DataBound", e.node);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "dataBound" event after initialization
+
+    <div id="treeview"></div>
+    <script>
+    function tree_databound(e) {
+      console.log("DataBound", e.node);
+    }
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.bind("dataBound", tree_dataBound);
+    </script>
+
 ### drag
 
 Triggered while a node is being dragged.
-
-#### Show the user that is not permitted to drop nodes outside of the #drop-area element
-
-    treeview.data("kendoTreeView").bind("drag", function(e) {
-        if ($(e.dropTarget).parents("#drop-area").length ) {
-            e.setStatusClass("k-denied");
-        }
-    });
 
 #### Event Data
 
@@ -1014,7 +1226,6 @@ The status that the drag clue shows.
 
 Allows a custom drag clue status to be set.
 
-
 Pre-defined status classes are:
 
 *   **k-insert-top**
@@ -1029,6 +1240,67 @@ Pre-defined status classes are:
         - Indicates an invalid operation. Using this class will automatically
           make the drop operation invalid, so there will be no need to call
           `setValid(false)` in the `drop` event.
+
+#### Example - subscribe to the "drag" event during initialization
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dragAndDrop: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      drag: function(e) {
+        console.log("Drag", e.sourceNode, "over", e.dropTarget);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "drag" event after initialization
+
+    <div id="treeview"></div>
+    <script>
+    function tree_drag(e) {
+      console.log("Drag", e.sourceNode, "over", e.dropTarget);
+    }
+    $("#treeview").kendoTreeView({
+      dragAndDrop: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.bind("drag", tree_drag);
+    </script>
+
+#### Example - disable node reordering
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dragAndDrop: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" },
+          { text: "baz" }
+        ] }
+      ]
+    });
+
+    var treeview = $("#treeview").data("kendoTreeView");
+
+    treeview.bind("drag", function(e) {
+      // if the current status is "insert-top/middle/bottom"
+      if (e.statusClass.indexOf("insert") >= 0) {
+        // deny the operation
+        e.setStatusClass("k-denied");
+      }
+    });
+    </script>
 
 ### dragend
 
@@ -1048,23 +1320,106 @@ The node that the sourceNode is being dropped upon.
 
 Shows where the source has been dropped. One of the values **over**, **before**, or **after**.
 
+#### Example - subscribe to the "dragend" event during initialization
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dragAndDrop: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      dragend: function(e) {
+        console.log("Drag end", e.sourceNode, e.dropPosition, e.destinationNode);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "dragend" event after initialization
+
+    <div id="treeview"></div>
+    <script>
+    function tree_dragend(e) {
+      console.log("Drag end", e.sourceNode, e.dropPosition, e.destinationNode);
+    }
+    $("#treeview").kendoTreeView({
+      dragAndDrop: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.bind("dragend", tree_dragend);
+    </script>
+
 ### dragstart
 
 Triggered before the dragging of a node starts.
-
-#### Disable dragging of root nodes
-
-    treeview.data("kendoTreeView").bind("dragstart", function(e) {
-        if ($(e.sourceNode).parentsUntil(".k-treeview", ".k-item").length == 0) {
-            e.preventDefault();
-        }
-    });
 
 #### Event Data
 
 ##### e.sourceNode `Element`
 
 The node that will be dragged.
+
+#### Example - subscribe to the "dragstart" event during initialization
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dragAndDrop: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      dragstart: function(e) {
+        console.log("Drag start", e.sourceNode);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "dragstart" event after initialization
+
+    <div id="treeview"></div>
+    <script>
+    function tree_dragstart(e) {
+      console.log("Drag start", e.sourceNode);
+    }
+    $("#treeview").kendoTreeView({
+      dragAndDrop: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.bind("dragstart", tree_dragstart);
+    </script>
+
+#### Example - disable dragging of root nodes
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dragAndDrop: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      dragstart: function(e) {
+        if ($(e.sourceNode).parentsUntil(".k-treeview", ".k-item").length == 0) {
+          e.preventDefault();
+        }
+      }
+    });
+    </script>
 
 ### drop
 
@@ -1103,6 +1458,42 @@ Both operations cancel the default drag operation, but the indication to the use
 `e.preventDefault()` simply removes the clue, as if it has been dropped.
 As a general rule, use `preventDefault` to manually handle the drag&drop operation, and `setValid(false)` to indicate unsuccessful drag&drops.
 
+#### Example - subscribe to the "drop" event during initialization
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dragAndDrop: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      drop: function(e) {
+        console.log("Dropped", e.sourceNode);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "drop" event after initialization
+
+    <div id="treeview"></div>
+    <script>
+    function tree_drop(e) {
+      console.log("Dropped", e.sourceNode);
+    }
+    $("#treeview").kendoTreeView({
+      dragAndDrop: true,
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.bind("drop", tree_drop);
+    </script>
+
 ### expand
 
 Triggered before a subgroup gets expanded.
@@ -1113,9 +1504,77 @@ Triggered before a subgroup gets expanded.
 
 The expanded node
 
+#### Example - subscribe to the "expand" event during initialization
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      expand: function(e) {
+        console.log("Expand", e.node);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "expand" event after initialization
+
+    <div id="treeview"></div>
+    <script>
+    function tree_expand(e) {
+      console.log("Expand", e.node);
+    }
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.bind("expand", tree_expand);
+    </script>
+
 ### change
 
 Triggered when the selection has changed (either by the user or through the `select` method).
+
+#### Example - subscribe to the "change" event during initialization
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      change: function(e) {
+        console.log("Change", this.select());
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "change" event after initialization
+
+    <div id="treeview"></div>
+    <script>
+    function tree_change(e) {
+      console.log("Change", this.select());
+    }
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.bind("change", tree_change);
+    </script>
 
 ### select
 
@@ -1127,6 +1586,40 @@ Triggered when a node is being selected by the user. Cancellable.
 
 The selected node
 
+#### Example - subscribe to the "select" event during initialization
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      select: function(e) {
+        console.log("Selecting", e.node);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "select" event after initialization
+
+    <div id="treeview"></div>
+    <script>
+    function tree_select(e) {
+      console.log("select", e.node);
+    }
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.bind("Selecting", tree_select);
+    </script>
+
 ### navigate
 
 Triggered when the user moves the focus on another node
@@ -1136,3 +1629,37 @@ Triggered when the user moves the focus on another node
 ##### e.node `Element`
 
 The focused node
+
+#### Example - subscribe to the "navigate" event during initialization
+
+    <div id="treeview"></div>
+    <script>
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ],
+      navigate: function(e) {
+        console.log("Navigated to", e.node);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "navigate" event after initialization
+
+    <div id="treeview"></div>
+    <script>
+    function tree_navigate(e) {
+      console.log("Navigating to", e.node);
+    }
+    $("#treeview").kendoTreeView({
+      dataSource: [
+        { text: "foo", items: [
+          { text: "bar" }
+        ] }
+      ]
+    });
+    var treeview = $("#treeview").data("kendoTreeView");
+    treeview.bind("navigate", tree_navigate);
+    </script>
