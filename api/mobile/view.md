@@ -116,6 +116,33 @@ Fires after the mobile View becomes visible. If the view is displayed with trans
 
 The mobile view instance
 
+### beforeHide
+
+Fires before the mobile View is hidden.
+
+#### Example
+    <div data-role="view" data-before-hide="beforeHideFoo">
+        <a data-role="button" href="#bar">Go to bar</a>
+    </div>
+
+    <div data-role="view" id="bar">
+        Bar
+    </div>
+
+    <script>
+        var app = new kendo.mobile.Application();
+
+        function hideView(e) {
+            console.log(e.view.element);
+        }
+    </script>
+
+#### Event Data
+
+##### e.view `kendo.mobile.ui.View`
+
+The mobile view instance
+
 ### beforeShow
 
 Fires before the mobile View becomes visible. The event can be prevented by calling the `preventDefault` method of the event parameter, in case a redirection should happen.
