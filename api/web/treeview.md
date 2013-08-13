@@ -187,7 +187,7 @@ data source is fired. By default the widget will bind to the data source specifi
 
 ### checkboxes `Boolean|Object`
 
-If `true` or an object, renders checkboxes beside each treeview item.
+If `true` or an object, renders checkboxes beside each node.
 
 #### Example - show node checkboxes
 
@@ -351,7 +351,7 @@ If the `dataSource` option is an existing [kendo.data.HierarchicalDataSource](/a
 
 ### dataSpriteCssClassField `String` *(default: null)*
 
-Sets the field of the data item that provides the sprite CSS class of the treeview nodes.
+Sets the field of the data item that provides the sprite CSS class of the nodes.
 If an array, each level uses the field that is at the same index in the array, or the last item in the array.
 
 #### Example
@@ -379,7 +379,7 @@ If an array, each level uses the field that is at the same index in the array, o
 
 ### dataTextField `String|Array` *(default: null)*
 
-Sets the field of the data item that provides the text content of the treeview nodes.
+Sets the field of the data item that provides the text content of the nodes.
 If an array, each level uses the field that is at the same index in the array, or the last item in the array.
 
 #### Example
@@ -418,7 +418,7 @@ If an array, each level uses the field that is at the same index in the array, o
 
 ### dataUrlField `String` *(default: null)*
 
-Sets the field of the data item that provides the link URL of the treeview nodes.
+Sets the field of the data item that provides the link URL of the nodes.
 
 #### Example
 
@@ -455,7 +455,7 @@ Disables (**false**) or enables (**true**) drag-and-drop of the nodes.
 
 Indicates whether the child datasources should be fetched lazily when parent groups get expanded.
 Setting this to false causes all child dataSources to be loaded at initialization time.
-Note: when initializing a TreeView from array (rather than from a HierarchicalDataSource instance), this option defaults to false, rather than true.
+Note: when initializing the widget from an array (rather than from a HierarchicalDataSource instance), this option defaults to false, rather than true.
 
 #### Example - force lazy loading of sublevels
 
@@ -473,7 +473,7 @@ Note: when initializing a TreeView from array (rather than from a HierarchicalDa
 
 ### template `String|Function`
 
-Template for rendering of the nodes of the treeview.
+Template for rendering each node.
 
 #### Example
 
@@ -494,7 +494,7 @@ Template for rendering of the nodes of the treeview.
 
 ### append
 
-Appends a node to any level of the treeview. This method may also be used to reorder the nodes of a TreeView.
+Appends a node to any level of the treeview. This method may also be used to reorder nodes.
 
 #### Example
 
@@ -732,7 +732,7 @@ The nodes that are to be expanded.
 
 ### findByText
 
-Searches a TreeView for a node that has specific text.
+Searches for a node that has specific text.
 
 #### Parameters
 
@@ -763,7 +763,7 @@ The text that is being searched for.
 
 ### findByUid
 
-Searches a TreeView for a node with the given unique identifier.
+Searches for a node with the given unique identifier.
 Applicable when the widget is bound to a [HierarchicalDataSource](/api/framework/hierarchicaldatasource).
 If you want to find a node by its `id`, use the [dataSource.get()](/api/framework/datasource#get) method and supply its uid to the `findByUid` method.
 
@@ -796,8 +796,8 @@ The text that is being searched for.
 
 ### insertAfter
 
-Inserts a node after a specified node in a TreeView.
-This method may also be used to reorder the nodes of a TreeView.
+Inserts a node after a specified node.
+This method may also be used to reorder nodes.
 
 #### Parameters
 
@@ -807,7 +807,7 @@ A JSON-formatted string or selector that specifies the node to be inserted.
 
 ##### referenceNode `jQuery`
 
-The node that will be preceed the newly-appended node.
+The node that will precede the newly-appended node.
 
 #### Example
 
@@ -831,8 +831,7 @@ The node that will be preceed the newly-appended node.
 
 ### insertBefore
 
-Inserts a node before another node. This method may also be used to reorder the nodes of a
-TreeView.
+Inserts a node before another node. This method may also be used to reorder nodes.
 
 #### Parameters
 
@@ -932,7 +931,7 @@ The node that is to be removed.
 
 ### select
 
-Gets or sets the selected node of a TreeView.
+Gets or sets the selected node.
 
 #### Parameters
 
@@ -942,7 +941,7 @@ If provided, the node that should be selected.
 
 #### Returns
 
-`jQuery` The selected node of a TreeView.
+`jQuery` The currently selected node.
 
 #### Example
 
@@ -968,7 +967,7 @@ If provided, the node that should be selected.
 
 ### setDataSource
 
-Sets the dataSource of an existing TreeView and rebinds it.
+Sets and binds a dataSource to the widget.
 
 #### Parameters
 
@@ -1160,7 +1159,7 @@ Triggered after the dataSource change event has been processed (adding/removing 
 
 ##### e.node `jQuery`
 
-The node whose children have been changed. If the changes have occured on the root level, this parameter is undefined.
+The node whose children have been changed. If the changes have occurred on the root level, this parameter is undefined.
 
 #### Example - subscribe to the "dataBound" event during initialization
 
