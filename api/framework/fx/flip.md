@@ -6,10 +6,10 @@ publish: true
 
 # Flip
 
-Flips the element around the axis specified by the axis parameter.  Supported directions are `horizontal` and `vertical`.
+Flips the element around the axis specified by the axis parameter.  Supported directions are `horizontal` and `vertical`. The effect needs certain markup and styling in order to function properly.
+The element **should be positioned absolutely/relatively**, and contain two child elements (*face* and *back*) with the same size as their parent, positioned absolutely on top of each other.
 
-> **Note** The effect needs certain markup and styling in order to function properly.
-> The element should be positioned absolutely/relatively, and contain two child elements (face and back) with the same size as their parent, positioned absolutely on top of each other.
+## Flip Effect Example
 
     <style>
         #container {
@@ -41,19 +41,20 @@ Flips the element around the axis specified by the axis parameter.  Supported di
 
     <script>
         kendo.fx($("#container")).flip("horizontal", $("#foo"), $("#bar")).play();
-        kendo.fx($("#container")).flipHorizontal($("#foo"), $("#bar")).play();
+        // an alternative syntax would be
+        // kendo.fx($("#container")).flipHorizontal($("#foo"), $("#bar")).play();
     </script>
 
 ## Constructor Parameters
 
-### Axis `String`
+### axis `String`
 
-The axis of the flip.
+The axis of the flip. Accepted values are `"horizontal"` or `"vertical"`
 
-### Face `jQuery`
+### face `jQuery`
 
 The initially visible element in the container.
 
-### Back `jQuery`
+### back `jQuery`
 
 The finally visible element in the container.
