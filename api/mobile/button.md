@@ -18,9 +18,29 @@ Represents the Kendo UI Mobile Button widget. Inherits from [kendo.mobile.ui.Wid
 
  The badge of the button.
 
-#### Example
+#### Example - configuration based on data attributes
 
-    var button = $("#button").kendoMobileButton({ badge: 10 });
+    <div id="foo" data-role="view">
+      <a data-role="button" data-badge="10">Foo</a>
+    </div>
+    
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
+
+#### Example - configuration based on jQuery plugin syntax
+
+    <div id="foo" data-role="view" data-init="onInit">
+      <a id="button">Foo</a>
+    </div>
+    
+    <script>
+      var app = new kendo.mobile.Application();
+    
+    function onInit() {
+      $("#button").kendoMobileButton({ badge: 10 });
+    }
+    </script>
 
 ### icon `String`
 
@@ -28,7 +48,13 @@ Represents the Kendo UI Mobile Button widget. Inherits from [kendo.mobile.ui.Wid
 
 #### Example
 
-    var button = $("#button").kendoMobileButton({ icon: "stop" });
+    <div id="foo" data-role="view">
+      <a data-role="button" data-icon="play">Foo</a>
+    </div>
+    
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
 
 ## Methods
 
@@ -48,16 +74,34 @@ The target value to be set or false to be removed.
 
 #### Example
 
-    var button = $("#button").data("kendoMobileButton");
+    <div id="foo" data-role="view">
+      <a data-role="button" data-badge="1" data-click="countClicks">Foo</a>
+    </div>
+  
+    <script>
+      var app = new kendo.mobile.Application();
+    
+      function countClicks() {
+        var badge = parseInt(this.badge()); //get badge value
+        badge++;
+        this.badge(badge); //set new badge value
+      }
+    </script>
 
-    // Set the badge value to 5
-    button.badge(5);
+#### Example - remove the badge
 
-    // Get the current badge value
-    button.badge();
+    <div data-role="view">
+      <a id="btn" data-role="button" data-badge="1">Foo</a>
+      <a data-role="button" data-click="removeBadge">Remove badge</a>
+    </div>
 
-    // Remove the badge
-    button.badge(false);
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function removeBadge() {
+        $("#btn").data("kendoMobileButton").badge(false);
+      }
+    </script>
 
 ### destroy
 Prepares the **Button** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
@@ -66,10 +110,19 @@ Prepares the **Button** for safe removal from DOM. Detaches all event handlers a
 
 #### Example
 
-    var button = $("#button").data("kendoMobileButton");
+    <div data-role="view">
+      <a id="btn" data-role="button">Foo</a>
+      <a data-role="button" data-click="removeBtn">Remove button</a>
+    </div>
 
-    // detach events
-    button.destroy();
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function removeBtn() {
+        $("#btn").data("kendoMobileButton").destroy(); //detach events
+        $("#btn").remove();
+      }
+    </script>
 
 ## Events
 
