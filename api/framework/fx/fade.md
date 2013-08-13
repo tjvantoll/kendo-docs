@@ -34,21 +34,34 @@ Supported directions are `in` and `out`.
 
 ## Constructor Parameters
 
-### direction
+### direction `String`
 
-The direction of the effect.
+The direction of the effect. Accepted values are `"in"` or `"out"`. 
 
 ## Methods
 
 ### startValue
 
-Sets the fade value for the element when it is faded in. By default the element fades in to opacity value of 1.
+Sets the initial **opacity** value of the element. 
+1 means the element will be fully opaque. 
+0 means that the element will be fully transparent.
+
+#### Fading an element out, starting from 50%
+
+    <div id="foo">
+        Foo
+    </div>
+
+    <script>
+        kendo.fx($("#foo")).fade("out").startValue(0.5).play();
+    </script>
+
 
 #### Parameters
 
 ##### value `Number`
 
-the fade in value.
+the initial opacity value.
 
 #### Returns
 
@@ -56,16 +69,27 @@ the fade in value.
 
 ### endValue
 
-Sets the fade value for the element when it is faded out. By default the element fades in to opacity value of 0.
+Sets the final **opacity** value of the element. 
+1 means the element will be fully opaque. 
+0 means that the element will be fully transparent.
+
+#### Fading an element in to 50% opacity
+
+    <div id="foo">
+        Foo
+    </div>
+
+    <script>
+        kendo.fx($("#foo")).fade("in").endValue(0.5).play();
+    </script>
+
 
 #### Parameters
 
 ##### value `Number`
 
-the fade out value.
+the final opacity value.
 
 #### Returns
 
 `Effect` The effect instance
-
-
