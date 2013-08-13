@@ -130,6 +130,20 @@ Prepares the **Button** for safe removal from DOM. Detaches all event handlers a
 
 Fires when the user taps the button.
 
+#### Example
+
+    <div data-role="view">
+      <a id="btn" data-role="button" data-click="onClick">Click me!</a>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function onClick() {
+        console.log("clicked");
+      }
+    </script>
+
 #### Event Data
 
 ##### e.target `jQuery`
