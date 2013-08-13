@@ -18,6 +18,20 @@ Represents the Kendo UI Mobile Drawer widget. Inherits from [kendo.mobile.ui.Vie
 
 The position of the drawer. Can be `left` (default) or `right`.
 
+#### Right positioned drawer
+
+    <div data-role="view" id="drawer-settings">
+        <h1>Settings</h1>
+    </div>
+
+    <div data-role="drawer" id="my-drawer" data-position="right">
+        Hi!
+    </div>
+
+    <script>
+        new kendo.mobile.Application();
+    </script>
+
 ### title `String`
 
 The text to display in the navbar title (if present).
@@ -30,14 +44,21 @@ A list of the view ids on which the drawer will appear. If omitted, the drawer c
 
     <div data-role="view" id="drawer-settings">
         <h1>Settings</h1>
+        <a href="#bar" data-role="button">Go to bar</a>
     </div>
 
-    <div data-role="drawer" id="my-drawer" data-views="['drawer-home', 'drawer-settings'>
-        <ul data-role="listview" data-style="inset">
-            <li><a href="#drawer-home" data-transition="none">Home</a></li>
-            <li><a href="#drawer-settings" data-transition="none">Settings</a></li>
-        </ul>
+    <div data-role="view" id="bar">
+        Drawer will not work here
+        <a href="#drawer-settings" data-role="button">Back to settings</a>
     </div>
+
+    <div data-role="drawer" id="my-drawer" data-views='["drawer-settings"]'>
+        Hi!
+    </div>
+
+    <script>
+        new kendo.mobile.Application();
+    </script>
 
 ## Methods
 
@@ -49,10 +70,21 @@ Prepares the **Drawer** for safe removal from DOM. Detaches all event handlers a
 
 #### Example
 
-    var drawer = $("#my-drawer").data("kendoMobileDrawer");
+    <div data-role="view" id="drawer-settings">
+        <h1>Settings</h1>
+        <a data-click="destroyDrawer">Destroy Drawer</a>
+    </div>
 
-    // detach events
-    drawer.destroy();
+    <div data-role="drawer" id="my-drawer">
+        Hi!
+    </div>
+
+    <script>
+        new kendo.mobile.Application();
+        function destroyDrawer() {
+            $("#my-drawer").data("kendoMobileDrawer").destroy();
+        }
+    </script>
 
 ### hide
 
@@ -60,7 +92,21 @@ Hide the Drawer
 
 #### Example
 
-    $("#my-drawer").data("kendoMobileDrawer").hide();
+    <div data-role="view" id="drawer-settings">
+        <h1>Settings</h1>
+    </div>
+
+    <div data-role="drawer" id="my-drawer">
+        Hi!
+        <a data-click="hideDrawer" data-role="button">Hide me</a>
+    </div>
+
+    <script>
+        new kendo.mobile.Application();
+        function hideDrawer() {
+            $("#my-drawer").data("kendoMobileDrawer").hide();
+        }
+    </script>
 
 ### show
 
@@ -68,7 +114,22 @@ Show the Drawer
 
 #### Example
 
-    $("#my-drawer").data("kendoMobileDrawer").show();
+    <div data-role="view" id="drawer-settings">
+        <h1>Settings</h1>
+        <a data-click="showDrawer" data-role="button">Show drawer</a>
+    </div>
+
+    <div data-role="drawer" id="my-drawer">
+        Hi!
+    </div>
+
+    <script>
+        new kendo.mobile.Application();
+        function showDrawer() {
+            $("#my-drawer").data("kendoMobileDrawer").show();
+        }
+    </script>
+
 
 ## Events
 
@@ -78,11 +139,17 @@ Fires before the mobile Drawer is revealed. The event can be prevented by callin
 
 #### Example
 
+    <div data-role="view" id="drawer-settings">
+        <h1>Settings</h1>
+    </div>
+
     <div data-role="drawer" data-before-show="prevent">
         I will not be displayed
     </div>
 
     <script>
+        new kendo.mobile.Application();
+
         function prevent(e) {
             e.preventDefault();
         }
@@ -94,13 +161,19 @@ Fired when the mobile Drawer is closed by the user.
 
 #### Example
 
+    <div data-role="view" id="drawer-settings">
+        <h1>Settings</h1>
+    </div>
+
     <div data-role="drawer" id="foo" data-hide="onHide">
         Foo
     </div>
 
     <script>
+        new kendo.mobile.Application();
+
         function onHide(e) {
-            // handle event
+            console.log(e);
         }
     </script>
 
@@ -116,13 +189,19 @@ Fired when the mobile Drawer and its child widgets are initialized.
 
 #### Example
 
+    <div data-role="view" id="drawer-settings">
+        <h1>Settings</h1>
+    </div>
+
     <div data-role="drawer" id="foo" data-init="onInit">
         Foo
     </div>
 
     <script>
+        new kendo.mobile.Application();
+
         function onInit(e) {
-            // handle event
+            console.log(e);
         }
     </script>
 
@@ -138,13 +217,19 @@ Fires when the Drawer is shown.
 
 #### Example
 
-    <div data-role="drawer" data-show="onShow">
+    <div data-role="view" id="drawer-settings">
+        <h1>Settings</h1>
+    </div>
+
+    <div data-role="drawer" id="foo" data-show="onShow">
         Foo
     </div>
 
     <script>
+        new kendo.mobile.Application();
+
         function onShow(e) {
-            // handle event
+            console.log(e);
         }
     </script>
 
