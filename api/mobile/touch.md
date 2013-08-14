@@ -9,6 +9,8 @@ publish: true
 
 The kendo Touch widget exposes a cross-platform compatible API for handling user-initiated touch events, multi-touch gestures and event sequences (drag, swipe, etc.). Inherits from [Widget](/api/framework/widget).
 
+> Unlike most mobile widgets, the Touch widget does not need an active mobile application instance.
+
 ## Configuration
 
 ### surface `jQuery` *(default:  null)*
@@ -17,6 +19,7 @@ If specified, the user drags will be tracked within the surface boundaries.
 This option is useful if the widget is instantiated on small DOM elements like buttons, or thin list items.
 
 #### Example
+
     <ul id="list">
         <li>Foo</li>
         <li>Foo</li>
@@ -33,23 +36,22 @@ This option is useful if the widget is instantiated on small DOM elements like b
         });
     </script>
 
-### global `Boolean` *(default:  false)*
-
-If set to `true`, the document element will be used a s surface for the user drags.
-
 ### multiTouch `Boolean` *(default:  false)*
 
 If set to true, the widget will capture and trigger the `gesturestart`, `gesturechange`, and `gestureend` events when the user touches the element with two fingers.
 
 #### Example
-    <div data-role="touch" data-gesturestart="onGesturestart">
+    <div id="touch">
         Touch me with two fingers
     </div>
 
     <script>
-        function onGesturestart(e) {
-            console.log("User touched the element with two fingers");
-        }
+        $("#touch").kendoTouch({
+            multiTouch: true,
+            gesturestart: function (e) {
+                console.log("User touched the element with two fingers");
+            }
+        });
     </script>
 
 ### enableSwipe `Boolean` *(default:  false)*
@@ -59,27 +61,79 @@ If set to true, the Touch widget will recognize horizontal swipes and trigger th
 **Notice**: if the `enableSwipe` option is set to true, the `dragstart`, `drag` and `dragend` events will not be triggered.
 
 #### Example
-    <div data-role="touch" data-enable-swipe="true" data-swipe="onSwipe">
+
+    <div id="touch">
         Swipe me
     </div>
 
     <script>
-        function onSwipe(e) {
-            console.log("User swiped the element with two fingers");
-        }
+        $("#touch").kendoTouch({
+            enableSwipe: true,
+            swipe: function (e) {
+                console.log("User swiped the element");
+            }
+        });
     </script>
 
 ### minXDelta `Number` *(default:  30)*
 
 The minimum horizontal distance in pixels the user should swipe before the `swipe` event is triggered.
 
+#### Example
+
+    <div id="touch">
+        Swipe me
+    </div>
+
+    <script>
+        $("#touch").kendoTouch({
+            enableSwipe: true,
+            minXDelta: 50,
+            swipe: function (e) {
+                console.log("Long swipe");
+            }
+        });
+    </script>
+
 ### maxYDelta `Number` *(default:  20)*
 
 The maximum vertical deviation in pixels of the swipe event. Swipes with higher deviation are discarded.
 
+#### Example
+
+    <div id="touch">
+        Swipe me
+    </div>
+
+    <script>
+        $("#touch").kendoTouch({
+            enableSwipe: true,
+            maxYDelta: 50,
+            swipe: function (e) {
+                console.log("Loose shaky swipe");
+            }
+        });
+    </script>
+
 ### maxDuration `Number` *(default:  1000)*
 
 The maximum amount of time in milliseconds the swipe event can last. Slower swipes are discarded.
+
+#### Example
+
+    <div id="touch">
+        Swipe me
+    </div>
+
+    <script>
+        $("#touch").kendoTouch({
+            enableSwipe: true,
+            maxDuration: 500,
+            swipe: function (e) {
+                console.log("fast swipe");
+            }
+        });
+    </script>
 
 ### minHold `Number` *(default:  800)*
 
@@ -87,23 +141,47 @@ The timeout in milliseconds before the `hold` event is fired.
 
 **Notice**: the hold event will be triggered after the time passes, not after the user lifts his/hers finger.
 
+#### Example
+
+    <div id="touch">
+        Press and hold here
+    </div>
+
+    <script>
+        $("#touch").kendoTouch({
+            minHold: 2000,
+            hold: function (e) {
+                console.log("holding for a while.");
+            }
+        });
+    </script>
+
 ### doubleTapTimeout `Number` *(default: 400)*
 
 The maximum period (in milliseconds) between two consecutive taps which will trigger the doubletap event.
 
+#### Example
+
+    <div id="touch">
+        Double tap here
+    </div>
+
+    <script>
+        $("#touch").kendoTouch({
+            doubleTapTimeout: 2000,
+            doubletap: function (e) {
+                console.log("two taps");
+            }
+        });
+    </script>
+
 ## Methods
 
 ### destroy
+
 Prepares the **Touch** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
 
 > **Important:** This method does not remove the Touch element from DOM.
-
-#### Example
-
-    var touch = $("#touch").data("kendoTouch");
-
-    // detach events
-    touch.destroy();
 
 ## Events
 
