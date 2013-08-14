@@ -18,11 +18,16 @@ The DetailButton widget navigates to a mobile View when pressed.
 
 #### Initialize Kendo mobile DetailButton based on role data attribute
 
-    <a data-role="detailbutton">Foo</a>
+    <div data-role="view">
+      <ul data-role="listview">
+        <li>Item 1<a data-role="detailbutton"></a></li>
+        <li>Item 2<a data-role="detailbutton"></a></li>
+      </ul>
+    </div>
 
-#### Initialize Kendo mobile DetailButton using jQuery plugin syntax
-
-    var button = $("#button").kendoMobileDetailButton();
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
 
 ## Methods
 
@@ -33,10 +38,25 @@ Prepares the **DetailButton** for safe removal from DOM. Detaches all event hand
 
 #### Example
 
-    var detailButton = $("#detailButton").data("kendoMobileDetailButton");
+    <div data-role="view" data-init="onInit">
+      <ul data-role="listview">
+         <li>Item 1<a data-role="detailbutton"></a></li>
+         <li>Item 2<a data-role="detailbutton"></a></li>
+      </ul>
+    </div>
 
-    // detach events
-    detailButton.destroy();
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function onInit() {
+        $(".km-listview")
+          .find("[data-role='detailbutton']")
+          .each(function(idx, item) {
+            $(item).data("kendoMobileDetailButton").destroy(); //detach events
+            $(item).remove(); //remove element from the DOM
+          });
+        }
+    </script>
 
 ## Events
 
@@ -53,3 +73,22 @@ The clicked DOM element
 ##### e.button `jQuery`
 
 The button DOM element
+
+#### Example - get the item to which DetailButton belongs to
+
+    <div data-role="view">
+      <ul data-role="listview">
+        <li>Item 1<a data-role="detailbutton" data-style="rowinsert" data-click="onClick"></a></li>
+        <li>Item 2<a data-role="detailbutton" data-style="rowinsert" data-click="onClick"></a></li>
+        <li>Item 3<a data-role="detailbutton" data-style="rowinsert" data-click="onClick"></a></li>
+      </ul>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function onClick(e) {
+        var item = e.button.closest("li"); //get the item
+        item.css("background", "yellow"); //change its background
+      }
+    </script>
