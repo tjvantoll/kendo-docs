@@ -16,7 +16,21 @@ Represents the Kendo UI Mobile ButtonGroup widget. Inherits from [kendo.mobile.u
 
 ### index `Number`
 
-Defines the initially selected Button.
+Defines the initially selected Button (zero based index).
+
+#### Example
+
+    <div data-role="view">
+      <ul data-role="buttongroup" data-index="1">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
 
 ### selectOn `String` *(default "down")*
 
@@ -24,6 +38,20 @@ Sets the DOM event used to select the button. Accepts `"up"` as an alias for `to
 
 By default, buttons are selected immediately after the user presses the button (on `touchstart` or `mousedown` or `MSPointerDown`, depending on the mobile device).
 However, if the widget is placed in a scrollable view, the user may accidentally press the button when scrolling. In such cases, it is recommended to set this option to `"up"`.
+
+#### Example
+
+    <div data-role="view">
+      <ul data-role="buttongroup" data-select-on="up">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
 
 ## Methods
 
@@ -47,16 +75,30 @@ The target value to be set or false to be removed.
 
 #### Example
 
-    var buttongroup = $("#buttonGroup").data("kendoMobileButtonGroup");
+    <div data-role="view" data-init="setBadges">
+      <ul id="buttongroup" data-role="buttongroup">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
+    </div>
 
-    // Set the first button badge value to 5
-    buttongroup.badge(0, 5);
+    <script>
+      var app = new kendo.mobile.Application();
 
-    // Get the current badge value on the first button.
-    buttongroup.badge(0);
+      function setBadges() {
+          var buttongroup = $("#buttongroup").data("kendoMobileButtonGroup");
 
-    // Remove the first button badge
-    buttongroup.badge("li:first", false);
+          // Set the first button badge value to 5
+          buttongroup.badge(0, 5);
+          // Set the last button badge value to 10
+          buttongroup.badge("li:last", 10);
+          // Get the current badge value on the first button.
+          console.log(buttongroup.badge(0));
+          // Remove the first button badge
+          buttongroup.badge("li:first", false);
+      }
+    </script>
 
 ### current
 
@@ -66,6 +108,25 @@ Get the currently selected Button.
 
 `jQuery` the jQuery object representing the currently selected button.
 
+#### Example - get the index of the currently selected Button
+
+    <div data-role="view">
+      <ul id="buttongroup" data-role="buttongroup" data-select="onSelect">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function onSelect(e) {
+        var index = this.current().index();
+        console.log(index);
+      }
+    </script>
+
 ### destroy
 Prepares the **ButtonGroup** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
 
@@ -73,24 +134,28 @@ Prepares the **ButtonGroup** for safe removal from DOM. Detaches all event handl
 
 #### Example
 
-    var buttonGroup = $("#buttonGroup").data("kendoMobileButtonGroup");
+    <div data-role="view">
+      <ul id="buttongroup" data-role="buttongroup">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
 
-    // detach events
-    buttonGroup.destroy();
+      <a data-role="button" data-click="destroy">Destroy the ButtonGroup</a>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function destroy() {
+        $("#buttongroup").data("kendoMobileButtonGroup").destroy(); //detach events
+        $("#buttongroup").remove(); //remove the button from the DOM
+      }
+    </script>
 
 ### select
 
 Select a Button.
-
-#### Example
-
-    var buttongroup = $("#buttongroup").data("kendoMobileButtonGroup");
-
-    // selects by jQuery object
-    buttongroup.select(buttongroup.element.children().eq(0));
-
-    // selects by index
-    buttongroup.select(1);
 
 #### Parameters
 
@@ -98,21 +163,50 @@ Select a Button.
 
 LI element or index of the Button.
 
+#### Example
+
+    <div data-role="view" data-init="setSelected">
+      <ul id="buttongroup" data-role="buttongroup">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function setSelected() {
+        var buttongroup = $("#buttongroup").data("kendoMobileButtonGroup");
+
+        // selects by jQuery object
+        buttongroup.select(buttongroup.element.children().eq(0));
+        // selects by index
+        buttongroup.select(1);
+      }
+    </script>
+
 ## Events
 
 ### select
 
 Fires when a Button is selected.
 
-#### Handle select event
+#### Example - get the index of the currently selected Button
 
-    <ul id="buttongroup" data-role="buttongroup">
-      <li>Option 1</li>
-      <li>Option 2</li>
-    </ul>
+    <div data-role="view">
+      <ul id="buttongroup" data-role="buttongroup" data-select="onSelect">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+      </ul>
+    </div>
 
     <script>
-     $("#buttongroup").data("kendoMobileButtonGroup").bind("select", function(e) {
-         //handle select event
-     });
+      var app = new kendo.mobile.Application();
+
+      function onSelect(e) {
+        var index = this.current().index();
+        console.log(index);
+      }
     </script>
