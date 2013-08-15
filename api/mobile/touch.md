@@ -189,6 +189,13 @@ Prepares the **Touch** for safe removal from DOM. Detaches all event handlers an
 
 Fires when the user presses the element.
 
+#### Example
+
+    <div id="touch">Touch here</div>
+    <script>
+        $("#touch").kendoTouch({ touchstart: function (e) { console.log(e); } });
+    </script>
+
 #### Event Data
 
 ##### e.touch `TouchEvent`
@@ -202,6 +209,14 @@ The jQuery event which triggered the touch event.
 ### dragstart
 
 Fires when the user starts dragging the element.
+
+#### Example
+
+    <div id="touch">Touch here</div>
+    <script>
+        $("#touch").kendoTouch({ dragstart: function (e) { console.log(e); } });
+    </script>
+
 
 #### Event Data
 
@@ -217,6 +232,13 @@ The jQuery event which triggered the touch event.
 
 Fires each time the user drags (within the element boundaries).
 
+#### Example
+
+    <div id="touch">Touch here</div>
+    <script>
+        $("#touch").kendoTouch({ drag: function (e) { console.log(e); } });
+    </script>
+
 #### Event Data
 
 ##### e.touch `TouchEvent`
@@ -230,6 +252,13 @@ The jQuery event which triggered the touch event.
 ### dragend
 
 Fires when the user lifts his/hers finger, or drags outside of the element boundaries.
+
+#### Example
+
+    <div id="touch">Touch here</div>
+    <script>
+        $("#touch").kendoTouch({ dragend: function (e) { console.log(e); } });
+    </script>
 
 #### Event Data
 
@@ -245,6 +274,13 @@ The jQuery event which triggered the touch event.
 
 Fires when the user taps on the element. A touch sequence is considered a tap if the user does not perform dragging.
 
+#### Example
+
+    <div id="touch">Touch here</div>
+    <script>
+        $("#touch").kendoTouch({ tap: function (e) { console.log(e); } });
+    </script>
+
 #### Event Data
 
 ##### e.touch `TouchEvent`
@@ -259,7 +295,14 @@ The jQuery event which triggered the touch event.
 
 Fires when the user quickly taps twice on the element.
 
-**Notice**: The two taps should be at a maximum distance of 3 pixels.
+> The two taps should be at a maximum distance of 3 pixels.
+
+#### Example
+
+    <div id="touch">Touch here</div>
+    <script>
+        $("#touch").kendoTouch({ doubletap: function (e) { console.log(e); } });
+    </script>
 
 #### Event Data
 
@@ -277,6 +320,13 @@ Fires when the user presses and holds  his/hers finger on the element for a mini
 
 The minimum amount can be configured through the `minHold` configuration option.
 
+#### Example
+
+    <div id="touch">Touch here</div>
+    <script>
+        $("#touch").kendoTouch({ hold: function (e) { console.log(e); } });
+    </script>
+
 #### Event Data
 
 ##### e.touch `TouchEvent`
@@ -293,7 +343,14 @@ Fires when the user performs a horizontal swipe on the element.
 
 For this event to be triggered, the `enableSwipe` configuration option should be set to `true`.
 
-The `minXDelta`, `maxYDelta` and `maxDuration` configuration options determine when the drag event sequence is considered a swipe.
+> The `minXDelta`, `maxYDelta` and `maxDuration` configuration options determine when the drag event sequence is considered a swipe.
+
+#### Example
+
+    <div id="touch">Touch here</div>
+    <script>
+        $("#touch").kendoTouch({ enableSwipe: true, swipe: function (e) { console.log(e); } });
+    </script>
 
 #### Event Data
 
@@ -313,11 +370,26 @@ The swipe event direction. Can be either `left` or `right`.
 
 Fires when the user presses the element with two fingers (or presses with a second finger while a first finger is still touching the element).
 
+#### Example
+
+    <div id="touch">
+        Touch me with two fingers
+    </div>
+
+    <script>
+        $("#touch").kendoTouch({
+            multiTouch: true,
+            gesturestart: function (e) {
+                console.log("User touched the element with two fingers");
+            }
+        });
+    </script>
+
 #### Event Data
 
 ##### e.touches `Array`
 
-An array containing the active touches
+An array containing the active touches.
 
 ##### e.event `jQueryEvent`
 
@@ -325,7 +397,7 @@ The jQuery event which triggered the touch event.
 
 ##### e.distance `Number`
 
-The distance (in pixels) between the two touches
+The distance (in pixels) between the two touches.
 
 ##### e.center `Point`
 
@@ -335,11 +407,26 @@ The center point between the two touches. The point has two properties, `x` and 
 
 Fires when the user moves a finger while multiple fingers are touching the element.
 
+#### Example
+
+    <div id="touch">
+        Touch me with two fingers
+    </div>
+
+    <script>
+        $("#touch").kendoTouch({
+            multiTouch: true,
+            gesturechange: function (e) {
+                console.log(e);
+            }
+        });
+    </script>
+
 #### Event Data
 
 ##### e.touches `Array`
 
-An array containing the active touches
+An array containing the active touches.
 
 ##### e.event `jQueryEvent`
 
@@ -357,6 +444,21 @@ The center point between the two touches. The point has two properties, `x` and 
 
 Fires when the user lifts the second finger from the element.
 **Notice**: After the last finger is moved, the `dragend` event is fired.
+
+#### Example
+
+    <div id="touch">
+        Touch me with two fingers
+    </div>
+
+    <script>
+        $("#touch").kendoTouch({
+            multiTouch: true,
+            gestureend: function (e) {
+                console.log(e);
+            }
+        });
+    </script>
 
 #### Event Data
 
@@ -382,8 +484,7 @@ The touch event object (available in the event handler event object) contains in
 
 ### Example
 
-    <div data-role="touch" data-tap="getEventInfo">Tap me</div>
-
+    <div id="touch">Touch here</div>
     <script>
         function getEventInfo(e) {
             var touch = e.touch;
@@ -393,6 +494,8 @@ The touch event object (available in the event handler event object) contains in
             console.log(x.location);
             console.log(y.location);
         }
+
+        $("#touch").kendoTouch({ tap: getEventInfo });
     </script>
 
 ### Properties
