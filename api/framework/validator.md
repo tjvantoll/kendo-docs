@@ -17,22 +17,41 @@ Set of messages (either strings or functions) which will be shown when given val
 By setting already existing key the appropriate built-in message will be overridden.
 
 ### Defining custom messages
+    <form id="myform">
+        <input name="username" required /> <br />
+        <input type="email" name="userEmail" required data-message="My custom email message" /> <br />
+        <button>Validate</button>
+    </form>
 
-    $("#myform").kendoValidator({
-         messages: {
-             // defines a message for the 'custom' validation rule
-             custom: "Please enter valid value for my custom rule",
+    <script>
+        $("#myform").kendoValidator({
+             messages: {
+                 // defines a message for the 'custom' validation rule
+                 custom: "Please enter valid value for my custom rule",
 
-             // overrides the built-in message for the required rule
-             required: "My custom required message",
+                 // overrides the built-in message for the required rule
+                 required: "My custom required message",
 
-             // overrides the built-in message for the email rule
-             // with a custom function that returns the actual message
-             email: function(input) {
-                 return getMessage(input);
+                 // overrides the built-in message for the email rule
+                 // with a custom function that returns the actual message
+                 email: function(input) {
+                     return getMessage(input);
+                 }
+             },
+             rules: {
+               custom: function(input) {
+                 if (input.is("[name=username]")) {
+                     return input.val() === "Tom";
+                 }
+                 return true;
+               }
              }
-         }
-    });
+        });
+
+        function getMessage(input) {
+          return input.data("message");
+        }
+    </script>
 
 Note that validation messages can also be defined on a per-component basis, via the following attributes (in that order):
 
@@ -42,32 +61,62 @@ Note that validation messages can also be defined on a per-component basis, via 
 
 These attributes will be checked before applying the message from the `messages` configuration option.
 
-#### Using validationMessage attribute to specify a custom validation message
-
-    <input type="tel" pattern="\d{10}" validationMessage="Plase enter a ten digit phone number">
-
 Setting multiple `data-[rule]-msg` attributes allows a field to have different messages for each different validation rule.
 
-    <input type="url" required data-required-msg="You need to enter a URL" data-url-msg="This url is invalid">
+#### Example
+
+    <form id="myform">
+        <input type="url" required data-required-msg="You need to enter a URL" data-url-msg="This url is invalid">
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator();
+    </script>
+
+#### Using validationMessage attribute to specify a custom validation message
+
+    <form id="myform">
+        <input type="tel" pattern="\d{10}" validationMessage="Plase enter a ten digit phone number" value="123"> <br />
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator();
+    </script>
 
 Validation messages can also be defined for custom rules.
 
 #### Defining validation messages for custom rules
 
-    $("#myform").kendoValidator({
-        rules: {
-            custom: function(input){
-                return input.val() === "Test";
+    <form id="myform">
+        <input name="username" /> <br />
+        <input name="town" /> <br />
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator({
+            rules: {
+              customRule1: function(input) {
+                  if (input.is("[name=username]")) {
+                    return input.val() === "Tom";
+                  }
+                  return true;
+              },
+              customRule2: function(input){
+                  if (input.is("[name=town]")) {
+                    return input.val() === "New York";
+                  }
+                  return true;
+              }
             },
-            foo: function(input){
-                return input.val() === "Foo";
+            messages: {
+                customRule1: "Your UserName must be Tom",
+                customRule2: "Your town must be New York"
             }
-        },
-        messages: {
-            custom: "Your name must be Test",
-            foo: "Your name must be Foo"
-        }
-    });
+        });
+    </script>
 
 ### rules `Object`
 
@@ -75,24 +124,51 @@ Set of custom validation rules. Those rules will extend the [built-in ones](/get
 
 #### Defining custom rules
 
-    $("#myform").kendoValidator({
-         rules: {
-             custom: function(input) {
-                 // Only "Tom" will be a valid value for the FirstName input
-                 return input.is("[name=firstname]") && input.val() === "Tom";
-             },
-             alsoCustom: function(input) {
-                return $.trim(input.val()) !== "";
-             }
-         }
-    });
+    <form id="myform">
+        <input name="username"/> <br />
+        <input name="town" /> <br />
+        <button>Validate</button>
+    </form>
 
-This configuration can be [tested live using this JSBin example](http://jsbin.com/erixot/3/edit).
+    <script>
+        $("#myform").kendoValidator({
+          rules: {
+            customRule1: function(input){
+              // all of the input must have a value
+              return $.trim(input.val()) !== "";
+            },
+            customRule2: function(input) {
+              //only 'Tom' will be valid value for the username input
+              if (input.is("[name=username]")) {
+                return input.val() === "Tom";
+              }
+              return true;
+            }
+          },
+          messages: {
+            customRule1: "All fields are required",
+            customRule2: "Your UserName must be Tom"
+          }
+        });
+    </script>
 
 
 ### validateOnBlur `Boolean`
 
 Determines if validation will be triggered when element loses focus. Default value is true.
+
+#### Example
+
+    <form id="myform">
+        <input name="username"/> <br />
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator({
+          validateOnBlur: false
+        });
+    </script>
 
 ## Methods
 
@@ -102,17 +178,27 @@ Get the error messages if any.
 
 #### Example
 
-    // get a reference to the validatable form
+   <div id="myform">
+    <input name="username" required /> <br />
+    <button id="save">Save</button>
+    <div id="errors"></div>
+  </div>
+
+  <script>
+    // attach a validator to the container and get a reference
     var validatable = $("#myform").kendoValidator().data("kendoValidator");
+
     $("#save").click(function() {
-        if (validatable.validate() === false) {
-            // get the errors and write them out to the "errors" html container
-            var errors = validatable.errors();
-            $(errors).each(function() {
-                $("#errors").html(this);
-            });
-        }
+      //validate the input elements and check if there are any errors
+      if (validatable.validate() === false) {
+        // get the errors and write them out to the "errors" html container
+        var errors = validatable.errors();
+        $(errors).each(function() {
+          $("#errors").html(this);
+        });
+      }
     });
+  </script>
 
 #### Returns
 
@@ -128,14 +214,23 @@ Validates the input element(s) against the declared validation rules.
 
 #### Example
 
-    // get a reference to the validatable form
-    var validatable = $("#myform").kendoValidator().data("kendoValidator");
-    // check validation on save button click
-    $("#save").click(function() {
-        if (validatable.validate()) {
-            save();
-        }
-    });
+      <div id="myform">
+        <input name="username" required /> <br />
+        <button id="save">Save</button>
+      </div>
+
+      <script>
+        // attach a validator to the container and get a reference
+        var validatable = $("#myform").kendoValidator().data("kendoValidator");
+
+        //validate the state on button click
+        $("#save").click(function() {
+          //validate the input elements and check if there are any errors
+          if (validatable.validate()) {
+            //save the form
+          }
+        });
+      </script>
 
 #### Returns
 
@@ -147,6 +242,28 @@ Note that if a HTML form element is set as validation container, the form submit
 ### validateInput
 
 Validates the input element against the declared validation rules.
+
+#### Example
+    <div id="myform">
+        <input name="username" required /> <br />
+        <input name="location" required /> <br />
+
+        <button>Validate only userName field</button>
+    </div>
+
+    <script>
+        // attach a validator to the container and get a reference
+        var validator = $("#myform").kendoValidator().data("kendoValidator");
+
+        //validate the userName input state on button click
+        $("button").click(function() {
+          if (!validator.validateInput($("input[name=username]"))) {
+            alert("UserName is not valid!");
+          } else {
+            alert("UserName is valid!");
+          }
+        });
+    </script>
 
 #### Parameters
 
