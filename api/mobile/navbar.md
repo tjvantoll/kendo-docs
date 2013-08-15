@@ -21,27 +21,58 @@ Prepares the **NavBar** for safe removal from DOM. Detaches all event handlers a
 
 #### Example
 
-    var navBar = $("#navBar").data("kendoMobileNavBar");
+    <div id="foo" data-role="view" data-title="navbar demo">
+      <header data-role="header">
+        <div data-role="navbar">
+          <a class="nav-button" data-align="left" data-icon="action" data-role="button"></a>
+          <span data-role="view-title"></span>
+          <a class="nav-button" data-align="right" data-icon="refresh" data-role="button"></a>
+        </div>
+      </header>
+      <a data-role="button" data-click="onClick">Button</a>
+    </div>
 
-    // detach events
-    navBar.destroy();
+    <script>
+      var app = new kendo.mobile.Application();
+      function onClick(e) {
+        var navbar = app.view()
+          .header
+          .find(".km-navbar")
+          .data("kendoMobileNavBar");
+
+        navbar.destroy();
+      }
+    </script>
 
 ### title
 
 Update the title element text. The title element is specified by setting the `role` data attribute to `view-title`.
-
-#### Example
-
-    <div data-role="navbar" id="foo">
-        <span data-role="view-title"></span>
-    </div>
-
-    <script>
-      $("#foo").data("kendoMobileNavBar").title("Foo");
-    </script>
 
 #### Parameters
 
 ##### value `String`
 
 The text of title
+
+#### Example
+
+    <div id="foo" data-role="view" data-title="navbar demo">
+      <header data-role="header">
+        <div data-role="navbar">
+          <span data-role="view-title"></span>
+        </div>
+      </header>
+      <a data-role="button" data-click="onClick">Change title</a>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+      function onClick(e) {
+        var navbar = app.view()
+          .header
+          .find(".km-navbar")
+          .data("kendoMobileNavBar");
+
+        navbar.title("changed");
+      }
+    </script>
