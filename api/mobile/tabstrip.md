@@ -18,6 +18,26 @@ Represents the Kendo UI Mobile TabStrip widget. Inherits from [kendo.mobile.ui.W
 
  The index of the initially selected tab.
 
+#### Example
+
+    <div id="foo" data-role="view" data-layout="default">
+      foo
+    </div>
+
+    <div data-role="layout" data-id="default">
+      <div data-role="footer">
+        <div data-role="tabstrip" data-selected-index="1">
+          <a data-icon="contacts">foo</a>
+          <a data-icon="contacts">bar</a>
+          <a data-icon="info">baz</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
+
 ## Methods
 
 ### badge
@@ -40,16 +60,27 @@ The target value to be set or false to be removed.
 
 #### Example
 
-    var tabstrip = $("#tabStrip").data("kendoMobileTabStrip");
+    <div id="foo" data-role="view" data-init="onInit">
+      <div data-role="footer">
+        <div data-role="tabstrip">
+          <a data-icon="contacts">foo</a>
+          <a data-icon="contacts">bar</a>
+          <a data-icon="info">baz</a>
+        </div>
+      </div>
+    </div>
 
-    // Set the first tab badge value to 5
-    tabstrip.badge(0, 5);
+    <script>
+      var app = new kendo.mobile.Application();
+      function onInit(e) {
+        var tabstrip = e.view.footer.find(".km-tabstrip").data("kendoMobileTabStrip");
 
-    // Get the current badge value on the first tab.
-    tabstrip.badge(0);
-
-    // Remove the first tab badge
-    tabstrip.badge("li:first", false);
+        // Set the first tab badge value to 5
+        tabstrip.badge(0, 5);
+        // Get the current badge value on the first tab.
+        console.log(tabstrip.badge(0));
+      }
+    </script>
 
 ### currentItem
 
@@ -59,6 +90,27 @@ Get the currently selected tab DOM element.
 
 `jQuery` the currently selected tab DOM element.
 
+#### Example
+
+    <div id="foo" data-role="view" data-init="onInit">
+      <div data-role="footer">
+        <div data-role="tabstrip">
+          <a data-icon="contacts">foo</a>
+          <a data-icon="contacts">bar</a>
+          <a data-icon="info">baz</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+      function onInit(e) {
+        var tabstrip = e.view.footer.find(".km-tabstrip").data("kendoMobileTabStrip");
+        var currentItem = tabstrip.currentItem();
+        console.log(currentItem);
+      }
+    </script>
+
 ### destroy
 Prepares the **TabStrip** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
 
@@ -66,24 +118,29 @@ Prepares the **TabStrip** for safe removal from DOM. Detaches all event handlers
 
 #### Example
 
-    var tabStrip = $("#tabStrip").data("kendoMobileTabStrip");
+    <div id="foo" data-role="view">
+      <a data-role="button" data-click="onClick">Button</a>
+      <div data-role="footer">
+        <div data-role="tabstrip">
+          <a data-icon="contacts">foo</a>
+          <a data-icon="contacts">bar</a>
+          <a data-icon="info">baz</a>
+        </div>
+      </div>
+    </div>
 
-    // detach events
-    tabStrip.destroy();
+    <script>
+      var app = new kendo.mobile.Application();
+      function onClick() {
+        var tabstrip = app.view().footer.find(".km-tabstrip").data("kendoMobileTabStrip");
+        tabstrip.destroy(); //detach events
+        tabstrip.wrapper.remove(); //remove DOM elements
+      }
+    </script>
 
 ### switchTo
 
 Set the mobile TabStrip active tab to the tab with the specified url. This method doesn't change the current View. To change the View, use Application's [navigate](/api/mobile/application#navigate) method instead.
-
-#### Example
-
-    <div data-role="tabstrip" id="tabstrip"> <a href="#foo">Foo</a> </div>
-
-    <script>
-        $(function() {
-            $("#tabstrip").data("kendoMobileTabStrip").switchTo("#foo");
-        });
-    </script>
 
 #### Parameters
 
@@ -91,9 +148,47 @@ Set the mobile TabStrip active tab to the tab with the specified url. This metho
 
 The url of the tab.
 
+#### Example
+
+    <div id="foo" data-role="view">
+      <a data-role="button" data-click="onClick">Button</a>
+      <div data-role="footer">
+        <div data-role="tabstrip">
+          <a href="#foo" data-icon="contacts">foo</a>
+          <a href="#bar" data-icon="contacts">bar</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+      function onClick() {
+        var tabstrip = app.view().footer.find(".km-tabstrip").data("kendoMobileTabStrip");
+        tabstrip.switchTo("#bar"); //activate "bar" tab
+      }
+    </script>
+
 ### clear
 
 Clear the currently selected tab.
+
+    <div id="foo" data-role="view">
+      <a data-role="button" data-click="onClick">Button</a>
+      <div data-role="footer">
+        <div data-role="tabstrip">
+          <a href="#foo" data-icon="contacts">foo</a>
+          <a href="#bar" data-icon="contacts">bar</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+      function onClick() {
+        var tabstrip = app.view().footer.find(".km-tabstrip").data("kendoMobileTabStrip");
+        tabstrip.clear();
+      }
+    </script>
 
 ## Events
 
@@ -106,3 +201,21 @@ Fires when tab is selected.
 ##### e.item `jQuery`
 
 The selected tab
+
+#### Example - prevent tab selection
+
+    <div id="foo" data-role="view">
+      <div data-role="footer">
+        <div data-role="tabstrip" data-select="onSelect">
+          <a data-icon="contacts">foo</a>
+          <a data-icon="contacts">bar</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+      function onSelect(e) {
+        e.preventDefault(); //prevent the tab selection
+      }
+    </script>
