@@ -16,13 +16,18 @@ Represents the Kendo UI Editor widget. Inherits from [Widget](/api/framework/wid
 
 ### encoded `Boolean` *(default: true)*
 
- Indicates whether the Editor should submit encoded HTML tags.
+Indicates whether the Editor should submit encoded HTML tags. By default, the submitted value is encoded.
 
 #### Example
 
+    <textarea id="editor"></textarea>
+    <script>
     $("#editor").kendoEditor({
-         encoded: false
-     });
+      value: "<p>foo</p>",
+      encoded: false
+    });
+    console.log($("#editor").val()); // logs "<p>foo</p>"
+    </script>
 
 ### messages `Object`
 
@@ -30,54 +35,57 @@ Defines the text of the labels that are shown within the editor. Used primarily 
 
 #### Example
 
+    <textarea id="editor"></textarea>
+    <script>
     $("#editor").kendoEditor({
-        messages: {
-            bold: "Bold",
-            italic: "Italic",
-            underline: "Underline",
-            strikethrough: "Strikethrough",
-            superscript: "Superscript",
-            subscript: "Subscript",
-            justifyCenter: "Center text",
-            justifyLeft: "Align text left",
-            justifyRight: "Align text right",
-            justifyFull: "Justify",
-            insertUnorderedList: "Insert unordered list",
-            insertOrderedList: "Insert ordered list",
-            indent: "Indent",
-            outdent: "Outdent",
-            createLink: "Insert hyperlink",
-            unlink: "Remove hyperlink",
-            insertImage: "Insert image",
-            insertHtml: "Insert HTML",
-            fontName: "Select font family",
-            fontNameInherit: "(inherited font)",
-            fontSize: "Select font size",
-            fontSizeInherit: "(inherited size)",
-            formatBlock: "Format",
-            formatting: "Format",
-            style: "Styles",
-            emptyFolder: "Empty Folder",
-            uploadFile: "Upload",
-            orderBy: "Arrange by:",
-            orderBySize: "Size",
-            orderByName: "Name",
-            invalidFileType: "The selected file \"{0}\" is not valid. Supported file types are {1}.",
-            deleteFile: "Are you sure you want to delete \"{0}\"?",
-            overwriteFile: "A file with name \"{0}\" already exists in the current directory. Do you want to overwrite it?",
-            directoryNotFound: "A directory with this name was not found.",
-            imageWebAddress: "Web address",
-            imageAltText: "Alternate text",
-            linkWebAddress: "Web address",
-            linkText: "Text",
-            linkToolTip: "ToolTip",
-            linkOpenInNewWindow: "Open link in new window",
-            dialogInsert: "Insert",
-            dialogUpdate: "Update",
-            dialogButtonSeparator: "or",
-            dialogCancel: "Cancel"
-        }
+      messages: {
+        bold: "Bold",
+        italic: "Italic",
+        underline: "Underline",
+        strikethrough: "Strikethrough",
+        superscript: "Superscript",
+        subscript: "Subscript",
+        justifyCenter: "Center text",
+        justifyLeft: "Align text left",
+        justifyRight: "Align text right",
+        justifyFull: "Justify",
+        insertUnorderedList: "Insert unordered list",
+        insertOrderedList: "Insert ordered list",
+        indent: "Indent",
+        outdent: "Outdent",
+        createLink: "Insert hyperlink",
+        unlink: "Remove hyperlink",
+        insertImage: "Insert image",
+        insertHtml: "Insert HTML",
+        fontName: "Select font family",
+        fontNameInherit: "(inherited font)",
+        fontSize: "Select font size",
+        fontSizeInherit: "(inherited size)",
+        formatBlock: "Format",
+        formatting: "Format",
+        style: "Styles",
+        emptyFolder: "Empty Folder",
+        uploadFile: "Upload",
+        orderBy: "Arrange by:",
+        orderBySize: "Size",
+        orderByName: "Name",
+        invalidFileType: "The selected file \"{0}\" is not valid. Supported file types are {1}.",
+        deleteFile: "Are you sure you want to delete \"{0}\"?",
+        overwriteFile: "A file with name \"{0}\" already exists in the current directory. Do you want to overwrite it?",
+        directoryNotFound: "A directory with this name was not found.",
+        imageWebAddress: "Web address",
+        imageAltText: "Alternate text",
+        linkWebAddress: "Web address",
+        linkText: "Text",
+        linkToolTip: "ToolTip",
+        linkOpenInNewWindow: "Open link in new window",
+        dialogInsert: "Insert",
+        dialogUpdate: "Update",
+        dialogButtonSeparator: "or",
+        dialogCancel: "Cancel"
+      }
     });
+    </script>
 
 ### stylesheets `Array`
 
@@ -85,82 +93,207 @@ Allows custom stylesheets to be included within the editing area.
 
 #### Example
 
+    <textarea id="editor"></textarea>
+    <script>
     $("#editor").kendoEditor({
-         stylesheets: [
-             "common-styles.css",
-             "green-theme.css",
-         ]
-     });
+      stylesheets: [
+        "base.css",
+        "theme.css"
+      ]
+    });
+    </script>
 
 ### tools `Array`
 
-A collection of tools that should render a button, combobox, etc, to interact with the Editor. Custom tools are defined
-as a collection of required properties, while the insertHtml tool requires a collection of text-value pairs. A separator may be included multiple times.
+A collection of tools that are used to interact with the Editor.
+Tools may be switched on by specifying their name.
+Custom tools and tools that require configuration are defined as objects.
+
+The available editor commands are:
+
+*   Basic text formatting
+        - **bold**, **italic**, **underline**, **strikethrough**, **subscript**, **superscript**
+*   Font and color
+        - **fontName**, **fontSize**, **foreColor**, **backColor**
+*   Alignment
+        - **justifyLeft**, **justifyCenter**, **justifyRight**, **justifyFull**
+*   Lists
+        - **insertUnorderedList**, **insertOrderedList**, **indent**, **outdent**
+*   Links and images
+        - **createLink**, **unlink**, **insertImage**
+*   Table editing
+        - **createTable**, **addColumnLeft**, **addColumnRight**, **addRowAbove**, **addRowBelow**, **deleteRow**, **deleteColumn**
+*   Structural markup and styles
+        - **formatting**
+*   Snippets
+        - **insertHtml**
+*   HTML code view
+        - **viewHtml**
 
 #### Example
 
+    <textarea id="editor"></textarea>
+    <script>
     $("#editor").kendoEditor({
-         tools: [
-             "bold", "italic", "underline", "strikethrough",
-             "fontName", "fontSize",
-             "foreColor", "backColor",
-             "justifyLeft", "justifyCenter", "justifyRight", "justifyFull",
-             "insertUnorderedList", "insertOrderedList",
-             "indent", "outdent",
-             "formatting",
-             "createLink", "unlink",
-             "insertImage",
-             "insertHtml",
-             "subscript",
-             "superscript",
-             "createTable", "addColumnLeft", "addColumnRight", "addRowAbove", "addRowBelow", "deleteRow", "deleteColumn",
-             "viewHtml",
-             {
-                 name: "customTool",
-                 tooltip: "Custom Tool",
-                 exec: function(e) {
-                     var editor = $(this).data("kendoEditor");
-                     // ...
-                 }
-             }
-         ],
-         insertHtml: [
-             { text: "label 1", value: "<p>snippet 1</p>" },
-             { text: "label 2", value: "<p>snippet 2</p>" }
-         ]
-     });
+      tools: [
+        "bold", "italic", "underline"
+      ]
+    });
+    </script>
 
 ### tools.name `String`
 
-The mandatory name of the tool.
+When specifying a tool as an object, a tool name is required.
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      tools: [
+        { name: "custom" }
+      ]
+    });
+    </script>
 
 ### tools.tooltip `String`
 
 The text which will be displayed when the end-user hovers the tool button with the mouse.
 
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      tools: [
+        { name: "bold", tooltip: "Bold the selected text" }
+      ]
+    });
+    </script>
+
 ### tools.exec `Function`
 
 The JavaScript function which will be executed when the end-user clicks the tool button.
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      tools: [
+        {
+          name: "custom",
+          exec: function(e) {
+            var editor = $(this).data("kendoEditor");
+            // ...
+          }
+        }
+      ]
+    });
+    </script>
 
 ### tools.items `Array`
 
 For tools that display a list of items (fontName, fontSize, formatting), this option specifies the items in the shown list.
 
+#### Example - specify custom font families
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      tools: [
+        {
+          name: "fontName",
+          items: [
+            { text: "Arial/Verdana", value: "Arial,Verdana,sans-serif" }
+          ]
+        }
+      ]
+    });
+    </script>
+
 ### tools.items.text `String`
 
 The string that the popup item will show.
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      tools: [
+        {
+          name: "fontName",
+          items: [
+            { text: "Default site font", value: "Arial,Verdana,sans-serif" },
+            { text: "Monospaced font", value: "monospace" }
+          ]
+        }
+      ]
+    });
+    </script>
 
 ### tools.items.value `String`
 
 The value that will be applied by the tool when this item is selected.
 
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      tools: [
+        {
+          name: "fontSize",
+          items: [
+            { text: "12px", value: "12px" },
+            { text: "24px", value: "24px" }
+          ]
+        }
+      ]
+    });
+    </script>
+
 ### tools.items.context `String`
 
 Only applicable for the formatting tool. Specifies the context in which the option will be available.
 
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      tools: [
+        {
+          name: "formatting",
+          items: [
+            { text: "Title", value: "h1" },
+
+            // will be shown only when selection is in H1
+            { text: "Note", value: "span.note", context: "h1" }
+          ]
+        }
+      ]
+    });
+    </script>
+
 ### tools.template `String`
 
 The kendo template that will be used for rendering the given tool.
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      tools: [
+        {
+          name: "custom",
+          template: "<button class='k-button'>Save draft</button>"
+        }
+      ]
+    });
+    </script>
 
 ### imageBrowser `Object`
 
@@ -168,27 +301,54 @@ Configuration for image browser dialog.
 
 #### Example
 
+    <textarea id="editor"></textarea>
+    <script>
     $("#editor").kendoEditor({
-         imageBrowser: {
-            transport: {
-                read: "imagebrowser/read",
-                destroy: "imagebrowser/destroy",
-                create: "imagebrowser/createDirectory",
-                uploadUrl: "imagebrowser/upload",
-                thumbnailUrl: "imagebrowser/thumbnail"
-                imageUrl: "/content/images/{0}",
-            },
-            path: "/myInitialPath/"
-         }
-     });
+      imageBrowser: {
+        transport: {
+          read: "imagebrowser/read",
+          destroy: "imagebrowser/destroy",
+          create: "imagebrowser/createDirectory",
+          uploadUrl: "imagebrowser/upload",
+          thumbnailUrl: "imagebrowser/thumbnail"
+          imageUrl: "/content/images/{0}",
+        },
+        path: "/myInitialPath/"
+      }
+    });
+    </script>
 
 ### imageBrowser.fileTypes `String` *(default: "*.png,*.gif,*.jpg,*.jpeg")*
 
 Defines the allowed file extensions.
 
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      imageBrowser: {
+        /* omitted for brevity */
+        fileTypes: "*.gif"
+      }
+    });
+    </script>
+
 ### imageBrowser.path `String` *(default: "/")*
 
 Defines the initial folder to display, relative to the root.
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      imageBrowser: {
+        /* omitted for brevity */
+        path: "/uploads/"
+      }
+    });
+    </script>
 
 ### imageBrowser.transport `Object`
 
@@ -588,17 +748,20 @@ Defines text for search box pleaceholder.
 
 The HTML element which represents the editor content area.
 
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.body.style.backgroundColor = "#f00";
+    </script>
+
 ## Methods
 
 ### createRange
 
 Creates a W3C-compatible **Range** object.
-
-#### Example
-
-    var editor = $("#editor").data("kendoEditor");
-
-    var range = editor.createRange();
 
 #### Parameters
 
@@ -610,35 +773,45 @@ The document that the range is associated with. If ommited, the document of the 
 
 `Range` The created **Range** object.
 
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    var range = editor.createRange();
+    </script>
+
 ### destroy
-Prepares the **Editor** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
+Prepares the widget for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
 
 > **Important:** This method does not remove the Editor element from DOM.
 
 #### Example
 
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor();
     var editor = $("#editor").data("kendoEditor");
-
-    // detach events
     editor.destroy();
+    </script>
 
 ### encodedValue
 
 Gets the HTML encoded value of the editor.
 
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({ value: "<p>foo</p>" });
+    var editor = $("#editor").data("kendoEditor");
+    console.log(editor.encodedValue()); // logs "&lt;p&gt;foo&lt;/p&gt;"
+    </script>
+
 ### exec
 
 Executes an editor command on the currently selected text.
-
-#### Example
-
-    var editor = $("#editor").data("kendoEditor");
-
-    editor.exec("bold");
-
-    editor.exec("undo");
-
-    editor.exec("foreColor", { value: "#ff0000" });
 
 #### Parameters
 
@@ -652,23 +825,47 @@ The parameters for the executed command.
 
 ##### params.value `Object`
 
+The arguments for commands that expect such
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({ value: "foo" });
+    var editor = $("#editor").data("kendoEditor");
+    editor.exec("foreColor", { value: "#f00" });
+    </script>
+
 ### focus
 
 Focuses the editable area.
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.focus();
+    </script>
 
 ### getRange
 
 Gets a **Range** object form the editable area.
 
-#### Example
-
-    var editor = $("#editor").data("kendoEditor");
-
-    var range = editor.getRange();
-
 #### Returns
 
 `Range` A W3C-compatible **Range** object that represents the currently selected text in the editor area.
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    var range = editor.getRange();
+    console.log(range);
+    </script>
 
 ### getSelection
 
@@ -678,21 +875,34 @@ Gets a W3C-compatible **Selection** object form the editable area.
 
 `Selection` a W3C-compatible **Selection** object form the editable area.
 
-### paste
-
-Pastes HTML into the editable area.
-
 #### Example
 
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor();
     var editor = $("#editor").data("kendoEditor");
+    var selection = editor.getSelection();
+    console.log(selection);
+    </script>
 
-    editor.paste("<p>new content</p>");
+### paste
+
+Pastes HTML into the editable area. Cleans up MS Word formatting.
 
 #### Parameters
 
 ##### html `String`
 
 The HTML to be pasted.
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.paste("<p>New content</p>");
+    </script>
 
 ### selectedHtml
 
@@ -702,22 +912,33 @@ Serializes the currently selected text to a XHTML string.
 
 `String` The selectied text as valid XHTML.
 
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    var html = editor.selectedHtml();
+    </script>
+
 ### refresh
 
 Reinitializes the editing area iframe. Should be used after moving the editor in the DOM.
 
+#### Example
+
+    <textarea id="editor"></textarea>
+    <div id="container"></div>
+    <script>
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.wrapper.appendTo("#container");
+    editor.refresh();
+    </script>
+
 ### selectRange
 
 Focuses the editable area and selects the range described by the range parameter.
-
-#### Example
-
-    var editor = $("#editor").data("kendoEditor"),
-        range = editor.createRange();
-
-    range.selectNodeContents(editor.body);
-
-    editor.selectRange(range);
 
 #### Parameters
 
@@ -725,24 +946,39 @@ Focuses the editable area and selects the range described by the range parameter
 
 The **Range** object that describes the new selection.
 
+#### Example - select all
+
+    <textarea id="editor"></textarea>
+    <div id="container"></div>
+    <script>
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    var range = editor.createRange();
+    range.selectNodeContents(editor.body);
+    editor.selectRange(range);
+    </script>
+
 ### update
 
 Serializes the current state of the editable area to the `<textarea>` element.
 This method should be called after modifying the editor content through the DOM.
 
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    var textarea = $("#editor");
+    textarea.kendoEditor({ value: "Hello, " });
+    var editor = textarea.data("kendoEditor");
+    editor.body.appendChild(editor.document.createTextNode("World"));
+    console.log(textarea.val()); // logs "Hello, "
+    editor.update();
+    console.log(textarea.val()); // logs "Hello, World"
+    </script>
+
 ### value
 
 Gets or sets the editor value.
-
-#### Example
-
-    var editor = $("#editor").data("kendoEditor");
-
-    // set value
-    editor.value("<p>new content</p>");
-
-    // get value
-    var htmlValue = editor.value();
 
 #### Parameters
 
@@ -754,38 +990,48 @@ The value to set.
 
 `String` The value of the Editor as HTML string.
 
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.value("<p>New content</p>");
+    console.log(editor.value()); // logs "<p>New content</p>"
+    </script>
+
 ## Events
 
 ### change
 
 Fires when Editor is blurred and its content has changed.
 
-#### Example
+#### Example - subscribe to the "change" event during initialization
 
-    function onChange(e) {
-        // handle event
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      change: function() {
+        console.log(this.value());
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "change" event after initialization
+
+    <textarea id="editor"></textarea>
+    <script>
+    function editor_change() {
+      console.log(this.value());
     }
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.bind("change", editor_change);
+    </script>
 
 ### execute
 
 Fires when an Editor command is executed.
-
-#### Example
-
-     $("#editor").kendoEditor({
-         execute: function(e) {
-             // handle event
-     });
-
-#### To set after initialization
-
-     // get a reference to the Editor
-     var editor = $("#editor").data("kendoEditor");
-
-     // bind to the execute event
-     editor.bind("execute", function(e) {
-         // handle event
-     }
 
 #### Event Data
 
@@ -797,34 +1043,104 @@ The name of the command
 
 The command instance
 
+#### Example - subscribe to the "execute" event during initialization
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      execute: function(e) {
+        console.log("executing command", e.name, e.value);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "execute" event after initialization
+
+    <textarea id="editor"></textarea>
+    <script>
+    function editor_execute() {
+      console.log("executing command", e.name, e.value);
+    }
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.bind("execute", editor_execute);
+    </script>
+
 ### keydown
 
 Fires when the user depresses a keyboard key. Triggered multiple times if the user holds the key down.
+
+#### Example - subscribe to the "keydown" event during initialization
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      keydown: function(e) {
+        console.log("keydown : keyCode=",e.keyCode);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "keydown" event after initialization
+
+    <textarea id="editor"></textarea>
+    <script>
+    function editor_keydown() {
+      console.log("keydown : keyCode=",e.keyCode);
+    }
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.bind("keydown", editor_keydown);
+    </script>
 
 ### keyup
 
 Fires when the user releases a keyboard key.
 
+#### Example - subscribe to the "keyup" event during initialization
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      keyup: function(e) {
+        console.log("keyup : keyCode=",e.keyCode);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "keyup" event after initialization
+
+    <textarea id="editor"></textarea>
+    <script>
+    function editor_keyup() {
+      console.log("keyup : keyCode=",e.keyCode);
+    }
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.bind("keyup", editor_keyup);
+    </script>
+
+#### Example - show word count
+
+    <textarea id="editor"></textarea>
+    <div id="words"></div>
+    <script>
+    function wordCount(value) {
+      return $.trim(value.replace(/<.*?>/g, " "))
+        .replace(/['";:,.?\-!]+/g, '')
+        .match(/\S+/g).length;
+    }
+
+    $("#editor").kendoEditor({
+      keyup: function(e) {
+        $("#words").text(wordCount(this.value()) + " words");
+      }
+    });
+    </script>
+
 ### paste
 
-Fires before when content is pasted in the Editor.
-
-#### Example
-
-     $("#editor").kendoEditor({
-         paste: function(e) {
-             // handle event
-     });
-
-#### To set after initialization
-
-     // get a reference to the Editor
-     var editor = $("#editor").data("kendoEditor");
-
-     // bind to the paste event
-     editor.bind("paste", function(e) {
-         // handle event
-     }
+Fires before the content is pasted in the Editor.
 
 #### Event Data
 
@@ -832,27 +1148,54 @@ Fires before when content is pasted in the Editor.
 
 The pasted content
 
+#### Example - subscribe to the "paste" event during initialization
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      paste: function(e) {
+        console.log(e.html);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "paste" event after initialization
+
+    <textarea id="editor"></textarea>
+    <script>
+    function editor_paste(e) {
+      console.log(e.html);
+    }
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.bind("paste", editor_paste);
+    </script>
+
 ### select
 
 Fires when the Editor selection has changed.
 
-#### Example
+#### Example - subscribe to the "select" event during initialization
 
-     $("#editor").kendoEditor({
-         select: function(e) {
-             // handle event
-         }
-     });
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor({
+      select: function(e) {
+      }
+    });
+    </script>
 
-#### To set after initialization
+#### Example - subscribe to the "select" event after initialization
 
-     // get a reference to the Editor
-     var editor = $("#editor").data("kendoEditor");
+    <textarea id="editor"></textarea>
+    <script>
+    function editor_select(e) {
+    }
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.bind("select", editor_select);
+    </script>
 
-     // bind to the select event
-     editor.bind("select", function(e) {
-         // handle event
-     }
 
 ## Class Fields
 
@@ -862,8 +1205,12 @@ An array of tool definitions that are used for initializing the default tools. N
 
 #### Example - insert paragraphts on Shift+Enter, line breaks on Enter
 
+    <textarea id="editor"></textarea>
+    <script>
     var defaultTools = kendo.ui.Editor.defaultTools;
 
     defaultTools["insertLineBreak"].options.shift = false;
     defaultTools["insertParagraph"].options.shift = true;
 
+    $("#editor").kendoEditor();
+    </script>
