@@ -14,7 +14,23 @@ publish: true
 
 ### style `String`*(default: "horizontal")*
 
- Defines the SplitView style - horizontal or vertical.
+Defines the SplitView style - horizontal or vertical.
+
+#### Vertical SplitView
+
+    <div data-role="splitview" data-style="vertical">
+      <div data-role="pane">
+          <div data-role="view" id="foo">Pane 1 </div>
+      </div>
+      <div data-role="pane">
+          <div data-role="view" id="foo">Pane 2 </div>
+      </div>
+     </div>
+
+    <script>
+
+        new kendo.mobile.Application();
+    </script>
 
 ## Methods
 
@@ -23,18 +39,29 @@ Prepares the **SplitView** for safe removal from DOM. Detaches all event handler
 
 > **Important:** This method does not remove the SplitView element from DOM.
 
-#### Example
-
-    var splitView = $("#splitView").data("kendoMobileSplitView");
-
-    // detach events
-    splitView.destroy();
-
 ## Events
 
 ### init
 
 Fires after the mobile SplitView and its child widgets are initialized.
+
+#### Example
+
+    <div data-role="splitview" data-init="onInit">
+      <div data-role="pane">
+          <div data-role="view" id="foo">Pane 1 </div>
+      </div>
+      <div data-role="pane">
+          <div data-role="view" id="foo">Pane 2 </div>
+      </div>
+     </div>
+
+    <script>
+        function onInit(e) {
+          console.log(e);
+        }
+        new kendo.mobile.Application();
+    </script>
 
 #### Event Data
 
@@ -45,6 +72,24 @@ The mobile SplitView instance
 ### show
 
 Fires when the mobile SplitView becomes visible.
+
+#### Example
+
+    <div data-role="splitview" data-show="onShow">
+      <div data-role="pane">
+          <div data-role="view" id="foo">Pane 1 </div>
+      </div>
+      <div data-role="pane">
+          <div data-role="view" id="foo">Pane 2 </div>
+      </div>
+     </div>
+
+    <script>
+        function onShow(e) {
+          console.log(e);
+        }
+        new kendo.mobile.Application();
+    </script>
 
 #### Event Data
 
