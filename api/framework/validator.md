@@ -61,9 +61,7 @@ Note that validation messages can also be defined on a per-component basis, via 
 
 These attributes will be checked before applying the message from the `messages` configuration option.
 
-Setting multiple `data-[rule]-msg` attributes allows a field to have different messages for each different validation rule.
-
-#### Example
+#### Setting multiple `data-[rule]-msg` attributes allows a field to have different messages for each different validation rule.
 
     <form id="myform">
         <input type="url" required data-required-msg="You need to enter a URL" data-url-msg="This url is invalid">
@@ -178,27 +176,27 @@ Get the error messages if any.
 
 #### Example
 
-   <div id="myform">
-    <input name="username" required /> <br />
-    <button id="save">Save</button>
-    <div id="errors"></div>
-  </div>
+    <div id="myform">
+        <input name="username" required /> <br />
+        <button id="save">Save</button>
+        <div id="errors"></div>
+    </div>
 
-  <script>
-    // attach a validator to the container and get a reference
-    var validatable = $("#myform").kendoValidator().data("kendoValidator");
+    <script>
+        // attach a validator to the container and get a reference
+        var validatable = $("#myform").kendoValidator().data("kendoValidator");
 
-    $("#save").click(function() {
-      //validate the input elements and check if there are any errors
-      if (validatable.validate() === false) {
-        // get the errors and write them out to the "errors" html container
-        var errors = validatable.errors();
-        $(errors).each(function() {
-          $("#errors").html(this);
+        $("#save").click(function() {
+          //validate the input elements and check if there are any errors
+          if (validatable.validate() === false) {
+            // get the errors and write them out to the "errors" html container
+            var errors = validatable.errors();
+            $(errors).each(function() {
+              $("#errors").html(this);
+            });
+          }
         });
-      }
-    });
-  </script>
+    </script>
 
 #### Returns
 
