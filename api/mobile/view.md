@@ -18,15 +18,16 @@ The MVVM model to bind to. If a string is passed, The view will try to resolve a
 
 #### Example
 
-    <script>
-     var foo = { bar: "baz" }
-    </script>
-
     <div data-role="view" data-model="foo">
        <span data-bind="text:bar"></span>
     </div>
 
-### reload `Boolean` *(default: null)*
+    <script>
+     var foo = { bar: "baz" }
+     new kendo.mobile.Application();
+    </script>
+
+### reload `Boolean` *(default: false)*
 
 Applicable to remote views only. If set to true, the remote view contents will be reloaded from the server (using Ajax) each time the view is navigated to.
 
@@ -48,19 +49,62 @@ Applicable to remote views only. If set to true, the remote view contents will b
 If set to true, the view will stretch its child contents to occupy the entire view, while disabling kinetic scrolling.
 Useful if the view contains an image or a map.
 
+#### Example
+
+    <div data-role="view" data-stretch="true">
+      <div style="background: gray">This element will be stretched</div>
+    </div>
+
+    <script>
+     new kendo.mobile.Application();
+    </script>
+
 ### title `String`
 
 The text to display in the navbar title (if present) and the browser title.
 
+#### Example
+
+    <div data-role="view" data-title="foo">
+      <div data-role="header">
+        <div data-role="navbar">
+          <span data-role="view-title"></span>
+        </div>
+      </div>
+     </div>
+
+    <script>
+    new kendo.mobile.Application();
+    </script>
+
 ### useNativeScrolling `Boolean`*(default: false)*
 
-(available since Q1 2013)
 If set to true, the view will use the native scrolling available in the current platform. This should help with form issues on some platforms (namely Android and WP8).
 Native scrolling is only enabled on platforms that support it: iOS > 4, Android > 2, WP8. BlackBerry devices do support it, but the native scroller is flaky.
+
+#### Example
+
+    <div data-role="view" data-use-native-scrolling="true">
+      <div style="height: 2000px;">Tall element - this view has native scrolling</div>
+    </div>
+
+    <script>
+    new kendo.mobile.Application();
+    </script>
 
 ### zoom `Boolean`*(default: false)*
 
 If set to true, the user can zoom in/out the contents of the view using the pinch/zoom gesture.
+
+#### Example
+
+    <div data-role="view" data-zoom="true">
+      <div style="height: 2000px;width:200px;">Big element - the view can be zoomed with two fingers</div>
+    </div>
+
+    <script>
+    new kendo.mobile.Application();
+    </script>
 
 ## Methods
 
@@ -69,23 +113,26 @@ Prepares the **View** for safe removal from DOM. Detaches all event handlers and
 
 > **Important:** This method does not remove the View element from DOM.
 
-#### Example
-
-    var view = $("#myView").data("kendoMobileView");
-
-    // detach events
-    view.destroy();
-
 ### contentElement
+
 Retrieves the current content holder of the View - this is the content element if the View is stretched or the scroll container otherwise.
 
 > **Important:** Use this method to get a reference container in order to remove or append contents to the View
 
 #### Example
 
-    var view = $("#myView").data("kendoMobileView");
+    <div data-role="view" id="myView">
+        <a data-role="button" data-click="getContentElement">Tap here</a>
+    </div>
 
-    view.contentElement();
+    <script>
+    function getContentElement() {
+        var view = $("#myView").data("kendoMobileView");
+        console.log(view.contentElement());
+    }
+
+    new kendo.mobile.Application();
+    </script>
 
 ## Events
 
@@ -143,6 +190,33 @@ Fires before the mobile View is hidden.
 
 The mobile view instance
 
+### beforeHide
+
+Fires before the mobile View becomes hidden.
+
+#### Example
+
+    <div data-role="view" id="foo" data-before-hide="beforeHide">
+        <a href="#bar" data-role="button">Bar</a>
+    </div>
+
+    <div id="bar" data-role="view">
+        The bar view
+    </div>
+
+    <script>
+        var app = new kendo.mobile.Application();
+        function beforeHide(e) {
+            console.log('foo hidden');
+        }
+    </script>
+
+#### Event Data
+
+##### e.view `kendo.mobile.ui.View`
+
+The mobile view instance
+
 ### beforeShow
 
 Fires before the mobile View becomes visible. The event can be prevented by calling the `preventDefault` method of the event parameter, in case a redirection should happen.
@@ -175,6 +249,23 @@ The mobile view instance
 
 Fires when the mobile View becomes hidden.
 
+#### Example
+
+    <div data-role="view" id="foo" data-hide="onHide">
+        <a href="#bar" data-role="button">Bar</a>
+    </div>
+
+    <div id="bar" data-role="view">
+        The bar view
+    </div>
+
+    <script>
+        var app = new kendo.mobile.Application();
+        function onHide(e) {
+            console.log('foo hidden');
+        }
+    </script>
+
 #### Event Data
 
 ##### e.view `kendo.mobile.ui.View`
@@ -185,6 +276,20 @@ The mobile view instance
 
 Fires after the mobile View and its child widgets are initialized.
 
+#### Example
+
+    <div data-role="view" id="foo" data-init="init">
+        Foo
+    </div>
+
+
+    <script>
+        var app = new kendo.mobile.Application();
+        function init(e) {
+            console.log('init');
+        }
+    </script>
+
 #### Event Data
 
 ##### e.view `kendo.mobile.ui.View`
@@ -194,6 +299,20 @@ The mobile view instance
 ### show
 
 Fires when the mobile View becomes visible.
+
+#### Example
+
+    <div data-role="view" id="foo" data-show="show">
+        Foo
+    </div>
+
+
+    <script>
+        var app = new kendo.mobile.Application();
+        function show(e) {
+            console.log('show');
+        }
+    </script>
 
 #### Event Data
 
@@ -221,9 +340,11 @@ The View mobile scroller container DOM element. Recommended if scrollable mobile
 
 #### Replace scrollable View contents
 
-    <div data-role="view" data-init="replaceContents"> ... </div>
+    <div data-role="view" data-init="replaceContents"> Old content</div>
     <script>
         function replaceContents(e) {
           e.view.scrollerContent.html("<b>New content</b>");
         }
+
+        new kendo.mobile.Application();
     </script>
