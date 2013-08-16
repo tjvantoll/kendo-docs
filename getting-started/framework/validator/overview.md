@@ -63,12 +63,6 @@ Next, a Kendo UI Validator needs to be added to the page. In a JavaScript block 
 
 With this simple configuration, the unchanged HTML5 form validation attributes will now work in old and new browsers, and an applicaiton will have complete control over the content and styling of validation error messages. When the "Save" button is clicked, if any inputs do not pass all constraints, the Kendo UI Validator will display the appropriate valdiation error message. [View the Kendo UI Validator live demo](http://demos.kendoui.com/web/validator/index.html).
 
-Each indvidual HTML input can also define a custom validation error message using the validationMessage attribute:
-
-    <input type="tel" pattern="\d{10}" validationMessage="Plase enter a ten digit phone number" />
-
-This message will override any Validator defaults and be dispalyed in the Validator error tooltip.
-
 ## Default Validation Rules
 
 ### **required**- element should have a value
@@ -95,15 +89,17 @@ This message will override any Validator defaults and be dispalyed in the Valida
 
      <input type="email" name="email" />
 
-Beside the built-in validation rules, KendoUI Validator you can set custom rules through the [rules configuration option](/api/framework/validator#rules).
+## Custom Validation Rules
+
+Beside the built-in validation rules, with KendoUI Validator you can set custom rules through the [rules configuration option](/api/framework/validator#rules).
 
 Important things to note about custom validation rules and messages:
 
-- **Each custom rule will be run for each element in a form.** If there are multiple inputs in the form and the validation should only apply to a specific input, the custom validation code should check the input before validating. For example: 
-    
+- **Each custom rule will be run for each element in a form.** If there are multiple inputs in the form and the validation should only apply to a specific input, the custom validation code should check the input before validating. For example:
+
         custom: function (input) {
             if (input.is("[name=firstName]")) {
-                return input.val() === "Test"  
+                return input.val() === "Test"
             } else {
                 return true;
             }
@@ -115,6 +111,112 @@ Important things to note about custom validation rules and messages:
 - Custom messages must match the name of the custom rule. If a custom message is not provided for a custom rule, a simple error icon will be displayed.
 
 > HTML5 also provides a way to set custom validation rules via `setCustomValidity()`, but as with other parts of HTML5, this will only work in modern browsers. To create custom rules that work in all browsers, use the Kendo UI Validator custom rule definitions.
+
+## Error Messages
+
+The KendoUI Validator provides a default messages which maps to the built-in validation rules. However, defining a custom messages as well as overriding the built-in ones is also possible.
+
+> Note that it is required that the input element has a name attribute set, in order error messages to work correctly.
+
+### Defining custom messages
+    <form id="myform">
+        <input name="username" required /> <br />
+        <input type="email" name="userEmail" required data-message="My custom email message" /> <br />
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator({
+             messages: {
+                 // defines a message for the 'custom' validation rule
+                 custom: "Please enter valid value for my custom rule",
+
+                 // overrides the built-in message for the required rule
+                 required: "My custom required message",
+
+                 // overrides the built-in message for the email rule
+                 // with a custom function that returns the actual message
+                 email: function(input) {
+                     return getMessage(input);
+                 }
+             },
+             rules: {
+               custom: function(input) {
+                 if (input.is("[name=username]")) {
+                     return input.val() === "Tom";
+                 }
+                 return true;
+               }
+             }
+        });
+
+        function getMessage(input) {
+          return input.data("message");
+        }
+    </script>
+
+Beside that build-in messages a custom messages can also be defined on a per-component basis, via the following attributes (in that order):
+
+    1. `data-[rule]-msg` -- where [rule] is the failing validation rule
+    2. `validationMessage`
+    3. `title`
+
+These attributes will be checked before applying the message from the `messages` configuration option.
+
+#### Setting multiple `data-[rule]-msg` attributes allows a field to have different messages for each different validation rule.
+
+    <form id="myform">
+        <input type="url" required data-required-msg="You need to enter a URL" data-url-msg="This url is invalid">
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator();
+    </script>
+
+#### Using validationMessage attribute to specify a custom validation message
+
+    <form id="myform">
+        <input type="tel" pattern="\d{10}" validationMessage="Plase enter a ten digit phone number" value="123"> <br />
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator();
+    </script>
+
+Validation messages can also be defined for custom rules.
+
+#### Defining validation messages for custom rules
+
+    <form id="myform">
+        <input name="username" /> <br />
+        <input name="town" /> <br />
+        <button>Validate</button>
+    </form>
+
+    <script>
+        $("#myform").kendoValidator({
+            rules: {
+              customRule1: function(input) {
+                  if (input.is("[name=username]")) {
+                    return input.val() === "Tom";
+                  }
+                  return true;
+              },
+              customRule2: function(input){
+                  if (input.is("[name=town]")) {
+                    return input.val() === "New York";
+                  }
+                  return true;
+              }
+            },
+            messages: {
+                customRule1: "Your UserName must be Tom",
+                customRule2: "Your town must be New York"
+            }
+        });
+    </script>
 
 ### Customizing the tooltip position
 
