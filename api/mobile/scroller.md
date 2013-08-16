@@ -18,41 +18,168 @@ Represents the Kendo UI Mobile Scroller widget. Inherits from [kendo.mobile.ui.W
 
 If set to true, the user can zoom in/out the contents of the widget using the pinch/zoom gesture.
 
+#### Example
+    <div data-role="view">
+        foo
+      <div data-role="scroller" style="width: 200px; height: 200px" data-zoom="true">
+        <div style="width: 500px; height: 500px">Zoomable Content</div>
+      </div>
+        bar
+     </div>
+
+    <script>
+    new kendo.mobile.Application();
+    </script>
+
 ### elastic `Boolean`*(default: true)*
 
- Weather or not to allow out of bounds dragging and easing.
+Weather or not to allow out of bounds dragging and easing.
+
+#### Example
+    <div data-role="view">
+        foo
+      <div data-role="scroller" style="width: 200px; height: 200px" data-elastic="false">
+        <div style="width: 500px; height: 500px">Content</div>
+      </div>
+        bar
+     </div>
+
+    <script>
+    new kendo.mobile.Application();
+    </script>
 
 ### pullOffset `Number`*(default: 140)*
 
  The threshold below which a releasing the scroller will trigger the pull event.
 Has effect only when the pullToRefresh option is set to true.
 
+#### Example
+    <div data-role="view">
+        foo
+        <div data-role="scroller" style="width: 200px; height: 200px" data-pull-to-refresh="true" data-pull-offset="20">
+            <div style="height: 500px">
+                Content
+            </div>
+        </div>
+        bar
+    </div>
+
+    <script>
+    new kendo.mobile.Application();
+    </script>
+
+
 ### pullTemplate `String`*(default: "Pull to refresh")*
 
- The message template displayed when the user pulls the scroller.
+The message template displayed when the user pulls the scroller.
 Has effect only when the pullToRefresh option is set to true.
+
+#### Example
+    <div data-role="view">
+        foo
+        <div data-role="scroller" style="width: 200px; height: 200px" data-pull-to-refresh="true" data-pull-template="go">
+            <div style="height: 500px">
+                Content
+            </div>
+        </div>
+        bar
+    </div>
+
+    <script id="go" type="text/x-kendo-template">
+        Go!
+    </script>
+
+    <script>
+    new kendo.mobile.Application();
+    </script>
 
 ### pullToRefresh `Boolean`*(default: false)*
 
- If set to true, the scroller will display a hint when the user pulls the container beyond its top limit.
+If set to true, the scroller will display a hint when the user pulls the container beyond its top limit.
 If a pull beyond the specified pullOffset occurs, a pull event will be triggered.
+
+#### Example
+    <div data-role="view">
+        foo
+        <div data-role="scroller" style="width: 200px; height: 200px" data-pull-to-refresh="true">
+            <div style="height: 500px">
+                Content
+            </div>
+        </div>
+        bar
+    </div>
+
+    <script>
+    new kendo.mobile.Application();
+    </script>
 
 ### refreshTemplate `String`*(default: "Refreshing")*
 
- The message template displayed during the refresh.
+The message template displayed during the refresh.
 Has effect only when the pullToRefresh option is set to true.
+
+#### Example
+    <div data-role="view">
+        foo
+        <div data-role="scroller" style="width: 200px; height: 200px" data-pull-to-refresh="true" data-refresh-template="progress">
+            <div style="height: 500px">
+                Content
+            </div>
+        </div>
+        bar
+    </div>
+
+    <script id="progress" type="text/x-kendo-template">
+        In progress...
+    </script>
+
+    <script>
+    new kendo.mobile.Application();
+    </script>
 
 ### releaseTemplate `String`*(default: "Release to refresh")*
 
- The message template displayed when the user pulls the scroller below the
-pullOffset, indicating that pullToRefresh will occur.
+The message template displayed when the user pulls the scroller below the pullOffset, indicating that pullToRefresh will occur.
 Has effect only when the pullToRefresh option is set to true.
+
+#### Example
+    <div data-role="view">
+        foo
+        <div data-role="scroller" style="width: 200px; height: 200px" data-pull-to-refresh="true" data-release-template="release">
+            <div style="height: 500px">
+                Content
+            </div>
+        </div>
+        bar
+    </div>
+
+    <script id="progress" type="text/x-kendo-template">
+        Let it go now...
+    </script>
+
+    <script>
+    new kendo.mobile.Application();
+    </script>
 
 ### useNative `Boolean`*(default: false)*
 
-(available since Q1 2013)
- If set to true, the scroller will use the native scrolling available in the current platform. This should help with form issues on some platforms (namely Android and WP8).
+If set to true, the scroller will use the native scrolling available in the current platform. This should help with form issues on some platforms (namely Android and WP8).
 Native scrolling is only enabled on platforms that support it: iOS > 4, Android > 2, WP8. BlackBerry devices do support it, but the native scroller is flaky.
+
+#### Example
+    <div data-role="view">
+        foo
+        <div data-role="scroller" style="width: 200px; height: 200px" data-use-native="true">
+            <div style="height: 500px">
+                Content
+            </div>
+        </div>
+        bar
+    </div>
+
+    <script>
+    new kendo.mobile.Application();
+    </script>
 
 ## Methods
 
@@ -62,24 +189,85 @@ Prepares the **Scroller** for safe removal from DOM. Detaches all event handlers
 
 > **Important:** This method does not remove the Scroller element from DOM.
 
-#### Example
-
-    var scroller = $("#scroller").data("kendoMobileScroller");
-
-    // detach events
-    scroller.destroy();
-
 ### disable
 
 Disables the scrolling of the element.
+
+#### Example
+    <div data-role="view">
+      <a data-role="button" data-click="disableScrolling">Disable Scrolling</a>
+            <a data-role="button" data-click="enableScrolling">Enable Scrolling</a>
+        <div data-role="scroller" style="width: 200px; height: 200px" id="scroller">
+          <div style="height: 500px">
+            Content
+          </div>
+        </div>
+        bar
+     </div>
+
+    <script>
+    function enableScrolling() {
+      $("#scroller").data("kendoMobileScroller").enable();
+    }
+
+    function disableScrolling() {
+      $("#scroller").data("kendoMobileScroller").disable();
+    }
+
+    new kendo.mobile.Application();
+    </script>
 
 ### enable
 
 Enables the scrolling of the element after it has been disabled by calling `disable`.
 
+#### Example
+    <div data-role="view">
+      <a data-role="button" data-click="disableScrolling">Disable Scrolling</a>
+            <a data-role="button" data-click="enableScrolling">Enable Scrolling</a>
+        <div data-role="scroller" style="width: 200px; height: 200px" id="scroller">
+          <div style="height: 500px">
+            Content
+          </div>
+        </div>
+        bar
+     </div>
+
+    <script>
+    function enableScrolling() {
+      $("#scroller").data("kendoMobileScroller").enable();
+    }
+
+    function disableScrolling() {
+      $("#scroller").data("kendoMobileScroller").disable();
+    }
+
+    new kendo.mobile.Application();
+    </script>
+
 ### height
 
 Returns the viewport height of the scrollable element.
+
+#### Example
+
+    <div data-role="view">
+      <a data-role="button" data-click="getHeight">Get Height</a>
+       <div data-role="scroller" style="width: 200px; height: 200px" id="scroller">
+          <div style="height: 500px">
+            Content
+          </div>
+        </div>
+        bar
+     </div>
+
+    <script>
+    function getHeight() {
+      console.log($("#scroller").data("kendoMobileScroller").height());
+    }
+
+    new kendo.mobile.Application();
+    </script>
 
 #### Returns
 
@@ -94,8 +282,8 @@ Indicate that the pull event is handled (i.e. data from the server has been retr
      <div data-role="view" data-init="initPullToRefreshScroller">
          <h2 id="pull-to-refresh-clock"></h2>
      </div>
-    <script>
 
+    <script>
      function updateClock() {
          pullTime = kendo.toString(new Date(), "hh:mm:ss tt" );
          $("#pull-to-refresh-clock").html("Last update at " + pullTime + ". <br /> Pull to refresh.");
@@ -112,19 +300,80 @@ Indicate that the pull event is handled (i.e. data from the server has been retr
              }
          })
      }
+
+      new kendo.mobile.Application();
     </script>
 
 ### reset
 
 Scrolls the container to the top.
 
+#### Example
+    <div data-role="view">
+      <a data-role="button" data-click="reset">Reset</a>
+       <div data-role="scroller" style="width: 200px; height: 200px" id="scroller">
+          <div style="height: 500px">
+            Content
+          </div>
+        </div>
+        bar
+     </div>
+
+    <script>
+    function reset() {
+      console.log($("#scroller").data("kendoMobileScroller").reset());
+    }
+
+    new kendo.mobile.Application();
+    </script>
+
 ### scrollHeight
 
 Returns the height in pixels of the scroller content.
 
+#### Example
+    <div data-role="view">
+      <a data-role="button" data-click="getHeight">Get Scroll Height</a>
+       <div data-role="scroller" style="width: 200px; height: 200px" id="scroller">
+          <div style="height: 500px">
+            Content
+          </div>
+        </div>
+        bar
+     </div>
+
+    <script>
+    function getHeight() {
+      console.log($("#scroller").data("kendoMobileScroller").scrollHeight());
+    }
+
+    new kendo.mobile.Application();
+    </script>
+
 ### scrollTo
 
 Scrolls the container to the specified location. The arguments should be negative numbers.
+
+#### Example
+     <div data-role="view">
+
+      <a data-role="button" data-click="scrollTo">Scroll To</a>
+
+       <div data-role="scroller" style="width: 200px; height: 200px" id="scroller">
+         <div style="height: 500px; width: 500px">
+            Content
+          </div>
+        </div>
+        bar
+     </div>
+
+    <script>
+    function scrollTo() {
+      console.log($("#scroller").data("kendoMobileScroller").scrollTo(-10, 10));
+    }
+
+    new kendo.mobile.Application();
+    </script>
 
 #### Parameters
 
@@ -136,15 +385,28 @@ The horizontal offset in pixels to scroll to.
 
 The vertical offset in pixels to scroll to.
 
-#### Example
-
-    var scroller = $("#scroller").data("kendoMobileScroller");
-
-    scroller.scrollTo(0, -10); // scroll 10 pixels down
-
 ### scrollWidth
 
 Returns the width in pixels of the scroller content.
+
+#### Example
+    <div data-role="view">
+      <a data-role="button" data-click="getWidth">Get Scroll Height</a>
+       <div data-role="scroller" style="width: 200px; height: 200px" id="scroller">
+          <div style="height: 500px">
+            Content
+          </div>
+        </div>
+        bar
+     </div>
+
+    <script>
+    function getWidth() {
+      console.log($("#scroller").data("kendoMobileScroller").scrollWidth());
+    }
+
+    new kendo.mobile.Application();
+    </script>
 
 ## Events
 
@@ -152,9 +414,46 @@ Returns the width in pixels of the scroller content.
 
 Fires when the pull option is set to true, and the user pulls the scrolling container beyond the specified pullThreshold.
 
+### Example
+    <div data-role="view">
+        foo
+        <div data-role="scroller" style="width: 200px; height: 200px" data-pull-to-refresh="true" data-pull-offset="20" data-pull="foo">
+            <div style="height: 500px">
+                Content
+            </div>
+        </div>
+        bar
+    </div>
+
+    <script>
+    function foo() {
+        console.log("foo!");
+    }
+    new kendo.mobile.Application();
+    </script>
+
 ### resize
 
 Fires when the scroller dimensions change (e.g. orientation change or resize)
+
+### Example
+
+    <div data-role="view">
+        foo
+        <div data-role="scroller" style="width: 200px; height: 200px" data-pull-to-refresh="true" data-pull-offset="20" data-resize="foo">
+            <div style="height: 500px">
+                Content
+            </div>
+        </div>
+        bar
+    </div>
+
+    <script>
+    function foo() {
+        console.log("foo!");
+    }
+    new kendo.mobile.Application();
+    </script>
 
 ### scroll
 
@@ -162,7 +461,9 @@ Fires when the user scrolls through the content.
 
 #### Bind to scroller scroll event in view init
 
-    <div data-role="view" data-init="attachToScroller"> ... </div>
+    <div data-role="view" data-init="attachToScroller">
+        <div style="height: 2000px">Foo</div>
+    </div>
      <script>
         function attachToScroller(e) {
           var scroller = e.view.scroller;
@@ -171,6 +472,8 @@ Fires when the user scrolls through the content.
              console.log(e.scrollLeft);
           });
         }
+
+        new kendo.mobile.Application();
      </script>
 
 #### Event Data
@@ -191,18 +494,23 @@ The inner **Scroller** element that holds the scrolling content. Use this field 
 
 #### Replace the Scroller contents
 
-    <div id="scroller" data-role="scroller"> ... </div>
+    <div data-role="view" data-init="viewInit">
+        <div id="scroller" data-role="scroller">Foo</div>
+    </div>
+
     <script>
         function viewInit(e) {
           var scroller = $("#scroller").data("kendoMobileScroller");
           scroller.scrollElement.html("<b>New content</b>");
         }
+
+        new kendo.mobile.Application();
     </script>
 
 ### scrollTop `Number`
 
 The number of pixels that are hidden from view above the scrollable area.
 
-### scrollElement `Number`
+### scrollLeft `Number`
 
 The number of pixels that are hidden from view to the left of the scrollable area.
