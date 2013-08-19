@@ -145,14 +145,6 @@ The supported values are:
     });
     </script>
 
-### rangeSize `Number`
-
-The width of the range indicators.
-
-### rangeDistance `Number`
-
-The distance from the range indicators to the ticks.
-
 ### scale `Object`
 
 Configures the scale.
@@ -381,6 +373,14 @@ Any valid CSS color string will work here, including hex and rgb.
 ### scale.rangePlaceholderColor `String`
 
 The default color for the ranges.
+
+### scale.rangeSize `Number`
+
+The width of the range indicators.
+
+### scale.rangeDistance `Number`
+
+The distance from the range indicators to the ticks.
 
 ### scale.reverse `Boolean`*(default: false)*
 
