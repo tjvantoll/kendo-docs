@@ -2295,34 +2295,21 @@ A value indicating if the series points should be highlighted.
 
 ### series.aggregate `String`*(default: "max")*
 
-Aggregate function for date series.
+The aggregate function to apply for date series.
 
 This function is used when a category (an year, month, etc.) contains two or more points.
 The function return value is displayed instead of the individual points.
 
-#### *"max"*
+The supported values are:
 
-The highest value for the date period.
-
-#### *"min"*
-
-The lowest value for the date period.
-
-#### *"sum"*
-
-The sum of all values for the date period.
-
-#### *"count"*
-
-The number of values for the date period.
-
-#### *"avg"*
-
-The average of all values for the date period.
-
-#### *function (values, series)*
-
-User-defined aggregate function.
+* "avg" - the average of all values for the date period.
+* "count" - the number of values for the date period.
+* "max" - the highest value for the date period.
+* "min" - the lowest value for the date period.
+* "sum" - the sum of all values for the date period.
+* "first" - the first value
+* function(values, series, dataItems, category) - user-defined aggregate function. Returns single value or data item.
+* object  - (compound aggregate) **Applicable to "candlestick" and ohlc "series"**. Specifies the aggregate for each data item field.
 
 ### series.axis `String`*(default: "primary")*
 

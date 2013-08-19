@@ -7552,7 +7552,8 @@ The supported values are:
 * "max" - the highest value for the date period.
 * "min" - the lowest value for the date period.
 * "sum" - the sum of all values for the date period.
-* function (values, series) - user-defined aggregate function.
+* "first" - the first value
+* function(values, series, dataItems, category) - user-defined aggregate function. Returns single value or data item.
 * object  - (compound aggregate) **Applicable to "candlestick" and ohlc "series"**. Specifies the aggregate for each data item field.
 
 ##### Example - set the chart series aggregate
