@@ -482,7 +482,7 @@ The center point between the two touches. The point has two properties, `x` and 
 
 The touch event object (available in the event handler event object) contains information about an active touch.  The touch event object instance has two properites of type `TouchAxis` - `x` and `y`.
 
-### Example
+#### Example
 
     <div id="touch">Touch here</div>
     <script>

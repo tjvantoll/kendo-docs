@@ -414,7 +414,7 @@ Returns the width in pixels of the scroller content.
 
 Fires when the pull option is set to true, and the user pulls the scrolling container beyond the specified pullThreshold.
 
-### Example
+#### Example
     <div data-role="view">
         foo
         <div data-role="scroller" style="width: 200px; height: 200px" data-pull-to-refresh="true" data-pull-offset="20" data-pull="foo">
@@ -436,7 +436,7 @@ Fires when the pull option is set to true, and the user pulls the scrolling cont
 
 Fires when the scroller dimensions change (e.g. orientation change or resize)
 
-### Example
+#### Example
 
     <div data-role="view">
         foo

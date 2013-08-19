@@ -31,7 +31,7 @@ Represents the Kendo UI Mobile ModalView widget. Inherits from [kendo.mobile.ui.
 
 The height of the ModalView container in pixels. If not set, the element style is used.
 
-## Example
+#### Example
     <div data-role="view">
       <a href="#my-modal" data-rel="modalview" data-role="button">Open Modal</a>
     </div>
@@ -47,7 +47,7 @@ The height of the ModalView container in pixels. If not set, the element style i
 
 When set to false, the ModalView will close when the user taps outside of its element.
 
-### Example
+#### Example
     <div data-role="view">
       <a href="#my-modal" data-rel="modalview" data-role="button">Open Modal</a>
     </div>
@@ -63,8 +63,7 @@ When set to false, the ModalView will close when the user taps outside of its el
 
 The width of the ModalView container in pixels. If not set, the element style is used.
 
-
-## Example
+#### Example
     <div data-role="view">
       <a href="#my-modal" data-rel="modalview" data-role="button">Open Modal</a>
     </div>
@@ -82,7 +81,7 @@ The width of the ModalView container in pixels. If not set, the element style is
 
 Close the ModalView
 
-### Example
+#### Example
 
     <div data-role="view">
         <a data-role="button"  data-click="openModal">open</a>
@@ -114,7 +113,7 @@ Prepares the **ModalView** for safe removal from DOM. Detaches all event handler
 
 Open the ModalView
 
-### Example
+#### Example
 
     <div data-role="view">
         <a data-role="button"  data-click="openModal">open</a>

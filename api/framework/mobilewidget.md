@@ -15,7 +15,7 @@ Base class of all Kendo UI Mobile widgets. Inherits from [kendo.ui.Widget](/api/
 
 Returns the [kendo.mobile.ui.View](/api/mobile/view) which contains the widget. If the widget is contained in a splitview, modalview, or drawer, the respective widget instance is returned.
 
-### Example
+#### Example
 
     <div data-role="view" id="foo" data-init="getButtonView">
         <a id="button" data-role="button">I am a mobile button</a>
