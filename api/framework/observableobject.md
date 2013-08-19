@@ -9,7 +9,7 @@ publish: true
 
 # kendo.data.ObservableObject
 
-The `ObservableObject` is a very important piece of the Kendo UI framework. It is the building block of [Kendo MVVM](/getting-started/framework/mvvm/overview). In addition·
+The `ObservableObject` is a very important piece of the Kendo UI framework. It is the building block of [Kendo MVVM](/getting-started/framework/mvvm/overview). In addition
 the Kendo [DataSource](/getting-started/framework/datasource/overview) contains instances of the `ObservableObject`. Inherits from [Observable](/api/framework/observable).
 
 ## Configuration
