@@ -139,6 +139,26 @@ field of the `selectedProduct`. If the user selects another option the `selected
 
 You can also use the `value` binding with a View-Model field which is of primitive type.
 
+### Use the value binding with a select widget to update the View-Model field with the value field when the initial value is null.
+
+    <select data-role="dropdownlist" data-option-label="Select product..." data-value-primitive="true" 
+      data-value-field="id" data-text-field="name" data-bind="value: selectedProductId, source: products">
+    </select>
+    <script>
+    var viewModel = kendo.observable({
+        selectedProductId: null,
+        products: [
+            { id: 1, name: "Coffee" },
+            { id: 2, name: "Tea" },
+            { id: 3, name: "Juice" }
+        ]
+    });
+
+    kendo.bind($("select"), viewModel);
+    </script>
+
+By default the value binding for the select widgets(`AutoComplete`, `DropDownList`, `ComboBox`, `MultiSelect`) uses the selected item from the data to update the View-Model field when the initial value is null. The `data-primitive-field` attribute can be used to specify that the View-Model field should be updated with the item value field instead.
+
 ### Use the value binding with a select whose options are created by the source binding
 
     <select data-value-field="id" data-text-field="name"
