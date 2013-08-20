@@ -615,7 +615,7 @@ Returns true if running in application mode - pinned to desktop in iOS or runnin
 
 ## Standard number formats
 
-### n
+### *n*
 
 Formats the value as a number with decimal and thousand separators.
 
@@ -628,7 +628,7 @@ Formats the value as a number with decimal and thousand separators.
     console.log(kendo.toString(1234.567, "n3")); //outputs "1.234,567"
     </script>
 
-### c
+### *c*
 
 Formats the value by adding the currency symbol.
 
@@ -641,7 +641,7 @@ Formats the value by adding the currency symbol.
     console.log(kendo.toString(1234.567, "c3")); // outputs "1.234,567 €"
     <script>
 
-### p
+### *p*
 
 Formats the value as percentage (the value is multiplied by 100).
 
@@ -652,7 +652,7 @@ Formats the value as percentage (the value is multiplied by 100).
     console.log(kendo.toString(0.22, "p3")); // outputs "22.000 %"
     </script>
 
-### e
+### *e*
 
 Returns the value in exponential format.
 
@@ -696,105 +696,339 @@ Decimal placeholder. Determines the position of the decimal separator in the res
     console.log(kendo.toString(0.45678, "0.00")); // outputs "0.46"
     </script>
 
-#### *,* - group separator placeholder
-Inserts a group separator between each group of digits.
-    kendo.tostring(12345678, "##,#"); // 12,345,678
+#### *,*
 
-#### *%* - percentage placeholder
-Multiplies a number by 100 and inserts a the percentage symbol (according to the current culture) in the result string.
+Group separator. Inserts a group separator between each group of digits.
 
-#### *e* - exponential notation
-    kendo.toString(0.45678, "e0"); // 5e-1
+##### Example
+    <script>
+    console.log(kendo.toString(12345678, "##,#")); // outputs "12,345,678"
+    </script>
 
-#### *;* - section separator
+#### *%*
 
-Defines sections of separate format strings for positive, negative, and zero numbers.
+Percentage. Multiplies a number by 100 and inserts a the percentage symbol (according to the current culture) in the result string.
 
-#### *"string"|'string'* - literal string
-Indicates literal strings which should be included in the result verbatim.
+##### Example
+    <script>
+      console.log(kendo.toString(0.14, "#%")); // outputs "14%"
+    </script>
+
+#### *e*
+
+Exponential notation.
+
+##### Example
+    <script>
+    console.log(kendo.toString(0.45678, "e0")); // outputs "5e-1"
+    </script>
+
+#### *;*
+
+Section separator. Defines sections of separate format strings for positive, negative, and zero numbers.
+
+##### Example
+
+    <script>
+      console.log(kendo.toString(3.14, "0.0;0.00")); // outputs "3.1"
+      console.log(kendo.toString(-3.14, "0.0;-0.00")); // outputs "-3.14"
+    </script>
+
+#### *"string"|'string'*
+
+Literal string. Indicates literal strings which should be included in the result verbatim.
+
+##### Example
 
 ## Standard date formats
 
-#### *d* - short date pattern
-    kendo.toString(new Date(2000, 10, 6), "d"); // 11/6/2000
+#### *d*
 
-#### *D* - long date pattern
-    kendo.toString(new Date(2000, 10, 6), "D"); // Monday, November 06, 2000
+Short date pattern.
 
-#### *F* - full date/time pattern
-    kendo.toString(new Date(2000, 10, 6), "F"); // Monday, November 06, 2000 12:00:00 AM
+##### Example
 
-#### *g* - general date/time pattern (short time)
-    kendo.toString(new Date(2000, 10, 6), "g"); // 11/6/2000 12:00 AM
+    <script>
+    console.log(kendo.toString(new Date(2000, 10, 6), "d")); // outputs "11/6/2000"
+    </script>
 
-#### *G* - general date/time pattern (long time)
-    kendo.toString(new Date(2000, 10, 6), "G"); // 11/6/2000 12:00:00 AM
+#### *D*
 
-#### *m|M* - month/day pattern
-    kendo.toString(new Date(2000, 10, 6), "m"); // November 06
+Long date pattern.
 
-#### *u* - universal sortable date/time pattern
-    kendo.toString(new Date(2000, 10, 6), "u"); // 2000-11-06 00:00:00Z
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2000, 10, 6), "D")); // outputs "Monday, November 06, 2000"
+    </script>
 
-#### *y|Y* - month/year pattern
-    kendo.toString(new Date(2000, 10, 6), "y"); // November, 2000
+#### *F*
+
+Full date time pattern.
+
+##### Example
+
+    <script>
+    console.log(kendo.toString(new Date(2000, 10, 6), "F")); // outputs "Monday, November 06, 2000 12:00:00 AM"
+    </script>
+
+#### *g*
+
+General date/time pattern (short time).
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2000, 10, 6), "g")); // outputs "11/6/2000 12:00 AM"
+    </script>
+
+#### *G*
+
+General date/time pattern (long time).
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2000, 10, 6), "G")); // outputs "11/6/2000 12:00:00 AM"
+    </script>
+
+#### *m|M*
+
+Day of month pattern.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2000, 10, 6), "m")); // outputs "November 06"
+    </script>
+
+#### *u*
+
+Universal sortable date/time pattern
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2000, 10, 6), "u")); // outputs "2000-11-06 00:00:00Z"
+    </script>
+
+#### *y|Y*
+
+Month year pattern.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2000, 10, 6), "y")); // outputs "November, 2000"
+    </script>
 
 ## Custom date formats
 Custom date formats can be created by using one or more custom date specifiers.
 
 ### Format Specifiers
 
-#### *d* - the day of the month, from 1 to 31
+#### *d*
 
-#### *dd* - the zero-padded day of the month - from 01 to 31
+The day of the month, from 1 to 31.
 
-#### *ddd* - the abbreviated name of the day of the week
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6), "yyyy/M/d")); // outputs "2013/6/6"
+    </script>
 
-#### *dddd* - the full name of the day of the week
+#### *dd*
 
-#### *f* - the tenths of a second
+The zero-padded day of the month - from 01 to 31.
 
-#### *ff* - the hundreds of a second
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6), "yyyy/M/dd")); // outputs "2013/6/06"
+    </script>
 
-#### *fff* - the milliseconds
+#### *ddd*
 
-#### *M* - the month, from 1 to 12
+The abbreviated name of the day of the week.
 
-#### *MM* - the zero-padded month, from 01 to 12
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6), "ddd,yyyy/M")); // outputs "Thu, 2013/6"
+    </script>
 
-#### *MMM* - the abbreviated name of the month
+#### *dddd*
 
-#### *MMMM* - the full name of the month
+The full name of the day of the week.
 
-#### *h* - the hour, using 12-hour clock - from 1 to 12
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6), "ddd,yyyy/M")); // outputs "Thursday, 2013/6"
+    </script>
 
-#### *hh* - the zero-padded hour, using 12-hour clock - from 01 to 12
+#### *f*
 
-#### *H* - the hour, using 24-hour clock - from 0 to 23
+The tenths of a second.
 
-#### *HH* - the zero-padded hour, using 24-hour clock - from 00 to 23
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 5, 5, 5, 500), "f")); // outputs "5"
+    </script>
 
-#### *m* - the minute, from 0 to 59
+#### *ff*
 
-#### *mm* - the zero-padded minute, from 00 to 59
+The hundreds of a second.
 
-#### *s* - the second, from 00 to 59
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 5, 5, 5, 500), "ff")); // outputs "50"
+    </script>
 
-#### *ss* - the zero-padded second, from 00 to 59
+#### *fff*
 
-#### *tt* - the AM/PM designator
+The milliseconds.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 5, 5, 5, 500), "fff")); // outputs "500"
+    </script>
+
+#### *M*
+The month, from 1 to 12.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6), "yyyy/M/d")); // outputs "2013/6/6"
+    </script>
+
+#### *MM*
+
+The zero-padded month, from 01 to 12.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6), "yyyy/MM/d")); // outputs "2013/06/6"
+    </script>
+
+#### *MMM*
+The abbreviated name of the month.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6), "yyyy/MMM/d")); // outputs "2013/Jun/6"
+    </script>
+
+#### *MMMM*
+
+The full name of the month.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6), "yyyy/MMM/d")); // outputs "2013/June/6"
+    </script>
+
+#### *h*
+The hour, using 12-hour clock from 1 to 12.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 6, 0), "h")); // outputs "6"
+    </script>
+
+#### *hh*
+The zero-padded hour, using 12-hour clock from 01 to 12.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 6, 0), "h")); // outputs "06"
+    </script>
+
+#### *H*
+
+The hour, using 24-hour clock from 0 to 23.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 13, 0), "H")); // outputs "13"
+    </script>
+
+#### *HH*
+
+The zero-padded hour, using 24-hour clock from 00 to 23.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 6, 0), "HH")); // outputs "06"
+    </script>
+
+#### *m*
+
+The minute, from 0 to 59.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 6, 30), "m")); // outputs "30"
+    </script>
+
+#### *mm*
+
+The zero-padded minute, from 00 to 59.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 6, 5), "mm")); // outputs "05"
+    </script>
+
+#### *s*
+
+The second, from 0 to 59.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 6, 5, 5), "s")); // outputs "5"
+    </script>
+
+#### *ss*
+
+The zero-padded second, from 00 to 59.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 6, 5, 5), "ss")); // outputs "05"
+    </script>
+
+#### *tt*
+
+The AM/PM designator.
+
+##### Example
+    <script>
+    console.log(kendo.toString(new Date(2013, 5, 6, 13, 0), "HH tt")); // outputs "13 PM"
+    </script>
 
 ### unbind
 
 Unbinds a tree of HTML elements from a View-Model.
+
 #### Example
-    kendo.unbind($("body"));
+     <div id="view">
+       <label>First Name:<input data-bind="value: firstName" /></label>
+       <label>Last Name:<input data-bind="value: lastName" /></label>
+       <button data-bind="click: displayGreeting">Display Greeting</button>
+     </div>
+     <script>
+     var viewModel = kendo.observable({
+        firstName: "John",
+        lastName: "Doe",
+        displayGreeting: function() {
+            // Get the current values of "firstName" and "lastName"
+            var firstName = this.get("firstName");
+            var lastName = this.get("lastName");
+            alert("Hello, " + firstName + " " + lastName + "!!!");
+        }
+     });
+     kendo.bind($("#view"), viewModel);
+     // unbind the view model
+     kendo.unbind($("#view"));
+     </script>
+
 #### Parameters
+
 ##### element `String|jQuery|Node`
 
 The root element(s) from which the unbinding starts. Can be a valid jQuery string selector, a DOM element or a jQuery object.
 All child elements are traversed.
-
 
 <a name="Color"></a>
 ## Color objects
