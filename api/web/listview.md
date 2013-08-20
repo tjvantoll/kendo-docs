@@ -436,3 +436,71 @@ The item element to be deleted.
 ##### e.model `kendo.data.Model`
 
 The model which to be deleted.
+
+### save
+
+Fired when a data item is saved.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.model `kendo.data.Model`
+
+The data item to which the ListView item is bound.
+
+##### e.item `jQuery`
+
+The jQuery object representing the current ListView item.
+
+##### e.sender `kendo.ui.ListView`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "save" event
+
+    <div id="listview"></div>
+
+    <script type="text/x-kendo-tmpl" id="template">
+      <div class="item">
+        <p>#: name # || #: age #</p>
+          <div class="edit-buttons">
+            <a class="k-button k-button-icontext k-edit-button" href="\\#"><span class="k-icon k-edit"></span></a>
+            <a class="k-button k-button-icontext k-delete-button" href="\\#"><span class="k-icon k-delete"></span></a>
+          </div>
+      </div>
+    </script>
+
+    <script type="text/x-kendo-tmpl" id="editTemplate">
+      <div class="item">
+        <div class="edit-buttons">
+            <a class="k-button k-button-icontext k-update-button" href="\\#"><span class="k-icon k-update"></span></a>
+            <a class="k-button k-button-icontext k-cancel-button" href="\\#"><span class="k-icon k-cancel"></span></a>
+        </div>
+        <input type="text" class="k-textbox" data-bind="value:name" name="name" required="required" validationMessage="required" />
+        <span data-for="name" class="k-invalid-msg"></span>
+        <br />
+        <input type="text" data-role="numerictextbox" data-bind="value:age" name="age" required="required" validationMessage="required" />
+        <span data-for="age" class="k-invalid-msg"></span>
+      </div>
+    </script>
+
+    <script>
+    $("#listview").kendoListView({
+      dataSource: {
+        data:[
+          { id: 1, name: "Jane Doe", age: 30},
+          { id: 2, name: "John Doe", age: 33}
+        ],
+        schema: {
+          model: { id: "id" }
+        }
+      },
+      template: kendo.template($("#template").html()),
+      editTemplate: kendo.template($("#editTemplate").html()),
+      save: function(e) {
+        console.log("record is modified");
+        //handle event
+      }
+    });
+    </script>
