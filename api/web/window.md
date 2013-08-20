@@ -19,53 +19,146 @@ Represents the Kendo UI Window. Inherits from [Widget](/api/framework/widget).
 The buttons for interacting with the window. Predefined array values are "Close", "Refresh", "Minimize",
 and "Maximize".
 
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      actions: [ "Minimize", "Maximize" ]
+    });
+    </script>
+
 ### animation `Object`
 
 A collection of {Animation} objects, used to change default animations. A value of **false**
 will disable all animations in the widget.
 
+#### Example - disable animation
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      animation: false
+    });
+    </script>
+
 ### animation.close `Object`
 
 The animation that will be used when a Window closes.
+
+#### Example - disable close animation
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      animation: {
+        close: false
+      }
+    });
+    </script>
 
 ### animation.close.effects `String`
 
 Effect to be used for closing of the popup.
 
+#### Example - use only fade out animation when closing window
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      animation: {
+        close: {
+          effects: "fade:out"
+        }
+      }
+    });
+    </script>
+
 ### animation.close.duration `Number`
 
-Difines the animation duration.
+Defines the close animation duration.
 
-### animation.close.reverse `Boolean` *(default: false)*
+#### Example - make the close animation 2 seconds long
 
-Whether the effect should play backwards, useful when doing the same animation but with the opposite direction, like opening and closing.
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      animation: {
+        close: {
+          duration: 2000
+        }
+      }
+    });
+    </script>
 
 ### animation.open `Object`
 
 The animation that will be used when a Window opens.
 
+#### Example - disable open animation
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      animation: {
+        open: false
+      },
+      visible: false
+    });
+    $("#dialog").data("kendoWindow").open();
+    </script>
+
 ### animation.open.effects `String`
 
 Effect to be used for opening of the popup.
 
+#### Example - use only fade animation when opening window
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      animation: {
+        open: {
+          effects: "fade:in"
+        }
+      },
+      visible: false
+    });
+    $("#dialog").data("kendoWindow").open();
+    </script>
+
 ### animation.open.duration `Number`
 
-Difines the animation duration.
+Defines the open animation duration.
 
-### animation.open.reverse `Boolean` *(default: false)*
+#### Example - make the open animation 100 milliseconds long
 
-Whether the effect should play backwards, useful when doing the same animation but with the opposite direction, like opening and closing.
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      animation: {
+        open: {
+          duration: 100
+        }
+      },
+      visible: false
+    });
+    $("#dialog").data("kendoWindow").open();
+    </script>
 
 ### appendTo `Object|String`*(default: document.body)*
 
 The element that the Window will be appended to. Beneficial if the [Window is used together with a form](http://docs.kendoui.com/getting-started/web/window/overview#using-kendo-ui-window-with-a-form).
 Note that this *does not* constrain the window dragging within the given element.
 
-#### Set the window container to be the form with id="mainForm"
+#### Example - set the window container to be the form with id="mainForm"
 
+    <div id="dialog"></div>
+    <script>
     $("#dialog").kendoWindow({
-        appendTo: "#mainForm"
+      appendTo: "form#mainForm"
     });
+    </script>
 
 ### content `Object|String`
 
@@ -75,27 +168,59 @@ Note: For URLs starting with a protocol (e.g. http://),
 a container iframe element is automatically created. This behavior may change in future
 versions, so it is advisable to always use the [iframe configuration option](#iframe).
 
+#### Example - fetch content from the server
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      content: "/details"
+    });
+    </script>
+
 ### content.template `String`
 
 Template for the content of a **Window**. Returned data from the server will be given as the `data` of this template.
 Note that if the returned data is JSON, the [`dataType` parameter](http://api.jquery.com/jQuery.ajax/) should be passed, so that the data gets parsed by jQuery.
 
+#### Example - fetch JSON and display it through a template
+
+    <div id="dialog"></div>
+    <script>
     $("#dialog").kendoWindow({
-        content: {
-            url: "/userDetails",
-            dataType: "json",
-            template: "User name: #= data.username #"
-        }
+      content: {
+        url: "/userDetails",
+        dataType: "json",
+        template: "User name: #= data.username #"
+      }
     });
+    </script>
 
-### draggable `Boolean`*(default: true)*
+### draggable `Boolean` *(default: true)*
 
-Enables (**true**) or disables (**false**) the ability for users to move/drag a
-**Window**.
+Enables (**true**) or disables (**false**) the ability for users to move/drag the widget.
+
+#### Example - disable window dragging
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      draggable: false
+    });
+    </script>
 
 ### iframe `Boolean`
 
 Explicitly states whether content iframe should be created.
+
+#### Example - load full page
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      content: "http://www.kendoui.com/",
+      iframe: true
+    });
+    </script>
 
 ### maxHeight `Number`*(default: Infinity)*
 
