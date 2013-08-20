@@ -817,6 +817,7 @@ Month year pattern.
     </script>
 
 ## Custom date formats
+
 Custom date formats can be created by using one or more custom date specifiers.
 
 ### Format Specifiers
