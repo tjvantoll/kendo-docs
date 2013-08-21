@@ -156,7 +156,7 @@ The scripts must be evaluated manually in the [Grid's dataBound event](/api/web/
 	@(Html.Kendo().Grid<ModelType>()
 		.Name("GridID")
 		.Columns(columns => {
-			columns.HtmlAttributes(new { @class = "templateCell"}).ClientTemplate(
+			columns.Template().HtmlAttributes(new { @class = "templateCell"}).ClientTemplate(
 				Html.Kendo().Menu()
 					.Name("menu_#=OrderID#")
 					.ToClientTemplate().ToHtmlString()
