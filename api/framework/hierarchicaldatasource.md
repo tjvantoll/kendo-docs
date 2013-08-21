@@ -29,36 +29,46 @@ widget needs to have different states for items that have no children (e.g. the 
 ### schema.model.children `String | Object` *(default: "items")*
 
 DataSource object or configuration for fetching child nodes. Through examples of that can be found
-in the **Getting started** section above.
+in the **Getting started** section.
 
 For static HierarchicalDataSource (local data), this field may be a `String`,
 indicating which field holds the nested data.
 
 #### Example
 
-    var localDataSource = new kendo.data.HierarchicalDataSource({
-        data: [ {
-              categoryName: "SciFi",
-              movies: [
-                { title: "Star Wars: A New Hope", year: 1977 },
-                { title: "Star Wars: The Empire Strikes Back", year: 1980 },
-                { title: "Star Wars: Return of the Jedi", year: 1983 }
-              ]
-          }, {
-              categoryName: "Drama",
-              movies: [
-                { title: "The Shawshenk Redemption", year: 1994 },
-                { title: "Fight Club", year: 1999 },
-                { title: "The Usual Suspects", year: 1995 }
-              ]
-          }
-        ],
-        schema: {
-            model: {
-                children: "movies"
-            }
+    <script>
+    var datasource = new kendo.data.HierarchicalDataSource({
+      data: [
+        {
+          categoryName: "SciFi",
+          movies: [
+            { title: "Star Wars: A New Hope", year: 1977 },
+            { title: "Star Wars: The Empire Strikes Back", year: 1980 },
+            { title: "Star Wars: Return of the Jedi", year: 1983 }
+          ]
+        },
+        {
+          categoryName: "Drama",
+          movies: [
+            { title: "The Shawshenk Redemption", year: 1994 },
+            { title: "Fight Club", year: 1999 },
+            { title: "The Usual Suspects", year: 1995 }
+          ]
         }
+      ],
+      schema: {
+        model: {
+          children: "movies"
+        }
+      }
     });
+
+    datasource.read();
+
+    var scifi = datasource.data()[0];
+    scifi.load();
+    console.log(scifi.children.data().length); // logs 3
+    </script>
 
 ## Methods
 
@@ -83,3 +93,23 @@ DataSource.
 
 If the event was triggered by a child datasource, this field holds a reference to the parent node.
 
+#### Example
+
+    <script>
+    var datasource = new kendo.data.HierarchicalDataSource({
+      data: [
+        { id: 1, text: "foo", items: [
+          { id: 2, text: "bar" }
+        ] }
+      ],
+      change: function(e) {
+        console.log(e.node);
+      }
+    });
+
+    // logs `undefined`, because the change event is not triggered by a node
+    datasource.read();
+
+    // logs `{ id: 1, text: "foo" }`, because the event is triggered by the root item
+    datasource.get(1).load();
+    </script>
