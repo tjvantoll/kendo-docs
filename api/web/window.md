@@ -1,7 +1,7 @@
 ---
 title: kendo.ui.Window
 meta_title: Configuration, methods and events of Kendo UI Window
-meta_description: How to initialize Window UI widget and configure its behaviors, center a window, set its content and toggle the state of the UI widget.
+meta_description: How to initialize a Window UI widget and configure its behaviors, center a window, set its content and toggle the state of the UI widget.
 slug: api-web-window
 relatedDocs: gs-web-window-overview
 tags: api,web
@@ -14,7 +14,7 @@ Represents the Kendo UI Window. Inherits from [Widget](/api/framework/widget).
 
 ## Configuration
 
-### actions `Array`*(default: ["Close"])*
+### actions `Array` *(default: ["Close"])*
 
 The buttons for interacting with the window. Predefined array values are "Close", "Refresh", "Minimize",
 and "Maximize".
@@ -146,7 +146,7 @@ Defines the open animation duration.
     $("#dialog").data("kendoWindow").open();
     </script>
 
-### appendTo `Object|String`*(default: document.body)*
+### appendTo `Object|String` *(default: document.body)*
 
 The element that the Window will be appended to. Beneficial if the [Window is used together with a form](http://docs.kendoui.com/getting-started/web/window/overview#using-kendo-ui-window-with-a-form).
 Note that this *does not* constrain the window dragging within the given element.
@@ -222,33 +222,101 @@ Explicitly states whether content iframe should be created.
     });
     </script>
 
-### maxHeight `Number`*(default: Infinity)*
+### maxHeight `Number` *(default: Infinity)*
 
 The maximum height (in pixels) that may be achieved by resizing the window.
 
-### maxWidth `Number`*(default: Infinity)*
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      maxHeight: 300
+    });
+    </script>
+
+### maxWidth `Number` *(default: Infinity)*
 
 The maximum width (in pixels) that may be achieved by resizing the window.
 
-### minHeight `Number`*(default: 50)*
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      maxWidth: 300
+    });
+    </script>
+
+### minHeight `Number` *(default: 50)*
 
 The minimum height (in pixels) that may be achieved by resizing the window.
 
-### minWidth `Number`*(default: 50)*
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      minHeight: 100
+    });
+    </script>
+
+### minWidth `Number` *(default: 50)*
 
 The minimum width (in pixels) that may be achieved by resizing the window.
 
-### modal `Boolean`*(default: false)*
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      minWidth: 100
+    });
+    </script>
+
+### modal `Boolean` *(default: false)*
 
 Specifies whether the window should show a modal overlay over the page.
 
-### pinned `Boolean`*(default: false)*
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      modal: true
+    });
+    </script>
+
+### pinned `Boolean` *(default: false)*
 
 Specifies whether the window should be pinned, i.e. it will not move together with the page content during scrolling.
+
+#### Example
+
+    <div style="height: 5000px;"></div>
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      pinned: true,
+      position: { top: 100 }
+    });
+    </script>
 
 ### position `Object`
 
 A collection of one or two members, which define the initial Window's top and/or left position on the page.
+
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      position: {
+        top: 100,
+        left: 200
+      }
+    });
+    </script>
 
 ### position.top `Number`
 
@@ -258,144 +326,257 @@ Specifies the initial top position of the window.
 
 Specifies the initial left position of the window.
 
-### resizable `Boolean`*(default: true)*
+### resizable `Boolean` *(default: true)*
 
-Enables (**true**) or disables (**false**) the ability for users to resize a
-**Window**.
+Enables (**true**) or disables (**false**) the ability for users to resize a **Window**.
 
-### title `String|Boolean`*default: ""*
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      resizable: false
+    });
+    </script>
+
+### title `String|Boolean` *default: ""*
 
 The text in the window title bar. If `false`, the window will be displayed without a title bar. Note that this will prevent the window from being dragged, and the window titlebar buttons will not be shown.
 
-### visible `Boolean`*(default: true)*
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      title: "Customer details"
+    });
+    </script>
+
+#### Example - create a window without a title
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      title: false
+    });
+    </script>
+
+### visible `Boolean` *(default: true)*
 
 Specifies whether the window will be initially visible.
+
+#### Example - show a dialog after one second delay
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      visible: false
+    });
+    setTimeout(function() {
+      $("#dialog").data("kendoWindow").open();
+    }, 1000);
+    </script>
 
 ### width `Number | String`
 
 Specifies width of the window.
 
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      width: 400
+    });
+    </script>
+
+#### Example - specify window width in percent
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      width: "50%"
+    });
+    </script>
+
 ### height `Number | String`
 
 Specifies height of the window.
+
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      height: 400
+    });
+    </script>
+
+#### Example - specify window height in percent
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      height: "50%"
+    });
+    </script>
 
 ## Methods
 
 ### center
 
-Centers a **Window** within the viewport.
-
-#### Example
-
-    var kendoWindow = $("#window").data("kendoWindow");
-    kendoWindow.center();
+Centers the window within the viewport.
 
 #### Returns
 
-`kendo.ui.Window` Returns the (Kendo UI) Window object to support chaining.
+`kendo.ui.Window` Returns the window object to support chaining.
+
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.center();
+    </script>
 
 ### close
 
 Closes a Window.
 
-#### Close a Window; utilize chaining (if necessary)
-
-    var kendoWindow = $("#window").data("kendoWindow").close();
-
 #### Returns
 
-`kendo.ui.Window` Returns the (Kendo UI) Window object to support chaining.
+`kendo.ui.Window` Returns the window object to support chaining.
+
+#### Example - close a window after one second
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    setTimeout(function() {
+      dialog.close();
+    }, 1000);
+    </script>
 
 ### content
 
-Gets or set the content of a **Window**.
-
-#### Get the existing content of the Window
-
-    var kendoWindow = $("#window").data("kendoWindow");
-    var windowContent = kendoWindow.content();
-
-#### Set the content of a Window; utilize chaining (if necessary)
-
-    var kendoWindow = $("#window").data("kendoWindow").content("Kendo UI for all the things!");
+Gets or set the content of a window.
 
 #### Parameters
 
-##### content `String`
-
-_optional, default: _
+##### content `String` *(optional)*
 
 The content of the Window.
 
 #### Returns
 
-`kendo.ui.Window` If content is provided, this method will return the (Kendo UI) Window object to support chaining. Otherwise,
-it will return the current content of the (Kendo UI) Window.
+`kendo.ui.Window` If the content parameter is provided, this method will return the widget object to support chaining. Otherwise, it will return the current content of the widget.
+
+#### Example - get the window content
+
+    <div id="dialog">foo</div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    console.log(dialog.content()); // logs "foo"
+    </script>
+
+#### Example = set the window content
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.content("Kendo UI all the things!");
+    </script>
 
 ### destroy
 
-Destroys the window and its modal overlay, if necessary. Removes the Window HTML elements from the DOM.
+Destroys the window and its modal overlay, if necessary. Removes the widget HTML elements from the DOM.
+
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.destroy();
+    </script>
 
 ### maximize
 
 Maximizes a Window to the entire viewing area of the user agent. Triggers the resize event.
 
-#### Maximize a Window
-
-    $("#window").data("kendoWindow").maximize();
-
 #### Returns
 
-`kendo.ui.Window` Returns the (Kendo UI) Window object to support chaining.
+`kendo.ui.Window` Returns the window object to support chaining.
+
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.maximize();
+    </script>
 
 ### minimize
 
 Maximizes a Window to its title bar.
 
-#### Minimize a Window
-
-    $("#window").data("kendoWindow").minimize();
-
 #### Returns
 
-`kendo.ui.Window` Returns the (Kendo UI) Window object to support chaining.
+`kendo.ui.Window` Returns the window object to support chaining.
+
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.minimize();
+    </script>
 
 ### open
 
 Opens a Window.
 
-#### Open a Window; utilize chaining (if necessary)
-
-    var kendoWindow = $("#window").data("kendoWindow").open();
-
 #### Returns
 
-`kendo.ui.Window` Returns the (Kendo UI) Window object to support chaining.
+`kendo.ui.Window` Returns the window object to support chaining.
+
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      visible: false
+    });
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.open();
+    </script>
 
 ### pin
 
 Pins the Window at its current position with a position:fixed style, i.e. the widget stops moving together with the other page content when the page is scrolled.
 The user will still be able to move the Window with the mouse or keyboard.
 
+#### Example
+
+    <div style="height: 5000px;"></div>
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      position: { top: 100 }
+    });
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.pin();
+    </script>
+
 ### refresh
 
 Refreshes the content of a Window from a remote URL or the initially defined [content template](/api/web/window#configuration-content.template).
-
-#### Example
-
-    var windowObject = $("#window").data("kendoWindow");
-    windowObject.refresh("/feedbackForm");
-
-    windowObject.refresh({
-        url: "/feedbackForm",
-        data: { userId: 42 }
-    });
-
-    windowObject.refresh({
-        url: "/userInfo",
-        data: { userId: 42 },
-        template: "Hello, #= firstName # #= lastName #"
-    });
 
 #### Parameters
 
@@ -428,86 +609,154 @@ Indicates whether the content should be fetched within an iframe, or with AJAX a
 
 #### Returns
 
-`kendo.ui.Window` Returns the (Kendo UI) Window object to support chaining.
+`kendo.ui.Window` Returns the window object to support chaining.
+
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.refresh("/feedbackForm");
+
+    dialog.refresh({
+        url: "/feedbackForm",
+        data: { userId: 42 }
+    });
+
+    dialog.refresh({
+        url: "/userInfo",
+        data: { userId: 42 },
+        template: "Hello, #= firstName # #= lastName #"
+    });
+    </script>
 
 ### restore
 
 Restores a maximized or minimized Window to its previous state. Triggers the resize event.
 
-#### Restore the state of a Window; utilize chaining (if necessary)
-
-    var kendoWindow = $("#window").data("kendoWindow").restore();
-
 #### Returns
 
-`kendo.ui.Window` Returns the (Kendo UI) Window object to support chaining.
+`kendo.ui.Window` Returns the window object to support chaining.
+
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.refresh("/feedbackForm");
+
+    dialog.refresh({
+        url: "/feedbackForm",
+        data: { userId: 42 }
+    });
+
+    dialog.refresh({
+        url: "/userInfo",
+        data: { userId: 42 },
+        template: "Hello, #= firstName # #= lastName #"
+    });
+    </script>
 
 ### setOptions
 
 Allows the window to be configured with new options.
 
-#### Set new dimensions to the window
+#### Example - set new dimensions to the window
 
-    var kendoWindow = $("#window").data("kendoWindow");
-
-    kendoWindow.setOptions({
-        width: 180,
-        height: 225
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.setOptions({
+      width: 180,
+      height: 225
     });
+    </script>
 
 ### title
 
 Gets or set the title of a **Window**.
 
-#### Get the existing title of the Window
-
-    var kendoWindow = $("#window").data("kendoWindow");
-    var windowTitle = kendoWindow.title();
-
-#### Set the title of a Window; utilize chaining (if necessary)
-
-    var kendoWindow = $("#window").data("kendoWindow").title("Do a barrel roll!");
-
 #### Parameters
 
-##### text `String`
-
-_optional, default: _
+##### text `String` *(optional)*
 
 The title of the Window.
 
 #### Returns
 
-`kendo.ui.Window` If a title is provided, this method will return the (Kendo UI) Window object to support chaining. Otherwise,
-it will return the current title of the (Kendo UI) Window.
+`kendo.ui.Window` If a title is provided, this method will return the window object to support chaining. Otherwise, it will return the current title of the window.
+
+#### Example - get the title of the window
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    var title = dialog.title();
+    </script>
+
+#### Example - set the title of a window
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.title("Hello");
+    </script>
 
 ### toFront
 
 Brings forward a Window to the top of the z-index.
 
-#### Bring forward a Window; utilize chaining (if necessary)
-
-    var kendoWindow = $("#window").data("kendoWindow").toFront();
-
 #### Returns
 
-`kendo.ui.Window` Returns the (Kendo UI) Window object to support chaining.
+`kendo.ui.Window` Returns the window object to support chaining.
+
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.toFront();
+    </script>
 
 ### toggleMaximization
 
 Toggles a Window between a maximized and restored state. Triggers the resize event.
 
-#### Toggle the state of a Window; utilize chaining (if necessary)
-
-    var kendoWindow = $("#window").data("kendoWindow").toggleMaximization();
-
 #### Returns
 
-`kendo.ui.Window` Returns the (Kendo UI) Window object to support chaining.
+`kendo.ui.Window` Returns the window object to support chaining.
+
+#### Example
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.toggleMaximization();
+    </script>
 
 ### unpin
 
 Disables the Window's pinned state, so that the widget will move together with the other page content when the page is scrolled.
+
+#### Example
+
+    <div style="height: 5000px;"></div>
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      pinned: true,
+      position: { top: 100 }
+    });
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.unpin();
+    </script>
 
 ## Events
 
@@ -515,39 +764,206 @@ Disables the Window's pinned state, so that the widget will move together with t
 
 Triggered when a Window has finished its opening animation.
 
+#### Example - subscribe to the "activate" event during initialization
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      activate: function() {
+        // open animation has finished playing
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "activate" event after initialization
+
+    <div id="dialog"></div>
+    <script>
+    function window_activate() {
+      // open animation has finished playing
+    }
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.bind("activate", window_activate);
+    </script>
+
 ### close
 
 Triggered when a Window is closed (by a user or through the close() method).
+
+#### Event Data
+
+##### e.userTriggered `Boolean`
+
+Indicates whether the close action has been triggered by the user (by clicking the close button or hitting the escape key). When the close method has been called, this field is **false**.
+
+#### Example - subscribe to the "close" event during initialization
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      close: function(e) {
+        // close animation has finished playing
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "close" event after initialization
+
+    <div id="dialog"></div>
+    <script>
+    function window_close(e) {
+      // close animation has finished playing
+    }
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.bind("close", window_close);
+    </script>
 
 ### deactivate
 
 Triggered when a Window has finished its closing animation.
 
+#### Example - subscribe to the "deactivate" event during initialization
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      deactivate: function() {
+        // close animation will start soon
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "deactivate" event after initialization
+
+    <div id="dialog"></div>
+    <script>
+    function window_deactivate() {
+      // close animation will start soon
+    }
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.bind("deactivate", window_deactivate);
+    </script>
+
 ### dragend
 
 Triggered when a Window has been moved by a user.
+
+#### Example - subscribe to the "dragend" event during initialization
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      dragend: function() {
+        // user has released the window after dragging
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "dragend" event after initialization
+
+    <div id="dialog"></div>
+    <script>
+    function window_dragend() {
+      // user has released the window after dragging
+    }
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.bind("dragend", window_dragend);
+    </script>
 
 ### dragstart
 
 Triggered when the user starts to move the window.
 
+#### Example - subscribe to the "dragstart" event during initialization
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      dragstart: function() {
+        // user has started dragging the window
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "dragstart" event after initialization
+
+    <div id="dialog"></div>
+    <script>
+    function window_dragstart() {
+      // user has started dragging the window
+    }
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.bind("dragstart", window_dragstart);
+    </script>
+
 ### error
 
 Triggered when an AJAX request for content fails.
 
-#### Arguments
+#### Event Data
 
-##### xhr `jqXHR`
+##### e.xhr `jqXHR`
 
 The XHR request object, as returned from [jQuery.ajax](http://api.jquery.com/jQuery.ajax/)
 
-##### status `String`
+##### e.status `String`
 
 The status of the request, as returned from [jQuery.ajax](http://api.jquery.com/jQuery.ajax/)
+
+#### Example - subscribe to the "error" event during initialization
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      error: function(e) {
+        console.log("Request failed with status " + e.status)
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "error" event after initialization
+
+    <div id="dialog"></div>
+    <script>
+    function window_error(e) {
+      console.log("Request failed with status " + e.status)
+    }
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.bind("error", window_error);
+    </script>
 
 ### open
 
 Triggered when a Window is opened (i.e. the open() method is called).
+
+#### Example - subscribe to the "open" event during initialization
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      open: function() {
+        // open animation will start soon
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "open" event after initialization
+
+    <div id="dialog"></div>
+    <script>
+    function window_open() {
+      // open animation will start soon
+    }
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.bind("open", window_open);
+    </script>
 
 ### refresh
 
@@ -555,7 +971,53 @@ Triggered when the content of a Window has finished loading via AJAX,
 when the window iframe has finished loading, or when the refresh button
 has been clicked on a window with static content.
 
+#### Example - subscribe to the "refresh" event during initialization
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      refresh: function() {
+        // new content has been fetched
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "refresh" event after initialization
+
+    <div id="dialog"></div>
+    <script>
+    function window_refresh() {
+      // new content has been fetched
+    }
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.bind("refresh", window_refresh);
+    </script>
+
 ### resize
 
-Triggered when a Window has been resized by a user.
+Triggered when a window has been resized by a user.
+
+#### Example - subscribe to the "resize" event during initialization
+
+    <div id="dialog"></div>
+    <script>
+    $("#dialog").kendoWindow({
+      resize: function() {
+        // user has finished resizing the window
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "resize" event after initialization
+
+    <div id="dialog"></div>
+    <script>
+    function window_resize() {
+      // user has finished resizing the window
+    }
+    $("#dialog").kendoWindow();
+    var dialog = $("#dialog").data("kendoWindow");
+    dialog.bind("resize", window_resize);
+    </script>
 
