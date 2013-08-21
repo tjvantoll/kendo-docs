@@ -144,6 +144,44 @@ The Kendo Template has an implicit parameter called `data`. Use that as the argu
     }
     </script>
 
+### How do I use a Kendo UI widget inside a Grid client column template?
+
+`script` tags are not automatically evaluated inside a Grid client column template, so any included widgets will not be initialized.
+The scripts must be evaluated manually in the [Grid's dataBound event](/api/web/grid#events-dataBound).
+
+#### Example: Add a Kendo UI Menu inside a Grid client column template
+
+**C#**
+
+	@(Html.Kendo().Grid<ModelType>()
+		.Name("GridID")
+		.Columns(columns => {
+			columns.HtmlAttributes(new { @class = "templateCell"}).ClientTemplate(
+				Html.Kendo().Menu()
+					.Name("menu_#=OrderID#")
+					.ToClientTemplate().ToHtmlString()
+				);    
+		})
+		.Events(ev => ev.DataBound("initMenus"))
+	)
+
+**Javascript**
+	
+	function initMenus(e) {
+		$(".templateCell").each(function(){
+			eval($(this).children("script").last().html());
+		});
+	}
+
+**CSS**
+	
+The Menu requires the Grid cells to allow overflowing, which is disabled by default:
+
+	.k-widget .templateCell
+	{
+		overflow: visible;
+	}
+	
 ### How do I change the format of a bound column?
 
 Use the [Format](api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/GridBoundColumnBuilder#formatsystem.string) method.
