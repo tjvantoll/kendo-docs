@@ -25,8 +25,9 @@ The following combined scripts are provided in order to simplify development and
 *   **kendo.mobile.min.js** contains a minified version of all scripts from Kendo UI Mobile.
 
 > **Important:** Only one of the **kendo.web.min.js**, **kendo.dataviz.min.js** and **kendo.mobile.min.js** JavaScript files can be included at a time. If widgets from
-different Kendo UI suites are needed one can either use **kendo.all.min.js** or create a custom combined JavaSript file via the [custom download builder tool](http://www.kendoui.com/custom-download).
-In addition, each of these three files should not be registered together with an individual widget script, e.g. `kendo.grid.js`.
+different Kendo UI suites will be used simultaneously, one can either use **kendo.all.min.js** or create a custom combined JavaSript file via the [custom download builder tool](http://www.kendoui.com/custom-download).
+In addition, each of the three combined script files should not be registered together with an individual widget script from the same suite. For example, `kendo.grid.js` should not be registered together with
+`kendo.web.js` or `kendo.all.js`, because they already include the Grid scripts. **Registering duplicate scripts may cause Javascript errors and unexpected behavior.**
 
 ## Custom Combined Scripts
 
@@ -59,6 +60,9 @@ with Kendo UI for service packs. We can do this for major releases. The followin
 * Kendo UI 2011.3.1129 (Q3 2011) - jQuery 1.7.1
 
 There should be no problem to use another minor jQuery version instead of the specified above, e.g. 1.7.2 instead of 1.7.1.
+
+> Registering a new jQuery instance after the Kendo UI script files will delete all Kendo UI jQuery plugins and Javascript errors will occur.
+For more information, please refer to the [Troubleshooting page](/getting-started/troubleshooting#javascript-error-that-jquery-is-unavailable-or-undefined).
 
 ## Script tag placement
 

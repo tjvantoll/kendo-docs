@@ -28,7 +28,7 @@ The following JavaScript errors will be thrown (depending on the browser):
 * 'jQuery' is undefined (in Internet Explorer)
 
 #### Solution
-Make sure that jQuery is included **before** the Kendo UI JavaScript files and before any Javascript statements that depend on it.
+Make sure that jQuery is included **only before** the Kendo UI JavaScript files and before any Javascript statements that depend on it.
 
 ### JavaScript error that Kendo widgets are unavailable or undefined
 
