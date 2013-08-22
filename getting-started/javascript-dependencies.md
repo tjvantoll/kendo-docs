@@ -26,7 +26,7 @@ The following combined scripts are provided in order to simplify development and
 
 > **Important:** Only one of the **web**, **dataviz**, **mobile** and **all** combined JavaScript files can be included at a time, because they contain some shared scripts. If widgets from
 different Kendo UI suites will be used simultaneously, one should either use **kendo.all.min.js** or create a custom combined JavaSript file via the [custom download builder tool](http://www.kendoui.com/custom-download).
-In addition, each of the three combined script files should not be registered together with an individual widget script from the same suite. For example, `kendo.grid.js` should not be registered together with
+In addition, each of the combined script files should not be registered together with an individual widget script from the same suite. For example, `kendo.grid.js` should not be registered together with
 `kendo.web.js` or `kendo.all.js`, because they already include the Grid scripts. **Registering duplicate scripts may cause Javascript errors and unexpected behavior.**
 
 ## Custom Combined Scripts
@@ -641,5 +641,3 @@ Framework and Widgets for Mobile Applications
 1. kendo.core.js
 1. kendo.userevents.js
 1. kendo.touch.js
-
-
