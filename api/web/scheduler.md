@@ -2621,6 +2621,308 @@ The widget instance which fired the event.
     scheduler.bind("edit", scheduler_edit);
     </script>
 
+### moveStart
+
+Fired when the user starts to drag an event.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.event `kendo.data.SchedulerEvent`
+
+The event which is being moved.
+
+##### e.preventDefault `Function`
+
+If invoked prevents the move action.
+
+##### e.sender `kendo.ui.Scheduler`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "moveStart" event during initialization
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ],
+      moveStart: function(e) {
+        console.log("Move Start", e.event.title);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "moveStart" event after initialization
+
+    <div id="scheduler"></div>
+    <script>
+    function scheduler_moveStart(e) {
+      console.log("Move Start", e.event.title);
+    }
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    var scheduler = $("#scheduler").data("kendoScheduler");
+    scheduler.bind("moveStart", scheduler_moveStart);
+    </script>
+
+### move
+
+Fired when the user is moving an event.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.event `kendo.data.SchedulerEvent`
+
+The event which is being moved.
+
+##### e.slot `Object`
+
+The slot over which the event is currently positioned.
+
+###### e.slot.element `jQuery`
+
+The slot's element.
+
+###### e.slot.start `Date`
+
+The slot's start date.
+
+###### e.slot.end `Date`
+
+The slot's end date.
+
+##### e.preventDefault `Function`
+
+If invoked prevents the move action.
+
+##### e.sender `kendo.ui.Scheduler`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "move" event during initialization
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ],
+      move: function(e) {
+        console.log("Move", e.slot.start);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "move" event after initialization
+
+    <div id="scheduler"></div>
+    <script>
+    function scheduler_move(e) {
+      console.log("Move", e.slot.start);
+    }
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    var scheduler = $("#scheduler").data("kendoScheduler");
+    scheduler.bind("move", scheduler_move);
+    </script>
+
+### moveEnd
+
+Fired when the user stops moving an event.
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.event `kendo.data.SchedulerEvent`
+
+The event which is being moved.
+
+##### e.slot `Object`
+
+The slot over which the event is currently positioned.
+
+###### e.slot.element `jQuery`
+
+The slot's element.
+
+###### e.slot.start `Date`
+
+The slot's start date.
+
+###### e.slot.end `Date`
+
+The slot's end date.
+
+##### e.preventDefault `Function`
+
+If invoked prevents the move action.
+
+##### e.resources `Object`
+
+The resources for the slot if resource grouping is enabled.
+
+##### e.sender `kendo.ui.Scheduler`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "moveEnd" event during initialization
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ],
+      moveEnd: function(e) {
+        console.log("MoveEnd", e.slot.start);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "moveEnd" event after initialization
+
+    <div id="scheduler"></div>
+    <script>
+    function scheduler_moveEnd(e) {
+      console.log("MoveEnd", e.slot.start);
+    }
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    var scheduler = $("#scheduler").data("kendoScheduler");
+    scheduler.bind("moveEnd", scheduler_moveEnd);
+    </script>
+
+### navigate
+
+Fired when the user changes selected date, view or of the scheduler
+
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
+
+#### Event Data
+
+##### e.action `String`
+
+Name of the action. Possible values are:
+
+* changeView - navigate to diffrent view
+* next - navigate to next time period
+* previous - navigate to previous time period
+* today - select today's date
+* changeDate - a date is selected via the Calendar
+
+##### e.date `Date`
+
+Selected date
+
+##### e.view `String`
+
+Name of the view
+
+##### e.preventDefault `Function`
+
+If invoked prevents the action.
+
+##### e.sender `kendo.ui.Scheduler`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "navigate" event during initialization
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ],
+      navigate: function(e) {
+        console.log("navigate", e.date);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "navigate" event after initialization
+
+    <div id="scheduler"></div>
+    <script>
+    function scheduler_navigate(e) {
+      console.log("navigate", e.date);
+    }
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    var scheduler = $("#scheduler").data("kendoScheduler");
+    scheduler.bind("navigate", scheduler_navigate);
+    </script>
+
 ### remove
 
 Fired when the user clicks the "destroy" button.
