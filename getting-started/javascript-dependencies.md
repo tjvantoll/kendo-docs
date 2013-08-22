@@ -183,6 +183,7 @@ Desktop UI Widgets for mobile-ready Web Sites and Applications
 1. kendo.window.js
 1. kendo.slider.js
 1. kendo.colorpicker.js
+1. kendo.selectable.js (Image Browser feature)
 1. kendo.listview.js (Image Browser feature)
 1. kendo.upload.js (Image Browser feature)
 1. kendo.imagebrowser.js (Image Browser feature)
