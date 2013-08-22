@@ -24,8 +24,8 @@ The following combined scripts are provided in order to simplify development and
 *   **kendo.dataviz.min.js** contains a minified version of all scripts from Kendo UI DataViz.
 *   **kendo.mobile.min.js** contains a minified version of all scripts from Kendo UI Mobile.
 
-> **Important:** Only one of the **kendo.web.min.js**, **kendo.dataviz.min.js** and **kendo.mobile.min.js** JavaScript files can be included at a time. If widgets from
-different Kendo UI suites will be used simultaneously, one can either use **kendo.all.min.js** or create a custom combined JavaSript file via the [custom download builder tool](http://www.kendoui.com/custom-download).
+> **Important:** Only one of the **web**, **dataviz**, **mobile** and **all** combined JavaScript files can be included at a time, because they contain some shared scripts. If widgets from
+different Kendo UI suites will be used simultaneously, one should either use **kendo.all.min.js** or create a custom combined JavaSript file via the [custom download builder tool](http://www.kendoui.com/custom-download).
 In addition, each of the three combined script files should not be registered together with an individual widget script from the same suite. For example, `kendo.grid.js` should not be registered together with
 `kendo.web.js` or `kendo.all.js`, because they already include the Grid scripts. **Registering duplicate scripts may cause Javascript errors and unexpected behavior.**
 
