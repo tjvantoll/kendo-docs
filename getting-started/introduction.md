@@ -44,8 +44,8 @@ To use Kendo UI in your HTML page you need to include the required JavaScript an
 
 1. Download Kendo UI Web and extract the distribution zip file to a convenient location.
 1. Copy the **/js** and **/styles** directories of the Kendo UI Web distribution to your web application root directory.
-1. Include the Kendo UI Web JavaScript and CSS files in the `head` tag of your HTML page. **Make sure the common CSS file is registered before the theme CSS file.**
-** Also make sure only one combined script file is registered. For more information, please refer to the [Javascript Dependencies page](/getting-started/javascript-dependencies)**
+1. Include the Kendo UI Web JavaScript and CSS files in the `head` tag of your HTML page. **Make sure the common CSS file is registered before the theme CSS file.
+Also make sure only one combined script file is registered. For more information, please refer to the [Javascript Dependencies page](/getting-started/javascript-dependencies).**
 
         <!-- Common Kendo UI Web CSS -->
         <link href="styles/kendo.common.min.css" rel="stylesheet" />
