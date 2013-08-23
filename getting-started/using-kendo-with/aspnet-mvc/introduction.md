@@ -61,6 +61,9 @@ few project templates and wizards that allow the following:
 
 ## Manually add Kendo UI to ASP.NET MVC applications
 
+> **Only one** combined script file (kendo.all.js, kendo.web.js, kendo.dataviz.js and kendo.mobile.js) can be registered on the page.
+For more information, please refer to the [Javascript Dependencies page](/getting-started/javascript-dependencies).
+
 ### Using Kendo UI in ASP.NET MVC 3 application
 
 1.  Create a new ASP.NET MVC 3 application from Visual Studio or open an existing one.
