@@ -197,3 +197,72 @@ This happens because there is more than one Kendo UI widget with the same `Name(
 
 This can happen if the wrapper is declared without ToClientTemplate(). For more information please refer to
 [Using Kendo UI MVC wrappers inside client templates](/getting-started/using-kendo-with/aspnet-mvc/introduction#using-kendo-ui-mvc-wrappers-inside-client-templates-with-toclienttemplate())
+
+## Nesting Kendo UI wrappers produces a server-side exception when using the WebForms view engine
+
+This can happen if the nested wrappers are declared within code blocks, which output content directly, i.e. `<%= %>` or `<%: %>`.
+The following exception is thrown: **Invalid expression term ')'**.
+For example:
+
+### Wrong
+
+<%: Html.Kendo().Splitter()
+	.Name("splitter")
+	.Panes(panes =>
+	{
+		panes.Add()
+		.Content(() =>
+		{ %>
+			<%:  Html.Kendo().NumericTextBox().Name("textbox") %>
+		<% });
+	})
+%>
+
+### Correct
+
+<% Html.Kendo().Splitter()
+	.Name("splitter")
+	.Panes(panes =>
+	{
+		panes.Add()
+		.Content(() =>
+		{ %>
+			<%:  Html.Kendo().NumericTextBox().Name("textbox") %>
+		<% });
+	})
+	.Render();
+%>
+
+## Nesting Kendo UI wrappers produces a server-side exception when using the Razor view engine
+
+This can happen if there are nested `<text>` tags, which is not allowed by the Razor view engine.
+The following exception is thrown: **Inline markup blocks cannot be nested. Only one level of inline markup is allowed**.
+In such scenarios the inner widget can be included via a custom helper. For example:
+
+@helper PanelBarHelper()
+{
+	@(
+		Html.Kendo().PanelBar()
+			.Name("PanelBar")
+			.Items(items =>
+			{
+				items.Add().Text("Item 1")
+					.Content(@<text>
+						Root Item 1 Inner Content
+					</text>);
+			})
+	)
+}
+
+@(Html.Kendo().TabStrip()
+	.Name("tabstrip")
+	.Items(tabstrip =>
+	{
+		tabstrip.Add().Text("Text")
+			.Content(@<text>
+				<p>some text before</p>
+				@PanelBarHelper()
+				<p>some text after</p>
+			</text>);
+	})
+)
