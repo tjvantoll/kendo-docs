@@ -108,6 +108,11 @@ Custom variables can be defined inside a template expression and then output in 
 			</p>
         </script>
 
+Keep in mind that expressions even within HTML comments will be executed
+e.g.
+
+    <!-- #alert('it is executed!')# -->
+
 ### Internal vs. External Templates
 Kendo UI Templates can be defined in one of two ways:
 
