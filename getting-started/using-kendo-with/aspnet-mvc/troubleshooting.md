@@ -206,32 +206,32 @@ For example:
 
 ### Wrong
 
-<%: Html.Kendo().Splitter()
-	.Name("splitter")
-	.Panes(panes =>
-	{
-		panes.Add()
-		.Content(() =>
-		{ %>
-			<%:  Html.Kendo().NumericTextBox().Name("textbox") %>
-		<% });
-	})
-%>
+	<%: Html.Kendo().Splitter()
+		.Name("splitter")
+		.Panes(panes =>
+		{
+			panes.Add()
+			.Content(() =>
+			{ %>
+				<%:  Html.Kendo().NumericTextBox().Name("textbox") %>
+			<% });
+		})
+	%>
 
 ### Correct
 
-<% Html.Kendo().Splitter()
-	.Name("splitter")
-	.Panes(panes =>
-	{
-		panes.Add()
-		.Content(() =>
-		{ %>
-			<%:  Html.Kendo().NumericTextBox().Name("textbox") %>
-		<% });
-	})
-	.Render();
-%>
+	<% Html.Kendo().Splitter()
+		.Name("splitter")
+		.Panes(panes =>
+		{
+			panes.Add()
+			.Content(() =>
+			{ %>
+				<%:  Html.Kendo().NumericTextBox().Name("textbox") %>
+			<% });
+		})
+		.Render();
+	%>
 
 ## Nesting Kendo UI wrappers produces a server-side exception when using the Razor view engine
 
@@ -239,30 +239,30 @@ This can happen if there are nested `<text>` tags, which is not allowed by the R
 The following exception is thrown: **Inline markup blocks cannot be nested. Only one level of inline markup is allowed**.
 In such scenarios the inner widget can be included via a custom helper. For example:
 
-@helper PanelBarHelper()
-{
-	@(
-		Html.Kendo().PanelBar()
-			.Name("PanelBar")
-			.Items(items =>
-			{
-				items.Add().Text("Item 1")
-					.Content(@<text>
-						Root Item 1 Inner Content
-					</text>);
-			})
-	)
-}
-
-@(Html.Kendo().TabStrip()
-	.Name("tabstrip")
-	.Items(tabstrip =>
+	@helper PanelBarHelper()
 	{
-		tabstrip.Add().Text("Text")
-			.Content(@<text>
-				<p>some text before</p>
-				@PanelBarHelper()
-				<p>some text after</p>
-			</text>);
-	})
-)
+		@(
+			Html.Kendo().PanelBar()
+				.Name("PanelBar")
+				.Items(items =>
+				{
+					items.Add().Text("Item 1")
+						.Content(@<text>
+							Root Item 1 Inner Content
+						</text>);
+				})
+		)
+	}
+
+	@(Html.Kendo().TabStrip()
+		.Name("tabstrip")
+		.Items(tabstrip =>
+		{
+			tabstrip.Add().Text("Text")
+				.Content(@<text>
+					<p>some text before</p>
+					@PanelBarHelper()
+					<p>some text after</p>
+				</text>);
+		})
+	)
