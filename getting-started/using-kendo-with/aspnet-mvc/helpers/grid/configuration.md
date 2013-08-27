@@ -457,7 +457,7 @@ Enables or disables sorting by that column.
         .Name("grid")
         .Columns(
         {
-            columns.Bound(product => product.ProductID).Groupable(false);
+            columns.Bound(product => product.ProductID).Sortable(false);
             columns.Bound(product => product.ProductName);
         })
         .Groupable()
