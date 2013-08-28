@@ -3950,6 +3950,41 @@ A string, DOM element or jQuery object which represents the master table row. A 
     grid.collapseRow(".k-master-row:first");
     </script>
 
+### current
+
+Selects cell for keyboard navigation. This set the current position of the keyboard navigation.
+
+#### Parameters
+
+##### cell `Element|jQuery`
+
+DOM element or jQuery object which represents the navigatable cell.
+
+#### Example - select last cell for keyboard navigation
+
+    <div id="grid"></div>
+    <script>
+    $("#grid").kendoGrid({
+        columns: [
+        { field: "name" },
+        { field: "age" }
+        ],
+        dataSource: [
+        { name: "Jane Doe", age: 30 },
+        { name: "John Doe", age: 33 }
+        ],
+        navigatable: true
+    });
+    var grid = $("#grid").data("kendoGrid");
+
+    //get the last cell of the Grid
+    var lastCell = grid.tbody.find("tr:last td:last");
+    //select the cell for navigation
+    grid.current(lastCell);
+    //optional: focus the grid table 
+    grid.table.focus();
+    </script>
+
 ### dataItem
 
 Returns the data item to which the specified table row is bound.
