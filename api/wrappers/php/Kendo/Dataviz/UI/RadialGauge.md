@@ -23,7 +23,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
     $radialGauge = new \Kendo\Dataviz\UI\RadialGauge('RadialGauge');
 
     // Configure it
-    $radialGauge->rangeDistance(1)
+    $radialGauge->renderAs('value')
 
     // Output it
 
@@ -90,42 +90,6 @@ The pointer configuration options.
     $radialGauge = new \Kendo\Dataviz\UI\RadialGauge('RadialGauge');
     $color = 'value';
     $radialGauge->pointer(array('color' => $color));
-    ?>
-
-### rangeDistance
-The distance from the range indicators to the ticks.
-
-#### Returns
-`\Kendo\Dataviz\UI\RadialGauge`
-
-#### Parameters
-
-##### $value `float`
-
-
-
-#### Example 
-    <?php
-    $radialGauge = new \Kendo\Dataviz\UI\RadialGauge('RadialGauge');
-    $radialGauge->rangeDistance(1);
-    ?>
-
-### rangeSize
-The width of the range indicators.
-
-#### Returns
-`\Kendo\Dataviz\UI\RadialGauge`
-
-#### Parameters
-
-##### $value `float`
-
-
-
-#### Example 
-    <?php
-    $radialGauge = new \Kendo\Dataviz\UI\RadialGauge('RadialGauge');
-    $radialGauge->rangeSize(1);
     ?>
 
 ### renderAs

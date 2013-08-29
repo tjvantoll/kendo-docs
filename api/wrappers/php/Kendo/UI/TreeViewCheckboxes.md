@@ -13,7 +13,8 @@ A PHP class representing the checkboxes setting of TreeView.
 ## Methods
 
 ### checkChildren
-Indicates whether checkboxes of child items should get checked when the checkbox of a parent item is checked.
+Indicates whether checkboxes of child items should get checked when the checkbox of a parent item is checked. This
+also enables tri-state checkboxes with an indeterminate state.
 
 #### Returns
 `\Kendo\UI\TreeViewCheckboxes`
@@ -31,7 +32,7 @@ Indicates whether checkboxes of child items should get checked when the checkbox
     ?>
 
 ### name
-Indicates the name of the checkbox inputs that will be posted to the server.
+Sets the name attribute of the checkbox inputs. That name will be posted to the server.
 
 #### Returns
 `\Kendo\UI\TreeViewCheckboxes`
@@ -49,7 +50,8 @@ Indicates the name of the checkbox inputs that will be posted to the server.
     ?>
 
 ### template
-Template for the checkbox rendering. Used to set the  checkbox name attribute, or to add hidden inputs that will be posted along the checkboxes.
+The template which renders the checkboxes. Can be used to allow posting of
+additional information along the treeview checkboxes.The fields which can be used in the template are:
 
 #### Returns
 `\Kendo\UI\TreeViewCheckboxes`

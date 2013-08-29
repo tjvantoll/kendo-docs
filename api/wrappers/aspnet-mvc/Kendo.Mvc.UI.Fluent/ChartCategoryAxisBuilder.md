@@ -29,6 +29,19 @@ The expression used to extract the categories value from the chart model
 
 
 
+### Type(`Kendo.Mvc.UI.ChartCategoryAxisType`)
+Overrides the category axis type.
+
+
+#### Parameters
+
+##### type [Kendo.Mvc.UI.ChartCategoryAxisType](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/ChartCategoryAxisType)
+The axis type. The default is determined by the category items type.
+
+
+
+
+
 ### Categories(`System.Collections.IEnumerable`)
 Defines categories.
 

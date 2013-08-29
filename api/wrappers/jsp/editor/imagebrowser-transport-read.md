@@ -18,7 +18,7 @@ Options or URL for remote image retrieval.
 
 ### contentType `String`
 
-The content-type HTTP header sent to the server. Default is "application/x-www-form-urlencoded". Use "application/json" if the content is JSON.
+The content-type HTTP header sent to the server. Use "application/json" if the content is JSON.
 Refer to the jQuery.ajax documentation for further info.
 
 #### Example
@@ -54,7 +54,7 @@ Refer to the jQuery.ajax documentation for further info.
 
 ### url `String`
 
-The remote url to call when creating a new record.
+The remote url to call when fetching list of items.
 
 #### Example
     <kendo:editor-imageBrowser-transport-read url="url">
@@ -80,7 +80,7 @@ Refer to the jQuery.ajax documentation for further info.
 
 ### url `String`
 
-The remote url to call when creating a new record.
+The remote url to call when fetching list of items.
 
 
 #### Example
@@ -113,7 +113,7 @@ Refer to the jQuery.ajax documentation for further info.
 
 ### kendo:editor-imageBrowser-transport-read-url
 
-The remote url to call when creating a new record.
+The remote url to call when fetching list of items.
 
 
 #### Example

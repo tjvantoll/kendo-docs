@@ -18,7 +18,7 @@ The animation that will be used when a Window closes.
 
 ### duration `float`
 
-Difines the animation duration.
+Defines the close animation duration.
 
 #### Example
     <kendo:window-animation-close duration="duration">
@@ -30,13 +30,5 @@ Effect to be used for closing of the popup.
 
 #### Example
     <kendo:window-animation-close effects="effects">
-    </kendo:window-animation-close>
-
-### reverse `boolean`
-
-Whether the effect should play backwards, useful when doing the same animation but with the opposite direction, like opening and closing.
-
-#### Example
-    <kendo:window-animation-close reverse="reverse">
     </kendo:window-animation-close>
 

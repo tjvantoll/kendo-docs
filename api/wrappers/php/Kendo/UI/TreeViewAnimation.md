@@ -21,7 +21,16 @@ The animation that will be used when collapsing items.
 
 #### Parameters
 
-##### $value `\Kendo\UI\TreeViewAnimationCollapse|array`
+##### $value `boolean|\Kendo\UI\TreeViewAnimationCollapse|array`
+
+
+
+
+#### Example  - using boolean
+    <?php
+    $animation = new \Kendo\UI\TreeViewAnimation();
+    $animation->collapse(true);
+    ?>
 
 
 #### Example - using [\Kendo\UI\TreeViewAnimationCollapse](/api/wrappers/php/Kendo/UI/TreeViewAnimationCollapse)
@@ -50,7 +59,16 @@ The animation that will be used when expanding items.
 
 #### Parameters
 
-##### $value `\Kendo\UI\TreeViewAnimationExpand|array`
+##### $value `boolean|\Kendo\UI\TreeViewAnimationExpand|array`
+
+
+
+
+#### Example  - using boolean
+    <?php
+    $animation = new \Kendo\UI\TreeViewAnimation();
+    $animation->expand(true);
+    ?>
 
 
 #### Example - using [\Kendo\UI\TreeViewAnimationExpand](/api/wrappers/php/Kendo/UI/TreeViewAnimationExpand)

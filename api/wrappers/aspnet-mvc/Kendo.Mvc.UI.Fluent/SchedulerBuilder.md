@@ -253,6 +253,19 @@ The allDaySlot.
 
 
 
+### Selectable(`System.Boolean`)
+If set to true the scheduler will enable the selection
+
+
+#### Parameters
+
+##### selectable `System.Boolean`
+The selectable.
+
+
+
+
+
 ### DateHeaderTemplate(`System.String`)
 The template used to render the date header cells.
 
@@ -503,6 +516,35 @@ The isEditable
     )
 
 
+### Group(`System.Action<Kendo.Mvc.UI.Fluent.SchedulerGroupBuilder<T>>`)
+Sets the resources grouping configuration of the scheduler.
+
+
+#### Parameters
+
+##### addResourceAction System.Action<[Kendo.Mvc.UI.Fluent.SchedulerGroupBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/SchedulerGroupBuilder)<T>>
+The lambda which configures the scheduler grouping
+
+
+
+
+#### Example (Razor)
+    @(Html.Kendo().Scheduler<Task>()
+        .Name("Scheduler")
+        .Resources(resource =>
+        {
+            resource.Add(m => m.TaskID)
+            .Title("Color")
+            .Multiple(true)
+            .DataTextField("Text")
+            .DataValueField("Value")
+            .DataSource(d => d.Read("Attendies", "Scheduler"));
+        })
+        .DataSource(dataSource => dataSource
+            .Model(m => m.Id(f => f.TaskID))
+            ))
+
+
 ### Resources(`System.Action<Kendo.Mvc.UI.Fluent.SchedulerResourceFactory<T>>`)
 Sets the resources configuration of the scheduler.
 
@@ -554,6 +596,19 @@ The lambda which configures the scheduler views
         })
         .BindTo(Model)
     )
+
+
+### Messages(`System.Action<Kendo.Mvc.UI.Fluent.SchedulerMessagesBuilder>`)
+Sets the messages of the scheduler.
+
+
+#### Parameters
+
+##### addViewAction System.Action<[Kendo.Mvc.UI.Fluent.SchedulerMessagesBuilder](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI.Fluent/SchedulerMessagesBuilder)>
+The lambda which configures the scheduler messages
+
+
+
 
 
 ### Events(`System.Action<Kendo.Mvc.UI.Fluent.SchedulerEventBuilder>`)

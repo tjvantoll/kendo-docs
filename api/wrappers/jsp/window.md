@@ -38,8 +38,7 @@ The content of the window
 
 ### draggable `boolean`
 
-Enables (true) or disables (false) the ability for users to move/drag a
-Window.
+Enables (true) or disables (false) the ability for users to move/drag the widget.
 
 #### Example
     <kendo:window draggable="draggable">
@@ -111,8 +110,7 @@ Specifies whether the window should be pinned, i.e. it will not move together wi
 
 ### resizable `boolean`
 
-Enables (true) or disables (false) the ability for users to resize a
-Window.
+Enables (true) or disables (false) the ability for users to resize a Window.
 
 #### Example
     <kendo:window resizable="resizable">
@@ -305,7 +303,7 @@ For additional information check the [refresh](/api/web/window#events-refresh) e
 
 ### resize `String`
 
-Triggered when a Window has been resized by a user.
+Triggered when a window has been resized by a user.
 
 
 For additional information check the [resize](/api/web/window#events-resize) event documentation.
@@ -469,7 +467,7 @@ For additional information check the [refresh](/api/web/window#events-refresh) e
 
 ### kendo:window-resize
 
-Triggered when a Window has been resized by a user.
+Triggered when a window has been resized by a user.
 
 
 For additional information check the [resize](/api/web/window#events-resize) event documentation.

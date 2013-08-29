@@ -188,4 +188,17 @@ The isSelected
         )
 
 
+### Groups(`Kendo.Mvc.UI.SchedulerGroupOrientation`)
+Sets the orientation of the group headers
+
+
+#### Parameters
+
+##### orientation [Kendo.Mvc.UI.SchedulerGroupOrientation](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/SchedulerGroupOrientation)
+The orientation
+
+
+
+
+
 

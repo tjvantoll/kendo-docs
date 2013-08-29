@@ -37,6 +37,13 @@ The isMultiple
 
 
 
+### Name(`System.String`)
+The name of the resource.
+
+
+
+
+
 ### BindTo(`System.Collections.IEnumerable`)
 Binds the scheduler resource to a list of objects
 

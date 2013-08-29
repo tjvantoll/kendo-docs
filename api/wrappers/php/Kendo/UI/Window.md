@@ -270,8 +270,7 @@ For additional information check the [dragend](/api/web/window#events-dragend) e
     ?>
 
 ### draggable
-Enables (true) or disables (false) the ability for users to move/drag a
-Window.
+Enables (true) or disables (false) the ability for users to move/drag the widget.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -629,8 +628,7 @@ For additional information check the [refresh](/api/web/window#events-refresh) e
     ?>
 
 ### resizable
-Enables (true) or disables (false) the ability for users to resize a
-Window.
+Enables (true) or disables (false) the ability for users to resize a Window.
 
 #### Returns
 `\Kendo\UI\Window`
@@ -648,7 +646,7 @@ Window.
     ?>
 
 ### resize
-Triggered when a Window has been resized by a user.
+Triggered when a window has been resized by a user.
 For additional information check the [resize](/api/web/window#events-resize) event documentation.
 
 #### Returns

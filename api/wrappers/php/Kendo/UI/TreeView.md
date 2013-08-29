@@ -23,7 +23,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
     $treeView = new \Kendo\UI\TreeView('TreeView');
 
     // Configure it
-    $treeView->autoBind(true)
+    $treeView->animation(true)
 
     // Output it
 
@@ -43,14 +43,23 @@ Setting this option to false will disable all animations.
 
 #### Parameters
 
-##### $value `\Kendo\UI\TreeViewAnimation|array`
+##### $value `boolean|\Kendo\UI\TreeViewAnimation|array`
+
+
+
+
+#### Example  - using boolean
+    <?php
+    $treeView = new \Kendo\UI\TreeView('TreeView');
+    $treeView->animation(true);
+    ?>
 
 
 #### Example - using [\Kendo\UI\TreeViewAnimation](/api/wrappers/php/Kendo/UI/TreeViewAnimation)
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
     $animation = new \Kendo\UI\TreeViewAnimation();
-    $collapse = new \Kendo\UI\TreeViewAnimationCollapse();
+    $collapse = true;
     $animation->collapse($collapse);
     $treeView->animation($animation);
     ?>
@@ -59,7 +68,7 @@ Setting this option to false will disable all animations.
 
     <?php
     $treeView = new \Kendo\UI\TreeView('TreeView');
-    $collapse = new \Kendo\UI\TreeViewAnimationCollapse();
+    $collapse = true;
     $treeView->animation(array('collapse' => $collapse));
     ?>
 
@@ -120,7 +129,7 @@ For additional information check the [change](/api/web/treeview#events-change) e
 
 ### checkboxes
 
-If true or an object, renders checkboxes within each treeview item.
+If true or an object, renders checkboxes beside each node.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -229,8 +238,7 @@ For additional information check the [dataBound](/api/web/treeview#events-dataBo
     ?>
 
 ### dataImageUrlField
-Sets the field of the data item that provides
-the image URL of the treeview nodes.
+Sets the field of the data item that provides the image URL of the treeview nodes.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -275,8 +283,8 @@ Sets the data source of the dataSource.
     ?>
 
 ### dataSpriteCssClassField
-Sets the field of the data item that provides
-the sprite CSS class of the treeview nodes.
+Sets the field of the data item that provides the sprite CSS class of the nodes.
+If an array, each level uses the field that is at the same index in the array, or the last item in the array.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -294,7 +302,7 @@ the sprite CSS class of the treeview nodes.
     ?>
 
 ### dataTextField
-Sets the field of the data item that provides the text content of the treeview nodes.
+Sets the field of the data item that provides the text content of the nodes.
 If an array, each level uses the field that is at the same index in the array, or the last item in the array.
 
 #### Returns
@@ -319,8 +327,7 @@ If an array, each level uses the field that is at the same index in the array, o
     ?>
 
 ### dataUrlField
-Sets the field of the data item that provides
-the link URL of the treeview nodes.
+Sets the field of the data item that provides the link URL of the nodes.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -374,8 +381,7 @@ For additional information check the [drag](/api/web/treeview#events-drag) event
     ?>
 
 ### dragAndDrop
-Disables (false) or enables (true) drag-and-drop on the nodes of a
-TreeView.
+Disables (false) or enables (true) drag-and-drop of the nodes.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -575,10 +581,9 @@ Adds one or more TreeViewItem to the TreeView.
     ?>
 
 ### loadOnDemand
-Indicates whether the child datasources should be fetched
-lazily, when parent groups get expanded. Setting this to false causes all child dataSources to
-be loaded at initialization time. Note: when initializing a TreeView from array (rather than from a
-HierarchicalDataSource instance), the default value of this option is false.
+Indicates whether the child datasources should be fetched lazily when parent groups get expanded.
+Setting this to false causes all child dataSources to be loaded at initialization time.
+Note: when initializing the widget from an array (rather than from a HierarchicalDataSource instance), this option defaults to false, rather than true.
 
 #### Returns
 `\Kendo\UI\TreeView`
@@ -668,7 +673,7 @@ For additional information check the [select](/api/web/treeview#events-select) e
     ?>
 
 ### template
-Template for rendering of the nodes of the treeview.
+Template for rendering each node.
 
 #### Returns
 `\Kendo\UI\TreeView`

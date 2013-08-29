@@ -57,12 +57,28 @@ The interval between minor divisions.
     <kendo:radialGauge-scale minorUnit="minorUnit">
     </kendo:radialGauge-scale>
 
+### rangeDistance `float`
+
+The distance from the range indicators to the ticks.
+
+#### Example
+    <kendo:radialGauge-scale rangeDistance="rangeDistance">
+    </kendo:radialGauge-scale>
+
 ### rangePlaceholderColor `String`
 
 The default color for the ranges.
 
 #### Example
     <kendo:radialGauge-scale rangePlaceholderColor="rangePlaceholderColor">
+    </kendo:radialGauge-scale>
+
+### rangeSize `float`
+
+The width of the range indicators.
+
+#### Example
+    <kendo:radialGauge-scale rangeSize="rangeSize">
     </kendo:radialGauge-scale>
 
 ### reverse `boolean`

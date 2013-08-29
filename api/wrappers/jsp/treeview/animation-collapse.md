@@ -26,8 +26,8 @@ The number of milliseconds used for the animation when a node is expanded.
 
 ### effects `String`
 
-A whitespace-delimited string of animation effects that are utilized when a TreeView node
-is collapsed. Options include "fadeOut".
+A whitespace-delimited string of animation effects that are used when collapsing nodes.
+The supported effects are fadeOut and collapseVertical.
 
 #### Example
     <kendo:treeView-animation-collapse effects="effects">

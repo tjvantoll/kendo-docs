@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:editor-imageBrowser-messages\>
 
-Defines texts shown within the pager.
+Defines texts shown within the image browser.
 
 #### Example
     <kendo:editor-imageBrowser>

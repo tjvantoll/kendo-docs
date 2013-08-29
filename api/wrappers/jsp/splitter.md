@@ -12,7 +12,7 @@ A JSP wrapper for Kendo UI [Splitter](/api/web/splitter).
 
 ### orientation `String`
 
-Specifies the orientation of the Splitter.
+Specifies the orientation of the widget. Supported values are "horizontal" and "vertical".
 
 #### Example
     <kendo:splitter orientation="orientation">
@@ -65,6 +65,22 @@ For additional information check the [contentLoad](/api/web/splitter#events-cont
     <script>
         function handle_contentLoad(e) {
             // Code to handle the contentLoad event.
+        }
+    </script>
+
+### error `String`
+
+Triggered when the AJAX request that fetches a pane content has failed.
+
+
+For additional information check the [error](/api/web/splitter#events-error) event documentation.
+
+#### Example
+    <kendo:splitter error="handle_error">
+    </kendo:splitter>
+    <script>
+        function handle_error(e) {
+            // Code to handle the error event.
         }
     </script>
 
@@ -152,6 +168,24 @@ For additional information check the [contentLoad](/api/web/splitter#events-cont
                 }
             </script>
         </kendo:splitter-contentLoad>
+    </kendo:splitter>
+
+### kendo:splitter-error
+
+Triggered when the AJAX request that fetches a pane content has failed.
+
+
+For additional information check the [error](/api/web/splitter#events-error) event documentation.
+
+#### Example
+    <kendo:splitter>
+        <kendo:splitter-error>
+            <script>
+                function(e) {
+                    // Code to handle the error event.
+                }
+            </script>
+        </kendo:splitter-error>
     </kendo:splitter>
 
 ### kendo:splitter-expand

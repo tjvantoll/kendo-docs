@@ -11,13 +11,13 @@ Defines the fluent interface for configuring the chart note.
 
 ## Methods
 
-### Value(`System.Nullable<T>`)
+### Value(`System.Object`)
 Sets the note value.
 
 
 #### Parameters
 
-##### value `System.Nullable<T>`
+##### value `System.Object`
 The value of the note.
 
 

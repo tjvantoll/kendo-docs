@@ -189,6 +189,22 @@ For additional information check the [remove](/api/web/listview#events-remove) e
         }
     </script>
 
+### save `String`
+
+Fired when a data item is saved.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [save](/api/web/listview#events-save) event documentation.
+
+#### Example
+    <kendo:listView save="handle_save">
+    </kendo:listView>
+    <script>
+        function handle_save(e) {
+            // Code to handle the save event.
+        }
+    </script>
+
 ## Event Tags
 
 ### kendo:listView-cancel
@@ -298,5 +314,23 @@ For additional information check the [remove](/api/web/listview#events-remove) e
                 }
             </script>
         </kendo:listView-remove>
+    </kendo:listView>
+
+### kendo:listView-save
+
+Fired when a data item is saved.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [save](/api/web/listview#events-save) event documentation.
+
+#### Example
+    <kendo:listView>
+        <kendo:listView-save>
+            <script>
+                function(e) {
+                    // Code to handle the save event.
+                }
+            </script>
+        </kendo:listView-save>
     </kendo:listView>
 

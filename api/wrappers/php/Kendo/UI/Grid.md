@@ -325,6 +325,24 @@ For additional information check the [columnResize](/api/web/grid#events-columnR
     $grid->columnResize(new \Kendo\JavaScriptFunction('function(e) { }'));
     ?>
 
+### columnResizeHandleWidth
+Defines the width of the column resize handle in pixels. Apply a larger value for easier grasping.
+
+#### Returns
+`\Kendo\UI\Grid`
+
+#### Parameters
+
+##### $value `float`
+
+
+
+#### Example 
+    <?php
+    $grid = new \Kendo\UI\Grid('Grid');
+    $grid->columnResizeHandleWidth(1);
+    ?>
+
 ### columnShow
 Fired when the user shows a column.The event handler function context (available via the this keyword) will be set to the widget instance.
 For additional information check the [columnShow](/api/web/grid#events-columnShow) event documentation.

@@ -37,7 +37,7 @@ Defines the initial folder to display, relative to the root.
 
 ### kendo:editor-imageBrowser-messages
 
-Defines texts shown within the pager.
+Defines texts shown within the image browser.
 
 More documentation is available at [kendo:editor-imageBrowser-messages](editor/imagebrowser-messages).
 

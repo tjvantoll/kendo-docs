@@ -13,7 +13,7 @@ A PHP class representing the open setting of WindowAnimation.
 ## Methods
 
 ### duration
-Difines the animation duration.
+Defines the open animation duration.
 
 #### Returns
 `\Kendo\UI\WindowAnimationOpen`
@@ -46,23 +46,5 @@ Effect to be used for opening of the popup.
     <?php
     $open = new \Kendo\UI\WindowAnimationOpen();
     $open->effects('value');
-    ?>
-
-### reverse
-Whether the effect should play backwards, useful when doing the same animation but with the opposite direction, like opening and closing.
-
-#### Returns
-`\Kendo\UI\WindowAnimationOpen`
-
-#### Parameters
-
-##### $value `boolean`
-
-
-
-#### Example 
-    <?php
-    $open = new \Kendo\UI\WindowAnimationOpen();
-    $open->reverse(true);
     ?>
 

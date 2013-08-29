@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:treeView-checkboxes\>
 
-If true or an object, renders checkboxes within each treeview item.
+If true or an object, renders checkboxes beside each node.
 
 #### Example
     <kendo:treeView>
@@ -18,7 +18,8 @@ If true or an object, renders checkboxes within each treeview item.
 
 ### checkChildren `boolean`
 
-Indicates whether checkboxes of child items should get checked when the checkbox of a parent item is checked.
+Indicates whether checkboxes of child items should get checked when the checkbox of a parent item is checked. This
+also enables tri-state checkboxes with an indeterminate state.
 
 #### Example
     <kendo:treeView-checkboxes checkChildren="checkChildren">
@@ -26,7 +27,7 @@ Indicates whether checkboxes of child items should get checked when the checkbox
 
 ### name `String`
 
-Indicates the name of the checkbox inputs that will be posted to the server.
+Sets the name attribute of the checkbox inputs. That name will be posted to the server.
 
 #### Example
     <kendo:treeView-checkboxes name="name">
@@ -34,7 +35,8 @@ Indicates the name of the checkbox inputs that will be posted to the server.
 
 ### template `String`
 
-Template for the checkbox rendering. Used to set the  checkbox name attribute, or to add hidden inputs that will be posted along the checkboxes.
+The template which renders the checkboxes. Can be used to allow posting of
+additional information along the treeview checkboxes.The fields which can be used in the template are:
 
 #### Example
     <kendo:treeView-checkboxes template="template">
@@ -45,7 +47,8 @@ Template for the checkbox rendering. Used to set the  checkbox name attribute, o
 
 ### template `String`
 
-Template for the checkbox rendering. Used to set the  checkbox name attribute, or to add hidden inputs that will be posted along the checkboxes.
+The template which renders the checkboxes. Can be used to allow posting of
+additional information along the treeview checkboxes.The fields which can be used in the template are:
 
 
 #### Example
@@ -61,7 +64,8 @@ Template for the checkbox rendering. Used to set the  checkbox name attribute, o
 
 ### kendo:treeView-checkboxes-template
 
-Template for the checkbox rendering. Used to set the  checkbox name attribute, or to add hidden inputs that will be posted along the checkboxes.
+The template which renders the checkboxes. Can be used to allow posting of
+additional information along the treeview checkboxes.The fields which can be used in the template are:
 
 
 #### Example

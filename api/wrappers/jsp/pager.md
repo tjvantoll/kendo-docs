@@ -84,7 +84,7 @@ Defines if a refresh button will be displayed. Click on that button will call Da
 
 ### selectTemplate `String`
 
-The template for selectbox with predefined page sizes.
+The template for selected page number link.
 
 #### Example
     <kendo:pager selectTemplate="selectTemplate">
@@ -95,7 +95,7 @@ The template for selectbox with predefined page sizes.
 
 ### kendo:pager-messages
 
-Defines texts shown within the pager.
+Defines texts shown within the pager. Use this option to customize or localize the pager messages.
 
 More documentation is available at [kendo:pager-messages](pager/messages).
 

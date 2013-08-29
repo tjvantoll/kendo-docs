@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:pager-messages\>
 
-Defines texts shown within the pager.
+Defines texts shown within the pager. Use this option to customize or localize the pager messages.
 
 #### Example
     <kendo:pager>
@@ -18,7 +18,10 @@ Defines texts shown within the pager.
 
 ### display `String`
 
-Defines the info text.
+The pager info text. Uses kendo.format.Contains three placeholders:
+- {0} - the first data item index
+- {1} - the last data item index
+- {2} - the total number of data items
 
 #### Example
     <kendo:pager-messages display="display">
@@ -26,7 +29,7 @@ Defines the info text.
 
 ### empty `String`
 
-Defines the info text shown when there are no records to be displayed.
+The text displayed when the DataSource view does no contain items.
 
 #### Example
     <kendo:pager-messages empty="empty">
@@ -34,7 +37,7 @@ Defines the info text shown when there are no records to be displayed.
 
 ### first `String`
 
-Defines the text of the first page button tooltip.
+The tooltip of the button which navigates to the first page.
 
 #### Example
     <kendo:pager-messages first="first">
@@ -42,7 +45,7 @@ Defines the text of the first page button tooltip.
 
 ### itemsPerPage `String`
 
-Defines the text displayed after the select element of the pageSizes mode.
+The label displayed after the page size dropdown list.
 
 #### Example
     <kendo:pager-messages itemsPerPage="itemsPerPage">
@@ -50,7 +53,7 @@ Defines the text displayed after the select element of the pageSizes mode.
 
 ### last `String`
 
-Defines the text of the last page button tooltip.
+The tooltip of the button which navigates to the last page.
 
 #### Example
     <kendo:pager-messages last="last">
@@ -58,7 +61,7 @@ Defines the text of the last page button tooltip.
 
 ### next `String`
 
-Defines the text of the next page button tooltip.
+The tooltip of the button which navigates to the next page.
 
 #### Example
     <kendo:pager-messages next="next">
@@ -66,7 +69,7 @@ Defines the text of the next page button tooltip.
 
 ### of `String`
 
-Defines the last part of the text of the input option.
+The label displayed before the pager input. Uses kendo.format. Contains one optional placeholder {0} which represents the total number of pages.
 
 #### Example
     <kendo:pager-messages of="of">
@@ -74,7 +77,7 @@ Defines the last part of the text of the input option.
 
 ### page `String`
 
-Defines the first part of the text of the input option.
+The label displayed before the pager input.
 
 #### Example
     <kendo:pager-messages page="page">
@@ -82,7 +85,7 @@ Defines the first part of the text of the input option.
 
 ### previous `String`
 
-Defines the text of the previous page button tooltip.
+The tooltip of the button which navigates to the previous page.
 
 #### Example
     <kendo:pager-messages previous="previous">
@@ -90,7 +93,7 @@ Defines the text of the previous page button tooltip.
 
 ### refresh `String`
 
-Defines the text of the refresh button tooltip.
+The tooltip of the refresh button.
 
 #### Example
     <kendo:pager-messages refresh="refresh">

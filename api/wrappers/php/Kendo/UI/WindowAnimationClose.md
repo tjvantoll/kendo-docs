@@ -13,7 +13,7 @@ A PHP class representing the close setting of WindowAnimation.
 ## Methods
 
 ### duration
-Difines the animation duration.
+Defines the close animation duration.
 
 #### Returns
 `\Kendo\UI\WindowAnimationClose`
@@ -46,23 +46,5 @@ Effect to be used for closing of the popup.
     <?php
     $close = new \Kendo\UI\WindowAnimationClose();
     $close->effects('value');
-    ?>
-
-### reverse
-Whether the effect should play backwards, useful when doing the same animation but with the opposite direction, like opening and closing.
-
-#### Returns
-`\Kendo\UI\WindowAnimationClose`
-
-#### Parameters
-
-##### $value `boolean`
-
-
-
-#### Example 
-    <?php
-    $close = new \Kendo\UI\WindowAnimationClose();
-    $close->reverse(true);
     ?>
 

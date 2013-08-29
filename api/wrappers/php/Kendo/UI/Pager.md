@@ -188,7 +188,7 @@ The template for page number links.
 
 ### messages
 
-Defines texts shown within the pager.
+Defines texts shown within the pager. Use this option to customize or localize the pager messages.
 
 #### Returns
 `\Kendo\UI\Pager`
@@ -294,7 +294,7 @@ Defines if a refresh button will be displayed. Click on that button will call Da
     ?>
 
 ### selectTemplate
-The template for selectbox with predefined page sizes.
+The template for selected page number link.
 
 #### Returns
 `\Kendo\UI\Pager`

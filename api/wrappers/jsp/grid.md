@@ -36,6 +36,14 @@ By default the column menu is not enabled.Can be set to a JavaScript object whic
     <kendo:grid columnMenu="columnMenu">
     </kendo:grid>
 
+### columnResizeHandleWidth `float`
+
+Defines the width of the column resize handle in pixels. Apply a larger value for easier grasping.
+
+#### Example
+    <kendo:grid columnResizeHandleWidth="columnResizeHandleWidth">
+    </kendo:grid>
+
 ### detailTemplate `String`
 
 The id of the template used for rendering the detail rows in the grid.

@@ -190,6 +190,24 @@ The interval between minor divisions.
     $scale->minorUnit(1);
     ?>
 
+### rangeDistance
+The distance from the range indicators to the ticks.
+
+#### Returns
+`\Kendo\Dataviz\UI\RadialGaugeScale`
+
+#### Parameters
+
+##### $value `float`
+
+
+
+#### Example 
+    <?php
+    $scale = new \Kendo\Dataviz\UI\RadialGaugeScale();
+    $scale->rangeDistance(1);
+    ?>
+
 ### rangePlaceholderColor
 The default color for the ranges.
 
@@ -206,6 +224,24 @@ The default color for the ranges.
     <?php
     $scale = new \Kendo\Dataviz\UI\RadialGaugeScale();
     $scale->rangePlaceholderColor('value');
+    ?>
+
+### rangeSize
+The width of the range indicators.
+
+#### Returns
+`\Kendo\Dataviz\UI\RadialGaugeScale`
+
+#### Parameters
+
+##### $value `float`
+
+
+
+#### Example 
+    <?php
+    $scale = new \Kendo\Dataviz\UI\RadialGaugeScale();
+    $scale->rangeSize(1);
     ?>
 
 ### addRange

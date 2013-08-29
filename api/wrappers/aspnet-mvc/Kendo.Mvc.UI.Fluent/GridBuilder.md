@@ -289,6 +289,53 @@ The template
     %>
 
 
+### ClientAltRowTemplate(`System.String`)
+Sets the client-side alt row template of the grid. The client-side alt row template must contain a table row element (tr).
+
+
+#### Parameters
+
+##### template `System.String`
+The template
+
+
+
+
+#### Example (Razor)
+    @(Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ClientAltRowTemplate(
+            "<tr class='k-alt'>" +
+            "<td>#: ProductName #</td>" +
+            "<td>#: UnitsInStock #</td>" +
+            "</tr>"
+        )
+    )
+
+#### Example (ASPX)
+    <%:Html.Kendo().Grid<Product>()
+        .Name("grid")
+        .DataSource(dataSource =>
+            // configure the data source
+            dataSource
+            .Ajax()
+            .Read(read => read.Action("Products_Read", "Home"))
+        )
+        .ClientAltRowTemplate(
+            "<tr class='k-alt'>" +
+            "<td>#: ProductName #</td>" +
+            "<td>#: UnitsInStock #</td>" +
+            "</tr>"
+        )
+    %>
+
+
 ### ClientRowTemplate(`System.Func<Kendo.Mvc.UI.Grid<T>,System.String>`)
 Sets the client-side row template of the grid. The client-side row template must contain a table row element (tr).
 

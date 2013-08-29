@@ -32,7 +32,7 @@ Defines the allowed file extensions.
 
 ### messages
 
-Defines texts shown within the pager.
+Defines texts shown within the image browser.
 
 #### Returns
 `\Kendo\UI\EditorImageBrowser`

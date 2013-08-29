@@ -14,25 +14,40 @@ Defines the fluent interface for configuring the Window component.
 ### Title(`System.Boolean`)
 Allows title to be shown / hidden
 
+
 #### Parameters
 
 ##### show `System.Boolean`
 Whether the window title will be visible
 
+
+
+
+
 ### Title(`System.String`)
 Sets title, which appears in the header of the window.
 
+
+
+
+
 ### AppendTo(`System.String`)
 Defines a selector for the element to which the Window will be appended. By default this is the page body.
+
 
 #### Parameters
 
 ##### selector `System.String`
 A selector of the Window container
 
+
+
+
+
 ### Content(`System.Action`)
 Sets the HTML content which the window should display.
-  
+
+
 #### Parameters
 
 ##### value `System.Action`

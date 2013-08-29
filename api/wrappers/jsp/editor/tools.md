@@ -7,8 +7,9 @@ publish: true
 
 # \<kendo:editor-tools\>
 
-A collection of tools that should render a button, combobox, etc, to interact with the Editor. Custom tools are defined
-as a collection of required properties, while the insertHtml tool requires a collection of text-value pairs. A separator may be included multiple times.
+A collection of tools that are used to interact with the Editor.
+Tools may be switched on by specifying their name.
+Custom tools and tools that require configuration are defined as objects.The available editor commands are:
 
 #### Example
     <kendo:editor>
@@ -22,8 +23,9 @@ as a collection of required properties, while the insertHtml tool requires a col
 
 ### kendo:editor-tool
 
-A collection of tools that should render a button, combobox, etc, to interact with the Editor. Custom tools are defined
-as a collection of required properties, while the insertHtml tool requires a collection of text-value pairs. A separator may be included multiple times.
+A collection of tools that are used to interact with the Editor.
+Tools may be switched on by specifying their name.
+Custom tools and tools that require configuration are defined as objects.The available editor commands are:
 
 More documentation is available at [kendo:editor-tool](editor/tool).
 

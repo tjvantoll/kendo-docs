@@ -18,7 +18,7 @@ The animation that will be used when a Window opens.
 
 ### duration `float`
 
-Difines the animation duration.
+Defines the open animation duration.
 
 #### Example
     <kendo:window-animation-open duration="duration">
@@ -30,13 +30,5 @@ Effect to be used for opening of the popup.
 
 #### Example
     <kendo:window-animation-open effects="effects">
-    </kendo:window-animation-open>
-
-### reverse `boolean`
-
-Whether the effect should play backwards, useful when doing the same animation but with the opposite direction, like opening and closing.
-
-#### Example
-    <kendo:window-animation-open reverse="reverse">
     </kendo:window-animation-open>
 

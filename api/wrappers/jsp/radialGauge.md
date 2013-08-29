@@ -10,22 +10,6 @@ A JSP wrapper for Kendo UI [RadialGauge](/api/dataviz/radialgauge).
 
 ## Configuration Attributes
 
-### rangeDistance `float`
-
-The distance from the range indicators to the ticks.
-
-#### Example
-    <kendo:radialGauge rangeDistance="rangeDistance">
-    </kendo:radialGauge>
-
-### rangeSize `float`
-
-The width of the range indicators.
-
-#### Example
-    <kendo:radialGauge rangeSize="rangeSize">
-    </kendo:radialGauge>
-
 ### renderAs `String`
 
 Sets the preferred rendering engine.

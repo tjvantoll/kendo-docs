@@ -32,8 +32,8 @@ node is expanded.
     ?>
 
 ### effects
-A whitespace-delimited string of animation effects that are utilized when a TreeView node
-is expanded. Options include "expandVertical" and "fadeIn".
+A whitespace-delimited string of animation effects that are used when expanding nodes.
+The supported effects are "expandVertical" and "fadeIn".
 
 #### Returns
 `\Kendo\UI\TreeViewAnimationExpand`
@@ -48,23 +48,5 @@ is expanded. Options include "expandVertical" and "fadeIn".
     <?php
     $expand = new \Kendo\UI\TreeViewAnimationExpand();
     $expand->effects('value');
-    ?>
-
-### show
-
-
-#### Returns
-`\Kendo\UI\TreeViewAnimationExpand`
-
-#### Parameters
-
-##### $value `boolean`
-
-
-
-#### Example 
-    <?php
-    $expand = new \Kendo\UI\TreeViewAnimationExpand();
-    $expand->show(true);
     ?>
 

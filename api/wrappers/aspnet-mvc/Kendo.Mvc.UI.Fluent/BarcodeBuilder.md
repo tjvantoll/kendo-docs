@@ -18,6 +18,20 @@ Sets the value of the barcode
 
 
 
+### RenderAs(`Kendo.Mvc.UI.RenderingMode`)
+Sets the preferred rendering engine.
+            If it is not supported by the browser, the Chart will switch to the first available mode.
+
+
+#### Parameters
+
+##### renderAs [Kendo.Mvc.UI.RenderingMode](/api/wrappers/aspnet-mvc/Kendo.Mvc.UI/RenderingMode)
+The preferred rendering engine.
+
+
+
+
+
 ### Value(`System.Int32`)
 Sets the value of the barcode
 

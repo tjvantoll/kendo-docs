@@ -387,6 +387,42 @@ For additional information check the [remove](/api/web/listview#events-remove) e
     $listView->remove(new \Kendo\JavaScriptFunction('function(e) { }'));
     ?>
 
+### save
+Fired when a data item is saved.The event handler function context (available via the this keyword) will be set to the widget instance.
+For additional information check the [save](/api/web/listview#events-save) event documentation.
+
+#### Returns
+`\Kendo\UI\ListView`
+
+#### Parameters
+
+##### $value `string|\Kendo\JavaScriptFunction`
+
+#### Example - using string which defines a JavaScript function
+
+    <?php
+    $listView = new \Kendo\UI\ListView('ListView');
+    $listView->save('function(e) { }');
+    ?>
+
+#### Example - using string which defines a JavaScript name
+    <script>
+        function onSave(e) {
+            // handle the save event.
+        }
+    </script>
+    <?php
+    $listView = new \Kendo\UI\ListView('ListView');
+    $listView->save('onSave');
+    ?>
+
+#### Example - using [\Kendo\JavaScriptFunction](/api/wrappers/php/kendo/javascriptfunction)
+
+    <?php
+    $listView = new \Kendo\UI\ListView('ListView');
+    $listView->save(new \Kendo\JavaScriptFunction('function(e) { }'));
+    ?>
+
 ### selectable
 Indicates whether selection is enabled/disabled. Possible values:
 

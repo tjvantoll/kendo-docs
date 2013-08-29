@@ -88,7 +88,7 @@ Sets the HTML content of the Editor.
 
 
 ### encoded
-Indicates whether the Editor should submit encoded HTML tags.
+Indicates whether the Editor should submit encoded HTML tags. By default, the submitted value is encoded.
 
 #### Returns
 `\Kendo\UI\Editor`
@@ -270,7 +270,7 @@ Defines the text of the labels that are shown within the editor. Used primarily 
 
 
 ### paste
-Fires before when content is pasted in the Editor.
+Fires before the content is pasted in the Editor.
 For additional information check the [paste](/api/web/editor#events-paste) event documentation.
 
 #### Returns

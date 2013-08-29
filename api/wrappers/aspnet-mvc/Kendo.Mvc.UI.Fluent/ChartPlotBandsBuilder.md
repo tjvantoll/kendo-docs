@@ -11,13 +11,13 @@ Defines the fluent interface for configuring plot band.
 
 ## Methods
 
-### From(`T`)
+### From(`System.Double`)
 Sets the plot band start position.
 
 
 #### Parameters
 
-##### from `T`
+##### from `System.Double`
 The plot band start position.
 
 
@@ -35,13 +35,13 @@ The plot band start position.
     %>
 
 
-### To(`T`)
+### To(`System.Double`)
 Sets the plot band end position.
 
 
 #### Parameters
 
-##### to `T`
+##### to `System.Double`
 The plot band end position.
 
 

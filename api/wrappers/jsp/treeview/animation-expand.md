@@ -27,18 +27,10 @@ node is expanded.
 
 ### effects `String`
 
-A whitespace-delimited string of animation effects that are utilized when a TreeView node
-is expanded. Options include "expandVertical" and "fadeIn".
+A whitespace-delimited string of animation effects that are used when expanding nodes.
+The supported effects are "expandVertical" and "fadeIn".
 
 #### Example
     <kendo:treeView-animation-expand effects="effects">
-    </kendo:treeView-animation-expand>
-
-### show `boolean`
-
-
-
-#### Example
-    <kendo:treeView-animation-expand show="show">
     </kendo:treeView-animation-expand>
 

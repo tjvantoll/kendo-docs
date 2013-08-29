@@ -26,7 +26,7 @@ Adds a plot band.
 
 
 
-### Add(`T,T,System.String`)
+### Add(`System.Double,System.Double,System.String`)
 Defines a item.
 
 

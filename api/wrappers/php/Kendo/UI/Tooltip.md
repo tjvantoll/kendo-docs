@@ -313,7 +313,7 @@ The position relative to the target element, at which the tooltip will be shown.
     ?>
 
 ### requestStart
-Triggered before an AJAX request started.
+Triggered before an AJAX request started. Note that this event is triggered only when an AJAX request, instead of an iframe, is used.
 For additional information check the [requestStart](/api/web/tooltip#events-requestStart) event documentation.
 
 #### Returns

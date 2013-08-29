@@ -10,6 +10,15 @@ A JSP wrapper for Kendo UI [TreeView](/api/web/treeview).
 
 ## Configuration Attributes
 
+### animation `boolean`
+
+A collection of visual animations used when items are expanded or collapsed through user interaction.
+Setting this option to false will disable all animations. Further configuration is available via [kendo:treeView-animation](#kendo-treeView-animation). 
+
+#### Example
+    <kendo:treeView animation="animation">
+    </kendo:treeView>
+
 ### autoBind `boolean`
 
 If set to false the widget will not bind to the data source during initialization. In this case data binding will occur when the change event of the
@@ -21,7 +30,7 @@ data source is fired. By default the widget will bind to the data source specifi
 
 ### checkboxes `boolean`
 
-If true or an object, renders checkboxes within each treeview item. Further configuration is available via [kendo:treeView-checkboxes](#kendo-treeView-checkboxes). 
+If true or an object, renders checkboxes beside each node. Further configuration is available via [kendo:treeView-checkboxes](#kendo-treeView-checkboxes). 
 
 #### Example
     <kendo:treeView checkboxes="checkboxes">
@@ -29,8 +38,7 @@ If true or an object, renders checkboxes within each treeview item. Further conf
 
 ### dataImageUrlField `String`
 
-Sets the field of the data item that provides
-the image URL of the treeview nodes.
+Sets the field of the data item that provides the image URL of the treeview nodes.
 
 #### Example
     <kendo:treeView dataImageUrlField="dataImageUrlField">
@@ -38,8 +46,8 @@ the image URL of the treeview nodes.
 
 ### dataSpriteCssClassField `String`
 
-Sets the field of the data item that provides
-the sprite CSS class of the treeview nodes.
+Sets the field of the data item that provides the sprite CSS class of the nodes.
+If an array, each level uses the field that is at the same index in the array, or the last item in the array.
 
 #### Example
     <kendo:treeView dataSpriteCssClassField="dataSpriteCssClassField">
@@ -47,7 +55,7 @@ the sprite CSS class of the treeview nodes.
 
 ### dataTextField `Object`
 
-Sets the field of the data item that provides the text content of the treeview nodes.
+Sets the field of the data item that provides the text content of the nodes.
 If an array, each level uses the field that is at the same index in the array, or the last item in the array.
 
 #### Example
@@ -56,8 +64,7 @@ If an array, each level uses the field that is at the same index in the array, o
 
 ### dataUrlField `String`
 
-Sets the field of the data item that provides
-the link URL of the treeview nodes.
+Sets the field of the data item that provides the link URL of the nodes.
 
 #### Example
     <kendo:treeView dataUrlField="dataUrlField">
@@ -65,8 +72,7 @@ the link URL of the treeview nodes.
 
 ### dragAndDrop `boolean`
 
-Disables (false) or enables (true) drag-and-drop on the nodes of a
-TreeView.
+Disables (false) or enables (true) drag-and-drop of the nodes.
 
 #### Example
     <kendo:treeView dragAndDrop="dragAndDrop">
@@ -74,10 +80,9 @@ TreeView.
 
 ### loadOnDemand `boolean`
 
-Indicates whether the child datasources should be fetched
-lazily, when parent groups get expanded. Setting this to false causes all child dataSources to
-be loaded at initialization time. Note: when initializing a TreeView from array (rather than from a
-HierarchicalDataSource instance), the default value of this option is false.
+Indicates whether the child datasources should be fetched lazily when parent groups get expanded.
+Setting this to false causes all child dataSources to be loaded at initialization time.
+Note: when initializing the widget from an array (rather than from a HierarchicalDataSource instance), this option defaults to false, rather than true.
 
 #### Example
     <kendo:treeView loadOnDemand="loadOnDemand">
@@ -85,7 +90,7 @@ HierarchicalDataSource instance), the default value of this option is false.
 
 ### template `String`
 
-Template for rendering of the nodes of the treeview.
+Template for rendering each node.
 
 #### Example
     <kendo:treeView template="template">
@@ -109,7 +114,7 @@ More documentation is available at [kendo:treeView-animation](treeview/animation
 
 ### kendo:treeView-checkboxes
 
-If true or an object, renders checkboxes within each treeview item.
+If true or an object, renders checkboxes beside each node.
 
 More documentation is available at [kendo:treeView-checkboxes](treeview/checkboxes).
 
