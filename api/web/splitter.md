@@ -603,6 +603,55 @@ The pane whose content has been loaded.
     splitter.bind("contentLoad", splitter_contentLoad);
     </script>
 
+### error
+
+Triggered when the AJAX request that fetches a pane content has failed.
+
+#### Event Data
+
+##### e.xhr `jqXHR`
+
+The XHR request object, as returned from [jQuery.ajax](http://api.jquery.com/jQuery.ajax/)
+
+##### e.status `String`
+
+The status of the request, as returned from [jQuery.ajax](http://api.jquery.com/jQuery.ajax/)
+
+#### Example - subscribe to the "error" event during initialization
+
+    <div id="splitter">
+      <div>Pane A</div>
+      <div>Pane B</div>
+    </div>
+    <script>
+    $("#splitter").kendoSplitter({
+      error: function(e) {
+        console.log(
+            "Pane #" + $(e.pane).index() + " could not be loaded from server" +
+            " (status " + e.xhr.status + ")"
+        );
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "error" event after initialization
+
+    <div id="splitter">
+      <div>Pane A</div>
+      <div>Pane B</div>
+    </div>
+    <script>
+    function splitter_error(e) {
+        console.log(
+            "Pane #" + $(e.pane).index() + " could not be loaded from server" +
+            " (status " + e.xhr.status + ")"
+        );
+    }
+    $("#splitter").kendoSplitter();
+    var splitter = $("#splitter").data("kendoSplitter");
+    splitter.bind("error", splitter_error);
+    </script>
+
 ### expand
 
 Triggered when a pane of a Splitter is expanded.
