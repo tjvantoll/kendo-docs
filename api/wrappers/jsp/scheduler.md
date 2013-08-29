@@ -260,6 +260,70 @@ For additional information check the [edit](/api/web/scheduler#events-edit) even
         }
     </script>
 
+### moveStart `String`
+
+Fired when the user starts to drag an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [moveStart](/api/web/scheduler#events-moveStart) event documentation.
+
+#### Example
+    <kendo:scheduler moveStart="handle_moveStart">
+    </kendo:scheduler>
+    <script>
+        function handle_moveStart(e) {
+            // Code to handle the moveStart event.
+        }
+    </script>
+
+### move `String`
+
+Fired when the user is moving an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [move](/api/web/scheduler#events-move) event documentation.
+
+#### Example
+    <kendo:scheduler move="handle_move">
+    </kendo:scheduler>
+    <script>
+        function handle_move(e) {
+            // Code to handle the move event.
+        }
+    </script>
+
+### moveEnd `String`
+
+Fired when the user stops moving an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [moveEnd](/api/web/scheduler#events-moveEnd) event documentation.
+
+#### Example
+    <kendo:scheduler moveEnd="handle_moveEnd">
+    </kendo:scheduler>
+    <script>
+        function handle_moveEnd(e) {
+            // Code to handle the moveEnd event.
+        }
+    </script>
+
+### navigate `String`
+
+Fired when the user changes selected date, view or of the schedulerThe event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [navigate](/api/web/scheduler#events-navigate) event documentation.
+
+#### Example
+    <kendo:scheduler navigate="handle_navigate">
+    </kendo:scheduler>
+    <script>
+        function handle_navigate(e) {
+            // Code to handle the navigate event.
+        }
+    </script>
+
 ### remove `String`
 
 Fired when the user clicks the "destroy" button.The event handler function context (available via the this keyword) will be set to the widget instance.
@@ -273,6 +337,54 @@ For additional information check the [remove](/api/web/scheduler#events-remove) 
     <script>
         function handle_remove(e) {
             // Code to handle the remove event.
+        }
+    </script>
+
+### resizeStart `String`
+
+Fired when the user starts to resize an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [resizeStart](/api/web/scheduler#events-resizeStart) event documentation.
+
+#### Example
+    <kendo:scheduler resizeStart="handle_resizeStart">
+    </kendo:scheduler>
+    <script>
+        function handle_resizeStart(e) {
+            // Code to handle the resizeStart event.
+        }
+    </script>
+
+### resize `String`
+
+Fired when the user is resizing an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [resize](/api/web/scheduler#events-resize) event documentation.
+
+#### Example
+    <kendo:scheduler resize="handle_resize">
+    </kendo:scheduler>
+    <script>
+        function handle_resize(e) {
+            // Code to handle the resize event.
+        }
+    </script>
+
+### resizeEnd `String`
+
+Fired when the user releases the mouse after resizing an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [resizeEnd](/api/web/scheduler#events-resizeEnd) event documentation.
+
+#### Example
+    <kendo:scheduler resizeEnd="handle_resizeEnd">
+    </kendo:scheduler>
+    <script>
+        function handle_resizeEnd(e) {
+            // Code to handle the resizeEnd event.
         }
     </script>
 
@@ -366,6 +478,78 @@ For additional information check the [edit](/api/web/scheduler#events-edit) even
         </kendo:scheduler-edit>
     </kendo:scheduler>
 
+### kendo:scheduler-moveStart
+
+Fired when the user starts to drag an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [moveStart](/api/web/scheduler#events-moveStart) event documentation.
+
+#### Example
+    <kendo:scheduler>
+        <kendo:scheduler-moveStart>
+            <script>
+                function(e) {
+                    // Code to handle the moveStart event.
+                }
+            </script>
+        </kendo:scheduler-moveStart>
+    </kendo:scheduler>
+
+### kendo:scheduler-move
+
+Fired when the user is moving an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [move](/api/web/scheduler#events-move) event documentation.
+
+#### Example
+    <kendo:scheduler>
+        <kendo:scheduler-move>
+            <script>
+                function(e) {
+                    // Code to handle the move event.
+                }
+            </script>
+        </kendo:scheduler-move>
+    </kendo:scheduler>
+
+### kendo:scheduler-moveEnd
+
+Fired when the user stops moving an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [moveEnd](/api/web/scheduler#events-moveEnd) event documentation.
+
+#### Example
+    <kendo:scheduler>
+        <kendo:scheduler-moveEnd>
+            <script>
+                function(e) {
+                    // Code to handle the moveEnd event.
+                }
+            </script>
+        </kendo:scheduler-moveEnd>
+    </kendo:scheduler>
+
+### kendo:scheduler-navigate
+
+Fired when the user changes selected date, view or of the schedulerThe event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [navigate](/api/web/scheduler#events-navigate) event documentation.
+
+#### Example
+    <kendo:scheduler>
+        <kendo:scheduler-navigate>
+            <script>
+                function(e) {
+                    // Code to handle the navigate event.
+                }
+            </script>
+        </kendo:scheduler-navigate>
+    </kendo:scheduler>
+
 ### kendo:scheduler-remove
 
 Fired when the user clicks the "destroy" button.The event handler function context (available via the this keyword) will be set to the widget instance.
@@ -382,6 +566,60 @@ For additional information check the [remove](/api/web/scheduler#events-remove) 
                 }
             </script>
         </kendo:scheduler-remove>
+    </kendo:scheduler>
+
+### kendo:scheduler-resizeStart
+
+Fired when the user starts to resize an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [resizeStart](/api/web/scheduler#events-resizeStart) event documentation.
+
+#### Example
+    <kendo:scheduler>
+        <kendo:scheduler-resizeStart>
+            <script>
+                function(e) {
+                    // Code to handle the resizeStart event.
+                }
+            </script>
+        </kendo:scheduler-resizeStart>
+    </kendo:scheduler>
+
+### kendo:scheduler-resize
+
+Fired when the user is resizing an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [resize](/api/web/scheduler#events-resize) event documentation.
+
+#### Example
+    <kendo:scheduler>
+        <kendo:scheduler-resize>
+            <script>
+                function(e) {
+                    // Code to handle the resize event.
+                }
+            </script>
+        </kendo:scheduler-resize>
+    </kendo:scheduler>
+
+### kendo:scheduler-resizeEnd
+
+Fired when the user releases the mouse after resizing an event.The event handler function context (available via the this keyword) will be set to the widget instance.
+
+
+For additional information check the [resizeEnd](/api/web/scheduler#events-resizeEnd) event documentation.
+
+#### Example
+    <kendo:scheduler>
+        <kendo:scheduler-resizeEnd>
+            <script>
+                function(e) {
+                    // Code to handle the resizeEnd event.
+                }
+            </script>
+        </kendo:scheduler-resizeEnd>
     </kendo:scheduler>
 
 ### kendo:scheduler-save
