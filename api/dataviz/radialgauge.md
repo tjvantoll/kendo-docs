@@ -477,5 +477,4 @@ Change the value of the gauge.
 
 #### Example
 
-    var gauge = $("#radial-gauge").data("kendoRadialGauge");
-    gauge.redraw();
+    $("#radial-gauge").data("kendoRadialGauge").value(20);

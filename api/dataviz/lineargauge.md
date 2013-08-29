@@ -644,5 +644,4 @@ Change the value of the gauge.
 
 #### Example
 
-    var gauge = $("#linear-gauge").data("kendoLinearGauge");
-    gauge.redraw();
+    $("#linear-gauge").data("kendoLinearGauge").value(20);
