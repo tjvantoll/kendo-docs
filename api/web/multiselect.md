@@ -302,7 +302,7 @@ Template to be used for rendering the tags of the selected items.
 
     $("#multiselect").kendoMultiSelect({
          dataSource: ["Item1", "Item2", "Item3", "Item4"],
-         value: ["Item2", "item3"]
+         value: ["Item2", "Item3"]
     });
 
 > **Important:** Define a list of data items if widget is not initially bound
