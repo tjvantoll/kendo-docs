@@ -202,6 +202,7 @@ Virtual Scrolling will load in data from the remote data source as you scroll do
     });
 
 > Using virtual scrolling together with grouping, hierarchy, batch editing and inline editing is not recommended.
+The feature relies on calculating average row height, based on already loaded data, so having a large variance of row heights may cause unexpected behavior.
 	
 ### Selection
 
