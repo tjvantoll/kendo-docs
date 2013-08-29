@@ -201,6 +201,8 @@ Virtual Scrolling will load in data from the remote data source as you scroll do
         // other configuration
     });
 
+> Using virtual scrolling together with grouping, hierarchy, batch editing and inline editing is not recommended.
+	
 ### Selection
 
 Selection can be enabled in the grid simply by setting the `selectable` option to `true`.
