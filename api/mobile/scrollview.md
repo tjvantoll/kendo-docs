@@ -243,6 +243,8 @@ The height of the ScrollView content. Supports `100%` if the scrollview is embed
 
  **Applicable only in data bound mode.**
 
+#### Example
+
     <div data-role="view" data-stretch="true">
       <div data-role="scrollview" 
         data-source="dataSource" 
