@@ -20,9 +20,58 @@ Represents the Kendo UI Mobile ScrollView widget. Inherits from [kendo.mobile.ui
 
  **Applicable only in data bound mode.**
 
+#### Example
+
+    <div data-role="view" data-stretch="true">
+      <div data-role="scrollview"
+        data-auto-bind="false"
+        data-source="dataSource" 
+        data-template="scrollview-template"
+        data-content-height="120px"
+        data-enable-pager="false">
+      </div>
+    </div>
+
+    <script id="scrollview-template" type="text/x-kendo-template">
+      <div style="width: 110px; height: 110px; background-image: #=setBackground(ProductID)#;"></div>
+      <p>#= ProductName #</p>
+    </script>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      var dataSource = new kendo.data.DataSource({
+        type: "odata",
+        transport: {
+          read: {
+            url: "http://demos.kendoui.com/service/Northwind.svc/Products"
+          }
+        },
+        serverPaging: true,
+        pageSize: 30
+      });
+
+      function setBackground(id) {
+        return "url(http://demos.kendoui.com/content/web/foods/" + id +".jpg)";
+      }
+    </script>
+
 ### bounceVelocityThreshold `Number`*(default: 1.6)*
 
  The velocity threshold after which a swipe will result in a bounce effect.
+
+#### Example - increase bounce velocity threshold
+
+    <div data-role="view" data-stretch="true">
+      <div id="scrollView" data-role="scrollview" data-bounce-velocity-threshold="5">
+        <div data-role="page"><div style="height: 200px;">Foo</div></div>
+        <div data-role="page"><div style="height: 200px;">Bar</div></div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
 
 ### contentHeight `Number|String`*(default: "auto")*
 
@@ -31,12 +80,16 @@ The height of the ScrollView content. Supports `100%` if the scrollview is embed
 #### Stretched scrollview
 
     <div data-role="view" data-stretch="true">
-        <div data-role="scrollview" data-content-height="100%">
-            <div data-role="page">This page will stretch to fit the entire view height</div>
-            <div data-role="page">This page will stretch to fit the entire view height</div>
-            <div data-role="page">This page will stretch to fit the entire view height</div>
-        </div>
+      <div data-role="scrollview" data-content-height="100%">
+        <div data-role="page">This page will stretch to fit the entire view height</div>
+        <div data-role="page">This page will stretch to fit the entire view height</div>
+        <div data-role="page">This page will stretch to fit the entire view height</div>
+      </div>
     </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
 
 ### dataSource `kendo.data.DataSource | Object`
 
@@ -44,9 +97,57 @@ The height of the ScrollView content. Supports `100%` if the scrollview is embed
 
  > **Important:** In case the total amount of displayed data is large, it is recommended to turn off the pager by setting `enablePager: false` in the configuration options or via `data-enable-pager="false"` data attribute.
 
+#### Example - ScrollView bound to remote DataSource
+
+    <div data-role="view" data-stretch="true">
+      <div data-role="scrollview"
+        data-source="dataSource" 
+        data-template="scrollview-template"
+        data-content-height="120px"
+        data-enable-pager="false">
+      </div>
+    </div>
+
+    <script id="scrollview-template" type="text/x-kendo-template">
+      <div style="width: 110px; height: 110px; background-image: #=setBackground(ProductID)#;"></div>
+      <p>#= ProductName #</p>
+    </script>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      var dataSource = new kendo.data.DataSource({
+        type: "odata",
+        transport: {
+          read: {
+            url: "http://demos.kendoui.com/service/Northwind.svc/Products"
+          }
+        },
+        serverPaging: true,
+        pageSize: 30
+      });
+
+      function setBackground(id) {
+        return "url(http://demos.kendoui.com/content/web/foods/" + id +".jpg)";
+      }
+    </script>
+
 ### duration `Number`*(default: 300)*
 
  The milliseconds that take the ScrollView to snap to the current page after released.
+
+#### Example - increase the duration of snap transtion
+
+    <div data-role="view">
+      <div id="scrollView" data-role="scrollview" data-duration="500">
+        <div data-role="page">Foo</div>
+        <div data-role="page">Bar</div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
 
 ### emptyTemplate `String`*(default: "")*
 
@@ -54,9 +155,85 @@ The height of the ScrollView content. Supports `100%` if the scrollview is embed
 
  **Applicable only in data bound mode.**
 
+#### Example
+
+    <div data-role="view" data-stretch="true">
+      <div data-role="scrollview" 
+        data-source="dataSource" 
+        data-template="scrollview-template"
+        data-empty-template="scrollview-empty"
+        data-content-height="120px">
+      </div>
+    </div>
+
+    <script id="scrollview-template" type="text/x-kendo-template">
+      <div style="width: 110px; height: 110px; background-image: #=setBackground(ProductID)#;"></div>
+      <p>#= ProductName #</p>
+    </script>
+
+    <script id="scrollview-empty" type="text/x-kendo-template">
+      <div style="width: 100%; height: 100%; background-color: red;">empty</div>
+    </script>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      var dataSource = new kendo.data.DataSource({
+        type: "odata",
+        transport: {
+          read: {
+            url: "http://demos.kendoui.com/service/Northwind.svc/Products"
+          }
+        },
+        serverPaging: true,
+        pageSize: 30
+      });
+
+      function setBackground(id) {
+        return "url(http://demos.kendoui.com/content/web/foods/" + id +".jpg)";
+      }
+    </script>
+
 ### enablePager `Boolean`*(default: true)*
 
  If set to true the ScrollView will display a pager. By default pager is enabled.
+
+> **Important:** In case the total amount of displayed data is large, it is recommended to turn off the pager by setting `enablePager: false` in the configuration options or via `data-enable-pager="false"` data attribute.
+
+#### Example - turn off pager (ScrollView dataBound mode)
+
+    <div data-role="view" data-stretch="true">
+      <div data-role="scrollview"
+        data-source="dataSource" 
+        data-template="scrollview-template"
+        data-content-height="120px"
+        data-enable-pager="false">
+      </div>
+    </div>
+
+    <script id="scrollview-template" type="text/x-kendo-template">
+      <div style="width: 110px; height: 110px; background-image: #=setBackground(ProductID)#;"></div>
+      <p>#= ProductName #</p>
+    </script>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      var dataSource = new kendo.data.DataSource({
+        type: "odata",
+        transport: {
+          read: {
+            url: "http://demos.kendoui.com/service/Northwind.svc/Products"
+          }
+        },
+        serverPaging: true,
+        pageSize: 30
+      });
+
+      function setBackground(id) {
+        return "url(http://demos.kendoui.com/content/web/foods/" + id +".jpg)";
+      }
+    </script>
 
 ### itemsPerPage `Number`*(default: 1)*
 
@@ -66,15 +243,78 @@ The height of the ScrollView content. Supports `100%` if the scrollview is embed
 
  **Applicable only in data bound mode.**
 
+    <div data-role="view" data-stretch="true">
+      <div data-role="scrollview" 
+        data-source="dataSource" 
+        data-template="scrollview-template"
+        data-items-per-page="2"
+        data-content-height="120px">
+      </div>
+    </div>
+
+    <script id="scrollview-template" type="text/x-kendo-template">
+      <div style="width: 110px; height: 110px; background-image: #=setBackground(data[0].ProductID)#;"></div>
+      <p>#= data[0].ProductName #</p>
+      <div style="width: 110px; height: 110px; background-image: #=setBackground(data[1].ProductID)#;"></div>
+      <p>#= data[1].ProductName #</p>
+    </script>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      var dataSource = new kendo.data.DataSource({
+        type: "odata",
+        transport: {
+          read: {
+            url: "http://demos.kendoui.com/service/Northwind.svc/Products"
+          }
+        },
+        serverPaging: true,
+        pageSize: 12 //2*6
+      });
+
+      function setBackground(id) {
+        return "url(http://demos.kendoui.com/content/web/foods/" + id +".jpg)";
+      }
+    </script>
+
 ### page `Number`*(default: 0)*
 
  The initial page to display.
+
+#### Example
+
+    <div data-role="view">
+      <div id="scrollView" data-role="scrollview" data-page="1">
+        <div data-role="page">Foo</div>
+        <div data-role="page">Bar</div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
 
 ### pageSize `Number`*(default: 1)*
 
 Multiplier applied to the snap amount of the ScrollView. By default, the widget scrolls to the next screen when swipe. If the `pageSize` property is set to `0.5`, the ScrollView will scroll by half of the widget width.
 
  **Not applicable in data bound mode.**
+
+#### Example
+
+    <div data-role="view">
+      <div id="scrollView" data-role="scrollview" data-page-size="0.5">
+        <div data-role="page">Foo</div>
+        <div data-role="page">Bar</div>
+        <div data-role="page">Baz</div>
+        <div data-role="page">Bat</div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
 
 ### template `String`*(default: "#:data#")*
 
@@ -130,6 +370,21 @@ Multiplier applied to the snap amount of the ScrollView. By default, the widget 
 
  The velocity threshold after which a swipe will navigate to the next page (as opposed to snapping back to the current page).
 
+#### Example
+
+    <div data-role="view">
+      <div id="scrollView" data-role="scrollview" data-velocity-threshold="2">
+        <div data-role="page">Foo</div>
+        <div data-role="page">Bar</div>
+        <div data-role="page">Baz</div>
+        <div data-role="page">Bat</div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+    </script>
+
 ## Methods
 
 ### content
@@ -138,19 +393,31 @@ Update the scrollview HTML content.
 
 > **Important:** This method is **not** supported in data bound mode.
 
-#### Example
-
-    <div data-role="scrollview" id="scrollview"></div>
-
-    <script>
-       $("#scrollview").data("kendoMobileScrollView").content("<span>Foo</span>");
-    </script>
-
 #### Parameters
 
 ##### content `String | jQuery`
 
 the new scrollView content.
+
+#### Example - change widget's content after initialization
+
+    <div data-role="view" data-init="changePages">
+      <div id="scrollView" data-role="scrollview">
+        <div data-role="page">Foo</div>
+        <div data-role="page">Bar</div>
+        <div data-role="page">Baz</div>
+        <div data-role="page">Bat</div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function changePages() {
+        var scrollview = $("#scrollView").data("kendoMobileScrollView");
+        scrollview.content('<div data-role="page">Item1</div><div data-role="page">Item2</div>');
+      }
+    </script>
 
 ### destroy
 Prepares the **ScrollView** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
@@ -159,10 +426,22 @@ Prepares the **ScrollView** for safe removal from DOM. Detaches all event handle
 
 #### Example
 
-    var scrollView = $("#scrollView").data("kendoMobileScrollView");
+    <div data-role="view">
+      <div id="scrollView" data-role="scrollview">
+        <div data-role="page">Foo</div>
+        <div data-role="page">Bar</div>
+      </div>
+    </div>
 
-    // detach events
-    scrollView.destroy();
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function destroyScrollView() {
+        var scrollview = $("#scrollView").data("kendoMobileScrollView");
+        scrollview.destroy();
+        $("#scrollView").remove();
+      }
+    </script>
 
 ### refresh
 
@@ -170,24 +449,25 @@ Redraw the mobile ScrollView pager. Called automatically on device orientation c
 
 #### Example
 
-    <div data-role="scrollview" id="scrollview"></div>
+    <div data-role="view">
+      <div id="scrollView" data-role="scrollview">
+        <div data-role="page">Foo</div>
+        <div data-role="page">Bar</div>
+      </div>
+    </div>
 
     <script>
-       $("#scrollview").data("kendoMobileScrollView").refresh();
+      var app = new kendo.mobile.Application();
+
+      function refreshScrollView() {
+        var scrollview = $("#scrollView").data("kendoMobileScrollView");
+        scrollview.refresh();
+      }
     </script>
 
 ### scrollTo
 
 Scroll to the given page. Pages are zero-based indexed.
-
-#### Example
-
-    <div data-role="scrollview" id="scrollview"></div>
-
-    <script>
-       // Scroll to the second page of the scrollView
-       $("#scrollview").data("kendoMobileScrollView").scrollTo(1);
-    </script>
 
 #### Parameters
 
@@ -198,6 +478,26 @@ The page to scroll to.
 ##### instant `Boolean` *(default: false)*
 
 If set to true, the scrollview will jump instantly to the given page without any animation effects.
+
+#### Example - scroll instantly (without animation)
+
+    <div data-role="view" data-init="onInit">
+      <div id="scrollView" data-role="scrollview">
+        <div data-role="page">Foo</div>
+        <div data-role="page">Bar</div>
+        <div data-role="page">Baz</div>
+        <div data-role="page">Bat</div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      function onInit() {
+        var scrollview = $("#scrollView").data("kendoMobileScrollView");
+        scrollview.scrollTo(2); //scrolls to the 3rd page instantly
+      }
+    </script>
 
 ## Events
 
@@ -214,6 +514,26 @@ The current page (zero based index)
 ##### e.nextPage `Number`
 
 The page about to be displayed (zero based index)
+
+#### Example - prevent scrolling after 3th page
+
+    <div data-role="view">
+      <div id="scrollView" data-role="scrollview" data-changing="changing">
+        <div data-role="page">Foo</div>
+        <div data-role="page">Bar</div>
+        <div data-role="page">Baz</div>
+        <div data-role="page">Bat</div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+      function changing(e) {
+        if(e.nextPage > 2) {
+          e.preventDefault(); //prevent scrolling
+        }
+      }
+    </script>
 
 ### change
 
@@ -233,6 +553,47 @@ The page element. **Available only in data bound mode.** Parameter will be undef
 
 The data collection. **Available only in data bound mode.** Parameter will be undefined in standard mode.
 
+#### Example - hook up to the change event
+
+    <div data-role="view" data-stretch="true">
+      <div data-role="scrollview"
+        data-source="dataSource" 
+        data-template="scrollview-template"
+        data-content-height="120px"
+        data-enable-pager="false"
+        data-change="change">
+      </div>
+    </div>
+
+    <script id="scrollview-template" type="text/x-kendo-template">
+      <div style="width: 110px; height: 110px; background-image: #=setBackground(ProductID)#;"></div>
+      <p>#= ProductName #</p>
+    </script>
+
+    <script>
+      var app = new kendo.mobile.Application();
+
+      var dataSource = new kendo.data.DataSource({
+        type: "odata",
+        transport: {
+          read: {
+            url: "http://demos.kendoui.com/service/Northwind.svc/Products"
+          }
+        },
+        serverPaging: true,
+        pageSize: 30
+      });
+
+      function setBackground(id) {
+        return "url(http://demos.kendoui.com/content/web/foods/" + id +".jpg)";
+      }
+
+      function change(e) {
+        console.log("page ", e.page, "data: ", e.data);
+        //handle event
+      }
+    </script>
+
 ### refresh
 
 Fires when widget refreshes
@@ -246,3 +607,22 @@ The number of pages
 ##### e.page `Number`
 
 The current page number (zero based index)
+
+#### Example
+
+    <div data-role="view">
+      <div id="scrollView" data-role="scrollview" data-refresh="refresh">
+        <div data-role="page">Foo</div>
+        <div data-role="page">Bar</div>
+        <div data-role="page">Baz</div>
+        <div data-role="page">Bat</div>
+      </div>
+    </div>
+
+    <script>
+      var app = new kendo.mobile.Application();
+      function refresh(e) {
+        console.log("Total: ", e.pageCount, " Current: ", e.page);
+        //handle event
+      }
+    </script>
