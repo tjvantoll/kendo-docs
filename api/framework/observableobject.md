@@ -9,23 +9,37 @@ publish: true
 
 # kendo.data.ObservableObject
 
-The `ObservableObject` is a very important piece of the Kendo UI framework. It is the building block of [Kendo MVVM](/getting-started/framework/mvvm/overview). In addition
-the Kendo [DataSource](/getting-started/framework/datasource/overview) contains instances of the `ObservableObject`. Inherits from [Observable](/api/framework/observable).
+The `kendo.data.ObservableObject` is the building block of [Kendo MVVM](/getting-started/framework/mvvm/overview). In addition
+the items of the [kendo.dat.DataSource](/getting-started/framework/datasource/overview) are `kendo.data.ObservableObject` instances.
+
+Inherits from [kendo.Observable](/api/framework/observable).
 
 ## Configuration
 
 To create a new `ObservableObject` use its constructor or the `kendo.observable` method.
-### Creating a new ObservableObject
 
+#### Example - creating a new ObservableObject via its constructor
+
+    <script>
     var observable = new kendo.data.ObservableObject({ name: "John Doe" });
-### Using the kendo.observable method
+    console.log(observable.name); // outputs "John Doe"
+    </script>
 
+#### Example - using the kendo.observable method
+
+    <script>
     var observable = kendo.observable({ name: "John Doe" });
-> **Important:** Complex fields are automatically wrapped in `ObservableObject`. Array fields are wrapped in `ObservableArray` objects. The `change` event of the child objects will bubble
-to the parent `ObservableObject`. Fields, which name are prefixed with an underscore will not be wrapped.
+    console.log(observable.name); // outputs "John Doe"
+    </script>
 
-### Creating ObservableObject with complex and array fields
+> **Important:** Complex fields are automatically wrapped in nested `ObservableObject` instances.
+> Array fields are wrapped as `kendo.data.ObservableArray` objects.
+> The `change` event of the child objects will bubble to the parent `ObservableObject`.
+> Fields, which name are prefixed with an underscore will not be wrapped.
 
+#### Example - creating ObservableObject with complex and array fields
+
+    <script>
     var observable = kendo.observable({
         // complex object field
         person: {
@@ -37,52 +51,44 @@ to the parent `ObservableObject`. Fields, which name are prefixed with an unders
 
     console.log(observable.person instanceof kendo.data.ObservableObject); // outputs "true"
     console.log(observable.numbers instanceof kendo.data.ObservableArray); // outputs "true"
+    </script>
 
 ## Fields
 
-### uid
+### uid `String`
 
 The unique identifier of the `ObservableObject`.
 
-#### Example
+#### Example - using the uid field
+    <script>
     var observable = new kendo.data.ObservableObject({ name: "John Doe" });
     console.log(observable.uid); // outputs "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" where "x" is a number or letter
+    </script>
 
 ## Methods
 
 ### bind
 
-Attaches a handler to an event. More info can be found in the [bind](/api/framework/observable#bind) section of the
+Attaches a handler to an event. Examples and more info can be found in the [bind](/api/framework/observable#bind) section of the
 kendo.Observable API reference.
 
-#### Example
+#### Example - subscribe to an event
 
+    <script>
     var observable = new kendo.data.ObservableObject({ name: "John Doe" });
-
     observable.bind("change", function(e) {
         console.log(e.field); // will output the changed field once the event is raised
     });
-
     observable.set("name", "Jane Doe"); // raises the "change" event and the handler outputs "name"
+    </script>
 
 ### get
 
 Gets the value of the specified field.
 
-#### Get the value of a field
+#### Returns
 
-    var observable = new kendo.data.ObservableObject({ name: "John Doe" });
-    var name = observable.get("name");
-
-    console.log(name); //outputs "John Doe"
-
-#### Get the value of a nested field
-
-    var observable = new kendo.data.ObservableObject({ person: { name: "John Doe" } });
-
-    var name = observable.get("person.name"); // use dot notation to denote nested fields
-
-    console.log(name); //outputs "John Doe"
+`Object` the value of the specified field.
 
 #### Parameters
 
@@ -90,44 +96,43 @@ Gets the value of the specified field.
 
 The name of the field whose value is going to be returned.
 
-#### Returns
+#### Example - get the value of a field
 
-`Object` The value of the specified field.
+    <script>
+    var observable = new kendo.data.ObservableObject({ name: "John Doe" });
+    var name = observable.get("name");
+    console.log(name); //outputs "John Doe"
+    </script>
+
+#### Example - get the value of a nested field
+
+    <script>
+    var observable = new kendo.data.ObservableObject({ person: { name: "John Doe" } });
+    var name = observable.get("person.name"); // use dot notation to denote nested fields
+    console.log(name); //outputs "John Doe"
+    </script>
 
 ### parent
 
-Returns the parent `ObservableObject`. If the current `ObservableObject` is not
-nested returns `undefined`;
+Gets the parent of the object if such parent exists.
 
-#### Example
+#### Returns
 
+`kendo.data.ObservableObject` the parent of the object; `undefined` if the object is not nested and doesn't have a parent.
+
+#### Example - get the parent object
+
+    <script>
     var observable = new kendo.data.ObservableObject({ person: { name: "John Doe" } });
-
     var person = observable.get("person");
-
     console.log(observable.parent()); // outputs "undefined"
-
     console.log(person.parent() === observable); // outputs "true"
+    </script>
 
 ### set
 
 Sets the value of the specified field.
 
-#### Set the value of a field
-
-    var observable = new kendo.data.ObservableObject({ name: "John Doe" });
-
-    observable.set("name", "Jane Doe"); // set the value
-
-    console.log(observable.get("name")); //outputs the new value "Jane Doe"
-
-#### Set the value of a nested field
-
-    var observable = new kendo.data.ObservableObject({ person: { name: "John Doe" } });
-
-    observable.set("person.name", "Jane Doe"); // set the value
-
-    console.log(observable.get("person.name")); //outputs the new value "Jane Doe"
 #### Parameters
 
 ##### name `String`
@@ -138,35 +143,43 @@ The name of the field whose value is going to be returned.
 
 The new value of the field.
 
+#### Example - set the value of a field
+
+    <script>
+    var observable = new kendo.data.ObservableObject({ name: "John Doe" });
+    observable.set("name", "Jane Doe"); // set the value
+    console.log(observable.get("name")); //outputs the new value "Jane Doe"
+    </script>
+
+#### Example - set the value of a nested field
+
+    <script>
+    var observable = new kendo.data.ObservableObject({ person: { name: "John Doe" } });
+    observable.set("person.name", "Jane Doe"); // set the value
+    console.log(observable.get("person.name")); //outputs the new value "Jane Doe"
+    </script>
+
 ### toJSON
 
 Creates a plain JavaScript object which contains all fields of the `ObservableObject`.
 
-#### Example
-    var observable = new kendo.data.ObservableObject({ person: { name: "John Doe" } });
-    var json = observable.toJSON();
-
-    console.log(JSON.stringify(json)); // outputs {"person":{"name":"John Doe"}}
-
 #### Returns
 
-An `Object` which contains only the fields of the `ObservableObject`.
+`Object` which contains only the fields of the `ObservableObject`.
+
+#### Example
+
+    <script>
+    var observable = new kendo.data.ObservableObject({ person: { name: "John Doe" } });
+    var json = observable.toJSON();
+    console.log(JSON.stringify(json)); // outputs {"person":{"name":"John Doe"}}
+    </script>
 
 ## Events
 
 ### change event
 
-Raised when a field value is updated via the `set` method.
-
-#### Example
-
-    var observable = new kendo.data.ObservableObject({ name: "John Doe" });
-
-    observable.bind("change", function(e) {
-        console.log(e.field); // will output the field name when the event is raised
-    });
-
-    observable.set("name", "Jane Doe"); // raises the "change" event and the handler outputs "name"
+Fired when a field value is updated via the `set` method.
 
 > The `change` event is raised **after** the field value is updated. Calling the `get` method from the event handler will return the new value.
 
@@ -176,19 +189,19 @@ Raised when a field value is updated via the `set` method.
 
 The name of the field which has changed.
 
-### get event
+#### Example - subscribe to the change event
 
-Raised when the `get` method is invoked.
-
-#### Example
-
+    <script>
     var observable = new kendo.data.ObservableObject({ name: "John Doe" });
-
-    observable.bind("get", function(e) {
+    observable.bind("change", function(e) {
         console.log(e.field); // will output the field name when the event is raised
     });
+    observable.set("name", "Jane Doe"); // raises the "change" event and the handler outputs "name"
+    </script>
 
-    observable.get("name"); // raises the "get" event and the handler outputs "name"
+### get event
+
+Fired when the `get` method is invoked.
 
 #### Event Data
 
@@ -196,19 +209,20 @@ Raised when the `get` method is invoked.
 
 The name of the field which is retrieved.
 
-### set event
+#### Example - subscribe to the get event
 
-Raised when the `set` method is invoked.
-
-#### Example
-
+    <script>
     var observable = new kendo.data.ObservableObject({ name: "John Doe" });
-
-    observable.bind("set", function(e) {
+    observable.bind("get", function(e) {
         console.log(e.field); // will output the field name when the event is raised
     });
+    observable.get("name"); // raises the "get" event and the handler outputs "name"
+    </script>
 
-    observable.set("name", "Jane Doe"); // raises the "set" event and the handler outputs "name"
+### set event
+
+Fired when the `set` method is invoked.
+
 > The `set` event is raised **before** the field value is updated. Calling the `get` method from the event handler will return the old value. Calling
 `e.preventDefault` will prevent the update of the field and the `change` event will not be raised.
 
@@ -226,10 +240,20 @@ The new value.
 
 A function which may prevent the update of the value. Can be used to perform validation.
 
-#### Perform validation by preventing the `set` event
+#### Example - subscribe to the set event
 
+    <script>
     var observable = new kendo.data.ObservableObject({ name: "John Doe" });
+    observable.bind("set", function(e) {
+        console.log(e.field); // will output the field name when the event is raised
+    });
+    observable.set("name", "Jane Doe"); // raises the "set" event and the handler outputs "name"
+    </script>
 
+#### Example - perform validation by preventing the set event
+
+    <script>
+    var observable = new kendo.data.ObservableObject({ name: "John Doe" });
     observable.bind("set", function(e) {
         if (e.field == "name") {
             if (!e.value) {
@@ -238,6 +262,5 @@ A function which may prevent the update of the value. Can be used to perform val
             }
         }
     });
-
     observable.set("name", "Jane Doe");
-
+    </script>
