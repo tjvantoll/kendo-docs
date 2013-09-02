@@ -46,7 +46,24 @@ Represents the Kendo UI Calendar widget. Inherits from [Widget](/api/framework/w
 
 ### depth `String`
 
- Specifies the navigation depth.
+Specifies the navigation depth. The following
+settings are available for the **depth** value:
+
+#### *"month"*
+
+shows the days of the month
+
+#### *"year"*
+
+shows the months of the year
+
+#### *"decade"*
+
+shows the years of the decade
+
+#### *"century"*
+
+shows the decades from the centery
 
 #### Example - set navigation depth of the calendar
 
@@ -64,12 +81,12 @@ Represents the Kendo UI Calendar widget. Inherits from [Widget](/api/framework/w
 #### Example - specify footer template as a function
 
     <div id="calendar"></div>
-    <script id="alt-template" type="text/x-kendo-template">
+    <script id="footer-template" type="text/x-kendo-template">
         Today - #: kendo.toString(data, "d") #
     </script>
     <script>
         $("#calendar").kendoCalendar({
-            footer: kendo.template($("#alt-template").html())
+            footer: kendo.template($("#footer-template").html())
         });
     </script>
 
@@ -103,9 +120,8 @@ Represents the Kendo UI Calendar widget. Inherits from [Widget](/api/framework/w
 
     <div id="calendar"></div>
     <script>
-        // set the max date to Jan 1st, 2013
         $("#calendar").kendoCalendar({
-            max: new Date(2013, 0, 1)
+            max: new Date(2013, 0, 1) // set the max date to Jan 1st, 2013
         });
     </script>
 
@@ -165,7 +181,24 @@ Represents the Kendo UI Calendar widget. Inherits from [Widget](/api/framework/w
 
 ### start `String`*(default: "month")*
 
- Specifies the start view.
+Specifies the start view.
+The following settings are available for the **start** value:
+
+#### *"month"*
+
+shows the days of the month
+
+#### *"year"*
+
+shows the months of the year
+
+#### *"decade"*
+
+shows the years of the decade
+
+#### *"century"*
+
+shows the decades from the centery
 
 #### Example - specify the initial view, which calendar renders
 
