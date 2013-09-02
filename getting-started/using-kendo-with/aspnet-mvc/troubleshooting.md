@@ -86,7 +86,7 @@ from your **~/Sripts** folder. Then install Microsoft.jQuery.Unobtrusive.Ajax an
 ## Menu renders too slow in debug mode
 
 The Menu has security trimming functionality, which is enabled by default. Under the hood,
-it creates an [AuthorizationContext](http://msdn.microsoft.com/en-us/library/system.web.mvc.authorizationcontext(v=vs.108).aspx] for every menu item
+it creates an [AuthorizationContext](http://msdn.microsoft.com/en-us/library/system.web.mvc.authorizationcontext(v=vs.108).aspx) for every menu item
 with set Action/Controller. In 'debug' mode those context objects are not cached and as a result there may be delay in rendering the menu in
 case there are a lot of items. When your application is deployed and debug mode is disabled the authorization context objects are cached.
 
