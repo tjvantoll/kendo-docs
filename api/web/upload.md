@@ -102,6 +102,14 @@ Sets the text of the cancel button text.
 
 Sets the drop zone hint.
 
+### localization.headerStatusUploaded `String`
+
+Sets the header status message for uploaded files.
+
+### localization.headerStatusUploading `String`
+
+Sets the header status message for files that are being uploaded.
+
 ### localization.remove `String`
 
 Sets the text of the remove button text.
