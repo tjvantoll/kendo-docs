@@ -5,7 +5,7 @@ meta_description: The documentation for kendo.data.Model will help you define a 
 slug: api-framework-model
 tags: api,framework
 publish: true
----
+--
 
 # kendo.data.Model
 
@@ -16,7 +16,8 @@ The `Model` inherits from the [ObservableObject](/api/framework/observableobject
 
 To define a new model use the `Model.define` method.
 
-### Example: Defining a Model
+### Example - defining a model
+    <script>
     var Person = kendo.data.Model.define( {
         id: "personId", // the identifier of the model
         fields: {
@@ -28,15 +29,13 @@ To define a new model use the `Model.define` method.
             }
         }
     });
-
     var person = new Person( {
         name: "John Doe",
         age: 42
     });
-
-
     console.log(person.get("name")); // outputs "John Doe"
     console.log(person.get("age")); // outputs 42
+    </script>
 
 ## Fields
 
@@ -49,15 +48,26 @@ ObservableObject API reference.
 
 Indicates whether the model is modified.
 
+### Example - use the dirty field
+
+    <script>
+    var model = new kendo.data.Model({
+        name: "John Doe"
+    });
+    console.log(model.dirty); // outputs "false"
+    model.set("name", "Jane Doe");
+    console.log(model.dirty); // outputs "true"
+    </script>
+
 ## Methods
 
 ### bind
 
-Attaches a handler to an event. More info can be found in the [bind](/api/framework/observable#methods-bind) section of the Observable API reference.
+Attaches a handler to an event. Examples and more info can be found in the [bind](/api/framework/observable#methods-bind) section of the `kendo.Observable` API reference.
 
 ### Model.define
 
-Defines a new `Model` type using the provided options.
+Defines a new `Model` type using the provided options. The returned value inherits from the `kendo.data.Model` class.
 
 #### Parameters
 
@@ -67,10 +77,10 @@ Describes the configuration options of the new model type.
 
 ##### options.id `String`
 
-The name of the field which acts as an identifier of the model. The identifier is used to determine if a model instance is new or existing one.
+The name of the field which acts as the identifier of the model. The identifier is used to determine if a model instance is new or existing one.
 If the value of the field specified is equal to the default value (specifed through the `fields` configuration) the model is considered as new.
 
-##### options.fields `Object`
+##### options.fields `Object|Array`
 
 A set of key/value pairs the configure the model fields. The key specifies the name of the field.
 Quote the key if it contains spaces or other symbols which are not valid for a JavaScript identifier.
@@ -104,8 +114,9 @@ Specifies the field of the original record which value to be used for population
 
 Specifies the validation options which will be used by [Kendo Validator](/api/framework/validator).
 
-#### Example: Define the Fields of a Model
+#### Example - define the fields of a model
 
+    <script>
     var Product = kendo.data.Model.define( {
         id: "id", // the identifier is the "id" field (declared below)
         fields: {
@@ -132,10 +143,17 @@ Specifies the validation options which will be used by [Kendo Validator](/api/fr
             }
         }
     });
+    var product = new Product();
+    console.log(product.get("price")); // outputs "99.99" which is the default value
+    </script>
 
 ### editable
 
 Determines if the specified field is editable or not.
+
+#### Returns
+
+`Boolean` `true` if the field is editable; `false` otherwise.
 
 #### Parameters
 
@@ -143,8 +161,9 @@ Determines if the specified field is editable or not.
 
 The field to check.
 
-#### Example
+#### Example - check if a field is editable or not
 
+    <script>
     var Product = kendo.data.Model.define({
         fields: {
             id: {
@@ -155,15 +174,14 @@ The field to check.
             }
         }
     });
-
     var product = new Product();
-
     console.log(product.editable("id")); // outputs "false"
     console.log(product.editable("name")); // outputs "true"
+    </script>
 
 ### get
 
-Gets the value of the specified field. Inherited from `ObservableObject`. More info can be found in the [get](/api/framework/observableobject#methods-get) section of the
+Gets the value of the specified field. Inherited from `kendo.data.ObservableObject`. Examples and more info can be found in the [get](/api/framework/observableobject#methods-get) section of the
 ObservableObject API reference.
 
 ### isNew
@@ -171,7 +189,12 @@ ObservableObject API reference.
 Checks if the `Model` is new or not. The `id` field is used to determine if a model instance is new or existing one.
 If the value of the field specified is equal to the default value (specifed through the `fields` configuration) the model is considered as new.
 
-#### Example
+#### Returns
+
+`Boolean` `true` if the model is new; `false` otherwise.
+
+#### Example - check if a model is new
+    <script>
     var Product = kendo.data.Model.define({
         id: "productId",
         fields: {
@@ -180,38 +203,35 @@ If the value of the field specified is equal to the default value (specifed thro
             }
         }
     });
-
     var productOne = new Product();
-
     console.log(productOne.isNew()); // outputs "true"
-
     var productTwo = new Product({ productId: 1 });
-
     console.log(productTwo.isNew()); // outputs "false" because productId is set to 1
+    </script>
 
 ### set
 
-Sets the value of the specified field. Inherited from `ObservableObject`. More info can be found in the [set](/api/framework/observableobject#methods-set) section of the
+Sets the value of the specified field. Inherited from `kendo.data.ObservableObject`. Examples and more info can be found in the [set](/api/framework/observableobject#methods-set) section of the
 ObservableObject API reference.
 
 ### toJSON
 
-Creates a plain JavaScript object which contains all fields of the `Model`. Inherited from `ObservableObject`. More info can be found in the [toJSON](/api/framework/observableobject#methods-toJSON) section of the
+Creates a plain JavaScript object which contains all fields of the `Model`. Inherited from `kendo.data.ObservableObject`. Examples and more info can be found in the [toJSON](/api/framework/observableobject#methods-toJSON) section of the
 ObservableObject API reference.
 
 ## Events
 
 ### change event
 
-Raised when a field value is updated via the `set` method. Inherited from `ObservableObject`. More info can be found in the [change](/api/framework/observableobject#events-change) section of the
+Raised when a field value is updated via the `set` method. Inherited from `kendo.data.ObservableObject`. Examples and more info can be found in the [change](/api/framework/observableobject#events-change) section of the
 ObservableObject API reference.
 
 ### get event
 
-Raised when the `get` method is invoked. Inherited from `ObservableObject`. More info can be found in the [get](/api/framework/observableobject#events-get) section of the
+Raised when the `get` method is invoked. Inherited from `kendo.data.ObservableObject`. Examples and more info can be found in the [get](/api/framework/observableobject#events-get) section of the
 ObservableObject API reference.
 
 ### set event
 
-Raised when the `set` method is invoked. Inherited from `ObservableObject`. More info can be found in the [set](/api/framework/observableobject#events-set) section of the
+Raised when the `set` method is invoked. Inherited from `kendo.data.ObservableObject`. Examples and more info can be found in the [set](/api/framework/observableobject#events-set) section of the
 ObservableObject API reference.
