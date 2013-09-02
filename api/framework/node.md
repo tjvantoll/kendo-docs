@@ -1,7 +1,7 @@
 ---
 title: kendo.data.Node
 meta_title: API Reference for Kendo Data Node
-meta_description: Documentation how to get started with the Node, the extended type of DataModel. Find examples and guidelines for methods, fields and events of kendo.data.Node.
+meta_description: Documentation how to get started with the kendo.data.Node, the extended type of kendo.data.Model. Find examples and guidelines for methods, fields and events of kendo.data.Node.
 slug: api-framework-node
 tags: api,framework
 publish: true
@@ -9,8 +9,7 @@ publish: true
 
 # kendo.data.Node
 
-The `Node` is an extended type of [Model](/api/framework/model) that works with hierarchical data.
-The [HierarchicalDataSource](/api/framework/hierarchicaldatasource) contains only instances of `Node`.
+The `Node` is an extended type of [Model](/api/framework/model) that works with hierarchical data. The [HierarchicalDataSource](/api/framework/hierarchicaldatasource) contains instances of the `Node` type.
 
 ## Fields
 
@@ -18,8 +17,17 @@ See the [Model fields](/api/framework/model#fields) for all inherited fields.
 
 ### children
 
-The child HierarchicalDataSource of the Node. This field is initialized lazily, if the `hasChildren` field is set,
-or when the load or append methods have been called.
+The child `kendo.data.HierarchicalDataSource` of the node. This field is initialized lazily, if the `hasChildren` field is set,
+or when the [load](#methods-load) or [append](#methods-append) methods have been called.
+
+#### Example - get the child nodes
+    <script>
+    var parent = new kendo.data.Node({ text: "Parent" });
+    parent.append({ text: "Child" });
+    console.log(parent.children.data().length); // outputs "1"
+    var child = parent.children.at(0);
+    console.log(child.text); // outputs "Child"
+    </script>
 
 ## Methods
 
@@ -27,66 +35,140 @@ See the [Model methods](/api/framework/model#methods) for all inherited methods.
 
 ### append
 
-Appends a new item to the children datasource, and initializes the datasource, if necessary.
+Appends a new item to the children data source, and initializes it if necessary.
 
 #### Parameters
 
-##### model `Object`
+##### model `Object|kendo.data.Node`
 
 The data for the new item
 
+#### Example - append child nodes
+
+    <script>
+    var parent = new kendo.data.Node({ text: "Parent" });
+    parent.append({ text: "Child" });
+    console.log(parent.children.data().length); // outputs "1"
+    var child = parent.children.at(0);
+    console.log(child.text); // outputs "Child"
+    </script>
+
 ### level
 
-Gets the current nesting level of the Node within the HierarchicalDataSource.
+Gets the current nesting level of the node within the data source.
 
-    var dataSource = new HierarchicalDataSource({
+#### Returns
+
+`Number` the zero based level of the node.
+
+#### Example - get the level of the node
+
+    <script>
+    var dataSource = new kendo.data.HierarchicalDataSource({
         data: [
-            { id: 1, text: "Root", items: [
-                { id: 2, text: "Child" }
-            ] }
+            {
+                id: 1,
+                text: "Root",
+                items: [
+                    { id: 2, text: "Child" }
+                ]
+            }
         ]
     });
-
     dataSource.read();
-
     var root = dataSource.get(1);
-    equals(root.level(), 0);
-
+    console.log(root.level()); // outputs "0"
     root.load(); // Load child nodes
-
     var child = dataSource.get(2);
-    equals(child.level(), 1);
+    console.log(child.level()); // outputs "1"
+    </script>
 
 ### load
 
-Loads the child nodes in the child datasource, supplying the `id` of the Node to the request.
+Loads the child nodes in the child data source, supplying the `id` of the Node to the request.
+
+#### Example - load the child nodes
+
+    <script>
+    var dataSource = new kendo.data.HierarchicalDataSource({
+        transport: {
+            read: {
+                url: "http://demos.kendoui.com/service/Employees",
+                dataType: "jsonp"
+            }
+        },
+      schema: {
+        model: {
+          id: "EmployeeId",
+          hasChildren: "HasEmployees"
+        }
+      }
+    });
+    dataSource.fetch(function() {
+      var node = dataSource.at(0);
+      node.load(); // load the child nodes
+    });
+    </script>
 
 ### loaded
 
 Gets or sets the loaded flag of the Node. Setting the loaded flag to `false` allows reloading of child items.
 
-#### Reloading child items of a node
+#### Example - reloading child nodes
 
-    var dataSource = new HierarchicalDataSource({
+    <script>
+    var dataSource = new kendo.data.HierarchicalDataSource({
         transport: {
             read: {
                 url: "http://demos.kendoui.com/service/Employees",
-                dataType: "json"
+                dataType: "jsonp"
             }
+        },
+      schema: {
+        model: {
+          id: "EmployeeId",
+          hasChildren: "HasEmployees"
         }
+      }
     });
 
-    var ceo = dataSource.view()[0];
-
-    ceo.load();
-
-    ceo.loaded(false); // clear the loaded flag
-
-    ceo.load(); // loads the data again
+    dataSource.fetch(function() {
+      var node = dataSource.at(0);
+      node.load(); // load the child nodes
+      node.loaded(false); // clear the loaded flag
+      node.load(); // load the child nodes again
+    });
+    </script>
 
 ### parentNode
 
-Gets the parent node of the Node, if any.
+Gets the parent node.
+
+#### Returns
+
+`kendo.data.Node` the parent of the node; `null` if the node is a root node or doesn't have a parent.
+
+#### Example - get the parent node
+
+    <script>
+    var dataSource = new kendo.data.HierarchicalDataSource({
+       data: [
+           {
+               id: 1,
+               text: "Root",
+               items: [
+                   { id: 2, text: "Child" }
+               ]
+           }
+       ]
+    });
+    dataSource.read();
+    var root = dataSource.get(1);
+    console.log(root.parentNode()); // outputs "null"
+    root.load(); // load child nodes
+    var child = dataSource.get(2);
+    console.log(child.parentNode().text); // outputs "Root"
+    </script>
 
 ## Events
 
