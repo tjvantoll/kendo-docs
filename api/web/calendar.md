@@ -127,12 +127,12 @@ Represents the Kendo UI Calendar widget. Inherits from [Widget](/api/framework/w
 
  Templates for the cells rendered in "month" view.
 
-### month.content `String|Function`
+### month.content `String`
 
- [Template](/api/framework/kendo#methods-template) to be used for rendering the cells in "month" view, which are between the min/max range.
+ The template to be used for rendering the cells in "month" view, which are between the min/max range.
  By default, the widget renders the value of the corresponding day.
 
-#### Example - specify cell template as a function
+#### Example - specify cell template as a string
 
     <div id="calendar"></div>
     <script id="cell-template" type="text/x-kendo-template">
@@ -142,40 +142,15 @@ Represents the Kendo UI Calendar widget. Inherits from [Widget](/api/framework/w
     <script>
         $("#calendar").kendoCalendar({
             month: {
-                content:  kendo.template($("#cell-template").html()),
+               content: $("#cell-template").html()
             }
         });
     </script>
 
-#### Example - specify cell template as a string
+### month.empty `String`
 
-    <div id="calendar"></div>
-    <script>
-        $("#calendar").kendoCalendar({
-            month: {
-               content: '<div class="#= data.value < 10 ? exhibition : party #"></div>#=data.value#'
-            }
-        });
-    </script>
-
-### month.empty `String|Function`
-
- [Template](/api/framework/kendo#methods-template) to be used for rendering the cells in the "month" view, which are not in the min/max range.
+ The template to be used for rendering the cells in the "month" view, which are not in the min/max range.
  By default, the widget renders an empty string.
-
-#### Example - specify an empty cell template as a function
-
-    <div id="calendar"></div>
-    <script id="cell-template" type="text/x-kendo-template">
-        -
-    </script>
-    <script>
-        $("#calendar").kendoCalendar({
-            month: {
-                empty:  kendo.template($("#cell-template").html()),
-            }
-        });
-    </script>
 
 #### Example - specify an empty cell template as a string
 
@@ -485,7 +460,7 @@ Fires when the selected date is changed.
             change: function() {
                 var value = this.value();
                 console.log(value); //value is the selected date in the calendar
-            });
+            }
         });
     </script>
 
@@ -518,7 +493,7 @@ Fires when calendar navigates.
 
                 var current = this.current();
                 console.log(current); //currently focused date
-            });
+            }
         });
     </script>
 
