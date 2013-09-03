@@ -14,56 +14,114 @@ web-safe, or a custom color palette.  You can use it independently if
 you need such a widget directly in the page somewhere, rather than in
 a drop-down.
 
-## Example
-
-    <div id="container"></div>
-
-    <script>
-      $("#container").kendoColorPalette();
-    </script>
-
 ## Configuration
 
-### palette `String | Array` *(default: "basic")*
+### palette `String|Array` *(default: "basic")*
 
 Specifies the color palette to display.  It can be a string with
-comma-separated colors in hex representation, an array of [Color][]
-objects or of strings that [parseColor][] understands.  As a shortcut,
+comma-separated colors in hex representation, an array of [`kendo.Color` object](/api/framework/color)
+objects or of strings that [parseColor](/api/framework/kendo#parseColor) understands.  As a shortcut,
 you can pass "basic" to get the simple palette (this is the default)
 or "websafe" to get the Web-safe palette.
 
+#### Example - use "websafe" palette
+
+    <div id="palette"></div>
+    <script>
+    $("#palette").kendoColorPalette({
+      palette: "websafe"
+    });
+    </script>
+
+#### Example - use list of colors
+
+    <div id="palette"></div>
+    <script>
+    $("#palette").kendoColorPalette({
+      palette: [ "#000", "#333", "#666", "#999", "#ccc", "#fff" ],
+      columns: 6
+    });
+    </script>
+
 ### columns `Number` *(default: 10)*
 
-The number of columns to display.  When you pass "websafe" this will
-automatically default to 18.
+The number of columns to display.  When you use the "websafe" palette, this will automatically default to 18.
+
+#### Example - wrap list of colors on two rows with 3 columns
+
+    <div id="palette"></div>
+    <script>
+    $("#palette").kendoColorPalette({
+      palette: [ "#000", "#333", "#666", "#999", "#ccc", "#fff" ],
+      columns: 3
+    });
+    </script>
 
 ### tileSize `Number | Object` *(default: 14)*
 
 The size of a color cell.
 
+#### Example
+
+    <div id="palette"></div>
+    <script>
+    $("#palette").kendoColorPalette({
+      palette: "basic",
+      tileSize: 32
+    });
+    </script>
+
 ### tileSize.width `Number` *(default: 14)*
 
 The width of the color cell.
+
+#### Example
+
+    <div id="palette"></div>
+    <script>
+    $("#palette").kendoColorPalette({
+      palette: "basic",
+      tileSize: { width: 40 }
+    });
+    </script>
 
 ### tileSize.height `Number` *(default: 14)*
 
 The height of the color cell.
 
+#### Example
+
+    <div id="palette"></div>
+    <script>
+    $("#palette").kendoColorPalette({
+      palette: "basic",
+      tileSize: { height: 40 }
+    });
+    </script>
+
 ### value `String | Color` *(default: null)*
 
 Specifies the initially selected color.
+
+#### Example
+
+    <div id="palette"></div>
+    <script>
+    $("#palette").kendoColorPalette({
+      palette: "basic",
+      value: "#fff"
+    });
+    </script>
 
 ## Methods
 
 ### value `String | Color`*(default: null)*
 
-Get or set the selected color. If no argument is given, this returns the
-currently selected color as a string in format #FFFFFF when the `opacity`
-option is off, or rgba(255, 255, 255, 1) when `opacity` is requested.
+Get or set the selected color. If no argument is given, this returns the currently selected color as a string in format `#FFFFFF`.
 
-If one argument is given, it selects the new color and updates the UI.  The
-argument can be a string in hex, rgb or rgba format, or a [Color][] object.
-This does not trigger the "change" event.
+If one argument is given, it selects the new color and updates the UI. The argument can be a string in hex, rgb or rgba format, or a [`kendo.Color` object](/api/framework/color) object.
+
+> This method does not trigger the "change" event.
 
 #### Parameters
 
@@ -73,14 +131,46 @@ This does not trigger the "change" event.
 
 `String` the string representation of the current color.
 
+#### Example
+
+    <div id="palette"></div>
+    <script>
+    $("#palette").kendoColorPalette();
+    var palette = $("#palette").data("kendoColorPalette");
+
+    // set palette value
+    palette.value("#ccc");
+
+    // get palette value
+    var value = palette.value();
+    </script>
+
 ### color
 
-Like `value()`, but it returns a `Color` object.
+Get or set the selected color. If no argument is given, this returns the currently selected color as a [`kendo.Color` object](/api/framework/color).
+
+#### Parameters
+
+##### color
+
+`kendo.Color` the color that should be set as the current value
+
+#### Returns
+
+`kendo.Color` the current value
 
 ### enable
 
-Enables or disables the widget.  It will enable it with no arguments
-or with a `true` argument, or disable with a `false` argument.
+Enables or disables the widget.  It will enable it with no arguments or with a `true` argument, or disable with a `false` argument.
+
+#### Example - disable the color palette
+
+    <div id="palette"></div>
+    <script>
+    $("#palette").kendoColorPalette();
+    var palette = $("#palette").data("kendoColorPalette");
+    palette.enable(false);
+    </script>
 
 ## Events
 
@@ -88,5 +178,27 @@ or with a `true` argument, or disable with a `false` argument.
 
 Triggers when a new color has been changed.
 
-[parseColor]: ../framework/kendo#parseColor
+#### Example - subscribe to the "change" event during initialization
+
+    <div id="palette"></div>
+    <script>
+    $("#palette").kendoColorPalette({
+      change: function(e) {
+        console.log("The newly selected color is ", e.value);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "change" event after initialization
+
+    <div id="palette"></div>
+    <script>
+    function palette_change(e) {
+      console.log("The newly selected color is ", e.value);
+    }
+    $("#palette").kendoColorPalette();
+    var palette = $("#palette").data("kendoColorPalette");
+    palette.bind("change", palette_change);
+    </script>
+
 [Color]: ../framework/kendo#Color
