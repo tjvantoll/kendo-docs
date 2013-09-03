@@ -151,9 +151,9 @@ Get or set the selected color. If no argument is given, this returns the current
 
 #### Parameters
 
-##### color
+##### color `kendo.Color`
 
-`kendo.Color` the color that should be set as the current value
+The color that should be set as the current value
 
 #### Returns
 
