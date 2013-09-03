@@ -56,7 +56,7 @@ The animation played when the calendar popup is closed.
     $("#datepicker").kendoDatePicker({
       animation: {
        close: {
-         effects: "fadeOut zoom:out",
+         effects: "zoom:out",
          duration: 300
        }
       }
@@ -84,7 +84,7 @@ The animation played when the calendar popup is opened.
     $("#datepicker").kendoDatePicker({
       animation: {
        open: {
-         effects: "fadeIn zoom:in",
+         effects: "zoom:in",
          duration: 300
        }
       }
@@ -250,7 +250,7 @@ shows the decades from the centery
 
     <input id="datepicker" />
     <script id="cell-template" type="text/x-kendo-template">
-        <div class="#= data.value < 10 ? exhibition : party #"></div>
+        <div class="#= data.value < 10 ? 'exhibition' : 'party' #"></div>
         #= data.value #
     </script>
     <script>
@@ -343,12 +343,15 @@ Closes the calendar.
 #### Example
 
     <input id="datepicker" />
+    <button id="close">Close</button>
     <script>
     $("#datepicker").kendoDatePicker();
 
     var datepicker = $("#datepicker").data("kendoDatePicker");
 
-    datepicker.close();
+    $("#close").click(function() {
+        datepicker.close();
+    });
     </script>
 
 ### destroy
@@ -515,12 +518,15 @@ Opens the calendar.
 #### Example
 
     <input id="datepicker" />
+    <button id="open">Open</button>
     <script>
     $("#datepicker").kendoDatePicker();
 
     var datepicker = $("#datepicker").data("kendoDatePicker");
 
-    datepicker.open();
+    $("#open").click(function() {
+        datepicker.open();
+    });
     </script>
 
 ### value
@@ -635,7 +641,7 @@ Fires when the calendar is opened
     <script>
     $("#datepicker").kendoDatePicker({
         open: function(e) {
-            e.preventDefault(); //prevent popup closing
+            e.preventDefault(); //prevent popup opening
         }
     });
     </script>
@@ -649,7 +655,7 @@ Fires when the calendar is opened
     var datepicker = $("#datepicker").data("kendoDatePicker");
 
     datepicker.bind("open", function(e) {
-        e.preventDefault(); //prevent popup closing
+        e.preventDefault(); //prevent popup opening
     });
     </script>
 

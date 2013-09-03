@@ -152,7 +152,7 @@ shows the decades from the centery
 
     <div id="calendar"></div>
     <script id="cell-template" type="text/x-kendo-template">
-        <div class="#= data.value < 10 ? exhibition : party #"></div>
+        <div class="#= data.value < 10 ? 'exhibition' : 'party' #"></div>
         #= data.value #
     </script>
     <script>
