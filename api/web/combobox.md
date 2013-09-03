@@ -16,329 +16,642 @@ Represents the Kendo UI ComboBox widget. Inherits from [Widget](/api/framework/w
 
 ### animation `Object`
 
- Animations to be used for opening/closing the popup. Setting to false will turn off the animation.
+Configures the opening and closing animations of the suggestion popup. Setting the `animation` option to `false` will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
 
-#### Example
+#### Example - disable open and close animations
 
-    $("#comboBox").kendoComboBox({
-        animation: false
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      animation: false
     });
+    </script>
+
+#### Example - configure the animation
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      animation: {
+       close: {
+         effects: "fadeOut zoom:out",
+         duration: 300
+       },
+       open: {
+         effects: "fadeIn zoom:in",
+         duration: 300
+       }
+      }
+    });
+    </script>
 
 ### animation.close `Object`
 
- Animation to be used for closing of the popup.
+#### Example - configure the close animation
 
-#### Example
-
-    //combobox initialization
-     <script>
-         $("#combobox").kendoComboBox({
-             dataSource: dataSource,
-             animation: {
-                close: {
-                    effects: "fadeOut",
-                    duration: 300,
-                    hide: true
-                    show: false
-                }
-             }
-         });
-     </script>
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      animation: {
+       close: {
+         effects: "zoom:out",
+         duration: 300
+       }
+      }
+    });
+    </script>
 
 ### animation.close.effects `String`
 
-Effect to be used for closing of the popup.
+The effect(s) to use when playing the close animation. Multiple effects should be separated with a space.
 
-### animation.close.duration `Number`
+[Complete list of available animations](/api/framework/fx#effects)
 
-Difines the animation duration.
+### animation.close.duration `Number` *(default: 100)*
+
+The duration of the close animation in milliseconds.
 
 ### animation.open `Object`
 
- Animation to be used for opening of the popup.
+The animation played when the suggestion popup is opened.
 
-#### Example
+#### Example - configure the open animation
 
-    //combobox initialization
-
+    <input id="combobox" />
     <script>
-         $("#combobox").kendoComboBox({
-             dataSource: dataSource,
-             animation: {
-                open: {
-                    effects: "fadeIn",
-                    duration: 300,
-                    show: true
-                }
-             }
-         });
-     </script>
+    $("#combobox").kendoComboBox({
+      animation: {
+       open: {
+         effects: "zoom:in",
+         duration: 300
+       }
+      }
+    });
+    </script>
+
+### animation.open.effects `String`
+
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.
+
+[Complete list of available animations](/api/framework/fx#effects)
+
+### animation.open.duration `Number` *(default: 200)*
+
+The duration of the open animation in milliseconds.
 
 ### animation.open.effects `String`
 
 Effect to be used for opening of the popup.
 
-### animation.open.duration `Number`
-
-Difines the animation duration.
-
 ### autoBind `Boolean`*(default: true)*
 
- Controls whether to bind the widget to the DataSource on initialization.
+Controls whether to bind the widget to the data source on initialization.
 
 #### Example
 
-    $("#comboBox").kendoComboBox({
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
         autoBind: false
     });
+    </script>
 
 ### cascadeFrom `String`
 
-Use it to set the Id of the parent DropDownList.
-
-#### Example
-    $("#dropdownlist1").kendoDropDownList();
-
-    $("#dropdownlist2").kendoDropDownList({
-        cascadeFrom: "dropdownlist1"
-    });
-
-### dataSource `Object | kendo.data.DataSource`
-
-A local JavaScript object or instance of DataSource or the data that the ComboBox will be bound to.
+Use it to set the Id of the parent ComboBox widget.
+[Help topic showing how cascading functionality works](/web/combobox/cascading)
 
 #### Example
 
-    var items = [{ text: "Item 1", value: "1" }, { text: "Item 2", value: "2" }];
-    $("#comboBox").kendoComboBox({
-        dataTextField: "text",
-        dataValueField: "value",
-        dataSource: items
+    <input id="parent" />
+    <input id="child" />
+    <script>
+    $("#parent").kendoComboBox({
+        dataTextField: "parentName",
+        dataValueField: "parentId",
+        dataSource: [
+            { parentName: "Parent1", parentId: 1 },
+            { parentName: "Parent2", parentId: 2 }
+        ]
     });
 
-#### Example
-
-    $("#comboBox").kendoComboBox({
-        dataSource: new kendo.data.DataSource({
-            transport: {
-                read: {
-                    url: "Get/Items" // url to remote data source (simple list of strings)
-                }
-            }
-        });
+    $("#child").kendoComboBox({
+        cascadeFrom: "parent",
+        dataTextField: "childName",
+        dataValueField: "childId",
+        dataSource: [
+            { childName: "Child1", childId: 1, parentId: 1 },
+            { childName: "Child2", childId: 2, parentId: 2 },
+            { childName: "Child3", childId: 3, parentId: 1 },
+            { childName: "Child4", childId: 4, parentId: 2 }
+        ]
     });
+    </script>
+
+### dataSource `Object|Array|kendo.data.DataSource`
+
+The data source of the widget which is used to display a list of values. Can be a JavaScript object which represents a valid data source configuration, a JavaScript array or an existing [kendo.data.DataSource](/api/framework/datasource)
+instance.
+
+If the `dataSource` option is set to a JavaScript object or array the widget will initialize a new [kendo.data.DataSource](/api/framework/datasource) instance using that value as data source configuration.
+
+If the `dataSource` option is an existing [kendo.data.DataSource](/api/framework/datasource) instance the widget will use that instance and will **not** initialize a new one.
+
+#### Example - set dataSource as a JavaScript object
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: {
+        data: ["One", "Two"]
+      }
+    });
+    </script>
+
+#### Example - set dataSource as a JavaScript array
+
+    <input id="combobox" />
+    <script>
+    var data = ["One", "Two"];
+    $("#combobox").kendoComboBox({
+      dataSource: data
+    });
+    </script>
+
+#### Example - set dataSource as an existing kendo.data.DataSource instance
+
+    <input id="combobox" />
+    <script>
+    var dataSource = new kendo.data.DataSource({
+      transport: {
+        read: {
+          url: "http://demos.kendoui.com/service/products",
+          dataType: "jsonp"
+        }
+      }
+    });
+    $("#combobox").kendoComboBox({
+      dataSource: dataSource,
+      dataTextField: "ProductName",
+      dataValueField: "ProductID"
+    });
+    </script>
 
 ### dataTextField `String`*(default: "")*
 
- Sets the field of the data item that provides the text content of the list items.
+The field of the data item that provides the text content of the list items. The widget will filter the data source based on this field.
 
-#### Example
+> **Important** When `dataTextField` is defined, the`dataValueField` option also should be set.
 
+#### Example - set the dataTextField
+
+    <input id="combobox" />
+    <script>
     $("#comboBox").kendoComboBox({
+        dataSource: [{
+            { Name: "Parent1", Id: 1 },
+            { Name: "Parent2", Id: 2 }
+        }]
         dataTextField: "Name",
-        dataValueField: "ID"
+        dataValueField: "Id"
     });
+    </script>
 
 ### dataValueField `String`*(default: "")*
 
- Sets the field of the data item that provides the value content of the list items.
+The field of the data item that provides the value of the widget.
 
-#### Example
+> **Important** When `dataValueField` is defined, the`dataTextField` option also should be set.
 
+#### Example - set the dataValueField
+
+    <input id="combobox" />
+    <script>
     $("#comboBox").kendoComboBox({
+        dataSource: [{
+            { Name: "Parent1", Id: 1 },
+            { Name: "Parent2", Id: 2 }
+        }]
         dataTextField: "Name",
-        dataValueField: "ID"
+        dataValueField: "Id"
     });
+    </script>
 
 ### delay `Number`*(default: 200)*
 
- Specifies the delay in ms after which the ComboBox will start filtering dataSource.
+The delay in milliseconds between a keystroke and when the widget displays the popup.
 
-#### Example
+#### Example - set the delay
 
-    $("#comboBox").kendoComboBox({
-        delay: 500
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      delay: 500
     });
+    </script>
 
 ### enable `Boolean`*(default: true)*
 
- Controls whether the ComboBox should be initially enabled.
+If set to `false` the widget will be disabled and will not allow user input. The widget is enabled by default and allows user input.
 
-#### Example
+#### Example - disable the widget
 
-    $("#comboBox").kendoComboBox({
-        enable: false
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      enable: false
     });
-
-#### Example
-
-    // get a reference to the ComboBox widget
-    var comboBox = $("#comboBox").data("kendoComboBox");
-    comboBox.enable(false);
+    </script>
 
 ### filter `String`*(default: "none")*
 
- Defines the type of filtration. If "none" the ComboBox will not filter the items.
+The filtering method used to determine the suggestions for the current value. Filtration is turned of by default.
+The supported filter values are `startswith`, `endswith` and `contains`.
 
-#### Example
+#### Example - set the filter
 
-    $("#comboBox").kendoComboBox({
-        filter: "startswith"
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      filter: "contains"
     });
+    </script>
 
 ### height `Number`*(default: 200)*
 
- Define the height of the drop-down list in pixels.
+The height of the suggestion popup in pixels. The default value is 200 pixels.
 
-#### Example
+#### Example - set the height
 
-    $("#comboBox").kendoComboBox({
-        height: 500
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      height: 500
     });
+    </script>
 
 ### highlightFirst `Boolean`*(default: true)*
 
- Controls whether the first item will be automatically highlighted.
+If set to `true` the first suggestion will be automatically highlighted.
 
-#### Example
+#### Example - set highlightFirst
 
-    $("#comboBox").kendoComboBox({
-        highLightFirst: true
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      highlightFirst: false
     });
+    </script>
 
 ### ignoreCase `String`*(default: true)*
 
- Defines whether the filtration should be case sensitive.
+If set to `false` case-sensitive search will be performed to find suggestions. The widget performs case-insensitive searching by default.
 
-#### Example
+#### Example - disable case-insensitive suggestions
 
+    <input id="combobox" />
+    <script>
     $("#combobox").kendoComboBox({
-        filter: 'contains',
-        ignoreCase: false //now filtration will be case sensitive
+      ignoreCase: false
     });
+    </script>
 
 ### index `Number`*(default: -1)*
 
- Defines the initial selected item.
+The index of the initially selected item. The index is `0` based.
 
-#### Example
+#### Example - select second item
 
+    <input id="combobox" />
+    <script>
     var items = [{ text: "Item 1", value: "1" }, { text: "Item 2", value: "2" }];
-    $("#comboBox").kendoComboBox({
+    $("#combobox").kendoComboBox({
+        dataTextField: "text",
+        dataValueField: "value",
         dataSource: items,
-        index: 1 // 0 based from the start of the collection of objects. this selects "Item 2".
+        index: 1
     });
+    </script>
 
 ### minLength `Number`*(default: 1)*
 
- Specifies the minimum characters that should be typed before the ComboBox activates
+The minimum number of characters the user must type before a search is performed. Set to higher value than `1` if the search could match a lot of items.
 
-#### Example
+#### Example - set minLength
 
-    $("#comboBox").kendoComboBox({
-        minLength: 3
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      minLength: 3
     });
+    </script>
 
 ### placeholder `String`*(default: "")*
 
- A string that appears in the textbox when the combobox has no value.
+The hint displayed by the widget when it is empty. Not set by default.
 
+#### Example - specify placeholder option
 
-#### Example
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      placeholder: "Select..."
+    });
+    </script>
 
-    //combobox initialization
-     <script>
-         $("#combobox").kendoComboBox({
-             dataSource: dataSource,
-             placeholder: "Select..."
-         });
-     </script>
-
-#### Example
+#### Example - specify placeholder as HTML attribute
 
     <input id="combobox" placeholder="Select..." />
 
-     //combobox initialization
-     <script>
-         $("#combobox").kendoComboBox({
-             dataSource: dataSource
-         });
-     </script>
+    <script>
+    $("#combobox").kendoComboBox({
+        dataSource: ["Item1", "Item2"]
+    });
+    </script>
 
 ### suggest `Boolean`*(default: false)*
 
- Controls whether the ComboBox should automatically auto-type the rest of text.
+If set to `true` the widget will automatically use the first suggestion as its value.
 
-#### Example
+#### Example - enable automatic suggestion
 
-    $("#comboBox").kendoComboBox({
-        suggest: false
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      suggest: true
     });
+    </script>
 
 ### template `String|Function`
 
-Template to be used for rendering the items in the list.
+The [template](/api/framework/kendo#methods-template) used to render the items. By default the widget displays only the text of the data item (configured via `dataTextField`).
 
-#### Example
+#### Example - specify template as a function
 
-    //template
-    <script id="template" type="text/x-kendo-tmpl">
-          # if (data.BoxArt.SmallUrl) { #
-              <img src="${ data.BoxArt.SmallUrl }" alt="${ data.Name }" />Title:${ data.Name }, Year: ${ data.Name }
-          # } else { #
-              <img alt="${ data.Name }" />Title:${ data.Name }, Year: ${ data.Name }
-          # } #
-     </script>
+    <input id="combobox" />
+    <script id="template" type="text/x-kendo-template">
+      <span>
+        <img src="/img/#: id #.png" alt="#: name #" />
+        #: name #
+      </span>
+    </script>
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      dataValueField: "id",
+      template: kendo.template($("#template").html())
+    });
+    </script>
 
-     //combobox initialization
-     <script>
-         $("#combobox").kendoComboBox({
-             dataSource: dataSource,
-             dataTextField: "Name",
-             dataValueField: "Id",
-             template: kendo.template($("#template").html())
-         });
-     </script>
+#### Example - specify template as a string
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      dataValueField: "id",
+      template: '<span><img src="/img/#: id #.png" alt="#: name #" />#: name #</span>'
+    });
+    </script>
 
 ### text `String`*(default: "")*
 
- Define the text of the widget, when the autoBind is set to false.
+The text of the widget used when the `autoBind` is set to `false`.
 
-#### Example
+#### Example - specify text of the widget
 
+    <input id="combobox" />
+    <script>
     $("#combobox").kendoComboBox({
          autoBind: false,
          text: "Chai"
     });
+    </script>
 
 ### value `String`*(default: "")*
 
- Define the value of the widget
+The value of the widget.
 
-#### Example
+#### Example - specify value of the widget
 
+    <input id="combobox" />
+    <script>
     $("#combobox").kendoComboBox({
          dataSource: ["Item1", "Item2"],
          value: "Item1"
     });
+    </script>
+
+### valuePrimitive `Boolean`*(default: false)*
+
+Specifies the [value binding](/getting-started/framework/mvvm/bindings/value) behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item value field. If set to false, the View-Model field will be updated with the selected item.
+
+#### Example - specify that the View-Model field should be updated with the selected item value
+
+    <input id="combobox" data-bind="value: selectedProductId, source: products" />
+
+    <script>
+    $("#combobox").kendoComboBox({
+      valuePrimitive: true,
+      dataTextField: "name",
+      dataValueField: "id"
+    });
+    var viewModel = kendo.observable({
+      selectedProductId: null,
+      products: [
+        { id: 1, name: "Coffee" },
+        { id: 2, name: "Tea" },
+        { id: 3, name: "Juice" }
+      ]
+    });
+
+    kendo.bind($("#combobox"), viewModel);
+    </script>
+
+## Fields
+
+### dataSource `kendo.data.DataSource`
+
+The [data source](/api/framework/datasource) of the widget. Configured via the [dataSource](#configuration-dataSource) option.
+
+> Changes of the data source will be reflected in the widget.
+
+> **Important:** Assigning a new data source would have no effect. Use the [setDataSource](#methods-setDataSource) method instead.
+
+#### Example - add a data item to the data source
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [
+        { name: "Apples" },
+        { name: "Oranges" }
+      ],
+      dataTextField: "name",
+      dataValueField: "name"
+    });
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.dataSource.add({ name: "Appricot" });
+    combobox.search("A");
+    </script>
+
+### element
+A jQuery object of the original input element.
+
+#### Example - modify input element
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox();
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    var element = combobox.element;
+
+    element.css("background-color", "red");
+    <script>
+
+### input
+A jQuery object of the visible input element, where the user types.
+
+#### Example - get input element
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox();
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    var input = combobox.input;
+    <script>
+
+### options
+An object, which holds the options of the widget.
+
+#### Example - get options of the widget
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox();
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    var options = combobox.options;
+    <script>
+
+### wrapper
+A jQuery object of the span element which wraps the input.
+
+#### Example - get wrapper element
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox();
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    var wrapper = combobox.wrapper;
+    <script>
+
+### list
+A jQuery object of the drop-down list element.
+
+#### Example - get list element
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox();
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    var list = combobox.list;
+    <script>
+
+### ul
+A jQuery object of the ul element, which holds the available options.
+
+#### Example - get ul element
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox();
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    var ul = combobox.ul;
+    <script>
+
+### popup
+The Popup instance used by the widget.
+
+#### Example - get widget popup
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox();
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    var popup = combobox.popup;
+
+    console.log(popup.visible());
+    <script>
 
 ## Methods
 
 ### close
 
-Closes the drop-down list.
+Closes the widget popup.
 
-#### Example
+#### Example - close the suggestion popup
 
-    // get a reference to instance of the Kendo UI ComboBox
-    var combobox = $("#comboBox").data("kendoComboBox");
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
+    });
+    var combobox = $("#combobox").data("kendoComboBox");
+    // Search for items starting with "A" - will open the suggestion popup and show "Apples"
+    combobox.search("A");
+    // Close the suggestion popup
     combobox.close();
+    </script>
 
 ### dataItem
 
-Returns the raw data record at the specified index. If the index is not specified, the selected index will be used.
+Returns the data item at the specified index. If the index is not specified, the selected index will be used.
+
+#### Parameters
+
+##### index `Number` *(optional)*
+
+The zero-based index of the data record.
+
+#### Returns
+
+`Object` The raw data record. Returns <i>undefined</i> if no data.
 
 #### Example
+
+    <input id="combobox" />
+    <script>
+
+    $("#combobox").kendoComboBox({
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      dataValueField: "id",
+      index: 1
+    });
 
     var combobox = $("#combobox").data("kendoComboBox");
 
@@ -346,46 +659,100 @@ Returns the raw data record at the specified index. If the index is not specifie
     var dataItem = combobox.dataItem();
 
     // get the dataItem corresponding to the passed index.
-    var dataItem = combobox.dataItem(1);
-
-#### Parameters
-
-##### index `Number` *(optional)*
-
-The zero-based index of the data record
-
-#### Returns
-
-`Object` The raw data record. Returns <i>undefined</i> if no data.
+    var dataItem = combobox.dataItem(0);
+    </script>
 
 ### destroy
+
 Prepares the **ComboBox** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
 
 > **Important:** This method does not remove the ComboBox element from DOM.
 
 #### Example
 
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox();
     var combobox = $("#combobox").data("kendoComboBox");
-
-    // detach events
     combobox.destroy();
+    </script>
 
 ### enable
 
-Enables/disables the combobox widget
-
-#### Example
-
-    // get a reference to instance of the Kendo UI ComboBox
-    var combobox = $("#comboBox").data("kendoComboBox");
-    // disables the combobox
-    combobox.enable(false);
+Enables or disables the widget.
 
 #### Parameters
 
 ##### enable `Boolean`
 
-Desired state
+If set to `true` the widget will be enabled. If set to `false` the widget will be disabled.
+
+#### Example - enable the widget
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      enable: false
+    });
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.enable(true);
+    </script>
+
+### readonly
+
+Toggles the readonly state of the widget. When the widget is readonly it doesn't allow user input.
+
+> There is a difference between disabled and readonly mode. The value of a disabled widget is **not** posted as part of a `form` whereas the value of a readonly widget is posted.
+
+#### Parameters
+
+##### readonly `Boolean`
+
+If set to `true` the widget will not allow user input. If set to `false` the widget will allow user input.
+
+#### Example - make the widget readonly
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox();
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.readonly(true);
+    </script>
+
+### focus
+
+Focuses the widget.
+
+#### Example - focus the widget
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox();
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.focus();
+    </script>
+
+### open
+
+Opens the popup.
+
+#### Example
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      dataValueField: "id",
+      index: 1
+    });
+
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.focus();
+    </script>
 
 ### readonly
 
@@ -408,49 +775,32 @@ Controls whether the widget is editable or readonly.
 
 The argument, which defines whether the combobox should be readonly or editable.
 
-### focus
-
-Focuses the widget.
-
-#### Example
-
-    // get a reference to instance of the Kendo UI ComboBox
-    var combobox = $("#comboBox").data("kendoComboBox");
-
-    // focus the widget
-    combobox.focus();
-
-### open
-
-Opens the drop-down list.
-
-#### Example
-
-    // get a reference to instance of the Kendo UI ComboBox
-    var combobox = $("#comboBox").data("kendoComboBox");
-    combobox.open();
-
 ### refresh
 
-Re-render the items of the drop-down list.
+Refresh the popup by rendering all items again.
 
-#### Example
+#### Example - refresh the popup items
 
-    // get a referenence to the Kendo UI ComboBox
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      dataValueField: "id",
+      index: 1
+    });
+
     var combobox = $("#combobox").data("kendoComboBox");
-    // re-render the items of the drop-down list.
+
     combobox.refresh();
+    </script>
 
 ### search
 
-Filters dataSource using the provided parameter and rebinds drop-down list.
-
-#### Example
-
-    var combobox = $("#combobox").data("kendoComboBox");
-
-    // Searches for item which has "In" in the name.
-    combobox.search("In");
+Searches the data source for the provided value and displays any matches as suggestions.
 
 #### Parameters
 
@@ -458,40 +808,116 @@ Filters dataSource using the provided parameter and rebinds drop-down list.
 
 The filter value.
 
-### select
+#### Example - search the widget
 
-Selects a dropdown item and sets the value and the text of the combobox, or retrieves the selected item index.
-
-#### Example
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      dataValueField: "id",
+      index: 1
+    });
 
     var combobox = $("#combobox").data("kendoComboBox");
 
-    // selects by jQuery object
-    combobox.select(combobox.ul.children().eq(0));
+    combobox.search("App");
+    </script>
 
-    // selects by index
-    combobox.select(1);
+### select
 
-    // selects item if its text is equal to "test" using predicate function
-    combobox.select(function(dataItem) {
-        return dataItem.text === "test";
-    });
-
-    // get selected index
-    var selectedIndex = combobox.select();
-
+Selects the item provided as an argument and updates the value and text of the widget.
 
 #### Parameters
 
 ##### li `jQuery | Number | Function`
 
-LI element or index of the item or predicate function, which defines the item that should be selected.
+A string, DOM element or jQuery object which represents the item to be selected. A string is treated as a jQuery selector.
+A number representing the index of the item or function predicate which returns the correct data item.
 
 #### Returns
 
 `Number` The index of the selected item, if called with no parameters. If a custom value is entered, the returned selected index is `-1`.
 
 `undefined` If called with a parameter as a setter.
+
+#### Example - select item based on jQuery object
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      dataValueField: "id"
+    });
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    combobox.select(combobox.ul.children().eq(0));
+    </script>
+
+#### Example - select item based on index
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      dataValueField: "id"
+    });
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    combobox.select(1);
+    </script>
+
+#### Example - select item based on function predicate
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      dataValueField: "id"
+    });
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    combobox.select(function(dataItem) {
+        return dataItem.text === "Apples";
+    });
+    </script>
+
+#### Example - get selected index of the widget
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [
+        { id: 1, name: "Apples" },
+        { id: 2, name: "Oranges" }
+      ],
+      dataTextField: "name",
+      dataValueField: "id",
+      index: 1
+    });
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    var selectedIndex = combobox.select();
+    </script>
 
 ### setDataSource
 
@@ -503,25 +929,21 @@ Sets the dataSource of an existing ComboBox and rebinds it.
 
 #### Example
 
-    var dataSource = new kendo.data.DataSource({
-        //dataSource configuration
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
     });
-
-    $("#combobox").data("kendoComboBox").setDataSource(dataSource);
+    var dataSource = new kendo.data.DataSource({
+      data: [ "Bananas", "Cherries" ]
+    });
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.setDataSource(dataSource);
+    </script>
 
 ### suggest
 
-Forces a suggestion onto the text of the ComboBox.
-
-#### Example
-
-    // note that this suggest is not the same as the configuration method
-    // suggest which enables/disables auto suggesting for the ComboBox
-    //
-    // get a referenence to the Kendo UI ComboBox
-    var combobox = $("#combobox").data("kendoComboBox");
-    // force a suggestion to the item with the name "Inception"
-    combobox.suggest("Inception");
+Sets the value of the widget to the specified argument and visually selects the text.
 
 #### Parameters
 
@@ -529,19 +951,21 @@ Forces a suggestion onto the text of the ComboBox.
 
 Characters to force a suggestion.
 
-### text
-
-Gets/Sets the text of the ComboBox.
-
 #### Example
 
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
+    });
     var combobox = $("#combobox").data("kendoComboBox");
+    combobox.suggest("Apples");
+    </script>
 
-    // get the text of the combobox.
-    var text = combobox.text();
+### text
 
-    // set the text of the combobox.
-    combobox.text("text");
+Gets or sets the text of the ComboBox. Widget will select the item with same text. If
+there are no matches then the text will be considered as a custom value of the widget.
 
 #### Parameters
 
@@ -553,16 +977,22 @@ The text to set.
 
 `String` The text of the combobox.
 
-### toggle
+#### Example - set text of the widget
 
-Toggles the drop-down list between opened and closed state.
-
-#### Example
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
+    });
 
     var combobox = $("#combobox").data("kendoComboBox");
 
-    // toggles the open state of the drop-down list.
-    combobox.toggle();
+    combobox.text("Apples");
+    </script>
+
+### toggle
+
+Opens or closes the widget popup.
 
 #### Parameters
 
@@ -570,21 +1000,24 @@ Toggles the drop-down list between opened and closed state.
 
 Defines the whether to open/close the drop-down list.
 
-### value
+#### Example - set text of the widget
 
-Gets/Sets the value of the combobox. If the value is undefined, text of the data item will be used.
-
-> **Important:** If no items, value method will pre-fetch the data before continue with the value setting.
-
-#### Example
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
+    });
 
     var combobox = $("#combobox").data("kendoComboBox");
 
-    // get the value of the combobox.
-    var value = combobox.value();
+    combobox.toggle();
+    </script>
 
-    // set the value of the combobox.
-    combobox.value("1"); //looks for item which has value "1"
+### value
+
+Gets or sets the value of the combobox.
+
+> **Important:** If the widget is not bound, value method will pre-fetch the data before continue with the value setting.
 
 #### Parameters
 
@@ -596,184 +1029,235 @@ The value to set.
 
 `String` The value of the combobox.
 
+#### Example - set value of the widget
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataSource: [ "Apples", "Oranges" ]
+    });
+
+    var combobox = $("#combobox").data("kendoComboBox");
+
+    combobox.value("Oranges");
+    </script>
+
 ## Events
 
 ### change
 
-Fires when the value has been changed.
+Fired when the value of the widget is changed by the user.
 
-#### Example
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
-    $("#comboBox").kendoComboBox({
-        change: function(e) {
-            // handle event
-        }
+> **Important:** The event is not fired when the value of the widget is changed from code.
+
+#### Event Data
+
+##### e.sender `kendo.ui.ComboBox`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "change" event during initialization
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      change: function(e) {
+        var value = this.value();
+        // Use the value of the widget
+      }
     });
+    </script>
 
-#### To set after initialization
+#### Example - subscribe to the "change" event after initialization
 
-    // get a reference to instance of the Kendo UI ComboBox
-    var combobox = $("#comboBox").data("kendoComboBox");
-    // bind to the change event
-    combobox.bind("change", function(e) {
-        // handle event
-    });
+    <input id="combobox" />
+    <script>
+    function combobox_change(e) {
+      var value = this.value();
+      // Use the value of the widget
+    }
+    $("#combobox").kendoComboBox();
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.bind("change", combobox_change);
+    </script>
 
 ### close
 
-Fires when the drop-down list is closed
+Fired when the popup of the widget is closed.
 
-#### Example
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
-    $("#comboBox").kendoComboBox({
-        close: function(e) {
-            // handle event
-        }
+#### Event Data
+
+##### e.sender `kendo.ui.ComboBox`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "close" event during initialization
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      close: function(e) {
+        // handle the event
+      }
     });
+    </script>
 
-#### To set after initialization
+#### Example - subscribe to the "close" event after initialization
 
-    // get a reference to instance of the Kendo UI ComboBox
-    var combobox = $("#comboBox").data("kendoComboBox");
-    // bind to the close event
-    combobox.bind("close", function(e) {
-        // handle event
-    });
+    <input id="combobox" />
+    <script>
+    function combobox_close(e) {
+      // handle the event
+    }
+    $("#combobox").kendoComboBox();
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.bind("close", combobox_close);
+    </script>
 
 ### dataBound
 
-Fires when the ComboBox has received data from the data source.
+Fired when the widget is bound to data from its data source.
 
-#### Example
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
-    $("#comboBox").kendoComboBox({
-        dataBound: function(e) {
-            // handle event
-        }
+#### Event Data
+
+##### e.sender `kendo.ui.ComboBox`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "dataBound" event during initialization
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      dataBound: function(e) {
+          // handle the event
+      }
     });
+    </script>
 
-#### To set after initialization
+#### Example - subscribe to the "dataBound" event after initialization
 
-    // get a reference to instance of the Kendo UI ComboBox
-    var combobox = $("#comboBox").data("kendoComboBox");
-    // bind to the close event
-    combobox.bind("dataBound", function(e) {
-        // handle event
-    });
+    <input id="combobox" />
+    <script>
+    function combobox_dataBound(e) {
+      // handle the event
+    }
+    $("#combobox").kendoComboBox();
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.bind("dataBound", combobox_dataBound);
+    </script>
 
 ### open
 
-Fires when the drop-down list is opened
+Fired when the popup of the widget is opened by the user.
 
-#### Example
+The event handler function context (available via the `this` keyword) will be set to the widget instance.
 
-    $("#comboBox").kendoComboBox({
-        open: function(e) {
-                // handle event
-            }
+#### Event Data
+
+##### e.sender `kendo.ui.ComboBox`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "open" event during initialization
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      open: function(e) {
+        // handle the event
+      }
     });
+    </script>
 
-#### To set after initialization
+#### Example - subscribe to the "open" event after initialization
 
-    // get a reference to instance of the Kendo UI ComboBox
-    var combobox = $("#comboBox").data("kendoComboBox");
-    // bind to the open event
-    combobox.bind("open", function(e) {
-        // handle event
-    });
+    <input id="combobox" />
+    <script>
+    function combobox_open(e) {
+      // handle the event
+    }
+    $("#combobox").kendoComboBox();
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.bind("open", combobox_open);
+    </script>
 
 ### select
 
-Triggered when a Li element is selected.
-
-#### Attach select event handler during initialization; detach via unbind()
-
-    // event handler for select
-    var onSelect = function(e) {
-        // access the selected item via e.item (jQuery object)
-    };
-
-    // attach select event handler during initialization
-    var combobox = $("#combobox").kendoComboBox({
-        select: onSelect
-    });
-
-    // detach select event handler via unbind()
-    combobox.data("kendoComboBox").unbind("select", onSelect);
-
-#### Attach select event handler via bind(); detach via unbind()
-
-    // event handler for select
-    var onSelect = function(e) {
-        // access the selected item via e.item (jQuery object)
-    };
-
-    // attach select event handler via bind()
-    $("#combobox").data("kendoComboBox").bind("select", onSelect);
-
-    // detach select event handler via unbind()
-    $("#combobox").data("kendoComboBox").unbind("select", onSelect);
+Fired when an item from the popup is selected by the user.
 
 #### Event Data
 
 ##### e.item `jQuery`
 
-The selected item chosen by a user.
+The jQuery object which represents the selected item.
+
+##### e.sender `kendo.ui.ComboBox`
+
+The widget instance which fired the event.
+
+#### Example - subscribe to the "select" event during initialization
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      select: function(e) {
+        var item = e.item;
+        var text = item.text();
+        // Use the selected item or its text
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "select" event after initialization
+
+    <input id="combobox" />
+    <script>
+    function combobox_select(e) {
+      var item = e.item;
+      var text = item.text();
+      // Use the selected item or its text
+    }
+    $("#combobox").kendoComboBox();
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.bind("select", combobox_select);
+    </script>
 
 ### cascade
 
-Triggered when value of the widget is changed via API or user interaction.
+Fired when the value of the widget is changed via API or user interaction.
 
-#### Attach cascade event handler during initialization; detach via unbind()
+#### Event Data
 
-    // event handler for cascade
-    var onCascade = function() {
-        //cascade event
-    };
+##### e.sender `kendo.ui.ComboBox`
 
-    // attach select event handler during initialization
-    var combobox = $("#combobox").kendoComboBox({
-        cascade: onCascade
+The widget instance which fired the event.
+
+#### Example - subscribe to the "cascade" event during initialization
+
+    <input id="combobox" />
+    <script>
+    $("#combobox").kendoComboBox({
+      cascade: function() {
+        // Handle the event
+      }
     });
+    </script>
 
-    // detach cascade event handler via unbind()
-    combobox.data("kendoComboBox").unbind("cascade", onCascade);
+#### Example - subscribe to the "cascade" event after initialization
 
-#### Attach cascade event handler via bind(); detach via unbind()
-
-    // event handler for cascade
-    var onCascade = function(e) {
-        //cascade event
-    };
-
-    // attach cascade event handler via bind()
-    $("#combobox").data("kendoComboBox").bind("cascade", onCascade);
-
-    // detach cascade event handler via unbind()
-    $("#combobox").data("kendoComboBox").unbind("cascade", onCascade);
-
-## Field
-
-### element
-A jQuery object of the original input element.
-
-### options
-An object, which holds the options of the widget.
-
-### wrapper
-A jQuery object of the span element which wraps the input.
-
-### input
-A jQuery object of the visible input element, which holds the selected text.
-
-### list
-A jQuery object of the drop-down list element.
-
-### ul
-A jQuery object of the ul element, which holds the available options.
-
-### dataSource
-The DataSource instance used by the widget.
-
-### popup
-The Popup instace used by the widget.
+    <input id="combobox" />
+    <script>
+    function combobox_cascade(e) {
+        // Handle the event
+    }
+    $("#combobox").kendoComboBox();
+    var combobox = $("#combobox").data("kendoComboBox");
+    combobox.bind("select", combobox_cascade);
+    </script>
