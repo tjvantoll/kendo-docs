@@ -51,7 +51,7 @@ Effect to be used for closing of the popup.
 
 ### animation.close.duration `Number`
 
-Difines the animation duration.
+Defines the animation duration.
 
 ### animation.open `Object`
 
@@ -80,7 +80,7 @@ Effect to be used for opening of the popup.
 
 ### animation.open.duration `Number`
 
-Difines the animation duration.
+Defines the animation duration.
 
 ### autoBind `Boolean`*(default: true)*
 
@@ -776,4 +776,4 @@ A jQuery object of the ul element, which holds the available options.
 The DataSource instance used by the widget.
 
 ### popup
-The Popup instace used by the widget.
+The Popup instance used by the widget.

@@ -18,7 +18,7 @@ The animation that will be used when a Tooltip opens.
 
 ### duration `float`
 
-Difines the animation duration.
+Defines the animation duration.
 
 #### Example
     <kendo:tooltip-animation-open duration="duration">

@@ -632,7 +632,7 @@ The number of data items per page.
 
 ### schema `Object`
 
-The configuration used to parse the remote sevice response.
+The configuration used to parse the remote service response.
 
 #### Example - specify the schema of the remote service
 

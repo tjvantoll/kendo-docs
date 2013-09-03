@@ -18,7 +18,7 @@ Animation to be used for opening of the popup.
 
 ### duration `float`
 
-Difines the animation duration.
+Defines the animation duration.
 
 #### Example
     <kendo:multiSelect-animation-open duration="duration">

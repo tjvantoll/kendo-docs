@@ -164,7 +164,7 @@ shows the years of the decade
 
 #### *"century"*
 
-shows the decades from the centery
+shows the decades from the century
 
 #### Example - set navigation depth of the calendar popup
 
@@ -324,7 +324,7 @@ shows the years of the decade
 
 #### *"century"*
 
-shows the decades from the centery
+shows the decades from the century
 
 
 #### Example - specify the initial view, which calendar renders
@@ -930,7 +930,7 @@ An instance of the TimeView object, responsible for the drop-down list of availa
     <script>
 
 #### popup
-The Popup instace used by the widget.
+The Popup instance used by the widget.
 
 #### Example - get timeView popup
 

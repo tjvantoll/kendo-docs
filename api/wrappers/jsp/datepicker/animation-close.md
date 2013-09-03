@@ -18,7 +18,7 @@ The animation(s) used for hiding of the pop-up.
 
 ### duration `float`
 
-Difines the animation duration.
+Defines the animation duration.
 
 #### Example
     <kendo:datePicker-animation-close duration="duration">

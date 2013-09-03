@@ -18,7 +18,7 @@ The animation that will be used when a Tooltip closes.
 
 ### duration `float`
 
-Difines the animation duration.
+Defines the animation duration.
 
 #### Example
     <kendo:tooltip-animation-close duration="duration">

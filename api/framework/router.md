@@ -78,7 +78,7 @@ Unbinds the router instance listeners from the URL fragment part changes.
 
 ### change
 
-Triggered when the frament part of the url changes.
+Triggered when the fragment part of the url changes.
 
 #### Event Data
 

@@ -263,7 +263,7 @@ Template variables:
 
 #### Example
 
-    // chart intialization
+    // chart initialization
     $("#radial-gauge").kendoRadialGauge({
          scale: {
              labels: {

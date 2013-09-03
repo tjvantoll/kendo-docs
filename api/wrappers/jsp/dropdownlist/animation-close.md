@@ -18,7 +18,7 @@ Animation to be used for closing of the popup.
 
 ### duration `float`
 
-Difines the animation duration.
+Defines the animation duration.
 
 #### Example
     <kendo:dropDownList-animation-close duration="duration">

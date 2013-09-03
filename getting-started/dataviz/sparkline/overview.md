@@ -219,7 +219,7 @@ Now change the base unit to "years":
         ]
     }
 
-Notice how the sparkline now displayes the maximum value for each year:
+Notice how the sparkline now displays the maximum value for each year:
 
 ![Sparkline with grouped date category axis](sparkline-category-date-axis-grouped.png)
 

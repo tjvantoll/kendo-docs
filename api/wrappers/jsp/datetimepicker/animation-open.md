@@ -18,7 +18,7 @@ The animation(s) used for displaying of the pop-up.
 
 ### duration `float`
 
-Difines the animation duration.
+Defines the animation duration.
 
 #### Example
     <kendo:dateTimePicker-animation-open duration="duration">

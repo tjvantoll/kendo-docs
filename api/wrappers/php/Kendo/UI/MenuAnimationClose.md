@@ -13,7 +13,7 @@ A PHP class representing the close setting of MenuAnimation.
 ## Methods
 
 ### duration
-Difines the animation duration.
+Defines the animation duration.
 
 #### Returns
 `\Kendo\UI\MenuAnimationClose`

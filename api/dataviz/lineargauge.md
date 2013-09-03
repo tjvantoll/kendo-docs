@@ -434,7 +434,7 @@ Template variables:
 
 #### Example
 
-    // chart intialization
+    // chart initialization
     $("#linear-gauge").kendoLinearGauge({
          scale: {
              labels: {

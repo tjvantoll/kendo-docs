@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:dataSource-schema\>
 
-The configuration used to parse the remote sevice response.
+The configuration used to parse the remote service response.
 
 #### Example
     <kendo:dataSource>

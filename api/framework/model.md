@@ -78,7 +78,7 @@ Describes the configuration options of the new model type.
 ##### options.id `String`
 
 The name of the field which acts as the identifier of the model. The identifier is used to determine if a model instance is new or existing one.
-If the value of the field specified is equal to the default value (specifed through the `fields` configuration) the model is considered as new.
+If the value of the field specified is equal to the default value (specified through the `fields` configuration) the model is considered as new.
 
 ##### options.fields `Object|Array`
 
@@ -187,7 +187,7 @@ ObservableObject API reference.
 ### isNew
 
 Checks if the `Model` is new or not. The `id` field is used to determine if a model instance is new or existing one.
-If the value of the field specified is equal to the default value (specifed through the `fields` configuration) the model is considered as new.
+If the value of the field specified is equal to the default value (specified through the `fields` configuration) the model is considered as new.
 
 #### Returns
 

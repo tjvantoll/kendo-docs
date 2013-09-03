@@ -603,7 +603,7 @@ An instance of the TimeView object, responsible for the drop-down list of availa
     <script>
 
 #### popup
-The Popup instace used by the widget.
+The Popup instance used by the widget.
 
 #### Example - get widget popup
 

@@ -48,7 +48,7 @@ Effect to be used for closing of the popup.
 
 ### animation.close.duration `Number`
 
-Difines the animation duration.
+Defines the animation duration.
 
 ### animation.open `Object`
 
@@ -76,7 +76,7 @@ Effect to be used for opening of the popup.
 
 ### animation.open.duration `Number`
 
-Difines the animation duration.
+Defines the animation duration.
 
 ### autoBind `Boolean`*(default: true)*
 
@@ -219,7 +219,7 @@ A local JavaScript object or instance of DataSource or the data that the multise
 #### Example
 
     $("#multiselect").kendoMultiSelect({
-        maxSelectedItems: 3 //only three or less items chould be selected
+        maxSelectedItems: 3 //only three or less items could be selected
     });
 
 ### placeholder `String`*(default: "")*
@@ -665,4 +665,4 @@ A jQuery object of the ul element, which holds the available options.
 The DataSource instance used by the widget.
 
 ### popup
-The Popup instace used by the widget.
+The Popup instance used by the widget.

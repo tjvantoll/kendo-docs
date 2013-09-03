@@ -71,7 +71,7 @@ For additional information check the [activate](/api/web/panelbar#events-activat
 
 ### animation
 
-A collection of visual animations used when PanelBar items are exapnd or collapsed through
+A collection of visual animations used when PanelBar items are expand or collapsed through
 user interactions. Setting this option to false will disable all animations.
 
 #### Returns

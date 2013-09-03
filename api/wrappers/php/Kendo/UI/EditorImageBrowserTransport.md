@@ -89,7 +89,7 @@ Options or URL which will handle the file and directory deletion. If not specifi
     ?>
 
 ### imageUrl
-The URL responsible for serving the original image. A file name placeholder should be specifed.
+The URL responsible for serving the original image. A file name placeholder should be specified.
 
 #### Returns
 `\Kendo\UI\EditorImageBrowserTransport`

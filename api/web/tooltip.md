@@ -96,7 +96,7 @@ Effect to be used for closing of the tooltip.
 
 ### animation.close.duration `Number`
 
-Difines the animation duration.
+Defines the animation duration.
 
 #### Example - set close animation duration
 
@@ -163,7 +163,7 @@ Effect to be used for opening of the Tooltip.
 
 ### animation.open.duration `Number`
 
-Difines the animation duration.
+Defines the animation duration.
 
 #### Example - set open animation duration
 

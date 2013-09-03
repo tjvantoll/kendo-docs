@@ -132,7 +132,7 @@ Defines the number of records which will be displyed.
     ?>
 
 ### pageSizes
-Displayes a list with predefined page sizes. An array of values to be displayed can be provided.
+Displays a list with predefined page sizes. An array of values to be displayed can be provided.
 
 #### Returns
 `\Kendo\UI\ListViewPageable`

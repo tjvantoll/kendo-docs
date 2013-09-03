@@ -284,7 +284,7 @@ List of the files that were uploaded or removed . Each file has:
 
 *   name
 *   extension - the file extension
-        inlcuding the leading dot - ".jpg", ".png", etc.
+        including the leading dot - ".jpg", ".png", etc.
 *   size - the file size in bytes (null if not available)
 
 ### complete
@@ -341,7 +341,7 @@ List of the files that were uploaded or removed . Each file has:
 
 *   name
 *   extension - the file extension
-        inlcuding the leading dot - ".jpg", ".png", etc.
+        including the leading dot - ".jpg", ".png", etc.
 *   size - the file size in bytes (null if not available)
 
 ##### e.operation `String`
@@ -392,7 +392,7 @@ List of the files that are being uploaded. Each file has:
 
 *   name
 *   extension - the file extension
-        inlcuding the leading dot - ".jpg", ".png", etc.
+        including the leading dot - ".jpg", ".png", etc.
 *   size - the file size in bytes (null if not available)
 
 ##### percentComplete `Number`
@@ -429,7 +429,7 @@ List of the files that were uploaded or removed . Each file has:
 
 *   name
 *   extension - the file extension
-        inlcuding the leading dot - ".jpg", ".png", etc.
+        including the leading dot - ".jpg", ".png", etc.
 *   size - the file size in bytes (null if not available)
 
 ##### data `Object`
@@ -507,7 +507,7 @@ List of the files that were uploaded or removed . Each file has:
 
 *   name
 *   extension - the file extension
-        inlcuding the leading dot - ".jpg", ".png", etc.
+        including the leading dot - ".jpg", ".png", etc.
 *   size - the file size in bytes (null if not available)
 
 ##### e.operation `String`
@@ -583,7 +583,7 @@ List of the files that will be uploaded. Each file has:
 
 *   name
 *   extension - the file extension
-        inlcuding the leading dot - ".jpg", ".png", etc.
+        including the leading dot - ".jpg", ".png", etc.
 *   size - the file size in bytes (null if not available)
 
 ##### data `Object`

@@ -549,7 +549,7 @@ The URL which will handle the upload of the new images. If not specified the Upl
 
 ### imageBrowser.transport.imageUrl `String|Function`
 
-The URL responsible for serving the original image. A file name placeholder should be specifed.
+The URL responsible for serving the original image. A file name placeholder should be specified.
 
 #### Example
 
@@ -1132,7 +1132,7 @@ Creates a W3C-compatible **Range** object.
 
 ##### document `Document` *(optional)*
 
-The document that the range is associated with. If ommited, the document of the editor editing area will be used.
+The document that the range is associated with. If omitted, the document of the editor editing area will be used.
 
 #### Returns
 

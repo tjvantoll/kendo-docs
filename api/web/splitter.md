@@ -176,7 +176,7 @@ Loads the content of a pane from a local or remote URL.
 
 ##### pane `String|Element|jQuery`
 
-The targetted pane whose content is to be loaded via a URL.
+The targeted pane whose content is to be loaded via a URL.
 
 ##### url `String`
 
@@ -380,7 +380,7 @@ Sets the maximum size of a pane. Setting this value will not cause the widget to
 
 ##### pane `String|Element|jQuery`
 
-The pane being targetted for a new minimum size configuration value.
+The pane being targeted for a new minimum size configuration value.
 
 ##### value `String`
 
@@ -406,7 +406,7 @@ Sets the minimum size of a pane. Setting this value will not cause the widget to
 
 ##### pane `String|Element|jQuery`
 
-The pane being targetted for a new minimum size configuration value.
+The pane being targeted for a new minimum size configuration value.
 
 ##### value `String`
 

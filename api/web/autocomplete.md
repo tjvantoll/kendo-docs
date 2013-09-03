@@ -835,4 +835,4 @@ A jQuery object of the ul element, which holds the available options.
 The DataSource instance used by the widget.
 
 ### popup
-The Popup instace used by the widget.
+The Popup instance used by the widget.
