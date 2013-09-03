@@ -58,7 +58,7 @@ The animation played when the suggestion popup is closed.
     $("#autocomplete").kendoAutoComplete({
       animation: {
        close: {
-         effects: "fadeOut zoom:out",
+         effects: "zoom:out",
          duration: 300
        }
       }
@@ -86,7 +86,7 @@ The animation played when the suggestion popup is opened.
     $("#autocomplete").kendoAutoComplete({
       animation: {
        open: {
-         effects: "fadeIn zoom:in",
+         effects: "zoom:in",
          duration: 300
        }
       }
