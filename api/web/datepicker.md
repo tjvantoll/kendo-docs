@@ -405,7 +405,9 @@ The argument, which defines whether to enable/disable the DatePicker.
 
 ### readonly
 
-Controls whether the widget is editable or readonly.
+Toggles the readonly state of the widget. When the widget is readonly it doesn't allow user input.
+
+> There is a difference between disabled and readonly mode. The value of a disabled widget is **not** posted as part of a `form` whereas the value of a readonly widget is posted.
 
 #### Parameters
 
