@@ -10,7 +10,7 @@ publish: true
 # kendo.ui.FlatColorPicker
 
 This is the HSV color selector, which is used by default in the
-`ColorPicker`'s popup when there is no `palette`.
+`kendo.ui.ColorPicker` popup when there is no `palette` set.
 
 ## Configuration
 
@@ -19,28 +19,86 @@ This is the HSV color selector, which is used by default in the
 Specifies whether we should display the opacity slider to allow
 selection of transparency.
 
-### buttons `Boolean` *(default: true)*
+#### Example
 
-Specifies whether we should display the Apply / Cancel buttons.
+    <div id="flatpicker"></div>
+    <script>
+    $("#flatpicker").kendoFlatColorPicker({
+      opacity: true
+    })
+    </script>
+
+### buttons `Boolean` *(default: false)*
+
+Specifies whether the widget should display the Apply / Cancel buttons.
+
+#### Example
+
+    <div id="flatpicker"></div>
+    <script>
+    $("#flatpicker").kendoFlatColorPicker({
+      buttons: true
+    })
+    </script>
 
 ### value `String | Color` *(default: null)*
 
 Specifies the initially selected color.
+
+#### Example
+
+    <div id="flatpicker"></div>
+    <script>
+    $("#flatpicker").kendoFlatColorPicker({
+      value: "#b72bba"
+    })
+    </script>
 
 ### preview `Boolean` *(default: true)*
 
 Specifies whether we should display the preview bar which displays the
 current color and the input field.
 
+#### Example
+
+    <div id="flatpicker"></div>
+    <script>
+    $("#flatpicker").kendoFlatColorPicker({
+      preview: false
+    })
+    </script>
+
 ### messages `Object`
 
 Allows customization of "Apply" / "Cancel" labels.
+
+#### Example
+
+    <div id="flatpicker"></div>
+    <script>
+    $("#flatpicker").kendoFlatColorPicker({
+      buttons: true,
+      messages: {
+        apply: "Update",
+        cancel: "Discard"
+      }
+    })
+    </script>
 
 ## Methods
 
 ### focus
 
 Focuses the widget.
+
+#### Example
+
+    <div id="flatpicker"></div>
+    <script>
+    $("#flatpicker").kendoFlatColorPicker();
+    var flatpicker = $("#flatpicker").data("kendoFlatColorPicker");
+    flatpicker.focus();
+    </script>
 
 ### value `String | Color`*(default: null)*
 
