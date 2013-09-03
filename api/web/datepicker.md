@@ -139,7 +139,7 @@ The duration of the open animation in milliseconds.
             value: new Date(2000, 10, 1),
             dates: [
                 new Date(2000, 10, 10, 10, 0, 0),
-                new Date(2000, 10, 10, 30, 0)
+                new Date(2000, 10, 30)
             ] //can manipulate month template depending on this array.
         });
     </script>
@@ -558,7 +558,6 @@ The value to set.
     </script>
 
 #### Example - sets the value of the widget
-
 
     <input id="datepicker" />
     <script>
