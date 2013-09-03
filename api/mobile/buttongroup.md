@@ -29,7 +29,7 @@ Defines the initially selected Button (zero based index).
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### selectOn `String` *(default "down")*
@@ -71,7 +71,7 @@ The target value to be set or false to be removed.
 
 #### Returns
 
-`String|kendo.mobile.ui.Button` Returns the badge value if invoked without parameters, otherwise returns the ButtonGroup object.
+`String|kendo.mobile.ui.Button` the badge value if invoked without parameters, otherwise the ButtonGroup object.
 
 #### Example
 
@@ -84,20 +84,20 @@ The target value to be set or false to be removed.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function setBadges() {
-          var buttongroup = $("#buttongroup").data("kendoMobileButtonGroup");
+    function setBadges() {
+      var buttongroup = $("#buttongroup").data("kendoMobileButtonGroup");
 
-          // Set the first button badge value to 5
-          buttongroup.badge(0, 5);
-          // Set the last button badge value to 10
-          buttongroup.badge("li:last", 10);
-          // Get the current badge value on the first button.
-          console.log(buttongroup.badge(0));
-          // Remove the first button badge
-          buttongroup.badge("li:first", false);
-      }
+      // Set the first button badge value to 5
+      buttongroup.badge(0, 5);
+      // Set the last button badge value to 10
+      buttongroup.badge("li:last", 10);
+      // Get the current badge value on the first button.
+      console.log(buttongroup.badge(0));
+      // Remove the first button badge
+      buttongroup.badge("li:first", false);
+    }
     </script>
 
 ### current
@@ -119,15 +119,16 @@ Get the currently selected Button.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function onSelect(e) {
+    function onSelect(e) {
         var index = this.current().index();
         console.log(index);
-      }
+    }
     </script>
 
 ### destroy
+
 Prepares the **ButtonGroup** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
 
 > **Important:** This method does not remove the ButtonGroup element from DOM.
@@ -145,12 +146,12 @@ Prepares the **ButtonGroup** for safe removal from DOM. Detaches all event handl
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function destroy() {
-        $("#buttongroup").data("kendoMobileButtonGroup").destroy(); //detach events
-        $("#buttongroup").remove(); //remove the button from the DOM
-      }
+    function destroy() {
+      $("#buttongroup").data("kendoMobileButtonGroup").destroy(); //detach events
+      $("#buttongroup").remove(); //remove the button from the DOM
+    }
     </script>
 
 ### select
@@ -174,16 +175,16 @@ LI element or index of the Button.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function setSelected() {
-        var buttongroup = $("#buttongroup").data("kendoMobileButtonGroup");
+    function setSelected() {
+      var buttongroup = $("#buttongroup").data("kendoMobileButtonGroup");
 
-        // selects by jQuery object
-        buttongroup.select(buttongroup.element.children().eq(0));
-        // selects by index
-        buttongroup.select(1);
-      }
+      // selects by jQuery object
+      buttongroup.select(buttongroup.element.children().eq(0));
+      // selects by index
+      buttongroup.select(1);
+    }
     </script>
 
 ## Events
@@ -203,10 +204,10 @@ Fires when a Button is selected.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function onSelect(e) {
-        var index = this.current().index();
-        console.log(index);
-      }
+    function onSelect(e) {
+      var index = this.current().index();
+      console.log(index);
+    }
     </script>

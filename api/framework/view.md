@@ -31,8 +31,8 @@ The tag used for the root element of the view.
     <div id="app"></div>
 
     <script>
-     var view = new kendo.View("Hi!", { tagName: "span" });
-     view.render($("#app"));
+    var view = new kendo.View("Hi!", { tagName: "span" });
+    view.render($("#app"));
     </script>
 
 ### wrap `Boolean` *(default: true)*
@@ -44,9 +44,9 @@ If set to `false`, the view will not wrap its contents in a root element. In tha
     <div id="app"></div>
 
     <script>
-     var view = new kendo.View('<div id="foo"></div>', { wrap: false });
-     view.render($("#app"));
-     console.log(view.element.attr('id')) // foo
+    var view = new kendo.View('<div id="foo"></div>', { wrap: false });
+    view.render($("#app"));
+    console.log(view.element.attr('id')) // foo
     </script>
 
 ## Methods
@@ -75,9 +75,8 @@ Alternatively, the render method can be called without parameters in order to re
     <div id="app"></div>
 
     <script>
-        var index = new kendo.View('<span>Hello World!</span>');
-
-        index.render("#app");
+    var index = new kendo.View('<span>Hello World!</span>');
+    index.render("#app");
     </script>
 
 #### Example
@@ -85,16 +84,15 @@ Alternatively, the render method can be called without parameters in order to re
     <div id="app"></div>
 
     <script>
-        var index = new kendo.View('<span>Hello World!</span>');
-
-        $("#app").append(index.render());
+    var index = new kendo.View('<span>Hello World!</span>');
+    $("#app").append(index.render());
     </script>
 
 #### Parameters
 
 ##### container `jQuery`
 
-(Optional) the element in which the view element will be appended.
+(optional) the element in which the view element will be appended.
 
 #### Returns
 
@@ -111,15 +109,15 @@ Fires when the View is replaced in a layout placeholder.
     <div id="app"></div>
 
     <script>
-        var foo = new kendo.View("<span>Foo</span>", { hide: function() { console.log("Foo is hidden now"); });
-        var bar = new kendo.View("<span>Bar</span>");
+    var foo = new kendo.View("<span>Foo</span>", { hide: function() { console.log("Foo is hidden now"); });
+    var bar = new kendo.View("<span>Bar</span>");
 
-        var layout = new kendo.Layout("<header>Header</header><section id="content"></section><footer></footer>");
+    var layout = new kendo.Layout("<header>Header</header><section id="content"></section><footer></footer>");
 
-        layout.render($("#app"));
+    layout.render($("#app"));
 
-        layout.showIn("#content", foo);
-        layout.showIn("#content", bar);
+    layout.showIn("#content", foo);
+    layout.showIn("#content", bar);
     </script>
 
 ### init
@@ -131,8 +129,8 @@ Fires the first time the view renders.
     <div id="app"></div>
 
     <script>
-        var view = new kendo.View("Hi!", { init: function() { console.log("View is initiated") } });
-        view.render($("#app"));
+    var view = new kendo.View("Hi!", { init: function() { console.log("View is initiated") } });
+    view.render($("#app"));
     </script>
 
 ### show
@@ -144,8 +142,8 @@ Fires when after the mobile View is rendered (either by calling `render`, or by 
     <div id="app"></div>
 
     <script>
-        var view = new kendo.View("Hi!", { show: function() { console.log("View is rendered") } });
-        view.render($("#app"));
+    var view = new kendo.View("Hi!", { show: function() { console.log("View is rendered") } });
+    view.render($("#app"));
     </script>
 
 ## Fields

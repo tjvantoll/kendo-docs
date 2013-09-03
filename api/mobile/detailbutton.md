@@ -46,16 +46,16 @@ Prepares the **DetailButton** for safe removal from DOM. Detaches all event hand
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function onInit() {
-        $(".km-listview")
-          .find("[data-role='detailbutton']")
-          .each(function(idx, item) {
-            $(item).data("kendoMobileDetailButton").destroy(); //detach events
-            $(item).remove(); //remove element from the DOM
-          });
-        }
+    function onInit() {
+    $(".km-listview")
+      .find("[data-role='detailbutton']")
+      .each(function(idx, item) {
+        $(item).data("kendoMobileDetailButton").destroy(); //detach events
+        $(item).remove(); //remove element from the DOM
+      });
+    }
     </script>
 
 ## Events
@@ -85,10 +85,10 @@ The button DOM element
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function onClick(e) {
-        var item = e.button.closest("li"); //get the item
-        item.css("background", "yellow"); //change its background
-      }
+    function onClick(e) {
+    var item = e.button.closest("li"); //get the item
+    item.css("background", "yellow"); //change its background
+    }
     </script>

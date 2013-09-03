@@ -22,7 +22,7 @@ Represents the Kendo UI Mobile ModalView widget. Inherits from [kendo.mobile.ui.
     </div>
 
     <script>
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ## Configuration
@@ -39,6 +39,7 @@ The height of the ModalView container in pixels. If not set, the element style i
     <div data-role="modalview" id="my-modal" style="width: 200px; height: 200px;">
       Hello!
     </div>
+
     <script>
     new kendo.mobile.Application();
     </script>
@@ -55,8 +56,9 @@ When set to false, the ModalView will close when the user taps outside of its el
     <div data-role="modalview" id="my-modal" data-width="200" data-height="200" data-modal="false">
       Hello!
     </div>
+
     <script>
-      new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### width `Number`
@@ -71,6 +73,7 @@ The width of the ModalView container in pixels. If not set, the element style is
     <div data-role="modalview" id="my-modal" style="width: 200px; height: 200px;">
       Hello!
     </div>
+
     <script>
     new kendo.mobile.Application();
     </script>
@@ -92,15 +95,15 @@ Close the ModalView
     </div>
 
     <script>
-        function openModal() {
-           $("#foo").data("kendoMobileModalView").open();
-        }
+    function openModal() {
+       $("#foo").data("kendoMobileModalView").open();
+    }
 
-        function closeModal() {
-           $("#foo").data("kendoMobileModalView").close();
-        }
+    function closeModal() {
+       $("#foo").data("kendoMobileModalView").close();
+    }
 
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### destroy
@@ -124,15 +127,15 @@ Open the ModalView
     </div>
 
     <script>
-        function openModal() {
-           $("#foo").data("kendoMobileModalView").open();
-        }
+    function openModal() {
+       $("#foo").data("kendoMobileModalView").open();
+    }
 
-        function closeModal() {
-           $("#foo").data("kendoMobileModalView").close();
-        }
+    function closeModal() {
+       $("#foo").data("kendoMobileModalView").close();
+    }
 
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 #### Parameters
@@ -158,11 +161,11 @@ Fired when the mobile ModalView is closed by the user.
     </div>
 
     <script>
-        function onClose(e) {
-            //handle event
-        }
+    function onClose(e) {
+        // handle event
+    }
 
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 #### Event Data
@@ -214,11 +217,11 @@ Fires when the ModalView is shown.
     </div>
 
     <script>
-        function logTarget(e) {
-            console.log(e.target); // <a href="#foo" ...
-        }
+    function logTarget(e) {
+        console.log(e.target); // <a href="#foo" ...
+    }
 
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 #### Event Data

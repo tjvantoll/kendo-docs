@@ -14,7 +14,7 @@ publish: true
 
 ### id `String`*(default: null)*
 
- The id of the layout. **Required**
+The id of the layout. **Required**
 
 #### Example
 
@@ -29,11 +29,11 @@ publish: true
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
     <style>
-      .km-view .km-header, 
+      .km-view .km-header,
       .km-view .km-footer {
         color: red;
       }
@@ -41,7 +41,7 @@ publish: true
 
 ### platform `String`
 
- The specific platform this layout targets. By default, layouts are displayed
+The specific platform this layout targets. By default, layouts are displayed
 on all platforms.
 
 #### Example
@@ -63,7 +63,7 @@ on all platforms.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
     <style>
@@ -108,11 +108,11 @@ The mobile view instance
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function onHide(e) {
+    function onHide(e) {
         console.log(e.view.id + " view hidden");
-      }
+    }
     </script>
 
 ### init
@@ -140,11 +140,11 @@ The mobile layout instance
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function onInit(e) {
+    function onInit(e) {
         console.log("init");
-      }
+    }
     </script>
 
 ### show
@@ -181,9 +181,9 @@ The mobile view instance
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function onShow(e) {
-        console.log("show");
-      }
+    function onShow(e) {
+      console.log("show");
+    }
     </script>

@@ -29,12 +29,12 @@ The position of the drawer. Can be `left` (default) or `right`.
     </div>
 
     <script>
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### title `String`
 
-The text to display in the navbar title (if present).
+The text to display in the Navbar title (if present).
 
 ### views `Array`
 
@@ -57,7 +57,7 @@ A list of the view ids on which the drawer will appear. If omitted, the drawer c
     </div>
 
     <script>
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ## Methods
@@ -80,10 +80,10 @@ Prepares the **Drawer** for safe removal from DOM. Detaches all event handlers a
     </div>
 
     <script>
-        new kendo.mobile.Application();
-        function destroyDrawer() {
-            $("#my-drawer").data("kendoMobileDrawer").destroy();
-        }
+    new kendo.mobile.Application();
+    function destroyDrawer() {
+        $("#my-drawer").data("kendoMobileDrawer").destroy();
+    }
     </script>
 
 ### hide
@@ -102,10 +102,10 @@ Hide the Drawer
     </div>
 
     <script>
-        new kendo.mobile.Application();
-        function hideDrawer() {
-            $("#my-drawer").data("kendoMobileDrawer").hide();
-        }
+    new kendo.mobile.Application();
+    function hideDrawer() {
+        $("#my-drawer").data("kendoMobileDrawer").hide();
+    }
     </script>
 
 ### show
@@ -124,10 +124,11 @@ Show the Drawer
     </div>
 
     <script>
-        new kendo.mobile.Application();
-        function showDrawer() {
-            $("#my-drawer").data("kendoMobileDrawer").show();
-        }
+    new kendo.mobile.Application();
+
+    function showDrawer() {
+        $("#my-drawer").data("kendoMobileDrawer").show();
+    }
     </script>
 
 
@@ -148,11 +149,11 @@ Fires before the mobile Drawer is revealed. The event can be prevented by callin
     </div>
 
     <script>
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
 
-        function prevent(e) {
-            e.preventDefault();
-        }
+    function prevent(e) {
+        e.preventDefault();
+    }
     </script>
 
 ### hide
@@ -170,11 +171,11 @@ Fired when the mobile Drawer is closed by the user.
     </div>
 
     <script>
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
 
-        function onHide(e) {
-            console.log(e);
-        }
+    function onHide(e) {
+        console.log(e);
+    }
     </script>
 
 #### Event Data
@@ -198,11 +199,11 @@ Fired when the mobile Drawer and its child widgets are initialized.
     </div>
 
     <script>
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
 
-        function onInit(e) {
-            console.log(e);
-        }
+    function onInit(e) {
+        console.log(e);
+    }
     </script>
 
 #### Event Data
@@ -226,11 +227,11 @@ Fires when the Drawer is shown.
     </div>
 
     <script>
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
 
-        function onShow(e) {
-            console.log(e);
-        }
+    function onShow(e) {
+        console.log(e);
+    }
     </script>
 
 #### Event Data

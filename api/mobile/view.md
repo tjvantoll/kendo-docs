@@ -23,8 +23,8 @@ The MVVM model to bind to. If a string is passed, The view will try to resolve a
     </div>
 
     <script>
-     var foo = { bar: "baz" }
-     new kendo.mobile.Application();
+    var foo = { bar: "baz" }
+    new kendo.mobile.Application();
     </script>
 
 ### reload `Boolean` *(default: false)*
@@ -40,7 +40,7 @@ Applicable to remote views only. If set to true, the remote view contents will b
 
     <!-- bar.html -->
     <div data-role="view" data-reload="true">
-        I will be requested from the server every time I am displayed
+      I will be requested from the server every time I am displayed
       <a href="#" id="link">Link</a>
     </div>
 
@@ -56,12 +56,12 @@ Useful if the view contains an image or a map.
     </div>
 
     <script>
-     new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### title `String`
 
-The text to display in the navbar title (if present) and the browser title.
+The text to display in the NavBar title (if present) and the browser title.
 
 #### Example
 
@@ -151,10 +151,11 @@ Fires after the mobile View becomes visible. If the view is displayed with trans
     </div>
 
     <script>
-        var app = new kendo.mobile.Application();
-        function afterShow(e) {
-            console.log(e.view);
-        }
+    var app = new kendo.mobile.Application();
+
+    function afterShow(e) {
+        console.log(e.view);
+    }
     </script>
 
 #### Event Data
@@ -178,10 +179,10 @@ Fires before the mobile View becomes hidden.
     </div>
 
     <script>
-        var app = new kendo.mobile.Application();
-        function beforeHide(e) {
-            console.log('foo hidden');
-        }
+    var app = new kendo.mobile.Application();
+    function beforeHide(e) {
+        console.log('foo hidden');
+    }
     </script>
 
 #### Event Data
@@ -205,11 +206,12 @@ Fires before the mobile View becomes visible. The event can be prevented by call
     </div>
 
     <script>
-        var app = new kendo.mobile.Application();
-        function redirectBack(e) {
-            e.preventDefault();
-            app.navigate("#foo");
-        }
+    var app = new kendo.mobile.Application();
+
+    function redirectBack(e) {
+        e.preventDefault();
+        app.navigate("#foo");
+    }
     </script>
 
 #### Event Data
@@ -233,10 +235,10 @@ Fires when the mobile View becomes hidden.
     </div>
 
     <script>
-        var app = new kendo.mobile.Application();
-        function onHide(e) {
-            console.log('foo hidden');
-        }
+    var app = new kendo.mobile.Application();
+    function onHide(e) {
+        console.log('foo hidden');
+    }
     </script>
 
 #### Event Data
@@ -255,12 +257,12 @@ Fires after the mobile View and its child widgets are initialized.
         Foo
     </div>
 
-
     <script>
-        var app = new kendo.mobile.Application();
-        function init(e) {
-            console.log('init');
-        }
+    var app = new kendo.mobile.Application();
+
+    function init(e) {
+        console.log('init');
+    }
     </script>
 
 #### Event Data
@@ -280,10 +282,10 @@ Fires when the mobile View becomes visible.
     </div>
 
     <script>
-        var app = new kendo.mobile.Application();
-        function show(e) {
-            console.log('show');
-        }
+    var app = new kendo.mobile.Application();
+    function show(e) {
+        console.log('show');
+    }
     </script>
 
 #### Event Data
@@ -304,19 +306,20 @@ The **View** (or the applied mobile layout) footer DOM element.
 
 ### content `jQuery`
 
-The **View** content DOM element. If there is a scroller in the View, it will become a child of this element. Please use the contentElement method instead, to always get the correct content element.
+The **View** content DOM element. If there is a scroller in the View, it will become a child of this element. Please use the `contentElement` method instead, to always get the correct content element.
 
 ### scrollerContent `jQuery`
 
-The View mobile scroller container DOM element. Recommended if scrollable mobile View contents need to be manipulated or replaced. If you don't know if the View has a Scroller initialized, please use the contentElement method instead.
+The View mobile scroller container DOM element. Recommended if scrollable mobile View contents need to be manipulated or replaced. If you don't know if the View has a Scroller initialized, please use the `contentElement` method instead.
 
 #### Replace scrollable View contents
 
     <div data-role="view" data-init="replaceContents"> Old content</div>
-    <script>
-        function replaceContents(e) {
-          e.view.scrollerContent.html("<b>New content</b>");
-        }
 
-        new kendo.mobile.Application();
+    <script>
+    function replaceContents(e) {
+      e.view.scrollerContent.html("<b>New content</b>");
+    }
+
+    new kendo.mobile.Application();
     </script>

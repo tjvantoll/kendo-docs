@@ -35,7 +35,7 @@ Represents the Kendo UI Mobile TabStrip widget. Inherits from [kendo.mobile.ui.W
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ## Methods
@@ -71,15 +71,15 @@ The target value to be set or false to be removed.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onInit(e) {
-        var tabstrip = e.view.footer.find(".km-tabstrip").data("kendoMobileTabStrip");
+    var app = new kendo.mobile.Application();
+    function onInit(e) {
+      var tabstrip = e.view.footer.find(".km-tabstrip").data("kendoMobileTabStrip");
 
-        // Set the first tab badge value to 5
-        tabstrip.badge(0, 5);
-        // Get the current badge value on the first tab.
-        console.log(tabstrip.badge(0));
-      }
+      // Set the first tab badge value to 5
+      tabstrip.badge(0, 5);
+      // Get the current badge value on the first tab.
+      console.log(tabstrip.badge(0));
+    }
     </script>
 
 ### currentItem
@@ -103,12 +103,12 @@ Get the currently selected tab DOM element.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onInit(e) {
-        var tabstrip = e.view.footer.find(".km-tabstrip").data("kendoMobileTabStrip");
-        var currentItem = tabstrip.currentItem();
-        console.log(currentItem);
-      }
+    var app = new kendo.mobile.Application();
+    function onInit(e) {
+      var tabstrip = e.view.footer.find(".km-tabstrip").data("kendoMobileTabStrip");
+      var currentItem = tabstrip.currentItem();
+      console.log(currentItem);
+    }
     </script>
 
 ### destroy
@@ -130,23 +130,23 @@ Prepares the **TabStrip** for safe removal from DOM. Detaches all event handlers
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onClick() {
-        var tabstrip = app.view().footer.find(".km-tabstrip").data("kendoMobileTabStrip");
-        tabstrip.destroy(); //detach events
-        tabstrip.wrapper.remove(); //remove DOM elements
-      }
+    var app = new kendo.mobile.Application();
+    function onClick() {
+      var tabstrip = app.view().footer.find(".km-tabstrip").data("kendoMobileTabStrip");
+      tabstrip.destroy(); //detach events
+      tabstrip.wrapper.remove(); //remove DOM elements
+    }
     </script>
 
 ### switchTo
 
-Set the mobile TabStrip active tab to the tab with the specified url. This method doesn't change the current View. To change the View, use Application's [navigate](/api/mobile/application#navigate) method instead.
+Set the mobile TabStrip active tab to the tab with the specified URL. This method doesn't change the current View. To change the View, use Application's [navigate](/api/mobile/application#navigate) method instead.
 
 #### Parameters
 
 ##### url `String`
 
-The url of the tab.
+The URL of the tab.
 
 #### Example
 
@@ -161,11 +161,11 @@ The url of the tab.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onClick() {
-        var tabstrip = app.view().footer.find(".km-tabstrip").data("kendoMobileTabStrip");
-        tabstrip.switchTo("#bar"); //activate "bar" tab
-      }
+    var app = new kendo.mobile.Application();
+    function onClick() {
+      var tabstrip = app.view().footer.find(".km-tabstrip").data("kendoMobileTabStrip");
+      tabstrip.switchTo("#bar"); //activate "bar" tab
+    }
     </script>
 
 ### clear
@@ -183,11 +183,11 @@ Clear the currently selected tab.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onClick() {
-        var tabstrip = app.view().footer.find(".km-tabstrip").data("kendoMobileTabStrip");
-        tabstrip.clear();
-      }
+    var app = new kendo.mobile.Application();
+    function onClick() {
+      var tabstrip = app.view().footer.find(".km-tabstrip").data("kendoMobileTabStrip");
+      tabstrip.clear();
+    }
     </script>
 
 ## Events
@@ -214,8 +214,8 @@ The selected tab
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onSelect(e) {
-        e.preventDefault(); //prevent the tab selection
-      }
+    var app = new kendo.mobile.Application();
+    function onSelect(e) {
+      e.preventDefault(); //prevent the tab selection
+    }
     </script>

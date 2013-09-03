@@ -33,15 +33,15 @@ Prepares the **NavBar** for safe removal from DOM. Detaches all event handlers a
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onClick(e) {
-        var navbar = app.view()
-          .header
-          .find(".km-navbar")
-          .data("kendoMobileNavBar");
+    var app = new kendo.mobile.Application();
+    function onClick(e) {
+      var navbar = app.view()
+        .header
+        .find(".km-navbar")
+        .data("kendoMobileNavBar");
 
-        navbar.destroy();
-      }
+      navbar.destroy();
+    }
     </script>
 
 ### title
@@ -66,13 +66,13 @@ The text of title
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onClick(e) {
-        var navbar = app.view()
-          .header
-          .find(".km-navbar")
-          .data("kendoMobileNavBar");
+    var app = new kendo.mobile.Application();
+    function onClick(e) {
+      var navbar = app.view()
+        .header
+        .find(".km-navbar")
+        .data("kendoMobileNavBar");
 
-        navbar.title("changed");
-      }
+      navbar.title("changed");
+    }
     </script>

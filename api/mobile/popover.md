@@ -38,7 +38,7 @@ The pane configuration options.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### pane.layout `String`
@@ -75,7 +75,7 @@ The pane configuration options.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### pane.loading `String`*(default: "Loading...")*
@@ -95,16 +95,16 @@ The pane configuration options.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function showLoading(e) {
-        var pane = $("#foo").data("kendoMobilePopOver").pane;
-        pane.showLoading();
+    function showLoading(e) {
+      var pane = $("#foo").data("kendoMobilePopOver").pane;
+      pane.showLoading();
 
-        setTimeout(function() {
-          pane.hideLoading();
-        }, 3000);
-      }
+      setTimeout(function() {
+        pane.hideLoading();
+      }, 3000);
+    }
     </script>
 
 ### pane.transition `String`
@@ -127,7 +127,7 @@ The pane configuration options.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### popup `Object`
@@ -137,7 +137,7 @@ The popup configuration options.
 ### popup.direction String`*(default: "down")*
 
 The direction to which the popup will expand, relative to the target that opened it.
-Supported directions are up, right, down, and left.
+Supported directions are `up`, `right`, `down`, and `left`.
 
 #### Example
 
@@ -152,7 +152,7 @@ Supported directions are up, right, down, and left.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### popup.height `Number | String`*(default: 320)*
@@ -172,7 +172,7 @@ Supported directions are up, right, down, and left.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### popup.width `Number | String`*(default: 240)*
@@ -192,7 +192,7 @@ Supported directions are up, right, down, and left.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ## Methods
@@ -214,14 +214,15 @@ Close the popover.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function close() {
-        $("#foo").data("kendoMobilePopOver").close();
-      }
+    function close() {
+      $("#foo").data("kendoMobilePopOver").close();
+    }
     </script>
 
 ### destroy
+
 Prepares the **PopOver** for safe removal from DOM. Detaches all event handlers and removes jQuery.data attributes to avoid memory leaks. Calls destroy method of any child Kendo widgets.
 
 > **Important:** This method does not remove the PopOver element from DOM.
@@ -240,11 +241,11 @@ Prepares the **PopOver** for safe removal from DOM. Detaches all event handlers 
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function destroy() {
-        $("#foo").data("kendoMobilePopOver").destroy(); //detach events
-      }
+    function destroy() {
+      $("#foo").data("kendoMobilePopOver").destroy(); //detach events
+    }
     </script>
 
 ### open
@@ -270,11 +271,11 @@ The target of the Popover, to which the visual arrow will point to. **This param
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-        
-      function showPopOver() {
-        $("#foo").data("kendoMobilePopOver").open("#target");
-      }
+    var app = new kendo.mobile.Application();
+
+    function showPopOver() {
+      $("#foo").data("kendoMobilePopOver").open("#target");
+    }
     </script>
 
 ## Events
@@ -302,12 +303,12 @@ The widget instance which fired the event.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function onClose(e) {
-        console.log("close");
-        //handle event
-      }
+    function onClose(e) {
+      console.log("close");
+      //handle event
+    }
     </script>
 
 ### open
@@ -337,10 +338,10 @@ The widget instance which fired the event.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function onOpen(e) {
-        console.log("open");
-        //handle event
-      }
+    function onOpen(e) {
+      console.log("open");
+      //handle event
+    }
     </script>

@@ -16,7 +16,7 @@ Represents the Kendo UI Mobile Switch widget. Inherits from [kendo.mobile.ui.Wid
 
 ### checked `Boolean`*(default: false)*
 
- The checked state of the widget.
+The checked state of the widget.
 
 #### Example
 
@@ -26,12 +26,12 @@ Represents the Kendo UI Mobile Switch widget. Inherits from [kendo.mobile.ui.Wid
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### offLabel `String`*(default: "OFF")*
 
- The OFF label.
+The OFF label.
 
 #### Example
 
@@ -40,12 +40,12 @@ Represents the Kendo UI Mobile Switch widget. Inherits from [kendo.mobile.ui.Wid
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### onLabel `String`*(default: "ON")*
 
- The ON label.
+The ON label.
 
 #### Example
 
@@ -54,7 +54,7 @@ Represents the Kendo UI Mobile Switch widget. Inherits from [kendo.mobile.ui.Wid
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ## Methods
@@ -81,17 +81,17 @@ Whether to turn the widget on or off.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onClick() {
-        // get a reference to the switch widget
-        var switchInstance = $("#switch").data("kendoMobileSwitch");
+    var app = new kendo.mobile.Application();
+    function onClick() {
+      // get a reference to the switch widget
+      var switchInstance = $("#switch").data("kendoMobileSwitch");
 
-        // get the checked state of the switch.
-        console.log(switchInstance.check());
-        // set the checked state of the switch.
-        switchInstance.check(true);
-        console.log(switchInstance.check());
-      }
+      // get the checked state of the switch.
+      console.log(switchInstance.check());
+      // set the checked state of the switch.
+      switchInstance.check(true);
+      console.log(switchInstance.check());
+    }
     </script>
 
 ### destroy
@@ -107,13 +107,14 @@ Prepares the **Switch** for safe removal from DOM. Detaches all event handlers a
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onClick() {
-        var switchInstance = $("#switch").data("kendoMobileSwitch");
+    var app = new kendo.mobile.Application();
 
-        switchInstance.destroy();
-        switchInstance.wrapper.remove();
-      }
+    function onClick() {
+      var switchInstance = $("#switch").data("kendoMobileSwitch");
+
+      switchInstance.destroy();
+      switchInstance.wrapper.remove();
+    }
     </script>
 
 ### toggle
@@ -128,12 +129,13 @@ Toggle the checked state of the widget.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onClick() {
-        var switchInstance = $("#switch").data("kendoMobileSwitch");
-        // toggle the checked state of the switch.
-        switchInstance.toggle();
-      }
+    var app = new kendo.mobile.Application();
+
+    function onClick() {
+      var switchInstance = $("#switch").data("kendoMobileSwitch");
+      // toggle the checked state of the switch.
+      switchInstance.toggle();
+    }
     </script>
 
 ## Events
@@ -155,8 +157,9 @@ The checked state of the widget.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-      function onChange(e) {
-        console.log(e.checked);//true of false
-      }
+    var app = new kendo.mobile.Application();
+
+    function onChange(e) {
+      console.log(e.checked);//true of false
+    }
     </script>

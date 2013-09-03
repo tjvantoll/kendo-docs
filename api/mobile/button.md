@@ -23,9 +23,9 @@ Represents the Kendo UI Mobile Button widget. Inherits from [kendo.mobile.ui.Wid
     <div id="foo" data-role="view">
       <a data-role="button" data-badge="10">Foo</a>
     </div>
-    
+
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 #### Example - configuration based on jQuery plugin syntax
@@ -33,10 +33,10 @@ Represents the Kendo UI Mobile Button widget. Inherits from [kendo.mobile.ui.Wid
     <div id="foo" data-role="view" data-init="onInit">
       <a id="button">Foo</a>
     </div>
-    
+
     <script>
-      var app = new kendo.mobile.Application();
-    
+    var app = new kendo.mobile.Application();
+
     function onInit() {
       $("#button").kendoMobileButton({ badge: 10 });
     }
@@ -51,41 +51,41 @@ Represents the Kendo UI Mobile Button widget. Inherits from [kendo.mobile.ui.Wid
     <div id="foo" data-role="view">
       <a data-role="button" data-icon="play">Foo</a>
     </div>
-    
+
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ## Methods
 
 ### badge
 
-**Introduced in Q1 2013 SP** Sets a badge on the **Button** with the specified value. If invoked without parameters, returns the current badge value. Set the value to false to remove the badge.
+**Introduced in Q1 2013 SP** Sets a badge on the **Button** with the specified value. If invoked without parameters, returns the current badge value. Set the value to `false` to remove the badge.
 
 #### Parameters
 
 ##### value `String|Boolean`
 
-The target value to be set or false to be removed.
+The target value to be set or `false` to be removed.
 
 #### Returns
 
-`String|kendo.mobile.ui.Button` Returns the badge value if invoked without parameters, otherwise returns the Button object.
+`String | kendo.mobile.ui.Button` the badge value if invoked without parameters, otherwise the Button object.
 
 #### Example
 
     <div id="foo" data-role="view">
       <a data-role="button" data-badge="1" data-click="countClicks">Foo</a>
     </div>
-  
+
     <script>
-      var app = new kendo.mobile.Application();
-    
-      function countClicks() {
+    var app = new kendo.mobile.Application();
+
+    function countClicks() {
         var badge = parseInt(this.badge()); //get badge value
         badge++;
         this.badge(badge); //set new badge value
-      }
+    }
     </script>
 
 #### Example - remove the badge
@@ -96,11 +96,11 @@ The target value to be set or false to be removed.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function removeBadge() {
-        $("#btn").data("kendoMobileButton").badge(false);
-      }
+    function removeBadge() {
+      $("#btn").data("kendoMobileButton").badge(false);
+    }
     </script>
 
 ### destroy
@@ -137,11 +137,11 @@ Fires when the user taps the button.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function onClick() {
-        console.log("clicked");
-      }
+    function onClick() {
+      console.log("clicked");
+    }
     </script>
 
 #### Event Data

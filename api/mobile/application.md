@@ -20,7 +20,7 @@ Whether to hide the browser address bar. Supported only in iPhone and iPod. Does
     <div data-role="view"><a data-role="button">Foo</a></div>
 
     <script>
-         new kendo.mobile.Application($(document.body), { hideAddressBar: false });
+    new kendo.mobile.Application($(document.body), { hideAddressBar: false });
     </script>
 
 ### updateDocumentTitle `Boolean` *(default: true)*
@@ -32,7 +32,7 @@ Whether to update the document title.
     <div data-role="view"><a data-role="button">Foo</a></div>
 
     <script>
-         new kendo.mobile.Application($(document.body), { updateDocumentTitle: false });
+    new kendo.mobile.Application($(document.body), { updateDocumentTitle: false });
     </script>
 
 ### initial `String`
@@ -46,7 +46,7 @@ The id of the initial mobile View to display.
     <div data-role="view" id="bar"><a data-role="button">Bar</a></div>
 
     <script>
-         new kendo.mobile.Application($(document.body), { initial: "#bar" });
+    new kendo.mobile.Application($(document.body), { initial: "#bar" });
     </script>
 
 ### layout `String`
@@ -62,7 +62,7 @@ The id of the default Application layout.
     </div>
 
     <script>
-         new kendo.mobile.Application($(document.body), { layout: "foo" });
+    new kendo.mobile.Application($(document.body), { layout: "foo" });
     </script>
 
 ### loading `String`*(default: "&lt;h1&gt;Loading...&lt;/h1&gt;")*
@@ -76,28 +76,28 @@ The text displayed in the loading popup. Setting this value to false will disabl
     <div data-role="view">Bar</div>
 
     <script>
-         new kendo.mobile.Application($(document.body), {
-             loading: "<h1>Please wait...</h1>"
-         });
+    new kendo.mobile.Application($(document.body), {
+        loading: "<h1>Please wait...</h1>"
+    });
     </script>
 
 ### platform `String`
 
- Which platform look to force on the application. Can be one of "ios", "android", "blackberry".
+Which platform look to force on the application. Supported values are `"ios"`, `"android"`, `"blackberry"` and `"wp8"`.
 
 #### Example
 
     <div data-role="view">Bar</div>
 
     <script>
-         new kendo.mobile.Application($(document.body), {
-             platform: "android"
-         });
+    new kendo.mobile.Application($(document.body), {
+        platform: "android"
+    });
     </script>
 
 ### serverNavigation `Boolean` **(default: false)**
 
-If set to true, the application will not use ajax to load remote views.
+If set to true, the application will not use AJAX to load remote views.
 
 > Using this configuration option will affect the user experience, as blank screens will be visible between application states. As the page will be completely reloaded, the application state will not be transferred to the next view.
 
@@ -106,7 +106,7 @@ If set to true, the application will not use ajax to load remote views.
     <div data-role="view">Bar <a data-role="button" href="another-view.html">Go to another page</a></div>
 
     <script>
-         new kendo.mobile.Application($(document.body), { serverNavigation: true });
+    new kendo.mobile.Application($(document.body), { serverNavigation: true });
     </script>
 
 ### skin `String`
@@ -135,7 +135,7 @@ The default View transition.
     <div data-role="view" id="bar"><a data-role="button" href="#foo">Foo</a></div>
 
     <script>
-         new kendo.mobile.Application($(document.body), { transition: "slide" });
+    new kendo.mobile.Application($(document.body), { transition: "slide" });
     </script>
 
 ### webAppCapable `Boolean` **(default: true)**
@@ -147,7 +147,7 @@ Disables the default behavior of Kendo UI Mobile apps to be web app capable (ope
     <div data-role="view" id="foo"><a data-role="button" href="#bar">Bar</a></div>
 
     <script>
-         new kendo.mobile.Application($(document.body), { webAppCapable: false });
+    new kendo.mobile.Application($(document.body), { webAppCapable: false });
     </script>
 
 ## Methods

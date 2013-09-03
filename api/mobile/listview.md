@@ -16,7 +16,7 @@ Represents the Kendo UI Mobile ListView widget. Inherits from [kendo.mobile.ui.W
 
 ### appendOnRefresh `Boolean`*(default: false)*
 
-Used in combination with pullToRefresh. If set to true, newly loaded data will be appended on top when refershing. **Notice:** not applicable if ListView is in a virtual mode.
+Used in combination with `pullToRefresh`. If set to `true`, newly loaded data will be appended on top when refreshing. **Notice:** not applicable if ListView is in a virtual mode.
 
 #### Example
 
@@ -93,13 +93,13 @@ Instance of DataSource or the data that the mobile ListView will be bound to.
     </div>
 
     <script type="text/x-kendo-template" id="foo-template">
-        #: data #
+    #: data #
     </script>
 
     <script>
-        var foo = new kendo.data.DataSource({ data: [ 1, 2, 3, 4, 5] });
+    var foo = new kendo.data.DataSource({ data: [ 1, 2, 3, 4, 5] });
 
-        new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### endlessScroll `Boolean`*(default: false)*
@@ -147,9 +147,9 @@ If set to `true`, the listview gets the next page of data when the user scrolls 
 ### fixedHeaders `Boolean`*(default: false)*
 
 If set to true, the group headers will persist their position when the user scrolls through the listview.
-Applicable only when the type is set to group, or when binding to grouped datasource.
+Applicable only when the type is set to group, or when binding to grouped DataSource.
 
-**Notice:** fixed headers are not supported in virtual mode
+**Notice:** fixed headers are not supported in virtual mode.
 
 #### Example
 
@@ -167,7 +167,7 @@ Applicable only when the type is set to group, or when binding to grouped dataso
     </script>
 
     <script>
-      var groupedData = new kendo.data.DataSource({
+    var groupedData = new kendo.data.DataSource({
         data: [
           { name: "Sashimi Salad", description: "Organic greens topped with market fresh sashimi, wasabi soy vinaigrette.",  letter: "S" },
           { name: "Seaweed Salad", description: "A nice seaweed salad.",  letter: "S" },
@@ -177,9 +177,9 @@ Applicable only when the type is set to group, or when binding to grouped dataso
           { name: "California Rolls", description: "Crab sticks, avocado and cucumber.",  letter: "C" }
         ],
         group: { field: "letter" }
-      });
+    });
 
-      new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### headerTemplate `String|Function`*(default: "#:value#")*
@@ -202,24 +202,24 @@ The header item template (applicable when the type is set to group).
     </script>
 
     <script>
-      var groupedData = new kendo.data.DataSource({
-        data: [
-          { name: "Sashimi Salad", description: "Organic greens topped with market fresh sashimi, wasabi soy vinaigrette.",  letter: "S" },
-          { name: "Seaweed Salad", description: "A nice seaweed salad.",  letter: "S" },
-          { name: "Edamame", description: "Boiled soy beans with salt.",  letter: "E" },
-          { name: "Maguro", description: "Tuna pieces.",  letter: "M" },
-          { name: "Tekka Maki", description: "Tuna roll with wasabi.",  letter: "T" },
-          { name: "California Rolls", description: "Crab sticks, avocado and cucumber.",  letter: "C" }
-        ],
-        group: { field: "letter" }
-      });
+    var groupedData = new kendo.data.DataSource({
+      data: [
+        { name: "Sashimi Salad", description: "Organic greens topped with market fresh sashimi, wasabi soy vinaigrette.",  letter: "S" },
+        { name: "Seaweed Salad", description: "A nice seaweed salad.",  letter: "S" },
+        { name: "Edamame", description: "Boiled soy beans with salt.",  letter: "E" },
+        { name: "Maguro", description: "Tuna pieces.",  letter: "M" },
+        { name: "Tekka Maki", description: "Tuna roll with wasabi.",  letter: "T" },
+        { name: "California Rolls", description: "Crab sticks, avocado and cucumber.",  letter: "C" }
+      ],
+      group: { field: "letter" }
+    });
 
-      new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### loadMore `Boolean`*(default: false)*
 
-If set to true, a button is rendered at the bottom of the listview. Tapping it fetches and displays the items from the next page of the datasource.
+If set to `true`, a button is rendered at the bottom of the listview. Tapping it fetches and displays the items from the next page of the DataSource.
 
 #### Example
 
@@ -261,7 +261,7 @@ If set to true, a button is rendered at the bottom of the listview. Tapping it f
 
 ### loadMoreText `String`*(default: "Press to load more")*
 
- The text of the rendered load-more button (applies only if loadMore is set to true).
+ The text of the rendered load-more button (applies only if `loadMore` is set to true).
 
 #### Example
 
@@ -342,10 +342,10 @@ If set to true, the listview will reload its data when the user pulls the view o
 
 ### pullParameters `Function`
 
-A callback function used when the 'pullToRefresh' option is enabled. The result of the function will be send as additional parameters to the DataSource's next method.
+A callback function used when the 'pullToRefresh' option is enabled. The result of the function will be send as additional parameters to the DataSource's `next` method.
 
 **Notice:** When the listview is in a *virtual mode*, the pull to refresh action **removes** the previously loaded items in the listview (instead of appending new records at the top).
-Previously loaded pages in the datasource are also discarded.
+Previously loaded pages in the DataSource are also discarded.
 
 #### Example
 
@@ -367,25 +367,23 @@ Previously loaded pages in the datasource are also discarded.
           for (; i < max; i ++) {
             data.unshift({ name: "record" + i, modified: +new Date() });
           }
-                                options.success(data);
-
-
+          options.success(data);
         }
       }
     });
 
-      function initListView(e) {
-        $("#listview").kendoMobileListView({
-          dataSource: foo,
-          pullToRefresh: true,
-          template: "#: name # - #: modified #",
-          pullParameters: function(item) {
-            console.log(item); // the last item currently displayed
-            return { since_id: item.name };
-          }
-        });
+    function initListView(e) {
+      $("#listview").kendoMobileListView({
+        dataSource: foo,
+        pullToRefresh: true,
+        template: "#: name # - #: modified #",
+        pullParameters: function(item) {
+          console.log(item); // the last item currently displayed
+          return { since_id: item.name };
+        }
+      });
 
-      }
+    }
 
     new kendo.mobile.Application();
     </script>
@@ -429,13 +427,13 @@ The item template.
     </script>
 
     <script>
-        var app = new kendo.mobile.Application();
-        var dataSource = new kendo.data.DataSource({
-            data: [
-                { name: "Jane Doe", age: 30 },
-                { name: "John Doe", age: 33 }
-            ]
-        });
+    var app = new kendo.mobile.Application();
+    var dataSource = new kendo.data.DataSource({
+        data: [
+            { name: "Jane Doe", age: 30 },
+            { name: "John Doe", age: 33 }
+        ]
+    });
     </script>
 
 > The ListView automatically wraps the template content in `<li>` tag. Putting a `<li>` tag inside the template creates invalid nesting of elements.
@@ -466,7 +464,7 @@ The type of the control. Can be either `flat` (default) or group. Determined aut
     </div>
 
     <script>
-      new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 
@@ -517,13 +515,13 @@ Appends new items generated by rendering the given data items with the listview 
     </script>
 
     <script>
-      var i = 0;
-      function addItem() {
-        i ++;
-        $("#listview").data("kendoMobileListView").append([ { idx: i } ]);
-      }
+    var i = 0;
+    function addItem() {
+      i ++;
+      $("#listview").data("kendoMobileListView").append([ { idx: i } ]);
+    }
 
-      new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### prepend
@@ -547,13 +545,13 @@ Prepends new items generated by rendering the given data items with the listview
     </script>
 
     <script>
-      var i = 0;
-      function addItem() {
-        i ++;
-        $("#listview").data("kendoMobileListView").prepend([ { idx: i } ]);
-      }
+    var i = 0;
+    function addItem() {
+      i ++;
+      $("#listview").data("kendoMobileListView").prepend([ { idx: i } ]);
+    }
 
-      new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### replace
@@ -577,13 +575,13 @@ Replaces the contents of the listview with the passed rendered data items.
     </script>
 
     <script>
-      var i = 0;
-      function replaceItem() {
-        i ++;
-        $("#listview").data("kendoMobileListView").replace([ { idx: i } ]);
-      }
+    var i = 0;
+    function replaceItem() {
+      i ++;
+      $("#listview").data("kendoMobileListView").replace([ { idx: i } ]);
+    }
 
-      new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### remove
@@ -607,14 +605,14 @@ Removes the listview items which are rendered with the passed data items.
     </script>
 
     <script>
-      var fooDS = new kendo.data.DataSource({ data: [ {name: "Foo"}, {name: "Bar"} ] });
+    var fooDS = new kendo.data.DataSource({ data: [ {name: "Foo"}, {name: "Bar"} ] });
 
-      function removeItem() {
-        $("#listview").data("kendoMobileListView").remove([ fooDS.data()[1] ]);
-      }
+    function removeItem() {
+      $("#listview").data("kendoMobileListView").remove([ fooDS.data()[1] ]);
+    }
 
 
-      new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### setDataItem
@@ -644,18 +642,18 @@ The new dataItem
     </script>
 
     <script>
-      var dataItem = new kendo.data.Model({ idx: 1 });
+    var dataItem = new kendo.data.Model({ idx: 1 });
 
-      function initialItem() {
-        $("#listview").data("kendoMobileListView").append([dataItem]);
-      }
+    function initialItem() {
+      $("#listview").data("kendoMobileListView").append([dataItem]);
+    }
 
-      function changeItem() {
-        var newItem = new kendo.data.Model({idx: 2});
-        $("#listview").data("kendoMobileListView").setDataItem($("#listview li").eq(0), newItem);
-      }
+    function changeItem() {
+      var newItem = new kendo.data.Model({idx: 2});
+      $("#listview").data("kendoMobileListView").setDataItem($("#listview li").eq(0), newItem);
+    }
 
-      new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### destroy
@@ -676,7 +674,6 @@ Prepares the **ListView** for safe removal from DOM. Detaches all event handlers
     </div>
 
     <script>
-
     function destroyListView() {
         var listView = $("#listView").data("kendoMobileListView");
         // detach events
@@ -706,10 +703,9 @@ Get the listview DOM element items
     </div>
 
     <script>
-
-      function getListViewItems() {
+    function getListViewItems() {
         console.log($("#listView").data("kendoMobileListView").items());
-      }
+    }
 
     new kendo.mobile.Application();
     </script>
@@ -729,17 +725,16 @@ Repaints the listview (works only in databound mode).
     </div>
 
     <script>
-
-      function refreshListViewItems() {
-          $("#listView").data("kendoMobileListView").refresh()
-      }
+    function refreshListViewItems() {
+      $("#listView").data("kendoMobileListView").refresh()
+    }
 
     new kendo.mobile.Application();
     </script>
 
 ### setDataSource
 
-Sets the dataSource of an existing ListView and rebinds it.
+Sets the DataSource of an existing ListView and rebinds it.
 
 #### Parameters
 
@@ -758,12 +753,12 @@ Sets the dataSource of an existing ListView and rebinds it.
     </script>
 
     <script>
-      var foo = new kendo.data.DataSource({ data: [ { name: "foo" } ] });
-      var bar = new kendo.data.DataSource({ data: [ { name: "bar" } ] });
+    var foo = new kendo.data.DataSource({ data: [ { name: "foo" } ] });
+    var bar = new kendo.data.DataSource({ data: [ { name: "bar" } ] });
 
-      function rebindListView() {
-          $("#listView").data("kendoMobileListView").setDataSource(bar);
-      }
+    function rebindListView() {
+        $("#listView").data("kendoMobileListView").setDataSource(bar);
+    }
 
     new kendo.mobile.Application();
     </script>
@@ -784,11 +779,11 @@ Fires when item is tapped.
     </div>
 
     <script>
-     function listViewClick(e) {
-         console.log(e.item); // The clicked item as a jQuery object
-     }
+    function listViewClick(e) {
+        console.log(e.item); // The clicked item as a jQuery object
+    }
 
-     new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 #### Accessing dataItem in event
@@ -798,17 +793,17 @@ Fires when item is tapped.
     </div>
 
     <script>
-     $("#foo").kendoMobileListView({
-        dataSource: new kendo.data.DataSource({
-             data: [{title: "foo"}, {title: "bar"}]
-        }),
+    $("#foo").kendoMobileListView({
+       dataSource: new kendo.data.DataSource({
+            data: [{title: "foo"}, {title: "bar"}]
+       }),
 
-        click: function(e) {
-             console.log(e.dataItem.title);
-        }
-     });
+       click: function(e) {
+            console.log(e.dataItem.title);
+       }
+    });
 
-     new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 #### Event Data
@@ -832,7 +827,7 @@ The tapped Kendo mobile Button (if present).
 
 ### dataBound
 
-Fires when the ListView has received data from the data source.
+Fires when the ListView has received data from the DataSource.
 
 #### Example
 
@@ -841,17 +836,17 @@ Fires when the ListView has received data from the data source.
     </div>
 
     <script>
-     $("#foo").kendoMobileListView({
-        dataSource: new kendo.data.DataSource({
-             data: [{title: "foo"}, {title: "bar"}]
-        }),
+    $("#foo").kendoMobileListView({
+       dataSource: new kendo.data.DataSource({
+            data: [{title: "foo"}, {title: "bar"}]
+       }),
 
-       dataBound: function(e) {
-         console.log(e);
-       }
-     });
+      dataBound: function(e) {
+        console.log(e);
+      }
+    });
 
-     new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>
 
 ### dataBinding
@@ -865,15 +860,15 @@ Fires when the ListView is about to be rendered.
     </div>
 
     <script>
-     $("#foo").kendoMobileListView({
-        dataSource: new kendo.data.DataSource({
-             data: [{title: "foo"}, {title: "bar"}]
-        }),
+    $("#foo").kendoMobileListView({
+       dataSource: new kendo.data.DataSource({
+            data: [{title: "foo"}, {title: "bar"}]
+       }),
 
-       dataBinding: function(e) {
-         console.log(e);
-       }
-     });
+      dataBinding: function(e) {
+        console.log(e);
+      }
+    });
 
-     new kendo.mobile.Application();
+    new kendo.mobile.Application();
     </script>

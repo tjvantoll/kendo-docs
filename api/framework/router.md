@@ -16,11 +16,11 @@ Activates the router binding to the URL fragment part changes.
 ### Example
 
     <script>
-        var router = new kendo.Router();
+    var router = new kendo.Router();
 
-        $(function() {
-            router.start();
-        });
+    $(function() {
+        router.start();
+    });
     </script>
 
 ### route
@@ -31,19 +31,17 @@ The parsed parts of the URL are passed as parameters to the route callback.
 #### Example
 
     <script>
-        var router = new kendo.Router();
+    var router = new kendo.Router();
 
-        router.route("/items/:category/:id", function(category, id) {
-            console.log(category, "item with", id, " was requested");
-        });
+    router.route("/items/:category/:id", function(category, id) {
+        console.log(category, "item with", id, " was requested");
+    });
 
-        $(function() {
-            router.start();
-
-            // ...
-
-            router.navigate("/items/books/59");
-        });
+    $(function() {
+        router.start();
+        // ...
+        router.navigate("/items/books/59");
+    });
     </script>
 
 #### Parameters
@@ -70,6 +68,25 @@ The route to navigate to.
 
 If set to true, the router callbacks will not be called.
 
+#### Example
+    <a id="link" href="#">Click me</a>
+
+    <script>
+    var router = new kendo.Router();
+
+    router.route("/items/:category/:id", function(category, id) {
+      console.log(category, "item with", id, " was requested");
+    });
+
+    $(function() {
+      router.start();
+      $("#link").click(function() {
+        router.navigate("/items/books/59");
+        return false;
+      });
+    });
+    </script>
+
 ### destroy
 
 Unbinds the router instance listeners from the URL fragment part changes.
@@ -78,7 +95,7 @@ Unbinds the router instance listeners from the URL fragment part changes.
 
 ### change
 
-Triggered when the frament part of the url changes.
+Triggered when the fragment part of the URL changes.
 
 #### Event Data
 
@@ -88,9 +105,33 @@ The fragment part of the URL
 
 > Calling the `preventDefault` method of the event object will stop the change and restore the previous URL.
 
+
+#### Example
+    <a id="link" href="#">Click me</a>
+    <script>
+    var router = new kendo.Router();
+
+    router.route("/items/:category/:id", function(category, id) {
+      console.log(category, "item with", id, " was requested");
+    });
+
+    router.bind("change", function(e) {
+      console.log("change event", e);
+    });
+
+    $(function() {
+      router.start();
+      $("#link").click(function() {
+        router.navigate("/items/books/59");
+        return false;
+      });
+
+    });
+    </script>
+
 ### routeMissing
 
-Triggered when the url does not match any of the provided routes.
+Triggered when the URL does not match any of the provided routes.
 
 #### Example
 

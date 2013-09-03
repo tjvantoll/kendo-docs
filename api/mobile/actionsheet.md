@@ -29,7 +29,7 @@ Represents the Kendo UI Mobile ActionSheet widget. Inherits from [kendo.mobile.u
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### popup `Object`
@@ -45,9 +45,9 @@ The popup configuration options (tablet only).
         <li><a>Bar</a></li>
       </ul>
     </div>
-  
+
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### popup.direction `Number | String`*(default: "down")*
@@ -63,9 +63,9 @@ The popup configuration options (tablet only).
         <li><a>Bar</a></li>
       </ul>
     </div>
-    
+
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### popup.height `Number | String`*(default: "auto")*
@@ -81,9 +81,9 @@ The popup configuration options (tablet only).
         <li><a>Bar</a></li>
       </ul>
     </div>
-  
+
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ### popup.width `Number | String`*(default: 240)*
@@ -99,9 +99,9 @@ The popup configuration options (tablet only).
         <li><a>Bar</a></li>
       </ul>
     </div>
-  
+
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
     </script>
 
 ## Methods
@@ -120,11 +120,11 @@ Close the ActionSheet.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function close() {
-        $("#actionsheet").data("kendoMobileActionSheet").close();
-      }
+    function close() {
+      $("#actionsheet").data("kendoMobileActionSheet").close();
+    }
     </script>
 
 ### destroy
@@ -143,12 +143,12 @@ Prepares the **ActionSheet** for safe removal from DOM. Detaches all event handl
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
-        
-      function destroy() {
-        // detach events
-        $("#actionsheet").data("kendoMobileActionSheet").destroy();
-      }
+    var app = new kendo.mobile.Application();
+
+    function destroy() {
+      // detach events
+      $("#actionsheet").data("kendoMobileActionSheet").destroy();
+    }
     </script>
 
 ### open
@@ -163,13 +163,13 @@ Open the ActionSheet.
         <li><a>Bar</a></li>
       </ul>
     </div>
-  
+
     <script>
-      var app = new kendo.mobile.Application();
-    
-      function onShow() {
-        $("#actionsheet").data("kendoMobileActionSheet").open();
-      }
+    var app = new kendo.mobile.Application();
+
+    function onShow() {
+      $("#actionsheet").data("kendoMobileActionSheet").open();
+    }
     </script>
 
 #### Example
@@ -184,7 +184,7 @@ Open the ActionSheet.
     </ul>
 
     <script>
-      $("#actionsheet").data("kendoMobileActionSheet").open($("#button"));
+    $("#actionsheet").data("kendoMobileActionSheet").open($("#button"));
     </script>
 
 #### Parameters
@@ -198,7 +198,6 @@ Open the ActionSheet.
 ##### context `Object`
 
 (optional) The context of the ActionSheet, available in the callback methods.
-
 
 ## Events
 
@@ -217,11 +216,11 @@ Fires when the ActionSheet is opened.
     </div>
 
     <script>
-      var app = new kendo.mobile.Application();
+    var app = new kendo.mobile.Application();
 
-      function onOpen() {
-        console.log("opened");
-      }
+    function onOpen() {
+      console.log("opened");
+    }
     </script>
 
 #### Event Data
