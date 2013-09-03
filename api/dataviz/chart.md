@@ -16088,10 +16088,10 @@ The default type is "line" except for "radarColumn" charts.
         minorGridLines: {
           type: "arc",
           visible: true
-        }
+        },
         majorGridLines: {
           type: "arc"
-        },
+        }
       }],
       series: [
         {
@@ -19926,7 +19926,7 @@ body of the chart.
         data: [[1, 1],[2, 2]]
       }],
       xAxis: {
-        line: {
+        majorGridLines: {
           color: "#aa00bb",
           width: 3
         }
@@ -19950,7 +19950,7 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
         data: [[1, 1],[2, 2]]
       }],
       xAxis: {
-        line: {
+        majorGridLines: {
           color: "#aa00bb"
         }
       }
@@ -19967,7 +19967,7 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
         data: [[1, 1],[2, 2]]
       }],
       xAxis: {
-        line: {
+        majorGridLines: {
           color: "rgb(128, 0, 255)"
         }
       }
@@ -19984,7 +19984,7 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
         data: [[1, 1],[2, 2]]
       }],
       xAxis: {
-        line: {
+        majorGridLines: {
           color: "green"
         }
       }
@@ -20015,7 +20015,7 @@ The following dash types are supported:
         data: [[1, 1],[2, 2]]
       }],
       xAxis: {
-        line: {
+        majorGridLines: {
           dashType: "dashDot"
         }
       }
@@ -20036,7 +20036,7 @@ If set to `true` the chart will display the x major grid liness. By default the 
         data: [[1, 1],[2, 2]]
       }],
       xAxis: {
-        line: {
+        majorGridLines: {
           visible: false
         }
       }
@@ -20056,7 +20056,157 @@ The width of the line in pixels. Also affects the major and minor ticks, but not
         data: [[1, 1],[2, 2]]
       }],
       xAxis: {
-        line: {
+        majorGridLines: {
+          width: 3
+        }
+      }
+    });
+    </script>
+
+### xAxis.minorGridLines `Object`
+
+The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
+body of the chart.
+
+#### Example - configure the category axis minor grid lines
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      xAxis: {
+        minorGridLines: {
+          width: 3
+        }
+      }
+    });
+    </script>
+
+### xAxis.minorGridLines.color `String` *(default: "black")*
+
+The color of the minor grid lines. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the category axis minor grid line color as a hex string
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      xAxis: {
+        minorGridLines: {
+          color: "#aa00bb"
+        }
+      }
+    });
+    </script>
+
+#### Example - set the category axis minor grid line color as a RGB value
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      xAxis: {
+        minorGridLines: {
+          color: "rgb(128, 0, 255)"
+        }
+      }
+    });
+    </script>
+
+#### Example - set the category axis minor grid line color by name
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      xAxis: {
+        minorGridLines: {
+          color: "green"
+        }
+      }
+    });
+    </script>
+
+### xAxis.minorGridLines.dashType `String` *(default: "solid")*
+
+The dash type of the minor grid lines.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+#### Example - set the category axis minor grid line dash type
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      xAxis: {
+        minorGridLines: {
+          dashType: "dashDot"
+        }
+      }
+    });
+    </script>
+
+### xAxis.minorGridLines.visible `Boolean` *(default: false)*
+
+If set to `true` the chart will display the minor grid lines. By default the minor grid lines are visible.
+
+#### Example - hide the category axis minor grid lines
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      xAxis: {
+        minorGridLines: {
+          visible: false
+        }
+      }
+    });
+    </script>
+
+### xAxis.minorGridLines.width `Number` *(default: 1)*
+
+The width of the category axis minor grid lines in pixels.
+
+#### Example - set the category axis minor grid lines width
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      xAxis: {
+        minorGridLines: {
           width: 3
         }
       }
@@ -23921,7 +24071,7 @@ body of the chart.
         data: [[1, 1],[2, 2]]
       }],
       yAxis: {
-        line: {
+        majorGridLines: {
           color: "#aa00bb",
           width: 3
         }
@@ -23945,7 +24095,7 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
         data: [[1, 1],[2, 2]]
       }],
       yAxis: {
-        line: {
+        majorGridLines: {
           color: "#aa00bb"
         }
       }
@@ -23962,7 +24112,7 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
         data: [[1, 1],[2, 2]]
       }],
       yAxis: {
-        line: {
+        majorGridLines: {
           color: "rgb(128, 0, 255)"
         }
       }
@@ -23979,7 +24129,7 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
         data: [[1, 1],[2, 2]]
       }],
       yAxis: {
-        line: {
+        majorGridLines: {
           color: "green"
         }
       }
@@ -24010,7 +24160,7 @@ The following dash types are supported:
         data: [[1, 1],[2, 2]]
       }],
       yAxis: {
-        line: {
+        majorGridLines: {
           dashType: "dashDot"
         }
       }
@@ -24031,7 +24181,7 @@ If set to `true` the chart will display the x major grid liness. By default the 
         data: [[1, 1],[2, 2]]
       }],
       yAxis: {
-        line: {
+        majorGridLines: {
           visible: false
         }
       }
@@ -24051,7 +24201,157 @@ The width of the line in pixels. Also affects the major and minor ticks, but not
         data: [[1, 1],[2, 2]]
       }],
       yAxis: {
-        line: {
+        majorGridLines: {
+          width: 3
+        }
+      }
+    });
+    </script>
+
+### yAxis.minorGridLines `Object`
+
+The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
+body of the chart.
+
+#### Example - configure the category axis minor grid lines
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      yAxis: {
+        minorGridLines: {
+          width: 3
+        }
+      }
+    });
+    </script>
+
+### yAxis.minorGridLines.color `String` *(default: "black")*
+
+The color of the minor grid lines. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the category axis minor grid line color as a hex string
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      yAxis: {
+        minorGridLines: {
+          color: "#aa00bb"
+        }
+      }
+    });
+    </script>
+
+#### Example - set the category axis minor grid line color as a RGB value
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      yAxis: {
+        minorGridLines: {
+          color: "rgb(128, 0, 255)"
+        }
+      }
+    });
+    </script>
+
+#### Example - set the category axis minor grid line color by name
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      yAxis: {
+        minorGridLines: {
+          color: "green"
+        }
+      }
+    });
+    </script>
+
+### yAxis.minorGridLines.dashType `String` *(default: "solid")*
+
+The dash type of the minor grid lines.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+#### Example - set the category axis minor grid line dash type
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      yAxis: {
+        minorGridLines: {
+          dashType: "dashDot"
+        }
+      }
+    });
+    </script>
+
+### yAxis.minorGridLines.visible `Boolean` *(default: false)*
+
+If set to `true` the chart will display the minor grid lines. By default the minor grid lines are visible.
+
+#### Example - hide the category axis minor grid lines
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      yAxis: {
+        minorGridLines: {
+          visible: false
+        }
+      }
+    });
+    </script>
+
+### yAxis.minorGridLines.width `Number` *(default: 1)*
+
+The width of the category axis minor grid lines in pixels.
+
+#### Example - set the category axis minor grid lines width
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      series: [{
+        type: "scatter",
+        data: [[1, 1],[2, 2]]
+      }],
+      yAxis: {
+        minorGridLines: {
           width: 3
         }
       }
