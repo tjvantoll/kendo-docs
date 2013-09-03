@@ -424,18 +424,6 @@ Prepares the **DateTimePicker** for safe removal from DOM. Detaches all event ha
 
 Enables or disables a DateTimePicker.
 
-#### Enable a DateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").enable();
-
-#### Enable a dateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").enable(true);
-
-#### Disable a dateTimePicker
-
-    $("dateTimePicker").data("kendoDateTimePicker").enable(false);
-
 #### Parameters
 
 ##### enable `Boolean`
@@ -653,16 +641,6 @@ Available views are "time" and "date".
 ### value
 
 Gets or sets the value of the DateTimePicker.
-
-#### Get the value of a DateTimePicker
-
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    var timePickerValue = dateTimePicker.value();
-
-#### Set the value of a DateTimePicker
-
-    var dateTimePicker = $("#dateTimePicker").data("kendoDateTimePicker");
-    dateTimePicker.value("2/23/2000 10:00 AM");
 
 #### Parameters
 

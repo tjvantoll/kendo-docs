@@ -116,7 +116,7 @@ The duration of the open animation in milliseconds.
 
 ### dates `Array`
 
- Specifies a list of dates, which are shown in the time drop-down list. If not set, the DateTimePicker will auto-generate the available times.
+ Specifies a list of dates, which are shown in the time drop-down list. If not set, the TimePicker will auto-generate the available times.
 
 
 #### Example
@@ -276,7 +276,7 @@ Enables (**true** or undefined) or disables (**false**) a TimePicker.
 
     var timepicker = $("#timepicker").data("kendoTimePicker");
 
-    timepicker.enable(true);
+    timepicker.enable();
     </script>
 
 ### readonly
@@ -408,16 +408,6 @@ Opens the drop-down list of a TimePicker.
 ### value
 
 Gets or sets the value of the TimePicker.
-
-#### Get the value of a TimePicker
-
-    var timePicker = $("#timePicker").data("kendoTimePicker");
-    var timePickerValue = timePicker.value();
-
-#### Set the value of a TimePicker
-
-    var timePicker = $("#timePicker").data("kendoTimePicker");
-    timePicker.value("10:00 AM");
 
 #### Parameters
 
