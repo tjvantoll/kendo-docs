@@ -977,6 +977,58 @@ The text similar to "Week" displayed as scheduler "week" view title.
     });
     </script>
 
+### messages.views.month `String`
+
+The text similar to "Month" displayed as scheduler "month" view title.
+
+#### Example - set the "month" view title
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        views: {
+            month: "Monthly"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.views.agenda `String`
+
+The text similar to "Agenda" displayed as scheduler "agenda" view title.
+
+#### Example - set the "agenda" view title
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        views: {
+            agenda: "Events list"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
 ### minorTickCount `Number` *(default:2)*
 
 The number of time slots to display per major tick.
