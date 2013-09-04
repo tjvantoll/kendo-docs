@@ -336,7 +336,7 @@ shows the decades from the centery
 
 ## Fields
 
-### element
+### element `jQuery`
 A jQuery object of the original input element.
 
 #### Example - modify input element
@@ -352,7 +352,7 @@ A jQuery object of the original input element.
     element.css("background-color", "red");
     <script>
 
-### options
+### options `Object`
 An object, which holds the options of the widget.
 
 #### Example - get options of the widget
@@ -366,7 +366,7 @@ An object, which holds the options of the widget.
     var options = datepicker.options;
     <script>
 
-### wrapper
+### wrapper `jQuery`
 A jQuery object of the span element which wraps the input.
 
 #### Example - get wrapper element
@@ -380,7 +380,7 @@ A jQuery object of the span element which wraps the input.
     var wrapper = datepicker.wrapper;
     <script>
 
-### dateView
+### dateView `kendo.DateView`
 An instance of the DateView object, responsible for the popup calendar.
 
 #### Example - get widget's dateView instance
@@ -394,7 +394,8 @@ An instance of the DateView object, responsible for the popup calendar.
     var dateView = datepicker.dateView;
     <script>
 
-#### calendar
+#### calendar `kendo.ui.Calendar`
+
 The Calendar instance.
 
 #### Example - modify calendar popup
@@ -410,7 +411,8 @@ The Calendar instance.
     dateView.calendar.navigate(datepicker.value(), "year"); //navigate popup calendar manually
     <script>
 
-#### popup
+#### popup `kendo.ui.Popup`
+
 The Popup instance.
 
 #### Example - get widget popup
@@ -426,7 +428,8 @@ The Popup instance.
     console.log(popup.visible());
     <script>
 
-#### div
+#### div `jQuery`
+
 jQuery object of the popup element.
 
 #### Example - get popup div element

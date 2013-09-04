@@ -398,7 +398,7 @@ The [data source](/api/framework/datasource) of the widget. Configured via the [
     autocomplete.search("A");
     </script>
 
-### element
+### element `jQuery`
 A jQuery object of the original input element.
 
 #### Example - modify input element
@@ -414,7 +414,7 @@ A jQuery object of the original input element.
     element.css("background-color", "red");
     <script>
 
-### options
+### options `Object`
 An object, which holds the options of the widget.
 
 #### Example - get options of the widget
@@ -430,7 +430,7 @@ An object, which holds the options of the widget.
     var options = autocomplete.options;
     <script>
 
-### wrapper
+### wrapper `jQuery`
 A jQuery object of the span element which wraps the input.
 
 #### Example - get wrapper element
@@ -444,7 +444,7 @@ A jQuery object of the span element which wraps the input.
     var wrapper = autocomplete.wrapper;
     <script>
 
-### list
+### list `jQuery`
 A jQuery object of the drop-down list element.
 
 #### Example - get list element
@@ -458,7 +458,7 @@ A jQuery object of the drop-down list element.
     var list = autocomplete.list;
     <script>
 
-### ul
+### ul `jQuery`
 A jQuery object of the ul element, which holds the available options.
 
 #### Example - get ul element
@@ -472,7 +472,8 @@ A jQuery object of the ul element, which holds the available options.
     var ul = autocomplete.ul;
     <script>
 
-### popup
+### popup `kendo.ui.Popup`
+
 The Popup instance used by the widget.
 
 #### Example - get widget popup

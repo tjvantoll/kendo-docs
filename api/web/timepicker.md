@@ -212,7 +212,7 @@ Specifies the selected time.
 
 ## Fields
 
-### element
+### element `jQuery`
 A jQuery object of the original input element.
 
 #### Example - modify input element
@@ -228,7 +228,7 @@ A jQuery object of the original input element.
     element.css("background-color", "red");
     <script>
 
-### options
+### options `Object`
 An object, which holds the options of the widget.
 
 #### Example - get options of the widget
@@ -242,7 +242,7 @@ An object, which holds the options of the widget.
     var options = timepicker.options;
     <script>
 
-### wrapper
+### wrapper `jQuery`
 A jQuery object of the span element which wraps the input.
 
 #### Example - get wrapper element
@@ -256,7 +256,7 @@ A jQuery object of the span element which wraps the input.
     var wrapper = timepicker.wrapper;
     <script>
 
-### timeView
+### timeView `kendo.TimeView`
 An instance of the TimeView object, responsible for the drop-down list of available hours.
 
 #### Example - get widget's timeView instance
@@ -270,7 +270,7 @@ An instance of the TimeView object, responsible for the drop-down list of availa
     var timeView = timepicker.timeView;
     <script>
 
-#### popup
+#### popup `kendo.ui.Popup`
 The Popup instace used by the widget.
 
 #### Example - get widget popup
@@ -286,7 +286,7 @@ The Popup instace used by the widget.
     console.log(popup.visible());
     <script>
 
-#### ul
+#### ul `jQuery`
 A jQuery object of the ul element, which holds the available hours.
 
 #### Example
@@ -300,7 +300,7 @@ A jQuery object of the ul element, which holds the available hours.
     var ul = timepicker.ul;
     <script>
 
-#### list
+#### list `jQuery`
 A jQuery object of the drop-down list element.
 
 #### Example
@@ -314,7 +314,7 @@ A jQuery object of the drop-down list element.
     var list = timepicker.list;
     <script>
 
-#### template
+#### template `kendo.Template`
 A template used to render available options in the list.
 
 ## Methods

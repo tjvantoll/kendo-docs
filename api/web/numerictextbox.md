@@ -187,7 +187,7 @@ The hint displayed by the widget when it is empty. Not set by default.
 
 ## Fields
 
-### element
+### element `jQuery`
 A jQuery object of the original input element.
 
 #### Example - modify input element
@@ -203,7 +203,7 @@ A jQuery object of the original input element.
     element.css("background-color", "red");
     <script>
 
-### options
+### options `Object`
 An object, which holds the options of the widget.
 
 #### Example - get options of the widget
@@ -217,7 +217,7 @@ An object, which holds the options of the widget.
     var options = numerictextbox.options;
     <script>
 
-### wrapper
+### wrapper `jQuery`
 A jQuery object of the span element which wraps the input.
 
 #### Example - get wrapper element

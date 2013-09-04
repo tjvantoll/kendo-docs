@@ -364,7 +364,7 @@ shows the decades from the centery
 
 ## Fields
 
-### element
+### element `jQuery`
 A jQuery object of the original input element.
 
 #### Example - modify input element
@@ -380,7 +380,7 @@ A jQuery object of the original input element.
     element.css("background-color", "red");
     <script>
 
-### options
+### options `Object`
 An object, which holds the options of the widget.
 
 #### Example - get options of the widget
@@ -394,7 +394,7 @@ An object, which holds the options of the widget.
     var options = datetimepicker.options;
     <script>
 
-### wrapper
+### wrapper `jQuery`
 A jQuery object of the span element which wraps the input.
 
 #### Example - get wrapper element
@@ -408,7 +408,7 @@ A jQuery object of the span element which wraps the input.
     var wrapper = datetimepicker.wrapper;
     <script>
 
-### dateView
+### dateView `kendo.DateView`
 An instance of the DateView object, responsible for the popup calendar.
 
 #### Example - get widget's dateView instance
@@ -422,7 +422,7 @@ An instance of the DateView object, responsible for the popup calendar.
     var dateView = datetimepicker.dateView;
     <script>
 
-#### calendar
+#### calendar `kendo.ui.Calendar`
 The Calendar instance.
 
 #### Example - modify calendar popup
@@ -438,7 +438,7 @@ The Calendar instance.
     dateView.calendar.navigate(datetimepicker.value(), "year"); //navigate popup calendar manually
     <script>
 
-#### popup
+#### popup `kendo.ui.Popup`
 The Popup instance.
 
 #### Example - get dateView popup
@@ -454,7 +454,8 @@ The Popup instance.
     console.log(popup.visible());
     <script>
 
-#### div
+#### div `jQuery`
+
 jQuery object of the popup element.
 
 #### Example - get popup div element
@@ -468,7 +469,8 @@ jQuery object of the popup element.
     var div = datetimepicker.div;
     <script>
 
-### timeView
+### timeView `kendo.TimeView`
+
 An instance of the TimeView object, responsible for the drop-down list of available hours.
 
 #### Example - get widget's timeView instance
@@ -482,7 +484,8 @@ An instance of the TimeView object, responsible for the drop-down list of availa
     var timeView = datetimepicker.timeView;
     <script>
 
-#### popup
+#### popup `kendo.ui.Popup`
+
 The Popup instace used by the widget.
 
 #### Example - get timeView popup
@@ -498,7 +501,8 @@ The Popup instace used by the widget.
     console.log(popup.visible());
     <script>
 
-#### ul
+#### ul `jQuery`
+
 A jQuery object of the ul element, which holds the available hours.
 
 #### Example
@@ -512,7 +516,8 @@ A jQuery object of the ul element, which holds the available hours.
     var ul = datetimepicker.ul;
     <script>
 
-#### list
+#### list `jQuery`
+
 A jQuery object of the drop-down list element.
 
 #### Example
@@ -526,7 +531,8 @@ A jQuery object of the drop-down list element.
     var list = datetimepicker.list;
     <script>
 
-#### template
+#### template `kendo.Template`
+
 A template used to render available options in the list.
 
 ## Methods
