@@ -112,20 +112,58 @@ This does not trigger the "change" event.
 
 #### Parameters
 
-##### color `String`
+##### color `String` *(optional)*
 
 #### Returns
 
 `String` the string representation of the current color.
 
+#### Example
+
+    <div id="flatpicker"></div>
+    <script>
+    $("#flatpicker").kendoFlatColorPicker();
+    var flatpicker = $("#flatpicker").data("kendoFlatColorPicker");
+
+    // set picker value
+    flatpicker.value("#ccc");
+
+    // get picker value
+    var value = flatpicker.value();
+    </script>
+
 ### color
 
-Like `value()`, but it returns a `Color` object.
+Get or set the selected color. If no argument is given, this returns the currently selected color as a [`kendo.Color` object](/api/framework/color).
+
+#### Parameters
+
+##### color `kendo.Color` *(optional)*
+
+The color that should be set as the current value
+
+#### Returns
+
+`kendo.Color` the current value
 
 ### enable
 
-Enables or disables the widget.  It will enable it with no arguments
-or with a `true` argument, or disable with a `false` argument.
+Enables or disables the widget.
+
+#### Parameters
+
+##### enable `Boolean` *(optional)*
+
+Whether the widget should be enabled (`true`) or disabled (`false`). If not specified, the method will enable the widget.
+
+#### Example - disable the flat color picker
+
+    <div id="flatpicker"></div>
+    <script>
+    $("#flatpicker").kendoFlatColorPicker();
+    var flatpicker = $("#flatpicker").data("kendoFlatColorPicker");
+    flatpicker.enable(false);
+    </script>
 
 ## Events
 
@@ -138,6 +176,29 @@ Triggers when a new color has been selected.
 ##### e.value `String`
 
 The value of the colorpicker.
+
+#### Example - subscribe to the "change" event during initialization
+
+    <div id="flatpicker"></div>
+    <script>
+    $("#flatpicker").kendoFlatColorPicker({
+      change: function(e) {
+        console.log("The newly selected color is ", e.value);
+      }
+    });
+    </script>
+
+#### Example - subscribe to the "change" event after initialization
+
+    <div id="flatpicker"></div>
+    <script>
+    function picker_change(e) {
+      console.log("The newly selected color is ", e.value);
+    }
+    $("#flatpicker").kendoFlatColorPicker();
+    var flatpicker = $("#flatpicker").data("kendoFlatColorPicker");
+    flatpicker.bind("change", picker_change);
+    </script>
 
 [parseColor]: ../framework/kendo#parseColor
 [Color]: ../framework/kendo#Color

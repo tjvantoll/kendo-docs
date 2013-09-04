@@ -125,7 +125,7 @@ If one argument is given, it selects the new color and updates the UI. The argum
 
 #### Parameters
 
-##### color `String`
+##### color `String` *(optional)*
 
 #### Returns
 
@@ -151,7 +151,7 @@ Get or set the selected color. If no argument is given, this returns the current
 
 #### Parameters
 
-##### color `kendo.Color`
+##### color `kendo.Color` *(optional)*
 
 The color that should be set as the current value
 
@@ -161,7 +161,13 @@ The color that should be set as the current value
 
 ### enable
 
-Enables or disables the widget.  It will enable it with no arguments or with a `true` argument, or disable with a `false` argument.
+Enables or disables the widget.
+
+#### Parameters
+
+##### enable `Boolean` *(optional)*
+
+Whether the widget should be enabled (`true`) or disabled (`false`). If not specified, the method will enable the widget.
 
 #### Example - disable the color palette
 
