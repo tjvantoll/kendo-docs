@@ -14,9 +14,15 @@ Visual Studio 2008 SP1 (or later) is needed. It also works with Visual Web Devel
 
 ## Installation
 
-Each bundle package contains a *vsdoc* directory, which contains a vsdoc.js file. Put the vsdoc file next to your kendoui bundle script in your project. Make sure its naming prefix matches the kendoui bundle name.
+Each bundle package contains a *vsdoc* directory, which contains a vsdoc.js and intellisense.js files. Visual Studio 2008 SP1 (or later) users should put the vsdoc.js file next to kendoui bundle script, Visual Studio 2012 users should use intellisense.js file. Make sure its naming prefix matches the kendoui bundle name.
+
+- Visual Studio 2008 SP1
 
 ![Solution Explorer](solution-explorer.png)
+
+- Visual Studio 2012
+
+![Solution Explorer VS2012](solution-explorer-vs2012.png)
 
 ## Features
 
