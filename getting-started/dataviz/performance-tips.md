@@ -6,32 +6,56 @@ slug: dataviz-performance-tips
 publish: true
 ---
 
-# Turning off animated transitions
+# Use Canvas rendering
+
+Switching to Canvas rendering will improve the performance, especially on mobile devices.
+It is especially suited for fast-updating graphs that don't need animations and interactivity.
+
+### Example configuration
+    <div id="chart"></div>
+    <script>
+        $(function() {
+            $("#chart").kendoChart({
+                renderAs: "canvas",
+                series: [{
+                    type: "column",
+                    data: [1, 2, 3]
+                }]
+            });
+        });
+    </script>
+
+See also:
+
+ - [renderAs](/api/dataviz/chart#configuration-renderAs) option.
+ - [Notes on rendering](/getting-started/dataviz/rendering)
+
+# Turn off animated transitions
 
 Animated transitions can slow the browser down, especially with many active charts on the page.
 
 #### Example configuration
     <div id="chart"></div>
     <script>
-    	$(function() {
-			$("#chart").kendoChart({
-        		series: [{
-        			type: "column",
-        			data: [1, 2, 3]
-    			}],
-        		transitions: false
-	    	});
-		});
-	</script>
+        $(function() {
+            $("#chart").kendoChart({
+                series: [{
+                    type: "column",
+                    data: [1, 2, 3]
+                }],
+                transitions: false
+            });
+        });
+    </script>
 
 #### Initial animation only
     <div id="chart"></div>
     <script>
       $(function() {
         var src = new kendo.data.ObservableArray([
-			{ value: 1 }, { value: 2 }
-		]);
-        
+            { value: 1 }, { value: 2 }
+        ]);
+
         $("#chart").kendoChart({
           dataSource: {
                data: src
@@ -41,10 +65,10 @@ Animated transitions can slow the browser down, especially with many active char
               field: "value"
           }]
         });
-  
+
         var chart = $("#chart").data("kendoChart");
         chart.options.transitions = false;
-        
+
         // Subsequent updates won't be animated
         setTimeout(function() {
           src.push({ value: 3 });
@@ -59,17 +83,17 @@ Using solid fills instead of gradients can improve performance noticably.
 ### Example
     <div id="chart"></div>
     <script>
-    	$(function() {
-			$("#chart").kendoChart({
+        $(function() {
+            $("#chart").kendoChart({
                 seriesDefaults: {
                   overlay: {
                     gradient: null
                 },
-        		series: [{
-        			type: "column",
-        			data: [1, 2, 3]
-    			}],
-        		transitions: false
-	    	});
-		});
-	</script>
+                series: [{
+                    type: "column",
+                    data: [1, 2, 3]
+                }],
+                transitions: false
+            });
+        });
+    </script>
