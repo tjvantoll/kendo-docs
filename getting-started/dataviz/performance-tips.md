@@ -9,7 +9,8 @@ publish: true
 # Use Canvas rendering
 
 Switching to Canvas rendering will improve the performance, especially on mobile devices.
-It is especially suited for fast-updating graphs that don't need animations and interactivity.
+
+It's an excellent choice for fast-updating graphs that don't need animations and interactivity.
 
 ### Example configuration
     <div id="chart"></div>
@@ -27,7 +28,7 @@ It is especially suited for fast-updating graphs that don't need animations and 
 
 See also:
 
- - [renderAs](/api/dataviz/chart#configuration-renderAs) option.
+ - [renderAs](/api/dataviz/chart#configuration-renderAs)
  - [Notes on rendering](/getting-started/dataviz/rendering)
 
 # Turn off animated transitions
