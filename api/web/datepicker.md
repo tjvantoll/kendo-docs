@@ -334,6 +334,112 @@ shows the decades from the centery
     });
     </script>
 
+## Fields
+
+### element
+A jQuery object of the original input element.
+
+#### Example - modify input element
+
+    <input id="datepicker" />
+    <script>
+    $("#datepicker").kendoDatePicker();
+
+    var datepicker = $("#datepicker").data("kendoDatePicker");
+
+    var element = datepicker.element;
+
+    element.css("background-color", "red");
+    <script>
+
+### options
+An object, which holds the options of the widget.
+
+#### Example - get options of the widget
+
+    <input id="datepicker" />
+    <script>
+    $("#datepicker").kendoDatePicker();
+
+    var datepicker = $("#datepicker").data("kendoDatePicker");
+
+    var options = datepicker.options;
+    <script>
+
+### wrapper
+A jQuery object of the span element which wraps the input.
+
+#### Example - get wrapper element
+
+    <input id="datepicker" />
+    <script>
+    $("#datepicker").kendoDatePicker();
+
+    var datepicker = $("#datepicker").data("kendoDatePicker");
+
+    var wrapper = datepicker.wrapper;
+    <script>
+
+### dateView
+An instance of the DateView object, responsible for the popup calendar.
+
+#### Example - get widget's dateView instance
+
+    <input id="datepicker" />
+    <script>
+    $("#datepicker").kendoDatePicker();
+
+    var datepicker = $("#datepicker").data("kendoDatePicker");
+
+    var dateView = datepicker.dateView;
+    <script>
+
+#### calendar
+The Calendar instance.
+
+#### Example - modify calendar popup
+
+    <input id="datepicker" />
+    <script>
+    $("#datepicker").kendoDatePicker();
+
+    var datepicker = $("#datepicker").data("kendoDatePicker");
+
+    var dateView = datepicker.dateView;
+
+    dateView.calendar.navigate(datepicker.value(), "year"); //navigate popup calendar manually
+    <script>
+
+#### popup
+The Popup instance.
+
+#### Example - get widget popup
+
+    <input id="datepicker" />
+    <script>
+    $("#datepicker").kendoDatePicker();
+
+    var datepicker = $("#datepicker").data("kendoDatePicker");
+
+    var popup = datepicker.popup;
+
+    console.log(popup.visible());
+    <script>
+
+#### div
+jQuery object of the popup element.
+
+#### Example - get popup div element
+
+    <input id="datepicker" />
+    <script>
+    $("#datepicker").kendoDatePicker();
+
+    var datepicker = $("#datepicker").data("kendoDatePicker");
+
+    var div = datepicker.div;
+    <script>
+
 ## Methods
 
 ### close
@@ -578,6 +684,12 @@ The value to set.
 
 Fires when the selected date is changed
 
+#### Event Data
+
+##### e.sender `kendo.ui.DatePicker`
+
+The widget instance which fired the event.
+
 #### Example - subscribe to the "change" event during initialization
 
     <input id="datepicker" />
@@ -608,6 +720,12 @@ Fires when the selected date is changed
 
 Fires when the calendar is closed
 
+#### Event Data
+
+##### e.sender `kendo.ui.DatePicker`
+
+The widget instance which fired the event.
+
 #### Example - subscribe to the "close" event during initialization
 
     <input id="datepicker" />
@@ -636,6 +754,12 @@ Fires when the calendar is closed
 
 Fires when the calendar is opened
 
+#### Event Data
+
+##### e.sender `kendo.ui.DatePicker`
+
+The widget instance which fired the event.
+
 #### Example - subscribe to the "open" event during initialization
 
     <input id="datepicker" />
@@ -659,109 +783,3 @@ Fires when the calendar is opened
         e.preventDefault(); //prevent popup opening
     });
     </script>
-
-## Field
-
-### element
-A jQuery object of the original input element.
-
-#### Example - modify input element
-
-    <input id="datepicker" />
-    <script>
-    $("#datepicker").kendoDatePicker();
-
-    var datepicker = $("#datepicker").data("kendoDatePicker");
-
-    var element = datepicker.element;
-
-    element.css("background-color", "red");
-    <script>
-
-### options
-An object, which holds the options of the widget.
-
-#### Example - get options of the widget
-
-    <input id="datepicker" />
-    <script>
-    $("#datepicker").kendoDatePicker();
-
-    var datepicker = $("#datepicker").data("kendoDatePicker");
-
-    var options = datepicker.options;
-    <script>
-
-### wrapper
-A jQuery object of the span element which wraps the input.
-
-#### Example - get wrapper element
-
-    <input id="datepicker" />
-    <script>
-    $("#datepicker").kendoDatePicker();
-
-    var datepicker = $("#datepicker").data("kendoDatePicker");
-
-    var wrapper = datepicker.wrapper;
-    <script>
-
-### dateView
-An instance of the DateView object, responsible for the popup calendar.
-
-#### Example - get widget's dateView instance
-
-    <input id="datepicker" />
-    <script>
-    $("#datepicker").kendoDatePicker();
-
-    var datepicker = $("#datepicker").data("kendoDatePicker");
-
-    var dateView = datepicker.dateView;
-    <script>
-
-#### calendar
-The Calendar instance.
-
-#### Example - modify calendar popup
-
-    <input id="datepicker" />
-    <script>
-    $("#datepicker").kendoDatePicker();
-
-    var datepicker = $("#datepicker").data("kendoDatePicker");
-
-    var dateView = datepicker.dateView;
-
-    dateView.calendar.navigate(datepicker.value(), "year"); //navigate popup calendar manually
-    <script>
-
-#### popup
-The Popup instance.
-
-#### Example - get widget popup
-
-    <input id="datepicker" />
-    <script>
-    $("#datepicker").kendoDatePicker();
-
-    var datepicker = $("#datepicker").data("kendoDatePicker");
-
-    var popup = datepicker.popup;
-
-    console.log(popup.visible());
-    <script>
-
-#### div
-jQuery object of the popup element.
-
-#### Example - get popup div element
-
-    <input id="datepicker" />
-    <script>
-    $("#datepicker").kendoDatePicker();
-
-    var datepicker = $("#datepicker").data("kendoDatePicker");
-
-    var div = datepicker.div;
-    <script>

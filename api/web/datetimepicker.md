@@ -362,6 +362,173 @@ shows the decades from the centery
     });
     </script>
 
+## Fields
+
+### element
+A jQuery object of the original input element.
+
+#### Example - modify input element
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var element = datetimepicker.element;
+
+    element.css("background-color", "red");
+    <script>
+
+### options
+An object, which holds the options of the widget.
+
+#### Example - get options of the widget
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("datetimepicker");
+
+    var options = datetimepicker.options;
+    <script>
+
+### wrapper
+A jQuery object of the span element which wraps the input.
+
+#### Example - get wrapper element
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var wrapper = datetimepicker.wrapper;
+    <script>
+
+### dateView
+An instance of the DateView object, responsible for the popup calendar.
+
+#### Example - get widget's dateView instance
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var dateView = datetimepicker.dateView;
+    <script>
+
+#### calendar
+The Calendar instance.
+
+#### Example - modify calendar popup
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var dateView = datetimepicker.dateView;
+
+    dateView.calendar.navigate(datetimepicker.value(), "year"); //navigate popup calendar manually
+    <script>
+
+#### popup
+The Popup instance.
+
+#### Example - get dateView popup
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var popup = datetimepicker.popup;
+
+    console.log(popup.visible());
+    <script>
+
+#### div
+jQuery object of the popup element.
+
+#### Example - get popup div element
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var div = datetimepicker.div;
+    <script>
+
+### timeView
+An instance of the TimeView object, responsible for the drop-down list of available hours.
+
+#### Example - get widget's timeView instance
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var timeView = datetimepicker.timeView;
+    <script>
+
+#### popup
+The Popup instace used by the widget.
+
+#### Example - get timeView popup
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var popup = datetimepicker.popup;
+
+    console.log(popup.visible());
+    <script>
+
+#### ul
+A jQuery object of the ul element, which holds the available hours.
+
+#### Example
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var ul = datetimepicker.ul;
+    <script>
+
+#### list
+A jQuery object of the drop-down list element.
+
+#### Example
+
+    <input id="datetimepicker" />
+    <script>
+    $("#datetimepicker").kendoDateTimePicker();
+
+    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
+
+    var list = datetimepicker.list;
+    <script>
+
+#### template
+A template used to render available options in the list.
+
 ## Methods
 
 ### close
@@ -687,6 +854,12 @@ The time value to set for a DateTimePicker, expressed as a Date object or as a s
 
 Triggered when the underlying value of a DateTimePicker is changed.
 
+#### Event Data
+
+##### e.sender `kendo.ui.DateTimePicker`
+
+The widget instance which fired the event.
+
 #### Example - subscribe to the "change" event during initialization
 
     <input id="datetimepicker" />
@@ -722,6 +895,10 @@ Fires when the calendar or the time drop-down list is closed
 ##### e.view `String`
 
 The view which is closed. Possible values are "date" and "time".
+
+##### e.sender `kendo.ui.DateTimePicker`
+
+The widget instance which fired the event.
 
 #### Example - subscribe to the "close" event during initialization
 
@@ -761,6 +938,10 @@ Fires when the calendar or the time drop-down list is opened
 
 The view which is opened. Possible values are "date" and "time".
 
+##### e.sender `kendo.ui.DateTimePicker`
+
+The widget instance which fired the event.
+
 #### Example - subscribe to the "open" event during initialization
 
     <input id="datetimepicker" />
@@ -788,170 +969,3 @@ The view which is opened. Possible values are "date" and "time".
         }
     });
     </script>
-
-## Field
-
-### element
-A jQuery object of the original input element.
-
-#### Example - modify input element
-
-    <input id="datetimepicker" />
-    <script>
-    $("#datetimepicker").kendoDateTimePicker();
-
-    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
-
-    var element = datetimepicker.element;
-
-    element.css("background-color", "red");
-    <script>
-
-### options
-An object, which holds the options of the widget.
-
-#### Example - get options of the widget
-
-    <input id="datetimepicker" />
-    <script>
-    $("#datetimepicker").kendoDateTimePicker();
-
-    var datetimepicker = $("#datetimepicker").data("datetimepicker");
-
-    var options = datetimepicker.options;
-    <script>
-
-### wrapper
-A jQuery object of the span element which wraps the input.
-
-#### Example - get wrapper element
-
-    <input id="datetimepicker" />
-    <script>
-    $("#datetimepicker").kendoDateTimePicker();
-
-    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
-
-    var wrapper = datetimepicker.wrapper;
-    <script>
-
-### dateView
-An instance of the DateView object, responsible for the popup calendar.
-
-#### Example - get widget's dateView instance
-
-    <input id="datetimepicker" />
-    <script>
-    $("#datetimepicker").kendoDateTimePicker();
-
-    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
-
-    var dateView = datetimepicker.dateView;
-    <script>
-
-#### calendar
-The Calendar instance.
-
-#### Example - modify calendar popup
-
-    <input id="datetimepicker" />
-    <script>
-    $("#datetimepicker").kendoDateTimePicker();
-
-    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
-
-    var dateView = datetimepicker.dateView;
-
-    dateView.calendar.navigate(datetimepicker.value(), "year"); //navigate popup calendar manually
-    <script>
-
-#### popup
-The Popup instance.
-
-#### Example - get dateView popup
-
-    <input id="datetimepicker" />
-    <script>
-    $("#datetimepicker").kendoDateTimePicker();
-
-    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
-
-    var popup = datetimepicker.popup;
-
-    console.log(popup.visible());
-    <script>
-
-#### div
-jQuery object of the popup element.
-
-#### Example - get popup div element
-
-    <input id="datetimepicker" />
-    <script>
-    $("#datetimepicker").kendoDateTimePicker();
-
-    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
-
-    var div = datetimepicker.div;
-    <script>
-
-### timeView
-An instance of the TimeView object, responsible for the drop-down list of available hours.
-
-#### Example - get widget's timeView instance
-
-    <input id="datetimepicker" />
-    <script>
-    $("#datetimepicker").kendoDateTimePicker();
-
-    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
-
-    var timeView = datetimepicker.timeView;
-    <script>
-
-#### popup
-The Popup instace used by the widget.
-
-#### Example - get timeView popup
-
-    <input id="datetimepicker" />
-    <script>
-    $("#datetimepicker").kendoDateTimePicker();
-
-    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
-
-    var popup = datetimepicker.popup;
-
-    console.log(popup.visible());
-    <script>
-
-#### ul
-A jQuery object of the ul element, which holds the available hours.
-
-#### Example
-
-    <input id="datetimepicker" />
-    <script>
-    $("#datetimepicker").kendoDateTimePicker();
-
-    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
-
-    var ul = datetimepicker.ul;
-    <script>
-
-#### list
-A jQuery object of the drop-down list element.
-
-#### Example
-
-    <input id="datetimepicker" />
-    <script>
-    $("#datetimepicker").kendoDateTimePicker();
-
-    var datetimepicker = $("#datetimepicker").data("kendoDateTimePicker");
-
-    var list = datetimepicker.list;
-    <script>
-
-#### template
-A template used to render available options in the list.

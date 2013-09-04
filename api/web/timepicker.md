@@ -210,6 +210,113 @@ Specifies the selected time.
     });
     </script>
 
+## Fields
+
+### element
+A jQuery object of the original input element.
+
+#### Example - modify input element
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    var element = timepicker.element;
+
+    element.css("background-color", "red");
+    <script>
+
+### options
+An object, which holds the options of the widget.
+
+#### Example - get options of the widget
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    var options = timepicker.options;
+    <script>
+
+### wrapper
+A jQuery object of the span element which wraps the input.
+
+#### Example - get wrapper element
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    var wrapper = timepicker.wrapper;
+    <script>
+
+### timeView
+An instance of the TimeView object, responsible for the drop-down list of available hours.
+
+#### Example - get widget's timeView instance
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    var timeView = timepicker.timeView;
+    <script>
+
+#### popup
+The Popup instace used by the widget.
+
+#### Example - get widget popup
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    var popup = timepicker.popup;
+
+    console.log(popup.visible());
+    <script>
+
+#### ul
+A jQuery object of the ul element, which holds the available hours.
+
+#### Example
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    var ul = timepicker.ul;
+    <script>
+
+#### list
+A jQuery object of the drop-down list element.
+
+#### Example
+
+    <input id="timepicker" />
+    <script>
+    $("#timepicker").kendoTimePicker();
+
+    var timepicker = $("#timepicker").data("kendoTimePicker");
+
+    var list = timepicker.list;
+    <script>
+
+#### template
+A template used to render available options in the list.
+
 ## Methods
 
 ### close
@@ -452,6 +559,12 @@ The time value to set for a TimePicker, expressed as a Date object or as a strin
 
 Fires when the selected date is changed
 
+#### Event Data
+
+##### e.sender `kendo.ui.TimePicker`
+
+The widget instance which fired the event.
+
 #### Example - subscribe to the "change" event during initialization
 
     <input id="timepicker" />
@@ -482,6 +595,12 @@ Fires when the selected date is changed
 
 Fires when the time drop-down list is closed
 
+#### Event Data
+
+##### e.sender `kendo.ui.TimePicker`
+
+The widget instance which fired the event.
+
 #### Example - subscribe to the "close" event during initialization
 
     <input id="timepicker" />
@@ -510,6 +629,12 @@ Fires when the time drop-down list is closed
 
 Fires when the time drop-down list is opened
 
+#### Event Data
+
+##### e.sender `kendo.ui.TimePicker`
+
+The widget instance which fired the event.
+
 #### Example - subscribe to the "open" event during initialization
 
     <input id="timepicker" />
@@ -533,110 +658,3 @@ Fires when the time drop-down list is opened
         e.preventDefault(); //prevent popup opening
     });
     </script>
-
-## Field
-
-### element
-A jQuery object of the original input element.
-
-#### Example - modify input element
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var element = timepicker.element;
-
-    element.css("background-color", "red");
-    <script>
-
-### options
-An object, which holds the options of the widget.
-
-#### Example - get options of the widget
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var options = timepicker.options;
-    <script>
-
-### wrapper
-A jQuery object of the span element which wraps the input.
-
-#### Example - get wrapper element
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var wrapper = timepicker.wrapper;
-    <script>
-
-### timeView
-An instance of the TimeView object, responsible for the drop-down list of available hours.
-
-#### Example - get widget's timeView instance
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var timeView = timepicker.timeView;
-    <script>
-
-#### popup
-The Popup instace used by the widget.
-
-#### Example - get widget popup
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var popup = timepicker.popup;
-
-    console.log(popup.visible());
-    <script>
-
-#### ul
-A jQuery object of the ul element, which holds the available hours.
-
-#### Example
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var ul = timepicker.ul;
-    <script>
-
-#### list
-A jQuery object of the drop-down list element.
-
-#### Example
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var list = timepicker.list;
-    <script>
-
-#### template
-A template used to render available options in the list.
