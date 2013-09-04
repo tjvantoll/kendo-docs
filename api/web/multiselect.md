@@ -515,22 +515,6 @@ The [data source](/api/framework/datasource) of the widget. Configured via the [
     multiselect.search("A");
     </script>
 
-### element `jQuery`
-A jQuery object of the original input element.
-
-#### Example - modify input element
-
-    <select id="multiselect" multiple="multiple"></select>
-    <script>
-    $("#multiselect").kendoMultiSelect();
-
-    var multiselect = $("#multiselect").data("kendoMultiSelect");
-
-    var element = multiselect.element;
-
-    element.css("background-color", "red");
-    <script>
-
 ### input `jQuery`
 A jQuery object of the visible input element, where the user types.
 
@@ -557,20 +541,6 @@ An object, which holds the options of the widget.
     var multiselect = $("#multiselect").data("kendoMultiSelect");
 
     var options = multiselect.options;
-    <script>
-
-### wrapper `jQuery`
-A jQuery object of the span element which wraps the input.
-
-#### Example - get wrapper element
-
-    <select id="multiselect" multiple="multiple"></select>
-    <script>
-    $("#multiselect").kendoMultiSelect();
-
-    var multiselect = $("#multiselect").data("kendoMultiSelect");
-
-    var wrapper = multiselect.wrapper;
     <script>
 
 ### list `jQuery`

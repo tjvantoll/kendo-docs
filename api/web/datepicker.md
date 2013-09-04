@@ -336,22 +336,6 @@ shows the decades from the centery
 
 ## Fields
 
-### element `jQuery`
-A jQuery object of the original input element.
-
-#### Example - modify input element
-
-    <input id="datepicker" />
-    <script>
-    $("#datepicker").kendoDatePicker();
-
-    var datepicker = $("#datepicker").data("kendoDatePicker");
-
-    var element = datepicker.element;
-
-    element.css("background-color", "red");
-    <script>
-
 ### options `Object`
 An object, which holds the options of the widget.
 
@@ -364,20 +348,6 @@ An object, which holds the options of the widget.
     var datepicker = $("#datepicker").data("kendoDatePicker");
 
     var options = datepicker.options;
-    <script>
-
-### wrapper `jQuery`
-A jQuery object of the span element which wraps the input.
-
-#### Example - get wrapper element
-
-    <input id="datepicker" />
-    <script>
-    $("#datepicker").kendoDatePicker();
-
-    var datepicker = $("#datepicker").data("kendoDatePicker");
-
-    var wrapper = datepicker.wrapper;
     <script>
 
 ### dateView `kendo.DateView`

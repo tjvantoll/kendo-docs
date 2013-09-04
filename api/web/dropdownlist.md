@@ -71,10 +71,6 @@ The effect(s) to use when playing the close animation. Multiple effects should b
 
 The duration of the close animation in milliseconds.
 
-### animation.close.effects `String`
-
-Effect to be used for closing of the popup.
-
 ### animation.open `Object`
 
 The animation played when the suggestion popup is opened.
@@ -102,10 +98,6 @@ The effect(s) to use when playing the open animation. Multiple effects should be
 ### animation.open.duration `Number` *(default: 200)*
 
 The duration of the open animation in milliseconds.
-
-### animation.open.effects `String`
-
-Effect to be used for opening of the popup.
 
 ### autoBind `Boolean`*(default: true)*
 
@@ -469,22 +461,6 @@ The [data source](/api/framework/datasource) of the widget. Configured via the [
     dropdownlist.search("A");
     </script>
 
-### element `jQuery`
-A jQuery object of the original input element.
-
-#### Example - modify input element
-
-    <input id="dropdownlist" />
-    <script>
-    $("#dropdownlist").kendoDropDownList();
-
-    var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
-
-    var element = dropdownlist.element;
-
-    element.css("background-color", "red");
-    <script>
-
 ### span `jQuery`
 A jQuery object of the span element which holds the selected text.
 
@@ -513,20 +489,6 @@ An object, which holds the options of the widget.
     var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
 
     var options = dropdownlist.options;
-    <script>
-
-### wrapper `jQuery`
-A jQuery object of the span element which wraps the input.
-
-#### Example - get wrapper element
-
-    <input id="dropdownlist" />
-    <script>
-    $("#dropdownlist").kendoDropDownList();
-
-    var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
-
-    var wrapper = dropdownlist.wrapper;
     <script>
 
 ### list `jQuery`

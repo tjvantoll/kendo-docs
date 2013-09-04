@@ -187,22 +187,6 @@ The hint displayed by the widget when it is empty. Not set by default.
 
 ## Fields
 
-### element `jQuery`
-A jQuery object of the original input element.
-
-#### Example - modify input element
-
-    <input id="numerictextbox" />
-    <script>
-    $("#numerictextbox").kendoNumericTextBox();
-
-    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
-
-    var element = numerictextbox.element;
-
-    element.css("background-color", "red");
-    <script>
-
 ### options `Object`
 An object, which holds the options of the widget.
 
@@ -215,20 +199,6 @@ An object, which holds the options of the widget.
     var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
 
     var options = numerictextbox.options;
-    <script>
-
-### wrapper `jQuery`
-A jQuery object of the span element which wraps the input.
-
-#### Example - get wrapper element
-
-    <input id="numerictextbox" />
-    <script>
-    $("#numerictextbox").kendoNumericTextBox();
-
-    var numerictextbox = $("#numerictextbox").data("kendoNumericTextBox");
-
-    var wrapper = numerictextbox.wrapper;
     <script>
 
 ## Methods

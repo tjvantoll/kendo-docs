@@ -212,22 +212,6 @@ Specifies the selected time.
 
 ## Fields
 
-### element `jQuery`
-A jQuery object of the original input element.
-
-#### Example - modify input element
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var element = timepicker.element;
-
-    element.css("background-color", "red");
-    <script>
-
 ### options `Object`
 An object, which holds the options of the widget.
 
@@ -240,20 +224,6 @@ An object, which holds the options of the widget.
     var timepicker = $("#timepicker").data("kendoTimePicker");
 
     var options = timepicker.options;
-    <script>
-
-### wrapper `jQuery`
-A jQuery object of the span element which wraps the input.
-
-#### Example - get wrapper element
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var wrapper = timepicker.wrapper;
     <script>
 
 ### timeView `kendo.TimeView`

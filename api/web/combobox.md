@@ -99,10 +99,6 @@ The effect(s) to use when playing the open animation. Multiple effects should be
 
 The duration of the open animation in milliseconds.
 
-### animation.open.effects `String`
-
-Effect to be used for opening of the popup.
-
 ### autoBind `Boolean`*(default: true)*
 
 Controls whether to bind the widget to the data source on initialization.
@@ -502,22 +498,6 @@ The [data source](/api/framework/datasource) of the widget. Configured via the [
     combobox.search("A");
     </script>
 
-### element `jQuery`
-A jQuery object of the original input element.
-
-#### Example - modify input element
-
-    <input id="combobox" />
-    <script>
-    $("#combobox").kendoComboBox();
-
-    var combobox = $("#combobox").data("kendoComboBox");
-
-    var element = combobox.element;
-
-    element.css("background-color", "red");
-    <script>
-
 ### input `jQuery`
 A jQuery object of the visible input element, where the user types.
 
@@ -544,20 +524,6 @@ An object, which holds the options of the widget.
     var combobox = $("#combobox").data("kendoComboBox");
 
     var options = combobox.options;
-    <script>
-
-### wrapper `jQuery`
-A jQuery object of the span element which wraps the input.
-
-#### Example - get wrapper element
-
-    <input id="combobox" />
-    <script>
-    $("#combobox").kendoComboBox();
-
-    var combobox = $("#combobox").data("kendoComboBox");
-
-    var wrapper = combobox.wrapper;
     <script>
 
 ### list `jQuery`

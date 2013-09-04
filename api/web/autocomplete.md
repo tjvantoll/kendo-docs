@@ -398,22 +398,6 @@ The [data source](/api/framework/datasource) of the widget. Configured via the [
     autocomplete.search("A");
     </script>
 
-### element `jQuery`
-A jQuery object of the original input element.
-
-#### Example - modify input element
-
-    <input id="autocomplete" />
-    <script>
-    $("#autocomplete").kendoAutoComplete();
-
-    var autocomplete = $("#autocomplete").data("kendoAutoComplete");
-
-    var element = autocomplete.element;
-
-    element.css("background-color", "red");
-    <script>
-
 ### options `Object`
 An object, which holds the options of the widget.
 
@@ -428,20 +412,6 @@ An object, which holds the options of the widget.
     var element = autocomplete.element;
 
     var options = autocomplete.options;
-    <script>
-
-### wrapper `jQuery`
-A jQuery object of the span element which wraps the input.
-
-#### Example - get wrapper element
-
-    <input id="autocomplete" />
-    <script>
-    $("#autocomplete").kendoAutoComplete();
-
-    var autocomplete = $("#autocomplete").data("kendoAutoComplete");
-
-    var wrapper = autocomplete.wrapper;
     <script>
 
 ### list `jQuery`
