@@ -25,7 +25,7 @@ selection of transparency.
     <script>
     $("#flatpicker").kendoFlatColorPicker({
       opacity: true
-    })
+    });
     </script>
 
 ### buttons `Boolean` *(default: false)*
@@ -38,7 +38,7 @@ Specifies whether the widget should display the Apply / Cancel buttons.
     <script>
     $("#flatpicker").kendoFlatColorPicker({
       buttons: true
-    })
+    });
     </script>
 
 ### value `String | Color` *(default: null)*
@@ -51,7 +51,7 @@ Specifies the initially selected color.
     <script>
     $("#flatpicker").kendoFlatColorPicker({
       value: "#b72bba"
-    })
+    });
     </script>
 
 ### preview `Boolean` *(default: true)*
@@ -65,7 +65,7 @@ current color and the input field.
     <script>
     $("#flatpicker").kendoFlatColorPicker({
       preview: false
-    })
+    });
     </script>
 
 ### messages `Object`
@@ -82,7 +82,7 @@ Allows customization of "Apply" / "Cancel" labels.
         apply: "Update",
         cancel: "Discard"
       }
-    })
+    });
     </script>
 
 ## Methods
@@ -100,7 +100,7 @@ Focuses the widget.
     flatpicker.focus();
     </script>
 
-### value `String | Color`*(default: null)*
+### value `String|Color` *(default: null)*
 
 Get or set the selected color. If no argument is given, this returns the
 currently selected color as a string in format #FFFFFF when the `opacity`
