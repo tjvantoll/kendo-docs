@@ -368,7 +368,7 @@ The hint displayed by the widget when it is empty. Not set by default.
     });
     </script>
 
-#### Example - specify data-placeholder as HTML attribute
+#### Example - specify placeholder as HTML attribute
 
     <select id="multiselect data-placeholder="Select..." multiple="multiple">
         <option>Item1</option>
@@ -931,7 +931,7 @@ The event handler function context (available via the `this` keyword) will be se
 
 The widget instance which fired the event.
 
-
+#### Example - subscribe to the "change" event during initialization
 
     <select id="multiselect" multiple="multiple">
         <option>Item1</option>
