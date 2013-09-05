@@ -472,25 +472,154 @@ The type of the control. Can be either `flat` (default) or group. Determined aut
 
 Indicates whether the filter input must be visible or not.
 
+> **Important:** When the filter is applied it will remove all previous filter expressions applied to the DataSource.
+
+#### Example - enabled filtering
+
+    <div data-role="view" data-init="viewInit">
+        <ul id="listView"></ul>
+    </div>
+    <script>
+    function viewInit(e) {
+        e.view.element.find("#listView").kendoMobileListView({
+            dataSource: [ "foo", "bar" ],
+            filterable: true
+        });
+    }
+
+    new kendo.mobile.Application();
+    </script>
+
 ### filterable.placeholder `String`*(default: "Search...")*
 
 Placeholder text for search input.
 
+#### Example - enabled filtering with custom text for the input placeholder
+
+    <div data-role="view" data-init="viewInit">
+        <ul id="listView"></ul>
+    </div>
+    <script>
+    function viewInit(e) {
+        e.view.element.find("#listView").kendoMobileListView({
+            dataSource: [ "foo", "bar" ],
+            filterable: {
+                placeholder: "Type to search..."
+            }
+        });
+    }
+
+    new kendo.mobile.Application();
+    </script>
+
 ### filterable.autoFilter `Boolean`*(default: true)*
 
-Indicates whether filtering should be performed on every key up event or not.
+Indicates whether filtering should be performed on every key up event or when the user press the `Search` button of the device keyboard.
+
+#### Example - enabled filtering with auto filtering disabled
+
+    <div data-role="view" data-init="viewInit">
+        <ul id="listView"></ul>
+    </div>
+    <script>
+    function viewInit(e) {
+        e.view.element.find("#listView").kendoMobileListView({
+            dataSource: [ "foo", "bar" ],
+            filterable: {
+                autoFilter: false //the user must press `Search` button to trigger filter
+            }
+        });
+    }
+
+    new kendo.mobile.Application();
+    </script>
 
 ### filterable.field `String`
 
-Specifies the field which will be used in the filter expression.
+Specifies the field which will be used in the filter expression. The default field value is `undefined` which is usefull when the list view is bound to a list of primitive types.
+If this is not case the field *must* be defined.
+
+#### Example - enabled filtering with default field configuration
+
+    <div data-role="view" data-init="viewInit">
+        <ul id="listView"></ul>
+    </div>
+    <script>
+    function viewInit(e) {
+        e.view.element.find("#listView").kendoMobileListView({
+            dataSource: [ "foo", "bar" ],
+            filterable:  true
+        });
+    }
+
+    new kendo.mobile.Application();
+    </script>
+
+#### Example - enabled filtering with field defined
+
+    <div data-role="view" data-init="viewInit">
+        <ul id="listView"></ul>
+    </div>
+    <script>
+    function viewInit(e) {
+        e.view.element.find("#listView").kendoMobileListView({
+            dataSource: [
+                { id: 1, text: "foo" },
+                { id: 2, text: "bar" }
+            ],
+            template: "id: #: id# with text: #: text#",
+            filterable: {
+                field: "text" //filtering for "text" field
+            }
+        });
+    }
+
+    new kendo.mobile.Application();
+    </script>
 
 ### filterable.ignoreCase `Boolean`*(default: false)*
 
 Specifies whether the filter expression must be case sensitive or not.
 
+#### Example - enabled case insensitive filtering
+
+    <div data-role="view" data-init="viewInit">
+        <ul id="listView"></ul>
+    </div>
+    <script>
+    function viewInit(e) {
+        e.view.element.find("#listView").kendoMobileListView({
+            dataSource: [ "Foo", "bar" ],
+            filterable: {
+                ignoreCase: true // search for "foo" or "Foo" will return same item
+            }
+        });
+    }
+
+    new kendo.mobile.Application();
+    </script>
+
 ### filterable.operator `String`*(default: "startsWith")*
 
-Specifies the comparison operator used in the filter expression.
+Specifies the comparison operator used in the filter expression. The operator must be one of the available DataSource filter [operators](/api/framework/datasource#configuration-filter.operator).
+
+#### Example - enabled filtering with comparison operator defined
+
+    <div data-role="view" data-init="viewInit">
+        <ul id="listView"></ul>
+    </div>
+    <script>
+    function viewInit(e) {
+        e.view.element.find("#listView").kendoMobileListView({
+            dataSource: [ "foo", "bar" ],
+            filterable: {
+                operator: "eq" // match the whole word
+            }
+        });
+    }
+
+    new kendo.mobile.Application();
+    </script>
 
 ## Methods
 
