@@ -355,21 +355,17 @@ Returns the height in pixels of the scroller content.
 Scrolls the container to the specified location. The arguments should be negative numbers.
 
 #### Example
-     <div data-role="view">
+    <div data-role="view">
 
-      <a data-role="button" data-click="scrollTo">Scroll To</a>
-
-       <div data-role="scroller" style="width: 200px; height: 200px" id="scroller">
-         <div style="height: 500px; width: 500px">
-            Content
-          </div>
+    <a data-role="button" data-click="scrollTo">Scroll To</a>
+        <div data-role="scroller" style="width: 200px; height: 200px" id="scroller">
+             <div style="height: 500px; width: 500px"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.  </div>
         </div>
-        bar
-     </div>
+    </div>
 
     <script>
     function scrollTo() {
-      console.log($("#scroller").data("kendoMobileScroller").scrollTo(-10, 10));
+        $("#scroller").data("kendoMobileScroller").scrollTo(-30, -30);
     }
 
     new kendo.mobile.Application();
