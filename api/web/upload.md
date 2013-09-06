@@ -947,21 +947,27 @@ Note: The upload event fires only when the upload is in
 
 #### Example
 
-    $("#photos").kendoUpload({
-        // ...
-        upload: onUpload
-    });
-
-    function onUpload(e) {
-        var xhr = e.XMLHttpRequest;
-        if (xhr) {
-            xhr.addEventListener("readystatechange", function(e) {
-                if (xhr.readyState == 1 /* OPENED */) {
-                    xhr.setRequestHeader("X-Foo", "Bar");
-                }
-            });
-        }
-    }
+    <input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        upload: onUpload
+	    });
+	
+	    function onUpload(e) {
+	        var xhr = e.XMLHttpRequest;
+	        if (xhr) {
+	            xhr.addEventListener("readystatechange", function (e) {
+	                if (xhr.readyState == 1 /* OPENED */) {
+	                    xhr.setRequestHeader("X-Foo", "Bar");
+	                }
+	            });
+	        }
+	    }
+	</script>
 
 #### Event Data
 
