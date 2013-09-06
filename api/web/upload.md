@@ -20,42 +20,152 @@ Configures the ability to upload a file(s) in an asynchronous manner. Please ref
 [async mode help topic](/getting-started/web/upload/modes#asynchronous-mode)
 for more details.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        }
+	    });
+	</script>
+
 ### async.autoUpload `Boolean`*(default: true)*
 
 The selected files will be uploaded immediately by default. You can change this behavior by setting
 autoUpload to false.
+
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove",
+	            autoUpload: false
+	        }
+	    });
+	</script>
 
 ### async.batch `Boolean`*(default: false)*
 
 The selected files will be uploaded in separate requests, if this is supported by the browser.
 You can change this behavior by setting batch to true.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove",
+	            batch: true
+	        }
+	    });
+	</script>
+
 ### async.removeField `String`*(default: "fileNames")*
 
 The name of the form field submitted to the Remove URL.
+
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove",
+	            removeField: "customRemoveField"
+	        }
+	    });
+	</script>
 
 ### async.removeUrl `String`
 
 The URL of the handler responsible for removing uploaded files (if any). The handler must accept POST
 requests containing one or more "fileNames" fields specifying the files to be deleted.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        }
+	    });
+	</script>
+
 ### async.removeVerb `String`*(default: "POST")*
 
 The HTTP verb to be used by the remove action.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove",
+	            removeVerb: "DELETE"
+	        }
+	    });
+	</script>
+
 ### async.saveField `String`
 
 The name of the form field submitted to the save URL. The default value is the input name.
+
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove",
+	            saveField: "customSaveField"
+	        }
+	    });
+	</script>
 
 ### async.saveUrl `String`
 
 The URL of the handler that will receive the submitted files. The handler must accept POST requests
 containing one or more fields with the same name as the original input name.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        }
+	    });
+	</script>
+
 ### enabled `Boolean`*(default: true)*
 
 Enables (**true**) or disables (**false**) an **Upload**. A disabled
 **Upload** may be re-enabled via enable().
+
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        enabled: false
+	    });
+	</script>
 
 ### files `Array`
 
@@ -94,49 +204,225 @@ List of files to be initially rendered in the Upload widget files list.
 
 Sets the strings rendered by the Upload.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        localization: {
+	            select: "customSelect"
+	        }
+	    });
+	</script>
+
 ### localization.cancel `String`
 
 Sets the text of the cancel button text.
+
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        localization: {
+	            cancel: "customCancel"
+	        }
+	    });
+	</script>
 
 ### localization.dropFilesHere `String`*(default: "drop files here to upload")*
 
 Sets the drop zone hint.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        localization: {
+	            dropFilesHere: "customDropFilesHere"
+	        }
+	    });
+	</script>
+
 ### localization.headerStatusUploaded `String`
 
 Sets the header status message for uploaded files.
+
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        localization: {
+	            headerStatusUploaded: "customHeaderStatusUploaded"
+	        }
+	    });
+	</script>
 
 ### localization.headerStatusUploading `String`
 
 Sets the header status message for files that are being uploaded.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        localization: {
+	            headerStatusUploading: "customHeaderStatusUploading"
+	        }
+	    });
+	</script>
+
 ### localization.remove `String`
 
 Sets the text of the remove button text.
+
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        localization: {
+	            remove: "customRemove"
+	        }
+	    });
+	</script>
 
 ### localization.retry `String`
 
 Sets the text of the retry button text.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        localization: {
+	            retry: "customRetry"
+	        }
+	    });
+	</script>
+
 ### localization.select `String`
 
 Sets the "Select..." button text.
+
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        localization: {
+	            select: "customSelect"
+	        }
+	    });
+	</script>
 
 ### localization.statusFailed `String`
 
 Sets the status message for failed uploads.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        localization: {
+	            statusFailed: "customStatusFailed"
+	        }
+	    });
+	</script>
+
 ### localization.statusUploaded `String`
 
 Sets the status message for uploaded files.
+
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        localization: {
+	            statusUploaded: "customStatusUploaded"
+	        }
+	    });
+	</script>
 
 ### localization.statusUploading `String`
 
 Sets the status message for files that are being uploaded.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        localization: {
+	            statusUploading: "customStatusUploading"
+	        }
+	    });
+	</script>
+
 ### localization.uploadSelectedFiles `String`
 
 Sets the text of the "Upload files" button.
+
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        localization: {
+	            uploadSelectedFiles: "customUploadSelectedFiles"
+	        }
+	    });
+	</script>
 
 ### multiple `Boolean`*(default: true)*
 
@@ -144,11 +430,37 @@ Enables (**true**) or disables (**false**) the ability to select multiple files.
 If **false**, users will be able to select only one file at a time. Note: This option does not
 limit the total number of uploaded files in an asynchronous configuration.
 
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        multiple: false
+	    });
+	</script>
+
 ### showFileList `Boolean`*(default: true)*
 
 Enables (**true**) or disables (**false**) the ability to display a file listing
 for uploading a file(s). Disabling a file listing may be useful you wish to customize the UI; use the
 client-side events to build your own UI.
+
+#### Example
+
+	<input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        showFileList: false
+	    });
+	</script>
 
 ### template `String|Function`
 The [template](http://docs.kendoui.com/api/framework/kendo#methods-template) used to render the files in the list
@@ -200,10 +512,19 @@ Prepares the **Upload** for safe removal from DOM. Detaches all event handlers a
 
 #### Example
 
-    var upload = $("#upload").data("kendoUpload");
-
-    // detach events
-    upload.destroy();
+    <input type="file" name="files" id="upload" />
+	<script>
+	    $("#upload").kendoUpload({
+	        select: function () {
+	            //sample event
+	        }
+	    });
+	
+	    var upload = $("#upload").data("kendoUpload");
+	
+	    // detach events and prepare for safe removal
+	    upload.destroy();
+	</script>
 
 ### disable
 
@@ -211,10 +532,15 @@ Disables the upload.
 
 #### Example
 
-    var upload = $("#upload").data("kendoUpload");
-
-    // disables the upload
-    upload.disable();
+    <input type="file" name="files" id="upload" />
+	<script>
+	    $("#upload").kendoUpload();
+	
+	    var upload = $("#upload").data("kendoUpload");
+	
+	    // disables the upload
+	    upload.disable();
+	</script>
 
 ### enable
 
@@ -222,10 +548,18 @@ Enables the upload.
 
 #### Example
 
-    var upload = $("#upload").data("kendoUpload");
-
-    // enables the upload
-    upload.enable();
+    <input type="file" name="files" id="upload" />
+	<script>
+	    // upload is disabled when initialized
+	    $("#upload").kendoUpload({
+	        enabled: false
+	    });
+	
+	    var upload = $("#upload").data("kendoUpload");
+	
+	    // enables the upload
+	    upload.enable();
+	</script>
 
 #### Parameters
 
@@ -239,10 +573,18 @@ Toggles the upload enabled state.
 
 #### Example
 
-    var upload = $("#upload").data("kendoUpload");
-
-    // toggles the upload enabled state
-    upload.toggle();
+    <input type="file" name="files" id="upload" />
+	<script>
+	    // upload is disabled when initialized
+	    $("#upload").kendoUpload({
+	        enabled: false
+	    });
+	
+	    var upload = $("#upload").data("kendoUpload");
+	
+	    // toggles the upload enabled state
+	    upload.toggle();
+	</script>
 
 #### Parameters
 
@@ -263,17 +605,23 @@ Note: The cancel event fires only when the upload is in
 
 #### Example
 
-    $("#photos").kendoUpload({
-        // ...
-        cancel: onCancel
-    });
-
-    function onCancel(e) {
-        // Array with information about the uploaded files
-        var files = e.files;
-
-        // Process the Cancel event
-    }
+    <input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        cancel: onCancel
+	    });
+	
+	    function onCancel(e) {
+	        // Array with information about the uploaded files
+	        var files = e.files;
+	
+	        // Process the Cancel event
+	    }
+	</script>
 
 #### Event Data
 
@@ -298,14 +646,20 @@ Note: The complete event fires only when the upload is in
 
 #### Example
 
-    $("#photos").kendoUpload({
-        // ...
-        complete: onComplete
-    });
-
-    function onComplete(e) {
-        // The upload is now idle
-    }
+    <input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        complete: onComplete
+	    });
+	
+	    function onComplete(e) {
+	        // The upload is now idle
+	    }
+	</script>
 
 ### error
 
@@ -318,19 +672,25 @@ Note: The error event fires only when the upload is in
 
 #### Example
 
-    $("#photos").kendoUpload({
-        // ...
-        error: onError
-    });
-
-    function onError(e) {
-        // Array with information about the uploaded files
-        var files = e.files;
-
-        if (e.operation == "upload") {
-            alert("Failed to uploaded " + files.length + " files");
-        }
-    }
+    <input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        error: onError
+	    });
+	
+	    function onError(e) {
+	        // Array with information about the uploaded files
+	        var files = e.files;
+	
+	        if (e.operation == "upload") {
+	            alert("Failed to upload " + files.length + " files");
+	        }
+	    }
+	</script>
 
 #### Event Data
 
@@ -371,17 +731,23 @@ See [Supported Browsers](/getting-started/web/upload/supported-browsers)
 
 #### Example
 
-    $("#photos").kendoUpload({
-        // ...
-        progress: onProgress
-    });
-
-    function onProgress(e) {
-        // Array with information about the uploaded files
-        var files = e.files;
-
-        console.log(e.percentComplete);
-    }
+    <input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        progress: onProgress
+	    });
+	
+	    function onProgress(e) {
+	        // Array with information about the uploaded files
+	        var files = e.files;
+	
+	        console.log(e.percentComplete);
+	    }
+	</script>
 
 #### Event Data
 
@@ -406,19 +772,25 @@ Cancelling the event will prevent the remove.
 
 #### Example
 
-    $("#photos").kendoUpload({
-        // ...
-        remove: onRemove
-    });
-
-    function onRemove(e) {
-        // Array with information about the removed files
-        var files = e.files;
-
-        // Process the Remove event
-        // Optionally cancel the remove operation by calling
-        // e.preventDefault()
-    }
+    <input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        remove: onRemove
+	    });
+	
+	    function onRemove(e) {
+	        // Array with information about the removed files
+	        var files = e.files;
+	
+	        // Process the Remove event
+	        // Optionally cancel the remove operation by calling
+	        // e.preventDefault()
+	    }
+	</script>
 
 #### Event Data
 
@@ -444,19 +816,24 @@ occurring.
 
 #### Wire-up an event handler that triggered when a user selects a file(s)
 
-    var onSelect = function(e) {
-        $.each(e.files, function(index, value) {
-            console.log("Name: " + value.name);
-            console.log("Size: " + value.size + " bytes");
-            console.log("Extension: " + value.extension);
-        });
-    };
-
-    // initialize and configure an Upload widget with a select event handler
-    $("#photos").kendoUpload({
-        // ...
-        select: onSelect
-    });
+    <input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        select: onSelect
+	    });
+	
+	    function onSelect(e) {
+	        $.each(e.files, function (index, value) {
+	            console.log("Name: " + value.name);
+	            console.log("Size: " + value.size + " bytes");
+	            console.log("Extension: " + value.extension);
+	        });
+	    };
+	</script>
 
 #### Event Data
 
@@ -484,19 +861,25 @@ Note: The success event fires only when the upload is in
 
 #### Example
 
-    $("#photos").kendoUpload({
-        // ...
-        success: onSuccess
-    });
-
-    function onSuccess(e) {
-        // Array with information about the uploaded files
-        var files = e.files;
-
-        if (e.operation == "upload") {
-            alert("Successfully uploaded " + files.length + " files");
-        }
-    }
+    <input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        success: onSuccess
+	    });
+	
+	    function onSuccess(e) {
+	        // Array with information about the uploaded files
+	        var files = e.files;
+	
+	        if (e.operation == "upload") {
+	            alert("Successfully uploaded " + files.length + " files");
+	        }
+	    }
+	</script>
 
 #### Event Data
 
@@ -538,23 +921,29 @@ Note: The upload event fires only when the upload is in
 
 #### Example
 
-    $("#photos").kendoUpload({
-        // ...
-        upload: onUpload
-    });
-
-    function onUpload(e) {
-        // Array with information about the uploaded files
-        var files = e.files;
-
-        // Check the extension of each file and abort the upload if it is not .jpg
-        $.each(files, function() {
-            if (this.extension != ".jpg") {
-                alert("Only .jpg files can be uploaded")
-                e.preventDefault();
-            }
-        });
-    }
+    <input type="file" name="files" id="photos" />
+	<script>
+	    $("#photos").kendoUpload({
+	        async: {
+	            saveUrl: "save",
+	            removeUrl: "remove"
+	        },
+	        upload: onUpload
+	    });
+	
+	    function onUpload(e) {
+	        // Array with information about the uploaded files
+	        var files = e.files;
+	
+	        // Check the extension of each file and abort the upload if it is not .jpg
+	        $.each(files, function () {
+	            if (this.extension.toLowerCase() != ".jpg") {
+	                alert("Only .jpg files can be uploaded")
+	                e.preventDefault();
+	            }
+	        });
+	    }
+	</script>
 
 #### Example
 
