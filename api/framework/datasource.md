@@ -1330,7 +1330,7 @@ Local data sources are bound to a JavaScript array via the [data](#configuration
 The configuration used when the data source saves newly created data items. Those are items added to the data source via the [add](#methods-add) or [insert](#methods-insert) methods.
 
 > The data source uses [jQuery.ajax](http://api.jquery.com/jQuery.ajax) to make a HTTP request to the remote service. The value configured via `transport.create` is passed to `jQuery.ajax`. This means that you can set
-all options supported by `jQuery.ajax` via `transport.create`.
+all options supported by `jQuery.ajax` via `transport.create` except the `success` and `error` callback functions which are used by the transport.
 
 If the value of `transport.create` is a function, the data source invokes that function instead of `jQuery.ajax`.
 
@@ -1580,7 +1580,7 @@ If set to function the data source will invoke it and use the result as the URL.
 The configuration used when the data source destroys data items. Those are items removed from the data source via the [remove](#methods-remove) method.
 
 > The data source uses [jQuery.ajax](http://api.jquery.com/jQuery.ajax) to make a HTTP request to the remote service. The value configured via `transport.destroy` is passed to `jQuery.ajax`. This means that you can set
-all options supported by `jQuery.ajax` via `transport.destroy`.
+all options supported by `jQuery.ajax` via `transport.destroy` except the `success` and `error` callback functions which are used by the transport.
 
 If the value of `transport.destroy` is a function, the data source invokes that function instead of `jQuery.ajax`.
 
@@ -1973,7 +1973,7 @@ The type of the request which the data source makes. The supported values are "c
 The configuration used when the data source loads data items from a remote service.
 
 > The data source uses [jQuery.ajax](http://api.jquery.com/jQuery.ajax) to make a HTTP request to the remote service. The value configured via `transport.read` is passed to `jQuery.ajax`. This means that you can set
-all options supported by `jQuery.ajax` via `transport.read`.
+all options supported by `jQuery.ajax` via `transport.read` except the `success` and `error` callback functions which are used by the transport.
 
 If the value of `transport.read` is a function, the data source invokes that function instead of `jQuery.ajax`.
 
@@ -2202,7 +2202,7 @@ If set to function the data source will invoke it and use the result as the URL.
 The configuration used when the data source saves updated data items. Those are data items whose fields have been updated.
 
 > The data source uses [jQuery.ajax](http://api.jquery.com/jQuery.ajax) to make a HTTP request to the remote service. The value configured via `transport.update` is passed to `jQuery.ajax`. This means that you can set
-all options supported by `jQuery.ajax` via `transport.update`.
+all options supported by `jQuery.ajax` via `transport.update` except the `success` and `error` callback functions which are used by the transport.
 
 If the value of `transport.update` is a function, the data source invokes that function instead of `jQuery.ajax`.
 
