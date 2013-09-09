@@ -239,6 +239,8 @@ Decorate that parameter with the `Kendo.Mvc.UI.DataSourceRequestAttribute`. That
 1. Define the client template using [Kendo UI Template](/getting-started/framework/templates/overview) syntax. The context of the template is the Category entity to which the current grid row is bound. The template itself
 contains another grid which is bound to the `Products_Read` action.
 > **Always** call the `ToClientTemplate` method when using Kendo UI Complete for ASP.NET MVC widgets in a client template.
+>
+> The "#" characters used for a template expression should be escaped when using a column ClientTemplate in a detail template so that the expression is evaluated in the correct context.
 
         <script id="client-template" type="text/x-kendo-template">
         @(Html.Kendo().Grid<KendoGridClientHierarchy.Models.Product>()
@@ -246,7 +248,7 @@ contains another grid which is bound to the `Products_Read` action.
               .Columns(columns =>
               {
                   columns.Bound(product => product.ProductID);
-                  columns.Bound(product => product.ProductName);
+                  columns.Bound(product => product.ProductName).ClientTemplate("<strong>\\#:ProductName\\#</strong>"); // escape the "#" characters
               })
               .DataSource(dataSource =>
                   // Make request to Products_Read and provide the current CategoryID as a route parameter
