@@ -801,6 +801,30 @@ The text similar to "Date" displayed in scheduler.
     });
     </script>
 
+### messages.deleteWindowTitle `String`
+
+The text similar to "Delete event" displayed as title of the scheduler delete event window.
+
+#### Example - set the "deleteWindowTitle" scheduler message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        deleteWindowTitle: "Remove event"
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
 ### messages.destroy `String`
 
 The text similar to "Delete" displayed in scheduler.
@@ -873,6 +897,55 @@ The text similar to "Save" displayed in scheduler.
     });
     </script>
 
+### messages.showFullDay `String`
+
+The text similar to "Show full day" used in scheduler "showFullDay" button.
+
+#### Example - set the "showFullDay" scheduler message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        showFullDay: "Show 24h"
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+
+### messages.showWorkDay `String`
+
+The text similar to "Show business hours" used in scheduler "showWorkDay" button.
+
+#### Example - set the "showWorkDay" scheduler message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        showWorkDay: "Show work hours"
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
 ### messages.time `String`
 
 The text similar to "Time" displayed in scheduler.
@@ -909,6 +982,1404 @@ The text similar to "Today" displayed in scheduler.
       date: new Date("2013/6/6"),
       messages: {
         today: "Current Date"
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor `Object`
+
+The configuration of the scheduler editor messages. Use this option to customize or localize the scheduler editor messages.
+
+### messages.editor.allDayEvent `String`
+
+The text similar to "All day event" displayed in the scheduler event editor.
+
+#### Example - set the "allDayEvent" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            allDayEvent: "Full day"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.description `String`
+
+The text similar to "Description" displayed in the scheduler event editor.
+
+#### Example - set the "description" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            description: "Message"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.editorTitle `String`
+
+The text similar to "Event" displayed as title of the scheduler event editor.
+
+#### Example - set the "editorTitle" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            editorTitle: "Edit event"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.end `String`
+
+The text similar to "End" displayed in the scheduler event editor.
+
+#### Example - set the "end" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            end: "End of the event"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.endTimezone `String`
+
+The text similar to "End timezone" displayed in the scheduler event editor.
+
+#### Example - set the "endTimezone" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            endTimezone: "End date timezone"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.repeat `String`
+
+The text similar to "Repeat" displayed in the scheduler event editor.
+
+#### Example - set the "repeat" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            repeat: "Repeat the event"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.separateTimezones `String`
+
+The text similar to "Use separate start and end time zones" displayed in the scheduler event editor.
+
+#### Example - set the "separateTimezones" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            separateTimezones: "Set different start and end time zones"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.start `String`
+
+The text similar to "Start" displayed in the scheduler event editor.
+
+#### Example - set the "start" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            start: "Start of the event"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.startTimezone `String`
+
+The text similar to "Start timezone" displayed in the scheduler event editor.
+
+#### Example - set the "startTimezone" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            startTimezone: "Start date timezone"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.timezone `String`
+
+The text similar to "Timezone" displayed in the scheduler event editor.
+
+#### Example - set the "timezone" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            timezone: "Event timezone"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.timezoneEditorButton `String`
+
+The text similar to "Time zone" displayed as text of timezone editor button in the scheduler event editor.
+
+#### Example - set the "timezoneEditorButton" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            timezoneEditorButton: "Time zone"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.timezoneEditorTitle `String`
+
+The text similar to "Timezones" displayed as title of timezone editor in the scheduler event editor.
+
+#### Example - set the "timezoneEditorTitle" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            timezoneEditorTitle: "Timezones"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.editor.title `String`
+
+The text similar to "Title of the event" displayed in the scheduler event editor.
+
+#### Example - set the "title" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        editor: {
+            title: "Title of the event"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor `Object`
+
+The configuration of the scheduler recurrence editor messages. Use this option to customize or localize the scheduler recurrence editor messages.
+
+### messages.recurrenceEditor.daily `Object`
+
+The configuration of the scheduler recurrence editor daily messages. Use this option to customize or localize the scheduler recurrence editor daily messages.
+
+### messages.recurrenceEditor.daily.days `String`
+
+The text similar to " day(s)" displayed in the scheduler recurrence editor.
+
+#### Example - set the "days" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            daily: {
+                days: " days(s)"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.daily.repeatEvery `String`
+
+The text similar to "Repeat every: " displayed in the scheduler recurrence editor.
+
+#### Example - set the "repeatEvery" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            daily: {
+                repeatEvery: "Repeat on: "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.end `Object`
+
+The configuration of the scheduler recurrence editor end messages. Use this option to customize or localize the scheduler recurrence editor end messages.
+
+### messages.recurrenceEditor.end.endCountAfter `String`
+
+The text similar to "After " displayed in the scheduler recurrence editor.
+
+#### Example - set the "endCountAfter" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            end: {
+                endCountAfter: "after "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.end.endCountOccurrence `String`
+
+The text similar to " occurrence(s)" displayed in the scheduler recurrence editor.
+
+#### Example - set the "endCountOccurrence" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            end: {
+                endCountOccurrence: " occurrence(s)."
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.end.endCountOccurrence `String`
+
+The text similar to " occurrence(s)" displayed in the scheduler recurrence editor.
+
+#### Example - set the "endCountOccurrence" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            end: {
+                endCountOccurrence: " occurrence(s)."
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.end.endLabel `String`
+
+The text similar to "End:" displayed in the scheduler recurrence editor.
+
+#### Example - set the "endLabel" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            end: {
+                endLabel: "end: "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.end.endNever `String`
+
+The text similar to "Never" displayed in the scheduler recurrence editor.
+
+#### Example - set the "endNever" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            end: {
+                endNever: "never"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.end.endUntilOn `String`
+
+The text similar to "On " displayed in the scheduler recurrence editor.
+
+#### Example - set the "endUntilOn" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            end: {
+                endUntilOn: "on "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.frequencies `Object`
+
+The configuration of the scheduler recurrence editor frequencies messages. Use this option to customize or localize the scheduler recurrence editor frequencies messages.
+
+### messages.recurrenceEditor.frequencies.daily `String`
+
+The text similar to "Daily" displayed in the scheduler recurrence editor.
+
+#### Example - set the "daily" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            frequencies: {
+                daily: "daily"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.frequencies.monthly `String`
+
+The text similar to "Monthly" displayed in the scheduler recurrence editor.
+
+#### Example - set the "monthly" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            frequencies: {
+                monthly: "monthly"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.frequencies.never `String`
+
+The text similar to "Never" displayed in the scheduler recurrence editor.
+
+#### Example - set the "never" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            frequencies: {
+                never: "never"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.frequencies.weekly `String`
+
+The text similar to "Weekly" displayed in the scheduler recurrence editor.
+
+#### Example - set the "weekly" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            frequencies: {
+                weekly: "weekly"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.frequencies.yearly `String`
+
+The text similar to "Yearly" displayed in the scheduler recurrence editor.
+
+#### Example - set the "yearly" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            frequencies: {
+                yearly: "yearly"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.monthly `Object`
+
+The configuration of the scheduler recurrence editor monthly messages. Use this option to customize or localize the scheduler recurrence editor monthly messages.
+
+### messages.recurrenceEditor.monthly.day `String`
+
+The text similar to "Day " displayed in the scheduler recurrence editor.
+
+#### Example - set the "day" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            monthly: {
+                day: "day "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.monthly.months `String`
+
+The text similar to " month(s)" displayed in the scheduler recurrence editor.
+
+#### Example - set the "months" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            monthly: {
+                months: " month(s)."
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.monthly.repeatEvery `String`
+
+The text similar to "Repeat every: " displayed in the scheduler recurrence editor.
+
+#### Example - set the "repeatEvery" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            monthly: {
+                repeatEvery: "Repeat each: "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.monthly.repeatOn `String`
+
+The text similar to "Repeat on: " displayed in the scheduler recurrence editor.
+
+#### Example - set the "repeatOn" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            monthly: {
+                repeatOn: "repeat on: "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.offsetPositions `Object`
+
+The configuration of the scheduler recurrence editor offsetPositions messages. Use this option to customize or localize the scheduler recurrence editor offsetPositions messages.
+
+### messages.recurrenceEditor.offsetPositions.first `String`
+
+The text similar to "first" displayed in the scheduler recurrence editor.
+
+#### Example - set the "first" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            offsetPositions: {
+                first: "first"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.offsetPositions.second `String`
+
+The text similar to "second" displayed in the scheduler recurrence editor.
+
+#### Example - set the "second" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            offsetPositions: {
+                second: "second"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.offsetPositions.third `String`
+
+The text similar to "third" displayed in the scheduler recurrence editor.
+
+#### Example - set the "third" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            offsetPositions: {
+                third: "third"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.offsetPositions.fourth `String`
+
+The text similar to "fourth" displayed in the scheduler recurrence editor.
+
+#### Example - set the "fourth" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            offsetPositions: {
+                fourth: "fourth"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.offsetPositions.last `String`
+
+The text similar to "last" displayed in the scheduler recurrence editor.
+
+#### Example - set the "last" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            offsetPositions: {
+                last: "last"
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.weekly `Object`
+
+The configuration of the scheduler recurrence editor weekly messages. Use this option to customize or localize the scheduler recurrence editor weekly messages.
+
+### messages.recurrenceEditor.weekly.weeks `String`
+
+The text similar to " week(s)" displayed in the scheduler recurrence editor.
+
+#### Example - set the "weeks" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            weekly: {
+                weeks: " week(s)."
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.weekly.repeatEvery `String`
+
+The text similar to "Repeat every: " displayed in the scheduler recurrence editor.
+
+#### Example - set the "repeatEvery" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            weekly: {
+                repeatEvery: "Repeat each: "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.weekly.repeatOn `String`
+
+The text similar to "Repeat on: " displayed in the scheduler recurrence editor.
+
+#### Example - set the "repeatOn" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            weekly: {
+                repeatOn: "repeat on: "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.yearly `Object`
+
+The configuration of the scheduler recurrence editor yearly messages. Use this option to customize or localize the scheduler recurrence editor yearly messages.
+
+### messages.recurrenceEditor.yearly.of `String`
+
+The text similar to " of " displayed in the scheduler recurrence editor.
+
+#### Example - set the "of" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            yearly: {
+                of: " of "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.yearly.repeatEvery `String`
+
+The text similar to "Repeat every: " displayed in the scheduler recurrence editor.
+
+#### Example - set the "repeatEvery" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            yearly: {
+                repeatEvery: "Repeat each: "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.yearly.repeatOn `String`
+
+The text similar to "Repeat on: " displayed in the scheduler recurrence editor.
+
+#### Example - set the "repeatOn" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            yearly: {
+                repeatOn: "repeat on: "
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceEditor.yearly.years `String`
+
+The text similar to " year(s)" displayed in the scheduler recurrence editor.
+
+#### Example - set the "years" scheduler recurrence editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceEditor: {
+            yearly: {
+                years: " year(s)."
+            }
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceMessages `Object`
+
+The configuration of the scheduler recurrence messages. Use this option to customize or localize the scheduler recurrence messages.
+
+### messages.recurrenceMessages.deleteRecurring `String`
+
+The text similar to "Do you want to delete only this event occurrence or the whole series?" displayed in the scheduler event editor.
+
+#### Example - set the "deleteRecurring" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceMessages: {
+            deleteRecurring: "Delete only this event occurrence or the whole series?"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceMessages.deleteWindowOccurrence `String`
+
+The text similar to "Delete current occurrence" displayed in the scheduler event editor.
+
+#### Example - set the "deleteWindowOccurrence" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceMessages: {
+            deleteWindowOccurrence: "Delete current event"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceMessages.deleteWindowSeries `String`
+
+The text similar to "Delete the series" displayed in the scheduler event editor.
+
+#### Example - set the "deleteWindowSeries" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceMessages: {
+            deleteWindowSeries: "Delete all occurrences"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceMessages.deleteWindowTitle `String`
+
+The text similar to "Delete Recurring Item" displayed in the scheduler event editor.
+
+#### Example - set the "deleteWindowTitle" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceMessages: {
+            deleteWindowTitle: "Delete Recurring event"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceMessages.editRecurring `String`
+
+The text similar to "Do you want to edit only this event occurrence or the whole series?" displayed in the scheduler event editor.
+
+#### Example - set the "editRecurring" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceMessages: {
+            editRecurring: "Do you want to edit only this event or the whole series?"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceMessages.editWindowOccurrence `String`
+
+The text similar to "Edit current occurrence" displayed in the scheduler event editor.
+
+#### Example - set the "editWindowOccurrence" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceMessages: {
+            editWindowOccurrence: "Edit current event"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceMessages.editWindowSeries `String`
+
+The text similar to "Edit the series" displayed in the scheduler event editor.
+
+#### Example - set the "editWindowSeries" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceMessages: {
+            editWindowSeries: "Edit all occurrences"
+        }
+      },
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    </script>
+
+### messages.recurrenceMessages.editWindowTitle `String`
+
+The text similar to "Edit Recurring Item" displayed in the scheduler event editor.
+
+#### Example - set the "editWindowTitle" scheduler editor message
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      messages: {
+        recurrenceMessages: {
+            editWindowTitle: "Edit Recurring Event"
+        }
       },
       dataSource: [
         {
