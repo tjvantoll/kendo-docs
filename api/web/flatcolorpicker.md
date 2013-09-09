@@ -68,6 +68,21 @@ current color and the input field.
     });
     </script>
 
+### autoupdate `Boolean` *(default: true)*
+
+Specifies whether the UI should be updated while the user is typing in
+the input field, whenever a valid color can be parsed.  If you pass
+`false` for this, the widget will update only when ENTER is pressed.
+
+#### Example
+
+    <div id="flatpicker"></div>
+    <script>
+    $("#flatpicker").kendoFlatColorPicker({
+      autoupdate: false
+    });
+    </script>
+
 ### messages `Object`
 
 Allows customization of "Apply" / "Cancel" labels.
