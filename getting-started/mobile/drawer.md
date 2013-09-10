@@ -21,6 +21,8 @@ By default, the drawer will be revealed at the left side when swiping from from 
 
 The drawer automatically hides when the user swipes back or taps the remaining visible area of the view. The drawer also hides automatically when the application navigates to another view.
 
+> **Important:** If the Drawer is used for navigation View transition should be turned off.
+
 ### Drawer and a reveal button
 
     <div data-role="view">
@@ -63,7 +65,34 @@ The drawer automatically hides when the user swipes back or taps the remaining v
         </ul>
     </div>
 
+## Associating the Drawer with remote Views
 
+`views` array allows the developer to associate the Drawer with a list of view IDs on which the drawer will appear. In case when the Drawer has to be linked with a remote View, the developer should include in the views array its relative path, **not** the ID of the element.
+
+### Drawer associated with remote View
+
+    <!-- local view -->
+    <div id="foo" data-role="view">
+        <a href="bar.html" data-role="button">Load remote View</a>
+    </div>
+
+    <!-- remote view is listed with its relative path "bar.html", not its ID "bar" -->
+    <div data-role="drawer" data-views='["bar.html"]'>
+        <ul data-role="listview">
+            <li><a href="#foo">Foo</a></li>
+            <li><a href="bar.html">Bar</a></li>
+        </ul>
+    </div>
+
+    <script>
+        var app = new kendo.mobile.Application();
+    </script>
+
+    <!-- HTML of the remote View -->
+    <div id="bar" data-role="view">
+        <p>I am remote view, my ID is "bar", but my relative path is "bar.html"</p>
+        <p>Swipe to reveal the drawer</p>
+    </div>
 
 ## Revealing a Drawer
 
