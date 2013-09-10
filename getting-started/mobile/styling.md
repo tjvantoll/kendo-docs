@@ -29,6 +29,30 @@ To further ease the task, we also provide a special tool called [Kendo UI Mobile
 It is very simple to use - just drag and drop your chosen colors, gradients, patterns and font styles onto the platform theme you need restyled and finally click the export button to get
 the needed CSS stylesheet.
 
+## Changing iOS7 tint color
+
+On 10th September 2013 Kendo UI Mobile released an iOS7 theme as an internal build which will be also included in the upcoming Q2 service pack.
+
+In iOS7 every application can have the ability to set "tint color" which is used for highlighting specific interactive elements throughout the whole application.
+The tint color can be also set per single view. The Kendo UI Mobile's iOS7 theme is created to be similarly easy to change the application tint color with this simple CSS rule:
+
+    .km-ios7 .k-list,
+    .km-ios7 .k-slider,
+    .km-ios7 .km-widget
+    {
+        color: green;
+    }
+
+Additionally a single View tint color can be changed by simply adding a CSS class to it and changing the above CSS accordingly. Make sure to avoid raising the CSS specificity above 20
+(avoid #ID selectors and !important), or all text in the View will be colorized.
+
+    .specific-view .k-list,
+    .specific-view .k-slider,
+    .specific-view .km-widget
+    {
+        color: green;
+    }
+
 ## Changing Flat skin active color
 
 <br/>
@@ -146,3 +170,4 @@ The Flat skin shipped with Kendo UI Mobile Q2 2013, was created to provide maxim
     {
         border-color: #ff6363;
     }
+
