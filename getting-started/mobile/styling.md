@@ -46,12 +46,61 @@ The tint color can be also set per single view. The Kendo UI Mobile's iOS7 theme
 Additionally a single View tint color can be changed by simply adding a CSS class to it and changing the above CSS accordingly. Make sure to avoid raising the CSS specificity above 20
 (avoid #ID selectors and !important), or all text in the View will be colorized.
 
+### Change the iOS7 tint color for a specific View
+
     .specific-view .k-list,
     .specific-view .k-slider,
     .specific-view .km-widget
     {
         color: green;
     }
+
+### Example with application and View-specific tint
+
+    <style scoped>
+      .km-ios7 .k-list,
+      .km-ios7 .k-slider,
+      .km-ios7 .km-widget
+      {
+        color: green;
+      }
+      .view2 .k-list,
+      .view2 .k-slider,
+      .view2 .km-widget
+      {
+        color: red;
+      }
+    </style>
+
+    <div data-role="view" data-title="View 1" id="view1">
+      <header data-role="header">
+        <div data-role="navbar">
+          <div data-role="view-title"></div>
+        </div>
+      </header>
+      <footer data-role="footer">
+        <div data-role="tabstrip">
+          <a data-role="button" data-icon="favorites" href="#view1">Favorites</a>
+          <a data-role="button" data-icon="home" href="#view2">Favorites</a>
+        </div>
+      </footer>
+    </div>
+    <div data-role="view" data-title="View 2" id="view2" class="view2">
+      <header data-role="header">
+        <div data-role="navbar">
+          <div data-role="view-title"></div>
+        </div>
+      </header>
+      <footer data-role="footer">
+        <div data-role="tabstrip">
+          <a data-role="button" data-icon="favorites" href="#view1">Favorites</a>
+          <a data-role="button" data-icon="home" href="#view2">Favorites</a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      new kendo.mobile.Application();
+    </script>
 
 ## Changing Flat skin active color
 
