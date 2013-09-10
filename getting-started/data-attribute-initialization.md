@@ -64,7 +64,7 @@ Each widget configuration option can be set via a data attribute of the target e
 Options, which start with `data` do not require an additional "data" in the attribute name e.g. the `dataTextField` option is set via the `data-text-field` attribute and `dataSource` is set via the
 `data-source` attribute.
 
-Complex configuration options are set as JavaScript object literals: `data-source="{data: [{name: 'John Doe'},{name: 'Jane Doe']}"`.
+Complex configuration options are set as JavaScript object literals: `data-source="{data: [{name: 'John Doe'},{name: 'Jane Doe'}]}"`.
 
 ### Example - configure a Kendo UI Widget with data attributes
 
@@ -72,7 +72,7 @@ Complex configuration options are set as JavaScript object literals: `data-sourc
         <input data-role="autocomplete"
                data-ignore-case="true"
                data-text-field="name"
-               data-source="{data: [{name: 'John Doe'},{name: 'Jane Doe']}" />
+               data-source="{data: [{name: 'John Doe'},{name: 'Jane Doe'}]}" />
     </div>
     <script>
     kendo.init($("#container"));
