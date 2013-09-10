@@ -463,6 +463,35 @@ The template used to render the major ticks.By default the scheduler renders the
     $scheduler->majorTimeHeaderTemplate(new \Kendo\JavaScriptFunction('function() { }'));
     ?>
 
+### messages
+
+The configuration of the scheduler messages. Use this option to customize or localize the scheduler messages.
+
+#### Returns
+`\Kendo\UI\Scheduler`
+
+#### Parameters
+
+##### $value `\Kendo\UI\SchedulerMessages|array`
+
+
+#### Example - using [\Kendo\UI\SchedulerMessages](/api/wrappers/php/Kendo/UI/SchedulerMessages)
+    <?php
+    $scheduler = new \Kendo\UI\Scheduler('Scheduler');
+    $messages = new \Kendo\UI\SchedulerMessages();
+    $allDay = 'value';
+    $messages->allDay($allDay);
+    $scheduler->messages($messages);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $scheduler = new \Kendo\UI\Scheduler('Scheduler');
+    $allDay = 'value';
+    $scheduler->messages(array('allDay' => $allDay));
+    ?>
+
 ### minorTickCount
 The number of time slots to display per major tick.
 

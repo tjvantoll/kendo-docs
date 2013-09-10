@@ -31,7 +31,8 @@ Sets the HTML content of the CalendarMonth.
 
 
 ### _empty
-Template to be used for rendering the cells in the "month" view, which are not in the min/max range.
+The template to be used for rendering the cells in the "month" view, which are not in the min/max range.
+ By default, the widget renders an empty string.
 
 #### Returns
 `\Kendo\UI\CalendarMonth`

@@ -226,6 +226,7 @@ The configuration of the scatter chart x axis major ticks.
 
 ### majorUnit
 The interval between major divisions.
+If this is a date axis the value represents the number of xAxis.baseUnits between major divisions.
 
 #### Returns
 `\Kendo\Dataviz\UI\ChartXAxisItem`
@@ -265,6 +266,36 @@ The minimum value of the axis.
 ##### $value ``
 
 
+
+### minorGridLines
+
+The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
+body of the chart.
+
+#### Returns
+`\Kendo\Dataviz\UI\ChartXAxisItem`
+
+#### Parameters
+
+##### $value `\Kendo\Dataviz\UI\ChartXAxisItemMinorGridLines|array`
+
+
+#### Example - using [\Kendo\Dataviz\UI\ChartXAxisItemMinorGridLines](/api/wrappers/php/Kendo/Dataviz/UI/ChartXAxisItemMinorGridLines)
+    <?php
+    $xAxisItem = new \Kendo\Dataviz\UI\ChartXAxisItem();
+    $minorGridLines = new \Kendo\Dataviz\UI\ChartXAxisItemMinorGridLines();
+    $color = 'value';
+    $minorGridLines->color($color);
+    $xAxisItem->minorGridLines($minorGridLines);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $xAxisItem = new \Kendo\Dataviz\UI\ChartXAxisItem();
+    $color = 'value';
+    $xAxisItem->minorGridLines(array('color' => $color));
+    ?>
 
 ### minorUnit
 The interval between minor divisions. It defaults to 1/5th of the xAxis.majorUnit.

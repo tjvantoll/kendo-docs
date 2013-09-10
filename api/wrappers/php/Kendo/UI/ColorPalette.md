@@ -70,8 +70,7 @@ For additional information check the [change](/api/web/colorpalette#events-chang
     ?>
 
 ### columns
-The number of columns to display.  When you pass "websafe" this will
-automatically default to 18.
+The number of columns to display.  When you use the "websafe" palette, this will automatically default to 18.
 
 #### Returns
 `\Kendo\UI\ColorPalette`
@@ -89,11 +88,8 @@ automatically default to 18.
     ?>
 
 ### palette
-Specifies the color palette to display.  It can be a string with
-comma-separated colors in hex representation, an array of Color
-objects or of strings that parseColor understands.  As a shortcut,
-you can pass "basic" to get the simple palette (this is the default)
-or "websafe" to get the Web-safe palette.
+Specifies the color palette to display.
+It can be a string with comma-separated colors in hex representation, an array of kendo.Color object objects or of strings that parseColor understands.  As a shortcut, you can pass "basic" to get the simple palette (this is the default) or "websafe" to get the Web-safe palette.
 
 #### Returns
 `\Kendo\UI\ColorPalette`

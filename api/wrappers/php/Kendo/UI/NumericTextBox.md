@@ -70,7 +70,7 @@ For additional information check the [change](/api/web/numerictextbox#events-cha
     ?>
 
 ### culture
-Specifies the culture info used by the NumericTextBox widget.
+Specifies the culture info used by the widget.
 
 #### Returns
 `\Kendo\UI\NumericTextBox`
@@ -178,7 +178,7 @@ Specifies the smallest value the user can enter.
     ?>
 
 ### placeholder
-Specifies the text displayed when the input is empty.
+The hint displayed by the widget when it is empty. Not set by default.
 
 #### Returns
 `\Kendo\UI\NumericTextBox`
@@ -232,7 +232,7 @@ For additional information check the [spin](/api/web/numerictextbox#events-spin)
     ?>
 
 ### spinners
-Specifies whether the up/down spin buttons should be rendered
+Specifies whether the up and down spin buttons should be rendered
 
 #### Returns
 `\Kendo\UI\NumericTextBox`
@@ -250,7 +250,7 @@ Specifies whether the up/down spin buttons should be rendered
     ?>
 
 ### step
-Specifies the increment/decrement step.
+Specifies the value used to increment or decrement widget value.
 
 #### Returns
 `\Kendo\UI\NumericTextBox`

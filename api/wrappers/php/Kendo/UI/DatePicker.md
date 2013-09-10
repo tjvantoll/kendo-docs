@@ -53,8 +53,7 @@ Specifies a template used to populate value of the aria-label attribute.
 
 ### animation
 
-The animation(s) used for opening and/or closing the pop-up. Setting this value to false
-will disable the animation(s).
+Configures the opening and closing animations of the calendar popup. Setting the animation option to false will disable the opening and closing animations. As a result the calendar popup will open and close instantly.
 
 #### Returns
 `\Kendo\UI\DatePicker`
@@ -209,21 +208,27 @@ settings are available for the depth value:
     ?>
 
 ### footer
-Template to be used for rendering the footer of the calendar.
+The template which renders the footer of the calendar. If false, the footer will not be rendered.
 
 #### Returns
 `\Kendo\UI\DatePicker`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $datePicker = new \Kendo\UI\DatePicker('DatePicker');
     $datePicker->footer('value');
+    ?>
+
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $datePicker = new \Kendo\UI\DatePicker('DatePicker');
+    $datePicker->footer(new \Kendo\JavaScriptFunction('function() { }'));
     ?>
 
 ### format
@@ -346,7 +351,8 @@ For additional information check the [open](/api/web/datepicker#events-open) eve
     ?>
 
 ### parseFormats
-Specifies the formats, which are used to parse the value set with value() method or by direct input. If not set the value of the format will be used. Note that value of the format option is always used.
+Specifies a lis of date formats used to parse the value set with value() method or by direct user input. If not set the value of the format will be used.
+ Note that format option is always used parsing process.
 
 #### Returns
 `\Kendo\UI\DatePicker`

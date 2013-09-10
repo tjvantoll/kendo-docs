@@ -53,8 +53,7 @@ Specifies a template used to populate value of the aria-label attribute.
 
 ### animation
 
-The animation(s) used for opening and/or closing the pop-ups. Setting this value to false
-will disable the animation(s).
+Configures the opening and closing animations of the popups. Setting the animation option to false will disable the opening and closing animations. As a result the popup will open and close instantly.
 
 #### Returns
 `\Kendo\UI\DateTimePicker`
@@ -209,7 +208,7 @@ settings are available for the depth value:
     ?>
 
 ### footer
-Template to be used for rendering the footer of the calendar.
+The template which renders the footer of the calendar. If false, the footer will not be rendered.
 
 #### Returns
 `\Kendo\UI\DateTimePicker`
@@ -383,7 +382,7 @@ Specifies the formats, which are used to parse the value set with value() method
 
 ### start
 Specifies the start view of the calendar.
-The following settings are available for the start value:
+ The following settings are available for the start value:
 
 #### Returns
 `\Kendo\UI\DateTimePicker`

@@ -14,7 +14,7 @@ A PHP class representing the animation setting of DateTimePicker.
 
 ### close
 
-The animation(s) used for hiding of the pop-up.
+The animation played when a popup is closed.
 
 #### Returns
 `\Kendo\UI\DateTimePickerAnimation`
@@ -43,7 +43,7 @@ The animation(s) used for hiding of the pop-up.
 
 ### open
 
-The animation(s) used for displaying of the pop-up.
+The animation played when the popup is opened.
 
 #### Returns
 `\Kendo\UI\DateTimePickerAnimation`

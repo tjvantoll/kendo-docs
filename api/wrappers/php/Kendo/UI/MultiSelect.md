@@ -35,7 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### animation
 
-Animations to be used for opening/closing the popup. Setting to false will turn off the animation.
+Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -63,7 +63,7 @@ Animations to be used for opening/closing the popup. Setting to false will turn 
     ?>
 
 ### autoBind
-Controls whether to bind the widget to the DataSource on initialization.
+Controls whether to bind the widget to the data source on initialization.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -81,7 +81,7 @@ Controls whether to bind the widget to the DataSource on initialization.
     ?>
 
 ### change
-Fires when the value has been changed.
+Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 For additional information check the [change](/api/web/multiselect#events-change) event documentation.
 
 #### Returns
@@ -117,7 +117,7 @@ For additional information check the [change](/api/web/multiselect#events-change
     ?>
 
 ### close
-Fires when the drop-down list is closed
+Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
 For additional information check the [close](/api/web/multiselect#events-close) event documentation.
 
 #### Returns
@@ -153,7 +153,7 @@ For additional information check the [close](/api/web/multiselect#events-close) 
     ?>
 
 ### dataBound
-Fires when the multiselect has received data from the data source.
+Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 For additional information check the [dataBound](/api/web/multiselect#events-dataBound) event documentation.
 
 #### Returns
@@ -216,7 +216,7 @@ Sets the data source of the dataSource.
     ?>
 
 ### dataTextField
-Sets the field of the data item that provides the text content of the list items.
+The field of the data item that provides the text content of the list items. The widget will filter the data source based on this field.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -234,7 +234,7 @@ Sets the field of the data item that provides the text content of the list items
     ?>
 
 ### dataValueField
-Sets the field of the data item that provides the value content of the list items.
+The field of the data item that provides the value of the widget.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -252,7 +252,7 @@ Sets the field of the data item that provides the value content of the list item
     ?>
 
 ### delay
-Specifies the delay in ms after which the multiselect will start filtering dataSource.
+Specifies the delay in milliseconds after which the multiselect will start filtering dataSource.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -270,7 +270,7 @@ Specifies the delay in ms after which the multiselect will start filtering dataS
     ?>
 
 ### enable
-Controls whether the multiselect should be initially enabled.
+If set to false the widget will be disabled and will not allow user input. The widget is enabled by default and allows user input.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -288,7 +288,8 @@ Controls whether the multiselect should be initially enabled.
     ?>
 
 ### filter
-Defines the type of filtration.
+The filtering method used to determine the suggestions for the current value. Filtration is turned of by default.
+The supported filter values are startswith, endswith and contains.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -306,7 +307,7 @@ Defines the type of filtration.
     ?>
 
 ### height
-Define the height of the drop-down list in pixels.
+The height of the suggestion popup in pixels. The default value is 200 pixels.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -324,7 +325,7 @@ Define the height of the drop-down list in pixels.
     ?>
 
 ### highlightFirst
-Controls whether the first item will be automatically highlighted.
+If set to true the first suggestion will be automatically highlighted.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -342,7 +343,7 @@ Controls whether the first item will be automatically highlighted.
     ?>
 
 ### ignoreCase
-Defines whether the filtration should be case sensitive.
+If set to false case-sensitive search will be performed to find suggestions. The widget performs case-insensitive searching by default.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -360,21 +361,27 @@ Defines whether the filtration should be case sensitive.
     ?>
 
 ### itemTemplate
-Template to be used for rendering the items in the list.
+The template used to render the items in the popup list.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $multiSelect = new \Kendo\UI\MultiSelect('MultiSelect');
     $multiSelect->itemTemplate('value');
+    ?>
+
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $multiSelect = new \Kendo\UI\MultiSelect('MultiSelect');
+    $multiSelect->itemTemplate(new \Kendo\JavaScriptFunction('function() { }'));
     ?>
 
 ### maxSelectedItems
@@ -396,7 +403,7 @@ Defines the limit of the selected items. If set to null widget will not limit nu
     ?>
 
 ### minLength
-Specifies the minimum characters that should be typed before the multiselect activates
+The minimum number of characters the user must type before a search is performed. Set to higher value than 1 if the search could match a lot of items.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -414,7 +421,7 @@ Specifies the minimum characters that should be typed before the multiselect act
     ?>
 
 ### open
-Fires when the drop-down list is opened
+Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 For additional information check the [open](/api/web/multiselect#events-open) event documentation.
 
 #### Returns
@@ -450,7 +457,7 @@ For additional information check the [open](/api/web/multiselect#events-open) ev
     ?>
 
 ### placeholder
-A string that appears in the textbox when the multiselect has no value.
+The hint displayed by the widget when it is empty. Not set by default.
 
 #### Returns
 `\Kendo\UI\MultiSelect`
@@ -468,7 +475,7 @@ A string that appears in the textbox when the multiselect has no value.
     ?>
 
 ### select
-Triggered when a Li element is selected.
+Fired when an item from the popup is selected by the user.
 For additional information check the [select](/api/web/multiselect#events-select) event documentation.
 
 #### Returns
@@ -504,7 +511,7 @@ For additional information check the [select](/api/web/multiselect#events-select
     ?>
 
 ### tagTemplate
-Template to be used for rendering the tags of the selected items.
+The template used to render the tags.
 
 #### Returns
 `\Kendo\UI\MultiSelect`

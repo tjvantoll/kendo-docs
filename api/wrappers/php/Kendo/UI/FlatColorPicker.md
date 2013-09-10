@@ -23,7 +23,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
     $flatColorPicker = new \Kendo\UI\FlatColorPicker('FlatColorPicker');
 
     // Configure it
-    $flatColorPicker->buttons(true)
+    $flatColorPicker->autoupdate(true)
 
     // Output it
 
@@ -33,8 +33,28 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ## Methods
 
+### autoupdate
+Specifies whether the UI should be updated while the user is typing in
+the input field, whenever a valid color can be parsed.  If you pass
+false for this, the widget will update only when ENTER is pressed.
+
+#### Returns
+`\Kendo\UI\FlatColorPicker`
+
+#### Parameters
+
+##### $value `boolean`
+
+
+
+#### Example 
+    <?php
+    $flatColorPicker = new \Kendo\UI\FlatColorPicker('FlatColorPicker');
+    $flatColorPicker->autoupdate(true);
+    ?>
+
 ### buttons
-Specifies whether we should display the Apply / Cancel buttons.
+Specifies whether the widget should display the Apply / Cancel buttons.
 
 #### Returns
 `\Kendo\UI\FlatColorPicker`

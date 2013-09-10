@@ -492,3 +492,21 @@ The template used to render the suggestions. By default the widget displays only
     $autoComplete->template(new \Kendo\JavaScriptFunction('function() { }'));
     ?>
 
+### valuePrimitive
+Spcifies the value binding behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item text field. If set to false, the View-Model field will be updated with the selected item.
+
+#### Returns
+`\Kendo\UI\AutoComplete`
+
+#### Parameters
+
+##### $value `boolean`
+
+
+
+#### Example 
+    <?php
+    $autoComplete = new \Kendo\UI\AutoComplete('AutoComplete');
+    $autoComplete->valuePrimitive(true);
+    ?>
+

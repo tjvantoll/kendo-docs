@@ -34,7 +34,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 ## Methods
 
 ### change
-Fires when the selected date is changed
+Fires when the selected date is changed.
 For additional information check the [change](/api/web/calendar#events-change) event documentation.
 
 #### Returns
@@ -106,7 +106,8 @@ Specifies a list of dates, which will be passed to the month template.
     ?>
 
 ### depth
-Specifies the navigation depth.
+Specifies the navigation depth. The following
+settings are available for the depth value:
 
 #### Returns
 `\Kendo\UI\Calendar`
@@ -124,21 +125,27 @@ Specifies the navigation depth.
     ?>
 
 ### footer
-Template to be used for rendering the footer. If false, the footer will not be rendered.
+The template which renders the footer. If false, the footer will not be rendered.
 
 #### Returns
 `\Kendo\UI\Calendar`
 
 #### Parameters
 
-##### $value `string`
+##### $value `string|\Kendo\JavaScriptFunction`
 
 
 
-#### Example 
+#### Example  - using string
     <?php
     $calendar = new \Kendo\UI\Calendar('Calendar');
     $calendar->footer('value');
+    ?>
+
+#### Example  - using \Kendo\JavaScriptFunction
+    <?php
+    $calendar = new \Kendo\UI\Calendar('Calendar');
+    $calendar->footer(new \Kendo\JavaScriptFunction('function() { }'));
     ?>
 
 ### format
@@ -197,7 +204,7 @@ Specifies the minimum date, which the calendar can show.
 
 ### month
 
-Templates for the cells rendered in the "month" view.
+Templates for the cells rendered in "month" view.
 
 #### Returns
 `\Kendo\UI\Calendar`
@@ -225,7 +232,7 @@ Templates for the cells rendered in the "month" view.
     ?>
 
 ### navigate
-Fires when navigate
+Fires when calendar navigates.
 For additional information check the [navigate](/api/web/calendar#events-navigate) event documentation.
 
 #### Returns
@@ -262,6 +269,7 @@ For additional information check the [navigate](/api/web/calendar#events-navigat
 
 ### start
 Specifies the start view.
+The following settings are available for the start value:
 
 #### Returns
 `\Kendo\UI\Calendar`

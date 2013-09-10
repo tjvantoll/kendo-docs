@@ -14,7 +14,7 @@ A PHP class representing the animation setting of TimePicker.
 
 ### close
 
-Animation to be used for closing of the popup.
+The animation played when the popup is closed.
 
 #### Returns
 `\Kendo\UI\TimePickerAnimation`
@@ -43,7 +43,7 @@ Animation to be used for closing of the popup.
 
 ### open
 
-Animation to be used for opening of the popup.
+The animation played when the calendar popup is opened.
 
 #### Returns
 `\Kendo\UI\TimePickerAnimation`

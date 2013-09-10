@@ -13,7 +13,7 @@ A PHP class representing the close setting of TimePickerAnimation.
 ## Methods
 
 ### duration
-Difines the animation duration.
+The duration of the close animation in milliseconds.
 
 #### Returns
 `\Kendo\UI\TimePickerAnimationClose`
@@ -31,7 +31,7 @@ Difines the animation duration.
     ?>
 
 ### effects
-Effect to be used for closing of the popup.
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
 
 #### Returns
 `\Kendo\UI\TimePickerAnimationClose`

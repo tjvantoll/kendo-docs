@@ -48,6 +48,42 @@ Sets the drop zone hint.
     $localization->dropFilesHere('value');
     ?>
 
+### headerStatusUploaded
+Sets the header status message for uploaded files.
+
+#### Returns
+`\Kendo\UI\UploadLocalization`
+
+#### Parameters
+
+##### $value `string`
+
+
+
+#### Example 
+    <?php
+    $localization = new \Kendo\UI\UploadLocalization();
+    $localization->headerStatusUploaded('value');
+    ?>
+
+### headerStatusUploading
+Sets the header status message for files that are being uploaded.
+
+#### Returns
+`\Kendo\UI\UploadLocalization`
+
+#### Parameters
+
+##### $value `string`
+
+
+
+#### Example 
+    <?php
+    $localization = new \Kendo\UI\UploadLocalization();
+    $localization->headerStatusUploading('value');
+    ?>
+
 ### remove
 Sets the text of the remove button text.
 

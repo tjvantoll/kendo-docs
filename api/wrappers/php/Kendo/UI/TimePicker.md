@@ -35,7 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### animation
 
-Animations to be used for opening/closing the popup. Setting to false will turn of the animation.
+Configures the opening and closing animations of the popup. Setting the animation option to false will disable the opening and closing animations. As a result the popup will open and close instantly.
 
 #### Returns
 `\Kendo\UI\TimePicker`
@@ -63,7 +63,7 @@ Animations to be used for opening/closing the popup. Setting to false will turn 
     ?>
 
 ### change
-Triggered when the underlying value of a TimePicker is changed.
+Fires when the selected date is changed
 For additional information check the [change](/api/web/timepicker#events-change) event documentation.
 
 #### Returns
@@ -153,7 +153,7 @@ Specifies the culture info used by the widget.
     ?>
 
 ### dates
-Specifies a list of dates, which are shown in the time drop-down list. If not set, the DateTimePicker will auto-generate the available times.
+Specifies a list of dates, which are shown in the time drop-down list. If not set, the TimePicker will auto-generate the available times.
 
 #### Returns
 `\Kendo\UI\TimePicker`

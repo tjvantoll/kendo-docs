@@ -34,9 +34,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 ## Methods
 
 ### buttons
-Applicable only for the HSV selector (that is, when pallete is
-null).  This specifies whether the "Apply" / "Cancel" buttons are to
-be displayed in the drop-down HSV picker.
+Specifies whether the widget should display the Apply / Cancel buttons.Applicable only for the HSV selector, when a pallete is not specified.
 
 #### Returns
 `\Kendo\UI\ColorPicker`
@@ -128,10 +126,9 @@ For additional information check the [close](/api/web/colorpicker#events-close) 
     ?>
 
 ### columns
-The number of columns to show in the simple color dropdown.  For the
-"basic" and "websafe" palettes this is automatically initialized; if
-you pass a custom palette then you can set this to some value that
-makes sense for your colors.
+The number of columns to show in the color dropdown when a pallete is specified.
+This is automatically initialized for the "basic" and "websafe" palettes.
+If you use a custom palette then you can set this to some value that makes sense for your colors.
 
 #### Returns
 `\Kendo\UI\ColorPicker`
@@ -161,9 +158,8 @@ Allows customization of "Apply" / "Cancel" labels.
 
 
 ### opacity
-Only for the HSV selector.  If true, the widget will display the
-opacity slider.  Note that currently in HTML5 the <input
-type="color"> does not support opacity.
+Only for the HSV selector.  If true, the widget will display the opacity slider.
+Note that currently in HTML5 the <input type="color"> does not support opacity.
 
 #### Returns
 `\Kendo\UI\ColorPicker`
@@ -218,7 +214,7 @@ For additional information check the [open](/api/web/colorpicker#events-open) ev
 
 ### palette
 When a non-null palette argument is supplied, the drop-down will be
-a simple color picker.  The following are supported:If palette is missing or null, the widget will display the HSV
+a simple color picker that lists the colors. The following are supported:If palette is missing or null, the widget will display the HSV
 selector.
 
 #### Returns
@@ -243,9 +239,7 @@ selector.
     ?>
 
 ### preview
-Only for the HSV selector.  Displays the color preview element, along
-with an input field where the end user can paste a color in a
-CSS-supported notation.
+Only applicable for the HSV selector.Displays the color preview element, along with an input field where the end user can paste a color in a CSS-supported notation.
 
 #### Returns
 `\Kendo\UI\ColorPicker`
@@ -360,10 +354,8 @@ specified, the HTML for the element will look like this:
     ?>
 
 ### value
-The initially selected color.  This can be a string supported by
-parseColor or a Color object.  Note that when initializing the
-widget from an <input> element, the initial color will be decided by the
-field instead.
+The initially selected color.
+Note that when initializing the widget from an <input> element, the initial color will be decided by the field instead.
 
 #### Returns
 `\Kendo\UI\ColorPicker`

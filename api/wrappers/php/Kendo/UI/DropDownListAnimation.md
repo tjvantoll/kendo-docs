@@ -14,7 +14,7 @@ A PHP class representing the animation setting of DropDownList.
 
 ### close
 
-Animation to be used for closing of the popup.
+
 
 #### Returns
 `\Kendo\UI\DropDownListAnimation`
@@ -43,7 +43,7 @@ Animation to be used for closing of the popup.
 
 ### open
 
-Animation to be used for opening of the popup.
+The animation played when the suggestion popup is opened.
 
 #### Returns
 `\Kendo\UI\DropDownListAnimation`

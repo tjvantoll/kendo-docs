@@ -13,7 +13,7 @@ A PHP class representing the open setting of DatePickerAnimation.
 ## Methods
 
 ### duration
-Difines the animation duration.
+The duration of the open animation in milliseconds.
 
 #### Returns
 `\Kendo\UI\DatePickerAnimationOpen`
@@ -31,7 +31,7 @@ Difines the animation duration.
     ?>
 
 ### effects
-Effect to be used for opening of the popup.
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
 
 #### Returns
 `\Kendo\UI\DatePickerAnimationOpen`

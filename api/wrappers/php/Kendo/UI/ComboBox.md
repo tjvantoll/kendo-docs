@@ -35,7 +35,7 @@ configuration [methods](#methods) and output it by `echo`-ing the result of the 
 
 ### animation
 
-Animations to be used for opening/closing the popup. Setting to false will turn off the animation.
+Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -63,7 +63,7 @@ Animations to be used for opening/closing the popup. Setting to false will turn 
     ?>
 
 ### autoBind
-Controls whether to bind the widget to the DataSource on initialization.
+Controls whether to bind the widget to the data source on initialization.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -81,7 +81,7 @@ Controls whether to bind the widget to the DataSource on initialization.
     ?>
 
 ### cascade
-Triggered when value of the widget is changed via API or user interaction.
+Fired when the value of the widget is changed via API or user interaction.
 For additional information check the [cascade](/api/web/combobox#events-cascade) event documentation.
 
 #### Returns
@@ -117,7 +117,8 @@ For additional information check the [cascade](/api/web/combobox#events-cascade)
     ?>
 
 ### cascadeFrom
-Use it to set the Id of the parent DropDownList.
+Use it to set the Id of the parent ComboBox widget.
+Help topic showing how cascading functionality works
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -135,7 +136,7 @@ Use it to set the Id of the parent DropDownList.
     ?>
 
 ### change
-Fires when the value has been changed.
+Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 For additional information check the [change](/api/web/combobox#events-change) event documentation.
 
 #### Returns
@@ -171,7 +172,7 @@ For additional information check the [change](/api/web/combobox#events-change) e
     ?>
 
 ### close
-Fires when the drop-down list is closed
+Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
 For additional information check the [close](/api/web/combobox#events-close) event documentation.
 
 #### Returns
@@ -207,7 +208,7 @@ For additional information check the [close](/api/web/combobox#events-close) eve
     ?>
 
 ### dataBound
-Fires when the ComboBox has received data from the data source.
+Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 For additional information check the [dataBound](/api/web/combobox#events-dataBound) event documentation.
 
 #### Returns
@@ -270,7 +271,7 @@ Sets the data source of the dataSource.
     ?>
 
 ### dataTextField
-Sets the field of the data item that provides the text content of the list items.
+The field of the data item that provides the text content of the list items. The widget will filter the data source based on this field.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -288,7 +289,7 @@ Sets the field of the data item that provides the text content of the list items
     ?>
 
 ### dataValueField
-Sets the field of the data item that provides the value content of the list items.
+The field of the data item that provides the value of the widget.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -306,7 +307,7 @@ Sets the field of the data item that provides the value content of the list item
     ?>
 
 ### delay
-Specifies the delay in ms after which the ComboBox will start filtering dataSource.
+The delay in milliseconds between a keystroke and when the widget displays the popup.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -324,7 +325,7 @@ Specifies the delay in ms after which the ComboBox will start filtering dataSour
     ?>
 
 ### enable
-Controls whether the ComboBox should be initially enabled.
+If set to false the widget will be disabled and will not allow user input. The widget is enabled by default and allows user input.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -342,7 +343,8 @@ Controls whether the ComboBox should be initially enabled.
     ?>
 
 ### filter
-Defines the type of filtration. If "none" the ComboBox will not filter the items.
+The filtering method used to determine the suggestions for the current value. Filtration is turned of by default.
+The supported filter values are startswith, endswith and contains.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -360,7 +362,7 @@ Defines the type of filtration. If "none" the ComboBox will not filter the items
     ?>
 
 ### height
-Define the height of the drop-down list in pixels.
+The height of the suggestion popup in pixels. The default value is 200 pixels.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -378,7 +380,7 @@ Define the height of the drop-down list in pixels.
     ?>
 
 ### highlightFirst
-Controls whether the first item will be automatically highlighted.
+If set to true the first suggestion will be automatically highlighted.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -396,7 +398,7 @@ Controls whether the first item will be automatically highlighted.
     ?>
 
 ### ignoreCase
-Defines whether the filtration should be case sensitive.
+If set to false case-sensitive search will be performed to find suggestions. The widget performs case-insensitive searching by default.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -414,7 +416,7 @@ Defines whether the filtration should be case sensitive.
     ?>
 
 ### index
-Defines the initial selected item.
+The index of the initially selected item. The index is 0 based.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -432,7 +434,7 @@ Defines the initial selected item.
     ?>
 
 ### minLength
-Specifies the minimum characters that should be typed before the ComboBox activates
+The minimum number of characters the user must type before a search is performed. Set to higher value than 1 if the search could match a lot of items.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -450,7 +452,7 @@ Specifies the minimum characters that should be typed before the ComboBox activa
     ?>
 
 ### open
-Fires when the drop-down list is opened
+Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 For additional information check the [open](/api/web/combobox#events-open) event documentation.
 
 #### Returns
@@ -486,7 +488,7 @@ For additional information check the [open](/api/web/combobox#events-open) event
     ?>
 
 ### placeholder
-A string that appears in the textbox when the combobox has no value.
+The hint displayed by the widget when it is empty. Not set by default.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -504,7 +506,7 @@ A string that appears in the textbox when the combobox has no value.
     ?>
 
 ### select
-Triggered when a Li element is selected.
+Fired when an item from the popup is selected by the user.
 For additional information check the [select](/api/web/combobox#events-select) event documentation.
 
 #### Returns
@@ -540,7 +542,7 @@ For additional information check the [select](/api/web/combobox#events-select) e
     ?>
 
 ### suggest
-Controls whether the ComboBox should automatically auto-type the rest of text.
+If set to true the widget will automatically use the first suggestion as its value.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -558,7 +560,7 @@ Controls whether the ComboBox should automatically auto-type the rest of text.
     ?>
 
 ### template
-Template to be used for rendering the items in the list.
+The template used to render the items. By default the widget displays only the text of the data item (configured via dataTextField).
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -582,7 +584,7 @@ Template to be used for rendering the items in the list.
     ?>
 
 ### text
-Define the text of the widget, when the autoBind is set to false.
+The text of the widget used when the autoBind is set to false.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -600,7 +602,7 @@ Define the text of the widget, when the autoBind is set to false.
     ?>
 
 ### value
-Define the value of the widget
+The value of the widget.
 
 #### Returns
 `\Kendo\UI\ComboBox`
@@ -615,5 +617,23 @@ Define the value of the widget
     <?php
     $comboBox = new \Kendo\UI\ComboBox('ComboBox');
     $comboBox->value('value');
+    ?>
+
+### valuePrimitive
+Specifies the value binding behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item value field. If set to false, the View-Model field will be updated with the selected item.
+
+#### Returns
+`\Kendo\UI\ComboBox`
+
+#### Parameters
+
+##### $value `boolean`
+
+
+
+#### Example 
+    <?php
+    $comboBox = new \Kendo\UI\ComboBox('ComboBox');
+    $comboBox->valuePrimitive(true);
     ?>
 
