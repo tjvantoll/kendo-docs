@@ -16,7 +16,7 @@ The cap configuration options.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the cap.
 Any valid CSS color string will work here, including hex and rgb.

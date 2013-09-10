@@ -16,7 +16,7 @@ The data point tooltip configuration options.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the tooltip. The default is determined from the series color.
 
@@ -24,7 +24,7 @@ The background color of the tooltip. The default is determined from the series c
     <kendo:sparkline-tooltip background="background">
     </kendo:sparkline-tooltip>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
@@ -32,7 +32,7 @@ The text color of the tooltip. The default is the same as the series labels colo
     <kendo:sparkline-tooltip color="color">
     </kendo:sparkline-tooltip>
 
-### font `String`
+### font `java.lang.String`
 
 The tooltip font.
 
@@ -40,7 +40,7 @@ The tooltip font.
     <kendo:sparkline-tooltip font="font">
     </kendo:sparkline-tooltip>
 
-### format `String`
+### format `java.lang.String`
 
 The tooltip format.
 
@@ -48,7 +48,7 @@ The tooltip format.
     <kendo:sparkline-tooltip format="format">
     </kendo:sparkline-tooltip>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the tooltip.
 
@@ -64,7 +64,7 @@ A value indicating if the tooltip should be shared.
     <kendo:sparkline-tooltip shared="shared">
     </kendo:sparkline-tooltip>
 
-### sharedTemplate `String`
+### sharedTemplate `java.lang.String`
 
 The shared tooltip template.
 Template variables:
@@ -73,7 +73,7 @@ Template variables:
     <kendo:sparkline-tooltip sharedTemplate="sharedTemplate">
     </kendo:sparkline-tooltip>
 
-### template `String`
+### template `java.lang.String`
 
 The tooltip template.
 Template variables:

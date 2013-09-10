@@ -65,7 +65,7 @@ The distance from the range indicators to the ticks.
     <kendo:radialGauge-scale rangeDistance="rangeDistance">
     </kendo:radialGauge-scale>
 
-### rangePlaceholderColor `String`
+### rangePlaceholderColor `java.lang.String`
 
 The default color for the ranges.
 

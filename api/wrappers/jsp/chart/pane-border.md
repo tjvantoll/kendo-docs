@@ -16,7 +16,7 @@ The border of the chart pane.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the border. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The color of the border. Accepts a valid CSS color string, including hex and rgb
     <kendo:chart-pane-border color="color">
     </kendo:chart-pane-border>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the border.The following dash types are supported:
 

@@ -16,7 +16,7 @@ The texts of the filter operators displayed for columns which have their values 
 
 ## Configuration Attributes
 
-### eq `String`
+### eq `java.lang.String`
 
 The text of the "equal" filter operator.
 
@@ -24,7 +24,7 @@ The text of the "equal" filter operator.
     <kendo:grid-filterable-operators-enums eq="eq">
     </kendo:grid-filterable-operators-enums>
 
-### neq `String`
+### neq `java.lang.String`
 
 The text of the "not equal" filter operator.
 

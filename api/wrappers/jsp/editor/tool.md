@@ -18,7 +18,7 @@ Custom tools and tools that require configuration are defined as objects.The ava
 
 ## Configuration Attributes
 
-### exec `String`
+### exec `java.lang.String`
 
 The JavaScript function which will be executed when the end-user clicks the tool button.
 
@@ -26,7 +26,7 @@ The JavaScript function which will be executed when the end-user clicks the tool
     <kendo:editor-tool exec="exec">
     </kendo:editor-tool>
 
-### name `String`
+### name `java.lang.String`
 
 When specifying a tool as an object, a tool name is required.
 
@@ -34,7 +34,7 @@ When specifying a tool as an object, a tool name is required.
     <kendo:editor-tool name="name">
     </kendo:editor-tool>
 
-### template `String`
+### template `java.lang.String`
 
 The kendo template that will be used for rendering the given tool.
 
@@ -42,7 +42,7 @@ The kendo template that will be used for rendering the given tool.
     <kendo:editor-tool template="template">
     </kendo:editor-tool>
 
-### tooltip `String`
+### tooltip `java.lang.String`
 
 The text which will be displayed when the end-user hovers the tool button with the mouse.
 

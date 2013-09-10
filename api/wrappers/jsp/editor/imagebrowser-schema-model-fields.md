@@ -16,7 +16,7 @@ publish: true
 
 ## Configuration Attributes
 
-### name `String`
+### name `java.lang.String`
 
 The field which contains the name of the image/directory Further configuration is available via [kendo:editor-imageBrowser-schema-model-fields-name](#kendo-editor-imageBrowser-schema-model-fields-name). 
 
@@ -24,7 +24,7 @@ The field which contains the name of the image/directory Further configuration i
     <kendo:editor-imageBrowser-schema-model-fields name="name">
     </kendo:editor-imageBrowser-schema-model-fields>
 
-### size `String`
+### size `java.lang.String`
 
 The field which contains the size of image. Further configuration is available via [kendo:editor-imageBrowser-schema-model-fields-size](#kendo-editor-imageBrowser-schema-model-fields-size). 
 
@@ -32,7 +32,7 @@ The field which contains the size of image. Further configuration is available v
     <kendo:editor-imageBrowser-schema-model-fields size="size">
     </kendo:editor-imageBrowser-schema-model-fields>
 
-### type `String`
+### type `java.lang.String`
 
 The field which contains the type of the entry. Either f for image or d for directory. Further configuration is available via [kendo:editor-imageBrowser-schema-model-fields-type](#kendo-editor-imageBrowser-schema-model-fields-type). 
 

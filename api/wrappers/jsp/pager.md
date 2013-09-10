@@ -42,7 +42,7 @@ Defines if an input element which allows the user to navigate to given page will
     <kendo:pager input="input">
     </kendo:pager>
 
-### linkTemplate `String`
+### linkTemplate `java.lang.String`
 
 The template for page number links.
 
@@ -58,7 +58,7 @@ Defines if numeric portion of the pager will be shown.
     <kendo:pager numeric="numeric">
     </kendo:pager>
 
-### pageSizes `Object`
+### pageSizes `java.lang.Object`
 
 Displays a list with predefined page sizes. An array of values to be displayed can be provided. If pageSize option is provided for DataSource then this pageSize value will be automaticaly selected in created selectbox.
 
@@ -82,7 +82,7 @@ Defines if a refresh button will be displayed. Click on that button will call Da
     <kendo:pager refresh="refresh">
     </kendo:pager>
 
-### selectTemplate `String`
+### selectTemplate `java.lang.String`
 
 The template for selected page number link.
 

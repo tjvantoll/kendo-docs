@@ -16,7 +16,7 @@ Default options for the navigator hint.
 
 ## Configuration Attributes
 
-### format `String`
+### format `java.lang.String`
 
 The format of the hint.
 
@@ -24,7 +24,7 @@ The format of the hint.
     <kendo:stockChart-navigator-hint format="format">
     </kendo:stockChart-navigator-hint>
 
-### template `String`
+### template `java.lang.String`
 
 The hint template.
 Template variables:

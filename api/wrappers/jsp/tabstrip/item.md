@@ -16,7 +16,7 @@ Contains the items of the tabstrip widget
 
 ## Configuration Attributes
 
-### contentUrl `String`
+### contentUrl `java.lang.String`
 
 Specifies the url from which the item content will be loaded
 
@@ -32,7 +32,7 @@ Specifies whether the item is initially enabled
     <kendo:tabStrip-item enabled="enabled">
     </kendo:tabStrip-item>
 
-### imageUrl `String`
+### imageUrl `java.lang.String`
 
 Specifies the URL of the image displayed by the item
 
@@ -48,7 +48,7 @@ Specifies whether the item is initially selected
     <kendo:tabStrip-item selected="selected">
     </kendo:tabStrip-item>
 
-### spriteCssClass `String`
+### spriteCssClass `java.lang.String`
 
 Specifies the class name for the sprite image displayed by the item
 
@@ -56,7 +56,7 @@ Specifies the class name for the sprite image displayed by the item
     <kendo:tabStrip-item spriteCssClass="spriteCssClass">
     </kendo:tabStrip-item>
 
-### text `String`
+### text `java.lang.String`
 
 Specifies the text displayed by the item
 

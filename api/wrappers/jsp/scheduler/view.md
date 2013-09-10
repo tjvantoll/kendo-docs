@@ -17,7 +17,7 @@ By default the Kendo UI Scheduler widget displays "day" and "week" view.
 
 ## Configuration Attributes
 
-### allDayEventTemplate `String`
+### allDayEventTemplate `java.lang.String`
 
 The template used to render the "all day" scheduler events.The fields which can be used in the template are:
 
@@ -33,7 +33,7 @@ If set to true the scheduler will display a slot for "all day" events.
     <kendo:scheduler-view allDaySlot="allDaySlot">
     </kendo:scheduler-view>
 
-### dateHeaderTemplate `String`
+### dateHeaderTemplate `java.lang.String`
 
 The template used to render the date header cells.By default the scheduler renders the date using the current culture date format.The fields which can be used in the template are:
 
@@ -41,7 +41,7 @@ The template used to render the date header cells.By default the scheduler rende
     <kendo:scheduler-view dateHeaderTemplate="dateHeaderTemplate">
     </kendo:scheduler-view>
 
-### dayTemplate `String`
+### dayTemplate `java.lang.String`
 
 The template used to render the day slots in month view.The fields which can be used in the template are:
 
@@ -73,7 +73,7 @@ The height of the scheduler event rendered in month view.
     <kendo:scheduler-view eventHeight="eventHeight">
     </kendo:scheduler-view>
 
-### eventTemplate `String`
+### eventTemplate `java.lang.String`
 
 The template used by the view to render the scheduler events.The fields which can be used in the template are:
 
@@ -81,7 +81,7 @@ The template used by the view to render the scheduler events.The fields which ca
     <kendo:scheduler-view eventTemplate="eventTemplate">
     </kendo:scheduler-view>
 
-### eventTimeTemplate `String`
+### eventTimeTemplate `java.lang.String`
 
 The template used by the agenda view to render the time of the scheduler events.The fields which can be used in the template are:
 
@@ -97,7 +97,7 @@ The number of minutes represented by a major tick.
     <kendo:scheduler-view majorTick="majorTick">
     </kendo:scheduler-view>
 
-### majorTimeHeaderTemplate `String`
+### majorTimeHeaderTemplate `java.lang.String`
 
 The template used to render the major ticks.By default the scheduler renders the time using the current culture time format.The fields which can be used in the template are:
 
@@ -113,7 +113,7 @@ The number of time slots to display per major tick.
     <kendo:scheduler-view minorTickCount="minorTickCount">
     </kendo:scheduler-view>
 
-### minorTimeHeaderTemplate `String`
+### minorTimeHeaderTemplate `java.lang.String`
 
 The template used to render the minor ticks.By default the scheduler renders a "&nbsp;".The fields which can be used in the template are:
 
@@ -129,7 +129,7 @@ If set to true the view will be initially selected by the scheduler widget.
     <kendo:scheduler-view selected="selected">
     </kendo:scheduler-view>
 
-### selectedDateFormat `String`
+### selectedDateFormat `java.lang.String`
 
 The format used to display the selected date. Uses kendo.format.Contains two placeholders - "{0}" and "{1}" which represent the start and end date displayed by the view.
 
@@ -145,7 +145,7 @@ The start time of the view. The scheduler will display events starting after the
     <kendo:scheduler-view startTime="startTime">
     </kendo:scheduler-view>
 
-### title `String`
+### title `java.lang.String`
 
 The user-friendly title of the view displayed by the scheduler.
 
@@ -153,7 +153,7 @@ The user-friendly title of the view displayed by the scheduler.
     <kendo:scheduler-view title="title">
     </kendo:scheduler-view>
 
-### type `String`
+### type `java.lang.String`
 
 The type of the view. The built-in views are: "day", "week", "month" and "agenda".
 

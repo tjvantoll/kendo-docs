@@ -16,7 +16,7 @@ The grouping configuration of the data source. If set the data items will be gro
 
 ## Configuration Attributes
 
-### dir `String`
+### dir `java.lang.String`
 
 The sort order of the group. The supported values are "asc" (ascending order) and "desc" (descending order). The default sort order is ascending.
 
@@ -24,7 +24,7 @@ The sort order of the group. The supported values are "asc" (ascending order) an
     <kendo:dataSource-groupItem dir="dir">
     </kendo:dataSource-groupItem>
 
-### field `String`
+### field `java.lang.String`
 
 The data item field to group by.
 

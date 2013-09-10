@@ -16,7 +16,7 @@ The label of the notes.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the label. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The background color of the label. Accepts a valid CSS color string, including h
     <kendo:stockChart-valueAxisItem-notes-label background="background">
     </kendo:stockChart-valueAxisItem-notes-label>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the label. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The text color of the label. Accepts a valid CSS color string, including hex and
     <kendo:stockChart-valueAxisItem-notes-label color="color">
     </kendo:stockChart-valueAxisItem-notes-label>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the label.
 
@@ -40,7 +40,7 @@ The font style of the label.
     <kendo:stockChart-valueAxisItem-notes-label font="font">
     </kendo:stockChart-valueAxisItem-notes-label>
 
-### format `String`
+### format `java.lang.String`
 
 The format used to display the notes label. Uses kendo.format. Contains one placeholder ("{0}") which represents the axis value.
 
@@ -48,7 +48,7 @@ The format used to display the notes label. Uses kendo.format. Contains one plac
     <kendo:stockChart-valueAxisItem-notes-label format="format">
     </kendo:stockChart-valueAxisItem-notes-label>
 
-### position `String`
+### position `java.lang.String`
 
 The position of the labels.
 
@@ -64,7 +64,7 @@ The rotation angle of the label. By default the label are not rotated.
     <kendo:stockChart-valueAxisItem-notes-label rotation="rotation">
     </kendo:stockChart-valueAxisItem-notes-label>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the labels.The fields which can be used in the template are:
 

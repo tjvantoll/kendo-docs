@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:timePicker-animation\>
 
-Animations to be used for opening/closing the popup. Setting to false will turn of the animation.
+Configures the opening and closing animations of the popup. Setting the animation option to false will disable the opening and closing animations. As a result the popup will open and close instantly.
 
 #### Example
     <kendo:timePicker>
@@ -21,7 +21,7 @@ Animations to be used for opening/closing the popup. Setting to false will turn 
 
 ### kendo:timePicker-animation-close
 
-Animation to be used for closing of the popup.
+The animation played when the popup is closed.
 
 More documentation is available at [kendo:timePicker-animation-close](timepicker/animation-close).
 
@@ -33,7 +33,7 @@ More documentation is available at [kendo:timePicker-animation-close](timepicker
 
 ### kendo:timePicker-animation-open
 
-Animation to be used for opening of the popup.
+The animation played when the calendar popup is opened.
 
 More documentation is available at [kendo:timePicker-animation-open](timepicker/animation-open).
 

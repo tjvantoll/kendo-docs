@@ -36,7 +36,7 @@ You can change this behavior by setting batch to true.
     <kendo:upload-async batch="batch">
     </kendo:upload-async>
 
-### removeField `String`
+### removeField `java.lang.String`
 
 The name of the form field submitted to the Remove URL.
 
@@ -44,7 +44,7 @@ The name of the form field submitted to the Remove URL.
     <kendo:upload-async removeField="removeField">
     </kendo:upload-async>
 
-### removeUrl `String`
+### removeUrl `java.lang.String`
 
 The URL of the handler responsible for removing uploaded files (if any). The handler must accept POST
 requests containing one or more "fileNames" fields specifying the files to be deleted.
@@ -53,7 +53,7 @@ requests containing one or more "fileNames" fields specifying the files to be de
     <kendo:upload-async removeUrl="removeUrl">
     </kendo:upload-async>
 
-### removeVerb `String`
+### removeVerb `java.lang.String`
 
 The HTTP verb to be used by the remove action.
 
@@ -61,7 +61,7 @@ The HTTP verb to be used by the remove action.
     <kendo:upload-async removeVerb="removeVerb">
     </kendo:upload-async>
 
-### saveField `String`
+### saveField `java.lang.String`
 
 The name of the form field submitted to the save URL. The default value is the input name.
 
@@ -69,7 +69,7 @@ The name of the form field submitted to the save URL. The default value is the i
     <kendo:upload-async saveField="saveField">
     </kendo:upload-async>
 
-### saveUrl `String`
+### saveUrl `java.lang.String`
 
 The URL of the handler that will receive the submitted files. The handler must accept POST requests
 containing one or more fields with the same name as the original input name.

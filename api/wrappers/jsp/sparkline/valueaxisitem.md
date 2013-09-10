@@ -16,7 +16,7 @@ The value axis configuration options.
 
 ## Configuration Attributes
 
-### axisCrossingValue `Object`
+### axisCrossingValue `java.lang.Object`
 
 Value at which the category axis crosses this axis. (Only for object)Value indicies at which the category axes cross the value axis. (Only for array)Date at which the category axis crosses this axis. (Only for date)
 
@@ -24,7 +24,7 @@ Value at which the category axis crosses this axis. (Only for object)Value indic
     <kendo:sparkline-valueAxisItem axisCrossingValue="axisCrossingValue">
     </kendo:sparkline-valueAxisItem>
 
-### color `String`
+### color `java.lang.String`
 
 Color to apply to all axis elements.
 Individual color settings for line and labels take priority. Any valid CSS color string will work here, including hex and rgb.
@@ -68,7 +68,7 @@ It defaults to 1/5th of the majorUnit.
     <kendo:sparkline-valueAxisItem minorUnit="minorUnit">
     </kendo:sparkline-valueAxisItem>
 
-### name `Object`
+### name `java.lang.Object`
 
 The unique axis name.
 

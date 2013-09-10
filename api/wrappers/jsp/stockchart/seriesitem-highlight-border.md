@@ -16,7 +16,7 @@ The border of highlighted points. The color is computed automatically from the b
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The border color.
 

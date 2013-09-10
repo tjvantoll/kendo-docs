@@ -24,7 +24,7 @@ The number of milliseconds used for the animation when a node is expanded.
     <kendo:treeView-animation-collapse duration="duration">
     </kendo:treeView-animation-collapse>
 
-### effects `String`
+### effects `java.lang.String`
 
 A whitespace-delimited string of animation effects that are used when collapsing nodes.
 The supported effects are fadeOut and collapseVertical.

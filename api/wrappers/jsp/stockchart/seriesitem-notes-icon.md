@@ -16,7 +16,7 @@ The icon of the notes.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the notes icon.
 
@@ -32,7 +32,7 @@ The size of the icon.
     <kendo:stockChart-seriesItem-notes-icon size="size">
     </kendo:stockChart-seriesItem-notes-icon>
 
-### type `String`
+### type `java.lang.String`
 
 The icon shape.The supported values are:
 * "circle" - the marker shape is circle.

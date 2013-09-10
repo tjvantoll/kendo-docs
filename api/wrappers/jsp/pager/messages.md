@@ -16,7 +16,7 @@ Defines texts shown within the pager. Use this option to customize or localize t
 
 ## Configuration Attributes
 
-### display `String`
+### display `java.lang.String`
 
 The pager info text. Uses kendo.format.Contains three placeholders:
 - {0} - the first data item index
@@ -27,7 +27,7 @@ The pager info text. Uses kendo.format.Contains three placeholders:
     <kendo:pager-messages display="display">
     </kendo:pager-messages>
 
-### empty `String`
+### empty `java.lang.String`
 
 The text displayed when the DataSource view does no contain items.
 
@@ -35,7 +35,7 @@ The text displayed when the DataSource view does no contain items.
     <kendo:pager-messages empty="empty">
     </kendo:pager-messages>
 
-### first `String`
+### first `java.lang.String`
 
 The tooltip of the button which navigates to the first page.
 
@@ -43,7 +43,7 @@ The tooltip of the button which navigates to the first page.
     <kendo:pager-messages first="first">
     </kendo:pager-messages>
 
-### itemsPerPage `String`
+### itemsPerPage `java.lang.String`
 
 The label displayed after the page size dropdown list.
 
@@ -51,7 +51,7 @@ The label displayed after the page size dropdown list.
     <kendo:pager-messages itemsPerPage="itemsPerPage">
     </kendo:pager-messages>
 
-### last `String`
+### last `java.lang.String`
 
 The tooltip of the button which navigates to the last page.
 
@@ -59,7 +59,7 @@ The tooltip of the button which navigates to the last page.
     <kendo:pager-messages last="last">
     </kendo:pager-messages>
 
-### next `String`
+### next `java.lang.String`
 
 The tooltip of the button which navigates to the next page.
 
@@ -67,7 +67,7 @@ The tooltip of the button which navigates to the next page.
     <kendo:pager-messages next="next">
     </kendo:pager-messages>
 
-### of `String`
+### of `java.lang.String`
 
 The label displayed before the pager input. Uses kendo.format. Contains one optional placeholder {0} which represents the total number of pages.
 
@@ -75,7 +75,7 @@ The label displayed before the pager input. Uses kendo.format. Contains one opti
     <kendo:pager-messages of="of">
     </kendo:pager-messages>
 
-### page `String`
+### page `java.lang.String`
 
 The label displayed before the pager input.
 
@@ -83,7 +83,7 @@ The label displayed before the pager input.
     <kendo:pager-messages page="page">
     </kendo:pager-messages>
 
-### previous `String`
+### previous `java.lang.String`
 
 The tooltip of the button which navigates to the previous page.
 
@@ -91,7 +91,7 @@ The tooltip of the button which navigates to the previous page.
     <kendo:pager-messages previous="previous">
     </kendo:pager-messages>
 
-### refresh `String`
+### refresh `java.lang.String`
 
 The tooltip of the refresh button.
 

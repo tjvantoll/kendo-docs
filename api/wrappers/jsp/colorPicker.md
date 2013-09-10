@@ -12,9 +12,7 @@ A JSP wrapper for Kendo UI [ColorPicker](/api/web/colorpicker).
 
 ### buttons `boolean`
 
-Applicable only for the HSV selector (that is, when pallete is
-null).  This specifies whether the "Apply" / "Cancel" buttons are to
-be displayed in the drop-down HSV picker.
+Specifies whether the widget should display the Apply / Cancel buttons.Applicable only for the HSV selector, when a pallete is not specified.
 
 #### Example
     <kendo:colorPicker buttons="buttons">
@@ -22,16 +20,15 @@ be displayed in the drop-down HSV picker.
 
 ### columns `float`
 
-The number of columns to show in the simple color dropdown.  For the
-"basic" and "websafe" palettes this is automatically initialized; if
-you pass a custom palette then you can set this to some value that
-makes sense for your colors.
+The number of columns to show in the color dropdown when a pallete is specified.
+This is automatically initialized for the "basic" and "websafe" palettes.
+If you use a custom palette then you can set this to some value that makes sense for your colors.
 
 #### Example
     <kendo:colorPicker columns="columns">
     </kendo:colorPicker>
 
-### messages `Object`
+### messages `java.lang.Object`
 
 Allows customization of "Apply" / "Cancel" labels.
 
@@ -41,18 +38,17 @@ Allows customization of "Apply" / "Cancel" labels.
 
 ### opacity `boolean`
 
-Only for the HSV selector.  If true, the widget will display the
-opacity slider.  Note that currently in HTML5 the <input
-type="color"> does not support opacity.
+Only for the HSV selector.  If true, the widget will display the opacity slider.
+Note that currently in HTML5 the <input type="color"> does not support opacity.
 
 #### Example
     <kendo:colorPicker opacity="opacity">
     </kendo:colorPicker>
 
-### palette `Object`
+### palette `java.lang.Object`
 
 When a non-null palette argument is supplied, the drop-down will be
-a simple color picker.  The following are supported:If palette is missing or null, the widget will display the HSV
+a simple color picker that lists the colors. The following are supported:If palette is missing or null, the widget will display the HSV
 selector.
 
 #### Example
@@ -61,9 +57,7 @@ selector.
 
 ### preview `boolean`
 
-Only for the HSV selector.  Displays the color preview element, along
-with an input field where the end user can paste a color in a
-CSS-supported notation.
+Only applicable for the HSV selector.Displays the color preview element, along with an input field where the end user can paste a color in a CSS-supported notation.
 
 #### Example
     <kendo:colorPicker preview="preview">
@@ -77,7 +71,7 @@ The size of a color cell. Further configuration is available via [kendo:colorPic
     <kendo:colorPicker tileSize="tileSize">
     </kendo:colorPicker>
 
-### toolIcon `String`
+### toolIcon `java.lang.String`
 
 A CSS class name to display an icon in the color picker button.  If
 specified, the HTML for the element will look like this:
@@ -86,12 +80,10 @@ specified, the HTML for the element will look like this:
     <kendo:colorPicker toolIcon="toolIcon">
     </kendo:colorPicker>
 
-### value `String`
+### value `java.lang.String`
 
-The initially selected color.  This can be a string supported by
-parseColor or a Color object.  Note that when initializing the
-widget from an <input> element, the initial color will be decided by the
-field instead.
+The initially selected color.
+Note that when initializing the widget from an <input> element, the initial color will be decided by the field instead.
 
 #### Example
     <kendo:colorPicker value="value">

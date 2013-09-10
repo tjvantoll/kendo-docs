@@ -16,7 +16,7 @@ The border of the series.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the border. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The color of the border. Accepts a valid CSS color string, including hex and rgb
     <kendo:chart-title-border color="color">
     </kendo:chart-title-border>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the chart title border.The following dash types are supported:
 

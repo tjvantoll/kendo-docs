@@ -25,7 +25,7 @@ By default "jsonp" requests are not cached.Refer to the jQuery.ajax documentatio
     <kendo:dataSource-transport-destroy cache="cache">
     </kendo:dataSource-transport-destroy>
 
-### contentType `String`
+### contentType `java.lang.String`
 
 The content-type HTTP header sent to the server. Default is "application/x-www-form-urlencoded". Use "application/json" if the content is JSON.
 Refer to the jQuery.ajax documentation for further info.
@@ -34,7 +34,7 @@ Refer to the jQuery.ajax documentation for further info.
     <kendo:dataSource-transport-destroy contentType="contentType">
     </kendo:dataSource-transport-destroy>
 
-### data `Object`
+### data `java.lang.Object`
 
 Additional parameters which are sent to the remote service.Refer to the jQuery.ajax documentation for further info.
 
@@ -42,7 +42,7 @@ Additional parameters which are sent to the remote service.Refer to the jQuery.a
     <kendo:dataSource-transport-destroy data="data">
     </kendo:dataSource-transport-destroy>
 
-### dataType `String`
+### dataType `java.lang.String`
 
 The type of result expected from the server. Commonly used values are "json" and "jsonp".Refer to the jQuery.ajax documentation for further info.
 
@@ -50,7 +50,7 @@ The type of result expected from the server. Commonly used values are "json" and
     <kendo:dataSource-transport-destroy dataType="dataType">
     </kendo:dataSource-transport-destroy>
 
-### type `String`
+### type `java.lang.String`
 
 The type of request to make ("POST", "GET", "PUT" or "DELETE"), default is "GET".Refer to the jQuery.ajax documentation for further info.
 
@@ -58,7 +58,7 @@ The type of request to make ("POST", "GET", "PUT" or "DELETE"), default is "GET"
     <kendo:dataSource-transport-destroy type="type">
     </kendo:dataSource-transport-destroy>
 
-### url `String`
+### url `java.lang.String`
 
 The URL to which the request is sent.If set to function the data source will invoke it and use the result as the URL.
 

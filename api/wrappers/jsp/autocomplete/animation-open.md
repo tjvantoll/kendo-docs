@@ -24,7 +24,7 @@ The duration of the open animation in milliseconds.
     <kendo:autoComplete-animation-open duration="duration">
     </kendo:autoComplete-animation-open>
 
-### effects `String`
+### effects `java.lang.String`
 
 The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
 

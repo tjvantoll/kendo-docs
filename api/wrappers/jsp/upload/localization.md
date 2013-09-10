@@ -16,7 +16,7 @@ Sets the strings rendered by the Upload.
 
 ## Configuration Attributes
 
-### cancel `String`
+### cancel `java.lang.String`
 
 Sets the text of the cancel button text.
 
@@ -24,7 +24,7 @@ Sets the text of the cancel button text.
     <kendo:upload-localization cancel="cancel">
     </kendo:upload-localization>
 
-### dropFilesHere `String`
+### dropFilesHere `java.lang.String`
 
 Sets the drop zone hint.
 
@@ -32,7 +32,23 @@ Sets the drop zone hint.
     <kendo:upload-localization dropFilesHere="dropFilesHere">
     </kendo:upload-localization>
 
-### remove `String`
+### headerStatusUploaded `java.lang.String`
+
+Sets the header status message for uploaded files.
+
+#### Example
+    <kendo:upload-localization headerStatusUploaded="headerStatusUploaded">
+    </kendo:upload-localization>
+
+### headerStatusUploading `java.lang.String`
+
+Sets the header status message for files that are being uploaded.
+
+#### Example
+    <kendo:upload-localization headerStatusUploading="headerStatusUploading">
+    </kendo:upload-localization>
+
+### remove `java.lang.String`
 
 Sets the text of the remove button text.
 
@@ -40,7 +56,7 @@ Sets the text of the remove button text.
     <kendo:upload-localization remove="remove">
     </kendo:upload-localization>
 
-### retry `String`
+### retry `java.lang.String`
 
 Sets the text of the retry button text.
 
@@ -48,7 +64,7 @@ Sets the text of the retry button text.
     <kendo:upload-localization retry="retry">
     </kendo:upload-localization>
 
-### select `String`
+### select `java.lang.String`
 
 Sets the "Select..." button text.
 
@@ -56,7 +72,7 @@ Sets the "Select..." button text.
     <kendo:upload-localization select="select">
     </kendo:upload-localization>
 
-### statusFailed `String`
+### statusFailed `java.lang.String`
 
 Sets the status message for failed uploads.
 
@@ -64,7 +80,7 @@ Sets the status message for failed uploads.
     <kendo:upload-localization statusFailed="statusFailed">
     </kendo:upload-localization>
 
-### statusUploaded `String`
+### statusUploaded `java.lang.String`
 
 Sets the status message for uploaded files.
 
@@ -72,7 +88,7 @@ Sets the status message for uploaded files.
     <kendo:upload-localization statusUploaded="statusUploaded">
     </kendo:upload-localization>
 
-### statusUploading `String`
+### statusUploading `java.lang.String`
 
 Sets the status message for files that are being uploaded.
 
@@ -80,7 +96,7 @@ Sets the status message for files that are being uploaded.
     <kendo:upload-localization statusUploading="statusUploading">
     </kendo:upload-localization>
 
-### uploadSelectedFiles `String`
+### uploadSelectedFiles `java.lang.String`
 
 Sets the text of the "Upload files" button.
 

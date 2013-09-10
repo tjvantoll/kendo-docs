@@ -16,7 +16,7 @@ The chart title configuration options or text.
 
 ## Configuration Attributes
 
-### align `String`
+### align `java.lang.String`
 
 The alignment of the title.
 
@@ -24,7 +24,7 @@ The alignment of the title.
     <kendo:stockChart-title align="align">
     </kendo:stockChart-title>
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the title.
 
@@ -32,7 +32,7 @@ The background color of the title.
     <kendo:stockChart-title background="background">
     </kendo:stockChart-title>
 
-### font `String`
+### font `java.lang.String`
 
 The font of the title.
 
@@ -40,7 +40,7 @@ The font of the title.
     <kendo:stockChart-title font="font">
     </kendo:stockChart-title>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the title.
 
@@ -48,7 +48,7 @@ The margin of the title.
     <kendo:stockChart-title margin="margin">
     </kendo:stockChart-title>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the title.
 
@@ -56,7 +56,7 @@ The padding of the title.
     <kendo:stockChart-title padding="padding">
     </kendo:stockChart-title>
 
-### position `String`
+### position `java.lang.String`
 
 The position of the title.
 
@@ -64,7 +64,7 @@ The position of the title.
     <kendo:stockChart-title position="position">
     </kendo:stockChart-title>
 
-### text `String`
+### text `java.lang.String`
 
 The title of the chart. You can also set the text directly for a title with default options.
 

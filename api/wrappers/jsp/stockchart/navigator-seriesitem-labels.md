@@ -16,7 +16,7 @@ Configures the series data labels.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the labels.
 
@@ -24,7 +24,7 @@ The background color of the labels.
     <kendo:stockChart-navigator-seriesItem-labels background="background">
     </kendo:stockChart-navigator-seriesItem-labels>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels.
 
@@ -32,7 +32,7 @@ The text color of the labels.
     <kendo:stockChart-navigator-seriesItem-labels color="color">
     </kendo:stockChart-navigator-seriesItem-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -40,7 +40,7 @@ The font style of the labels.
     <kendo:stockChart-navigator-seriesItem-labels font="font">
     </kendo:stockChart-navigator-seriesItem-labels>
 
-### format `String`
+### format `java.lang.String`
 
 The format of the labels.
 
@@ -48,7 +48,7 @@ The format of the labels.
     <kendo:stockChart-navigator-seriesItem-labels format="format">
     </kendo:stockChart-navigator-seriesItem-labels>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the labels.
 
@@ -56,7 +56,7 @@ The margin of the labels.
     <kendo:stockChart-navigator-seriesItem-labels margin="margin">
     </kendo:stockChart-navigator-seriesItem-labels>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the labels.
 
@@ -64,7 +64,7 @@ The padding of the labels.
     <kendo:stockChart-navigator-seriesItem-labels padding="padding">
     </kendo:stockChart-navigator-seriesItem-labels>
 
-### position `String`
+### position `java.lang.String`
 
 Defines the position of the labels.
 
@@ -72,7 +72,7 @@ Defines the position of the labels.
     <kendo:stockChart-navigator-seriesItem-labels position="position">
     </kendo:stockChart-navigator-seriesItem-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The label template. Template variables:
 

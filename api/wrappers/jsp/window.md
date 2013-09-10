@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [Window](/api/web/window).
 
 ## Configuration Attributes
 
-### actions `Object`
+### actions `java.lang.Object`
 
 The buttons for interacting with the window. Predefined array values are "Close", "Refresh", "Minimize",
 and "Maximize".
@@ -19,7 +19,7 @@ and "Maximize".
     <kendo:window actions="actions">
     </kendo:window>
 
-### appendTo `Object`
+### appendTo `java.lang.Object`
 
 The element that the Window will be appended to. Beneficial if the Window is used together with a form.
 Note that this does not constrain the window dragging within the given element.
@@ -28,7 +28,7 @@ Note that this does not constrain the window dragging within the given element.
     <kendo:window appendTo="appendTo">
     </kendo:window>
 
-### content `Object`
+### content `java.lang.Object`
 
 The content of the window
 
@@ -44,7 +44,7 @@ Enables (true) or disables (false) the ability for users to move/drag the widget
     <kendo:window draggable="draggable">
     </kendo:window>
 
-### height `Object`
+### height `java.lang.Object`
 
 Specifies height of the window.
 
@@ -116,7 +116,7 @@ Enables (true) or disables (false) the ability for users to resize a Window.
     <kendo:window resizable="resizable">
     </kendo:window>
 
-### title `Object`
+### title `java.lang.Object`
 
 The text in the window title bar. If false, the window will be displayed without a title bar. Note that this will prevent the window from being dragged, and the window titlebar buttons will not be shown.
 
@@ -132,7 +132,7 @@ Specifies whether the window will be initially visible.
     <kendo:window visible="visible">
     </kendo:window>
 
-### width `Object`
+### width `java.lang.Object`
 
 Specifies width of the window.
 

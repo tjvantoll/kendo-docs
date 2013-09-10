@@ -16,7 +16,7 @@ The data point tooltip configuration options.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the tooltip. The default is determined from the series color.
 
@@ -24,7 +24,7 @@ The background color of the tooltip. The default is determined from the series c
     <kendo:stockChart-tooltip background="background">
     </kendo:stockChart-tooltip>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
@@ -32,7 +32,7 @@ The text color of the tooltip. The default is the same as the series labels colo
     <kendo:stockChart-tooltip color="color">
     </kendo:stockChart-tooltip>
 
-### font `String`
+### font `java.lang.String`
 
 The tooltip font.
 
@@ -40,7 +40,7 @@ The tooltip font.
     <kendo:stockChart-tooltip font="font">
     </kendo:stockChart-tooltip>
 
-### format `String`
+### format `java.lang.String`
 
 The tooltip format.
 
@@ -48,7 +48,7 @@ The tooltip format.
     <kendo:stockChart-tooltip format="format">
     </kendo:stockChart-tooltip>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the tooltip.
 
@@ -64,7 +64,7 @@ A value indicating if the tooltip should be shared.
     <kendo:stockChart-tooltip shared="shared">
     </kendo:stockChart-tooltip>
 
-### sharedTemplate `String`
+### sharedTemplate `java.lang.String`
 
 The shared tooltip template.
 Template variables:
@@ -73,7 +73,7 @@ Template variables:
     <kendo:stockChart-tooltip sharedTemplate="sharedTemplate">
     </kendo:stockChart-tooltip>
 
-### template `String`
+### template `java.lang.String`
 
 The tooltip template.
 Template variables:

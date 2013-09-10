@@ -12,31 +12,32 @@ A JSP wrapper for Kendo UI [DropDownList](/api/web/dropdownlist).
 
 ### autoBind `boolean`
 
-Controls whether to bind the widget on initialization.
+Controls whether to bind the widget to the data source on initialization.
 
 #### Example
     <kendo:dropDownList autoBind="autoBind">
     </kendo:dropDownList>
 
-### cascadeFrom `String`
+### cascadeFrom `java.lang.String`
 
-Use it to set the Id of the parent DropDownList.
+Use it to set the Id of the parent dropdownlist widget.
+Help topic showing how cascading functionality works
 
 #### Example
     <kendo:dropDownList cascadeFrom="cascadeFrom">
     </kendo:dropDownList>
 
-### dataTextField `String`
+### dataTextField `java.lang.String`
 
-Sets the field of the data item that provides the text content of the list items.
+The field of the data item that provides the text content of the list items. The widget will filter the data source based on this field.
 
 #### Example
     <kendo:dropDownList dataTextField="dataTextField">
     </kendo:dropDownList>
 
-### dataValueField `String`
+### dataValueField `java.lang.String`
 
-Sets the field of the data item that provides the value content of the list items.
+The field of the data item that provides the value of the widget.
 
 #### Example
     <kendo:dropDownList dataValueField="dataValueField">
@@ -44,7 +45,7 @@ Sets the field of the data item that provides the value content of the list item
 
 ### delay `float`
 
-Specifies the delay in ms before the search text typed by the end user is cleared.
+Specifies the delay in milliseconds before the search-text typed by the end user is cleared.
 
 #### Example
     <kendo:dropDownList delay="delay">
@@ -52,7 +53,7 @@ Specifies the delay in ms before the search text typed by the end user is cleare
 
 ### enable `boolean`
 
-Controls whether the DropDownList should be initially enabled.
+If set to false the widget will be disabled and will not allow user input. The widget is enabled by default and allows user input.
 
 #### Example
     <kendo:dropDownList enable="enable">
@@ -60,15 +61,15 @@ Controls whether the DropDownList should be initially enabled.
 
 ### height `float`
 
-Define the height of the drop-down list in pixels.
+The height of the suggestion popup in pixels. The default value is 200 pixels.
 
 #### Example
     <kendo:dropDownList height="height">
     </kendo:dropDownList>
 
-### ignoreCase `String`
+### ignoreCase `java.lang.String`
 
-Controls whether the search should be case sensitive.
+If set to false case-sensitive search will be performed to find suggestions. The widget performs case-insensitive searching by default.
 
 #### Example
     <kendo:dropDownList ignoreCase="ignoreCase">
@@ -76,43 +77,51 @@ Controls whether the search should be case sensitive.
 
 ### index `float`
 
-Defines the initial selected item.
+The index of the initially selected item. The index is 0 based.
 
 #### Example
     <kendo:dropDownList index="index">
     </kendo:dropDownList>
 
-### optionLabel `Object`
+### optionLabel `java.lang.Object`
 
-Define the text of the default empty item. If the value is an object, then the widget will use it directly.
- Note that object should have atleast the dataValueField and dataTextField properties. Otherwise, widget will show undefined.
+Define the text of the default empty item. If the value is an object, then the widget will use it a valid data item.
+ Note that the optionLabel will not be available if the widget is empty.
 
 #### Example
     <kendo:dropDownList optionLabel="optionLabel">
     </kendo:dropDownList>
 
-### template `String`
+### template `java.lang.String`
 
-Template to be used for rendering the items in the list.
+The template used to render the items. By default the widget displays only the text of the data item (configured via dataTextField).
 
 #### Example
     <kendo:dropDownList template="template">
     </kendo:dropDownList>
 
-### text `String`
+### text `java.lang.String`
 
-Define the text of the widget, when the autoBind is set to false.
+The text of the widget used when the autoBind is set to false.
 
 #### Example
     <kendo:dropDownList text="text">
     </kendo:dropDownList>
 
-### value `String`
+### value `java.lang.String`
 
-Define the value of the widget
+The value of the widget.
 
 #### Example
     <kendo:dropDownList value="value">
+    </kendo:dropDownList>
+
+### valuePrimitive `boolean`
+
+Spcifies the value binding behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item value field. If set to false, the View-Model field will be updated with the selected item.
+
+#### Example
+    <kendo:dropDownList valuePrimitive="valuePrimitive">
     </kendo:dropDownList>
 
 
@@ -120,7 +129,7 @@ Define the value of the widget
 
 ### kendo:dropDownList-animation
 
-Animations to be used for opening/closing the popup. Setting to false will turn of the animation.
+Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
 
 More documentation is available at [kendo:dropDownList-animation](dropdownlist/animation).
 
@@ -135,7 +144,7 @@ More documentation is available at [kendo:dropDownList-animation](dropdownlist/a
 
 ### change `String`
 
-Fires when the value has been changed.
+Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [change](/api/web/dropdownlist#events-change) event documentation.
@@ -151,7 +160,7 @@ For additional information check the [change](/api/web/dropdownlist#events-chang
 
 ### close `String`
 
-Fires when the drop-down list is closed
+Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [close](/api/web/dropdownlist#events-close) event documentation.
@@ -167,7 +176,7 @@ For additional information check the [close](/api/web/dropdownlist#events-close)
 
 ### dataBound `String`
 
-Fires when the drop-down list has received data from the data source.
+Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [dataBound](/api/web/dropdownlist#events-dataBound) event documentation.
@@ -183,7 +192,7 @@ For additional information check the [dataBound](/api/web/dropdownlist#events-da
 
 ### open `String`
 
-Fires when the drop-down list is opened
+Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [open](/api/web/dropdownlist#events-open) event documentation.
@@ -199,7 +208,7 @@ For additional information check the [open](/api/web/dropdownlist#events-open) e
 
 ### select `String`
 
-Triggered when a Li element is selected.
+Fired when an item from the popup is selected by the user.
 
 
 For additional information check the [select](/api/web/dropdownlist#events-select) event documentation.
@@ -215,7 +224,7 @@ For additional information check the [select](/api/web/dropdownlist#events-selec
 
 ### cascade `String`
 
-Triggered when value of the widget is changed via API or user interaction.
+Fired when the value of the widget is changed via API or user interactionTriggered.
 
 
 For additional information check the [cascade](/api/web/dropdownlist#events-cascade) event documentation.
@@ -233,7 +242,7 @@ For additional information check the [cascade](/api/web/dropdownlist#events-casc
 
 ### kendo:dropDownList-change
 
-Fires when the value has been changed.
+Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [change](/api/web/dropdownlist#events-change) event documentation.
@@ -251,7 +260,7 @@ For additional information check the [change](/api/web/dropdownlist#events-chang
 
 ### kendo:dropDownList-close
 
-Fires when the drop-down list is closed
+Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [close](/api/web/dropdownlist#events-close) event documentation.
@@ -269,7 +278,7 @@ For additional information check the [close](/api/web/dropdownlist#events-close)
 
 ### kendo:dropDownList-dataBound
 
-Fires when the drop-down list has received data from the data source.
+Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [dataBound](/api/web/dropdownlist#events-dataBound) event documentation.
@@ -287,7 +296,7 @@ For additional information check the [dataBound](/api/web/dropdownlist#events-da
 
 ### kendo:dropDownList-open
 
-Fires when the drop-down list is opened
+Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [open](/api/web/dropdownlist#events-open) event documentation.
@@ -305,7 +314,7 @@ For additional information check the [open](/api/web/dropdownlist#events-open) e
 
 ### kendo:dropDownList-select
 
-Triggered when a Li element is selected.
+Fired when an item from the popup is selected by the user.
 
 
 For additional information check the [select](/api/web/dropdownlist#events-select) event documentation.
@@ -323,7 +332,7 @@ For additional information check the [select](/api/web/dropdownlist#events-selec
 
 ### kendo:dropDownList-cascade
 
-Triggered when value of the widget is changed via API or user interaction.
+Fired when the value of the widget is changed via API or user interactionTriggered.
 
 
 For additional information check the [cascade](/api/web/dropdownlist#events-cascade) event documentation.

@@ -16,7 +16,7 @@ The border of the icon.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The border color of the icon.
 

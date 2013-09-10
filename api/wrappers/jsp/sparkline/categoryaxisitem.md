@@ -16,7 +16,7 @@ The category axis configuration options.
 
 ## Configuration Attributes
 
-### autoBaseUnitSteps `Object`
+### autoBaseUnitSteps `java.lang.Object`
 
 Specifies the discrete baseUnitStep values when
 either baseUnit is set to "fit" or baseUnitStep is set to "auto".The default configuration is as follows:Each setting can be overriden individually.
@@ -25,7 +25,7 @@ either baseUnit is set to "fit" or baseUnitStep is set to "auto".The default con
     <kendo:sparkline-categoryAxisItem autoBaseUnitSteps="autoBaseUnitSteps">
     </kendo:sparkline-categoryAxisItem>
 
-### axisCrossingValue `Object`
+### axisCrossingValue `java.lang.Object`
 
 Category index at which the first value axis crosses this axis. (Only for object)Category indicies at which the value axes cross the category axis. (Only for array)Note: Specify an index greater than or equal to the number
 of categories to denote the far end of the axis.
@@ -34,7 +34,7 @@ of categories to denote the far end of the axis.
     <kendo:sparkline-categoryAxisItem axisCrossingValue="axisCrossingValue">
     </kendo:sparkline-categoryAxisItem>
 
-### baseUnit `String`
+### baseUnit `java.lang.String`
 
 The base time interval for the axis.
 The default baseUnit is determined automatically from the minimum difference
@@ -46,7 +46,7 @@ series.aggregate function.
     <kendo:sparkline-categoryAxisItem baseUnit="baseUnit">
     </kendo:sparkline-categoryAxisItem>
 
-### baseUnitStep `Object`
+### baseUnitStep `java.lang.Object`
 
 Sets the step (interval) between categories in base units.
 Specifiying "auto" will set the step to such value that the total number of categories does not exceed maxDateGroups.This option is ignored if baseUnit is set to "fit".
@@ -55,7 +55,7 @@ Specifiying "auto" will set the step to such value that the total number of cate
     <kendo:sparkline-categoryAxisItem baseUnitStep="baseUnitStep">
     </kendo:sparkline-categoryAxisItem>
 
-### categories `Object`
+### categories `java.lang.Object`
 
 Array of category names.
 
@@ -63,7 +63,7 @@ Array of category names.
     <kendo:sparkline-categoryAxisItem categories="categories">
     </kendo:sparkline-categoryAxisItem>
 
-### color `String`
+### color `java.lang.String`
 
 Color to apply to all axis elements. Any valid CSS color string will work here, including hex and rgb.
 Individual color settings for line and labels take priority.
@@ -72,7 +72,7 @@ Individual color settings for line and labels take priority.
     <kendo:sparkline-categoryAxisItem color="color">
     </kendo:sparkline-categoryAxisItem>
 
-### field `String`
+### field `java.lang.String`
 
 The data field containing the category name.
 
@@ -88,7 +88,7 @@ Positions categories and series points on major ticks. This removes the empty sp
     <kendo:sparkline-categoryAxisItem justified="justified">
     </kendo:sparkline-categoryAxisItem>
 
-### max `Object`
+### max `java.lang.Object`
 
 The last date displayed on the axis.
 By default, the minimum date is the same as the last category.
@@ -108,7 +108,7 @@ either baseUnit is set to "fit" or baseUnitStep is set to "auto".This option is 
     <kendo:sparkline-categoryAxisItem maxDateGroups="maxDateGroups">
     </kendo:sparkline-categoryAxisItem>
 
-### min `Object`
+### min `java.lang.Object`
 
 The first date displayed on the axis.
 By default, the minimum date is the same as the first category.
@@ -119,7 +119,7 @@ set up a fixed date range.
     <kendo:sparkline-categoryAxisItem min="min">
     </kendo:sparkline-categoryAxisItem>
 
-### name `String`
+### name `java.lang.String`
 
 The unique axis name.
 
@@ -145,7 +145,7 @@ Specifying false for this option will disable this behavior.This option is most 
     <kendo:sparkline-categoryAxisItem roundToBaseUnit="roundToBaseUnit">
     </kendo:sparkline-categoryAxisItem>
 
-### type `String`
+### type `java.lang.String`
 
 The axis type.
 

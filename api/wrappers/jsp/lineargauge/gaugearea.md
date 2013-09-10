@@ -17,7 +17,7 @@ This is the entire visible area of the gauge.
 
 ## Configuration Attributes
 
-### background `Object`
+### background `java.lang.Object`
 
 The background of the gauge area.
 Any valid CSS color string will work here, including hex and rgb.
@@ -35,7 +35,7 @@ the horizontal one is 60px.
     <kendo:linearGauge-gaugeArea height="height">
     </kendo:linearGauge-gaugeArea>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the gauge area.
 

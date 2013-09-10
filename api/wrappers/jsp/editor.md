@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [Editor](/api/web/editor).
 
 ## Configuration Attributes
 
-### content `Object`
+### content `java.lang.Object`
 
 The content of the editor
 
@@ -26,7 +26,7 @@ Indicates whether the Editor should submit encoded HTML tags. By default, the su
     <kendo:editor encoded="encoded">
     </kendo:editor>
 
-### messages `Object`
+### messages `java.lang.Object`
 
 Defines the text of the labels that are shown within the editor. Used primarily for localization.
 
@@ -34,7 +34,7 @@ Defines the text of the labels that are shown within the editor. Used primarily 
     <kendo:editor messages="messages">
     </kendo:editor>
 
-### stylesheets `Object`
+### stylesheets `java.lang.Object`
 
 Allows custom stylesheets to be included within the editing area.
 

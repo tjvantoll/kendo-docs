@@ -16,7 +16,7 @@ Defines texts shown within the pager.
 
 ## Configuration Attributes
 
-### display `String`
+### display `java.lang.String`
 
 Defines the info text.
 
@@ -24,7 +24,7 @@ Defines the info text.
     <kendo:listView-pageable-messages display="display">
     </kendo:listView-pageable-messages>
 
-### empty `String`
+### empty `java.lang.String`
 
 Defines the info text shown when there are no records to be displayed.
 
@@ -32,7 +32,7 @@ Defines the info text shown when there are no records to be displayed.
     <kendo:listView-pageable-messages empty="empty">
     </kendo:listView-pageable-messages>
 
-### first `String`
+### first `java.lang.String`
 
 Defines the text of the first page button tooltip.
 
@@ -40,7 +40,7 @@ Defines the text of the first page button tooltip.
     <kendo:listView-pageable-messages first="first">
     </kendo:listView-pageable-messages>
 
-### itemsPerPage `String`
+### itemsPerPage `java.lang.String`
 
 Defines the text displayed after the select element of the pageSizes mode.
 
@@ -48,7 +48,7 @@ Defines the text displayed after the select element of the pageSizes mode.
     <kendo:listView-pageable-messages itemsPerPage="itemsPerPage">
     </kendo:listView-pageable-messages>
 
-### last `String`
+### last `java.lang.String`
 
 Defines the text of the last page button tooltip.
 
@@ -56,7 +56,7 @@ Defines the text of the last page button tooltip.
     <kendo:listView-pageable-messages last="last">
     </kendo:listView-pageable-messages>
 
-### next `String`
+### next `java.lang.String`
 
 Defines the text of the next page button tooltip.
 
@@ -64,7 +64,7 @@ Defines the text of the next page button tooltip.
     <kendo:listView-pageable-messages next="next">
     </kendo:listView-pageable-messages>
 
-### of `String`
+### of `java.lang.String`
 
 Defines the last part of the text of the input option.
 
@@ -72,7 +72,7 @@ Defines the last part of the text of the input option.
     <kendo:listView-pageable-messages of="of">
     </kendo:listView-pageable-messages>
 
-### page `String`
+### page `java.lang.String`
 
 Defines the first part of the text of the input option.
 
@@ -80,7 +80,7 @@ Defines the first part of the text of the input option.
     <kendo:listView-pageable-messages page="page">
     </kendo:listView-pageable-messages>
 
-### previous `String`
+### previous `java.lang.String`
 
 Defines the text of the previous page button tooltip.
 
@@ -88,7 +88,7 @@ Defines the text of the previous page button tooltip.
     <kendo:listView-pageable-messages previous="previous">
     </kendo:listView-pageable-messages>
 
-### refresh `String`
+### refresh `java.lang.String`
 
 Defines the text of the refresh button tooltip.
 

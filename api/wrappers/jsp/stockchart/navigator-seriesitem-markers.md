@@ -16,7 +16,7 @@ Marker options.** Applicable for area and line series. **
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the current series markers.
 
@@ -40,7 +40,7 @@ The marker size.
     <kendo:stockChart-navigator-seriesItem-markers size="size">
     </kendo:stockChart-navigator-seriesItem-markers>
 
-### type `String`
+### type `java.lang.String`
 
 Configures the markers shape type.
 

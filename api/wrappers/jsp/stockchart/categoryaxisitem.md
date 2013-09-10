@@ -16,7 +16,7 @@ The category axis configuration options.
 
 ## Configuration Attributes
 
-### axisCrossingValue `Object`
+### axisCrossingValue `java.lang.Object`
 
 Category index at which the first value axis crosses this axis. (Only for object)Category indicies at which the value axes cross the category axis. (Only for array)Note: Specify an index greater than or equal to the number
 of categories to denote the far end of the axis.
@@ -25,7 +25,7 @@ of categories to denote the far end of the axis.
     <kendo:stockChart-categoryAxisItem axisCrossingValue="axisCrossingValue">
     </kendo:stockChart-categoryAxisItem>
 
-### baseUnit `String`
+### baseUnit `java.lang.String`
 
 The base time interval for the date axis. The default base unit is determined automatically from the minimum difference
 between subsequent categories.The supported values are:Setting baseUnit to "fit" will set such base unit and categoryAxis.baseUnitStep
@@ -35,7 +35,7 @@ that the total number of categories does not exceed categoryAxis.maxDateGroups.S
     <kendo:stockChart-categoryAxisItem baseUnit="baseUnit">
     </kendo:stockChart-categoryAxisItem>
 
-### baseUnitStep `Object`
+### baseUnitStep `java.lang.Object`
 
 The step (interval) between categories in base units. Setting it to "auto" will set the step to such value
 that the total number of categories does not exceed categoryAxis.maxDateGroups.This option is ignored if categoryAxis.baseUnit is set to "fit".
@@ -44,7 +44,7 @@ that the total number of categories does not exceed categoryAxis.maxDateGroups.T
     <kendo:stockChart-categoryAxisItem baseUnitStep="baseUnitStep">
     </kendo:stockChart-categoryAxisItem>
 
-### categories `Object`
+### categories `java.lang.Object`
 
 Array of category names.
 
@@ -52,7 +52,7 @@ Array of category names.
     <kendo:stockChart-categoryAxisItem categories="categories">
     </kendo:stockChart-categoryAxisItem>
 
-### color `String`
+### color `java.lang.String`
 
 Color to apply to all axis elements. Any valid CSS color string will work here, including hex and rgb.
 Individual color settings for line and labels take priority.
@@ -61,7 +61,7 @@ Individual color settings for line and labels take priority.
     <kendo:stockChart-categoryAxisItem color="color">
     </kendo:stockChart-categoryAxisItem>
 
-### field `String`
+### field `java.lang.String`
 
 The data field containing the category name.
 
@@ -77,7 +77,7 @@ Positions categories and series points on major ticks. This removes the empty sp
     <kendo:stockChart-categoryAxisItem justified="justified">
     </kendo:stockChart-categoryAxisItem>
 
-### max `Object`
+### max `java.lang.Object`
 
 The last date displayed on the axis.
 By default, the minimum date is the same as the last category.
@@ -97,7 +97,7 @@ either baseUnit is set to "fit" or baseUnitStep is set to "auto".This option is 
     <kendo:stockChart-categoryAxisItem maxDateGroups="maxDateGroups">
     </kendo:stockChart-categoryAxisItem>
 
-### min `Object`
+### min `java.lang.Object`
 
 The first date displayed on the axis.
 By default, the minimum date is the same as the first category.
@@ -108,7 +108,7 @@ set up a fixed date range.
     <kendo:stockChart-categoryAxisItem min="min">
     </kendo:stockChart-categoryAxisItem>
 
-### name `String`
+### name `java.lang.String`
 
 The unique axis name.
 
@@ -116,7 +116,7 @@ The unique axis name.
     <kendo:stockChart-categoryAxisItem name="name">
     </kendo:stockChart-categoryAxisItem>
 
-### pane `String`
+### pane `java.lang.String`
 
 The name of the pane that the axis should be rendered in.
 The axis will be rendered in the first (default) pane if not set.
@@ -143,7 +143,7 @@ Specifying false for this option will disable this behavior.This option is most 
     <kendo:stockChart-categoryAxisItem roundToBaseUnit="roundToBaseUnit">
     </kendo:stockChart-categoryAxisItem>
 
-### type `String`
+### type `java.lang.String`
 
 The axis type.
 

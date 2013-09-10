@@ -16,7 +16,7 @@ Configures the scale minor ticks.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the minor ticks.
 Any valid CSS color string will work here, including hex and rgb.

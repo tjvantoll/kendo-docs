@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [DateTimePicker](/api/web/datetimepicker).
 
 ## Configuration Attributes
 
-### ARIATemplate `String`
+### ARIATemplate `java.lang.String`
 
 Specifies a template used to populate value of the aria-label attribute.
 
@@ -18,7 +18,7 @@ Specifies a template used to populate value of the aria-label attribute.
     <kendo:dateTimePicker ARIATemplate="ARIATemplate">
     </kendo:dateTimePicker>
 
-### culture `String`
+### culture `java.lang.String`
 
 Specifies the culture info used by the widget.
 
@@ -26,7 +26,7 @@ Specifies the culture info used by the widget.
     <kendo:dateTimePicker culture="culture">
     </kendo:dateTimePicker>
 
-### dates `Object`
+### dates `java.lang.Object`
 
 Specifies a list of dates, which will be passed to the month template of the DateView. All dates, which match the date portion of the selected date will be used to re-bind the TimeView.
 
@@ -34,7 +34,7 @@ Specifies a list of dates, which will be passed to the month template of the Dat
     <kendo:dateTimePicker dates="dates">
     </kendo:dateTimePicker>
 
-### depth `String`
+### depth `java.lang.String`
 
 Specifies the navigation depth of the calendar. The following
 settings are available for the depth value:
@@ -43,15 +43,15 @@ settings are available for the depth value:
     <kendo:dateTimePicker depth="depth">
     </kendo:dateTimePicker>
 
-### footer `String`
+### footer `java.lang.String`
 
-Template to be used for rendering the footer of the calendar.
+The template which renders the footer of the calendar. If false, the footer will not be rendered.
 
 #### Example
     <kendo:dateTimePicker footer="footer">
     </kendo:dateTimePicker>
 
-### format `String`
+### format `java.lang.String`
 
 Specifies the format, which is used to format the value of the DateTimePicker displayed in the input. The format also will be used to parse the input.
 
@@ -83,7 +83,7 @@ Specifies the minimum date that the calendar can show.
     <kendo:dateTimePicker min="min">
     </kendo:dateTimePicker>
 
-### parseFormats `Object`
+### parseFormats `java.lang.Object`
 
 Specifies the formats, which are used to parse the value set with value() method or by direct input. If not set the value of the options.format and options.timeFormat will be used. Note that value of the format option is always used.
 
@@ -91,16 +91,16 @@ Specifies the formats, which are used to parse the value set with value() method
     <kendo:dateTimePicker parseFormats="parseFormats">
     </kendo:dateTimePicker>
 
-### start `String`
+### start `java.lang.String`
 
 Specifies the start view of the calendar.
-The following settings are available for the start value:
+ The following settings are available for the start value:
 
 #### Example
     <kendo:dateTimePicker start="start">
     </kendo:dateTimePicker>
 
-### timeFormat `String`
+### timeFormat `java.lang.String`
 
 Specifies the format, which is used to format the values in the time drop-down list.
 
@@ -121,8 +121,7 @@ Specifies the selected value.
 
 ### kendo:dateTimePicker-animation
 
-The animation(s) used for opening and/or closing the pop-ups. Setting this value to false
-will disable the animation(s).
+Configures the opening and closing animations of the popups. Setting the animation option to false will disable the opening and closing animations. As a result the popup will open and close instantly.
 
 More documentation is available at [kendo:dateTimePicker-animation](datetimepicker/animation).
 

@@ -12,20 +12,16 @@ A JSP wrapper for Kendo UI [ColorPalette](/api/web/colorpalette).
 
 ### columns `float`
 
-The number of columns to display.  When you pass "websafe" this will
-automatically default to 18.
+The number of columns to display.  When you use the "websafe" palette, this will automatically default to 18.
 
 #### Example
     <kendo:colorPalette columns="columns">
     </kendo:colorPalette>
 
-### palette `Object`
+### palette `java.lang.Object`
 
-Specifies the color palette to display.  It can be a string with
-comma-separated colors in hex representation, an array of Color
-objects or of strings that parseColor understands.  As a shortcut,
-you can pass "basic" to get the simple palette (this is the default)
-or "websafe" to get the Web-safe palette.
+Specifies the color palette to display.
+It can be a string with comma-separated colors in hex representation, an array of kendo.Color object objects or of strings that parseColor understands.  As a shortcut, you can pass "basic" to get the simple palette (this is the default) or "websafe" to get the Web-safe palette.
 
 #### Example
     <kendo:colorPalette palette="palette">
@@ -39,7 +35,7 @@ The size of a color cell. Further configuration is available via [kendo:colorPal
     <kendo:colorPalette tileSize="tileSize">
     </kendo:colorPalette>
 
-### value `String`
+### value `java.lang.String`
 
 Specifies the initially selected color.
 

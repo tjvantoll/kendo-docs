@@ -16,7 +16,7 @@ Defines texts shown within the image browser.
 
 ## Configuration Attributes
 
-### deleteFile `String`
+### deleteFile `java.lang.String`
 
 Defines text for dialog shown when the file or directory is deleted.
 
@@ -24,7 +24,7 @@ Defines text for dialog shown when the file or directory is deleted.
     <kendo:editor-imageBrowser-messages deleteFile="deleteFile">
     </kendo:editor-imageBrowser-messages>
 
-### directoryNotFound `String`
+### directoryNotFound `java.lang.String`
 
 Defines text for dialog shown when the directory not found error occurs.
 
@@ -32,7 +32,7 @@ Defines text for dialog shown when the directory not found error occurs.
     <kendo:editor-imageBrowser-messages directoryNotFound="directoryNotFound">
     </kendo:editor-imageBrowser-messages>
 
-### emptyFolder `String`
+### emptyFolder `java.lang.String`
 
 Defines text displayed when folder does not contain items.
 
@@ -40,7 +40,7 @@ Defines text displayed when folder does not contain items.
     <kendo:editor-imageBrowser-messages emptyFolder="emptyFolder">
     </kendo:editor-imageBrowser-messages>
 
-### invalidFileType `String`
+### invalidFileType `java.lang.String`
 
 Defines text for dialog shown when an invalid file is set for upload.
 
@@ -48,7 +48,7 @@ Defines text for dialog shown when an invalid file is set for upload.
     <kendo:editor-imageBrowser-messages invalidFileType="invalidFileType">
     </kendo:editor-imageBrowser-messages>
 
-### orderBy `String`
+### orderBy `java.lang.String`
 
 Defines text for order by label.
 
@@ -56,7 +56,7 @@ Defines text for order by label.
     <kendo:editor-imageBrowser-messages orderBy="orderBy">
     </kendo:editor-imageBrowser-messages>
 
-### orderByName `String`
+### orderByName `java.lang.String`
 
 Defines text for Name item of order by drop down list.
 
@@ -64,7 +64,7 @@ Defines text for Name item of order by drop down list.
     <kendo:editor-imageBrowser-messages orderByName="orderByName">
     </kendo:editor-imageBrowser-messages>
 
-### orderBySize `String`
+### orderBySize `java.lang.String`
 
 Defines text for Size item of order by drop down list.
 
@@ -72,7 +72,7 @@ Defines text for Size item of order by drop down list.
     <kendo:editor-imageBrowser-messages orderBySize="orderBySize">
     </kendo:editor-imageBrowser-messages>
 
-### overwriteFile `String`
+### overwriteFile `java.lang.String`
 
 Defines text for dialog shown when an already existing file is set for upload.
 
@@ -80,7 +80,7 @@ Defines text for dialog shown when an already existing file is set for upload.
     <kendo:editor-imageBrowser-messages overwriteFile="overwriteFile">
     </kendo:editor-imageBrowser-messages>
 
-### search `String`
+### search `java.lang.String`
 
 Defines text for search box pleaceholder.
 
@@ -88,7 +88,7 @@ Defines text for search box pleaceholder.
     <kendo:editor-imageBrowser-messages search="search">
     </kendo:editor-imageBrowser-messages>
 
-### uploadFile `String`
+### uploadFile `java.lang.String`
 
 Defines text for upload button.
 

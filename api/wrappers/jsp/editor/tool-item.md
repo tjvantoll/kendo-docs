@@ -16,7 +16,7 @@ For tools that display a list of items (fontName, fontSize, formatting), this op
 
 ## Configuration Attributes
 
-### context `String`
+### context `java.lang.String`
 
 Only applicable for the formatting tool. Specifies the context in which the option will be available.
 
@@ -24,7 +24,7 @@ Only applicable for the formatting tool. Specifies the context in which the opti
     <kendo:editor-tool-item context="context">
     </kendo:editor-tool-item>
 
-### text `String`
+### text `java.lang.String`
 
 The string that the popup item will show.
 
@@ -32,7 +32,7 @@ The string that the popup item will show.
     <kendo:editor-tool-item text="text">
     </kendo:editor-tool-item>
 
-### value `String`
+### value `java.lang.String`
 
 The value that will be applied by the tool when this item is selected.
 

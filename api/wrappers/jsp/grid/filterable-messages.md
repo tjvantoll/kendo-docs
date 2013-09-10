@@ -16,7 +16,7 @@ The text messages displayed in the filter menu. Use it to customize or localize 
 
 ## Configuration Attributes
 
-### and `String`
+### and `java.lang.String`
 
 The text of the option which represents the "and" logical operation.
 
@@ -24,7 +24,7 @@ The text of the option which represents the "and" logical operation.
     <kendo:grid-filterable-messages and="and">
     </kendo:grid-filterable-messages>
 
-### clear `String`
+### clear `java.lang.String`
 
 The text of the button which clears the filter.
 
@@ -32,7 +32,7 @@ The text of the button which clears the filter.
     <kendo:grid-filterable-messages clear="clear">
     </kendo:grid-filterable-messages>
 
-### filter `String`
+### filter `java.lang.String`
 
 The text of the button which applies the filter.
 
@@ -40,7 +40,7 @@ The text of the button which applies the filter.
     <kendo:grid-filterable-messages filter="filter">
     </kendo:grid-filterable-messages>
 
-### info `String`
+### info `java.lang.String`
 
 The text of the information message on the top of the filter menu.
 
@@ -48,7 +48,7 @@ The text of the information message on the top of the filter menu.
     <kendo:grid-filterable-messages info="info">
     </kendo:grid-filterable-messages>
 
-### isFalse `String`
+### isFalse `java.lang.String`
 
 The text of the radio button for false values. Displayed when filtering Boolean fields.
 
@@ -56,7 +56,7 @@ The text of the radio button for false values. Displayed when filtering Boolean 
     <kendo:grid-filterable-messages isFalse="isFalse">
     </kendo:grid-filterable-messages>
 
-### isTrue `String`
+### isTrue `java.lang.String`
 
 The text of the radio button for true values. Displayed when filtering Boolean fields.
 
@@ -64,7 +64,7 @@ The text of the radio button for true values. Displayed when filtering Boolean f
     <kendo:grid-filterable-messages isTrue="isTrue">
     </kendo:grid-filterable-messages>
 
-### or `String`
+### or `java.lang.String`
 
 The text of the option which represents the "or" logical operation.
 
@@ -72,7 +72,7 @@ The text of the option which represents the "or" logical operation.
     <kendo:grid-filterable-messages or="or">
     </kendo:grid-filterable-messages>
 
-### selectValue `String`
+### selectValue `java.lang.String`
 
 The text of the dropdownlist displayed in the filter menu for columns whose values option is set.
 

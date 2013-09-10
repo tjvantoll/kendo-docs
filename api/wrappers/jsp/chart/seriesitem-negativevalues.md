@@ -16,7 +16,7 @@ The options for displaying the chart negative bubble values.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the chart negative bubble values.
 

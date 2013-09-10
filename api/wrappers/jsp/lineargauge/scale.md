@@ -57,7 +57,7 @@ If the labels are normally on the left side of the scale, mirroring the scale wi
     <kendo:linearGauge-scale mirror="mirror">
     </kendo:linearGauge-scale>
 
-### rangePlaceholderColor `String`
+### rangePlaceholderColor `java.lang.String`
 
 The default color for the ranges.
 

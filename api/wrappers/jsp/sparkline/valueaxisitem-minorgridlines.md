@@ -16,7 +16,7 @@ Configures the minor grid lines.  These are the lines that are an extension of t
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the lines.Note that this has no effect if the visibility of the minor grid lines is not set to true.
 
@@ -24,7 +24,7 @@ The color of the lines.Note that this has no effect if the visibility of the min
     <kendo:sparkline-valueAxisItem-minorGridLines color="color">
     </kendo:sparkline-valueAxisItem-minorGridLines>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the minor grid lines.
 

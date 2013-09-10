@@ -16,7 +16,7 @@ The icon of the note.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the note icon.
 
@@ -32,7 +32,7 @@ The size of the icon.
     <kendo:sparkline-categoryAxisItem-notes-dataItem-icon size="size">
     </kendo:sparkline-categoryAxisItem-notes-dataItem-icon>
 
-### type `String`
+### type `java.lang.String`
 
 The icon shape.The supported values are:
 * "circle" - the marker shape is circle.

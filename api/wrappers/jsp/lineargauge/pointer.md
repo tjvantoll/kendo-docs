@@ -16,7 +16,7 @@ The pointer configuration options.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the pointer.
 
@@ -24,7 +24,7 @@ The color of the pointer.
     <kendo:linearGauge-pointer color="color">
     </kendo:linearGauge-pointer>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the pointer.
 
@@ -41,7 +41,7 @@ Any valid CSS color string will work here, including hex and rgb.
     <kendo:linearGauge-pointer opacity="opacity">
     </kendo:linearGauge-pointer>
 
-### shape `String`
+### shape `java.lang.String`
 
 The shape of the pointer.
 

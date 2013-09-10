@@ -17,7 +17,7 @@ The transport option can also be used to implement custom data loading and savin
 
 ## Configuration Attributes
 
-### create `String`
+### create `java.lang.String`
 
 The configuration used when the data source saves newly created data items. Those are items added to the data source via the add or insert methods.If the value of transport.create is a function, the data source invokes that function instead of jQuery.ajax.If the value of transport.create is a string the data source uses this string as the URL of the remote service. Further configuration is available via [kendo:dataSource-transport-create](#kendo-dataSource-transport-create). 
 
@@ -25,7 +25,7 @@ The configuration used when the data source saves newly created data items. Thos
     <kendo:dataSource-transport create="create">
     </kendo:dataSource-transport>
 
-### destroy `String`
+### destroy `java.lang.String`
 
 The configuration used when the data source destroys data items. Those are items removed from the data source via the remove method.If the value of transport.destroy is a function, the data source invokes that function instead of jQuery.ajax.If the value of transport.destroy is a string the data source uses this string as the URL of the remote service. Further configuration is available via [kendo:dataSource-transport-destroy](#kendo-dataSource-transport-destroy). 
 
@@ -33,7 +33,7 @@ The configuration used when the data source destroys data items. Those are items
     <kendo:dataSource-transport destroy="destroy">
     </kendo:dataSource-transport>
 
-### parameterMap `String`
+### parameterMap `java.lang.String`
 
 The function which converts the request parameters to a format suitable for the remote service. By default
 the data source sends the parameters using jQuery's conventions.
@@ -42,7 +42,7 @@ the data source sends the parameters using jQuery's conventions.
     <kendo:dataSource-transport parameterMap="parameterMap">
     </kendo:dataSource-transport>
 
-### read `String`
+### read `java.lang.String`
 
 The configuration used when the data source loads data items from a remote service.If the value of transport.read is a function, the data source invokes that function instead of jQuery.ajax.If the value of transport.read is a string the data source uses this string as the URL of the remote service. Further configuration is available via [kendo:dataSource-transport-read](#kendo-dataSource-transport-read). 
 
@@ -50,7 +50,7 @@ The configuration used when the data source loads data items from a remote servi
     <kendo:dataSource-transport read="read">
     </kendo:dataSource-transport>
 
-### update `String`
+### update `java.lang.String`
 
 The configuration used when the data source saves updated data items. Those are data items whose fields have been updated.If the value of transport.update is a function, the data source invokes that function instead of jQuery.ajax.If the value of transport.update is a string the data source uses this string as the URL of the remote service. Further configuration is available via [kendo:dataSource-transport-update](#kendo-dataSource-transport-update). 
 

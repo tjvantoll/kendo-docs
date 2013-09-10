@@ -16,7 +16,7 @@ The value axis notes configuration.
 
 ## Configuration Attributes
 
-### position `String`
+### position `java.lang.String`
 
 The position of the value axis note.
 

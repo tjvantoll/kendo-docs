@@ -16,18 +16,17 @@ Templates for the cells rendered in the calendar "month" view.
 
 ## Configuration Attributes
 
-### content `String`
+### content `java.lang.String`
 
-Template to be used for rendering the cells in the calendar "month" view, which are in range.
+The template to be used for rendering the cells in "month" view, which are between the min/max range.
 
 #### Example
     <kendo:datePicker-month content="content">
     </kendo:datePicker-month>
 
-### empty `String`
+### empty `java.lang.String`
 
-The template used for rendering the cells in the calendar "month" view, which are not in the range between
-the minimum and maximum values.
+The template to be used for rendering the cells in the "month" view, which are not in the min/max range.
 
 #### Example
     <kendo:datePicker-month empty="empty">

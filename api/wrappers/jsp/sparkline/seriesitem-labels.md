@@ -16,7 +16,7 @@ Configures the series data labels.
 
 ## Configuration Attributes
 
-### align `String`
+### align `java.lang.String`
 
 Defines the alignment of the labels.** Available for pie series. **
 
@@ -24,7 +24,7 @@ Defines the alignment of the labels.** Available for pie series. **
     <kendo:sparkline-seriesItem-labels align="align">
     </kendo:sparkline-seriesItem-labels>
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the labels.
 
@@ -32,7 +32,7 @@ The background color of the labels.
     <kendo:sparkline-seriesItem-labels background="background">
     </kendo:sparkline-seriesItem-labels>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels.
 
@@ -48,7 +48,7 @@ The distance of the labels.** Available for pie series. **
     <kendo:sparkline-seriesItem-labels distance="distance">
     </kendo:sparkline-seriesItem-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -56,7 +56,7 @@ The font style of the labels.
     <kendo:sparkline-seriesItem-labels font="font">
     </kendo:sparkline-seriesItem-labels>
 
-### format `String`
+### format `java.lang.String`
 
 The format of the labels.
 
@@ -64,7 +64,7 @@ The format of the labels.
     <kendo:sparkline-seriesItem-labels format="format">
     </kendo:sparkline-seriesItem-labels>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the labels.
 
@@ -72,7 +72,7 @@ The margin of the labels.
     <kendo:sparkline-seriesItem-labels margin="margin">
     </kendo:sparkline-seriesItem-labels>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the labels.
 
@@ -80,7 +80,7 @@ The padding of the labels.
     <kendo:sparkline-seriesItem-labels padding="padding">
     </kendo:sparkline-seriesItem-labels>
 
-### position `String`
+### position `java.lang.String`
 
 Defines the position of the labels.
 
@@ -88,7 +88,7 @@ Defines the position of the labels.
     <kendo:sparkline-seriesItem-labels position="position">
     </kendo:sparkline-seriesItem-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The label template. Template variables:
 

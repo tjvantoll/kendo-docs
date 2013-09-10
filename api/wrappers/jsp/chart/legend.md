@@ -16,7 +16,7 @@ The chart legend configuration options.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the legend. Accepts a valid CSS color string, including hex and rgb.
 
@@ -52,7 +52,7 @@ A negative value will move the legend upwards from its current position.
     <kendo:chart-legend offsetY="offsetY">
     </kendo:chart-legend>
 
-### position `String`
+### position `java.lang.String`
 
 The positions of the chart legend.The supported values are:
 

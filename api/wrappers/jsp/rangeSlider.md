@@ -35,7 +35,7 @@ The minimum value of the RangeSlider.
     <kendo:rangeSlider min="min">
     </kendo:rangeSlider>
 
-### orientation `String`
+### orientation `java.lang.String`
 
 F
 The orientation of a RangeSlider; "horizontal" or
@@ -71,7 +71,7 @@ arrow keys (the drag handle must be focused), or (3) drags the drag handle.
     <kendo:rangeSlider smallStep="smallStep">
     </kendo:rangeSlider>
 
-### tickPlacement `String`
+### tickPlacement `java.lang.String`
 
 Denotes the location of the tick marks in the RangeSlider. The available options are:
 

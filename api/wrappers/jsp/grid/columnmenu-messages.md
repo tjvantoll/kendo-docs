@@ -16,7 +16,7 @@ The text messages displayed in the column menu. Use it to customize or localize 
 
 ## Configuration Attributes
 
-### columns `String`
+### columns `java.lang.String`
 
 The text message displayed for the column selection menu item.
 
@@ -24,7 +24,7 @@ The text message displayed for the column selection menu item.
     <kendo:grid-columnMenu-messages columns="columns">
     </kendo:grid-columnMenu-messages>
 
-### filter `String`
+### filter `java.lang.String`
 
 The text message displayed for the filter menu item.
 
@@ -32,7 +32,7 @@ The text message displayed for the filter menu item.
     <kendo:grid-columnMenu-messages filter="filter">
     </kendo:grid-columnMenu-messages>
 
-### sortAscending `String`
+### sortAscending `java.lang.String`
 
 The text message displayed for the menu item which performs ascending sort.
 
@@ -40,7 +40,7 @@ The text message displayed for the menu item which performs ascending sort.
     <kendo:grid-columnMenu-messages sortAscending="sortAscending">
     </kendo:grid-columnMenu-messages>
 
-### sortDescending `String`
+### sortDescending `java.lang.String`
 
 The text message displayed for the menu item which performs descending sort.
 

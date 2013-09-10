@@ -16,7 +16,7 @@ The axis labels configuration.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The background color of the labels. Accepts a valid CSS color string, including 
     <kendo:chart-valueAxisItem-labels background="background">
     </kendo:chart-valueAxisItem-labels>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The text color of the labels. Accepts a valid CSS color string, including hex an
     <kendo:chart-valueAxisItem-labels color="color">
     </kendo:chart-valueAxisItem-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -40,7 +40,7 @@ The font style of the labels.
     <kendo:chart-valueAxisItem-labels font="font">
     </kendo:chart-valueAxisItem-labels>
 
-### format `String`
+### format `java.lang.String`
 
 The format used to display the labels. Uses kendo.format. Contains one placeholder ("{0}") which represents the category value.
 
@@ -97,7 +97,7 @@ Every n-th label is rendered where n is the step
     <kendo:chart-valueAxisItem-labels step="step">
     </kendo:chart-valueAxisItem-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the labels.The fields which can be used in the template are:
 

@@ -17,7 +17,7 @@ If a type value is missing, the type is assumed to be the one specified in serie
 
 ## Configuration Attributes
 
-### aggregate `String`
+### aggregate `java.lang.String`
 
 The aggregate function to apply for date series.This function is used when a category (an year, month, etc.) contains two or more points.
 The function return value is displayed instead of the individual points.The supported values are:
@@ -26,7 +26,7 @@ The function return value is displayed instead of the individual points.The supp
     <kendo:chart-seriesItem aggregate="aggregate">
     </kendo:chart-seriesItem>
 
-### axis `String`
+### axis `java.lang.String`
 
 The name of the value axis to use.
 
@@ -34,7 +34,7 @@ The name of the value axis to use.
     <kendo:chart-seriesItem axis="axis">
     </kendo:chart-seriesItem>
 
-### categoryField `String`
+### categoryField `java.lang.String`
 
 The data item field which contains the category name or date.
 
@@ -42,7 +42,7 @@ The data item field which contains the category name or date.
     <kendo:chart-seriesItem categoryField="categoryField">
     </kendo:chart-seriesItem>
 
-### closeField `String`
+### closeField `java.lang.String`
 
 The data field containing the close value.
 
@@ -50,7 +50,7 @@ The data field containing the close value.
     <kendo:chart-seriesItem closeField="closeField">
     </kendo:chart-seriesItem>
 
-### color `String`
+### color `java.lang.String`
 
 The series base color. Accepts a valid CSS color string, including hex and rgb.
 
@@ -58,7 +58,7 @@ The series base color. Accepts a valid CSS color string, including hex and rgb.
     <kendo:chart-seriesItem color="color">
     </kendo:chart-seriesItem>
 
-### colorField `String`
+### colorField `java.lang.String`
 
 The data item field which contains the series color.
 
@@ -66,7 +66,7 @@ The data item field which contains the series color.
     <kendo:chart-seriesItem colorField="colorField">
     </kendo:chart-seriesItem>
 
-### currentField `String`
+### currentField `java.lang.String`
 
 The data item field containing the current value.
 
@@ -74,7 +74,7 @@ The data item field containing the current value.
     <kendo:chart-seriesItem currentField="currentField">
     </kendo:chart-seriesItem>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of line chart.The following dash types are supported:
 
@@ -82,7 +82,7 @@ The dash type of line chart.The following dash types are supported:
     <kendo:chart-seriesItem dashType="dashType">
     </kendo:chart-seriesItem>
 
-### data `Object`
+### data `java.lang.Object`
 
 The array of data items which represent the series data.Can be set to :
 
@@ -90,7 +90,7 @@ The array of data items which represent the series data.Can be set to :
     <kendo:chart-seriesItem data="data">
     </kendo:chart-seriesItem>
 
-### downColor `String`
+### downColor `java.lang.String`
 
 The series color when the open value is greater than the close value.
 
@@ -98,7 +98,7 @@ The series color when the open value is greater than the close value.
     <kendo:chart-seriesItem downColor="downColor">
     </kendo:chart-seriesItem>
 
-### downColorField `String`
+### downColorField `java.lang.String`
 
 The data field containing the color applied when the open value is greater than the close value.
 
@@ -106,7 +106,7 @@ The data field containing the color applied when the open value is greater than 
     <kendo:chart-seriesItem downColorField="downColorField">
     </kendo:chart-seriesItem>
 
-### explodeField `String`
+### explodeField `java.lang.String`
 
 The data item field which contains a boolean value indicating whether the sector is exploded.
 
@@ -114,7 +114,7 @@ The data item field which contains a boolean value indicating whether the sector
     <kendo:chart-seriesItem explodeField="explodeField">
     </kendo:chart-seriesItem>
 
-### field `String`
+### field `java.lang.String`
 
 The data item field which contains the series value.
 
@@ -130,7 +130,7 @@ The distance between the category clusters.
     <kendo:chart-seriesItem gap="gap">
     </kendo:chart-seriesItem>
 
-### highField `String`
+### highField `java.lang.String`
 
 The data field containing the high value.
 
@@ -146,7 +146,7 @@ The diameter of the donut hole in pixels.
     <kendo:chart-seriesItem holeSize="holeSize">
     </kendo:chart-seriesItem>
 
-### line `String`
+### line `java.lang.String`
 
 The chart line configuration options. Further configuration is available via [kendo:chart-seriesItem-line](#kendo-chart-seriesItem-line). 
 
@@ -154,7 +154,7 @@ The chart line configuration options. Further configuration is available via [ke
     <kendo:chart-seriesItem line="line">
     </kendo:chart-seriesItem>
 
-### lowField `String`
+### lowField `java.lang.String`
 
 The data field containing the low value.
 
@@ -186,7 +186,7 @@ The minimum size of the chart bubble series marker.
     <kendo:chart-seriesItem minSize="minSize">
     </kendo:chart-seriesItem>
 
-### missingValues `String`
+### missingValues `java.lang.String`
 
 The behavior for handling missing values. The supported values are:
 
@@ -194,7 +194,7 @@ The behavior for handling missing values. The supported values are:
     <kendo:chart-seriesItem missingValues="missingValues">
     </kendo:chart-seriesItem>
 
-### name `String`
+### name `java.lang.String`
 
 The name of the chart series which is visible in the legend.
 
@@ -202,7 +202,7 @@ The name of the chart series which is visible in the legend.
     <kendo:chart-seriesItem name="name">
     </kendo:chart-seriesItem>
 
-### negativeColor `String`
+### negativeColor `java.lang.String`
 
 The color to use for bar or column series with negative values. Accepts a valid CSS color string, including hex and rgb.
 
@@ -210,7 +210,7 @@ The color to use for bar or column series with negative values. Accepts a valid 
     <kendo:chart-seriesItem negativeColor="negativeColor">
     </kendo:chart-seriesItem>
 
-### noteTextField `String`
+### noteTextField `java.lang.String`
 
 The data item field which contains the series note text.
 
@@ -226,7 +226,7 @@ The series opacity. By default the series are opaque.
     <kendo:chart-seriesItem opacity="opacity">
     </kendo:chart-seriesItem>
 
-### openField `String`
+### openField `java.lang.String`
 
 The data field containing the open value.
 
@@ -250,7 +250,7 @@ The or radius of the chart donut series in pixels. If not set, the available spa
     <kendo:chart-seriesItem size="size">
     </kendo:chart-seriesItem>
 
-### sizeField `String`
+### sizeField `java.lang.String`
 
 The data field containing the bubble size value.
 
@@ -266,7 +266,7 @@ The space between the chart series as proportion of the series width.
     <kendo:chart-seriesItem spacing="spacing">
     </kendo:chart-seriesItem>
 
-### stack `Object`
+### stack `java.lang.Object`
 
 A value indicating if the series should be stacked. String value indicates that the series should be stacked in a group with the specified name.
 
@@ -282,7 +282,7 @@ The start angle (degrees) of the first donut or pie segment.Angles increase cloc
     <kendo:chart-seriesItem startAngle="startAngle">
     </kendo:chart-seriesItem>
 
-### targetField `String`
+### targetField `java.lang.String`
 
 The data item field containing the target value.
 
@@ -290,7 +290,7 @@ The data item field containing the target value.
     <kendo:chart-seriesItem targetField="targetField">
     </kendo:chart-seriesItem>
 
-### type `String`
+### type `java.lang.String`
 
 The type of the series.The supported values are:
 
@@ -307,7 +307,7 @@ or series name (for other available series types) in the legend.
     <kendo:chart-seriesItem visibleInLegend="visibleInLegend">
     </kendo:chart-seriesItem>
 
-### visibleInLegendField `String`
+### visibleInLegendField `java.lang.String`
 
 The data item field which indicates whether to show the point category name in the legend.
 
@@ -323,7 +323,7 @@ The line width.
     <kendo:chart-seriesItem width="width">
     </kendo:chart-seriesItem>
 
-### xAxis `String`
+### xAxis `java.lang.String`
 
 The name of the X axis to use.For polar series the xAxis range is expressed in degrees.
 
@@ -331,7 +331,7 @@ The name of the X axis to use.For polar series the xAxis range is expressed in d
     <kendo:chart-seriesItem xAxis="xAxis">
     </kendo:chart-seriesItem>
 
-### xField `String`
+### xField `java.lang.String`
 
 The data item field containing the X value.
 
@@ -339,7 +339,7 @@ The data item field containing the X value.
     <kendo:chart-seriesItem xField="xField">
     </kendo:chart-seriesItem>
 
-### yAxis `String`
+### yAxis `java.lang.String`
 
 The name of the Y axis to use.** Available for bubble, scatter, scatterLine and polar series. **
 
@@ -347,7 +347,7 @@ The name of the Y axis to use.** Available for bubble, scatter, scatterLine and 
     <kendo:chart-seriesItem yAxis="yAxis">
     </kendo:chart-seriesItem>
 
-### yField `String`
+### yField `java.lang.String`
 
 The data item field containing the Y value.
 

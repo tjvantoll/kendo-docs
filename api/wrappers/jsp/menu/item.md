@@ -24,7 +24,7 @@ Specifies whether the item is initially enabled
     <kendo:menu-item enabled="enabled">
     </kendo:menu-item>
 
-### imageUrl `String`
+### imageUrl `java.lang.String`
 
 Specifies the URL of the image displayed by the item
 
@@ -40,7 +40,7 @@ Specifies whether the item is initially selected
     <kendo:menu-item selected="selected">
     </kendo:menu-item>
 
-### spriteCssClass `String`
+### spriteCssClass `java.lang.String`
 
 Specifies the class name for the sprite image displayed by the item
 
@@ -48,7 +48,7 @@ Specifies the class name for the sprite image displayed by the item
     <kendo:menu-item spriteCssClass="spriteCssClass">
     </kendo:menu-item>
 
-### text `String`
+### text `java.lang.String`
 
 Specifies the text displayed by the item
 
@@ -56,7 +56,7 @@ Specifies the text displayed by the item
     <kendo:menu-item text="text">
     </kendo:menu-item>
 
-### url `String`
+### url `java.lang.String`
 
 Specifies the URL that the item links to
 

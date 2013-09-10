@@ -16,7 +16,7 @@ The border of the target.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the border.
 
@@ -24,7 +24,7 @@ The color of the border.
     <kendo:chart-seriesItem-target-border color="color">
     </kendo:chart-seriesItem-target-border>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The following dash types are supported:
 

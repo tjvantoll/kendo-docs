@@ -32,7 +32,7 @@ Specifies whether a pane is collapsible (true) or not collapsible (false).
     <kendo:splitter-pane collapsible="collapsible">
     </kendo:splitter-pane>
 
-### contentUrl `String`
+### contentUrl `java.lang.String`
 
 Specifies the URL from which to load the content of a pane.
 
@@ -40,7 +40,7 @@ Specifies the URL from which to load the content of a pane.
     <kendo:splitter-pane contentUrl="contentUrl">
     </kendo:splitter-pane>
 
-### max `String`
+### max `java.lang.String`
 
 Specifies the maximum size of a pane defined as pixels (i.e. "200px") or as a percentage (i.e. "50%"). The size of a resized pane cannot exceed the defined maximum size.
 
@@ -48,7 +48,7 @@ Specifies the maximum size of a pane defined as pixels (i.e. "200px") or as a pe
     <kendo:splitter-pane max="max">
     </kendo:splitter-pane>
 
-### min `String`
+### min `java.lang.String`
 
 Specifies the minimum size of a pane defined as pixels (i.e. "200px") or as a percentage (i.e. "50%"). The size of a resized pane cannot be less than the defined minimum size.
 
@@ -72,7 +72,7 @@ Specifies whether a pane is scrollable (true) or not scrollable (false).
     <kendo:splitter-pane scrollable="scrollable">
     </kendo:splitter-pane>
 
-### size `String`
+### size `java.lang.String`
 
 Specifies the size of a pane defined as pixels (i.e. "200px") or as a percentage (i.e. "50%"). This value must not exceed panes.max or be less then panes.min.
 

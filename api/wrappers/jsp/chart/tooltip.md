@@ -16,7 +16,7 @@ The chart series tooltip configuration options.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The background color of the tooltip. Accepts a valid CSS color string, including
     <kendo:chart-tooltip background="background">
     </kendo:chart-tooltip>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The text color of the tooltip. Accepts a valid CSS color string, including hex a
     <kendo:chart-tooltip color="color">
     </kendo:chart-tooltip>
 
-### font `String`
+### font `java.lang.String`
 
 The tooltip font.
 
@@ -40,7 +40,7 @@ The tooltip font.
     <kendo:chart-tooltip font="font">
     </kendo:chart-tooltip>
 
-### format `String`
+### format `java.lang.String`
 
 The format of the labels. Uses kendo.format.Format placeholders:
 
@@ -64,7 +64,7 @@ If set to true the chart will display a single tooltip for every category.
     <kendo:chart-tooltip shared="shared">
     </kendo:chart-tooltip>
 
-### sharedTemplate `String`
+### sharedTemplate `java.lang.String`
 
 The template which renders the shared tooltip.The fields which can be used in the template are:
 
@@ -72,7 +72,7 @@ The template which renders the shared tooltip.The fields which can be used in th
     <kendo:chart-tooltip sharedTemplate="sharedTemplate">
     </kendo:chart-tooltip>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the tooltip.The fields which can be used in the template are:
 

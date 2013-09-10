@@ -18,7 +18,7 @@ Indicates whether the chart will call read on the data source initially.
     <kendo:sparkline autoBind="autoBind">
     </kendo:sparkline>
 
-### axisDefaults `Object`
+### axisDefaults `java.lang.Object`
 
 Default options for all chart axes.
 
@@ -26,7 +26,7 @@ Default options for all chart axes.
     <kendo:sparkline axisDefaults="axisDefaults">
     </kendo:sparkline>
 
-### data `Object`
+### data `java.lang.Object`
 
 The data for the default sparkline series.Will be discareded if series are supplied.
 
@@ -42,7 +42,7 @@ The width to allocate for each data point.
     <kendo:sparkline pointWidth="pointWidth">
     </kendo:sparkline>
 
-### renderAs `String`
+### renderAs `java.lang.String`
 
 Sets the preferred rendering engine.
 If it is not supported by the browser, the Sparkline will switch to the first available mode.The supported values are:
@@ -51,7 +51,7 @@ If it is not supported by the browser, the Sparkline will switch to the first av
     <kendo:sparkline renderAs="renderAs">
     </kendo:sparkline>
 
-### seriesColors `Object`
+### seriesColors `java.lang.Object`
 
 The default colors for the chart's series. When all colors are used, new colors are pulled from the start again.
 
@@ -59,7 +59,7 @@ The default colors for the chart's series. When all colors are used, new colors 
     <kendo:sparkline seriesColors="seriesColors">
     </kendo:sparkline>
 
-### theme `String`
+### theme `java.lang.String`
 
 Sets Chart theme. Available themes: default, blueOpal, black.
 
@@ -75,7 +75,7 @@ A value indicating if transition animations should be played.
     <kendo:sparkline transitions="transitions">
     </kendo:sparkline>
 
-### type `String`
+### type `java.lang.String`
 
 The default series type.
 

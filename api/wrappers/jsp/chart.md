@@ -19,7 +19,7 @@ data source is fired. By default the widget will bind to the data source specifi
     <kendo:chart autoBind="autoBind">
     </kendo:chart>
 
-### renderAs `String`
+### renderAs `java.lang.String`
 
 Sets the preferred rendering engine.
 If it is not supported by the browser, the Chart will switch to the first available mode.The supported values are:
@@ -28,7 +28,7 @@ If it is not supported by the browser, the Chart will switch to the first availa
     <kendo:chart renderAs="renderAs">
     </kendo:chart>
 
-### seriesColors `Object`
+### seriesColors `java.lang.Object`
 
 The default colors for the chart's series. When all colors are used, new colors are pulled from the start again.
 
@@ -36,7 +36,7 @@ The default colors for the chart's series. When all colors are used, new colors 
     <kendo:chart seriesColors="seriesColors">
     </kendo:chart>
 
-### theme `String`
+### theme `java.lang.String`
 
 The chart theme.The supported values are:
 
@@ -44,7 +44,7 @@ The chart theme.The supported values are:
     <kendo:chart theme="theme">
     </kendo:chart>
 
-### title `String`
+### title `java.lang.String`
 
 The chart title configuration options or text. Further configuration is available via [kendo:chart-title](#kendo-chart-title). 
 

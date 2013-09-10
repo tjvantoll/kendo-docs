@@ -16,7 +16,7 @@ The field which contains the type of the entry. Either f for image or d for dire
 
 ## Configuration Attributes
 
-### field `String`
+### field `java.lang.String`
 
 The name of the field.
 
@@ -24,7 +24,7 @@ The name of the field.
     <kendo:editor-imageBrowser-schema-model-fields-type field="field">
     </kendo:editor-imageBrowser-schema-model-fields-type>
 
-### parse `String`
+### parse `java.lang.String`
 
 Specifies the function which will parse the field value. If not set default parsers will be used.
 

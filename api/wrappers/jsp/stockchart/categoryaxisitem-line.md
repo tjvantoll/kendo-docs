@@ -16,7 +16,7 @@ Configures the axis line. This will also effect major and minor ticks, but not g
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the lines. Any valid CSS color string will work here, including hex and rgb.Note: This will also effect the major and minor ticks, but not the grid lines.
 
@@ -24,7 +24,7 @@ The color of the lines. Any valid CSS color string will work here, including hex
     <kendo:stockChart-categoryAxisItem-line color="color">
     </kendo:stockChart-categoryAxisItem-line>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the line.
 

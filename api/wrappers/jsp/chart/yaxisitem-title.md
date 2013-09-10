@@ -16,7 +16,7 @@ The title configuration of the scatter chart y axis.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the title. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The background color of the title. Accepts a valid CSS color string, including h
     <kendo:chart-yAxisItem-title background="background">
     </kendo:chart-yAxisItem-title>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the title. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The text color of the title. Accepts a valid CSS color string, including hex and
     <kendo:chart-yAxisItem-title color="color">
     </kendo:chart-yAxisItem-title>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the title.
 
@@ -56,7 +56,7 @@ The padding of the title. A numeric value will set all paddings. Further configu
     <kendo:chart-yAxisItem-title padding="padding">
     </kendo:chart-yAxisItem-title>
 
-### position `String`
+### position `java.lang.String`
 
 The position of the title.The supported values are:
 
@@ -72,7 +72,7 @@ The rotation angle of the title. By default the title is not rotated.
     <kendo:chart-yAxisItem-title rotation="rotation">
     </kendo:chart-yAxisItem-title>
 
-### text `String`
+### text `java.lang.String`
 
 The text of the title.
 

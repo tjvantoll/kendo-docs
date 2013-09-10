@@ -17,7 +17,7 @@ field to which the column is bound. The grid will create a column for every item
 
 ## Configuration Attributes
 
-### aggregates `Object`
+### aggregates `java.lang.Object`
 
 The aggregate(s) which are calculated when the grid is grouped by the columns field.
 The supported aggregates are "average", "count", "max", "min" and "sum".
@@ -26,7 +26,7 @@ The supported aggregates are "average", "count", "max", "min" and "sum".
     <kendo:grid-column aggregates="aggregates">
     </kendo:grid-column>
 
-### attributes `Object`
+### attributes `java.lang.Object`
 
 HTML attributes of the table cell (<td>) rendered for the column.
 
@@ -34,7 +34,7 @@ HTML attributes of the table cell (<td>) rendered for the column.
     <kendo:grid-column attributes="attributes">
     </kendo:grid-column>
 
-### command `String`
+### command `java.lang.String`
 
 The configuration of the column command(s). If set the column would display a button for every command. Commands can be custom or built-in ("edit" or "destroy").The "edit" built-in command switches the current table row in edit mode.The "destroy" built-in command removes the data item to which the current table row is bound.Custom commands are supported by specifying the click option. Further configuration is available via [kendo:grid-column-command](#kendo-grid-column-command). 
 
@@ -42,7 +42,7 @@ The configuration of the column command(s). If set the column would display a bu
     <kendo:grid-column command="command">
     </kendo:grid-column>
 
-### editor `String`
+### editor `java.lang.String`
 
 Provides a way to specify a custom editing UI for the column. Use the container parameter to create the editing UI.
 
@@ -58,7 +58,7 @@ If set to true the column value will be HTML-encoded before it is displayed. If 
     <kendo:grid-column encoded="encoded">
     </kendo:grid-column>
 
-### field `String`
+### field `java.lang.String`
 
 The field to which the column is bound. The value of this field is displayed by the column during data binding.
 The field name should be a valid Javascript identifier and should contain no spaces, no special characters, and the first character should be a letter.
@@ -76,7 +76,7 @@ for all columns when filtering is enabled via the filterable option.Can be set t
     <kendo:grid-column filterable="filterable">
     </kendo:grid-column>
 
-### footerTemplate `String`
+### footerTemplate `java.lang.String`
 
 The template which renders the footer table cell for the column.The fields which can be used in the template are:
 
@@ -84,7 +84,7 @@ The template which renders the footer table cell for the column.The fields which
     <kendo:grid-column footerTemplate="footerTemplate">
     </kendo:grid-column>
 
-### format `String`
+### format `java.lang.String`
 
 The format that is applied to the value before it is displayed. Takes the form "{0:format}" where "format" is a standard number format,
 custom number format, standard date format or a custom date format.
@@ -93,7 +93,7 @@ custom number format, standard date format or a custom date format.
     <kendo:grid-column format="format">
     </kendo:grid-column>
 
-### groupFooterTemplate `String`
+### groupFooterTemplate `java.lang.String`
 
 The template which renders the group footer when the grid is grouped by the column field. By default the group footer is not displayed.The fields which can be used in the template are:
 
@@ -101,7 +101,7 @@ The template which renders the group footer when the grid is grouped by the colu
     <kendo:grid-column groupFooterTemplate="groupFooterTemplate">
     </kendo:grid-column>
 
-### groupHeaderTemplate `String`
+### groupHeaderTemplate `java.lang.String`
 
 The template which renders the group header when the grid is grouped by the column field. By default the name of the field
 and the current group value is displayed.The fields which can be used in the template are:
@@ -110,7 +110,7 @@ and the current group value is displayed.The fields which can be used in the tem
     <kendo:grid-column groupHeaderTemplate="groupHeaderTemplate">
     </kendo:grid-column>
 
-### headerAttributes `Object`
+### headerAttributes `java.lang.Object`
 
 HTML attributes of the column header. The grid renders a table header cell (<th>) for every column. The headerAttributes option can be used to set the HTML attributes of that th.
 
@@ -118,7 +118,7 @@ HTML attributes of the column header. The grid renders a table header cell (<th>
     <kendo:grid-column headerAttributes="headerAttributes">
     </kendo:grid-column>
 
-### headerTemplate `String`
+### headerTemplate `java.lang.String`
 
 The template which renders the column header content. By default the value of the title column option
 is displayed in the column header cell.
@@ -152,7 +152,7 @@ be disabled for this column. By default all columns are sortable if sorting is e
     <kendo:grid-column sortable="sortable">
     </kendo:grid-column>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the column content. The grid renders table rows (<tr>) which represent the data source items.
 Each table row consists of table cells (<td>) which represent the grid columns. By default the HTML-encoded value of the field is displayed in the column.
@@ -161,7 +161,7 @@ Each table row consists of table cells (<td>) which represent the grid columns. 
     <kendo:grid-column template="template">
     </kendo:grid-column>
 
-### title `String`
+### title `java.lang.String`
 
 The text that is displayed in the column header cell. If not set the field is used.
 
@@ -169,7 +169,7 @@ The text that is displayed in the column header cell. If not set the field is us
     <kendo:grid-column title="title">
     </kendo:grid-column>
 
-### width `Object`
+### width `java.lang.Object`
 
 The width of the column. Numeric values are treated as pixels. Also refer to Column Widths.
 

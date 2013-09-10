@@ -25,7 +25,7 @@ Applicable only when using a dedicated navigator data source.
     <kendo:stockChart-navigator autoBind="autoBind">
     </kendo:stockChart-navigator>
 
-### dateField `String`
+### dateField `java.lang.String`
 
 The field containing the point date.
 It is used as a default field for the navigator axis.The data item field value must be either:

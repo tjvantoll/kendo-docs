@@ -16,7 +16,7 @@ The category axis notes configuration.
 
 ## Configuration Attributes
 
-### position `String`
+### position `java.lang.String`
 
 The position of the category axis note.
 

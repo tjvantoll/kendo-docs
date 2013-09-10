@@ -16,7 +16,7 @@ The chart title configuration options or text.
 
 ## Configuration Attributes
 
-### align `String`
+### align `java.lang.String`
 
 The alignment of the title.
 
@@ -24,7 +24,7 @@ The alignment of the title.
     <kendo:chart-title align="align">
     </kendo:chart-title>
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the title. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The background color of the title. Accepts a valid CSS color string, including h
     <kendo:chart-title background="background">
     </kendo:chart-title>
 
-### font `String`
+### font `java.lang.String`
 
 The font of the title.
 
@@ -56,7 +56,7 @@ The padding of the title. A numeric value will set all margins. Further configur
     <kendo:chart-title padding="padding">
     </kendo:chart-title>
 
-### position `String`
+### position `java.lang.String`
 
 The position of the title.
 
@@ -64,7 +64,7 @@ The position of the title.
     <kendo:chart-title position="position">
     </kendo:chart-title>
 
-### text `String`
+### text `java.lang.String`
 
 The text of the chart title. You can also set the text directly for a title with default options.
 

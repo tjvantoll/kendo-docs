@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [AutoComplete](/api/web/autocomplete).
 
 ## Configuration Attributes
 
-### dataTextField `String`
+### dataTextField `java.lang.String`
 
 The field of the data item used when searching for suggestions.  This is the text that will be displayed in the list of matched results.
 
@@ -34,7 +34,7 @@ If set to false the widget will be disabled and will not allow user input. The w
     <kendo:autoComplete enable="enable">
     </kendo:autoComplete>
 
-### filter `String`
+### filter `java.lang.String`
 
 The filtering method used to determine the suggestions for the current value. The default filter is "startswith" -
 all data items which begin with the current widget value are displayed in the suggestion popup. The supported filter values are startswith, endswith and contains.
@@ -75,7 +75,7 @@ The minimum number of characters the user must type before a search is performed
     <kendo:autoComplete minLength="minLength">
     </kendo:autoComplete>
 
-### placeholder `String`
+### placeholder `java.lang.String`
 
 The hint displayed by the widget when it is empty. Not set by default.
 
@@ -83,7 +83,7 @@ The hint displayed by the widget when it is empty. Not set by default.
     <kendo:autoComplete placeholder="placeholder">
     </kendo:autoComplete>
 
-### separator `String`
+### separator `java.lang.String`
 
 The character used to separate multiple values. Empty by default.
 
@@ -99,12 +99,20 @@ If set to true the widget will automatically use the first suggestion as its val
     <kendo:autoComplete suggest="suggest">
     </kendo:autoComplete>
 
-### template `String`
+### template `java.lang.String`
 
 The template used to render the suggestions. By default the widget displays only the text of the suggestion (configured via dataTextField).
 
 #### Example
     <kendo:autoComplete template="template">
+    </kendo:autoComplete>
+
+### valuePrimitive `boolean`
+
+Spcifies the value binding behavior for the widget when the initial model value is null. If set to true, the View-Model field will be updated with the selected item text field. If set to false, the View-Model field will be updated with the selected item.
+
+#### Example
+    <kendo:autoComplete valuePrimitive="valuePrimitive">
     </kendo:autoComplete>
 
 

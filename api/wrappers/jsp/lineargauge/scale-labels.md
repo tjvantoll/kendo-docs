@@ -16,7 +16,7 @@ Configures the scale labels.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the labels.
 Any valid CSS color string will work here, including hex and rgb
@@ -25,7 +25,7 @@ Any valid CSS color string will work here, including hex and rgb
     <kendo:linearGauge-scale-labels background="background">
     </kendo:linearGauge-scale-labels>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels.
 Any valid CSS color string will work here, including hex and rgb.
@@ -34,7 +34,7 @@ Any valid CSS color string will work here, including hex and rgb.
     <kendo:linearGauge-scale-labels color="color">
     </kendo:linearGauge-scale-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -42,7 +42,7 @@ The font style of the labels.
     <kendo:linearGauge-scale-labels font="font">
     </kendo:linearGauge-scale-labels>
 
-### format `String`
+### format `java.lang.String`
 
 The format of the labels.
 
@@ -50,7 +50,7 @@ The format of the labels.
     <kendo:linearGauge-scale-labels format="format">
     </kendo:linearGauge-scale-labels>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the labels.
 
@@ -58,7 +58,7 @@ The margin of the labels.
     <kendo:linearGauge-scale-labels margin="margin">
     </kendo:linearGauge-scale-labels>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the labels.
 
@@ -66,7 +66,7 @@ The padding of the labels.
     <kendo:linearGauge-scale-labels padding="padding">
     </kendo:linearGauge-scale-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The label template.
 Template variables:

@@ -16,7 +16,7 @@ Configures the axis labels.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the labels. Any valid CSS color string will work here, including
 hex and rgb
@@ -25,7 +25,7 @@ hex and rgb
     <kendo:sparkline-valueAxisItem-labels background="background">
     </kendo:sparkline-valueAxisItem-labels>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels. Any valid CSS color string will work here, including hex and rgb.
 
@@ -33,7 +33,7 @@ The text color of the labels. Any valid CSS color string will work here, includi
     <kendo:sparkline-valueAxisItem-labels color="color">
     </kendo:sparkline-valueAxisItem-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -41,7 +41,7 @@ The font style of the labels.
     <kendo:sparkline-valueAxisItem-labels font="font">
     </kendo:sparkline-valueAxisItem-labels>
 
-### format `String`
+### format `java.lang.String`
 
 The format of the labels.
 
@@ -49,7 +49,7 @@ The format of the labels.
     <kendo:sparkline-valueAxisItem-labels format="format">
     </kendo:sparkline-valueAxisItem-labels>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the labels.
 
@@ -67,7 +67,7 @@ mirroring the axis will render them to the right.
     <kendo:sparkline-valueAxisItem-labels mirror="mirror">
     </kendo:sparkline-valueAxisItem-labels>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the labels.
 
@@ -101,7 +101,7 @@ Every n-th label is rendered where n is the step
     <kendo:sparkline-valueAxisItem-labels step="step">
     </kendo:sparkline-valueAxisItem-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The label template.
 Template variables:

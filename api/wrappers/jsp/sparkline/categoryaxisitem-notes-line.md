@@ -16,7 +16,7 @@ The line of the notes.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The line color of the notes.
 

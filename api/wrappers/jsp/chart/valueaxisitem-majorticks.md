@@ -16,7 +16,7 @@ The configuration of the value axis major ticks.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the value axis major ticks lines. Accepts a valid CSS color string, including hex and rgb.
 

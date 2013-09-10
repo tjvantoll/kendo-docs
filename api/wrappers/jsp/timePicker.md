@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [TimePicker](/api/web/timepicker).
 
 ## Configuration Attributes
 
-### culture `String`
+### culture `java.lang.String`
 
 Specifies the culture info used by the widget.
 
@@ -18,15 +18,15 @@ Specifies the culture info used by the widget.
     <kendo:timePicker culture="culture">
     </kendo:timePicker>
 
-### dates `Object`
+### dates `java.lang.Object`
 
-Specifies a list of dates, which are shown in the time drop-down list. If not set, the DateTimePicker will auto-generate the available times.
+Specifies a list of dates, which are shown in the time drop-down list. If not set, the TimePicker will auto-generate the available times.
 
 #### Example
     <kendo:timePicker dates="dates">
     </kendo:timePicker>
 
-### format `String`
+### format `java.lang.String`
 
 Specifies the format, which is used to format the value of the TimePicker displayed in the input. The format also will be used to parse the input.
 
@@ -58,7 +58,7 @@ Specifies the start value in the popup list.
     <kendo:timePicker min="min">
     </kendo:timePicker>
 
-### parseFormats `Object`
+### parseFormats `java.lang.Object`
 
 Specifies the formats, which are used to parse the value set with the value method or by direct input. If not set the value of the options.format will be used. Note that value of the format option is always used.
 
@@ -79,7 +79,7 @@ Specifies the selected time.
 
 ### kendo:timePicker-animation
 
-Animations to be used for opening/closing the popup. Setting to false will turn of the animation.
+Configures the opening and closing animations of the popup. Setting the animation option to false will disable the opening and closing animations. As a result the popup will open and close instantly.
 
 More documentation is available at [kendo:timePicker-animation](timepicker/animation).
 
@@ -94,7 +94,7 @@ More documentation is available at [kendo:timePicker-animation](timepicker/anima
 
 ### change `String`
 
-Triggered when the underlying value of a TimePicker is changed.
+Fires when the selected date is changed
 
 
 For additional information check the [change](/api/web/timepicker#events-change) event documentation.
@@ -144,7 +144,7 @@ For additional information check the [open](/api/web/timepicker#events-open) eve
 
 ### kendo:timePicker-change
 
-Triggered when the underlying value of a TimePicker is changed.
+Fires when the selected date is changed
 
 
 For additional information check the [change](/api/web/timepicker#events-change) event documentation.

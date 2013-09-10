@@ -17,7 +17,7 @@ body of the chart.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the minor grid lines. Accepts a valid CSS color string, including hex and rgb.
 
@@ -25,7 +25,7 @@ The color of the minor grid lines. Accepts a valid CSS color string, including h
     <kendo:chart-valueAxisItem-minorGridLines color="color">
     </kendo:chart-valueAxisItem-minorGridLines>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the minor grid lines.The following dash types are supported:
 
@@ -33,7 +33,7 @@ The dash type of the minor grid lines.The following dash types are supported:
     <kendo:chart-valueAxisItem-minorGridLines dashType="dashType">
     </kendo:chart-valueAxisItem-minorGridLines>
 
-### type `String`
+### type `java.lang.String`
 
 The type of grid lines to draw for radar charts:The default type is "line" except for "radarColumn" charts.
 

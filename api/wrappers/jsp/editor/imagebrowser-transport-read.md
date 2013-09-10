@@ -16,7 +16,7 @@ Options or URL for remote image retrieval.
 
 ## Configuration Attributes
 
-### contentType `String`
+### contentType `java.lang.String`
 
 The content-type HTTP header sent to the server. Use "application/json" if the content is JSON.
 Refer to the jQuery.ajax documentation for further info.
@@ -25,7 +25,7 @@ Refer to the jQuery.ajax documentation for further info.
     <kendo:editor-imageBrowser-transport-read contentType="contentType">
     </kendo:editor-imageBrowser-transport-read>
 
-### data `Object`
+### data `java.lang.Object`
 
 Data to be send to the server.
 Refer to the jQuery.ajax documentation for further info.
@@ -34,7 +34,7 @@ Refer to the jQuery.ajax documentation for further info.
     <kendo:editor-imageBrowser-transport-read data="data">
     </kendo:editor-imageBrowser-transport-read>
 
-### dataType `String`
+### dataType `java.lang.String`
 
 The type of data that you're expecting back from the server. Commonly used values are "json" and "jsonp".
 Refer to the jQuery.ajax documentation for further info.
@@ -43,7 +43,7 @@ Refer to the jQuery.ajax documentation for further info.
     <kendo:editor-imageBrowser-transport-read dataType="dataType">
     </kendo:editor-imageBrowser-transport-read>
 
-### type `String`
+### type `java.lang.String`
 
 The type of request to make ("POST", "GET", "PUT" or "DELETE"), default is "GET".
 Refer to the jQuery.ajax documentation for further info.
@@ -52,7 +52,7 @@ Refer to the jQuery.ajax documentation for further info.
     <kendo:editor-imageBrowser-transport-read type="type">
     </kendo:editor-imageBrowser-transport-read>
 
-### url `String`
+### url `java.lang.String`
 
 The remote url to call when fetching list of items.
 

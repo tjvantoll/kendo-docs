@@ -16,7 +16,7 @@ The crosshar tooltip options.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The background color of the tooltip. Accepts a valid CSS color string, including
     <kendo:chart-yAxisItem-crosshair-tooltip background="background">
     </kendo:chart-yAxisItem-crosshair-tooltip>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The text color of the tooltip. Accepts a valid CSS color string, including hex a
     <kendo:chart-yAxisItem-crosshair-tooltip color="color">
     </kendo:chart-yAxisItem-crosshair-tooltip>
 
-### font `String`
+### font `java.lang.String`
 
 The tooltip font.
 
@@ -40,7 +40,7 @@ The tooltip font.
     <kendo:chart-yAxisItem-crosshair-tooltip font="font">
     </kendo:chart-yAxisItem-crosshair-tooltip>
 
-### format `String`
+### format `java.lang.String`
 
 The format used to display the tooltip. Uses kendo.format. Contains one placeholder ("{0}") which represents the value value.
 
@@ -56,7 +56,7 @@ The padding of the crosshair tooltip. A numeric value will set all paddings. Fur
     <kendo:chart-yAxisItem-crosshair-tooltip padding="padding">
     </kendo:chart-yAxisItem-crosshair-tooltip>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the tooltip.The fields which can be used in the template are:
 

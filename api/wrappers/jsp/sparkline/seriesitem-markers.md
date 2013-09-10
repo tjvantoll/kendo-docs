@@ -16,7 +16,7 @@ Marker options.** Applicable to area and line series **
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the current series markers.
 
@@ -24,7 +24,7 @@ The background color of the current series markers.
     <kendo:sparkline-seriesItem-markers background="background">
     </kendo:sparkline-seriesItem-markers>
 
-### border `String`
+### border `java.lang.String`
 
 The border of the markers. Further configuration is available via [kendo:sparkline-seriesItem-markers-border](#kendo-sparkline-seriesItem-markers-border). 
 
@@ -48,7 +48,7 @@ The marker size.
     <kendo:sparkline-seriesItem-markers size="size">
     </kendo:sparkline-seriesItem-markers>
 
-### type `String`
+### type `java.lang.String`
 
 Configures the markers shape type.
 

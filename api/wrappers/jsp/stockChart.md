@@ -18,7 +18,7 @@ Indicates whether the chart will call read on the data source initially.
     <kendo:stockChart autoBind="autoBind">
     </kendo:stockChart>
 
-### dateField `String`
+### dateField `java.lang.String`
 
 The field containing the point date.
 It is used as a default categoryField for all series.The data item field value must be either:
@@ -27,7 +27,7 @@ It is used as a default categoryField for all series.The data item field value m
     <kendo:stockChart dateField="dateField">
     </kendo:stockChart>
 
-### renderAs `String`
+### renderAs `java.lang.String`
 
 Sets the preferred rendering engine.
 If it is not supported by the browser, the Chart will switch to the first available mode.The supported values are:
@@ -36,7 +36,7 @@ If it is not supported by the browser, the Chart will switch to the first availa
     <kendo:stockChart renderAs="renderAs">
     </kendo:stockChart>
 
-### seriesColors `Object`
+### seriesColors `java.lang.Object`
 
 The default colors for the chart's series. When all colors are used, new colors are pulled from the start again.
 
@@ -44,7 +44,7 @@ The default colors for the chart's series. When all colors are used, new colors 
     <kendo:stockChart seriesColors="seriesColors">
     </kendo:stockChart>
 
-### theme `String`
+### theme `java.lang.String`
 
 Sets Chart theme. Available themes: default, blueOpal, black.
 

@@ -16,7 +16,7 @@ The label of the note.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the label. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The background color of the label. Accepts a valid CSS color string, including h
     <kendo:chart-valueAxisItem-notes-dataItem-label background="background">
     </kendo:chart-valueAxisItem-notes-dataItem-label>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the note label. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The text color of the note label. Accepts a valid CSS color string, including he
     <kendo:chart-valueAxisItem-notes-dataItem-label color="color">
     </kendo:chart-valueAxisItem-notes-dataItem-label>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the note label.
 
@@ -40,7 +40,7 @@ The font style of the note label.
     <kendo:chart-valueAxisItem-notes-dataItem-label font="font">
     </kendo:chart-valueAxisItem-notes-dataItem-label>
 
-### format `String`
+### format `java.lang.String`
 
 The format used to display the note label. Uses kendo.format. Contains one placeholder ("{0}") which represents the axis value.
 
@@ -48,7 +48,7 @@ The format used to display the note label. Uses kendo.format. Contains one place
     <kendo:chart-valueAxisItem-notes-dataItem-label format="format">
     </kendo:chart-valueAxisItem-notes-dataItem-label>
 
-### position `String`
+### position `java.lang.String`
 
 The position of the value axis note label.
 
@@ -64,7 +64,7 @@ The rotation angle of the label. By default the label are not rotated.
     <kendo:chart-valueAxisItem-notes-dataItem-label rotation="rotation">
     </kendo:chart-valueAxisItem-notes-dataItem-label>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the labels.The fields which can be used in the template are:
 
@@ -72,7 +72,7 @@ The template which renders the labels.The fields which can be used in the templa
     <kendo:chart-valueAxisItem-notes-dataItem-label template="template">
     </kendo:chart-valueAxisItem-notes-dataItem-label>
 
-### text `String`
+### text `java.lang.String`
 
 The label note text.
 

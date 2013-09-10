@@ -19,7 +19,7 @@ user interactions. Setting this option to false will disable all animations. Fur
     <kendo:panelBar animation="animation">
     </kendo:panelBar>
 
-### expandMode `String`
+### expandMode `java.lang.String`
 
 Specifies how the PanelBar items are displayed when opened and closed. The following values
 are available:

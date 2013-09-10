@@ -24,7 +24,7 @@ Defines the close animation duration.
     <kendo:window-animation-close duration="duration">
     </kendo:window-animation-close>
 
-### effects `String`
+### effects `java.lang.String`
 
 Effect to be used for closing of the popup.
 

@@ -18,7 +18,7 @@ Specifies whether the TabStrip should be able to collapse completely when clicki
     <kendo:tabStrip collapsible="collapsible">
     </kendo:tabStrip>
 
-### dataContentField `String`
+### dataContentField `java.lang.String`
 
 Sets the field of the data item that provides the text content of
 the tab content element.
@@ -27,7 +27,7 @@ the tab content element.
     <kendo:tabStrip dataContentField="dataContentField">
     </kendo:tabStrip>
 
-### dataContentUrlField `String`
+### dataContentUrlField `java.lang.String`
 
 Sets the field of the data item that provides the URL for
 the ajax loaded tab content.
@@ -36,7 +36,7 @@ the ajax loaded tab content.
     <kendo:tabStrip dataContentUrlField="dataContentUrlField">
     </kendo:tabStrip>
 
-### dataImageUrlField `String`
+### dataImageUrlField `java.lang.String`
 
 Sets the field of the data item that provides the image URL of
 the tab.
@@ -45,7 +45,7 @@ the tab.
     <kendo:tabStrip dataImageUrlField="dataImageUrlField">
     </kendo:tabStrip>
 
-### dataSpriteCssClass `String`
+### dataSpriteCssClass `java.lang.String`
 
 Sets the field of the data item that provides the CSS class of
 the tab.
@@ -54,7 +54,7 @@ the tab.
     <kendo:tabStrip dataSpriteCssClass="dataSpriteCssClass">
     </kendo:tabStrip>
 
-### dataTextField `String`
+### dataTextField `java.lang.String`
 
 Sets the field of the data item that provides the text name of the tab.
 
@@ -62,7 +62,7 @@ Sets the field of the data item that provides the text name of the tab.
     <kendo:tabStrip dataTextField="dataTextField">
     </kendo:tabStrip>
 
-### dataUrlField `String`
+### dataUrlField `java.lang.String`
 
 Sets the field of the data item that provides the link URL for the
 tab.

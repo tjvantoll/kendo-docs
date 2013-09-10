@@ -36,7 +36,7 @@ If true or an object, renders checkboxes beside each node. Further configuration
     <kendo:treeView checkboxes="checkboxes">
     </kendo:treeView>
 
-### dataImageUrlField `String`
+### dataImageUrlField `java.lang.String`
 
 Sets the field of the data item that provides the image URL of the treeview nodes.
 
@@ -44,7 +44,7 @@ Sets the field of the data item that provides the image URL of the treeview node
     <kendo:treeView dataImageUrlField="dataImageUrlField">
     </kendo:treeView>
 
-### dataSpriteCssClassField `String`
+### dataSpriteCssClassField `java.lang.String`
 
 Sets the field of the data item that provides the sprite CSS class of the nodes.
 If an array, each level uses the field that is at the same index in the array, or the last item in the array.
@@ -53,7 +53,7 @@ If an array, each level uses the field that is at the same index in the array, o
     <kendo:treeView dataSpriteCssClassField="dataSpriteCssClassField">
     </kendo:treeView>
 
-### dataTextField `Object`
+### dataTextField `java.lang.Object`
 
 Sets the field of the data item that provides the text content of the nodes.
 If an array, each level uses the field that is at the same index in the array, or the last item in the array.
@@ -62,7 +62,7 @@ If an array, each level uses the field that is at the same index in the array, o
     <kendo:treeView dataTextField="dataTextField">
     </kendo:treeView>
 
-### dataUrlField `String`
+### dataUrlField `java.lang.String`
 
 Sets the field of the data item that provides the link URL of the nodes.
 
@@ -88,7 +88,7 @@ Note: when initializing the widget from an array (rather than from a Hierarchica
     <kendo:treeView loadOnDemand="loadOnDemand">
     </kendo:treeView>
 
-### template `String`
+### template `java.lang.String`
 
 Template for rendering each node.
 

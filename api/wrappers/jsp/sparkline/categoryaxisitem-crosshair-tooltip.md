@@ -16,7 +16,7 @@ The crosshar tooltip configuration options.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the tooltip.
 
@@ -24,7 +24,7 @@ The background color of the tooltip.
     <kendo:sparkline-categoryAxisItem-crosshair-tooltip background="background">
     </kendo:sparkline-categoryAxisItem-crosshair-tooltip>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the tooltip.
 
@@ -32,7 +32,7 @@ The text color of the tooltip.
     <kendo:sparkline-categoryAxisItem-crosshair-tooltip color="color">
     </kendo:sparkline-categoryAxisItem-crosshair-tooltip>
 
-### font `String`
+### font `java.lang.String`
 
 The tooltip font.
 
@@ -40,7 +40,7 @@ The tooltip font.
     <kendo:sparkline-categoryAxisItem-crosshair-tooltip font="font">
     </kendo:sparkline-categoryAxisItem-crosshair-tooltip>
 
-### format `String`
+### format `java.lang.String`
 
 The tooltip format.
 
@@ -48,7 +48,7 @@ The tooltip format.
     <kendo:sparkline-categoryAxisItem-crosshair-tooltip format="format">
     </kendo:sparkline-categoryAxisItem-crosshair-tooltip>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the tooltip.
 
@@ -56,7 +56,7 @@ The padding of the tooltip.
     <kendo:sparkline-categoryAxisItem-crosshair-tooltip padding="padding">
     </kendo:sparkline-categoryAxisItem-crosshair-tooltip>
 
-### template `String`
+### template `java.lang.String`
 
 The tooltip template.
 Template variables:

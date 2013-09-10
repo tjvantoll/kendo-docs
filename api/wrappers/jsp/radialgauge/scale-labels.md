@@ -16,7 +16,7 @@ Configures the scale labels.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the labels.
 Any valid CSS color string will work here, including hex and rgb
@@ -25,7 +25,7 @@ Any valid CSS color string will work here, including hex and rgb
     <kendo:radialGauge-scale-labels background="background">
     </kendo:radialGauge-scale-labels>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels.
 Any valid CSS color string will work here, including hex and rgb.
@@ -34,7 +34,7 @@ Any valid CSS color string will work here, including hex and rgb.
     <kendo:radialGauge-scale-labels color="color">
     </kendo:radialGauge-scale-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -42,7 +42,7 @@ The font style of the labels.
     <kendo:radialGauge-scale-labels font="font">
     </kendo:radialGauge-scale-labels>
 
-### format `String`
+### format `java.lang.String`
 
 The format of the labels.
 
@@ -50,7 +50,7 @@ The format of the labels.
     <kendo:radialGauge-scale-labels format="format">
     </kendo:radialGauge-scale-labels>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the labels.
 
@@ -58,7 +58,7 @@ The margin of the labels.
     <kendo:radialGauge-scale-labels margin="margin">
     </kendo:radialGauge-scale-labels>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the labels.
 
@@ -66,7 +66,7 @@ The padding of the labels.
     <kendo:radialGauge-scale-labels padding="padding">
     </kendo:radialGauge-scale-labels>
 
-### position `String`
+### position `java.lang.String`
 
 The labels positions.
 
@@ -74,7 +74,7 @@ The labels positions.
     <kendo:radialGauge-scale-labels position="position">
     </kendo:radialGauge-scale-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The label template.
 Template variables:

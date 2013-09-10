@@ -16,7 +16,7 @@ Default values for each series.
 
 ## Configuration Attributes
 
-### area `Object`
+### area `java.lang.Object`
 
 The area configuration options.
 The default options for all area series. For more details see the series options.
@@ -25,7 +25,7 @@ The default options for all area series. For more details see the series options
     <kendo:sparkline-seriesDefaults area="area">
     </kendo:sparkline-seriesDefaults>
 
-### bar `Object`
+### bar `java.lang.Object`
 
 The default options for all bar series. For more details see the series options.
 
@@ -33,7 +33,7 @@ The default options for all bar series. For more details see the series options.
     <kendo:sparkline-seriesDefaults bar="bar">
     </kendo:sparkline-seriesDefaults>
 
-### column `Object`
+### column `java.lang.Object`
 
 The column configuration options.
 The default options for all column series. For more details see the series options.
@@ -50,7 +50,7 @@ The distance between category clusters.
     <kendo:sparkline-seriesDefaults gap="gap">
     </kendo:sparkline-seriesDefaults>
 
-### line `Object`
+### line `java.lang.Object`
 
 The line configuration options.
 The default options for all line series. For more details see the series options.
@@ -59,7 +59,7 @@ The default options for all line series. For more details see the series options
     <kendo:sparkline-seriesDefaults line="line">
     </kendo:sparkline-seriesDefaults>
 
-### overlay `Object`
+### overlay `java.lang.Object`
 
 The effects overlay.
 
@@ -67,7 +67,7 @@ The effects overlay.
     <kendo:sparkline-seriesDefaults overlay="overlay">
     </kendo:sparkline-seriesDefaults>
 
-### pie `Object`
+### pie `java.lang.Object`
 
 The pie configuration options.
 The default options for all pie series. For more details see the series options.

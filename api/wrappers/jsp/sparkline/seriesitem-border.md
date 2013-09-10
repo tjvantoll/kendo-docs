@@ -16,7 +16,7 @@ The border of the points.** Applicable to bar, column and pie series **
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the border.  It defaults to the color of the current series.
 
@@ -24,7 +24,7 @@ The color of the border.  It defaults to the color of the current series.
     <kendo:sparkline-seriesItem-border color="color">
     </kendo:sparkline-seriesItem-border>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the border.
 

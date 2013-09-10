@@ -16,7 +16,7 @@ The data point tooltip configuration options.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the tooltip. The default is determined from the series color.
 
@@ -24,7 +24,7 @@ The background color of the tooltip. The default is determined from the series c
     <kendo:sparkline-seriesItem-tooltip background="background">
     </kendo:sparkline-seriesItem-tooltip>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
@@ -32,7 +32,7 @@ The text color of the tooltip. The default is the same as the series labels colo
     <kendo:sparkline-seriesItem-tooltip color="color">
     </kendo:sparkline-seriesItem-tooltip>
 
-### font `String`
+### font `java.lang.String`
 
 The tooltip font.
 
@@ -40,7 +40,7 @@ The tooltip font.
     <kendo:sparkline-seriesItem-tooltip font="font">
     </kendo:sparkline-seriesItem-tooltip>
 
-### format `String`
+### format `java.lang.String`
 
 The tooltip format. Format variables depend on the series type:
 
@@ -48,7 +48,7 @@ The tooltip format. Format variables depend on the series type:
     <kendo:sparkline-seriesItem-tooltip format="format">
     </kendo:sparkline-seriesItem-tooltip>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the tooltip.
 
@@ -56,7 +56,7 @@ The padding of the tooltip.
     <kendo:sparkline-seriesItem-tooltip padding="padding">
     </kendo:sparkline-seriesItem-tooltip>
 
-### template `String`
+### template `java.lang.String`
 
 The tooltip template.
 Template variables:

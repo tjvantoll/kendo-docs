@@ -16,7 +16,7 @@ Configuration for image browser dialog.
 
 ## Configuration Attributes
 
-### fileTypes `String`
+### fileTypes `java.lang.String`
 
 Defines the allowed file extensions.
 
@@ -24,7 +24,7 @@ Defines the allowed file extensions.
     <kendo:editor-imageBrowser fileTypes="fileTypes">
     </kendo:editor-imageBrowser>
 
-### path `String`
+### path `java.lang.String`
 
 Defines the initial folder to display, relative to the root.
 

@@ -12,23 +12,23 @@ A JSP wrapper for Kendo UI [MultiSelect](/api/web/multiselect).
 
 ### autoBind `boolean`
 
-Controls whether to bind the widget to the DataSource on initialization.
+Controls whether to bind the widget to the data source on initialization.
 
 #### Example
     <kendo:multiSelect autoBind="autoBind">
     </kendo:multiSelect>
 
-### dataTextField `String`
+### dataTextField `java.lang.String`
 
-Sets the field of the data item that provides the text content of the list items.
+The field of the data item that provides the text content of the list items. The widget will filter the data source based on this field.
 
 #### Example
     <kendo:multiSelect dataTextField="dataTextField">
     </kendo:multiSelect>
 
-### dataValueField `String`
+### dataValueField `java.lang.String`
 
-Sets the field of the data item that provides the value content of the list items.
+The field of the data item that provides the value of the widget.
 
 #### Example
     <kendo:multiSelect dataValueField="dataValueField">
@@ -36,7 +36,7 @@ Sets the field of the data item that provides the value content of the list item
 
 ### delay `float`
 
-Specifies the delay in ms after which the multiselect will start filtering dataSource.
+Specifies the delay in milliseconds after which the multiselect will start filtering dataSource.
 
 #### Example
     <kendo:multiSelect delay="delay">
@@ -44,15 +44,16 @@ Specifies the delay in ms after which the multiselect will start filtering dataS
 
 ### enable `boolean`
 
-Controls whether the multiselect should be initially enabled.
+If set to false the widget will be disabled and will not allow user input. The widget is enabled by default and allows user input.
 
 #### Example
     <kendo:multiSelect enable="enable">
     </kendo:multiSelect>
 
-### filter `String`
+### filter `java.lang.String`
 
-Defines the type of filtration.
+The filtering method used to determine the suggestions for the current value. Filtration is turned of by default.
+The supported filter values are startswith, endswith and contains.
 
 #### Example
     <kendo:multiSelect filter="filter">
@@ -60,7 +61,7 @@ Defines the type of filtration.
 
 ### height `float`
 
-Define the height of the drop-down list in pixels.
+The height of the suggestion popup in pixels. The default value is 200 pixels.
 
 #### Example
     <kendo:multiSelect height="height">
@@ -68,23 +69,23 @@ Define the height of the drop-down list in pixels.
 
 ### highlightFirst `boolean`
 
-Controls whether the first item will be automatically highlighted.
+If set to true the first suggestion will be automatically highlighted.
 
 #### Example
     <kendo:multiSelect highlightFirst="highlightFirst">
     </kendo:multiSelect>
 
-### ignoreCase `String`
+### ignoreCase `java.lang.String`
 
-Defines whether the filtration should be case sensitive.
+If set to false case-sensitive search will be performed to find suggestions. The widget performs case-insensitive searching by default.
 
 #### Example
     <kendo:multiSelect ignoreCase="ignoreCase">
     </kendo:multiSelect>
 
-### itemTemplate `String`
+### itemTemplate `java.lang.String`
 
-Template to be used for rendering the items in the list.
+The template used to render the items in the popup list.
 
 #### Example
     <kendo:multiSelect itemTemplate="itemTemplate">
@@ -100,29 +101,29 @@ Defines the limit of the selected items. If set to null widget will not limit nu
 
 ### minLength `float`
 
-Specifies the minimum characters that should be typed before the multiselect activates
+The minimum number of characters the user must type before a search is performed. Set to higher value than 1 if the search could match a lot of items.
 
 #### Example
     <kendo:multiSelect minLength="minLength">
     </kendo:multiSelect>
 
-### placeholder `String`
+### placeholder `java.lang.String`
 
-A string that appears in the textbox when the multiselect has no value.
+The hint displayed by the widget when it is empty. Not set by default.
 
 #### Example
     <kendo:multiSelect placeholder="placeholder">
     </kendo:multiSelect>
 
-### tagTemplate `String`
+### tagTemplate `java.lang.String`
 
-Template to be used for rendering the tags of the selected items.
+The template used to render the tags.
 
 #### Example
     <kendo:multiSelect tagTemplate="tagTemplate">
     </kendo:multiSelect>
 
-### value `Object`
+### value `java.lang.Object`
 
 Define the value of the widget
 
@@ -135,7 +136,7 @@ Define the value of the widget
 
 ### kendo:multiSelect-animation
 
-Animations to be used for opening/closing the popup. Setting to false will turn off the animation.
+Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
 
 More documentation is available at [kendo:multiSelect-animation](multiselect/animation).
 
@@ -150,7 +151,7 @@ More documentation is available at [kendo:multiSelect-animation](multiselect/ani
 
 ### change `String`
 
-Fires when the value has been changed.
+Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [change](/api/web/multiselect#events-change) event documentation.
@@ -166,7 +167,7 @@ For additional information check the [change](/api/web/multiselect#events-change
 
 ### close `String`
 
-Fires when the drop-down list is closed
+Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [close](/api/web/multiselect#events-close) event documentation.
@@ -182,7 +183,7 @@ For additional information check the [close](/api/web/multiselect#events-close) 
 
 ### dataBound `String`
 
-Fires when the multiselect has received data from the data source.
+Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [dataBound](/api/web/multiselect#events-dataBound) event documentation.
@@ -198,7 +199,7 @@ For additional information check the [dataBound](/api/web/multiselect#events-dat
 
 ### open `String`
 
-Fires when the drop-down list is opened
+Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [open](/api/web/multiselect#events-open) event documentation.
@@ -214,7 +215,7 @@ For additional information check the [open](/api/web/multiselect#events-open) ev
 
 ### select `String`
 
-Triggered when a Li element is selected.
+Fired when an item from the popup is selected by the user.
 
 
 For additional information check the [select](/api/web/multiselect#events-select) event documentation.
@@ -232,7 +233,7 @@ For additional information check the [select](/api/web/multiselect#events-select
 
 ### kendo:multiSelect-change
 
-Fires when the value has been changed.
+Fired when the value of the widget is changed by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [change](/api/web/multiselect#events-change) event documentation.
@@ -250,7 +251,7 @@ For additional information check the [change](/api/web/multiselect#events-change
 
 ### kendo:multiSelect-close
 
-Fires when the drop-down list is closed
+Fired when the popup of the widget is closed.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [close](/api/web/multiselect#events-close) event documentation.
@@ -268,7 +269,7 @@ For additional information check the [close](/api/web/multiselect#events-close) 
 
 ### kendo:multiSelect-dataBound
 
-Fires when the multiselect has received data from the data source.
+Fired when the widget is bound to data from its data source.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [dataBound](/api/web/multiselect#events-dataBound) event documentation.
@@ -286,7 +287,7 @@ For additional information check the [dataBound](/api/web/multiselect#events-dat
 
 ### kendo:multiSelect-open
 
-Fires when the drop-down list is opened
+Fired when the popup of the widget is opened by the user.The event handler function context (available via the this keyword) will be set to the widget instance.
 
 
 For additional information check the [open](/api/web/multiselect#events-open) event documentation.
@@ -304,7 +305,7 @@ For additional information check the [open](/api/web/multiselect#events-open) ev
 
 ### kendo:multiSelect-select
 
-Triggered when a Li element is selected.
+Fired when an item from the popup is selected by the user.
 
 
 For additional information check the [select](/api/web/multiselect#events-select) event documentation.

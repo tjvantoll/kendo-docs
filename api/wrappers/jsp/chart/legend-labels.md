@@ -16,7 +16,7 @@ The chart legend label configuration.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The text color of the labels. Accepts a valid CSS color string, including hex an
     <kendo:chart-legend-labels color="color">
     </kendo:chart-legend-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -40,7 +40,7 @@ The margin of the labels. A numeric value will set all margins. Further configur
     <kendo:chart-legend-labels margin="margin">
     </kendo:chart-legend-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the labels.The fields which can be used in the template are:
 

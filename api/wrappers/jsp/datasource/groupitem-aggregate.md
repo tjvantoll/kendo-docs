@@ -16,7 +16,7 @@ The aggregate(s) which are calculated during grouping. The supported aggregates 
 
 ## Configuration Attributes
 
-### aggregate `String`
+### aggregate `java.lang.String`
 
 The name of the aggregate function. Specifies the aggregate function. The supported aggregates are "average", "count", "max", "min" and "sum".
 
@@ -24,7 +24,7 @@ The name of the aggregate function. Specifies the aggregate function. The suppor
     <kendo:dataSource-groupItem-aggregate aggregate="aggregate">
     </kendo:dataSource-groupItem-aggregate>
 
-### field `String`
+### field `java.lang.String`
 
 The data item field which will be used to calculate the aggregates.
 

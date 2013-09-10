@@ -16,7 +16,7 @@ The chart legend configuration options.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the legend. Any valid CSS color string will work here, including hex and rgb.
 
@@ -24,7 +24,7 @@ The background color of the legend. Any valid CSS color string will work here, i
     <kendo:stockChart-legend background="background">
     </kendo:stockChart-legend>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the legend.
 
@@ -52,7 +52,7 @@ upwards from the current position.
     <kendo:stockChart-legend offsetY="offsetY">
     </kendo:stockChart-legend>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the legend.
 
@@ -60,7 +60,7 @@ The padding of the legend.
     <kendo:stockChart-legend padding="padding">
     </kendo:stockChart-legend>
 
-### position `String`
+### position `java.lang.String`
 
 The positions of the legend.
 

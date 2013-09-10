@@ -16,7 +16,7 @@ The border of the plot area.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the border.
 
@@ -24,7 +24,7 @@ The color of the border.
     <kendo:sparkline-plotArea-border color="color">
     </kendo:sparkline-plotArea-border>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the border.
 

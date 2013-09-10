@@ -56,7 +56,7 @@ Defines the number of records which will be displyed.
     <kendo:listView-pageable pageSize="pageSize">
     </kendo:listView-pageable>
 
-### pageSizes `Object`
+### pageSizes `java.lang.Object`
 
 Displayes a list with predefined page sizes. An array of values to be displayed can be provided.
 

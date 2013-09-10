@@ -16,7 +16,7 @@ If set to true the user would be able to edit the data to which the grid is boun
 
 ## Configuration Attributes
 
-### confirmation `Object`
+### confirmation `java.lang.Object`
 
 If set to true the grid will display a confirmation dialog when the user clicks the "destroy" command button.Can be set to a string which will be used as the confirmation text.
 
@@ -24,7 +24,7 @@ If set to true the grid will display a confirmation dialog when the user clicks 
     <kendo:grid-editable confirmation="confirmation">
     </kendo:grid-editable>
 
-### createAt `String`
+### createAt `java.lang.String`
 
 The positon at which new data items are inserted in the grid. Must be set to either "top" or "bottom". By default new data items are inserted at the top.
 
@@ -40,7 +40,7 @@ If set to true the user can delete data items from the grid by clicking the "des
     <kendo:grid-editable destroy="destroy">
     </kendo:grid-editable>
 
-### mode `String`
+### mode `java.lang.String`
 
 The editing mode to use. The supported editing modes are "incell", "inline" and "popup".
 
@@ -48,7 +48,7 @@ The editing mode to use. The supported editing modes are "incell", "inline" and 
     <kendo:grid-editable mode="mode">
     </kendo:grid-editable>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders popup editor.The template should contain elements whose name HTML attributes are set as the editable fields. This is how the grid will know
 which field to update. The other option is to use MVVM bindings in order to bind HTML elements to data item fields.

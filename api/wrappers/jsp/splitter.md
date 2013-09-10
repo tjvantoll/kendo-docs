@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [Splitter](/api/web/splitter).
 
 ## Configuration Attributes
 
-### orientation `String`
+### orientation `java.lang.String`
 
 Specifies the orientation of the widget. Supported values are "horizontal" and "vertical".
 

@@ -25,7 +25,7 @@ Normal direction is down for "zoom out", up for "zoom in".
     <kendo:stockChart-categoryAxisItem-select-mousewheel reverse="reverse">
     </kendo:stockChart-categoryAxisItem-select-mousewheel>
 
-### zoom `String`
+### zoom `java.lang.String`
 
 The zoom direction. Possible values:
 

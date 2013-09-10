@@ -16,7 +16,7 @@ The pane title text or configuration.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the title. Any valid CSS color string will work here, including
 hex and rgb.
@@ -25,7 +25,7 @@ hex and rgb.
     <kendo:stockChart-pane-title background="background">
     </kendo:stockChart-pane-title>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the title. Any valid CSS color string will work here, including hex and rgb.
 
@@ -33,7 +33,7 @@ The text color of the title. Any valid CSS color string will work here, includin
     <kendo:stockChart-pane-title color="color">
     </kendo:stockChart-pane-title>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the title.
 
@@ -41,7 +41,7 @@ The font style of the title.
     <kendo:stockChart-pane-title font="font">
     </kendo:stockChart-pane-title>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the title.
 
@@ -49,7 +49,7 @@ The margin of the title.
     <kendo:stockChart-pane-title margin="margin">
     </kendo:stockChart-pane-title>
 
-### position `String`
+### position `java.lang.String`
 
 The position of the title.
 
@@ -57,7 +57,7 @@ The position of the title.
     <kendo:stockChart-pane-title position="position">
     </kendo:stockChart-pane-title>
 
-### text `String`
+### text `java.lang.String`
 
 The text of the title.
 

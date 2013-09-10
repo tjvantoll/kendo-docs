@@ -17,7 +17,7 @@ body of the chart.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the lines. Accepts a valid CSS color string, including hex and rgb.
 
@@ -25,7 +25,7 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
     <kendo:chart-yAxisItem-majorGridLines color="color">
     </kendo:chart-yAxisItem-majorGridLines>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the line.The following dash types are supported:
 

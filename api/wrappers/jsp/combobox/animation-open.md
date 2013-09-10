@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:comboBox-animation-open\>
 
-Animation to be used for opening of the popup.
+The animation played when the suggestion popup is opened.
 
 #### Example
     <kendo:comboBox-animation>
@@ -18,15 +18,15 @@ Animation to be used for opening of the popup.
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the open animation in milliseconds.
 
 #### Example
     <kendo:comboBox-animation-open duration="duration">
     </kendo:comboBox-animation-open>
 
-### effects `String`
+### effects `java.lang.String`
 
-Effect to be used for opening of the popup.
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
 
 #### Example
     <kendo:comboBox-animation-open effects="effects">

@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [Scheduler](/api/web/scheduler).
 
 ## Configuration Attributes
 
-### allDayEventTemplate `String`
+### allDayEventTemplate `java.lang.String`
 
 The template used to render the "all day" scheduler events.The fields which can be used in the template are:
 
@@ -34,7 +34,7 @@ The current date of the scheduler. Used to determine the period which is display
     <kendo:scheduler date="date">
     </kendo:scheduler>
 
-### dateHeaderTemplate `String`
+### dateHeaderTemplate `java.lang.String`
 
 The template used to render the date header cells.By default the scheduler renders the date using the current culture date format.The fields which can be used in the template are:
 
@@ -58,7 +58,7 @@ The end time of the week and day views. The scheduler will display events ending
     <kendo:scheduler endTime="endTime">
     </kendo:scheduler>
 
-### eventTemplate `String`
+### eventTemplate `java.lang.String`
 
 The template used to render the scheduler events.The fields which can be used in the template are:
 
@@ -66,7 +66,7 @@ The template used to render the scheduler events.The fields which can be used in
     <kendo:scheduler eventTemplate="eventTemplate">
     </kendo:scheduler>
 
-### height `Object`
+### height `java.lang.Object`
 
 The height of the widget. Numeric values are treated as pixels.
 
@@ -82,7 +82,7 @@ The number of minutes represented by a major tick.
     <kendo:scheduler majorTick="majorTick">
     </kendo:scheduler>
 
-### majorTimeHeaderTemplate `String`
+### majorTimeHeaderTemplate `java.lang.String`
 
 The template used to render the major ticks.By default the scheduler renders the time using the current culture time format.The fields which can be used in the template are:
 
@@ -98,7 +98,7 @@ The number of time slots to display per major tick.
     <kendo:scheduler minorTickCount="minorTickCount">
     </kendo:scheduler>
 
-### minorTimeHeaderTemplate `String`
+### minorTimeHeaderTemplate `java.lang.String`
 
 The template used to render the minor ticks.By default the scheduler renders a "&nbsp;".The fields which can be used in the template are:
 
@@ -122,7 +122,7 @@ The start time of the week and day views. The scheduler will display events star
     <kendo:scheduler startTime="startTime">
     </kendo:scheduler>
 
-### timezone `String`
+### timezone `java.lang.String`
 
 The timezone which the scheduler will use to display the scheduler appointment dates. By default the current system timezone is used. This is an acceptable default when the
 scheduler widget is bound to local array of events. It is advisable to specify a timezone if the scheduler is bound to a remote service.
@@ -132,7 +132,7 @@ That way all users would see the same dates and times no matter their configured
     <kendo:scheduler timezone="timezone">
     </kendo:scheduler>
 
-### width `Object`
+### width `java.lang.Object`
 
 The width of the widget. Numeric values are treated as pixels.
 
@@ -165,6 +165,18 @@ More documentation is available at [kendo:scheduler-group](scheduler/group).
 
     <kendo:scheduler>
         <kendo:scheduler-group></kendo:scheduler-group>
+    </kendo:scheduler>
+
+### kendo:scheduler-messages
+
+The configuration of the scheduler messages. Use this option to customize or localize the scheduler messages.
+
+More documentation is available at [kendo:scheduler-messages](scheduler/messages).
+
+#### Example
+
+    <kendo:scheduler>
+        <kendo:scheduler-messages></kendo:scheduler-messages>
     </kendo:scheduler>
 
 ### kendo:scheduler-resources

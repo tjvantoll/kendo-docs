@@ -25,7 +25,7 @@ the Slider.
     <kendo:slider-tooltip enabled="enabled">
     </kendo:slider-tooltip>
 
-### format `String`
+### format `java.lang.String`
 
 Format string for the text of the tooltip. Note: The applied
 format will also influence the appearance of the Slider
@@ -35,7 +35,7 @@ tick labels.
     <kendo:slider-tooltip format="format">
     </kendo:slider-tooltip>
 
-### template `String`
+### template `java.lang.String`
 
 Template of the tooltip.
 

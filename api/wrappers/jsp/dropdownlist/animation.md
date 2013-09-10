@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:dropDownList-animation\>
 
-Animations to be used for opening/closing the popup. Setting to false will turn of the animation.
+Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
 
 #### Example
     <kendo:dropDownList>
@@ -21,7 +21,7 @@ Animations to be used for opening/closing the popup. Setting to false will turn 
 
 ### kendo:dropDownList-animation-close
 
-Animation to be used for closing of the popup.
+
 
 More documentation is available at [kendo:dropDownList-animation-close](dropdownlist/animation-close).
 
@@ -33,7 +33,7 @@ More documentation is available at [kendo:dropDownList-animation-close](dropdown
 
 ### kendo:dropDownList-animation-open
 
-Animation to be used for opening of the popup.
+The animation played when the suggestion popup is opened.
 
 More documentation is available at [kendo:dropDownList-animation-open](dropdownlist/animation-open).
 

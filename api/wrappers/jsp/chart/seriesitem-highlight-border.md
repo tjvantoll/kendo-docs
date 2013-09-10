@@ -16,7 +16,7 @@ The border of the highlighted chart series. The color is computed automatically 
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the border. Accepts a valid CSS color string, including hex and rgb.
 

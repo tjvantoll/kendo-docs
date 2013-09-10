@@ -16,7 +16,7 @@ Configures the axis labels.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the labels. Any valid CSS color string will work here, including
 hex and rgb
@@ -25,7 +25,7 @@ hex and rgb
     <kendo:stockChart-valueAxisItem-labels background="background">
     </kendo:stockChart-valueAxisItem-labels>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels. Any valid CSS color string will work here, including hex and rgb.
 
@@ -33,7 +33,7 @@ The text color of the labels. Any valid CSS color string will work here, includi
     <kendo:stockChart-valueAxisItem-labels color="color">
     </kendo:stockChart-valueAxisItem-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -41,7 +41,7 @@ The font style of the labels.
     <kendo:stockChart-valueAxisItem-labels font="font">
     </kendo:stockChart-valueAxisItem-labels>
 
-### format `String`
+### format `java.lang.String`
 
 The format of the labels.
 
@@ -49,7 +49,7 @@ The format of the labels.
     <kendo:stockChart-valueAxisItem-labels format="format">
     </kendo:stockChart-valueAxisItem-labels>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the labels.
 
@@ -67,7 +67,7 @@ mirroring the axis will render them to the right.
     <kendo:stockChart-valueAxisItem-labels mirror="mirror">
     </kendo:stockChart-valueAxisItem-labels>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the labels.
 
@@ -101,7 +101,7 @@ Every n-th label is rendered where n is the step
     <kendo:stockChart-valueAxisItem-labels step="step">
     </kendo:stockChart-valueAxisItem-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The label template.
 Template variables:

@@ -16,7 +16,7 @@ The border of the labels.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the border.
 
@@ -24,7 +24,7 @@ The color of the border.
     <kendo:stockChart-navigator-seriesItem-labels-border color="color">
     </kendo:stockChart-navigator-seriesItem-labels-border>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the border.
 

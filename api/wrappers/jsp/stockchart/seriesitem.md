@@ -17,7 +17,7 @@ If a type value is missing, the type is assumed to be the one specified in serie
 
 ## Configuration Attributes
 
-### aggregate `String`
+### aggregate `java.lang.String`
 
 The aggregate function to apply for date series.This function is used when a category (an year, month, etc.) contains two or more points.
 The function return value is displayed instead of the individual points.The supported values are:
@@ -26,7 +26,7 @@ The function return value is displayed instead of the individual points.The supp
     <kendo:stockChart-seriesItem aggregate="aggregate">
     </kendo:stockChart-seriesItem>
 
-### axis `String`
+### axis `java.lang.String`
 
 The name of the value axis to use.** Applicable to area, column, line, ohlc and candlestick series **
 
@@ -34,7 +34,7 @@ The name of the value axis to use.** Applicable to area, column, line, ohlc and 
     <kendo:stockChart-seriesItem axis="axis">
     </kendo:stockChart-seriesItem>
 
-### categoryField `String`
+### categoryField `java.lang.String`
 
 The data item field which contains the category name or date.
 
@@ -42,7 +42,7 @@ The data item field which contains the category name or date.
     <kendo:stockChart-seriesItem categoryField="categoryField">
     </kendo:stockChart-seriesItem>
 
-### closeField `String`
+### closeField `java.lang.String`
 
 The data field containing the close value.** Available for candlestick and ohlc series only **
 
@@ -50,7 +50,7 @@ The data field containing the close value.** Available for candlestick and ohlc 
     <kendo:stockChart-seriesItem closeField="closeField">
     </kendo:stockChart-seriesItem>
 
-### color `String`
+### color `java.lang.String`
 
 The series base color.
 
@@ -58,7 +58,7 @@ The series base color.
     <kendo:stockChart-seriesItem color="color">
     </kendo:stockChart-seriesItem>
 
-### colorField `String`
+### colorField `java.lang.String`
 
 The data field containing the point color.** Applicable for column, candlestick and ohlc series. **
 
@@ -66,7 +66,7 @@ The data field containing the point color.** Applicable for column, candlestick 
     <kendo:stockChart-seriesItem colorField="colorField">
     </kendo:stockChart-seriesItem>
 
-### currentField `String`
+### currentField `java.lang.String`
 
 The data field containing the current value.** Available for bullet and verticalBullet series. **
 
@@ -74,7 +74,7 @@ The data field containing the current value.** Available for bullet and vertical
     <kendo:stockChart-seriesItem currentField="currentField">
     </kendo:stockChart-seriesItem>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The series line dash type.** Applicable only to line series **
 
@@ -82,7 +82,7 @@ The series line dash type.** Applicable only to line series **
     <kendo:stockChart-seriesItem dashType="dashType">
     </kendo:stockChart-seriesItem>
 
-### data `Object`
+### data `java.lang.Object`
 
 Array of data items. The data item type can be either a:
 
@@ -90,7 +90,7 @@ Array of data items. The data item type can be either a:
     <kendo:stockChart-seriesItem data="data">
     </kendo:stockChart-seriesItem>
 
-### downColor `String`
+### downColor `java.lang.String`
 
 The series color when open value is smoller then close value.** Available for candlestick series only **
 
@@ -98,7 +98,7 @@ The series color when open value is smoller then close value.** Available for ca
     <kendo:stockChart-seriesItem downColor="downColor">
     </kendo:stockChart-seriesItem>
 
-### downColorField `String`
+### downColorField `java.lang.String`
 
 The data field containing the body color.** Available for candlestick series only **
 
@@ -106,7 +106,7 @@ The data field containing the body color.** Available for candlestick series onl
     <kendo:stockChart-seriesItem downColorField="downColorField">
     </kendo:stockChart-seriesItem>
 
-### field `String`
+### field `java.lang.String`
 
 The data field containing the series value.
 
@@ -122,7 +122,7 @@ The distance between category clusters.** Applicable for column, candlestick and
     <kendo:stockChart-seriesItem gap="gap">
     </kendo:stockChart-seriesItem>
 
-### highField `String`
+### highField `java.lang.String`
 
 The data field containing the high value.** Available for candlestick and ohlc series only **
 
@@ -130,7 +130,7 @@ The data field containing the high value.** Available for candlestick and ohlc s
     <kendo:stockChart-seriesItem highField="highField">
     </kendo:stockChart-seriesItem>
 
-### line `String`
+### line `java.lang.String`
 
 Line options.** Applicable to area, candlestick and ohlc series. ** Further configuration is available via [kendo:stockChart-seriesItem-line](#kendo-stockChart-seriesItem-line). 
 
@@ -138,7 +138,7 @@ Line options.** Applicable to area, candlestick and ohlc series. ** Further conf
     <kendo:stockChart-seriesItem line="line">
     </kendo:stockChart-seriesItem>
 
-### lowField `String`
+### lowField `java.lang.String`
 
 The data field containing the low value.** Available for candlestick and ohlc series **
 
@@ -146,7 +146,7 @@ The data field containing the low value.** Available for candlestick and ohlc se
     <kendo:stockChart-seriesItem lowField="lowField">
     </kendo:stockChart-seriesItem>
 
-### missingValues `String`
+### missingValues `java.lang.String`
 
 The behavior for handling missing values. The supported values are:
 
@@ -154,7 +154,7 @@ The behavior for handling missing values. The supported values are:
     <kendo:stockChart-seriesItem missingValues="missingValues">
     </kendo:stockChart-seriesItem>
 
-### name `String`
+### name `java.lang.String`
 
 The series name visible in the legend.
 
@@ -162,7 +162,7 @@ The series name visible in the legend.
     <kendo:stockChart-seriesItem name="name">
     </kendo:stockChart-seriesItem>
 
-### negativeColor `String`
+### negativeColor `java.lang.String`
 
 Color to use for bars with negative values.** Applicable only to column series. **The plot stops before the missing point and continues after it.
 
@@ -178,7 +178,7 @@ The series opacity.
     <kendo:stockChart-seriesItem opacity="opacity">
     </kendo:stockChart-seriesItem>
 
-### openField `String`
+### openField `java.lang.String`
 
 The data field containing the open value.** Available for candlestick and ohlc series **
 
@@ -194,7 +194,7 @@ Space between points as proportion of the point width.Available for column, cand
     <kendo:stockChart-seriesItem spacing="spacing">
     </kendo:stockChart-seriesItem>
 
-### stack `Object`
+### stack `java.lang.Object`
 
 A value indicating if the series should be stacked. String value indicates that the series should be stacked in a group with the specified name.
 Available for column series.
@@ -203,7 +203,7 @@ Available for column series.
     <kendo:stockChart-seriesItem stack="stack">
     </kendo:stockChart-seriesItem>
 
-### targetField `String`
+### targetField `java.lang.String`
 
 The data field containing the target value.** Available for bullet and verticalBullet series. **
 
@@ -211,7 +211,7 @@ The data field containing the target value.** Available for bullet and verticalB
     <kendo:stockChart-seriesItem targetField="targetField">
     </kendo:stockChart-seriesItem>
 
-### type `String`
+### type `java.lang.String`
 
 The type of the series. Available types:
 

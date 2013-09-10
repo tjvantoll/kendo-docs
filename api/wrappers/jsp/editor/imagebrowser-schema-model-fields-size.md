@@ -16,7 +16,7 @@ The field which contains the size of image.
 
 ## Configuration Attributes
 
-### field `String`
+### field `java.lang.String`
 
 The name of the field.
 
@@ -24,7 +24,7 @@ The name of the field.
     <kendo:editor-imageBrowser-schema-model-fields-size field="field">
     </kendo:editor-imageBrowser-schema-model-fields-size>
 
-### parse `String`
+### parse `java.lang.String`
 
 Specifies the function which will parse the field value. If not set default parsers will be used.
 

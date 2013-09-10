@@ -16,7 +16,7 @@ The border of the title.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the border. Any valid CSS color string will work here, including
 hex and rgb.
@@ -25,7 +25,7 @@ hex and rgb.
     <kendo:stockChart-pane-title-border color="color">
     </kendo:stockChart-pane-title-border>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the border.
 

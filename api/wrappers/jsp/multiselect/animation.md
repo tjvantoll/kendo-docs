@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:multiSelect-animation\>
 
-Animations to be used for opening/closing the popup. Setting to false will turn off the animation.
+Configures the opening and closing animations of the suggestion popup. Setting the animation option to false will disable the opening and closing animations. As a result the suggestion popup will open and close instantly.
 
 #### Example
     <kendo:multiSelect>
@@ -21,7 +21,7 @@ Animations to be used for opening/closing the popup. Setting to false will turn 
 
 ### kendo:multiSelect-animation-close
 
-Animation to be used for closing of the popup.
+
 
 More documentation is available at [kendo:multiSelect-animation-close](multiselect/animation-close).
 
@@ -33,7 +33,7 @@ More documentation is available at [kendo:multiSelect-animation-close](multisele
 
 ### kendo:multiSelect-animation-open
 
-Animation to be used for opening of the popup.
+The animation played when the suggestion popup is opened.
 
 More documentation is available at [kendo:multiSelect-animation-open](multiselect/animation-open).
 

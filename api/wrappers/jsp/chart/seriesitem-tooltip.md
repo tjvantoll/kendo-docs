@@ -16,7 +16,7 @@ The chart series tooltip configuration options.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The background color of the tooltip. Accepts a valid CSS color string, including
     <kendo:chart-seriesItem-tooltip background="background">
     </kendo:chart-seriesItem-tooltip>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The text color of the tooltip. Accepts a valid CSS color string, including hex a
     <kendo:chart-seriesItem-tooltip color="color">
     </kendo:chart-seriesItem-tooltip>
 
-### font `String`
+### font `java.lang.String`
 
 The tooltip font.
 
@@ -40,7 +40,7 @@ The tooltip font.
     <kendo:chart-seriesItem-tooltip font="font">
     </kendo:chart-seriesItem-tooltip>
 
-### format `String`
+### format `java.lang.String`
 
 The format of the labels. Uses kendo.format.Format placeholders:
 
@@ -56,7 +56,7 @@ The padding of the tooltip. A numeric value will set all paddings. Further confi
     <kendo:chart-seriesItem-tooltip padding="padding">
     </kendo:chart-seriesItem-tooltip>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the tooltip.The fields which can be used in the template are:
 

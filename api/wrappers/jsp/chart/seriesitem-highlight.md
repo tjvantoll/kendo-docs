@@ -16,7 +16,7 @@ The chart series highlighting configuration options.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The highlight color. Accepts a valid CSS color string, including hex and rgb.
 

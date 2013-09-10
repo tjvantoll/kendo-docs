@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [QRCode](/api/dataviz/qrcode).
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the QR code. Accepts a valid CSS color string, including hex and rgb.
 
@@ -18,7 +18,7 @@ The background color of the QR code. Accepts a valid CSS color string, including
     <kendo:qRCode background="background">
     </kendo:qRCode>
 
-### color `String`
+### color `java.lang.String`
 
 The color of the QR code. Accepts a valid CSS color string, including hex and rgb.
 
@@ -26,7 +26,7 @@ The color of the QR code. Accepts a valid CSS color string, including hex and rg
     <kendo:qRCode color="color">
     </kendo:qRCode>
 
-### encoding `String`
+### encoding `java.lang.String`
 
 The encoding mode used to encode the value.The possible values are:
 
@@ -34,7 +34,7 @@ The encoding mode used to encode the value.The possible values are:
     <kendo:qRCode encoding="encoding">
     </kendo:qRCode>
 
-### errorCorrection `String`
+### errorCorrection `java.lang.String`
 
 The error correction level used to encode the value.The possible values are:
 
@@ -42,7 +42,7 @@ The error correction level used to encode the value.The possible values are:
     <kendo:qRCode errorCorrection="errorCorrection">
     </kendo:qRCode>
 
-### renderAs `String`
+### renderAs `java.lang.String`
 
 Sets the preferred rendering engine.
 If it is not supported by the browser, the QRCode will switch to the first available mode.The supported values are:
@@ -51,7 +51,7 @@ If it is not supported by the browser, the QRCode will switch to the first avail
     <kendo:qRCode renderAs="renderAs">
     </kendo:qRCode>
 
-### size `Object`
+### size `java.lang.Object`
 
 Specifies the size of a QR code in pixels (i.e. "200px"). Numeric values are treated as pixels. If no size is specified, it will be determined from the element width and height. In case the element does not have width or height bigger than zero, a default value of 200 pixels will be used.
 
@@ -59,7 +59,7 @@ Specifies the size of a QR code in pixels (i.e. "200px"). Numeric values are tre
     <kendo:qRCode size="size">
     </kendo:qRCode>
 
-### value `Object`
+### value `java.lang.Object`
 
 The value of the QRCode.
 

@@ -17,7 +17,7 @@ body of the chart.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the lines.
 

@@ -16,7 +16,7 @@ The chart series overlay options.
 
 ## Configuration Attributes
 
-### gradient `String`
+### gradient `java.lang.String`
 
 The chart series gradient.The supported values are:
 

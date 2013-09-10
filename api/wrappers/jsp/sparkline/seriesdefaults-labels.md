@@ -16,7 +16,7 @@ Configures the series data labels.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the labels. Any valid CSS color string will work here,
 including hex and rgb.
@@ -25,7 +25,7 @@ including hex and rgb.
     <kendo:sparkline-seriesDefaults-labels background="background">
     </kendo:sparkline-seriesDefaults-labels>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels. Any valid CSS color string will work here, inlcuding hex
 and rgb.
@@ -34,7 +34,7 @@ and rgb.
     <kendo:sparkline-seriesDefaults-labels color="color">
     </kendo:sparkline-seriesDefaults-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 labels
@@ -43,7 +43,7 @@ labels
     <kendo:sparkline-seriesDefaults-labels font="font">
     </kendo:sparkline-seriesDefaults-labels>
 
-### format `String`
+### format `java.lang.String`
 
 The format of the labels.
 
@@ -51,7 +51,7 @@ The format of the labels.
     <kendo:sparkline-seriesDefaults-labels format="format">
     </kendo:sparkline-seriesDefaults-labels>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the labels.
 
@@ -59,7 +59,7 @@ The margin of the labels.
     <kendo:sparkline-seriesDefaults-labels margin="margin">
     </kendo:sparkline-seriesDefaults-labels>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the labels.
 
@@ -67,7 +67,7 @@ The padding of the labels.
     <kendo:sparkline-seriesDefaults-labels padding="padding">
     </kendo:sparkline-seriesDefaults-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The label template.
 Template variables:

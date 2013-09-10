@@ -17,7 +17,7 @@ the body of the chart.Note that minor grid lines are not visible by default, the
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the lines. Any valid CSS color string will work here, including hex and
 rgb.Note that this setting has no effect if the visibility of the minor
@@ -27,7 +27,7 @@ grid lines is not set to true.
     <kendo:stockChart-categoryAxisItem-minorGridLines color="color">
     </kendo:stockChart-categoryAxisItem-minorGridLines>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the grid lines.
 

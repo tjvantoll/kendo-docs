@@ -16,7 +16,7 @@ The line of the highlighted chart series. The color is computed automatically fr
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The line color. Accepts a valid CSS color string, including hex and rgb.
 

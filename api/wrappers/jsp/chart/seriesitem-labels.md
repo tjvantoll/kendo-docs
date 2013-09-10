@@ -16,7 +16,7 @@ The chart series label configuration.
 
 ## Configuration Attributes
 
-### align `String`
+### align `java.lang.String`
 
 The label alignment when series.type is set to "donut" or "pie".The supported values are:
 
@@ -24,7 +24,7 @@ The label alignment when series.type is set to "donut" or "pie".The supported va
     <kendo:chart-seriesItem-labels align="align">
     </kendo:chart-seriesItem-labels>
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The background color of the labels. Accepts a valid CSS color string, including 
     <kendo:chart-seriesItem-labels background="background">
     </kendo:chart-seriesItem-labels>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
@@ -48,7 +48,7 @@ The distance of the labels when series.type is set to "donut" or "pie".
     <kendo:chart-seriesItem-labels distance="distance">
     </kendo:chart-seriesItem-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -56,7 +56,7 @@ The font style of the labels.
     <kendo:chart-seriesItem-labels font="font">
     </kendo:chart-seriesItem-labels>
 
-### format `String`
+### format `java.lang.String`
 
 The format of the labels. Uses kendo.format.
 
@@ -80,7 +80,7 @@ The padding of the labels. A numeric value will set all paddings. Further config
     <kendo:chart-seriesItem-labels padding="padding">
     </kendo:chart-seriesItem-labels>
 
-### position `String`
+### position `java.lang.String`
 
 The position of the labels.
 
@@ -88,7 +88,7 @@ The position of the labels.
     <kendo:chart-seriesItem-labels position="position">
     </kendo:chart-seriesItem-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the chart series label.The fields which can be used in the template are:
 

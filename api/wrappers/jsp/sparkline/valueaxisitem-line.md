@@ -16,7 +16,7 @@ Configures the axis line. This will also affect the major and minor ticks, but n
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the line. This will also effect the major and minor ticks, but
 not the grid lines.
@@ -25,7 +25,7 @@ not the grid lines.
     <kendo:sparkline-valueAxisItem-line color="color">
     </kendo:sparkline-valueAxisItem-line>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the line.
 

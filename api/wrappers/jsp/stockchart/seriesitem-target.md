@@ -16,7 +16,7 @@ The target of the bullet chart.
 
 ## Configuration Attributes
 
-### border `String`
+### border `java.lang.String`
 
 The border of the target. Further configuration is available via [kendo:stockChart-seriesItem-target-border](#kendo-stockChart-seriesItem-target-border). 
 
@@ -24,7 +24,7 @@ The border of the target. Further configuration is available via [kendo:stockCha
     <kendo:stockChart-seriesItem-target border="border">
     </kendo:stockChart-seriesItem-target>
 
-### color `String`
+### color `java.lang.String`
 
 The target color.
 

@@ -56,7 +56,7 @@ The number of data items which will be displayed in the grid.
     <kendo:grid-pageable pageSize="pageSize">
     </kendo:grid-pageable>
 
-### pageSizes `Object`
+### pageSizes `java.lang.Object`
 
 If set to true the pager will display a dropdown list which allows the user to pick a page size. By default the page size dropdown list is not displayed.Can be set to an array with the available page sizes.
 

@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [Grid](/api/web/grid).
 
 ## Configuration Attributes
 
-### altRowTemplate `String`
+### altRowTemplate `java.lang.String`
 
 The id of the template used for rendering the alternate rows in the grid.
 
@@ -44,7 +44,7 @@ Defines the width of the column resize handle in pixels. Apply a larger value fo
     <kendo:grid columnResizeHandleWidth="columnResizeHandleWidth">
     </kendo:grid>
 
-### detailTemplate `String`
+### detailTemplate `java.lang.String`
 
 The id of the template used for rendering the detail rows in the grid.
 
@@ -76,7 +76,7 @@ If set to true the user could group the grid by dragging the column header cells
     <kendo:grid groupable="groupable">
     </kendo:grid>
 
-### height `Object`
+### height `java.lang.Object`
 
 The height of the grid. Numeric values are treated as pixels.
 
@@ -116,7 +116,7 @@ If set to true the user could resize the columns by dragging the edges of their 
     <kendo:grid resizable="resizable">
     </kendo:grid>
 
-### rowTemplate `String`
+### rowTemplate `java.lang.String`
 
 The id of the template used for rendering the rows in the grid.
 
@@ -132,7 +132,7 @@ If set to true the grid will display a scrollbar when the total row height (or w
     <kendo:grid scrollable="scrollable">
     </kendo:grid>
 
-### selectable `Object`
+### selectable `java.lang.Object`
 
 If set to true the user would be able to select grid rows. By default selection is disabled.Can also be set to the following string values:
 

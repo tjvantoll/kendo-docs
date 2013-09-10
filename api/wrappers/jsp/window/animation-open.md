@@ -24,7 +24,7 @@ Defines the open animation duration.
     <kendo:window-animation-open duration="duration">
     </kendo:window-animation-open>
 
-### effects `String`
+### effects `java.lang.String`
 
 Effect to be used for opening of the popup.
 

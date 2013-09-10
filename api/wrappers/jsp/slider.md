@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [Slider](/api/web/slider).
 
 ## Configuration Attributes
 
-### decreaseButtonTitle `String`
+### decreaseButtonTitle `java.lang.String`
 
 The title of the decrease button of the Slider.
 
@@ -18,7 +18,7 @@ The title of the decrease button of the Slider.
     <kendo:slider decreaseButtonTitle="decreaseButtonTitle">
     </kendo:slider>
 
-### increaseButtonTitle `String`
+### increaseButtonTitle `java.lang.String`
 
 The title of the increase button of the Slider.
 
@@ -51,7 +51,7 @@ The minimum value of the Slider.
     <kendo:slider min="min">
     </kendo:slider>
 
-### orientation `String`
+### orientation `java.lang.String`
 
 The orientation of a Slider: "horizontal" or "vertical".
 
@@ -78,7 +78,7 @@ The small step value of the Slider. The underlying value will be changed when th
     <kendo:slider smallStep="smallStep">
     </kendo:slider>
 
-### tickPlacement `String`
+### tickPlacement `java.lang.String`
 
 Denotes the location of the tick marks in the Slider. The available options are:
 

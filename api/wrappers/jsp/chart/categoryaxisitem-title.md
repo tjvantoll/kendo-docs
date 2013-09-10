@@ -16,7 +16,7 @@ The title configuration of the category axis.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the title. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The background color of the title. Accepts a valid CSS color string, including h
     <kendo:chart-categoryAxisItem-title background="background">
     </kendo:chart-categoryAxisItem-title>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the title. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The text color of the title. Accepts a valid CSS color string, including hex and
     <kendo:chart-categoryAxisItem-title color="color">
     </kendo:chart-categoryAxisItem-title>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the title.
 
@@ -56,7 +56,7 @@ The padding of the title. A numeric value will set all paddings. Further configu
     <kendo:chart-categoryAxisItem-title padding="padding">
     </kendo:chart-categoryAxisItem-title>
 
-### position `String`
+### position `java.lang.String`
 
 The position of the title.The supported values are:
 
@@ -72,7 +72,7 @@ The rotation angle of the title. By default the title is not rotated.
     <kendo:chart-categoryAxisItem-title rotation="rotation">
     </kendo:chart-categoryAxisItem-title>
 
-### text `String`
+### text `java.lang.String`
 
 The text of the title.
 

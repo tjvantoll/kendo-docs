@@ -16,7 +16,7 @@ The format used to display the labels when the x values are dates. Uses kendo.fo
 
 ## Configuration Attributes
 
-### days `String`
+### days `java.lang.String`
 
 The format used when xAxis.baseUnit is set to "days".
 
@@ -24,7 +24,7 @@ The format used when xAxis.baseUnit is set to "days".
     <kendo:chart-xAxisItem-labels-dateFormats days="days">
     </kendo:chart-xAxisItem-labels-dateFormats>
 
-### hours `String`
+### hours `java.lang.String`
 
 The format used when xAxis.baseUnit is set to "hours".
 
@@ -32,7 +32,7 @@ The format used when xAxis.baseUnit is set to "hours".
     <kendo:chart-xAxisItem-labels-dateFormats hours="hours">
     </kendo:chart-xAxisItem-labels-dateFormats>
 
-### months `String`
+### months `java.lang.String`
 
 The format used when xAxis.baseUnit is set to "months".
 
@@ -40,7 +40,7 @@ The format used when xAxis.baseUnit is set to "months".
     <kendo:chart-xAxisItem-labels-dateFormats months="months">
     </kendo:chart-xAxisItem-labels-dateFormats>
 
-### weeks `String`
+### weeks `java.lang.String`
 
 The format used when xAxis.baseUnit is set to "weeks".
 
@@ -48,7 +48,7 @@ The format used when xAxis.baseUnit is set to "weeks".
     <kendo:chart-xAxisItem-labels-dateFormats weeks="weeks">
     </kendo:chart-xAxisItem-labels-dateFormats>
 
-### years `String`
+### years `java.lang.String`
 
 The format used when xAxis.baseUnit is set to "years".
 

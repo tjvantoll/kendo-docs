@@ -16,7 +16,7 @@ The configuration of the axis lines. Also affects the major and minor ticks, but
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the lines. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
     <kendo:chart-yAxisItem-line color="color">
     </kendo:chart-yAxisItem-line>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the line.The following dash types are supported:
 

@@ -16,7 +16,7 @@ The items of the notes.
 
 ## Configuration Attributes
 
-### position `String`
+### position `java.lang.String`
 
 The position of the category axis note.
 
@@ -24,7 +24,7 @@ The position of the category axis note.
     <kendo:stockChart-categoryAxisItem-notes-dataItem position="position">
     </kendo:stockChart-categoryAxisItem-notes-dataItem>
 
-### value `Object`
+### value `java.lang.Object`
 
 The value of the note.
 

@@ -26,7 +26,7 @@ Specifies if the tooltip callout will be displayed.
     <kendo:tooltip callout="callout">
     </kendo:tooltip>
 
-### filter `String`
+### filter `java.lang.String`
 
 Specifies a selector for elements, within the container, for which the tooltip will be displayed.
 
@@ -50,7 +50,7 @@ Explicitly states whether content iframe should be created.
     <kendo:tooltip iframe="iframe">
     </kendo:tooltip>
 
-### position `String`
+### position `java.lang.String`
 
 The position relative to the target element, at which the tooltip will be shown. Predefined values are "bottom", "top", "left", "right", "center".
 
@@ -66,7 +66,7 @@ Specify the delay in milliseconds before the tooltip is shown. This option is ig
     <kendo:tooltip showAfter="showAfter">
     </kendo:tooltip>
 
-### showOn `String`
+### showOn `java.lang.String`
 
 The event on which the tooltip will be shown. Predefined values are "mouseenter", "click" and "focus".
 

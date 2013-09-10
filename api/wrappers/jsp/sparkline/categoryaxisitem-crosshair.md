@@ -16,7 +16,7 @@ The crosshair configuration options.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the crosshair.
 

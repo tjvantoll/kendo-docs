@@ -16,7 +16,7 @@ Line options.** Applicable to area series. **
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The line color.
 
@@ -32,7 +32,7 @@ The line opacity.
     <kendo:sparkline-seriesItem-line opacity="opacity">
     </kendo:sparkline-seriesItem-line>
 
-### width `String`
+### width `java.lang.String`
 
 The line width.
 

@@ -16,7 +16,7 @@ The configuration options of the target
 
 ## Configuration Attributes
 
-### border `String`
+### border `java.lang.String`
 
 The border of the target. Further configuration is available via [kendo:chart-seriesItem-target-border](#kendo-chart-seriesItem-target-border). 
 
@@ -24,7 +24,7 @@ The border of the target. Further configuration is available via [kendo:chart-se
     <kendo:chart-seriesItem-target border="border">
     </kendo:chart-seriesItem-target>
 
-### color `String`
+### color `java.lang.String`
 
 The target color.
 

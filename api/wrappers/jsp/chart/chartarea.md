@@ -16,7 +16,7 @@ The chart area configuration options. Represents the entire visible area of the 
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the chart area. Accepts a valid CSS color string, including hex and rgb.
 

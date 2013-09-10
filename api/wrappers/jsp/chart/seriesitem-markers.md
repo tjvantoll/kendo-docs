@@ -16,7 +16,7 @@ The chart series marker configuration.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the series markers.
 
@@ -24,7 +24,7 @@ The background color of the series markers.
     <kendo:chart-seriesItem-markers background="background">
     </kendo:chart-seriesItem-markers>
 
-### border `String`
+### border `java.lang.String`
 
 The border of the markers. Further configuration is available via [kendo:chart-seriesItem-markers-border](#kendo-chart-seriesItem-markers-border). 
 
@@ -48,7 +48,7 @@ The marker size in pixels.
     <kendo:chart-seriesItem-markers size="size">
     </kendo:chart-seriesItem-markers>
 
-### type `String`
+### type `java.lang.String`
 
 The markers shape.The supported values are:
 * "circle" - the marker shape is circle.

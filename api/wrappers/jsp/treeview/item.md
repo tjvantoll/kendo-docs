@@ -32,7 +32,7 @@ Specifies whether the item is initially expanded
     <kendo:treeView-item expanded="expanded">
     </kendo:treeView-item>
 
-### imageUrl `String`
+### imageUrl `java.lang.String`
 
 Specifies the URL of the image displayed by the item
 
@@ -48,7 +48,7 @@ Specifies whether the item is initially selected
     <kendo:treeView-item selected="selected">
     </kendo:treeView-item>
 
-### spriteCssClass `String`
+### spriteCssClass `java.lang.String`
 
 Specifies the class name for the sprite image displayed by the item
 
@@ -56,7 +56,7 @@ Specifies the class name for the sprite image displayed by the item
     <kendo:treeView-item spriteCssClass="spriteCssClass">
     </kendo:treeView-item>
 
-### text `String`
+### text `java.lang.String`
 
 Specifies the text displayed by the item
 
@@ -64,7 +64,7 @@ Specifies the text displayed by the item
     <kendo:treeView-item text="text">
     </kendo:treeView-item>
 
-### url `String`
+### url `java.lang.String`
 
 Specifies the URL that the item will link to. Used for navigational trees.
 

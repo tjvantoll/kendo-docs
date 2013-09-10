@@ -25,7 +25,7 @@ also enables tri-state checkboxes with an indeterminate state.
     <kendo:treeView-checkboxes checkChildren="checkChildren">
     </kendo:treeView-checkboxes>
 
-### name `String`
+### name `java.lang.String`
 
 Sets the name attribute of the checkbox inputs. That name will be posted to the server.
 
@@ -33,7 +33,7 @@ Sets the name attribute of the checkbox inputs. That name will be posted to the 
     <kendo:treeView-checkboxes name="name">
     </kendo:treeView-checkboxes>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the checkboxes. Can be used to allow posting of
 additional information along the treeview checkboxes.The fields which can be used in the template are:

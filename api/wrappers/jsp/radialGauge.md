@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [RadialGauge](/api/dataviz/radialgauge).
 
 ## Configuration Attributes
 
-### renderAs `String`
+### renderAs `java.lang.String`
 
 Sets the preferred rendering engine.
 If it is not supported by the browser, the Gauge will switch to the first available mode.The supported values are:

@@ -16,7 +16,7 @@ The chart legend label configuration.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The text color of the labels. Accepts a valid CSS color string, including hex an
     <kendo:chart-legend-inactiveItems-labels color="color">
     </kendo:chart-legend-inactiveItems-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -32,7 +32,7 @@ The font style of the labels.
     <kendo:chart-legend-inactiveItems-labels font="font">
     </kendo:chart-legend-inactiveItems-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the labels.The fields which can be used in the template are:
 

@@ -24,7 +24,7 @@ Difines the animation duration.
     <kendo:tooltip-animation-open duration="duration">
     </kendo:tooltip-animation-open>
 
-### effects `String`
+### effects `java.lang.String`
 
 Effect to be used for opening of the Tooltip.
 

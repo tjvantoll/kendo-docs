@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [Calendar](/api/web/calendar).
 
 ## Configuration Attributes
 
-### culture `String`
+### culture `java.lang.String`
 
 Specifies the culture info used by the widget.
 
@@ -18,7 +18,7 @@ Specifies the culture info used by the widget.
     <kendo:calendar culture="culture">
     </kendo:calendar>
 
-### dates `Object`
+### dates `java.lang.Object`
 
 Specifies a list of dates, which will be passed to the month template.
 
@@ -26,23 +26,24 @@ Specifies a list of dates, which will be passed to the month template.
     <kendo:calendar dates="dates">
     </kendo:calendar>
 
-### depth `String`
+### depth `java.lang.String`
 
-Specifies the navigation depth.
+Specifies the navigation depth. The following
+settings are available for the depth value:
 
 #### Example
     <kendo:calendar depth="depth">
     </kendo:calendar>
 
-### footer `String`
+### footer `java.lang.String`
 
-Template to be used for rendering the footer. If false, the footer will not be rendered.
+The template which renders the footer. If false, the footer will not be rendered.
 
 #### Example
     <kendo:calendar footer="footer">
     </kendo:calendar>
 
-### format `String`
+### format `java.lang.String`
 
 Specifies the format, which is used to parse value set with value() method.
 
@@ -66,9 +67,10 @@ Specifies the minimum date, which the calendar can show.
     <kendo:calendar min="min">
     </kendo:calendar>
 
-### start `String`
+### start `java.lang.String`
 
 Specifies the start view.
+The following settings are available for the start value:
 
 #### Example
     <kendo:calendar start="start">
@@ -87,7 +89,7 @@ Specifies the selected date.
 
 ### kendo:calendar-month
 
-Templates for the cells rendered in the "month" view.
+Templates for the cells rendered in "month" view.
 
 More documentation is available at [kendo:calendar-month](calendar/month).
 
@@ -102,7 +104,7 @@ More documentation is available at [kendo:calendar-month](calendar/month).
 
 ### change `String`
 
-Fires when the selected date is changed
+Fires when the selected date is changed.
 
 
 For additional information check the [change](/api/web/calendar#events-change) event documentation.
@@ -118,7 +120,7 @@ For additional information check the [change](/api/web/calendar#events-change) e
 
 ### navigate `String`
 
-Fires when navigate
+Fires when calendar navigates.
 
 
 For additional information check the [navigate](/api/web/calendar#events-navigate) event documentation.
@@ -136,7 +138,7 @@ For additional information check the [navigate](/api/web/calendar#events-navigat
 
 ### kendo:calendar-change
 
-Fires when the selected date is changed
+Fires when the selected date is changed.
 
 
 For additional information check the [change](/api/web/calendar#events-change) event documentation.
@@ -154,7 +156,7 @@ For additional information check the [change](/api/web/calendar#events-change) e
 
 ### kendo:calendar-navigate
 
-Fires when navigate
+Fires when calendar navigates.
 
 
 For additional information check the [navigate](/api/web/calendar#events-navigate) event documentation.

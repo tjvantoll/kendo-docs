@@ -16,7 +16,7 @@ Configures the legend markers.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the markers.
 Any valid CSS color string will work here, including hex and rgb.

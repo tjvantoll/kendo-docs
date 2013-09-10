@@ -16,7 +16,7 @@ Configures the appearance of highlighted points.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The highlight color.** Available only for pie series **
 

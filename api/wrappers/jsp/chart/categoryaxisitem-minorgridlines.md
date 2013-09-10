@@ -17,7 +17,7 @@ body of the chart.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the minor grid lines. Accepts a valid CSS color string, including hex and rgb.
 
@@ -25,7 +25,7 @@ The color of the minor grid lines. Accepts a valid CSS color string, including h
     <kendo:chart-categoryAxisItem-minorGridLines color="color">
     </kendo:chart-categoryAxisItem-minorGridLines>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the minor grid lines.The following dash types are supported:
 

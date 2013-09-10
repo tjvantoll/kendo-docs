@@ -16,7 +16,7 @@ The chart line configuration options.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The line color. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The line opacity. By default the line is opaque.
     <kendo:chart-seriesItem-line opacity="opacity">
     </kendo:chart-seriesItem-line>
 
-### width `String`
+### width `java.lang.String`
 
 The line width in pixels.
 

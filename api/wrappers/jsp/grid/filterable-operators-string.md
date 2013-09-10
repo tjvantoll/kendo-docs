@@ -16,7 +16,7 @@ The texts of the filter operators displayed for columns bound to string fields.
 
 ## Configuration Attributes
 
-### contains `String`
+### contains `java.lang.String`
 
 The text of the "contains" filter operator.
 
@@ -24,7 +24,7 @@ The text of the "contains" filter operator.
     <kendo:grid-filterable-operators-string contains="contains">
     </kendo:grid-filterable-operators-string>
 
-### doesnotcontain `String`
+### doesnotcontain `java.lang.String`
 
 The text of the "does not contain" filter operator.
 
@@ -32,7 +32,7 @@ The text of the "does not contain" filter operator.
     <kendo:grid-filterable-operators-string doesnotcontain="doesnotcontain">
     </kendo:grid-filterable-operators-string>
 
-### endswith `String`
+### endswith `java.lang.String`
 
 The text of the "ends with" filter operator.
 
@@ -40,7 +40,7 @@ The text of the "ends with" filter operator.
     <kendo:grid-filterable-operators-string endswith="endswith">
     </kendo:grid-filterable-operators-string>
 
-### eq `String`
+### eq `java.lang.String`
 
 The text of the "equal" filter operator.
 
@@ -48,7 +48,7 @@ The text of the "equal" filter operator.
     <kendo:grid-filterable-operators-string eq="eq">
     </kendo:grid-filterable-operators-string>
 
-### neq `String`
+### neq `java.lang.String`
 
 The text of the "not equal" filter operator.
 
@@ -56,7 +56,7 @@ The text of the "not equal" filter operator.
     <kendo:grid-filterable-operators-string neq="neq">
     </kendo:grid-filterable-operators-string>
 
-### startswith `String`
+### startswith `java.lang.String`
 
 The text of the "starts with" filter operator.
 

@@ -16,7 +16,7 @@ Configures the scale major ticks.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the major ticks.
 

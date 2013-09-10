@@ -18,7 +18,7 @@ categoryAxis.baseUnitStep is set to "auto".
 
 ## Configuration Attributes
 
-### days `Object`
+### days `java.lang.Object`
 
 The days unit steps.
 
@@ -26,7 +26,7 @@ The days unit steps.
     <kendo:stockChart-categoryAxisItem-autoBaseUnitSteps days="days">
     </kendo:stockChart-categoryAxisItem-autoBaseUnitSteps>
 
-### hours `Object`
+### hours `java.lang.Object`
 
 The hours unit steps.
 
@@ -34,7 +34,7 @@ The hours unit steps.
     <kendo:stockChart-categoryAxisItem-autoBaseUnitSteps hours="hours">
     </kendo:stockChart-categoryAxisItem-autoBaseUnitSteps>
 
-### minutes `Object`
+### minutes `java.lang.Object`
 
 The minutes unit steps.
 
@@ -42,7 +42,7 @@ The minutes unit steps.
     <kendo:stockChart-categoryAxisItem-autoBaseUnitSteps minutes="minutes">
     </kendo:stockChart-categoryAxisItem-autoBaseUnitSteps>
 
-### months `Object`
+### months `java.lang.Object`
 
 The months unit steps.
 
@@ -50,7 +50,7 @@ The months unit steps.
     <kendo:stockChart-categoryAxisItem-autoBaseUnitSteps months="months">
     </kendo:stockChart-categoryAxisItem-autoBaseUnitSteps>
 
-### weeks `Object`
+### weeks `java.lang.Object`
 
 The weeks unit steps.
 
@@ -58,7 +58,7 @@ The weeks unit steps.
     <kendo:stockChart-categoryAxisItem-autoBaseUnitSteps weeks="weeks">
     </kendo:stockChart-categoryAxisItem-autoBaseUnitSteps>
 
-### years `Object`
+### years `java.lang.Object`
 
 The years unit steps.
 

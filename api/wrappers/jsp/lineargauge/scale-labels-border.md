@@ -16,7 +16,7 @@ The border of the labels.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the border. Any valid CSS color string will work here, including hex and rgb.
 
@@ -24,7 +24,7 @@ The color of the border. Any valid CSS color string will work here, including he
     <kendo:linearGauge-scale-labels-border color="color">
     </kendo:linearGauge-scale-labels-border>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the border.
 

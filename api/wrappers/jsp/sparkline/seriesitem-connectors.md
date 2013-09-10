@@ -16,7 +16,7 @@ The label connectors options.** Applicable to pie series. **
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the connector line.
 

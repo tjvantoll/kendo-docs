@@ -16,7 +16,7 @@ Configures the legend labels.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the labels.
 Any valid CSS color string will work here, including hex and rgb.
@@ -25,7 +25,7 @@ Any valid CSS color string will work here, including hex and rgb.
     <kendo:stockChart-legend-inactiveItems-labels color="color">
     </kendo:stockChart-legend-inactiveItems-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -33,7 +33,7 @@ The font style of the labels.
     <kendo:stockChart-legend-inactiveItems-labels font="font">
     </kendo:stockChart-legend-inactiveItems-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The template of the labels.
 Template variables:

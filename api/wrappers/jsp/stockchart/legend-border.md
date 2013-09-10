@@ -16,7 +16,7 @@ The border of the legend.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the border.
 
@@ -24,7 +24,7 @@ The color of the border.
     <kendo:stockChart-legend-border color="color">
     </kendo:stockChart-legend-border>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the border.
 

@@ -17,7 +17,7 @@ with a scheduler event.
 
 ## Configuration Attributes
 
-### dataColorField `String`
+### dataColorField `java.lang.String`
 
 The field of the resource data item which contains the resource color.
 
@@ -25,7 +25,7 @@ The field of the resource data item which contains the resource color.
     <kendo:scheduler-resource dataColorField="dataColorField">
     </kendo:scheduler-resource>
 
-### dataTextField `String`
+### dataTextField `java.lang.String`
 
 The field of the resource data item which represents the resource text.
 
@@ -33,7 +33,7 @@ The field of the resource data item which represents the resource text.
     <kendo:scheduler-resource dataTextField="dataTextField">
     </kendo:scheduler-resource>
 
-### dataValueField `String`
+### dataValueField `java.lang.String`
 
 The field of the resource data item which represents the resource value. The resource value is used to link a scheduler event with a resource.
 
@@ -41,7 +41,7 @@ The field of the resource data item which represents the resource value. The res
     <kendo:scheduler-resource dataValueField="dataValueField">
     </kendo:scheduler-resource>
 
-### field `String`
+### field `java.lang.String`
 
 The field of the scheduler event which contains the resource id.
 
@@ -58,7 +58,7 @@ By default only one resource instance can be assigned to an event.
     <kendo:scheduler-resource multiple="multiple">
     </kendo:scheduler-resource>
 
-### name `String`
+### name `java.lang.String`
 
 Tha name of the resource used to distinguish resource. If not set the value of the field option is used.
 
@@ -66,7 +66,7 @@ Tha name of the resource used to distinguish resource. If not set the value of t
     <kendo:scheduler-resource name="name">
     </kendo:scheduler-resource>
 
-### title `String`
+### title `java.lang.String`
 
 The user friendly title of the resource displayed in the scheduler edit form. If not set the value of the field option is used.
 

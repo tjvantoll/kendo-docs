@@ -16,7 +16,7 @@ The text messages displayed during grouping.
 
 ## Configuration Attributes
 
-### empty `String`
+### empty `java.lang.String`
 
 The text displayed in the grouping drop area.
 

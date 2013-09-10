@@ -16,7 +16,7 @@ Can be set to a JavaScript object which represents the text configuration.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the text. Any valid CSS color string will work here, including hex and rgb.
 
@@ -24,7 +24,7 @@ The color of the text. Any valid CSS color string will work here, including hex 
     <kendo:barcode-text color="color">
     </kendo:barcode-text>
 
-### font `String`
+### font `java.lang.String`
 
 The font of the text.
 

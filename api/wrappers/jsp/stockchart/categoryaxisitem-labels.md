@@ -16,7 +16,7 @@ Configures the axis labels.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the labels. Any valid CSS color string will work here, including hex and rgb.
 
@@ -24,7 +24,7 @@ The background color of the labels. Any valid CSS color string will work here, i
     <kendo:stockChart-categoryAxisItem-labels background="background">
     </kendo:stockChart-categoryAxisItem-labels>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the labels. Any valid CSS color string will work here, including hex and rgb.
 
@@ -32,7 +32,7 @@ The text color of the labels. Any valid CSS color string will work here, includi
     <kendo:stockChart-categoryAxisItem-labels color="color">
     </kendo:stockChart-categoryAxisItem-labels>
 
-### culture `String`
+### culture `java.lang.String`
 
 Culture to use for formatting the dates. See Globalization for more information.
 It defaults to the global culture.
@@ -41,7 +41,7 @@ It defaults to the global culture.
     <kendo:stockChart-categoryAxisItem-labels culture="culture">
     </kendo:stockChart-categoryAxisItem-labels>
 
-### dateFormats `Object`
+### dateFormats `java.lang.Object`
 
 Date format strings
 
@@ -49,7 +49,7 @@ Date format strings
     <kendo:stockChart-categoryAxisItem-labels dateFormats="dateFormats">
     </kendo:stockChart-categoryAxisItem-labels>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the labels.
 
@@ -57,7 +57,7 @@ The font style of the labels.
     <kendo:stockChart-categoryAxisItem-labels font="font">
     </kendo:stockChart-categoryAxisItem-labels>
 
-### format `String`
+### format `java.lang.String`
 
 The format of the labels.
 
@@ -65,7 +65,7 @@ The format of the labels.
     <kendo:stockChart-categoryAxisItem-labels format="format">
     </kendo:stockChart-categoryAxisItem-labels>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the labels.
 
@@ -83,7 +83,7 @@ mirroring the axis will render them to the right.
     <kendo:stockChart-categoryAxisItem-labels mirror="mirror">
     </kendo:stockChart-categoryAxisItem-labels>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the labels.
 
@@ -117,7 +117,7 @@ Every n-th label is rendered where n is the step
     <kendo:stockChart-categoryAxisItem-labels step="step">
     </kendo:stockChart-categoryAxisItem-labels>
 
-### template `String`
+### template `java.lang.String`
 
 The label template.
 Template variables:

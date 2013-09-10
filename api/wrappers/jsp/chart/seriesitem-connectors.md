@@ -16,7 +16,7 @@ The label connectors options.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the connector. Accepts a valid CSS color string, including hex and rgb.
 

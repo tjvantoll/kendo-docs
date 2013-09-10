@@ -16,7 +16,7 @@ The value axis configuration options.
 
 ## Configuration Attributes
 
-### axisCrossingValue `Object`
+### axisCrossingValue `java.lang.Object`
 
 Value at which the category axis crosses this axis. (Only for object)Value indices at which the category axes cross the value axis. (Only for array)Date at which the category axis crosses this axis. (Only for date)
 
@@ -24,7 +24,7 @@ Value at which the category axis crosses this axis. (Only for object)Value indic
     <kendo:chart-valueAxisItem axisCrossingValue="axisCrossingValue">
     </kendo:chart-valueAxisItem>
 
-### color `String`
+### color `java.lang.String`
 
 The color of the value axis. Accepts a valid CSS color string, including hex and rgb.
 
@@ -64,7 +64,7 @@ The interval between minor divisions. It defaults to 1/5th of the valueAxis.majo
     <kendo:chart-valueAxisItem minorUnit="minorUnit">
     </kendo:chart-valueAxisItem>
 
-### name `Object`
+### name `java.lang.Object`
 
 The unique axis name. Used to associate a series with a value axis using the series.axis option.
 
@@ -80,7 +80,7 @@ If set to true the chart will prevent the automatic axis range from snapping to 
     <kendo:chart-valueAxisItem narrowRange="narrowRange">
     </kendo:chart-valueAxisItem>
 
-### pane `String`
+### pane `java.lang.String`
 
 The name of the pane that the value axis should be rendered in.
 The axis will be rendered in the first (default) pane if not set.

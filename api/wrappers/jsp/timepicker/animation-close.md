@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:timePicker-animation-close\>
 
-Animation to be used for closing of the popup.
+The animation played when the popup is closed.
 
 #### Example
     <kendo:timePicker-animation>
@@ -18,15 +18,15 @@ Animation to be used for closing of the popup.
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the close animation in milliseconds.
 
 #### Example
     <kendo:timePicker-animation-close duration="duration">
     </kendo:timePicker-animation-close>
 
-### effects `String`
+### effects `java.lang.String`
 
-Effect to be used for closing of the popup.
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
 
 #### Example
     <kendo:timePicker-animation-close effects="effects">

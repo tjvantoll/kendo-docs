@@ -24,7 +24,7 @@ The number of milliseconds used for the visual animation when a new tab is shown
     <kendo:tabStrip-animation-open duration="duration">
     </kendo:tabStrip-animation-open>
 
-### effects `String`
+### effects `java.lang.String`
 
 A whitespace-separated string of animation effects that are used when a new tab is shown. Options include
 "expand:vertical" and "fadeIn".

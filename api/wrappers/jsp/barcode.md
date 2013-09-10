@@ -10,7 +10,7 @@ A JSP wrapper for Kendo UI [Barcode](/api/dataviz/barcode).
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background of the barcode area.
 Any valid CSS color string will work here, including hex and rgb.
@@ -27,7 +27,7 @@ If set to true the barcode will not display the checksum digit next to the value
     <kendo:barcode checksum="checksum">
     </kendo:barcode>
 
-### color `String`
+### color `java.lang.String`
 
 The color of the bar elements.
 Any valid CSS color string will work here, including hex and rgb.
@@ -44,7 +44,7 @@ The height of the barcode in pixels.  By default the height is 100.
     <kendo:barcode height="height">
     </kendo:barcode>
 
-### renderAs `String`
+### renderAs `java.lang.String`
 
 Sets the preferred rendering engine.
 If it is not supported by the browser, the Barcode will switch to the first available mode.The supported values are:
@@ -53,7 +53,7 @@ If it is not supported by the browser, the Barcode will switch to the first avai
     <kendo:barcode renderAs="renderAs">
     </kendo:barcode>
 
-### type `String`
+### type `java.lang.String`
 
 The symbology (encoding) the barcode will use.The supported values are:
 
@@ -61,7 +61,7 @@ The symbology (encoding) the barcode will use.The supported values are:
     <kendo:barcode type="type">
     </kendo:barcode>
 
-### value `String`
+### value `java.lang.String`
 
 The initial value of the Barcode
 

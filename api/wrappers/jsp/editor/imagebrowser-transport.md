@@ -16,7 +16,7 @@ Specifies the settings for loading and saving data.
 
 ## Configuration Attributes
 
-### create `String`
+### create `java.lang.String`
 
 Options or URL which will handle the directory creation. If not specified that create new folder button will not be present. Further configuration is available via [kendo:editor-imageBrowser-transport-create](#kendo-editor-imageBrowser-transport-create). 
 
@@ -24,7 +24,7 @@ Options or URL which will handle the directory creation. If not specified that c
     <kendo:editor-imageBrowser-transport create="create">
     </kendo:editor-imageBrowser-transport>
 
-### destroy `String`
+### destroy `java.lang.String`
 
 Options or URL which will handle the file and directory deletion. If not specified the delete button will not be present. Further configuration is available via [kendo:editor-imageBrowser-transport-destroy](#kendo-editor-imageBrowser-transport-destroy). 
 
@@ -32,7 +32,7 @@ Options or URL which will handle the file and directory deletion. If not specifi
     <kendo:editor-imageBrowser-transport destroy="destroy">
     </kendo:editor-imageBrowser-transport>
 
-### imageUrl `String`
+### imageUrl `java.lang.String`
 
 The URL responsible for serving the original image. A file name placeholder should be specifed.
 
@@ -40,7 +40,7 @@ The URL responsible for serving the original image. A file name placeholder shou
     <kendo:editor-imageBrowser-transport imageUrl="imageUrl">
     </kendo:editor-imageBrowser-transport>
 
-### read `String`
+### read `java.lang.String`
 
 Options or URL for remote image retrieval. Further configuration is available via [kendo:editor-imageBrowser-transport-read](#kendo-editor-imageBrowser-transport-read). 
 
@@ -48,7 +48,7 @@ Options or URL for remote image retrieval. Further configuration is available vi
     <kendo:editor-imageBrowser-transport read="read">
     </kendo:editor-imageBrowser-transport>
 
-### thumbnailUrl `String`
+### thumbnailUrl `java.lang.String`
 
 The URL for retrieving the thumbnail version of the image. If not specified a default image icon will be shown.
 If function is assigned, the current path and image name will be provided.
@@ -57,7 +57,7 @@ If function is assigned, the current path and image name will be provided.
     <kendo:editor-imageBrowser-transport thumbnailUrl="thumbnailUrl">
     </kendo:editor-imageBrowser-transport>
 
-### uploadUrl `String`
+### uploadUrl `java.lang.String`
 
 The URL which will handle the upload of the new images. If not specified the Upload button will not be displayed.
 

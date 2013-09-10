@@ -17,7 +17,7 @@ Axis that don't have specified pane are placed in the top (default) pane.Series 
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the pane.
 
@@ -33,7 +33,7 @@ The pane height in pixels.
     <kendo:stockChart-pane height="height">
     </kendo:stockChart-pane>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the pane.
 
@@ -41,7 +41,7 @@ The margin of the pane.
     <kendo:stockChart-pane margin="margin">
     </kendo:stockChart-pane>
 
-### name `String`
+### name `java.lang.String`
 
 The unique pane name.
 
@@ -49,7 +49,7 @@ The unique pane name.
     <kendo:stockChart-pane name="name">
     </kendo:stockChart-pane>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the pane.
 
@@ -57,7 +57,7 @@ The padding of the pane.
     <kendo:stockChart-pane padding="padding">
     </kendo:stockChart-pane>
 
-### title `String`
+### title `java.lang.String`
 
 The pane title text or configuration. Further configuration is available via [kendo:stockChart-pane-title](#kendo-stockChart-pane-title). 
 

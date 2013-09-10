@@ -17,7 +17,7 @@ body of the chart.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the lines. Any valid CSS color string will work here, including hex and rgb.
 
@@ -25,7 +25,7 @@ The color of the lines. Any valid CSS color string will work here, including hex
     <kendo:stockChart-categoryAxisItem-majorGridLines color="color">
     </kendo:stockChart-categoryAxisItem-majorGridLines>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the grid lines.
 

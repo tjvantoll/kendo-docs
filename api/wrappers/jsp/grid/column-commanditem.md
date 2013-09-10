@@ -16,7 +16,7 @@ The configuration of the column command(s). If set the column would display a bu
 
 ## Configuration Attributes
 
-### className `String`
+### className `java.lang.String`
 
 The CSS class applied to the command button.
 
@@ -24,7 +24,7 @@ The CSS class applied to the command button.
     <kendo:grid-column-commandItem className="className">
     </kendo:grid-column-commandItem>
 
-### click `String`
+### click `java.lang.String`
 
 The JavaScript function executed when the user clicks the command button. The function receives a jQuery Event as an argument.The function context (available via the this keyword) will be set to the grid instance.
 
@@ -32,7 +32,7 @@ The JavaScript function executed when the user clicks the command button. The fu
     <kendo:grid-column-commandItem click="click">
     </kendo:grid-column-commandItem>
 
-### name `String`
+### name `java.lang.String`
 
 The name of the command. The built-in commands are "edit" and "destroy". Can be set to a custom value.
 
@@ -40,7 +40,7 @@ The name of the command. The built-in commands are "edit" and "destroy". Can be 
     <kendo:grid-column-commandItem name="name">
     </kendo:grid-column-commandItem>
 
-### text `String`
+### text `java.lang.String`
 
 The text displayed by the command button. If not set the name option is used as the button text.
 

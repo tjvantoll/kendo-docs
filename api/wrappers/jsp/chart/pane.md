@@ -17,7 +17,7 @@ Axis that don't have specified pane are placed in the top (default) pane.Series 
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the chart pane. Accepts a valid CSS color string, including hex and rgb.
 
@@ -41,7 +41,7 @@ The margin of the pane. A numeric value will set all margins. Further configurat
     <kendo:chart-pane margin="margin">
     </kendo:chart-pane>
 
-### name `String`
+### name `java.lang.String`
 
 The unique name of the chart pane.
 
@@ -57,7 +57,7 @@ The padding of the pane. A numeric value will set all paddings. Further configur
     <kendo:chart-pane padding="padding">
     </kendo:chart-pane>
 
-### title `String`
+### title `java.lang.String`
 
 The title configuration of the chart pane. Further configuration is available via [kendo:chart-pane-title](#kendo-chart-pane-title). 
 

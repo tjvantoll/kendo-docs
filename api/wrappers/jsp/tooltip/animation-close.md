@@ -24,7 +24,7 @@ Difines the animation duration.
     <kendo:tooltip-animation-close duration="duration">
     </kendo:tooltip-animation-close>
 
-### effects `String`
+### effects `java.lang.String`
 
 Effect to be used for closing of the tooltip.
 

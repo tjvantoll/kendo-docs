@@ -16,7 +16,7 @@ The effects overlay.
 
 ## Configuration Attributes
 
-### gradient `String`
+### gradient `java.lang.String`
 
 The gradient name.Available options:
 

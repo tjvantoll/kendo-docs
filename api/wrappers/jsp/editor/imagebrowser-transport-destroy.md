@@ -16,7 +16,7 @@ Options or URL which will handle the file and directory deletion. If not specifi
 
 ## Configuration Attributes
 
-### contentType `String`
+### contentType `java.lang.String`
 
 The content-type HTTP header sent to the server. Default is "application/x-www-form-urlencoded". Use "application/json" if the content is JSON.
 Refer to the jQuery.ajax documentation for further info.
@@ -25,7 +25,7 @@ Refer to the jQuery.ajax documentation for further info.
     <kendo:editor-imageBrowser-transport-destroy contentType="contentType">
     </kendo:editor-imageBrowser-transport-destroy>
 
-### data `Object`
+### data `java.lang.Object`
 
 Data to be send to the server.
 Refer to the jQuery.ajax documentation for further info.
@@ -34,7 +34,7 @@ Refer to the jQuery.ajax documentation for further info.
     <kendo:editor-imageBrowser-transport-destroy data="data">
     </kendo:editor-imageBrowser-transport-destroy>
 
-### dataType `String`
+### dataType `java.lang.String`
 
 The type of data that you're expecting back from the server. Commonly used values are "json" and "jsonp".
 Refer to the jQuery.ajax documentation for further info.
@@ -43,7 +43,7 @@ Refer to the jQuery.ajax documentation for further info.
     <kendo:editor-imageBrowser-transport-destroy dataType="dataType">
     </kendo:editor-imageBrowser-transport-destroy>
 
-### type `String`
+### type `java.lang.String`
 
 The type of request to make ("POST", "GET", "PUT" or "DELETE"), default is "GET".
 Refer to the jQuery.ajax documentation for further info.
@@ -52,7 +52,7 @@ Refer to the jQuery.ajax documentation for further info.
     <kendo:editor-imageBrowser-transport-destroy type="type">
     </kendo:editor-imageBrowser-transport-destroy>
 
-### url `String`
+### url `java.lang.String`
 
 The remote url to call when creating a new record.
 

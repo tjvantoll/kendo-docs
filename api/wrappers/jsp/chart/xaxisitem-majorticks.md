@@ -16,7 +16,7 @@ The configuration of the scatter chart x axis major ticks.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the scatter chart x axis major ticks lines. Accepts a valid CSS color string, including hex and rgb.
 

@@ -16,7 +16,7 @@ The X-axis configuration options of the scatter chart X-axis. Supports all value
 
 ## Configuration Attributes
 
-### axisCrossingValue `Object`
+### axisCrossingValue `java.lang.Object`
 
 Value at which the Y axis crosses this axis. (Only for object)Value indices at which the Y axes cross the value axis. (Only for array)Date at which the Y axis crosses this axis. (Only for date)
 
@@ -24,7 +24,7 @@ Value at which the Y axis crosses this axis. (Only for object)Value indices at w
     <kendo:chart-xAxisItem axisCrossingValue="axisCrossingValue">
     </kendo:chart-xAxisItem>
 
-### baseUnit `String`
+### baseUnit `java.lang.String`
 
 The base time interval for the axis labels. The default baseUnit is determined automatically from the value range. Available options:
 
@@ -32,7 +32,7 @@ The base time interval for the axis labels. The default baseUnit is determined a
     <kendo:chart-xAxisItem baseUnit="baseUnit">
     </kendo:chart-xAxisItem>
 
-### color `String`
+### color `java.lang.String`
 
 The color of the axis. Accepts a valid CSS color string, including hex and rgb.
 
@@ -43,12 +43,13 @@ The color of the axis. Accepts a valid CSS color string, including hex and rgb.
 ### majorUnit `float`
 
 The interval between major divisions.
+If this is a date axis the value represents the number of xAxis.baseUnits between major divisions.
 
 #### Example
     <kendo:chart-xAxisItem majorUnit="majorUnit">
     </kendo:chart-xAxisItem>
 
-### max `Object`
+### max `java.lang.Object`
 
 The maximum value of the axis.
 
@@ -56,7 +57,7 @@ The maximum value of the axis.
     <kendo:chart-xAxisItem max="max">
     </kendo:chart-xAxisItem>
 
-### min `Object`
+### min `java.lang.Object`
 
 The minimum value of the axis.
 
@@ -72,7 +73,7 @@ The interval between minor divisions. It defaults to 1/5th of the xAxis.majorUni
     <kendo:chart-xAxisItem minorUnit="minorUnit">
     </kendo:chart-xAxisItem>
 
-### name `Object`
+### name `java.lang.Object`
 
 The unique axis name. Used to associate a series with a x axis using the series.xAxis option.
 
@@ -88,7 +89,7 @@ If set to true the chart will prevent the automatic axis range from snapping to 
     <kendo:chart-xAxisItem narrowRange="narrowRange">
     </kendo:chart-xAxisItem>
 
-### pane `String`
+### pane `java.lang.String`
 
 The name of the pane that the axis should be rendered in.
 The axis will be rendered in the first (default) pane if not set.
@@ -113,7 +114,7 @@ The angle (degrees) where the 0 value is placed.Angles increase counterclockwise
     <kendo:chart-xAxisItem startAngle="startAngle">
     </kendo:chart-xAxisItem>
 
-### type `String`
+### type `java.lang.String`
 
 The axis type.The supported values are:
 
@@ -191,6 +192,19 @@ More documentation is available at [kendo:chart-xAxisItem-majorTicks](chart/xaxi
 
     <kendo:chart-xAxisItem>
         <kendo:chart-xAxisItem-majorTicks></kendo:chart-xAxisItem-majorTicks>
+    </kendo:chart-xAxisItem>
+
+### kendo:chart-xAxisItem-minorGridLines
+
+The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
+body of the chart.
+
+More documentation is available at [kendo:chart-xAxisItem-minorGridLines](chart/xaxisitem-minorgridlines).
+
+#### Example
+
+    <kendo:chart-xAxisItem>
+        <kendo:chart-xAxisItem-minorGridLines></kendo:chart-xAxisItem-minorGridLines>
     </kendo:chart-xAxisItem>
 
 ### kendo:chart-xAxisItem-notes

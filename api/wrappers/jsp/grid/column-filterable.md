@@ -17,7 +17,7 @@ for all columns when filtering is enabled via the filterable option.Can be set t
 
 ## Configuration Attributes
 
-### ui `String`
+### ui `java.lang.String`
 
 The role data attribute of the widget used in the filter menu or a JavaScript function which initializes that widget.
 

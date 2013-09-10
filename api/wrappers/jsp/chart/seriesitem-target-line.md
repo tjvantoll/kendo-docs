@@ -16,7 +16,7 @@ The target line options.
 
 ## Configuration Attributes
 
-### width `Object`
+### width `java.lang.Object`
 
 The width of the line.
 

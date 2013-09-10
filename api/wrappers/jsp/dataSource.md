@@ -27,7 +27,7 @@ makes a HTTP request for every CRUD operation.
     <kendo:dataSource batch="batch">
     </kendo:dataSource>
 
-### data `Object`
+### data `java.lang.Object`
 
 The array of data items which the data source contains. The data source will wrap those items as kendo.data.ObservableObject or kendo.data.Model (if schema.model is set).Can be set to a string value if the schema.type option is set to "xml".
 
@@ -91,7 +91,7 @@ If set to true the data source will leave the data item sorting implementation t
     <kendo:dataSource serverSorting="serverSorting">
     </kendo:dataSource>
 
-### type `String`
+### type `java.lang.String`
 
 If set the data source will use a predefined transport and/or schema. The only supported value is "odata" which supports the OData v.2 protocol.
 

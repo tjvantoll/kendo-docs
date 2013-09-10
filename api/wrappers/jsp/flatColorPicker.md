@@ -10,15 +10,25 @@ A JSP wrapper for Kendo UI [FlatColorPicker](/api/web/flatcolorpicker).
 
 ## Configuration Attributes
 
+### autoupdate `boolean`
+
+Specifies whether the UI should be updated while the user is typing in
+the input field, whenever a valid color can be parsed.  If you pass
+false for this, the widget will update only when ENTER is pressed.
+
+#### Example
+    <kendo:flatColorPicker autoupdate="autoupdate">
+    </kendo:flatColorPicker>
+
 ### buttons `boolean`
 
-Specifies whether we should display the Apply / Cancel buttons.
+Specifies whether the widget should display the Apply / Cancel buttons.
 
 #### Example
     <kendo:flatColorPicker buttons="buttons">
     </kendo:flatColorPicker>
 
-### messages `Object`
+### messages `java.lang.Object`
 
 Allows customization of "Apply" / "Cancel" labels.
 
@@ -44,7 +54,7 @@ current color and the input field.
     <kendo:flatColorPicker preview="preview">
     </kendo:flatColorPicker>
 
-### value `String`
+### value `java.lang.String`
 
 Specifies the initially selected color.
 

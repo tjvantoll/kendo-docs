@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:datePicker-animation-close\>
 
-The animation(s) used for hiding of the pop-up.
+The animation played when the calendar popup is closed.
 
 #### Example
     <kendo:datePicker-animation>
@@ -18,15 +18,15 @@ The animation(s) used for hiding of the pop-up.
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the close animation in milliseconds.
 
 #### Example
     <kendo:datePicker-animation-close duration="duration">
     </kendo:datePicker-animation-close>
 
-### effects `String`
+### effects `java.lang.String`
 
-Effect to be used for closing of the popup.
+The effect(s) to use when playing the close animation. Multiple effects should be separated with a space.Complete list of available animations
 
 #### Example
     <kendo:datePicker-animation-close effects="effects">

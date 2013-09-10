@@ -16,7 +16,7 @@ Set the object which describes the image/directory entry fields. Note that a nam
 
 ## Configuration Attributes
 
-### id `String`
+### id `java.lang.String`
 
 The name of the field which acts as an identifier.
 

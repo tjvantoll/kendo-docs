@@ -17,7 +17,7 @@ This is the entire visible area of the chart.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the chart area.
 
@@ -33,7 +33,7 @@ The height of the chart area.
     <kendo:stockChart-chartArea height="height">
     </kendo:stockChart-chartArea>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the chart area.
 

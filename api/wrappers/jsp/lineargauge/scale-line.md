@@ -16,7 +16,7 @@ Configures the axis line.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the lines. Any valid CSS color string will work here, including hex and rgb.
 
@@ -24,7 +24,7 @@ The color of the lines. Any valid CSS color string will work here, including hex
     <kendo:linearGauge-scale-line color="color">
     </kendo:linearGauge-scale-line>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the line.
 

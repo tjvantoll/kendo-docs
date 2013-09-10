@@ -16,7 +16,7 @@ The plot area configuration options. This is the area containing the plotted ser
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the plot area.
 
@@ -24,7 +24,7 @@ The background color of the plot area.
     <kendo:sparkline-plotArea background="background">
     </kendo:sparkline-plotArea>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the plot area.
 

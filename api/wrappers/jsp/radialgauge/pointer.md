@@ -16,7 +16,7 @@ The pointer configuration options.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the pointer.
 Any valid CSS color string will work here, including hex and rgb.

@@ -7,7 +7,7 @@ publish: true
 
 # \<kendo:dateTimePicker-animation-open\>
 
-The animation(s) used for displaying of the pop-up.
+The animation played when the popup is opened.
 
 #### Example
     <kendo:dateTimePicker-animation>
@@ -18,15 +18,15 @@ The animation(s) used for displaying of the pop-up.
 
 ### duration `float`
 
-Difines the animation duration.
+The duration of the open animation in milliseconds.
 
 #### Example
     <kendo:dateTimePicker-animation-open duration="duration">
     </kendo:dateTimePicker-animation-open>
 
-### effects `String`
+### effects `java.lang.String`
 
-Effect to be used for opening of the popup.
+The effect(s) to use when playing the open animation. Multiple effects should be separated with a space.Complete list of available animations
 
 #### Example
     <kendo:dateTimePicker-animation-open effects="effects">

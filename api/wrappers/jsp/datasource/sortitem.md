@@ -16,7 +16,7 @@ The sort order which will be applied over the data items. By default the data it
 
 ## Configuration Attributes
 
-### dir `String`
+### dir `java.lang.String`
 
 The sort order (direction). The supported values are "asc" (ascending order) and "desc" (descending order).
 
@@ -24,7 +24,7 @@ The sort order (direction). The supported values are "asc" (ascending order) and
     <kendo:dataSource-sortItem dir="dir">
     </kendo:dataSource-sortItem>
 
-### field `String`
+### field `java.lang.String`
 
 The field by which the data items are sorted.
 

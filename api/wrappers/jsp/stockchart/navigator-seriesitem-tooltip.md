@@ -16,7 +16,7 @@ The data point tooltip configuration options.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the tooltip. The default is determined from the series color.
 
@@ -24,7 +24,7 @@ The background color of the tooltip. The default is determined from the series c
     <kendo:stockChart-navigator-seriesItem-tooltip background="background">
     </kendo:stockChart-navigator-seriesItem-tooltip>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the tooltip. The default is the same as the series labels color.
 
@@ -32,7 +32,7 @@ The text color of the tooltip. The default is the same as the series labels colo
     <kendo:stockChart-navigator-seriesItem-tooltip color="color">
     </kendo:stockChart-navigator-seriesItem-tooltip>
 
-### font `String`
+### font `java.lang.String`
 
 The tooltip font.
 
@@ -40,7 +40,7 @@ The tooltip font.
     <kendo:stockChart-navigator-seriesItem-tooltip font="font">
     </kendo:stockChart-navigator-seriesItem-tooltip>
 
-### format `String`
+### format `java.lang.String`
 
 The tooltip format. Format variables depend on the series type:
 
@@ -48,7 +48,7 @@ The tooltip format. Format variables depend on the series type:
     <kendo:stockChart-navigator-seriesItem-tooltip format="format">
     </kendo:stockChart-navigator-seriesItem-tooltip>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the tooltip.
 
@@ -56,7 +56,7 @@ The padding of the tooltip.
     <kendo:stockChart-navigator-seriesItem-tooltip padding="padding">
     </kendo:stockChart-navigator-seriesItem-tooltip>
 
-### template `String`
+### template `java.lang.String`
 
 The tooltip template.
 Template variables:

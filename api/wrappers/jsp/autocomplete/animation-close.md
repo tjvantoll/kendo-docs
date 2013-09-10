@@ -24,7 +24,7 @@ The duration of the close animation in milliseconds.
     <kendo:autoComplete-animation-close duration="duration">
     </kendo:autoComplete-animation-close>
 
-### effects `String`
+### effects `java.lang.String`
 
 The effect(s) to use when playing the close animation. Multiple effects should be separated with a space.Complete list of available animations
 

@@ -19,7 +19,7 @@ Upload may be re-enabled via enable().
     <kendo:upload enabled="enabled">
     </kendo:upload>
 
-### files `Object`
+### files `java.lang.Object`
 
 List of files to be initially rendered in the Upload widget files list.
 
@@ -47,7 +47,7 @@ client-side events to build your own UI.
     <kendo:upload showFileList="showFileList">
     </kendo:upload>
 
-### template `String`
+### template `java.lang.String`
 
 The template used to render the files in the list
 

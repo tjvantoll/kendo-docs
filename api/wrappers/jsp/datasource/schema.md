@@ -16,7 +16,7 @@ The configuration used to parse the remote sevice response.
 
 ## Configuration Attributes
 
-### aggregates `String`
+### aggregates `java.lang.String`
 
 The field from the response which contains the aggregate results. Can be set to a function which is called to
 return the aggregate results from the response.The result of the function should be a JavaScript object which contains the aggregate results for every fields in the following format:For example if the data source is configured like this:The aggregate results should have the following format:
@@ -25,7 +25,7 @@ return the aggregate results from the response.The result of the function should
     <kendo:dataSource-schema aggregates="aggregates">
     </kendo:dataSource-schema>
 
-### data `String`
+### data `java.lang.String`
 
 The field from the server response which contains the data items. Can be set to a function which is called to
 return the data items for the response.
@@ -34,7 +34,7 @@ return the data items for the response.
     <kendo:dataSource-schema data="data">
     </kendo:dataSource-schema>
 
-### errors `String`
+### errors `java.lang.String`
 
 The field from the server response which contains server-side errors. Can be set to a function which is called to
 return the errors for response. If there are any errors the error event will be fired.
@@ -43,7 +43,7 @@ return the errors for response. If there are any errors the error event will be 
     <kendo:dataSource-schema errors="errors">
     </kendo:dataSource-schema>
 
-### groups `String`
+### groups `java.lang.String`
 
 The field from the server response which contains the groups. Can be set to a function which is called to
 return the groups from the response.The result should have the following format:
@@ -52,7 +52,7 @@ return the groups from the response.The result should have the following format:
     <kendo:dataSource-schema groups="groups">
     </kendo:dataSource-schema>
 
-### model `Object`
+### model `java.lang.Object`
 
 The data item (model) configuration.If set to an object the Model.define method will be used to initialize the data source model.If set to an existing kendo.data.Model instance the data source will use that instance and will not initialize a new one.
 
@@ -60,7 +60,7 @@ The data item (model) configuration.If set to an object the Model.define method 
     <kendo:dataSource-schema model="model">
     </kendo:dataSource-schema>
 
-### parse `String`
+### parse `java.lang.String`
 
 Executed before the server response is used. Use it to preprocess or parse the server response.
 
@@ -68,7 +68,7 @@ Executed before the server response is used. Use it to preprocess or parse the s
     <kendo:dataSource-schema parse="parse">
     </kendo:dataSource-schema>
 
-### total `String`
+### total `java.lang.String`
 
 The field from the server response which contains the total number of data items. Can be set to a function which is called to
 return the total number of data items for the response.
@@ -77,7 +77,7 @@ return the total number of data items for the response.
     <kendo:dataSource-schema total="total">
     </kendo:dataSource-schema>
 
-### type `String`
+### type `java.lang.String`
 
 The type of the response. The supported values are "xml" and "json". By default the schema interprets the server response as JSON.
 

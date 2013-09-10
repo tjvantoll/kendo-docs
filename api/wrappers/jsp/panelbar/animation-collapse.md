@@ -24,7 +24,7 @@ The number of milliseconds used for the visual animation when a PanelBar item is
     <kendo:panelBar-animation-collapse duration="duration">
     </kendo:panelBar-animation-collapse>
 
-### effects `String`
+### effects `java.lang.String`
 
 A whitespace-delimited string of animation effects that are utilized when a PanelBar item
 is closed. Options include "fadeOut".

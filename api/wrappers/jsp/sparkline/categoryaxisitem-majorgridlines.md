@@ -17,7 +17,7 @@ These are the lines that are an extension of the major ticks through the body of
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the lines. Any valid CSS color string will work here, including hex and rgb.
 
@@ -25,7 +25,7 @@ The color of the lines. Any valid CSS color string will work here, including hex
     <kendo:sparkline-categoryAxisItem-majorGridLines color="color">
     </kendo:sparkline-categoryAxisItem-majorGridLines>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the grid lines.
 

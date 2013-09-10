@@ -16,7 +16,7 @@ The configuration of the scheduler resource(s) grouping.
 
 ## Configuration Attributes
 
-### orientation `String`
+### orientation `java.lang.String`
 
 The orientation of the group headers. Supported values are horizontal or vertical. Note that the agenda view is always in vertical orientation.
 
@@ -24,7 +24,7 @@ The orientation of the group headers. Supported values are horizontal or vertica
     <kendo:scheduler-group orientation="orientation">
     </kendo:scheduler-group>
 
-### resources `Object`
+### resources `java.lang.Object`
 
 An array of resource names by which the scheduler events will be grouped.
 

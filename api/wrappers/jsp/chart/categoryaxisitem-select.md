@@ -16,7 +16,7 @@ The selected axis range. If set, axis selection will be enabled.The range units 
 
 ## Configuration Attributes
 
-### from `Object`
+### from `java.lang.Object`
 
 The lower boundary of the selected range.
 
@@ -24,7 +24,7 @@ The lower boundary of the selected range.
     <kendo:chart-categoryAxisItem-select from="from">
     </kendo:chart-categoryAxisItem-select>
 
-### max `Object`
+### max `java.lang.Object`
 
 The maximum value which the user can select.
 
@@ -32,7 +32,7 @@ The maximum value which the user can select.
     <kendo:chart-categoryAxisItem-select max="max">
     </kendo:chart-categoryAxisItem-select>
 
-### min `Object`
+### min `java.lang.Object`
 
 The minimum value which the user can select.
 
@@ -40,7 +40,7 @@ The minimum value which the user can select.
     <kendo:chart-categoryAxisItem-select min="min">
     </kendo:chart-categoryAxisItem-select>
 
-### to `Object`
+### to `java.lang.Object`
 
 The upper boundary of the selected range.
 

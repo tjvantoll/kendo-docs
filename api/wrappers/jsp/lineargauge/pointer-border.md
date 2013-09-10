@@ -16,7 +16,7 @@ The border of the pointer.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the border.
 Any valid CSS color string will work here, including hex and rgb.
@@ -25,7 +25,7 @@ Any valid CSS color string will work here, including hex and rgb.
     <kendo:linearGauge-pointer-border color="color">
     </kendo:linearGauge-pointer-border>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The dash type of the border.
 

@@ -16,7 +16,7 @@ The list of commands displayed in the grid toolbar. Commands can be custom or bu
 
 ## Configuration Attributes
 
-### name `String`
+### name `java.lang.String`
 
 The name of the toolbar command. Either a built-in ("cancel", "create" and "save") or custom.
 
@@ -24,7 +24,7 @@ The name of the toolbar command. Either a built-in ("cancel", "create" and "save
     <kendo:grid-toolbarItem name="name">
     </kendo:grid-toolbarItem>
 
-### template `String`
+### template `java.lang.String`
 
 The template which renders the command. Be default renders a button.
 
@@ -32,7 +32,7 @@ The template which renders the command. Be default renders a button.
     <kendo:grid-toolbarItem template="template">
     </kendo:grid-toolbarItem>
 
-### text `String`
+### text `java.lang.String`
 
 The text displayed by the command button. If not set the name` option would be used as the button text instead.
 

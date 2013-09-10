@@ -16,7 +16,7 @@ The configuration of the view resource(s) grouping.
 
 ## Configuration Attributes
 
-### orientation `String`
+### orientation `java.lang.String`
 
 The orientation of the group headers. Supported values are horizontal or vertical. Note that the agenda view is always in vertical orientation.
 

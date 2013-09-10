@@ -24,7 +24,7 @@ If set to true will reverse the mouse wheel direction. The normal direction is d
     <kendo:chart-categoryAxisItem-select-mousewheel reverse="reverse">
     </kendo:chart-categoryAxisItem-select-mousewheel>
 
-### zoom `String`
+### zoom `java.lang.String`
 
 The zoom direction.The supported values are:
 

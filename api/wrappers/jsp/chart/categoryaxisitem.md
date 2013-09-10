@@ -16,7 +16,7 @@ The category axis configuration options.
 
 ## Configuration Attributes
 
-### axisCrossingValue `Object`
+### axisCrossingValue `java.lang.Object`
 
 Category index at which the first value axis crosses this axis (when set as an object).Category indices at which the value axes cross the category axis (when set as an array).
 
@@ -24,7 +24,7 @@ Category index at which the first value axis crosses this axis (when set as an o
     <kendo:chart-categoryAxisItem axisCrossingValue="axisCrossingValue">
     </kendo:chart-categoryAxisItem>
 
-### baseUnit `String`
+### baseUnit `java.lang.String`
 
 The base time interval for the date axis. The default base unit is determined automatically from the minimum difference
 between subsequent categories.The supported values are:Setting baseUnit to "fit" will set such base unit and categoryAxis.baseUnitStep
@@ -34,7 +34,7 @@ that the total number of categories does not exceed categoryAxis.maxDateGroups.S
     <kendo:chart-categoryAxisItem baseUnit="baseUnit">
     </kendo:chart-categoryAxisItem>
 
-### baseUnitStep `Object`
+### baseUnitStep `java.lang.Object`
 
 The step (interval) between categories in base units. Setting it to "auto" will set the step to such value
 that the total number of categories does not exceed categoryAxis.maxDateGroups.This option is ignored if categoryAxis.baseUnit is set to "fit".
@@ -43,7 +43,7 @@ that the total number of categories does not exceed categoryAxis.maxDateGroups.T
     <kendo:chart-categoryAxisItem baseUnitStep="baseUnitStep">
     </kendo:chart-categoryAxisItem>
 
-### categories `Object`
+### categories `java.lang.Object`
 
 The category names. The chart will create a category for every item of the array.
 
@@ -51,7 +51,7 @@ The category names. The chart will create a category for every item of the array
     <kendo:chart-categoryAxisItem categories="categories">
     </kendo:chart-categoryAxisItem>
 
-### color `String`
+### color `java.lang.String`
 
 The color to apply to all axis elements. Accepts a valid CSS color string, including hex and rgb. Can be overridden by categoryAxis.labels.color and
 categoryAxis.line.color.
@@ -60,7 +60,7 @@ categoryAxis.line.color.
     <kendo:chart-categoryAxisItem color="color">
     </kendo:chart-categoryAxisItem>
 
-### field `String`
+### field `java.lang.String`
 
 The data item field which contains the category name. Requires the dataSource option to be set.
 
@@ -76,7 +76,7 @@ If set to true the chart will position categories and series points on major tic
     <kendo:chart-categoryAxisItem justified="justified">
     </kendo:chart-categoryAxisItem>
 
-### max `Object`
+### max `java.lang.Object`
 
 The last date displayed on the category date axis. By default, the minimum date is the same as the last category.
 This is often used in combination with the categoryAxis.min and categoryAxis.roundToBaseUnit options to
@@ -96,7 +96,7 @@ categoryAxis.baseUnitStep is set to "auto".
     <kendo:chart-categoryAxisItem maxDateGroups="maxDateGroups">
     </kendo:chart-categoryAxisItem>
 
-### min `Object`
+### min `java.lang.Object`
 
 The first date displayed on the category date axis. By default, the minimum date is the same as the first category.
 This is often used in combination with the categoryAxis.min and categoryAxis.roundToBaseUnit options to
@@ -106,7 +106,7 @@ set up a fixed date range.
     <kendo:chart-categoryAxisItem min="min">
     </kendo:chart-categoryAxisItem>
 
-### name `String`
+### name `java.lang.String`
 
 The unique axis name. Used to associate a series with a category axis using the series.categoryAxis option.
 
@@ -114,7 +114,7 @@ The unique axis name. Used to associate a series with a category axis using the 
     <kendo:chart-categoryAxisItem name="name">
     </kendo:chart-categoryAxisItem>
 
-### pane `String`
+### pane `java.lang.String`
 
 The name of the pane that the category axis should be rendered in.
 The axis will be rendered in the first (default) pane if not set.
@@ -147,7 +147,7 @@ The angle (degrees) of the first category on the axis.Angles increase clockwise 
     <kendo:chart-categoryAxisItem startAngle="startAngle">
     </kendo:chart-categoryAxisItem>
 
-### type `String`
+### type `java.lang.String`
 
 The category axis type.The supported values are:
 

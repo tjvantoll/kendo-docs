@@ -16,7 +16,7 @@ The text messages displayed in pager. Use this option to customize or localize t
 
 ## Configuration Attributes
 
-### display `String`
+### display `java.lang.String`
 
 The pager info text. Uses kendo.format.Contains three placeholders:
 - {0} - the first data item index
@@ -27,7 +27,7 @@ The pager info text. Uses kendo.format.Contains three placeholders:
     <kendo:grid-pageable-messages display="display">
     </kendo:grid-pageable-messages>
 
-### empty `String`
+### empty `java.lang.String`
 
 The text displayed when the grid is empty.
 
@@ -35,7 +35,7 @@ The text displayed when the grid is empty.
     <kendo:grid-pageable-messages empty="empty">
     </kendo:grid-pageable-messages>
 
-### first `String`
+### first `java.lang.String`
 
 The tooltip of the button which goes to the first page.
 
@@ -43,7 +43,7 @@ The tooltip of the button which goes to the first page.
     <kendo:grid-pageable-messages first="first">
     </kendo:grid-pageable-messages>
 
-### itemsPerPage `String`
+### itemsPerPage `java.lang.String`
 
 The label displayed after the page size dropdown list.
 
@@ -51,7 +51,7 @@ The label displayed after the page size dropdown list.
     <kendo:grid-pageable-messages itemsPerPage="itemsPerPage">
     </kendo:grid-pageable-messages>
 
-### last `String`
+### last `java.lang.String`
 
 The tooltip of the button which goes to the last page.
 
@@ -59,7 +59,7 @@ The tooltip of the button which goes to the last page.
     <kendo:grid-pageable-messages last="last">
     </kendo:grid-pageable-messages>
 
-### next `String`
+### next `java.lang.String`
 
 The tooltip of the button which goes to the next page.
 
@@ -67,7 +67,7 @@ The tooltip of the button which goes to the next page.
     <kendo:grid-pageable-messages next="next">
     </kendo:grid-pageable-messages>
 
-### of `String`
+### of `java.lang.String`
 
 The label displayed before the pager input. Uses kendo.format. Contains one optional placeholder {0} which represents the total number of pages.
 
@@ -75,7 +75,7 @@ The label displayed before the pager input. Uses kendo.format. Contains one opti
     <kendo:grid-pageable-messages of="of">
     </kendo:grid-pageable-messages>
 
-### page `String`
+### page `java.lang.String`
 
 The label displayed before the pager input.
 
@@ -83,7 +83,7 @@ The label displayed before the pager input.
     <kendo:grid-pageable-messages page="page">
     </kendo:grid-pageable-messages>
 
-### previous `String`
+### previous `java.lang.String`
 
 The tooltip of the button which goes to the previous page.
 
@@ -91,7 +91,7 @@ The tooltip of the button which goes to the previous page.
     <kendo:grid-pageable-messages previous="previous">
     </kendo:grid-pageable-messages>
 
-### refresh `String`
+### refresh `java.lang.String`
 
 The tooltip of the refresh button.
 

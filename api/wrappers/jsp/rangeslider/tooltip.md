@@ -24,7 +24,7 @@ Disables (false) or enables (true) the tooltip of the RangeSlider.
     <kendo:rangeSlider-tooltip enabled="enabled">
     </kendo:rangeSlider-tooltip>
 
-### format `String`
+### format `java.lang.String`
 
 Format string for the text of the tooltip. Note: The applied format will also influence the appearance of
 the RangeSlider tick labels.
@@ -33,7 +33,7 @@ the RangeSlider tick labels.
     <kendo:rangeSlider-tooltip format="format">
     </kendo:rangeSlider-tooltip>
 
-### template `String`
+### template `java.lang.String`
 
 Template of the tooltip.
 

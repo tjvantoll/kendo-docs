@@ -16,7 +16,7 @@ The target of the bullet chart.
 
 ## Configuration Attributes
 
-### border `String`
+### border `java.lang.String`
 
 The border of the target. Further configuration is available via [kendo:sparkline-seriesItem-target-border](#kendo-sparkline-seriesItem-target-border). 
 
@@ -24,7 +24,7 @@ The border of the target. Further configuration is available via [kendo:sparklin
     <kendo:sparkline-seriesItem-target border="border">
     </kendo:sparkline-seriesItem-target>
 
-### color `String`
+### color `java.lang.String`
 
 The target color.
 

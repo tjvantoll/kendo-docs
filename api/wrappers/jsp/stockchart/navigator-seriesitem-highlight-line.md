@@ -16,7 +16,7 @@ Line options for highlighted points. The color is computed automatically from th
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The line color.
 

@@ -24,7 +24,7 @@ If set to true the user can get the grid in unsorted state by clicking the sorte
     <kendo:grid-sortable allowUnsort="allowUnsort">
     </kendo:grid-sortable>
 
-### mode `String`
+### mode `java.lang.String`
 
 The sorting mode. If set to "single" the user can sort by one column. If set to "multiple" the user can sort by one column.
 

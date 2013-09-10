@@ -16,7 +16,7 @@ The configuration of the category axis minor ticks.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the category axis minor ticks lines. Accepts a valid CSS color string, including hex and rgb.
 

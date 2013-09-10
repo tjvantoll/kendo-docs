@@ -16,7 +16,7 @@ The items of the notes.
 
 ## Configuration Attributes
 
-### position `String`
+### position `java.lang.String`
 
 The position of the x axis note.
 
@@ -24,7 +24,7 @@ The position of the x axis note.
     <kendo:chart-xAxisItem-notes-dataItem position="position">
     </kendo:chart-xAxisItem-notes-dataItem>
 
-### value `Object`
+### value `java.lang.Object`
 
 The value of the note.
 

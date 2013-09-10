@@ -18,7 +18,7 @@ Specifies that sub menus should close after item selection (provided they won't 
     <kendo:menu closeOnClick="closeOnClick">
     </kendo:menu>
 
-### direction `String`
+### direction `java.lang.String`
 
 Specifies Menu opening direction. Can be "top", "bottom", "left", "right".
 You can also specify different direction for root and sub menu items, separating them with space. The example below will initialize the root menu to open upwards and
@@ -44,7 +44,7 @@ Specifies that the root sub menus will be opened on item click.
     <kendo:menu openOnClick="openOnClick">
     </kendo:menu>
 
-### orientation `String`
+### orientation `java.lang.String`
 
 Root menu orientation. Could be horizontal or vertical.
 
@@ -52,7 +52,7 @@ Root menu orientation. Could be horizontal or vertical.
     <kendo:menu orientation="orientation">
     </kendo:menu>
 
-### popupCollision `String`
+### popupCollision `java.lang.String`
 
 Specifies how Menu should adjust to screen boundaries. By default the strategy is "fit" for a sub menu with a horizontal parent,
 meaning it will move to fit in screen boundaries in all directions, and "fit flip" for a sub menu with vertical parent, meaning it will fit vertically and flip over

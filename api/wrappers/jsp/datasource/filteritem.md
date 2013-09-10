@@ -16,7 +16,7 @@ The filter(s) which is (are) applied over the data items. By default no filter i
 
 ## Configuration Attributes
 
-### field `String`
+### field `java.lang.String`
 
 The data item field to which the filter operator is applied.
 
@@ -24,7 +24,7 @@ The data item field to which the filter operator is applied.
     <kendo:dataSource-filterItem field="field">
     </kendo:dataSource-filterItem>
 
-### logic `String`
+### logic `java.lang.String`
 
 The logical operation to use when the filter.filters option is set. The supported values are "and" and "or".
 
@@ -32,7 +32,7 @@ The logical operation to use when the filter.filters option is set. The supporte
     <kendo:dataSource-filterItem logic="logic">
     </kendo:dataSource-filterItem>
 
-### operator `String`
+### operator `java.lang.String`
 
 The filter operator (comparison). The supported operators are: "eq" (equal to), "neq" (not equal to), "lt" (less than), "lte" (less than or equal to), "gt" (greater than), "gte" (greater than or equal to),
 "startswith", "endswith", "contains". The last three are supported only for string fields.
@@ -41,7 +41,7 @@ The filter operator (comparison). The supported operators are: "eq" (equal to), 
     <kendo:dataSource-filterItem operator="operator">
     </kendo:dataSource-filterItem>
 
-### value `Object`
+### value `java.lang.Object`
 
 The value to which the field is compared. The value must be from the same type as the field.
 

@@ -16,7 +16,7 @@ The texts of the filter operators displayed for columns bound to date fields.
 
 ## Configuration Attributes
 
-### eq `String`
+### eq `java.lang.String`
 
 The text of the "equal" filter operator.
 
@@ -24,7 +24,7 @@ The text of the "equal" filter operator.
     <kendo:grid-filterable-operators-date eq="eq">
     </kendo:grid-filterable-operators-date>
 
-### gt `String`
+### gt `java.lang.String`
 
 The text of the "greater than" filter operator.
 
@@ -32,7 +32,7 @@ The text of the "greater than" filter operator.
     <kendo:grid-filterable-operators-date gt="gt">
     </kendo:grid-filterable-operators-date>
 
-### gte `String`
+### gte `java.lang.String`
 
 The text of the "greater than or equal" filter operator.
 
@@ -40,7 +40,7 @@ The text of the "greater than or equal" filter operator.
     <kendo:grid-filterable-operators-date gte="gte">
     </kendo:grid-filterable-operators-date>
 
-### lt `String`
+### lt `java.lang.String`
 
 The text of the "less than" filter operator.
 
@@ -48,7 +48,7 @@ The text of the "less than" filter operator.
     <kendo:grid-filterable-operators-date lt="lt">
     </kendo:grid-filterable-operators-date>
 
-### lte `String`
+### lte `java.lang.String`
 
 The text of the "less than or equal" filter operator.
 
@@ -56,7 +56,7 @@ The text of the "less than or equal" filter operator.
     <kendo:grid-filterable-operators-date lte="lte">
     </kendo:grid-filterable-operators-date>
 
-### neq `String`
+### neq `java.lang.String`
 
 The text of the "not equal" filter operator.
 

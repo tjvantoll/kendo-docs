@@ -16,7 +16,7 @@ The title configuration of the chart pane.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the title. Accepts a valid CSS color string, including hex and rgb.
 
@@ -24,7 +24,7 @@ The background color of the title. Accepts a valid CSS color string, including h
     <kendo:chart-pane-title background="background">
     </kendo:chart-pane-title>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the title. Accepts a valid CSS color string, including hex and rgb.
 
@@ -32,7 +32,7 @@ The text color of the title. Accepts a valid CSS color string, including hex and
     <kendo:chart-pane-title color="color">
     </kendo:chart-pane-title>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the title.
 
@@ -48,7 +48,7 @@ The margin of the title. A numeric value will set all margins. Further configura
     <kendo:chart-pane-title margin="margin">
     </kendo:chart-pane-title>
 
-### position `String`
+### position `java.lang.String`
 
 The position of the title.The supported values are:
 
@@ -56,7 +56,7 @@ The position of the title.The supported values are:
     <kendo:chart-pane-title position="position">
     </kendo:chart-pane-title>
 
-### text `String`
+### text `java.lang.String`
 
 The text of the title.
 

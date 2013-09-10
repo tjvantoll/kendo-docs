@@ -10,9 +10,9 @@ A JSP wrapper for Kendo UI [NumericTextBox](/api/web/numerictextbox).
 
 ## Configuration Attributes
 
-### culture `String`
+### culture `java.lang.String`
 
-Specifies the culture info used by the NumericTextBox widget.
+Specifies the culture info used by the widget.
 
 #### Example
     <kendo:numericTextBox culture="culture">
@@ -26,7 +26,7 @@ Specifies the number precision. If not set precision defined by current culture 
     <kendo:numericTextBox decimals="decimals">
     </kendo:numericTextBox>
 
-### downArrowText `String`
+### downArrowText `java.lang.String`
 
 Specifies the text of the tooltip on the down arrow.
 
@@ -34,7 +34,7 @@ Specifies the text of the tooltip on the down arrow.
     <kendo:numericTextBox downArrowText="downArrowText">
     </kendo:numericTextBox>
 
-### format `String`
+### format `java.lang.String`
 
 Specifies the format of the number. Any valid number format is allowed.
 
@@ -58,9 +58,9 @@ Specifies the smallest value the user can enter.
     <kendo:numericTextBox min="min">
     </kendo:numericTextBox>
 
-### placeholder `String`
+### placeholder `java.lang.String`
 
-Specifies the text displayed when the input is empty.
+The hint displayed by the widget when it is empty. Not set by default.
 
 #### Example
     <kendo:numericTextBox placeholder="placeholder">
@@ -68,7 +68,7 @@ Specifies the text displayed when the input is empty.
 
 ### spinners `boolean`
 
-Specifies whether the up/down spin buttons should be rendered
+Specifies whether the up and down spin buttons should be rendered
 
 #### Example
     <kendo:numericTextBox spinners="spinners">
@@ -76,13 +76,13 @@ Specifies whether the up/down spin buttons should be rendered
 
 ### step `float`
 
-Specifies the increment/decrement step.
+Specifies the value used to increment or decrement widget value.
 
 #### Example
     <kendo:numericTextBox step="step">
     </kendo:numericTextBox>
 
-### upArrowText `String`
+### upArrowText `java.lang.String`
 
 Specifies the text of the tooltip on the up arrow.
 

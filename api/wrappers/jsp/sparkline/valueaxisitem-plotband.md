@@ -16,7 +16,7 @@ The plot bands of the value axis.
 
 ## Configuration Attributes
 
-### color `String`
+### color `java.lang.String`
 
 The color of the plot band.
 

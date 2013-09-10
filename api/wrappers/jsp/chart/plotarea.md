@@ -16,7 +16,7 @@ The plot area configuration options. The plot area is the area which displays th
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the chart plot area. Accepts a valid CSS color string, including hex and rgb.
 

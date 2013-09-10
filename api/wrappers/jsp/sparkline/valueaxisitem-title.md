@@ -16,7 +16,7 @@ The title of the value axis.
 
 ## Configuration Attributes
 
-### background `String`
+### background `java.lang.String`
 
 The background color of the title. Any valid CSS color string will work here, including
 hex and rgb.
@@ -25,7 +25,7 @@ hex and rgb.
     <kendo:sparkline-valueAxisItem-title background="background">
     </kendo:sparkline-valueAxisItem-title>
 
-### color `String`
+### color `java.lang.String`
 
 The text color of the title. Any valid CSS color string will work here, including hex and rgb.
 
@@ -33,7 +33,7 @@ The text color of the title. Any valid CSS color string will work here, includin
     <kendo:sparkline-valueAxisItem-title color="color">
     </kendo:sparkline-valueAxisItem-title>
 
-### font `String`
+### font `java.lang.String`
 
 The font style of the title.
 
@@ -41,7 +41,7 @@ The font style of the title.
     <kendo:sparkline-valueAxisItem-title font="font">
     </kendo:sparkline-valueAxisItem-title>
 
-### margin `Object`
+### margin `java.lang.Object`
 
 The margin of the title.
 
@@ -49,7 +49,7 @@ The margin of the title.
     <kendo:sparkline-valueAxisItem-title margin="margin">
     </kendo:sparkline-valueAxisItem-title>
 
-### padding `Object`
+### padding `java.lang.Object`
 
 The padding of the title.
 
@@ -57,7 +57,7 @@ The padding of the title.
     <kendo:sparkline-valueAxisItem-title padding="padding">
     </kendo:sparkline-valueAxisItem-title>
 
-### position `String`
+### position `java.lang.String`
 
 The position of the title.
 
@@ -73,7 +73,7 @@ The rotation angle of the title.
     <kendo:sparkline-valueAxisItem-title rotation="rotation">
     </kendo:sparkline-valueAxisItem-title>
 
-### text `String`
+### text `java.lang.String`
 
 The text of the title.
 

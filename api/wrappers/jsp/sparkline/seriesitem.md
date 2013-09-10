@@ -17,7 +17,7 @@ If a type value is missing, the type is assumed to be the one specified in serie
 
 ## Configuration Attributes
 
-### aggregate `String`
+### aggregate `java.lang.String`
 
 The aggregate function to apply for date series.This function is used when a category (an year, month, etc.) contains two or more points.
 The function return value is displayed instead of the individual points.The supported values are:
@@ -26,7 +26,7 @@ The function return value is displayed instead of the individual points.The supp
     <kendo:sparkline-seriesItem aggregate="aggregate">
     </kendo:sparkline-seriesItem>
 
-### axis `String`
+### axis `java.lang.String`
 
 The name of the value axis to use.** Applicable to area, bar, column and line series **
 
@@ -34,7 +34,7 @@ The name of the value axis to use.** Applicable to area, bar, column and line se
     <kendo:sparkline-seriesItem axis="axis">
     </kendo:sparkline-seriesItem>
 
-### categoryField `String`
+### categoryField `java.lang.String`
 
 The data field containing the point category name.** Applicable to pie series. **
 
@@ -42,7 +42,7 @@ The data field containing the point category name.** Applicable to pie series. *
     <kendo:sparkline-seriesItem categoryField="categoryField">
     </kendo:sparkline-seriesItem>
 
-### color `String`
+### color `java.lang.String`
 
 The series base color.
 
@@ -50,7 +50,7 @@ The series base color.
     <kendo:sparkline-seriesItem color="color">
     </kendo:sparkline-seriesItem>
 
-### colorField `String`
+### colorField `java.lang.String`
 
 The data field containing the point color.** Applicable for bar, column and pie series. **
 
@@ -58,7 +58,7 @@ The data field containing the point color.** Applicable for bar, column and pie 
     <kendo:sparkline-seriesItem colorField="colorField">
     </kendo:sparkline-seriesItem>
 
-### currentField `String`
+### currentField `java.lang.String`
 
 The data field containing the current value.** Available for bullet and verticalBullet series. **
 
@@ -66,7 +66,7 @@ The data field containing the current value.** Available for bullet and vertical
     <kendo:sparkline-seriesItem currentField="currentField">
     </kendo:sparkline-seriesItem>
 
-### dashType `String`
+### dashType `java.lang.String`
 
 The series line dash type.** Applicable only to line series **
 
@@ -74,7 +74,7 @@ The series line dash type.** Applicable only to line series **
     <kendo:sparkline-seriesItem dashType="dashType">
     </kendo:sparkline-seriesItem>
 
-### data `Object`
+### data `java.lang.Object`
 
 Array of data items. The data item type can be either a:
 
@@ -82,7 +82,7 @@ Array of data items. The data item type can be either a:
     <kendo:sparkline-seriesItem data="data">
     </kendo:sparkline-seriesItem>
 
-### explodeField `String`
+### explodeField `java.lang.String`
 
 The data field containing a boolean value that indicates if the sector is exploded.** Available for pie series **
 
@@ -90,7 +90,7 @@ The data field containing a boolean value that indicates if the sector is explod
     <kendo:sparkline-seriesItem explodeField="explodeField">
     </kendo:sparkline-seriesItem>
 
-### field `String`
+### field `java.lang.String`
 
 The data field containing the series value.
 
@@ -106,7 +106,7 @@ The distance between category clusters.** Applicable for bar and column series. 
     <kendo:sparkline-seriesItem gap="gap">
     </kendo:sparkline-seriesItem>
 
-### line `String`
+### line `java.lang.String`
 
 Line options.** Applicable to area series. ** Further configuration is available via [kendo:sparkline-seriesItem-line](#kendo-sparkline-seriesItem-line). 
 
@@ -114,7 +114,7 @@ Line options.** Applicable to area series. ** Further configuration is available
     <kendo:sparkline-seriesItem line="line">
     </kendo:sparkline-seriesItem>
 
-### missingValues `String`
+### missingValues `java.lang.String`
 
 The behavior for handling missing values. The supported values are:
 
@@ -122,7 +122,7 @@ The behavior for handling missing values. The supported values are:
     <kendo:sparkline-seriesItem missingValues="missingValues">
     </kendo:sparkline-seriesItem>
 
-### name `String`
+### name `java.lang.String`
 
 The series name.The name can also be a template which sets the name of the series when bound to grouped data source.The fields which can be used in the template are:
 
@@ -130,7 +130,7 @@ The series name.The name can also be a template which sets the name of the serie
     <kendo:sparkline-seriesItem name="name">
     </kendo:sparkline-seriesItem>
 
-### negativeColor `String`
+### negativeColor `java.lang.String`
 
 Color to use for bars with negative values.** Applicable only to bar and column series. **
 
@@ -171,7 +171,7 @@ Space between points as proportion of the point width.** Available for bar and c
     <kendo:sparkline-seriesItem spacing="spacing">
     </kendo:sparkline-seriesItem>
 
-### stack `Object`
+### stack `java.lang.Object`
 
 A value indicating if the series should be stacked. String value indicates that the series should be stacked in a group with the specified name.
 ** Available for bar and column series. **
@@ -188,7 +188,7 @@ The start angle of the first segment.Available for pie series.
     <kendo:sparkline-seriesItem startAngle="startAngle">
     </kendo:sparkline-seriesItem>
 
-### targetField `String`
+### targetField `java.lang.String`
 
 The data field containing the target value.** Available for bullet and verticalBullet series. **** Available for pie series **
 
@@ -196,7 +196,7 @@ The data field containing the target value.** Available for bullet and verticalB
     <kendo:sparkline-seriesItem targetField="targetField">
     </kendo:sparkline-seriesItem>
 
-### type `String`
+### type `java.lang.String`
 
 The type of the series. Available types:
 
