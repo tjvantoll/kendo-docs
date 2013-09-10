@@ -1460,34 +1460,6 @@ The text similar to " occurrence(s)" displayed in the scheduler recurrence edito
     });
     </script>
 
-### messages.recurrenceEditor.end.endCountOccurrence `String`
-
-The text similar to " occurrence(s)" displayed in the scheduler recurrence editor.
-
-#### Example - set the "endCountOccurrence" scheduler recurrence editor message
-
-    <div id="scheduler"></div>
-    <script>
-    $("#scheduler").kendoScheduler({
-      date: new Date("2013/6/6"),
-      messages: {
-        recurrenceEditor: {
-            end: {
-                endCountOccurrence: " occurrence(s)."
-            }
-        }
-      },
-      dataSource: [
-        {
-          id: 1,
-          start: new Date("2013/6/6 08:00 AM"),
-          end: new Date("2013/6/6 09:00 AM"),
-          title: "Interview"
-        }
-      ]
-    });
-    </script>
-
 ### messages.recurrenceEditor.end.endLabel `String`
 
 The text similar to "End:" displayed in the scheduler recurrence editor.
