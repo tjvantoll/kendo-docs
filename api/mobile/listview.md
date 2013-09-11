@@ -1006,7 +1006,7 @@ Fires when the ListView is about to be rendered.
 
 Fires when a new item is added to the listview (usually in virtual mode).
 
-##### Example
+#### Example
 
     <div data-role="view">
       <ul data-role="listview" data-source="foo" data-endless-scroll="true" data-template="foo-template" data-item-change="itemChange">
