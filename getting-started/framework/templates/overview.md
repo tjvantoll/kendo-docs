@@ -19,7 +19,7 @@ Kendo UI Templates use a simple templating syntax we call "hash templates." With
 There are three ways to use the hash syntax:
 
 1. Render literal values: #= #
-2. Render HTML-enocded values: #: #
+2. Render HTML-encoded values: #: #
 3. Execute arbitrary JavaScript code: # if(...){# ... #}#
 
 > If your template includes a "#" that is not part of a binding expression, **you must** escape that value or it will cause a template compliation error (this is common in Kendo UI Mobile where # is often used for view navigation). You can escape any literal "#" in JavaScript strings using "\\\\#" and in HTML script templates using "\\#".
