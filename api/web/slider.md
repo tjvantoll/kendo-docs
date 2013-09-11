@@ -90,9 +90,10 @@ tick labels.
 
 ### tooltip.template `String`
 
-Template of the tooltip.
+Template of the tooltip. The following variables are passed by the Slider and are ready to be used inside the template:
 
-*   **value** - the current value.
+*   **value** - the current value when using a regular slider
+*   **selectionStart** and **selectionEnd** - the current values when using a range slider
 
 ### value `Number`
 
