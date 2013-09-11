@@ -144,9 +144,9 @@ Set the mobile TabStrip active tab to the tab with the specified URL. This metho
 
 #### Parameters
 
-##### url `String`
+##### url `String|Number`
 
-The URL of the tab.
+The URL or zero based index of the tab.
 
 #### Example
 
@@ -165,6 +165,38 @@ The URL of the tab.
     function onClick() {
       var tabstrip = app.view().footer.find(".km-tabstrip").data("kendoMobileTabStrip");
       tabstrip.switchTo("#bar"); //activate "bar" tab
+    }
+    </script>
+
+### switchByFullUrl
+
+Set the mobile TabStrip active tab to the tab with the specified full URL. This method doesn't change the current View. To change the View, use Application's [navigate](/api/mobile/application#navigate) method instead.
+
+> Use switchByFullUrl when you want to active a tab that has URL with query string parameters.
+
+#### Parameters
+
+##### url `String`
+
+The URL of the tab.
+
+#### Example
+
+    <div id="foo" data-role="view">
+      <a data-role="button" data-click="onClick">Button</a>
+      <div data-role="footer">
+        <div data-role="tabstrip">
+          <a href="#foo" data-icon="contacts">foo</a>
+          <a href="#foo?bar=qux" data-icon="contacts">bar</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    var app = new kendo.mobile.Application();
+    function onClick() {
+      var tabstrip = app.view().footer.find(".km-tabstrip").data("kendoMobileTabStrip");
+      tabstrip.switchByFullUrl("#foo?bar=qux"); //activate second tab
     }
     </script>
 
