@@ -1001,3 +1001,50 @@ Fires when the ListView is about to be rendered.
 
     new kendo.mobile.Application();
     </script>
+
+### itemChange
+
+Fires when a new item is added to the listview (usually in virtual mode).
+
+##### Example
+
+    <div data-role="view">
+      <ul data-role="listview" data-source="foo" data-endless-scroll="true" data-template="foo-template" data-item-change="itemChange">
+      </ul>
+    </div>
+
+    <script type="text/x-kendo-template" id="foo-template">
+        #: name # - #: modified #
+    </script>
+
+    <script>
+    var i = 0, pageSize = 100;
+
+    // datasource below is customized for demo purposes.
+    var foo = new kendo.data.DataSource({
+      transport: {
+        read: function(options) {
+          var max = i + pageSize;
+          var data = [];
+          for (; i < max; i ++) {
+            data.push({ name: "record" + i, modified: +new Date() });
+          }
+
+          options.success(data);
+        }
+      },
+
+      pageSize: pageSize,
+      serverPaging: true,
+      schema: {
+        total: function() { return 500; }
+      }
+    });
+
+      function itemChange(e) {
+        console.log(e);
+      }
+
+    new kendo.mobile.Application();
+    </script>
+
