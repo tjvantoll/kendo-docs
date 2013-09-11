@@ -28,6 +28,948 @@ The data item field value must be either:
 
 The data navigator configuration options.
 
+### navigator.categoryAxis `Array|Object`
+
+The category axis configuration options.
+
+### navigator.categoryAxis.autoBaseUnitSteps `Object`
+
+The discrete [navigator.categoryAxis.baseUnitStep](#configuration-navigator-categoryAxis.baseUnitStep) values when
+either [navigator.categoryAxis.baseUnit](#configuration-navigator-categoryAxis.baseUnit) is set to "fit" or
+[navigator.categoryAxis.baseUnitStep](#configuration-navigator-categoryAxis.baseUnitStep) is set to "auto".
+
+### navigator.categoryAxis.autoBaseUnitSteps.seconds `Array` *(default: [1, 2, 5, 15, 30])*
+
+The seconds unit steps.
+
+### navigator.categoryAxis.autoBaseUnitSteps.minutes `Array` *(default: [1, 2, 5, 15, 30])*
+
+The minutes unit steps.
+
+### navigator.categoryAxis.autoBaseUnitSteps.hours `Array` *(default: [1, 2, 3])*
+
+The hours unit steps.
+
+### navigator.categoryAxis.autoBaseUnitSteps.days `Array` *(default: [1, 2, 3])*
+
+The days unit steps.
+
+### navigator.categoryAxis.autoBaseUnitSteps.weeks `Array` *(default: [1, 2])*
+
+The weeks unit steps.
+
+### navigator.categoryAxis.autoBaseUnitSteps.months `Array` *(default: [1, 2, 3, 6])*
+
+The months unit steps.
+
+### navigator.categoryAxis.autoBaseUnitSteps.years `Array` *(default: [1, 2, 3, 5, 10, 25, 50])*
+
+The years unit steps.
+
+### navigator.categoryAxis.axisCrossingValue `Object|Date|Array`
+
+Category index at which the first value axis crosses this axis (when set as an object).
+
+Category indices at which the value axes cross the category axis (when set as an array).
+
+> set an index greater than or equal to the number of categories to denote the far end of the axis.
+
+### navigator.categoryAxis.baseUnit `String`
+
+The base time interval for the date axis. The default base unit is determined automatically from the minimum difference
+between subsequent categories.
+
+The supported values are:
+
+* "fit"
+* "seconds"
+* "minutes"
+* "hours"
+* "days"
+* "weeks"
+* "months"
+* "years"
+
+Setting `baseUnit` to "fit" will set such base unit and [categoryAxis.baseUnitStep](#configuration-categoryAxis.baseUnitStep)
+that the total number of categories does not exceed [categoryAxis.maxDateGroups](#configuration-categoryAxis.maxDateGroups).
+
+Series data is aggregated for the specified base unit using the [series.aggregate](#configuration-series.aggregate) function.
+
+### navigator.categoryAxis.baseUnitStep `Object` *(default: 1)*
+
+The step (interval) between categories in base units. Setting it to "auto" will set the step to such value
+that the total number of categories does not exceed [categoryAxis.maxDateGroups](#configuration-categoryAxis.maxDateGroups).
+
+This option is ignored if [categoryAxis.baseUnit](#configuration-categoryAxis.baseUnit) is set to "fit".
+
+### navigator.categoryAxis.categories `Array`
+
+The category names. The chart will create a category for every item of the array.
+
+### navigator.categoryAxis.color `String`
+
+The color to apply to all axis elements. Accepts a valid CSS color string, including hex and rgb. Can be overridden by [categoryAxis.labels.color](#configuration-categoryAxis.labels.color) and
+[categoryAxis.line.color](#configuration-categoryAxis.line.color).
+
+### navigator.categoryAxis.crosshair `Object`
+
+The crosshair configuration options.
+
+> The crosshair is displayed when the [categoryAxis.crosshair.visible](#configuration-categoryAxis.crosshair.visible) option is set to `true`.
+
+### navigator.categoryAxis.crosshair.color `String`
+
+The color of the crosshair. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.crosshair.dashType `string` *(default: "solid")*
+
+The dash type of the crosshair.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+### navigator.categoryAxis.crosshair.opacity `Number` *(default: 1)*
+
+The opacity of the crosshair. By default the crosshair is opaque.
+
+### navigator.categoryAxis.crosshair.tooltip `Object`
+
+The crosshar tooltip options.
+
+> The crosshair tooltip is displayed when the [categoryAxis.crosshair.tooltip.visible](#configuration-categoryAxis.crosshair.tooltip.visible) option is set to `true`.
+
+### navigator.categoryAxis.crosshair.tooltip.background `String`
+
+The background color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.crosshair.tooltip.border `Object`
+
+The border options.
+
+### navigator.categoryAxis.crosshair.tooltip.border.color `String` *(default: "black")*
+
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.crosshair.tooltip.border.dashType `String` *(default: "solid")*
+
+The dash type of the border.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+### navigator.categoryAxis.crosshair.tooltip.border.width `Number` *(default: 0)*
+
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+### navigator.categoryAxis.crosshair.tooltip.color `String`
+
+The text color of the tooltip. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.crosshair.tooltip.font `String` *(default: "12px Arial,Helvetica,sans-serif")*
+
+The tooltip font.
+
+### navigator.categoryAxis.crosshair.tooltip.format `String` *(default: "{0}")*
+
+The format used to display the tooltip. Uses [kendo.format](/api/framework/kendo#methods-format). Contains one placeholder ("{0}") which represents the category value.
+
+### navigator.categoryAxis.crosshair.tooltip.padding `Number|Object` *(default: 0)*
+
+The padding of the crosshair tooltip. A numeric value will set all paddings.
+
+### navigator.categoryAxis.crosshair.tooltip.padding.bottom `Number` *(default: 0)*
+
+The bottom padding of the crosshair tooltip.
+
+### navigator.categoryAxis.crosshair.tooltip.padding.left `Number` *(default: 0)*
+
+The left padding of the crosshair tooltip.
+
+### navigator.categoryAxis.crosshair.tooltip.padding.right `Number` *(default: 0)*
+
+The right padding of the crosshair tooltip.
+
+### navigator.categoryAxis.crosshair.tooltip.padding.top `Number` *(default: 0)*
+
+The top padding of the crosshair tooltip.
+
+### navigator.categoryAxis.crosshair.tooltip.template `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which renders the tooltip.
+
+The fields which can be used in the template are:
+
+* value - the category value
+
+### navigator.categoryAxis.crosshair.tooltip.visible `Boolean` *(default: false)*
+
+If set to `true` the chart will display the category axis crosshair tooltip. By default the category axis crosshair tooltip is not visible.
+
+### navigator.categoryAxis.crosshair.visible `Boolean` *(default: false)*
+
+If set to `true` the chart will display the category axis crosshair. By default the category axis crosshair is not visible.
+
+### navigator.categoryAxis.crosshair.width `Number` *(default: 1)*
+
+The width of the crosshair in pixels.
+
+### navigator.categoryAxis.field `String`
+
+The data item field which contains the category name. Requires the [dataSource](#configuration-dataSource) option to be set.
+
+### navigator.categoryAxis.justified `Boolean`
+
+If set to `true` the chart will position categories and series points on major ticks. This removes the empty space before and after the series.
+
+The default value is `false` except for "area", "verticalArea", "stepArea" and "verticalStepArea".
+
+> This option is ignored if the [series.type](#configuration-series.type) option is set to "bar", "column", "ohlc" or "candlestick".
+
+### navigator.categoryAxis.labels `Object`
+
+The axis labels configuration.
+
+### navigator.categoryAxis.labels.background `String`
+
+The background color of the labels. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.labels.border `Object`
+
+The border of the labels.
+
+### navigator.categoryAxis.labels.border.color `String` *(default: "black")*
+
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.labels.border.dashType `String` *(default: "solid")*
+
+The dash type of the border.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+### navigator.categoryAxis.labels.border.width `Number` *(default: 0)*
+
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+### navigator.categoryAxis.labels.color `String`
+
+The text color of the labels. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.labels.culture `String`
+
+The culture to use when formatting date values. See the [globalization overview](/getting-started/framework/globalization/overview) for more information.
+
+### navigator.categoryAxis.labels.dateFormats `Object`
+
+The format used to display the labels when the categories are dates. Uses [kendo.format](/api/framework/kendo#methods-format). Contains one placeholder ("{0}") which represents the category value.
+
+> The chart will choose the appropriate format for the current [categoryAxis.baseUnit](#configuration-categoryAxis.baseUnit). Setting the [categoryAxis.labels.format](#configuration-categoryAxis.labels.format) option will override the date formats.
+
+### navigator.categoryAxis.labels.dateFormats.days `String` *(default: "M/d")*
+
+The format used when [categoryAxis.baseUnit](#configuration-categoryAxis.baseUnit) is set to "days".
+
+### navigator.categoryAxis.labels.dateFormats.hours `String` *(default: "HH:mm")*
+
+The format used when [categoryAxis.baseUnit](#configuration-categoryAxis.baseUnit) is set to "hours".
+
+### navigator.categoryAxis.labels.dateFormats.months `String` *(default: "MMM 'yy")*
+
+The format used when [categoryAxis.baseUnit](#configuration-categoryAxis.baseUnit) is set to "months".
+
+### navigator.categoryAxis.labels.dateFormats.weeks `String` *(default: "M/d")*
+
+The format used when [categoryAxis.baseUnit](#configuration-categoryAxis.baseUnit) is set to "weeks".
+
+### navigator.categoryAxis.labels.dateFormats.years `String` *(default: "yyyy")*
+
+The format used when [categoryAxis.baseUnit](#configuration-categoryAxis.baseUnit) is set to "years".
+
+### navigator.categoryAxis.labels.font `String` *(default: "12px Arial,Helvetica,sans-serif")*
+
+The font style of the labels.
+
+### navigator.categoryAxis.labels.format `String` *(default: "{0}")*
+
+The format used to display the labels. Uses [kendo.format](/api/framework/kendo#methods-format). Contains one placeholder ("{0}") which represents the category value.
+
+### navigator.categoryAxis.labels.margin `Number|Object` *(default: 0)*
+
+The margin of the labels. A numeric value will set all margins.
+
+### navigator.categoryAxis.labels.margin.bottom `Number` *(default: 0)*
+
+The bottom margin of the labels.
+
+### navigator.categoryAxis.labels.margin.left `Number` *(default: 0)*
+
+The left margin of the labels.
+
+### navigator.categoryAxis.labels.margin.right `Number` *(default: 0)*
+
+The right margin of the labels.
+
+### navigator.categoryAxis.labels.margin.top `Number` *(default: 0)*
+
+The top margin of the labels.
+
+### navigator.categoryAxis.labels.mirror `Boolean` *(default: false)*
+
+If set to `true` the chart will mirror the axis labels and ticks. If the labels are normally on the left side of the axis, mirroring the axis will render them to the right.
+
+### navigator.categoryAxis.labels.padding `Object|Number` *(default: 0)*
+
+The padding of the labels. A numeric value will set all paddings.
+
+### navigator.categoryAxis.labels.padding.bottom `Number` *(default: 0)*
+
+The bottom padding of the labels.
+
+### navigator.categoryAxis.labels.padding.left `Number` *(default: 0)*
+
+The left padding of the labels.
+
+### navigator.categoryAxis.labels.padding.right `Number` *(default: 0)*
+
+The right padding of the labels.
+
+### navigator.categoryAxis.labels.padding.top `Number` *(default: 0)*
+
+The top padding of the labels.
+
+### navigator.categoryAxis.labels.rotation `Number` *(default: 0)*
+
+The rotation angle of the labels. By default the labels are not rotated.
+
+### navigator.categoryAxis.labels.skip `Number` *(default: 0)*
+
+The number of labels to skip. By default no labels are skipped.
+
+### navigator.categoryAxis.labels.step `Number` *(default: 1)*
+
+The label rendering step - render every n-th label. By default every label is rendered.
+
+### navigator.categoryAxis.labels.template `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which renders the labels.
+
+The fields which can be used in the template are:
+
+* value - the category value
+
+### navigator.categoryAxis.labels.visible `Boolean` *(default: true)*
+
+If set to `true` the chart will display the category axis labels. By default the category axis labels are visible.
+
+### navigator.categoryAxis.line `Object`
+
+The configuration of the axis lines. Also affects the major and minor ticks, but not the grid lines.
+
+### navigator.categoryAxis.line.color `String` *(default: "black")*
+
+The color of the lines. Accepts a valid CSS color string, including hex and rgb.
+
+> Setting the `color` option affects the major and minor ticks, but not the grid lines.
+
+### navigator.categoryAxis.line.dashType `String` *(default: "solid")*
+
+The dash type of the line.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+### navigator.categoryAxis.line.visible `Boolean` *(default: true)*
+
+If set to `true` the chart will display the category axis lines. By default the category axis lines are visible.
+
+### navigator.categoryAxis.line.width `Number` *(default: 1)*
+
+The width of the line in pixels. Also affects the major and minor ticks, but not the grid lines.
+
+### navigator.categoryAxis.majorGridLines `Object`
+
+The configuration of the major grid lines. These are the lines that are an extension of the major ticks through the
+body of the chart.
+
+### navigator.categoryAxis.majorGridLines.color `String` *(default: "black")*
+
+The color of the major grid lines. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.majorGridLines.dashType `String` *(default: "solid")*
+
+The dash type of the major grid lines.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+### navigator.categoryAxis.majorGridLines.visible `Boolean` *(default: false)*
+
+If set to `true` the chart will display the major grid lines. By default the major grid lines are visible.
+
+### navigator.categoryAxis.majorGridLines.width `Number` *(default: 1)*
+
+The width of the category axis major grid lines in pixels.
+
+### navigator.categoryAxis.majorTicks `Object`
+
+The configuration of the category axis major ticks.
+
+### navigator.categoryAxis.majorTicks.color `String` *(default: "black")*
+
+The color of the category axis major ticks lines. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.majorTicks.size `Number` *(default: 4)*
+
+The length of the tick line in pixels.
+
+### navigator.categoryAxis.majorTicks.visible `Boolean` *(default: true)*
+
+If set to `true` the chart will display the category axis major ticks. By default the category axis major ticks are visible.
+
+### navigator.categoryAxis.majorTicks.width `Number` *(default: 1)*
+
+The width of the major ticks in pixels.
+
+### navigator.categoryAxis.max `Object`
+
+The last date displayed on the category date axis. By default, the minimum date is the same as the last category.
+This is often used in combination with the [categoryAxis.min](#configuration-categoryAxis.min) and [categoryAxis.roundToBaseUnit](#configuration-categoryAxis.roundToBaseUnit) options to
+set up a fixed date range.
+
+### navigator.categoryAxis.maxDateGroups `Number` *(default: 10)*
+
+The maximum number of groups (categories) to display when
+[categoryAxis.baseUnit](#configuration-categoryAxis.baseUnit) is set to "fit" or
+[categoryAxis.baseUnitStep](#configuration-categoryAxis.baseUnitStep) is set to "auto".
+
+### navigator.categoryAxis.min `Object`
+
+The first date displayed on the category date axis. By default, the minimum date is the same as the first category.
+This is often used in combination with the [categoryAxis.min](#configuration-categoryAxis.min) and [categoryAxis.roundToBaseUnit](#configuration-categoryAxis.roundToBaseUnit) options to
+set up a fixed date range.
+
+### navigator.categoryAxis.minorGridLines `Object`
+
+The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
+body of the chart.
+
+### navigator.categoryAxis.minorGridLines.color `String` *(default: "black")*
+
+The color of the minor grid lines. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.minorGridLines.dashType `String` *(default: "solid")*
+
+The dash type of the minor grid lines.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+### navigator.categoryAxis.minorGridLines.visible `Boolean` *(default: false)*
+
+If set to `true` the chart will display the minor grid lines. By default the minor grid lines are visible.
+
+### navigator.categoryAxis.minorGridLines.width `Number` *(default: 1)*
+
+The width of the category axis minor grid lines in pixels.
+
+### navigator.categoryAxis.minorTicks `Object`
+
+The configuration of the category axis minor ticks.
+
+### navigator.categoryAxis.minorTicks.color `String` *(default: "black")*
+
+The color of the category axis minor ticks lines. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.minorTicks.size `Number` *(default: 4)*
+
+The length of the tick line in pixels.
+
+### navigator.categoryAxis.minorTicks.visible `Boolean` *(default: true)*
+
+If set to `true` the chart will display the category axis minor ticks. By default the category axis minor ticks are visible.
+
+### navigator.categoryAxis.minorTicks.width `Number` *(default: 1)*
+
+The width of the minor ticks in pixels.
+
+### navigator.categoryAxis.plotBands `Array`
+
+The plot bands of the category axis.
+
+### navigator.categoryAxis.plotBands.color `String`
+
+The color of the plot band.
+
+### navigator.categoryAxis.plotBands.from `Number`
+
+The start position of the plot band in axis units.
+
+### navigator.categoryAxis.plotBands.opacity `Number`
+
+The opacity of the plot band.
+
+### navigator.categoryAxis.plotBands.to `Number`
+
+The end position of the plot band in axis units.
+
+### navigator.categoryAxis.reverse `Boolean` *(default: false)*
+
+If set to `true` the category axis direction will be reversed. By default categories are listed from left to right and from bottom to top.
+
+### navigator.categoryAxis.roundToBaseUnit `Boolean` *(default: true)*
+
+If set to `true` the chart will round the first and last date to the nearest base unit.
+
+The `roundToBaseUnit` option will be ignored if [series.type](#configuration-series.type) is set to "bar", "column", "ohlc" or "candlestick".
+
+### navigator.categoryAxis.title `Object`
+
+The title configuration of the category axis.
+
+> The [categoryAxis.title.text](#configuration-categoryAxis.title.text) option must be set in order to display the title.
+
+
+### navigator.categoryAxis.title.background `String`
+
+The background color of the title. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.title.border `Object`
+
+The border of the title.
+
+### navigator.categoryAxis.title.border.color `String` *(default: "black")*
+
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.title.border.dashType `String` *(default: "solid")*
+
+The dash type of the border.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+### navigator.categoryAxis.title.border.width `Number` *(default: 0)*
+
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+### navigator.categoryAxis.title.color `String`
+
+The text color of the title. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.title.font `String` *(default: "16px Arial,Helvetica,sans-serif")*
+
+The font style of the title.
+
+### navigator.categoryAxis.title.margin `Number|Object` *(default: 5)*
+
+The margin of the title. A numeric value will set all margins.
+
+### navigator.categoryAxis.title.margin.bottom `Number` *(default: 0)*
+
+The bottom margin of the title.
+
+### navigator.categoryAxis.title.margin.left `Number` *(default: 0)*
+
+The left margin of the title.
+
+### navigator.categoryAxis.title.margin.right `Number` *(default: 0)*
+
+The right margin of the title.
+
+### navigator.categoryAxis.title.margin.top `Number` *(default: 0)*
+
+The top margin of the title.
+
+### navigator.categoryAxis.title.padding `Number|Object` *(default: 0)*
+
+The padding of the title. A numeric value will set all paddings.
+
+### navigator.categoryAxis.title.padding.bottom `Number` *(default: 0)*
+
+The bottom padding of the title.
+
+### navigator.categoryAxis.title.padding.left `Number` *(default: 0)*
+
+The left padding of the title.
+
+### navigator.categoryAxis.title.padding.right `Number` *(default: 0)*
+
+The right padding of the title.
+
+### navigator.categoryAxis.title.padding.top `Number` *(default: 0)*
+
+The top padding of the title.
+
+### navigator.categoryAxis.title.position `String` *(default: "center")*
+
+The position of the title.
+
+The supported values are:
+
+* "top" - the axis title is positioned on the top (applicable to vertical axis)
+* "bottom" - the axis title is positioned on the bottom (applicable to vertical axis)
+* "left" - the axis title is positioned on the left (applicable to horizontal axis)
+* "right" - the axis title is positioned on the right (applicable to horizontal axis)
+* "center" - the axis title is positioned in the center
+
+### navigator.categoryAxis.title.rotation `Number` *(default: 0)*
+
+The rotation angle of the title. By default the title is not rotated.
+
+### navigator.categoryAxis.title.text `String`
+
+The text of the title.
+
+### navigator.categoryAxis.title.visible `Boolean` *(default: true)*
+
+If set to `true` the chart will display the category axis title. By default the category axis title is visible.
+
+### navigator.categoryAxis.visible `Boolean` *(default: true)*
+
+If set to `true` the chart will display the category axis. By default the category axis is visible.
+
+### navigator.categoryAxis.weekStartDay `Number` *(default: kendo.days.Sunday)*
+
+The week start day when [categoryAxis.baseUnit](#configuration-categoryAxis.baseUnit) is set to "weeks".
+
+The supported values are:
+
+* kendo.days.Sunday - equal to 0
+* kendo.days.Monday - equal to 1
+* kendo.days.Tuesday - equal to 2
+* kendo.days.Wednesday - equal to 3
+* kendo.days.Thursday - equal to 4
+* kendo.days.Friday - equal to 5
+* kendo.days.Saturday - equal to 6
+
+### navigator.categoryAxis.notes `Object`
+
+The category axis notes configuration.
+
+### navigator.categoryAxis.notes.icon `Object`
+
+The icon of the notes.
+
+### navigator.categoryAxis.notes.position `String`
+
+The position of the category axis note.
+
+* "top" - The note is positioned on the top.
+* "bottom" - The note is positioned on the bottom.
+* "left" - The note is positioned on the left.
+* "right" - The note is positioned on the right.
+
+### navigator.categoryAxis.notes.icon.background `String`
+
+The background color of the notes icon.
+
+### navigator.categoryAxis.notes.icon.border `Object`
+
+The border of the icon.
+
+### navigator.categoryAxis.notes.icon.border.color `String`
+
+The border color of the icon.
+
+### navigator.categoryAxis.notes.icon.border.width `Number`
+
+The border width of the icon.
+
+### navigator.categoryAxis.notes.icon.size `Number`
+
+The size of the icon.
+
+### navigator.categoryAxis.notes.icon.type `String` *(default: "circle")*
+
+The icon shape.
+
+The supported values are:
+* "circle" - the marker shape is circle.
+* "square" - the marker shape is square.
+* "triangle" - the marker shape is triangle.
+
+### navigator.categoryAxis.notes.icon.visible `Boolean` *(default: "true")*
+
+The icon visibility.
+
+### navigator.categoryAxis.notes.label `Object`
+
+The label of the notes.
+
+### navigator.categoryAxis.notes.label.background `String`
+
+The background color of the label. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.notes.label.border `Object`
+
+The border of the label.
+
+### navigator.categoryAxis.notes.label.border.color `String` *(default: "black")*
+
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.notes.label.border.dashType `String` *(default: "solid")*
+
+The dash type of the border.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+### navigator.categoryAxis.notes.label.border.width `Number` *(default: 0)*
+
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+### navigator.categoryAxis.notes.label.color `String`
+
+The text color of the label. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.notes.label.font `String` *(default: "12px Arial,Helvetica,sans-serif")*
+
+The font style of the label.
+
+### navigator.categoryAxis.notes.label.template `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which renders the labels.
+
+The fields which can be used in the template are:
+
+* value - the category value
+
+### navigator.categoryAxis.notes.label.visible `Boolean` *(default: true)*
+
+If set to `true` the chart will display the category notes label. By default the category notes label are visible.
+
+### navigator.categoryAxis.notes.label.rotation `Number` *(default: 0)*
+
+The rotation angle of the label. By default the label are not rotated.
+
+### navigator.categoryAxis.notes.label.format `String` *(default: "{0}")*
+
+The format used to display the notes label. Uses [kendo.format](/api/framework/kendo#methods-format). Contains one placeholder ("{0}") which represents the category value.
+
+### navigator.categoryAxis.notes.label.position `String` *(default: "inside")*
+
+The position of the labels.
+
+* "inside" - the label is positioned inside of the icon.
+* "outside" - the label is positioned outside of the icon.
+
+### navigator.categoryAxis.notes.line `Object`
+
+The line of the notes.
+
+### navigator.categoryAxis.notes.line.width `Number`
+
+The line width of the notes.
+
+### navigator.categoryAxis.notes.line.color `String`
+
+The line color of the notes.
+
+### navigator.categoryAxis.notes.line.length `Number`
+
+The line length of the notes.
+
+### navigator.categoryAxis.notes.data `Array`
+
+The items of the notes.
+
+### navigator.categoryAxis.notes.data.value `Object`
+
+The value of the note.
+
+### navigator.categoryAxis.notes.data.position `String` *(default: "inside")*
+
+The position of the category axis note.
+
+* "top" - The note is positioned on the top.
+* "bottom" - The note is positioned on the bottom.
+* "left" - The note is positioned on the left.
+* "right" - The note is positioned on the right.
+
+### navigator.categoryAxis.notes.data.icon `Object`
+
+The icon of the note.
+
+### navigator.categoryAxis.notes.data.icon.background `String`
+
+The background color of the note icon.
+
+### navigator.categoryAxis.notes.data.icon.border `Object`
+
+The border of the icon.
+
+### navigator.categoryAxis.notes.data.icon.border.color `String`
+
+The border color of the icon.
+
+### navigator.categoryAxis.notes.data.icon.border.width `Number`
+
+The border width of the icon.
+
+### navigator.categoryAxis.notes.data.icon.size `Number`
+
+The size of the icon.
+
+### navigator.categoryAxis.notes.data.icon.type `String` *(default: "circle")*
+
+The icon shape.
+
+The supported values are:
+* "circle" - the marker shape is circle.
+* "square" - the marker shape is square.
+* "triangle" - the marker shape is triangle.
+
+### navigator.categoryAxis.notes.data.icon.visible `Boolean` *(default: "true")*
+
+The icon visibility.
+
+### navigator.categoryAxis.notes.data.label `Object`
+
+The label of the note.
+
+### navigator.categoryAxis.notes.data.label.background `String`
+
+The background color of the label. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.notes.data.label.border `Object`
+
+The border of the label.
+
+### navigator.categoryAxis.notes.data.label.border.color `String` *(default: "black")*
+
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.notes.data.label.border.dashType `String` *(default: "solid")*
+
+The dash type of the border.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+### navigator.categoryAxis.notes.data.label.border.width `Number` *(default: 0)*
+
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+### navigator.categoryAxis.notes.data.label.color `String`
+
+The text color of the note label. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.categoryAxis.notes.data.label.font `String` *(default: "12px Arial,Helvetica,sans-serif")*
+
+The font style of the note label.
+
+### navigator.categoryAxis.notes.data.label.template `String|Function`
+
+The [template](/api/framework/kendo#methods-template) which renders the labels.
+
+The fields which can be used in the template are:
+
+* value - the category value
+
+### navigator.categoryAxis.notes.data.label.visible `Boolean` *(default: true)*
+
+If set to `true` the chart will display the category notes label. By default the category notes label are visible.
+
+### navigator.categoryAxis.notes.data.label.rotation `Number` *(default: 0)*
+
+The rotation angle of the label. By default the label are not rotated.
+
+### navigator.categoryAxis.notes.data.label.format `String` *(default: "{0}")*
+
+The format used to display the note label. Uses [kendo.format](/api/framework/kendo#methods-format). Contains one placeholder ("{0}") which represents the category value.
+
+### navigator.categoryAxis.notes.data.label.text `String`
+
+The label note text.
+
+### navigator.categoryAxis.notes.data.label.position `String` *(default: "inside")*
+
+The position of the category axis note label.
+
+* "inside" - the label is positioned inside of the icon.
+* "outside" - the label is positioned outside of the icon.
+
+### navigator.categoryAxis.notes.data.line `Object`
+
+The line of the note.
+
+### navigator.categoryAxis.notes.data.line.width `Number`
+
+The line width of the note.
+
+### navigator.categoryAxis.notes.data.line.color `String`
+
+The line color of the note.
+
+### navigator.categoryAxis.notes.data.line.length `Number`
+
+The line length of the note.
+
 ### navigator.dataSource `Object`
 
 Navigator DataSource configuration or instance.

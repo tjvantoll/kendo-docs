@@ -45,6 +45,18 @@ The visibility of the navigator.
 
 ##  Configuration JSP Tags
 
+### kendo:stockChart-navigator-categoryAxis
+
+The category axis configuration options.
+
+More documentation is available at [kendo:stockChart-navigator-categoryAxis](stockchart/navigator-categoryaxis).
+
+#### Example
+
+    <kendo:stockChart-navigator>
+        <kendo:stockChart-navigator-categoryAxis></kendo:stockChart-navigator-categoryAxis>
+    </kendo:stockChart-navigator>
+
 ### kendo:stockChart-navigator-hint
 
 Default options for the navigator hint.

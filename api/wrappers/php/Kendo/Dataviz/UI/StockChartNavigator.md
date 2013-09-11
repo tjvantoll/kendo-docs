@@ -31,6 +31,44 @@ Applicable only when using a dedicated navigator data source.
     $navigator->autoBind(true);
     ?>
 
+### addCategoryAxisItem
+
+Adds one or more StockChartNavigatorCategoryAxisItem to the StockChartNavigator.
+
+#### Returns
+`\Kendo\Dataviz\UI\StockChartNavigator`
+
+#### Parameters
+
+##### $value[, $value2, ...] `\Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItem|array`
+
+#### Example - using \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItem
+
+    <?php
+    $navigator = new \Kendo\Dataviz\UI\StockChartNavigator();
+    $categoryAxisItem = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItem();
+    $baseUnit = 'value';
+    $categoryAxisItem->baseUnit($baseUnit);
+    $navigator->addCategoryAxisItem($categoryAxisItem);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $navigator = new \Kendo\Dataviz\UI\StockChartNavigator();
+    $baseUnit = 'value';
+    $navigator->addCategoryAxisItem(array('baseUnit' => $baseUnit));
+    ?>
+
+#### Example - adding more than one StockChartNavigatorCategoryAxisItem
+
+    <?php
+    $navigator = new \Kendo\Dataviz\UI\StockChartNavigator();
+    $first  = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItem();
+    $second = new \Kendo\Dataviz\UI\StockChartNavigatorCategoryAxisItem();
+    $navigator->addCategoryAxisItem($first, $second);
+    ?>
+
 ### dataSource
 
 Sets the data source of the dataSource.
