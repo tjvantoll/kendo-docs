@@ -11,7 +11,7 @@ The Kendo UI for ASP.NET MVC Visual Studio Extensions enhance the experience of 
 -   **Project Creation and Configuration Wizards** - web asset management, adding the required settings to web.config, changing the theme.
 -   **Project Upgrade** - upgrading Kendo UI for ASP.NET MVC to a new version.
 
-The Kendo UI for ASP.NET MVC Visual Studio Extensions are distributed with the Kendo UI for ASP.NET MVC installer. They support Visual Studio 2010 and Visual Studio 2012, handling ASP.NET MVC 3 and ASP.NET MVC 4 applications.
+The Kendo UI for ASP.NET MVC Visual Studio Extensions are distributed with the Kendo UI for ASP.NET MVC installer. They support Visual Studio 2010 and Visual Studio 2012, handling ASP.NET MVC 3 and ASP.NET MVC 4 applications. **Visual Studio Express editions are not supported.**
 
 The Visual Studio Extensions can be accessed through the **Telerik | Kendo UI for ASP.NET MVC** menu which has different menu items depending on the selected project in Visual Studio.  Additionally, the extensions can be accessed through the Solution Explorer context menu of any supported ASP.NET MVC Web Application project.
 
