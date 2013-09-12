@@ -103,18 +103,18 @@ Currently the Kendo UI widgets send numbers with "." as a decimal separator. Thi
                 ModelState modelState = new ModelState { Value = valueResult };
                 object actualValue = null;
 
-                if (valueResult != null)
+                if (valueResult != null && valueResult.AttemptedValue != String.Empty)
                 {
                     try
                     {
-                        actualValue = Convert.ChangeType(valueResult.AttemptedValue, typeof(T), System.Globalization.CultureInfo.InvariantCulture);
+                        actualValue = Convert.ChangeType(valueResult.AttemptedValue.Replace(",","."), typeof(T), System.Globalization.CultureInfo.InvariantCulture);
                     }
                     catch (FormatException e)
                     {
                         modelState.Errors.Add(e);
                     }
 
-                    bindingContext.ModelState.Add(bindingContext.ModelName, modelState);
+                    bindingContext.ModelState[bindingContext.ModelName] = modelState;
                 }
 
                 return actualValue;
