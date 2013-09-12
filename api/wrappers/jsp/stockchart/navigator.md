@@ -69,6 +69,18 @@ More documentation is available at [kendo:stockChart-navigator-hint](stockchart/
         <kendo:stockChart-navigator-hint></kendo:stockChart-navigator-hint>
     </kendo:stockChart-navigator>
 
+### kendo:stockChart-navigator-pane
+
+The navigator pane configuration.
+
+More documentation is available at [kendo:stockChart-navigator-pane](stockchart/navigator-pane).
+
+#### Example
+
+    <kendo:stockChart-navigator>
+        <kendo:stockChart-navigator-pane></kendo:stockChart-navigator-pane>
+    </kendo:stockChart-navigator>
+
 ### kendo:stockChart-navigator-select
 
 Specifies the initially selected range.The full range of values is shown if no range is specified.

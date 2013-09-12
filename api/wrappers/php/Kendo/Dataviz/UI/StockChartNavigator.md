@@ -144,6 +144,35 @@ Default options for the navigator hint.
     $navigator->hint(array('format' => $format));
     ?>
 
+### pane
+
+The navigator pane configuration.
+
+#### Returns
+`\Kendo\Dataviz\UI\StockChartNavigator`
+
+#### Parameters
+
+##### $value `\Kendo\Dataviz\UI\StockChartNavigatorPane|array`
+
+
+#### Example - using [\Kendo\Dataviz\UI\StockChartNavigatorPane](/api/wrappers/php/Kendo/Dataviz/UI/StockChartNavigatorPane)
+    <?php
+    $navigator = new \Kendo\Dataviz\UI\StockChartNavigator();
+    $pane = new \Kendo\Dataviz\UI\StockChartNavigatorPane();
+    $background = 'value';
+    $pane->background($background);
+    $navigator->pane($pane);
+    ?>
+
+#### Example - using array
+
+    <?php
+    $navigator = new \Kendo\Dataviz\UI\StockChartNavigator();
+    $background = 'value';
+    $navigator->pane(array('background' => $background));
+    ?>
+
 ### select
 
 Specifies the initially selected range.The full range of values is shown if no range is specified.
