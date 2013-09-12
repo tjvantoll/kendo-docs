@@ -1027,6 +1027,170 @@ The data item field value must be either:
 
 ####* String in ASP.NET JSON format, i.e. "\/Date(1320825600000-0800)\/"
 
+### navigator.pane `Object`
+
+The navigator pane configuration.
+
+### navigator.pane.background `String`
+
+The background color of the pane. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.pane.border `Object`
+
+The border of the navigator pane.
+
+### navigator.pane.border.color `String` *(default: "black")*
+
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.pane.border.dashType `String` *(default: "solid")*
+
+The dash type of the border.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+### navigator.pane.border.width `Number` *(default: 0)*
+
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+### navigator.pane.height `Number`
+
+The navigator pane height in pixels.
+
+### navigator.pane.margin `Number|Object` *(default: 0)*
+
+The margin of the pane. A numeric value will set all margins.
+
+### navigator.pane.margin.bottom `Number` *(default: 0)*
+
+The bottom margin of the navigator pane.
+
+### navigator.pane.margin.left `Number` *(default: 0)*
+
+The left margin of the navigator pane.
+
+### navigator.pane.margin.right `Number` *(default: 0)*
+
+The right margin of the navigator pane.
+
+### navigator.pane.margin.top `Number` *(default: 0)*
+
+The top margin of the navigator pane.
+
+### navigator.pane.name `String`
+
+The unique name of the navigator pane.
+
+### navigator.pane.padding `Number|Object` *(default: 0)*
+
+The padding of the pane. A numeric value will set all paddings.
+
+### navigator.pane.padding.bottom `Number` *(default: 0)*
+
+The bottom padding of the navigator pane.
+
+### navigator.pane.padding.left `Number` *(default: 0)*
+
+The left padding of the navigator pane.
+
+### navigator.pane.padding.right `Number` *(default: 0)*
+
+The right padding of the navigator pane.
+
+### navigator.pane.padding.top `Number` *(default: 0)*
+
+The top padding of the navigator pane.
+
+### navigator.pane.title `String|Object`
+
+The title configuration of the navigator pane.
+
+> The [panes.title.text](#configuration-panes.title.text) option must be set in order to display the title.
+
+### navigator.pane.title.background `String`
+
+The background color of the title. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.pane.title.border `Object`
+
+The border of the title.
+
+### navigator.pane.title.border.color `String` *(default: "black")*
+
+The color of the border. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.pane.title.border.dashType `String` *(default: "solid")*
+
+The dash type of the border.
+
+The following dash types are supported:
+
+* "dash" - a line consisting of dashes
+* "dashDot" - a line consisting of a repeating pattern of dash-dot
+* "dot" - a line consisting of dots
+* "longDash" - a line consisting of a repeating pattern of long-dash
+* "longDashDot" - a line consisting of a repeating pattern of long-dash-dot
+* "longDashDotDot" - a line consisting of a repeating pattern of long-dash-dot-dot
+* "solid" - a solid line
+
+### navigator.pane.title.border.width `Number` *(default: 0)*
+
+The width of the border in pixels. By default the border width is set to zero which means that the border will not appear.
+
+### navigator.pane.title.color `String`
+
+The text color of the title. Accepts a valid CSS color string, including hex and rgb.
+
+### navigator.pane.title.font `String` *(default: "16px Arial,Helvetica,sans-serif")*
+
+The font style of the title.
+
+### navigator.pane.title.margin `Number|Object` *(default: 5)*
+
+The margin of the title. A numeric value will set all margins.
+
+### navigator.pane.title.margin.bottom `Number` *(default: 0)*
+
+The bottom margin of the title.
+
+### navigator.pane.title.margin.left `Number` *(default: 0)*
+
+The left margin of the title.
+
+### navigator.pane.title.margin.right `Number` *(default: 0)*
+
+The right margin of the title.
+
+### navigator.pane.title.margin.top `Number` *(default: 0)*
+
+The top margin of the title.
+
+### navigator.pane.title.position `String` *(default: "center")*
+
+The position of the title.
+
+The supported values are:
+
+* "left" - the axis title is positioned on the left (applicable to horizontal axis)
+* "right" - the axis title is positioned on the right (applicable to horizontal axis)
+* "center" - the axis title is positioned in the center
+
+### navigator.pane.title.text `String`
+
+The text of the title.
+
+### navigator.pane.title.visible `Boolean` *(default: true)*
+
+If set to `true` the chart will display the pane title. By default the pane title is visible.
+
 ### navigator.series `Array`
 
 Array of series definitions.
