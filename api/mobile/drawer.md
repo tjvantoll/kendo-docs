@@ -72,7 +72,7 @@ Prepares the **Drawer** for safe removal from DOM. Detaches all event handlers a
 
     <div data-role="view" id="drawer-settings">
         <h1>Settings</h1>
-        <a data-click="destroyDrawer">Destroy Drawer</a>
+        <a data-role="button" data-click="destroyDrawer">Destroy Drawer</a>
     </div>
 
     <div data-role="drawer" id="my-drawer">
