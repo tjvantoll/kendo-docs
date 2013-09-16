@@ -183,6 +183,35 @@ Enabling scrolling does not guarantee that scrollbars will appear. This is becau
 
 Scenarios 1. and 2. can be controlled independently.
 
+When enabled, scrolling causes the Grid to render **two** tables - one for the header area and one for the scrollable data area.
+This may need to be taken into account when making some manual Javascript or CSS manipulations to the Grid tables.
+
+	<div class="k-widget k-grid">
+		<div class="k-grid-header">
+			<div class="k-grid-header-wrap">
+				<table>...</table>
+			</div>
+		</div>
+		<div class="k-grid-content">
+			<table>...</table>
+		</div>
+	</div>
+
+When virtual scrolling is used, the HTML output is a little different:
+
+	<div class="k-widget k-grid">
+		<div class="k-grid-header">
+			<div class="k-grid-header-wrap">
+				<table>...</table>
+			</div>
+		</div>
+		<div class="k-grid-content">
+			<div class="k-virtual-scrollable-wrap">
+				<table>...</table>
+			</div>
+		</div>
+	</div>
+
 #### Disable scrolling in the grid
 
     $("#grid").kendoGrid({
@@ -200,7 +229,7 @@ Virtual Scrolling will load in data from the remote data source as you scroll do
         },
         // other configuration
     });
-
+	
 > Using virtual scrolling together with grouping, hierarchy, batch editing and inline editing is not recommended.
 The feature relies on calculating average row height, based on already loaded data, so having a large variance of row heights may cause unexpected behavior.
 	
