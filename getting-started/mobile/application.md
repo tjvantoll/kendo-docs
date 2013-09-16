@@ -291,3 +291,30 @@ adding the tag through Javascript is ignored:
 ### Stop link highlighting in WP8
 
     <meta name="msapplication-tap-highlight" content="no" />
+
+### Using Kendo UI Mobile in ASP.NET WebForms project
+
+In order to use Kendo UI Mobile in ASP.NET WebForms project you should:
+
+- set the form element as mobile application container
+- stretch the form element to 100% height and remove the body margin and padding
+
+Example:
+
+    <form id="mobileContainer" runat="server">
+        <div data-role="view">
+            kendo mobile view
+        </div>
+        <script>
+            //set the form element as mobile application container
+            new kendo.mobile.Application($("#mobileContainer"));
+        </script>
+    </form>
+    <style>
+        /* stretch the form element */
+        html, body, #mobileContainer { height: 100%; }
+        /* remove margin and padding */
+        body { margin: 0; padding: 0; }
+    </style>
+
+> Note that KendoUI Mobile application is a type of [single page application](http://en.wikipedia.org/wiki/Single-page_application). This type of web applications fit on a single page with the goal of providing a more fluid user experience and native-like responsiveness. Forms post-backs which cause page reloading are in conflict with that approach. That said forms post-backs that the .NET framework makes automatically should be avoided - in the mobile application all the dynamic content should be sent or retrieved via Ajax requests.
