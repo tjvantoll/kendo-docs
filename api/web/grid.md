@@ -5449,10 +5449,14 @@ The widget instance which fired the event.
         if (e.field == "name") {
           var firstValueDropDown = e.container.find("select:eq(0)").data("kendoDropDownList");
           firstValueDropDown.value("contains");
+          firstValueDropDown.trigger("change");
+
           var logicDropDown = e.container.find("select:eq(1)").data("kendoDropDownList");
           logicDropDown.value("or");
+
           var secondValueDropDown = e.container.find("select:eq(2)").data("kendoDropDownList");
           secondValueDropDown.value("contains");
+          secondValueDropDown.trigger("change");
         }
       }
     });
