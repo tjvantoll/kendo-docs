@@ -322,3 +322,21 @@ The function context of the event handler (available via the `this` keyword) is 
     scheduler.bind("edit", scheduler_edit);
     </script>
 
+## Printing
+
+The Scheduler may be scrollable when displayed on a web page, but it should not be scrollable during printing.
+The following CSS code will ensure that the widget expands and displays all events in the current view during printing:
+
+	@media print {
+	   .k-scheduler,
+	   .k-scheduler-content,
+	   .k-scheduler-times
+	   {
+		  height: auto !important;
+	   }
+
+	   .k-scheduler-content
+	   {
+		  overflow-y: scroll !important;
+	   }
+	}
