@@ -15972,6 +15972,46 @@ The following dash types are supported:
     });
     </script>
 
+### valueAxis.minorGridLines.step `Number` *(default: 1)*
+
+The step of the value axis minor grid lines.
+
+#### Example - set the value axis minor grid lines step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        minorGridLines: {
+          step: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### valueAxis.minorGridLines.skip `Number` *(default: 0)*
+
+The skip of the value axis minor grid lines.
+
+#### Example - set the value axis minor grid lines skip
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        minorGridLines: {
+          skip: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
 ### valueAxis.majorTicks `Object`
 
 The configuration of the value axis major ticks.
@@ -20063,6 +20103,46 @@ The width of the line in pixels. Also affects the major and minor ticks, but not
     });
     </script>
 
+### xAxis.majorGridLines.step `Number` *(default: 1)*
+
+The step of the x axis major grid lines.
+
+#### Example - set the x axis major grid lines step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        majorGridLines: {
+          step: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### xAxis.majorGridLines.skip `Number` *(default: 0)*
+
+The skip of the x axis major grid lines.
+
+#### Example - set the x axis major grid lines skip
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        majorGridLines: {
+          skip: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
 ### xAxis.minorGridLines `Object`
 
 The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
@@ -20213,6 +20293,227 @@ The width of the category axis minor grid lines in pixels.
     });
     </script>
 
+### xAxis.minorGridLines.step `Number` *(default: 1)*
+
+The step of the x axis minor grid lines.
+
+#### Example - set the x axis minor grid lines step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        minorGridLines: {
+          step: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### xAxis.minorGridLines.skip `Number` *(default: 0)*
+
+The skip of the x axis minor grid lines.
+
+#### Example - set the x axis minor grid lines skip
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      categoryAxis: [{
+        minorGridLines: {
+          skip: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### xAxis.minorTicks `Object`
+
+The configuration of the x axis minor ticks.
+
+#### Example - configure the x axis minor ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        minorTicks: {
+          size: 6,
+          color: "green",
+          width: 5,
+          visible: true
+        }
+      }],
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### xAxis.minorTicks.color `String` *(default: "black")*
+
+The color of the x axis minor ticks lines. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the x axis minor ticks color as a hex string
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: {
+        minorTicks {
+          color: "#aa00bb",
+          visible: true
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+#### Example - set the x axis minor ticks color as a RGB value
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: {
+        minorTicks {
+          color: "rgb(128, 0, 255)",
+          visible: true
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+#### Example - set the x axis minor ticks color by name
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: {
+        minorTicks {
+          color: "green",
+          visible: true
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### xAxis.minorTicks.size `Number` *(default: 4)*
+
+The length of the tick line in pixels.
+
+#### Example - set the x axis minor ticks size
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        minorTicks: {
+          size: 6,
+          visible: true
+        }
+      }],
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### xAxis.minorTicks.visible `Boolean` *(default: false)*
+
+If set to `true` the chart will display the x axis minor ticks. By default the x axis minor ticks are not visible.
+
+#### Example - hide the x axis minor ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        minorTicks: {
+          visible: false
+        }
+      }],
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### xAxis.minorTicks.width `Number` *(default: 1)*
+
+The width of the minor ticks in pixels.
+
+#### Example - set the x axis minor ticks width
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        minorTicks: {
+          width: 3
+        }
+      }],
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### xAxis.minorTicks.step `Number` *(default: 1)*
+
+The step of the x axis minor ticks.
+
+#### Example - set the x axis minor ticks step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        minorTicks: {
+          step: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### xAxis.minorTicks.skip `Number` *(default: 0)*
+
+The skip of the x axis minor ticks.
+
+#### Example - set the x axis minor ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        minorTicks: {
+          skip: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
 ### xAxis.majorTicks `Object`
 
 The configuration of the scatter chart x axis major ticks.
@@ -20351,6 +20652,48 @@ The width of the major ticks in pixels.
           width: 3
         }
       }
+    });
+    </script>
+
+### xAxis.majorTicks.step `Number` *(default: 1)*
+
+The step of the x axis major ticks.
+
+#### Example - set the x axis major ticks step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        majorTicks: {
+          step: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### xAxis.majorTicks.skip `Number` *(default: 0)*
+
+The skip of the x axis major ticks.
+
+#### Example - set the x axis major ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        majorTicks: {
+          skip: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -24224,6 +24567,46 @@ The width of the line in pixels. Also affects the major and minor ticks, but not
     });
     </script>
 
+### yAxis.majorGridLines.step `Number` *(default: 1)*
+
+The step of the y axis major grid lines.
+
+#### Example - set the y axis major grid lines step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: [{
+        majorGridLines: {
+          step: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### yAxis.majorGridLines.skip `Number` *(default: 0)*
+
+The skip of the y axis major grid lines.
+
+#### Example - set the y axis major grid lines skip
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: [{
+        majorGridLines: {
+          skip: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
 ### yAxis.minorGridLines `Object`
 
 The configuration of the minor grid lines. These are the lines that are an extension of the minor ticks through the
@@ -24374,6 +24757,227 @@ The width of the category axis minor grid lines in pixels.
     });
     </script>
 
+### yAxis.minorGridLines.step `Number` *(default: 1)*
+
+The step of the y axis minor grid lines.
+
+#### Example - set the y axis minor grid lines step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: [{
+        minorGridLines: {
+          step: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### yAxis.minorGridLines.skip `Number` *(default: 0)*
+
+The skip of the y axis minor grid lines.
+
+#### Example - set the y axis minor grid lines skip
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: [{
+        minorGridLines: {
+          skip: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### yAxis.minorTicks `Object`
+
+The configuration of the y axis minor ticks.
+
+#### Example - configure the y axis minor ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: [{
+        minorTicks: {
+          size: 6,
+          color: "green",
+          width: 5,
+          visible: true
+        }
+      }],
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### yAxis.minorTicks.color `String` *(default: "black")*
+
+The color of the y axis minor ticks lines. Accepts a valid CSS color string, including hex and rgb.
+
+#### Example - set the y axis minor ticks color as a hex string
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: {
+        minorTicks {
+          color: "#aa00bb",
+          visible: true
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+#### Example - set the y axis minor ticks color as a RGB value
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: {
+        minorTicks {
+          color: "rgb(128, 0, 255)",
+          visible: true
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+#### Example - set the y axis minor ticks color by name
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: {
+        minorTicks {
+          color: "green",
+          visible: true
+        }
+      },
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### yAxis.minorTicks.size `Number` *(default: 4)*
+
+The length of the tick line in pixels.
+
+#### Example - set the y axis minor ticks size
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: [{
+        minorTicks: {
+          size: 6,
+          visible: true
+        }
+      }],
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### yAxis.minorTicks.visible `Boolean` *(default: false)*
+
+If set to `true` the chart will display the y axis minor ticks. By default the y axis minor ticks are not visible.
+
+#### Example - hide the y axis minor ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: [{
+        minorTicks: {
+          visible: false
+        }
+      }],
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### yAxis.minorTicks.width `Number` *(default: 1)*
+
+The width of the minor ticks in pixels.
+
+#### Example - set the y axis minor ticks width
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: [{
+        minorTicks: {
+          width: 3
+        }
+      }],
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### yAxis.minorTicks.step `Number` *(default: 1)*
+
+The step of the y axis minor ticks.
+
+#### Example - set the y axis minor ticks step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: [{
+        minorTicks: {
+          step: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### yAxis.minorTicks.skip `Number` *(default: 0)*
+
+The skip of the y axis minor ticks.
+
+#### Example - set the y axis minor ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: [{
+        minorTicks: {
+          skip: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
 ### yAxis.majorTicks `Object`
 
 The configuration of the scatter chart y axis major ticks.
@@ -24512,6 +25116,48 @@ The width of the major ticks in pixels.
           width: 3
         }
       }
+    });
+    </script>
+
+### yAxis.majorTicks.step `Number` *(default: 1)*
+
+The step of the y axis major ticks.
+
+#### Example - set the y axis major ticks step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      yAxis: [{
+        majorTicks: {
+          step: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### yAxis.majorTicks.skip `Number` *(default: 0)*
+
+The skip of the y axis major ticks.
+
+#### Example - set the y axis major ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      xAxis: [{
+        majorTicks: {
+          skip: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
