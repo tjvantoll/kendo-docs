@@ -16184,6 +16184,79 @@ The following dash types are supported:
     });
     </script>
 
+
+### valueAxis.minorGridLines.type `String`
+
+The type of grid lines to draw for radar charts:
+
+* "line" - draws straight lines.
+* "arc" - draws arcs.
+
+The default type is "line" except for "radarColumn" charts.
+
+#### Example - show arcs for both major and minor gridlines
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        minorGridLines: {
+          type: "arc",
+          visible: true
+        },
+        majorGridLines: {
+          type: "arc"
+        }
+      }],
+      series: [
+        {
+          type: "radarLine",
+          data: [1, 2, 3]
+        }
+      ]
+    });
+    </script>
+
+### valueAxis.minorGridLines.visible `Boolean` *(default: false)*
+
+If set to `true` the chart will display the minor grid lines. By default the minor grid lines are visible.
+
+#### Example - hide the value axis minor grid lines
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        minorGridLines: {
+          visible: false
+        }
+      }],
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
+### valueAxis.minorGridLines.width `Number` *(default: 1)*
+
+The width of the value axis minor grid lines in pixels.
+
+#### Example - set the value axis minor grid lines width
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        minorGridLines: {
+          width: 3
+        }
+      }],
+      series: [
+        { data: [1, 2, 3] }
+      ]
+    });
+    </script>
+
 ### valueAxis.minorGridLines.step `Number` *(default: 1)*
 
 The step of the value axis minor grid lines.
@@ -16196,7 +16269,8 @@ The step of the value axis minor grid lines.
       valueAxis: [{
         minorGridLines: {
           step: 2
-        }
+        },
+        categories: ["2011", "2012", "2013"]
       }],
       series: [{
         data: [1, 2, 3]
@@ -16216,7 +16290,8 @@ The skip of the value axis minor grid lines.
       valueAxis: [{
         minorGridLines: {
           skip: 2
-        }
+        },
+        categories: ["2011", "2012", "2013"]
       }],
       series: [{
         data: [1, 2, 3]
@@ -16354,120 +16429,6 @@ The skip of the value axis major ticks.
     $("#chart").kendoChart({
       valueAxis: [{
         majorTicks: {
-          skip: 2
-        },
-        categories: ["2011", "2012", "2013"]
-      }],
-      series: [{
-        data: [1, 2, 3]
-      }]
-    });
-    </script>
-
-### valueAxis.minorGridLines.type `String`
-
-The type of grid lines to draw for radar charts:
-
-* "line" - draws straight lines.
-* "arc" - draws arcs.
-
-The default type is "line" except for "radarColumn" charts.
-
-#### Example - show arcs for both major and minor gridlines
-
-    <div id="chart"></div>
-    <script>
-    $("#chart").kendoChart({
-      valueAxis: [{
-        minorGridLines: {
-          type: "arc",
-          visible: true
-        },
-        majorGridLines: {
-          type: "arc"
-        }
-      }],
-      series: [
-        {
-          type: "radarLine",
-          data: [1, 2, 3]
-        }
-      ]
-    });
-    </script>
-
-### valueAxis.minorGridLines.visible `Boolean` *(default: false)*
-
-If set to `true` the chart will display the minor grid lines. By default the minor grid lines are visible.
-
-#### Example - hide the value axis minor grid lines
-
-    <div id="chart"></div>
-    <script>
-    $("#chart").kendoChart({
-      valueAxis: [{
-        minorGridLines: {
-          visible: false
-        }
-      }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
-    });
-    </script>
-
-### valueAxis.minorGridLines.width `Number` *(default: 1)*
-
-The width of the value axis minor grid lines in pixels.
-
-#### Example - set the value axis minor grid lines width
-
-    <div id="chart"></div>
-    <script>
-    $("#chart").kendoChart({
-      valueAxis: [{
-        minorGridLines: {
-          width: 3
-        }
-      }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
-    });
-    </script>
-
-### valueAxis.minorGridLines.step `Number` *(default: 1)*
-
-The step of the value axis minor grid lines.
-
-#### Example - set the value axis minor grid lines step
-
-    <div id="chart"></div>
-    <script>
-    $("#chart").kendoChart({
-      valueAxis: [{
-        minorGridLines: {
-          step: 2
-        },
-        categories: ["2011", "2012", "2013"]
-      }],
-      series: [{
-        data: [1, 2, 3]
-      }]
-    });
-    </script>
-
-### valueAxis.minorGridLines.skip `Number` *(default: 0)*
-
-The skip of the value axis minor grid lines.
-
-#### Example - set the value axis minor grid lines skip
-
-    <div id="chart"></div>
-    <script>
-    $("#chart").kendoChart({
-      valueAxis: [{
-        minorGridLines: {
           skip: 2
         },
         categories: ["2011", "2012", "2013"]
