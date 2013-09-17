@@ -125,6 +125,23 @@ The skin to apply to the application. Currently, Kendo UI Mobile ships with a **
          });
     </script>
 
+### statusBarStyle `String` **(default: black)**
+
+Set the status bar style meta tag in iOS used to control the styling of the status bar in a pinned to the Home Screen app. Available as of Q2 2013 SP.
+
+> The default setting of "black" pushes down the content of the page, while the rest overlay it. To create seamless status bar in iOS7,
+check [Seamless Status Bar in iOS7](/getting-started/mobile/application#seamless-status-bar-in-ios7) section in Mobile Application's Getting Started page.
+
+#### Example
+
+    <div data-role="view" id="foo"><a data-role="button" href="#bar">Bar</a></div>
+
+    <script>
+        new kendo.mobile.Application($(document.body), {
+            statusBarStyle: "black"
+        });
+    </script>
+
 ### transition `String`
 
 The default View transition.

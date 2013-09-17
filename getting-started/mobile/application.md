@@ -239,6 +239,42 @@ As of Q2 2013, you can disable the app mode and open the home screen web clip li
          });
     </script>
 
+## Seamless Status Bar in iOS7
+
+iOS7 introduced application status bars that merge with your application, creating a more unified look. This can be achieved in a native application by setting UIStatusBarStyleLightContent style.
+However Apple didn't update the web clip status bar meta tag to support similar functionality, except that now black-translucent makes the status bar completely transparent with white icons.
+Knowing this, you can achieve the seamless status bar in Kendo UI Mobile starting from Q2 2013 SP, but only with darker backgrounds. For instance, this complete example will make a pink NavBar
+with seamless status bar on top of it:
+
+    <style scoped>
+        .km-on-ios .km-header .km-navbar
+        {
+            background-color: deeppink;
+        }
+
+        .km-on-ios .km-header .km-widget,
+        .km-on-ios .km-header .km-view-title
+        {
+            color: white;
+        }
+    </style>
+
+    <div data-role="view" data-title="Pink">
+        <header data-role="header">
+            <div data-role="navbar">
+                <div data-role="view-title"></div>
+            </div>
+        </header>
+        Hello world!
+    </div>
+
+    <script>
+        new kendo.mobile.Application($(document.body), {
+            statusBarStyle: "black-translucent"
+        });
+    </script>
+
+
 ## Place TabStrip at bottom in Android
 
 By default Android Kendo UI Mobile styling switches the places of the application header and footer. If TabStrip at bottom is preferred (as in iOS and BlackBerry) this behavior can be switched off with a simple CSS rule:
