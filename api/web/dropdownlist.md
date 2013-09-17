@@ -717,7 +717,7 @@ The search value.
 
 ### select
 
-Selects the item provided as an argument and updates the value and text of the widget.
+Gets or sets the selected item. Selects the item provided as an argument and updates the value and text of the widget.
 
 #### Parameters
 
