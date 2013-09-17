@@ -299,7 +299,7 @@ In order to use Kendo UI Mobile in ASP.NET WebForms project you should:
 - set the form element as mobile application container
 - stretch the form element to 100% height and remove the body margin and padding
 
-Example:
+### Example: Initialize mobile application in ASP.NET WebForms project
 
     <form id="mobileContainer" runat="server">
         <div data-role="view">
