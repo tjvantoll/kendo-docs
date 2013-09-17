@@ -520,35 +520,6 @@ The format string which should be used to format the value.
 ##### culture `String`
 The name of the culture which should be used to format the value. [The culture should be registered on the page](http://docs.kendoui.com/getting-started/framework/globalization/overview#add culture scripts to the page).
 
-### ui.progress
-
-Displays/removes a semi-transparent overlay and a loading image over/from a specified element on the page, with styling, which depends on the used theme.
-
-#### Parameters
-
-##### element `jQuery`
-
-The content container on the page, which will be overlaid. **The element must have a `position` style applied with one of the following values: `relative`, `absolute`, or `fixed`.**
-
-##### show `Boolean`
-
-The flag, which indicates whether to show or hide the loading overlay.
-
-#### Example
-
-	<div id="container" style="position:relative">...</div>
-	<script>
-
-		var ajaxContainer = $("#container");
-
-		// show loading overlay
-		kendo.ui.progress(ajaxContainer, true);
-
-		// hide loading overlay
-		kendo.ui.progress(ajaxContainer, false);
-
-	</script>
-
 ## Fields
 
 ### support

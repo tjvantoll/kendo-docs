@@ -43,14 +43,29 @@ The plugin function prefix, e.g. "Mobile" will register "kendoMobileFoo".
 
 ### progress
 
-Shows an overlay with a loading message, indicating that an action is in progress.
+Shows or hides a semi-transparent overlay with a loading image, with styling, which depends on the used theme.
 
 #### Parameters
 
-##### container `jQuery`
+##### element `jQuery`
 
-The container that will hold the overlay
+The container, which will be overlaid. **The element must have a `position` style applied with one of the following values: `relative`, `absolute`, or `fixed`.**
 
 ##### toggle `Boolean`
 
-Whether the overlay should be shown or hidden
+The flag, which indicates whether to show or hide the loading overlay.
+
+#### Example
+
+	<div id="container" style="position:relative">...</div>
+	<script>
+
+		var ajaxContainer = $("#container");
+
+		// show loading overlay
+		kendo.ui.progress(ajaxContainer, true);
+
+		// hide loading overlay
+		kendo.ui.progress(ajaxContainer, false);
+
+	</script>
