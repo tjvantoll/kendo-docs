@@ -1256,7 +1256,8 @@ The format used when [categoryAxis.baseUnit](#configuration-categoryAxis.baseUni
       categoryAxis: {
         categories: [
             new Date("2012/01/01"),
-            new Date("2012/01/02")
+            new Date("2012/01/02"),
+            new Date("2012/01/03")
         ],
         type: "date",
         baseUnit: "hours",
@@ -1283,7 +1284,8 @@ The format used when [categoryAxis.baseUnit](#configuration-categoryAxis.baseUni
       categoryAxis: {
         categories: [
             new Date("2012/01/01"),
-            new Date("2012/01/02")
+            new Date("2012/01/02"),
+            new Date("2012/01/03")
         ],
         type: "date",
         baseUnit: "months",
@@ -1310,7 +1312,8 @@ The format used when [categoryAxis.baseUnit](#configuration-categoryAxis.baseUni
       categoryAxis: {
         categories: [
             new Date("2012/01/01"),
-            new Date("2012/01/02")
+            new Date("2012/01/02"),
+            new Date("2012/01/03")
         ],
         type: "date",
         baseUnit: "weeks",
@@ -1337,7 +1340,8 @@ The format used when [categoryAxis.baseUnit](#configuration-categoryAxis.baseUni
       categoryAxis: {
         categories: [
             new Date("2012/01/01"),
-            new Date("2012/01/02")
+            new Date("2012/01/02"),
+            new Date("2012/01/03")
         ],
         type: "date",
         baseUnit: "years",
@@ -1366,11 +1370,11 @@ The font style of the labels.
         labels: {
            font: "20px sans-serif",
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1387,11 +1391,11 @@ The format used to display the labels. Uses [kendo.format](/api/framework/kendo#
         labels: {
           format: "Year: {0}"
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1408,11 +1412,11 @@ The margin of the labels. A numeric value will set all margins.
         labels: {
           margin: 20
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1431,11 +1435,11 @@ The bottom margin of the labels.
             bottom: 20
           }
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1454,11 +1458,11 @@ The left margin of the labels.
             left: 20
           }
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1477,11 +1481,11 @@ The right margin of the labels.
             right: 20
           }
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1500,11 +1504,11 @@ The top margin of the labels.
             top: 20
           }
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1521,11 +1525,11 @@ If set to `true` the chart will mirror the axis labels and ticks. If the labels 
         labels: {
           mirror: true
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1542,11 +1546,11 @@ The padding of the labels. A numeric value will set all paddings.
         labels: {
           padding: 20
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1565,11 +1569,11 @@ The bottom padding of the labels.
             bottom: 20
           }
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1588,11 +1592,11 @@ The left padding of the labels.
             left: 20
           }
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1611,11 +1615,11 @@ The right padding of the labels.
             right: 20
           }
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1634,11 +1638,11 @@ The top padding of the labels.
             top: 20
           }
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1655,11 +1659,11 @@ The rotation angle of the labels. By default the labels are not rotated.
         labels: {
           rotation: 90
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1676,11 +1680,11 @@ The number of labels to skip. By default no labels are skipped.
         labels: {
           skip: 1
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1698,9 +1702,9 @@ The label rendering step - render every n-th label. By default every label is re
         },
         categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1721,11 +1725,11 @@ The fields which can be used in the template are:
         labels: {
           template: "Year: #: value #"
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1738,11 +1742,11 @@ The fields which can be used in the template are:
         labels: {
           template: kendo.template("Year: #: value #")
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1759,11 +1763,11 @@ If set to `true` the chart will display the category axis labels. By default the
         labels: {
           visible: false
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1777,15 +1781,15 @@ The configuration of the axis lines. Also affects the major and minor ticks, but
     <script>
     $("#chart").kendoChart({
       categoryAxis: {
-        categories: [ "2012", "2013"],
         line: {
           color: "#aa00bb",
           width: 3
-        }
-      },
-      series: [
-        { data: [1, 2, 3] }
-      ]
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1801,14 +1805,14 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
     <script>
     $("#chart").kendoChart({
       categoryAxis: {
-        categories: [ "2012", "2013"],
         line: {
           color: "#aa00bb"
-        }
-      },
-      series: [
-        { data: [1, 2, 3] }
-      ]
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1818,14 +1822,14 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
     <script>
     $("#chart").kendoChart({
       categoryAxis: {
-        categories: [ "2012", "2013"],
         line: {
           color: "rgb(128, 0, 255)"
-        }
-      },
-      series: [
-        { data: [1, 2, 3] }
-      ]
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1835,14 +1839,14 @@ The color of the lines. Accepts a valid CSS color string, including hex and rgb.
     <script>
     $("#chart").kendoChart({
       categoryAxis: {
-        categories: [ "2012", "2013"],
         line: {
           color: "green"
-        }
-      },
-      series: [
-        { data: [1, 2, 3] }
-      ]
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1869,11 +1873,11 @@ The following dash types are supported:
         line: {
           dashType: "dashDot"
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1890,11 +1894,11 @@ If set to `true` the chart will display the category axis lines. By default the 
         line: {
           visible: false
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1911,11 +1915,11 @@ The width of the line in pixels. Also affects the major and minor ticks, but not
         line: {
           width: 3
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1934,11 +1938,11 @@ body of the chart.
           width: 3,
           color: "green"
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1952,14 +1956,14 @@ The color of the major grid lines. Accepts a valid CSS color string, including h
     <script>
     $("#chart").kendoChart({
       categoryAxis: {
-        categories: [ "2012", "2013"],
         majorGridLines: {
           color: "#aa00bb"
-        }
-      },
-      series: [
-        { data: [1, 2, 3] }
-      ]
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1969,14 +1973,14 @@ The color of the major grid lines. Accepts a valid CSS color string, including h
     <script>
     $("#chart").kendoChart({
       categoryAxis: {
-        categories: [ "2012", "2013"],
         majorGridLines: {
           color: "rgb(128, 0, 255)"
-        }
-      },
-      series: [
-        { data: [1, 2, 3] }
-      ]
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -1986,14 +1990,14 @@ The color of the major grid lines. Accepts a valid CSS color string, including h
     <script>
     $("#chart").kendoChart({
       categoryAxis: {
-        categories: [ "2012", "2013"],
         majorGridLines: {
           color: "green"
-        }
-      },
-      series: [
-        { data: [1, 2, 3] }
-      ]
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -2020,11 +2024,11 @@ The following dash types are supported:
         majorGridLines: {
           dashType: "dashDot"
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -2041,11 +2045,11 @@ If set to `true` the chart will display the major grid lines. By default the maj
         majorGridLines: {
           visible: false
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -2062,11 +2066,53 @@ The width of the category axis major grid lines in pixels.
         majorGridLines: {
           width: 3
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### categoryAxis.majorGridLines.step `Number` *(default: 1)*
+
+The step of the category axis major grid lines.
+
+#### Example - set the category axis major grid lines step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      categoryAxis: [{
+        majorGridLines: {
+          step: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### categoryAxis.majorGridLines.skip `Number` *(default: 0)*
+
+The skip of the category axis major grid lines.
+
+#### Example - set the category axis major grid lines skip
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      categoryAxis: [{
+        majorGridLines: {
+          skip: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -2208,6 +2254,48 @@ The width of the major ticks in pixels.
       series: [
         { data: [1, 2, 3] }
       ]
+    });
+    </script>
+
+### categoryAxis.majorTicks.step `Number` *(default: 1)*
+
+The step of the category axis major ticks.
+
+#### Example - set the category axis major ticks step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      categoryAxis: [{
+        majorTicks: {
+          step: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### categoryAxis.majorTicks.skip `Number` *(default: 0)*
+
+The skip of the category axis major ticks.
+
+#### Example - set the category axis major ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      categoryAxis: [{
+        majorTicks: {
+          skip: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -2380,6 +2468,48 @@ The width of the category axis minor grid lines in pixels.
     });
     </script>
 
+### categoryAxis.minorGridLines.step `Number` *(default: 1)*
+
+The step of the category axis minor grid lines.
+
+#### Example - set the category axis minor grid lines step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      categoryAxis: [{
+        minorGridLines: {
+          step: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### categoryAxis.minorGridLines.skip `Number` *(default: 0)*
+
+The skip of the category axis minor grid lines.
+
+#### Example - set the category axis minor grid lines skip
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      categoryAxis: [{
+        minorGridLines: {
+          skip: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
 ### categoryAxis.minorTicks `Object`
 
 The configuration of the category axis minor ticks.
@@ -2395,11 +2525,11 @@ The configuration of the category axis minor ticks.
           color: "green",
           width: 5
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -2413,14 +2543,14 @@ The color of the category axis minor ticks lines. Accepts a valid CSS color stri
     <script>
     $("#chart").kendoChart({
       categoryAxis: {
-        categories: [ "2012", "2013"],
         minorTicks {
           color: "#aa00bb"
-        }
-      },
-      series: [
-        { data: [1, 2, 3] }
-      ]
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -2430,14 +2560,14 @@ The color of the category axis minor ticks lines. Accepts a valid CSS color stri
     <script>
     $("#chart").kendoChart({
       categoryAxis: {
-        categories: [ "2012", "2013"],
         minorTicks {
           color: "rgb(128, 0, 255)"
-        }
-      },
-      series: [
-        { data: [1, 2, 3] }
-      ]
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -2447,14 +2577,14 @@ The color of the category axis minor ticks lines. Accepts a valid CSS color stri
     <script>
     $("#chart").kendoChart({
       categoryAxis: {
-        categories: [ "2012", "2013"],
         minorTicks {
           color: "green"
-        }
-      },
-      series: [
-        { data: [1, 2, 3] }
-      ]
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -2471,11 +2601,11 @@ The length of the tick line in pixels.
         minorTicks: {
           size: 6
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -2492,11 +2622,11 @@ If set to `true` the chart will display the category axis minor ticks. By defaul
         minorTicks: {
           visible: false
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -2513,11 +2643,53 @@ The width of the minor ticks in pixels.
         minorTicks: {
           width: 3
         },
-        categories: ["2012", "2013"]
+        categories: ["2011", "2012", "2013"]
       }],
-      series: [
-        { data: [1, 2, 3] }
-      ]
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### categoryAxis.minorTicks.step `Number` *(default: 1)*
+
+The step of the category axis minor ticks.
+
+#### Example - set the category axis minor ticks step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      categoryAxis: [{
+        minorTicks: {
+          step: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### categoryAxis.minorTicks.skip `Number` *(default: 0)*
+
+The skip of the category axis minor ticks.
+
+#### Example - set the category axis minor ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      categoryAxis: [{
+        minorTicks: {
+          skip: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -15814,6 +15986,46 @@ The width of the value axis major grid lines in pixels.
     });
     </script>
 
+### valueAxis.majorGridLines.step `Number` *(default: 1)*
+
+The step of the value axis major grid lines.
+
+#### Example - set the value axis major grid lines step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        majorGridLines: {
+          step: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### valueAxis.majorGridLines.skip `Number` *(default: 0)*
+
+The skip of the value axis major grid lines.
+
+#### Example - set the value axis major grid lines skip
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        majorGridLines: {
+          skip: 2
+        }
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
 ### valueAxis.majorUnit `Number`
 
 The interval between major divisions.
@@ -16110,6 +16322,48 @@ The length of the tick line in pixels.
 
 If set to `true` the chart will display the value axis major ticks. By default the value axis major ticks are visible.
 
+### valueAxis.majorTicks.step `Number` *(default: 1)*
+
+The step of the value axis major ticks.
+
+#### Example - set the value axis major ticks step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        majorTicks: {
+          step: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### valueAxis.majorTicks.skip `Number` *(default: 0)*
+
+The skip of the value axis major ticks.
+
+#### Example - set the value axis major ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        majorTicks: {
+          skip: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
 ### valueAxis.minorGridLines.type `String`
 
 The type of grid lines to draw for radar charts:
@@ -16179,6 +16433,48 @@ The width of the value axis minor grid lines in pixels.
       series: [
         { data: [1, 2, 3] }
       ]
+    });
+    </script>
+
+### valueAxis.minorGridLines.step `Number` *(default: 1)*
+
+The step of the value axis minor grid lines.
+
+#### Example - set the value axis minor grid lines step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        minorGridLines: {
+          step: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### valueAxis.minorGridLines.skip `Number` *(default: 0)*
+
+The skip of the value axis minor grid lines.
+
+#### Example - set the value axis minor grid lines skip
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        minorGridLines: {
+          skip: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
@@ -16318,6 +16614,48 @@ The width of the minor ticks in pixels.
       series: [
         { data: [1, 2, 3] }
       ]
+    });
+    </script>
+
+### valueAxis.minorTicks.step `Number` *(default: 1)*
+
+The step of the value axis minor ticks.
+
+#### Example - set the value axis minor ticks step
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        minorTicks: {
+          step: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
+    });
+    </script>
+
+### valueAxis.minorTicks.skip `Number` *(default: 0)*
+
+The skip of the value axis minor ticks.
+
+#### Example - set the value axis minor ticks
+
+    <div id="chart"></div>
+    <script>
+    $("#chart").kendoChart({
+      valueAxis: [{
+        minorTicks: {
+          skip: 2
+        },
+        categories: ["2011", "2012", "2013"]
+      }],
+      series: [{
+        data: [1, 2, 3]
+      }]
     });
     </script>
 
