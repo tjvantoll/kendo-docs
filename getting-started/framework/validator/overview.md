@@ -1,6 +1,6 @@
 ---
 title: Overview
-meta_title: Overview of Validor UI in Kendo UI framework
+meta_title: Overview of Validator UI in Kendo UI framework
 meta_description: How to initialize jQuery Validator UI and trigger elements' validation.
 slug: getting-started-validator-overview
 publish: true
