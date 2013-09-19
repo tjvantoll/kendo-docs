@@ -125,7 +125,7 @@ The skin to apply to the application. Currently, Kendo UI Mobile ships with a **
          });
     </script>
 
-### statusBarStyle `String` **(default: black)**
+### statusBarStyle `String`*(default: "black")*
 
 Set the status bar style meta tag in iOS used to control the styling of the status bar in a pinned to the Home Screen app. Available as of Q2 2013 SP.
 
