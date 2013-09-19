@@ -10,7 +10,7 @@ publish: true
 
 ## Getting started
 
-> Warning! The Kendo UI Scheduler is currently released as a beta. The final API and behavior of the widget may change.
+
 
 The following tutorial shows how to configure Kendo UI Scheduler for ASP.NET MVC to do ajax editing of the Sample  database (the Tasks table) included in the offline demos.
 

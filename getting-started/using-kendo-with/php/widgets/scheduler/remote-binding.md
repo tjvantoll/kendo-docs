@@ -10,7 +10,7 @@ relatedDocs: php-ui-scheduler, php-scheduler-overview
 
 This help topic shows how to bind Kendo Scheduler for PHP to JSON response.
 
-> Warning! The Kendo UI Scheduler is currently released as a beta. The final API and behavior of the widget may change.
+
 
 > The following demos are using the sample SQLite database shipped with the Kendo UI for PHP demos (**/wrappers/php/sample.db**).
 

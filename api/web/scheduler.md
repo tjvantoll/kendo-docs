@@ -12,8 +12,6 @@ publish: true
 
 Represents the Kendo UI Scheduler widget. Inherits from [Widget](/api/framework/widget).
 
-> Warning! The Kendo UI Scheduler is currently released as a beta. The final API and behavior of the widget may change.
-
 ## Configuration
 
 ### allDayEventTemplate `String|Function`

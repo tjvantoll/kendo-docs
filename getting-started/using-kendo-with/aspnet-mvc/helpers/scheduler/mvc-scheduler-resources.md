@@ -10,7 +10,7 @@ publish: true
 
 The Scheduler HtmlHelper extension supports assigning scheduler events to a set of predefined [resources](http://docs.kendoui.com/getting-started/web/scheduler/resources).
 
-> Warning! The Kendo UI Scheduler is currently released as a beta. The final API and behavior of the widget may change.
+
 
 ## Getting Started
 

@@ -11,7 +11,7 @@ publish: true
 
 The `kendo.data.SchedulerEvent` class represents a data item from the [kendo.data.SchedulerDataSource](/api/framework/schedulerdatasource). Inherits from [kendo.data.Model](/api/framework/model).
 
-> Warning! The Kendo UI Scheduler is currently released as a beta. The final API and behavior of the widget may change.
+
 
 ## Configuration
 

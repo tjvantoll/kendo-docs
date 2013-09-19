@@ -11,7 +11,7 @@ relatedDocs: php-ui-scheduler
 
 The Kendo Scheduler for PHP is a server-side wrapper for the [Kendo UI Scheduler](http://docs.kendoui.com/api/web/scheduler) widget.
 
-> Warning! The Kendo UI Scheduler is currently released as a beta. The final API and behavior of the widget may change.
+
 
 ## Getting Started
 
