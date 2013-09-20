@@ -274,6 +274,16 @@ with seamless status bar on top of it:
         });
     </script>
 
+## Mobile Safari address bar tint in iOS7
+
+Another neat addition in iOS7 Mobile Safari is that the browser address bar and the status bar above it inherits a tint from the opened web page.
+The tint is directly taken from the background-color of the page, so in order to use it in your Kendo Mobile app, you can do this:
+
+    .km-on-ios.km-ios7
+    {
+        background-color: deeppink; /* Required for the tint */
+        -webkit-linear-gradient(top, white, white); /* Colorize the body as you wish. */
+    }
 
 ## Place TabStrip at bottom in Android
 
