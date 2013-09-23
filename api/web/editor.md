@@ -1341,6 +1341,34 @@ This method should be called after modifying the editor content through the DOM.
     console.log(textarea.val()); // logs "Hello, World"
     </script>
 
+### state
+
+Get the state of a given tool. Introduced in the 2013.2.923 internal build.
+
+#### Parameters
+
+##### toolName `String`
+
+The name of the tool that will be tested if formatted.
+
+#### Returns
+
+`Boolean` The state of the tool.
+
+#### Example
+
+    <textarea id="editor"></textarea>
+    <script>
+    $("#editor").kendoEditor();
+    var editor = $("#editor").data("kendoEditor");
+    editor.value("<em>foo</em>");
+    var range = editor.createRange();
+    range.selectNodeContents(editor.body.firstChild);
+    editor.selectRange(range);
+    console.log(editor.state("italic")); // logs true
+    console.log(editor.state("bold")); // logs true
+    </script>
+
 ### value
 
 Gets or sets the editor value.
