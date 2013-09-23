@@ -34,7 +34,7 @@ Since a meeting can be held in one room it can be considered as a "single" resou
           start: new Date("2013/6/6 11:00 AM"),
           end: new Date("2013/6/6 1:00 PM"),
           title: "Meeting with investors",
-          roomId: 1 // The unique identifier of the second room (Meeting Room 101)
+          roomId: 1 // The unique identifier of the first room (Meeting Room 101)
         },
         {
           id: 2,
@@ -80,14 +80,14 @@ can participate in a meeting it can be considered a "multiple" instance resource
           start: new Date("2013/6/6 11:00 AM"),
           end: new Date("2013/6/6 1:00 PM"),
           title: "Meeting with investors",
-          atendees: [ 2, 3] // Bob (value: 2) and Charlie (value: 3)
+          atendees: [2, 3] // Bob (value: 2) and Charlie (value: 3)
         },
         {
           id: 2,
           start: new Date("2013/6/6 10:15 AM"),
           end: new Date("2013/6/6 12:30 PM"),
           title: "Job Interview",
-          atendees: [ 1, 2 ] // Alex (value: 1) and Bob (value: 2)
+          atendees: [1, 2] // Alex (value: 1) and Bob (value: 2)
         }
       ],
       resources: [
@@ -128,7 +128,7 @@ Kendo UI Scheduler supports unlimited resource types. For example we can combine
           end: new Date("2013/6/6 1:00 PM"),
           title: "Meeting with investors",
           roomId: 1, // Meeting Room 101 (value: 1)
-          atendees: [ 2, 3] // Bob (value: 2) and Charlie (value: 3)
+          atendees: [2, 3] // Bob (value: 2) and Charlie (value: 3)
         },
         {
           id: 2,
@@ -136,7 +136,7 @@ Kendo UI Scheduler supports unlimited resource types. For example we can combine
           end: new Date("2013/6/6 12:30 PM"),
           title: "Job Interview",
           roomId: 2, // Meeting Room 102 (value: 2)
-          atendees: [ 1, 2 ] // Alex (value: 1) and Bob (value: 2)
+          atendees: [1, 2] // Alex (value: 1) and Bob (value: 2)
         }
       ],
       resources: [
