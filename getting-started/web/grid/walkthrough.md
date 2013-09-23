@@ -399,6 +399,9 @@ Now the email address is an interactive hyperlink  that will open a new email me
 
 The following example shows how to inject the Grid HTML output in a new browser window and trigger printing.
 
+> When the Grid is scrollable (by default), it renders a separate table for the header area.
+Since the browser cannot understand the relationship between the two Grid tables, it will not repeat the header row on top of every printed page. If this is a requirement, please [disable Grid scrolling](#scrolling).
+
 **HTML**
 
 	<div id="grid"></div>
