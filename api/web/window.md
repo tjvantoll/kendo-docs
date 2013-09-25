@@ -663,6 +663,12 @@ Restores a maximized or minimized Window to its previous state. Triggers the res
 
 Allows the window to be configured with new options.
 
+#### Parameters
+
+##### options `Object`
+
+The configuration options to be set.
+
 #### Example - set new dimensions to the window
 
     <div id="dialog"></div>
