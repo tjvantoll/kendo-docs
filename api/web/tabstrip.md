@@ -247,7 +247,7 @@ Appends a tab to the collection of tabs in a **TabStrip**.
 
 #### Parameters
 
-##### tab `Selector`
+##### tab `Array|Object`
 
 Target tab, specified as a JSON object. You can pass tab text, content or contentUrl here. Can handle an
 HTML string or array of such strings or JSON.
@@ -330,7 +330,7 @@ Disables a tab(s) of a **TabStrip**.
 
 #### Parameters
 
-##### element `Selector`
+##### element `String|Element|jQuery`
 
 The target tab(s), specified as a selector, to be disabled.
 
@@ -344,7 +344,7 @@ Disables (**false**) or enables (**true**) a tab(s) of a **TabStrip**.
 
 #### Parameters
 
-##### element `Selector`
+##### element `String|Element|jQuery|jQuery`
 
 The target tab(s), specified as a selector, to be enabled (**true**) or disabled
 (**false**).
@@ -391,12 +391,12 @@ Inserts a newly-created tab after a specified tab.
 
 #### Parameters
 
-##### item `Selector`
+##### item `String|Element|jQuery`
 
 Target tab, specified as a JSON object. You can pass tab text, content or contentUrl here. Can handle an
 HTML string or array of such strings or JSON.
 
-##### referenceTab `Selector`
+##### referenceTab `String|Element|jQuery`
 
 A reference tab to insert the new item after.
 
@@ -437,12 +437,12 @@ Inserts a newly-created tab before a specified tab.
 
 #### Parameters
 
-##### item `Selector`
+##### item `String|Element|jQuery`
 
 Target tab, specified as a JSON object. You can pass tab text, content or contentUrl here. Can handle an
 HTML string or array of such strings or JSON.
 
-##### referenceTab `Selector`
+##### referenceTab `String|Element|jQuery`
 
 A reference tab to insert the new item before
 
@@ -464,7 +464,7 @@ Reloads TabStrip tab(s) via AJAX.
 
 #### Parameters
 
-##### element `Selector`
+##### element `String|Element|jQuery`
 
 The target tab(s), specified as a selector or jQuery object, to be reloaded via AJAX.
 
@@ -505,7 +505,7 @@ currently selected tab.
 
 #### Parameters
 
-##### element `Selector|Number`
+##### element `String|Element|jQuery|Number`
 
 The target tab(s), specified as a selector, jQuery object or index in the tab group.
 
