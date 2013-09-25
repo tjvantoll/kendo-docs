@@ -843,7 +843,7 @@ A custom event object. The event can be cancelled just like when using a standar
 
 ##### e.files `Array`
 
-An array of the selected files.
+An array of the selected files. Each item of the array is an object with the following properties:
 
 *   name - the name of a selected file, including its extension
 *   extension - the file extension of a selected file, including the leading dot (i.e. ".jpg")
