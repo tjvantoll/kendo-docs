@@ -18,7 +18,7 @@ The animation that will be used when opening sub menus.
 
 ### duration `float`
 
-Difines the animation duration.
+Defines the animation duration.
 
 #### Example
     <kendo:menu-animation-open duration="duration">

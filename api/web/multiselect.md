@@ -348,7 +348,7 @@ The minimum number of characters the user must type before a search is performed
     </select>
     <script>
     $("#multiselect").kendoMultiSelect({
-        maxSelectedItems: 3 //only three or less items chould be selected
+        maxSelectedItems: 3 //only three or less items could be selected
     });
     </script>
 

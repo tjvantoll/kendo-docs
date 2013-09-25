@@ -26,7 +26,7 @@ If set to true the grid will display a confirmation dialog when the user clicks 
 
 ### createAt `java.lang.String`
 
-The positon at which new data items are inserted in the grid. Must be set to either "top" or "bottom". By default new data items are inserted at the top.
+The position at which new data items are inserted in the grid. Must be set to either "top" or "bottom". By default new data items are inserted at the top.
 
 #### Example
     <kendo:grid-editable createAt="createAt">

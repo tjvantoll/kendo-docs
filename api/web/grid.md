@@ -1266,7 +1266,7 @@ Can be set to a string which will be used as the confirmation text.
 
 ### editable.createAt `String` *(default: "top")*
 
-The positon at which new data items are inserted in the grid. Must be set to either "top" or "bottom". By default new data items are inserted at the top.
+The position at which new data items are inserted in the grid. Must be set to either "top" or "bottom". By default new data items are inserted at the top.
 
 #### Example - insert new data items at the bottom
 
@@ -5586,7 +5586,7 @@ The widget instance which fired the event.
 
 ##### e.values `Object`
 
-The values entered by the user. **Availabe only when the [editable.mode](#configuration-editable.mode) option is set to "incell".**
+The values entered by the user. **Available only when the [editable.mode](#configuration-editable.mode) option is set to "incell".**
 
 #### Example - subscribe to the "save" event during initialization
     <div id="grid"></div>

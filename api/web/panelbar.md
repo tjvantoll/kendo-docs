@@ -16,7 +16,7 @@ Represents the Kendo UI PanelBar widget. Inherits from [Widget](/api/framework/w
 
 ### animation `Object|Boolean`
 
-A collection of visual animations used when **PanelBar** items are exapnd or collapsed through
+A collection of visual animations used when **PanelBar** items are expand or collapsed through
 user interactions. Setting this option to **false** will disable all animations.
 
 #### Example
@@ -299,7 +299,7 @@ The **PanelBar** item(s) to be expanded, expressed as a selector.
 
 _optional, default: _
 
-Temporariliy enables (**true**) or disables (**false**) any visual animation(s) when expanding items.
+Temporarily enables (**true**) or disables (**false**) any visual animation(s) when expanding items.
 
 #### Returns
 
@@ -549,7 +549,7 @@ Fires when content is fetched from an AJAX request.
         }
     });
 
-#### To set after intialization
+#### To set after initialization
 
     // get a reference to the panel bar
     var panelBar = $("#panelBar").data("kendoPanelBar");
@@ -580,7 +580,7 @@ Fires when AJAX request results in an error.
         }
     });
 
-#### To set after intialization
+#### To set after initialization
 
     // get a reference to the panel bar
     var panelBar = $("#panelBar").data("kendoPanelBar");

@@ -116,7 +116,7 @@ Note that the dates match the source:
     });
     </script>
 
-Notice how the chart now displayes the maximum value for each year:
+Notice how the chart now displays the maximum value for each year:
 
 ![Chart with grouped date category axis](chart-category-date-axis-grouped.png)
 

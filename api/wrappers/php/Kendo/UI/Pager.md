@@ -234,7 +234,7 @@ Defines if numeric portion of the pager will be shown.
     ?>
 
 ### pageSizes
-Displays a list with predefined page sizes. An array of values to be displayed can be provided. If pageSize option is provided for DataSource then this pageSize value will be automaticaly selected in created selectbox.
+Displays a list with predefined page sizes. An array of values to be displayed can be provided. If pageSize option is provided for DataSource then this pageSize value will be automatically selected in created selectbox.
 
 #### Returns
 `\Kendo\UI\Pager`

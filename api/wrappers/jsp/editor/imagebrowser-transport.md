@@ -34,7 +34,7 @@ Options or URL which will handle the file and directory deletion. If not specifi
 
 ### imageUrl `java.lang.String`
 
-The URL responsible for serving the original image. A file name placeholder should be specifed.
+The URL responsible for serving the original image. A file name placeholder should be specified.
 
 #### Example
     <kendo:editor-imageBrowser-transport imageUrl="imageUrl">
@@ -124,7 +124,7 @@ If function is assigned, the current path and image name will be provided.
 
 ### imageUrl `String`
 
-The URL responsible for serving the original image. A file name placeholder should be specifed.
+The URL responsible for serving the original image. A file name placeholder should be specified.
 
 
 #### Example
@@ -157,7 +157,7 @@ If function is assigned, the current path and image name will be provided.
 
 ### kendo:editor-imageBrowser-transport-imageUrl
 
-The URL responsible for serving the original image. A file name placeholder should be specifed.
+The URL responsible for serving the original image. A file name placeholder should be specified.
 
 
 #### Example

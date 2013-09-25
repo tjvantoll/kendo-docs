@@ -27,7 +27,7 @@ including hex and rgb.
 
 ### color `java.lang.String`
 
-The text color of the labels. Any valid CSS color string will work here, inlcuding hex
+The text color of the labels. Any valid CSS color string will work here, including hex
 and rgb.
 
 #### Example

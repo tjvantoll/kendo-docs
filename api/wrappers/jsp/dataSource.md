@@ -140,7 +140,7 @@ More documentation is available at [kendo:dataSource-group](datasource/group).
 
 ### kendo:dataSource-schema
 
-The configuration used to parse the remote sevice response.
+The configuration used to parse the remote service response.
 
 More documentation is available at [kendo:dataSource-schema](datasource/schema).
 

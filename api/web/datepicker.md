@@ -163,7 +163,7 @@ shows the years of the decade
 
 #### *"century"*
 
-shows the decades from the centery
+shows the decades from the century
 
 #### Example - set navigation depth of the calendar popup
 
@@ -310,7 +310,7 @@ shows the years of the decade
 
 #### *"century"*
 
-shows the decades from the centery
+shows the decades from the century
 
 #### Example - specify the initial view, which calendar renders
 

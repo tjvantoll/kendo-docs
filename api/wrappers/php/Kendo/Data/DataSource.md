@@ -369,7 +369,7 @@ For additional information check the [requestStart](/api/framework/datasource#ev
 
 ### schema
 
-The configuration used to parse the remote sevice response.
+The configuration used to parse the remote service response.
 
 #### Returns
 `\Kendo\Data\DataSource`

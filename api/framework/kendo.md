@@ -580,16 +580,16 @@ Returns a number of properties that identify the current mobile browser. Parses 
 
 #### support.mobileOS
 ##### device `String`
-Returns the current mobile device identificator, can be "fire", "android", "iphone", "ipad", "meego", "webos", "blackberry", "playbook", "wp", "windows".
+Returns the current mobile device identifier, can be "fire", "android", "iphone", "ipad", "meego", "webos", "blackberry", "playbook", "wp", "windows".
 
 ##### tablet `String` *(default: false)*
-Returns the current tablet identificator or false if the current device is not a tablet, can be "fire", "ipad", "playbook" or false.
+Returns the current tablet identifier or false if the current device is not a tablet, can be "fire", "ipad", "playbook" or false.
 
 ##### browser `String` *(default: "default")*
-Returns the current browser identificator or "default" if the browser is the native one, can be "omini", "omobile", "firefox", "mobilesafari", "webkit", "ie", "default".
+Returns the current browser identifier or "default" if the browser is the native one, can be "omini", "omobile", "firefox", "mobilesafari", "webkit", "ie", "default".
 
 ##### name `String`
-Returns the current os name identificator, can be "ios", "android", "blackberry", "windows", "webos", "meego". For convenience a property with the os name is also initialized,
+Returns the current os name identifier, can be "ios", "android", "blackberry", "windows", "webos", "meego". For convenience a property with the os name is also initialized,
 for instance:
 
     if (kendo.support.mobileOS.android) {

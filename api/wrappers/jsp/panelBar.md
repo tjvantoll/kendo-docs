@@ -12,7 +12,7 @@ A JSP wrapper for Kendo UI [PanelBar](/api/web/panelbar).
 
 ### animation `boolean`
 
-A collection of visual animations used when PanelBar items are exapnd or collapsed through
+A collection of visual animations used when PanelBar items are expand or collapsed through
 user interactions. Setting this option to false will disable all animations. Further configuration is available via [kendo:panelBar-animation](#kendo-panelBar-animation). 
 
 #### Example
@@ -33,7 +33,7 @@ are available:
 
 ### kendo:panelBar-animation
 
-A collection of visual animations used when PanelBar items are exapnd or collapsed through
+A collection of visual animations used when PanelBar items are expand or collapsed through
 user interactions. Setting this option to false will disable all animations.
 
 More documentation is available at [kendo:panelBar-animation](panelbar/animation).

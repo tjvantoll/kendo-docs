@@ -92,7 +92,7 @@ This option is mandatory because the Pager is tightly connected with DataSource.
         dataSource.read();
     </script>
 
-If the Pager is used with another widget then we usually specify this Pager like object of options for given widget. In that case the DataSource is automaticaly injected to the Pager from the widget. See example for a Grid below.
+If the Pager is used with another widget then we usually specify this Pager like object of options for given widget. In that case the DataSource is automatically injected to the Pager from the widget. See example for a Grid below.
 
 #### Example - grid pager
     <div id="grid"></div>
@@ -245,7 +245,7 @@ Defines if numeric portion of the pager will be shown.
     </script>
 
 ### pageSizes `Boolean|Array` *(default: false)*
-Displays a list with predefined page sizes. An array of values to be displayed can be provided. If pageSize option is provided for DataSource then this pageSize value will be automaticaly selected in created selectbox.
+Displays a list with predefined page sizes. An array of values to be displayed can be provided. If pageSize option is provided for DataSource then this pageSize value will be automatically selected in created selectbox.
 
 #### Example - show the page size dropdown
     <div id="pager"></div>
@@ -727,7 +727,7 @@ Set the specified page as a current page. If called without arguments - returns 
     </script>
 
 ### refresh
-Updates all values of pager elements so that these values fit the values of DataSource. This method is automaticaly called after DataSource change event is fired.
+Updates all values of pager elements so that these values fit the values of DataSource. This method is automatically called after DataSource change event is fired.
 
 #### Example - refresh the pager
     <div id="pager"></div>
