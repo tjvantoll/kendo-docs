@@ -226,67 +226,6 @@ An object, which holds the options of the widget.
     var options = timepicker.options;
     <script>
 
-### timeView `kendo.TimeView`
-An instance of the TimeView object, responsible for the drop-down list of available hours.
-
-#### Example - get widget's timeView instance
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var timeView = timepicker.timeView;
-    <script>
-
-#### popup `kendo.ui.Popup`
-The Popup instace used by the widget.
-
-#### Example - get widget popup
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var popup = timepicker.popup;
-
-    console.log(popup.visible());
-    <script>
-
-#### ul `jQuery`
-A jQuery object of the ul element, which holds the available hours.
-
-#### Example
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var ul = timepicker.ul;
-    <script>
-
-#### list `jQuery`
-A jQuery object of the drop-down list element.
-
-#### Example
-
-    <input id="timepicker" />
-    <script>
-    $("#timepicker").kendoTimePicker();
-
-    var timepicker = $("#timepicker").data("kendoTimePicker");
-
-    var list = timepicker.list;
-    <script>
-
-#### template `kendo.Template`
-A template used to render available options in the list.
-
 ## Methods
 
 ### close

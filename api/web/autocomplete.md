@@ -442,23 +442,6 @@ A jQuery object of the ul element, which holds the available options.
     var ul = autocomplete.ul;
     <script>
 
-### popup `kendo.ui.Popup`
-
-The Popup instance used by the widget.
-
-#### Example - get widget popup
-
-    <input id="autocomplete" />
-    <script>
-    $("#autocomplete").kendoAutoComplete();
-
-    var autocomplete = $("#autocomplete").data("kendoAutoComplete");
-
-    var popup = autocomplete.popup;
-
-    console.log(popup.visible());
-    <script>
-
 ## Methods
 
 ### close

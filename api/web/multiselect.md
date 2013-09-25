@@ -571,23 +571,6 @@ A jQuery object of the ul element, which holds the available options.
     var ul = multiselect.ul;
     <script>
 
-### popup `kendo.ui.Popup`
-
-The Popup instance used by the widget.
-
-#### Example - get widget popup
-
-    <select id="multiselect" multiple="multiple"></select>
-    <script>
-    $("#multiselect").kendoMultiSelect();
-
-    var multiselect = $("#multiselect").data("kendoMultiSelect");
-
-    var popup = multiselect.popup;
-
-    console.log(popup.visible());
-    <script>
-
 ### tagList `jQuery`
 A jQuery object of the ul element, which holds the selected tags.
 

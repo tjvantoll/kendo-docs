@@ -554,23 +554,6 @@ A jQuery object of the ul element, which holds the available options.
     var ul = combobox.ul;
     <script>
 
-### popup `kendo.ui.Popup`
-
-The Popup instance used by the widget.
-
-#### Example - get widget popup
-
-    <input id="combobox" />
-    <script>
-    $("#combobox").kendoComboBox();
-
-    var combobox = $("#combobox").data("kendoComboBox");
-
-    var popup = combobox.popup;
-
-    console.log(popup.visible());
-    <script>
-
 ## Methods
 
 ### close

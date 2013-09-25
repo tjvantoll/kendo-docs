@@ -519,23 +519,6 @@ A jQuery object of the ul element, which holds the available options.
     var ul = dropdownlist.ul;
     <script>
 
-### popup `kendo.ui.Popup`
-
-The Popup instance used by the widget.
-
-#### Example - get widget popup
-
-    <input id="dropdownlist" />
-    <script>
-    $("#dropdownlist").kendoDropDownList();
-
-    var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
-
-    var popup = dropdownlist.popup;
-
-    console.log(popup.visible());
-    <script>
-
 ## Methods
 
 ### close
