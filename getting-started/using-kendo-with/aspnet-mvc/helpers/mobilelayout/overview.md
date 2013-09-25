@@ -148,7 +148,7 @@ Then you can use you can use the JavaScript [API](/api/mobile/layout#methods) of
     <script>
     $(function() {
         // Notice that the Name() of the layout is used to get its client-side instance
-        var layout = $("#Mobilelayout").data("kendoMobileLayout");
+        var layout = $("#MobileLayout").data("kendoMobileLayout");
     });
     </script>
 
